@@ -1,22 +1,18 @@
 // Desafio 1
 function compareTrue(a, b) {
-  if (a === true && b === true) {
-    return true;
-  } else {
-    return false;
-  }
+  return a === true && b === true;
 }
 console.log(compareTrue(true, true));
 // Desafio 2
-function calcArea(base, height){
-  return (base*height)/2;
+function calcArea(base, height) {
+  return (base * height) / 2;
 }
-console.log(calcArea(10, 50))
+console.log(calcArea(10, 50));
 
 // Desafio 3
-function splitSentence() {
-
-}
+function splitSentence(string) {
+  return string.split(' ');
+} console.log(splitSentence('turma trybecat!'));
 
 // Desafio 4
 function concatName() {
