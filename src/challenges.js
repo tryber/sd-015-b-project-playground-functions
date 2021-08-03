@@ -76,14 +76,39 @@ function fizzBuzz(array) {
   }
   return zArray;
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let myCode = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5,
+  };
+  let newString = string;
+  for (let letter of newString) {
+    if (Object.keys(myCode).includes(letter)) {
+      newString = newString.replace(letter, myCode[letter]);
+    }
+  }
+  return newString;
 }
-function decode() {
-  // seu código aqui
+function decode(string) {
+  let myCode = {
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u',
+  };
+  let newString = string;
+  for (let letter of newString) {
+    if (Object.keys(myCode).includes(letter)) {
+      newString = newString.replace(letter, myCode[letter]);
+    }
+  }
+  return newString;
 }
 
 module.exports = {
