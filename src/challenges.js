@@ -21,14 +21,16 @@ function splitSentence(sentence) {
 // Desafio 4
 function concatName(names) {
   // seu código aqui
-  firstName = names[0];
-  lastName = names[names.length - 1];
+  let firstName = names[0];
+  let lastName = names[names.length - 1];
   return lastName + ", " + firstName;
 }
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
+  let points = wins * 3 + ties;
+  return points;
 }
 
 // Desafio 6
