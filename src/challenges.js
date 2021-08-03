@@ -16,7 +16,7 @@ function calcArea(base, height) {
 function splitSentence(stringToSplit, separator) {
   let words = stringToSplit.split(separator);
   return words;
-}; console.log (splitSentence("Meu nome é Lucas e eu tenho 30 anos", " "))
+};
 
 // Desafio 4
 function concatName(array) {
