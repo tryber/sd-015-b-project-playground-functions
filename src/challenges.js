@@ -1,11 +1,11 @@
 // Desafio 1
 function compareTrue(a, b) {
-  if (a && b) {   
- return true;
-  } else { 
-  return false;
+  if (a === true && b === true) {
+    return true;
+  } else {
+    return false;
   }
-} 
+
 
 // Desafio 2
 function calcArea(base, height) {
@@ -22,6 +22,7 @@ function calcArea(base, height) {
 function splitSentence(string) {
   let resultado = string.split('');
   console.log(resultado);
+
 } splitSentence('go Trybe');
 
 // Desafio 4
