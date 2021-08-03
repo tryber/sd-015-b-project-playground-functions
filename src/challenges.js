@@ -1,69 +1,70 @@
 // Desafio 1 - CHECK
 function compareTrue(bool1, bool2) {
   // seu código aqui
-  if(bool1 && bool2){
+  if (bool1 && bool2) {
     return true;
-  }else{
-    return false;
   }
+  return false;
 }
 
 // Desafio 2 - CHECK
 function calcArea(base, height) {
   // seu código aqui
-  return (base * height)/2;
+  return (base * height) / 2;
 }
-
 
 // Desafio 3 - CHECK
 function splitSentence(orignalString) {
   // seu código aqui
   let splited = [];
-  splited = orignalString.split(" ");
+  splited = orignalString.split(' ');
   return splited;
 }
 
 // Desafio 4 - CHECK
 function concatName(stringsArray) {
   // seu código aqui
-  let concat = stringsArray.pop() +", "+ stringsArray.shift(); //
+  let concat = stringsArray.pop() + ', ' + stringsArray.shift();
   return concat;
 }
 
 // Desafio 5 - CHECK
 function footballPoints(wins, ties) {
   // seu código aqui
-  let score = (wins*3) + ties;
+  let score = (wins * 3) + ties;
   return score;
 }
 
-// Desafio 6
-function highestCount(numbers) {
+// Desafio 6 - CHECK
+function highestCount(num) {
   // seu código aqui
-  //1 - descobrir qual o maior número;
- //2 - contar quantas vezes ele se repete;
+  let larger = -1;
+  let counter = 0;
+  for(let i = 0; i < num.length; i ++){
+    if(num[i] > larger){
+      larger = num[i];
+    }
+  }
+  for(let j = 0; j < num.length; j ++){
+    if(num[j] === larger){
+      counter ++;
+    }
+  }
+  return counter;
 }
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-  let distanceCat1 = mouse - cat1;
-  let distanceCat2 = mouse - cat2;
+  let distanceCat1 = Math.abs(mouse - cat1);
+  let distanceCat2 = Math.abs(mouse - cat2);
 
-  if(distanceCat1 <0){
-    distanceCat1 = distanceCat1*(-1);
-  }
-  if(distanceCat2 < 0){
-    distanceCat2 = distanceCat2*(-1);
-  }
-  if(distanceCat2 === distanceCat1){
+  if (distanceCat2 === distanceCat1) {
     return 'os gatos trombam e o rato foge';
-  }else if(distanceCat1 > distanceCat2){
+  } else if (distanceCat1 > distanceCat2){
     return 'cat1';
-  }else{
-    return 'cat2';
   }
-
+  return 'cat2';
 }
 
 // Desafio 8 - CHECK
@@ -71,14 +72,14 @@ function fizzBuzz(numbersArray) {
   // seu código aqui
   let fizzBuzzBug = [];
   
-  for(var i = 0; i < numbersArray.length; i ++){
-    if(numbersArray[i] % 3 === 0 && numbersArray[i]%5 === 0 ){
+  for (var i = 0; i < numbersArray.length; i ++) {
+    if (numbersArray[i] % 3 === 0 && numbersArray[i]%5 === 0 ) {
       fizzBuzzBug.push('fizzBuzz');
-    }else if(numbersArray[i]%3 === 0){
+    } else if(numbersArray[i]%3 === 0) {
       fizzBuzzBug.push('fizz');
-    } else if( numbersArray[i]%5 === 0){
+    } else if( numbersArray[i]%5 === 0) {
       fizzBuzzBug.push('buzz');
-    } else{
+    } else {
       fizzBuzzBug.push('bug!');
     }
   }
