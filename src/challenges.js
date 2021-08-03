@@ -62,21 +62,83 @@ function highestCount(arr) {
 }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
+  let distanceMouseCat1 = Math.abs(mouse - cat1);
+  let distanceMouseCat2 = Math.abs(mouse - cat2);
+  let sameDistance = 'os gatos trombam e o rato foge';
+
+  if (distanceMouseCat1 < distanceMouseCat2) {
+    return 'cat1';
+  } else if (distanceMouseCat1 > distanceMouseCat2) {
+    return 'cat2';
+  } else {
+    return sameDistance;
+  }
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(arr) {
   // seu código aqui
+  let arrayFizzBuzz = [];
+
+  for (num of arr) {
+    if (num % 3 === 0 && num % 5 !== 0) {
+      arrayFizzBuzz.push('fizz');
+    } else if (num % 5 === 0 && num % 3 !== 0) {
+      arrayFizzBuzz.push('buzz');
+    } else if (num % 3 == 0 && num % 5 == 0) {
+      arrayFizzBuzz.push('fizzBuzz');
+    } else {
+      arrayFizzBuzz.push('bug!');
+    }
+  }
+  return arrayFizzBuzz;
 }
 
 // Desafio 9
-function encode() {
+function encode(str) {
   // seu código aqui
+  let strSplit = str.split('');
+
+  for (index in strSplit) {
+    if (strSplit[index] === 'a') {
+      strSplit[index] = 1;
+    } else if (strSplit[index] === 'e') {
+      strSplit[index] = 2;
+    } else if (strSplit[index] === 'i') {
+      strSplit[index] = 3;
+    } else if (strSplit[index] === 'o') {
+      strSplit[index] = 4;
+    } else if (strSplit[index] === 'u') {
+      strSplit[index] = 5;
+    }
+  }
+  let encodedStr = strSplit.join('');
+
+  return encodedStr;
 }
-function decode() {
+
+function decode(str) {
   // seu código aqui
+  let strSplit = str.split('');
+
+  for (index in strSplit) {
+    if (strSplit[index] == 1) {
+      strSplit[index] = 'a';
+    } else if (strSplit[index] == 2) {
+      strSplit[index] = 'e';
+    } else if (strSplit[index] == 3) {
+      strSplit[index] = 'i';
+    } else if (strSplit[index] == 4) {
+      strSplit[index] = 'o';
+    } else if (strSplit[index] == 5) {
+      strSplit[index] = 'u';
+    }
+  }
+  let decodedStr = strSplit.join('');
+
+  return decodedStr;
 }
 
 module.exports = {
