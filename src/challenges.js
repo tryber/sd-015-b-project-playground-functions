@@ -40,10 +40,10 @@ function highestCount(array) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  if ((cat1 - mouse) > (cat2 - mouse)){
+  if ((Math.abs(cat1) - Math.abs(mouse)) > (Math.abs(cat2) - Math.abs(mouse))){
     return 'cat2';
   }
-  else if ((cat1 - mouse) < (cat2 - mouse)){
+  else if ((Math.abs(cat1) - Math.abs(mouse)) < (Math.abs(cat2) - Math.abs(mouse))){
     return 'cat1';
   }
   else {
