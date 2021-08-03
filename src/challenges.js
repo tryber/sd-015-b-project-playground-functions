@@ -2,7 +2,8 @@
 function compareTrue(valor1, valor2) {
   if (valor1 && valor2 === true) {
     return true;
-  } return false;
+  }
+  return false;
   // seu código aqui
 }
 
@@ -32,7 +33,7 @@ function concatName(array) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let resultadoDePontos = (wins * 3) + (ties * 1);
+  let resultadoDePontos = wins * 3 + ties * 1;
   return resultadoDePontos;
   // seu código aqui
 }
@@ -50,7 +51,7 @@ function catAndMouse(mouse, cat1, cat2) {
   if (valor1 === valor2) {
     return 'os gatos trombam e o rato foge';
   }
-  if (cat1 - mouse < cat2 - mouse) {
+  if (valor1 - mouse < valor2 - mouse) {
     return 'cat1';
   }
   return 'cat2';
@@ -58,7 +59,20 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(array) {
+  let resultado = [];
+  for (let index = 0; index < array.length; index++) {
+    if (array[index] % 3 === 0 && array[index] % 5 === 0) {
+      resultado.push('fizzBuzz');
+    } else if (array[index] % 3 === 0) {
+      resultado.push('fizz');
+    } else if (array[index] % 5 === 0) {
+      resultado.push('buzz');
+    } else {
+      resultado.push('bug!');
+    }
+  }
+  return resultado;
   // seu código aqui
 }
 
