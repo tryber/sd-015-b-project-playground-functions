@@ -1,5 +1,5 @@
-function calcArea(base,height) {
-  area = base*height/2
-  return area
+function splitSentence(str) {
+  separaString =  str.split(" ")
+  return separaString
 }
-console.log(calcArea(10,50));
+console.log(splitSentence('go trybe'));

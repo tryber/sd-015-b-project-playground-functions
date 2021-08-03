@@ -13,15 +13,27 @@ function calcArea(base,height) {
   area = base*height/2
   return area
 }
-console.log(calcArea(10,50));
+
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(str) {
+  separaString =  str.split(" ")
+  return separaString
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+
+function concatName(vetor) {
+  let resultado = [];
+  qun = vetor.length-1;
+  for (let index = 0 ; index<=vetor.length-1;index+=1){
+    if (index === 0){
+      resultado.push(vetor[index])
+    }
+    else if (index === vetor.length-1 ){
+      resultado.push(vetor[index])
+    }
+  }
+  return resultado
 }
 
 // Desafio 5
