@@ -39,7 +39,7 @@ function highestCount(array) {
     }
   }
 
-  return [numberCount[highestNumber]];
+  return numberCount[highestNumber];
 }
 
 // Desafio 7
