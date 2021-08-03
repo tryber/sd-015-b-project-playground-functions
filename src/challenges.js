@@ -48,7 +48,7 @@ function catAndMouse(mouse, cat1, cat2) {
       return "cat2"
     } else if (gato2 > gato1){
       return "cat1"
-    } else if (gato2 === gato1){
+    } else if (gato2 == gato1){
       return "os gatos trombam e o rato foge"
     }
 }
@@ -68,10 +68,21 @@ function fizzBuzz(array) {
   } return acumulador
 }
 // Desafio 9
-function encode(oi) {
+function encode(entrada) {
+  let a = entrada.replace(/a/gm, 1);
+  let e = a.replace(/e/gm, 2);
+  let i = e.replace(/i/gm, 3);
+  let o = i.replace(/o/gm, 4);
+  let u = o.replace(/u/gm, 5);
+  return u
 }
-function decode() {
-  // seu código aqui
+function decode(oi) {
+  let a = entrada.replace(/1/gm, 'a');
+  let e = a.replace(/2/gm, 'e');
+  let i = e.replace(/3/gm, 'i');
+  let o = i.replace(/4/gm, 'o');
+  let u = o.replace(/5/gm, 'u');
+  return u
 }
 
 module.exports = {
