@@ -1,7 +1,17 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+
+function compareTrue(boolean1, boolean2){
+  if( boolean1 && boolean2 === true){
+    console.log(true);
+  } else{
+    console.log(false);
+  }
+
 }
+compareTrue(1 === 2, 'casa' === 'casa' )
+
+
+
 
 // Desafio 2
 function calcArea() {
