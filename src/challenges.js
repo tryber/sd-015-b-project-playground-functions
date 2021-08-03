@@ -25,12 +25,12 @@ function concatName(arrayStr) {
   firstItem = arrayStr[0];
   return (lastItem + ", " + firstItem);
 }
-console.log(concatName(['foguete', 'não', 'tem', 'ré']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  
+  return ((wins*3) + (ties*1));
 }
+
 
 // Desafio 6
 function highestCount() {
