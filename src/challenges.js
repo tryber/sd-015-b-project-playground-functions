@@ -24,7 +24,7 @@ function splitSentence(string) {
 function concatName(array) {
   let ultimaString = array.pop();
   let primeiraString = array.shift();
-  let resultado = ultimaString + ', ' + primeiraString;
+  let resultado = `${ultimaString}, ${primeiraString}`;
   return resultado;
 }
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
@@ -60,11 +60,11 @@ function catAndMouse(mouse, cat1, cat2) {
   let distanciaCat1 = Math.abs(mouse - cat1);
   let distanciaCat2 = Math.abs(mouse - cat2);
   if (distanciaCat1 > distanciaCat2) {
-    return console.log('cat2');
+    return 'cat2';
   } if (distanciaCat1 < distanciaCat2) {
-    return console.log('cat1');
-  } return console.log('os gatos trombam e o rato foge');
-}
+    return 'cat1';
+  } return 'os gatos trombam e o rato foge';
+} 
 
 // Desafio 8
 function arrayNumber(array) {
