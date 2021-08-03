@@ -4,14 +4,14 @@ function compareTrue() {
    
 }
 
-// Desafio 2
+// Desafio 2 DONE
 function calcArea(base, height) {
   let triangleArea = (base * height) /2
   return triangleArea;
 }
 // console.log('Desafio 2:' , calcArea(10, 50));
 
-// Desafio 3
+// Desafio 3 DONE
 function splitSentence(phrase) {
   let myString = phrase;
   let splitedSentence = myString.split(' ');
@@ -19,7 +19,8 @@ function splitSentence(phrase) {
 }
 // console.log('Desaafio 3' , splitSentence('Go trybe'))
 
-// Desafio 4
+// Desafio 4 DONE 
+
 //usar index[0] e index[index.length - 1]
 //invertedArray[0] + invertedArray[invertedArray.length - 1];
 //preciso colocar os dois do array em uma string usarei o join
@@ -32,15 +33,15 @@ function concatName(array) {
   let invertedArray = myArray.reverse();
   let result1 = invertedArray[0];
   let result2 = invertedArray[invertedArray.length-1];
-  let result = result1 +', '+ result2;
+  let result = result1 + result2;
 
   return result;
 } 
-let nomes = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // console.log(concatName(nomes))
 
-// Desafio 5
+// Desafio 5 DONE
 function footballPoints(wins, ties) {
   let victories = 3 * wins;
   let draws = 1 * ties
@@ -49,7 +50,7 @@ function footballPoints(wins, ties) {
 }
 // console.log(footballPoints(1, 2) , 'pontos')
 
-// Desafio 6
+// Desafio 6  DONE
 
 //a função verifica quantas vezes que o  maior numro do array se repete. 
 //portanto preciso: 1- verificar qual o maior numero do array
@@ -67,14 +68,26 @@ function highestCount(numbersArray) {
 }
       return quantasVezesSeRepete;
 }
-let numberisArray = [9, 1, 2, 3, 9, 5, 7];
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
+// console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
 
 // Desafio 7
-function catAndMouse() {
-
+// 
+function catAndMouse(mouse, cat1, cat2) {
+  let resposta = 0;
+  
+  if ( cat1 == cat2 ) {
+    resposta = 'os gatos trombam e o rato foge'
+  } else if (cat1 < cat2){
+    resposta = 'cat1'
+  } else { 
+    resposta = 'cat2'
+  }
+  return resposta
 }
 
+console.log(catAndMouse(0, 3, 2));
+console.log(catAndMouse(0, 6, 12));
+console.log(catAndMouse(0, 1, 1))
 // Desafio 8
 function fizzBuzz(numeros) {
   let myArray = [] ; 
