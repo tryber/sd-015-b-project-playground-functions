@@ -36,24 +36,24 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(arr) {
   // seu código aqui
-  let biggest = 0
-  let repeat = 0
-  for (let elemento of arr){
-    if (elemento > biggest){
-      biggest = elemento
+  let biggest = arr[0];
+  let repeat = 0;
+  for (let element of arr) {
+    if (element > biggest) {
+      biggest = element;
+      repeat = 0;
+    }
+    if (biggest === element) {
+      repeat += 1;
     }
   }
-  for (let elemento of arr){
-    if (elemento === biggest){
-      repeat += 1
-    }
-  }
-  return repeat
+  return repeat;
 }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(cat1, cat2, mouse) {
   // seu código aqui
+
 }
 
 // Desafio 8
