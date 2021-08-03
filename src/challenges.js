@@ -22,7 +22,7 @@ function concatName(array) {
 
 // Desafio 5
 function footballPoints(win, ties) {
-  return ((win * 3) + (ties * 1))
+  return ((win * 3) + (ties * 1));
 }
 
 // Desafio 6
@@ -32,10 +32,10 @@ function highestCount(numberArray) {
   
   for (let number of numberArray) {
     if (number > higherNumber) {
-    higherNumber = number;
-    counter = 1;
+      higherNumber = number;
+      counter = 1;
     } else if (number === higherNumber) {
-    counter += 1;
+      counter += 1;
     }
   }
   return counter;
@@ -43,13 +43,11 @@ function highestCount(numberArray) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  if (cat1 - mouse === cat2 - mouse || cat2 - mouse === (cat1 - mouse)*-1) {
+  if (cat1 - mouse === cat2 - mouse || cat2 - mouse === (cat1 - mouse) * -1) {
     return 'os gatos trombam e o rato foge';
   } else if (cat1 - mouse < cat2 - mouse) {
     return 'cat1';
-  } else {
-    return 'cat2';
-  }
+  } return 'cat2';
 }
 
 // Desafio 8
