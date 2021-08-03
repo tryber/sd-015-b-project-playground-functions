@@ -1,6 +1,6 @@
 // Desafio 10
 function techList(arr, name) {
-  if (!arr) return [];
+  arr.sort();
   let list = [];
   for (let tech of arr) {
     list.push({ tech: tech, name: name });
@@ -8,7 +8,7 @@ function techList(arr, name) {
   return list;
 }
 
-console.log(techList());
+console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas'));
 
 // Desafio 11
 function generatePhoneNumber(arr) {
@@ -16,6 +16,8 @@ function generatePhoneNumber(arr) {
     .slice(7)
     .join('')}`;
 }
+
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
