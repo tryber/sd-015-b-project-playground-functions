@@ -30,8 +30,7 @@ function concatName(arraystring) {
    let storelafr = storelaf.join(", ")
    return(storelafr);
   }
-  console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
-
+  
 //ex-5
 function footballPoints(wins,ties) {
   let contw = (3 * wins);
@@ -39,16 +38,49 @@ function footballPoints(wins,ties) {
   let pontos = (contw + contt);
   return(pontos);   
 }
-console.log(footballPoints(10,15));
 
-// Desafio 6
-function highestCount() {
-  // seu código aqui
-}
+/* Desafio 6 
+ - Crie uma função que calcule a repetição do maior número
+Escreva uma função chamada highestCount que, ao receber uma array de números, retorne a quantidade de vezes que o maior deles se repete.
 
+Exemplo: caso o parâmetro de highestCount seja uma array com valores [9, 1, 2, 3, 9, 5, 7], a função deverá retornar 2, que é a quantidade de vezes que o número 9 (maior número do array) se repete.
+
+O que será verificado:
+
+Retorne 2 quando o parâmetro passado na função highestCount seja [9, 1, 2, 3, 9, 5, 7]
+
+Retorne 1 quando o parâmetro passado na função highestCount seja [0, 4, 4, 4, 9, 2, 1]
+
+Retorne 3 quando o parâmetro passado na função highestCount seja [0, 0, 0] 
+If (num > save) {
+  save = num
+  count = 0
+}*/
+
+function highestCount(arr) {
+  for(let i = 0;i < arr.length; i += 1){
+    let saveBigNamber = 0;
+    let counter = 0;    
+    if(arr[i] > saveBigNamber){
+        saveBigNamber = arr[i];
+    }else if (saveBigNamber === arr[i]){
+      
+    }else{
+     saveBigNamber = saveBigNamber;   
+    }   
+    }
+    return(counter);
+  }
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+
+function catAndMouse(mouse,cat1,cat2) {
+if(cat2 === cat1){
+  return("os gatos trombam e o rato foge");
+}else if(cat2 > cat1){
+  return("cat1");
+}else{
+  return("cat2");
+}
 }
 
 // Desafio 8
