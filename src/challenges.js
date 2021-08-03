@@ -73,8 +73,7 @@ function fizzBuzz(values) {
 
 // Desafio 9
 function encode(encoding) {
-  let splitValue = encoding.split("");
-  let 
+  
 }
 function decode() {
   // seu código aqui
