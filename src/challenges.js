@@ -99,9 +99,9 @@ function catAndMouse(mouse, cat1, cat2) {
   return line;
 }
 
-console.log( catAndMouse(3, 2) ); // teste 1
-console.log( catAndMouse(6, 12) ); // teste 2
-console.log( catAndMouse(5, 5) ); // teste 3
+// console.log( catAndMouse(3, 2) ); // teste 1
+// console.log( catAndMouse(6, 12) ); // teste 2
+// console.log( catAndMouse(5, 5) ); // teste 3
 
 // Desafio 8
 function fizzBuzz(arr) {
