@@ -18,10 +18,12 @@ function splitSentence(sentense) {
 }
 
 // Desafio 4
-function concatName() {
-  let name;
-  return name[0] + ", "name[length - 1];
+function concatName(fullName) {
+  return fullName[fullName.length - 1] + ", " + fullName[0];
 }
+fullName = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
+concatName(fullName);
+console.log(concatName(fullName));
 
 // Desafio 5
 function footballPoints() {
