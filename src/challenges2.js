@@ -52,8 +52,15 @@ function generatePhoneNumber(array) {
 }
 
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(lineA,lineB,lineC) {
   // seu código aqui
+  if (lineA > lineB + lineC || lineB > lineA + lineC || lineC > lineA + lineB) {
+    return false;
+  } else if (lineA < Math.abs(lineB - lineC) || lineB < Math.abs(lineA - lineC) || lineC < Math.abs(lineA - lineB)) {
+    return false;
+  } else {
+    return true;
+  }
 }
 
 // Desafio 13
@@ -68,4 +75,4 @@ module.exports = {
   triangleCheck,
 };
 
-console.log(generatePhoneNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]))
+console.log(triangleCheck(10, 14, 8))
