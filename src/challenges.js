@@ -40,6 +40,7 @@ function highestCount(arrayNumeros) {
     if (numero > maiorNumero) {
       maiorNumero = numero;
       contador = 1;
+
     } else if (numero === maiorNumero) {
       contador += 1;
     }
@@ -52,8 +53,26 @@ function catAndMouse() {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  let newArray = [];
+
+  for (let index in array) {
+    if (array[index] % 3 === 0) {
+      if (array[index] % 5 === 0) {
+        newArray[index] = 'fizzBuzz';
+      } 
+      else {
+        newArray[index] = 'fizz';
+      }
+    } 
+    else if (array[index] % 5 ===0) {
+      newArray[index] = 'buzz';
+    } 
+    else {
+      newArray[index] = 'bug!';
+    }
+  }
+  return newArray;
 }
 
 // Desafio 9
