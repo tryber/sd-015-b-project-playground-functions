@@ -32,14 +32,29 @@ function splitSentence(frase) {
 
 
 // Desafio 4
-function concatName() {
+function concatName(array) {
+  let {length, 0: first, [length-1]: last} = array;
+  return last+first;
   // seu código aqui
 }
+                                    console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
+                                    console.log(concatName(['foguete', 'não', 'tem', 'ré']));
+                                    console.log(concatName(['captain', 'my', 'captain']));
+
+
+
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(jogos) {
+  let pontos = ((wins*3)+(ties*1));
+  return pontos;
   // seu código aqui
 }
+                                    console.log(footballPoints(wins=14, ties=8));
+                                    console.log(footballPoints(wins=1, ties=2));
+                                    console.log(footballPoints(wins=0, ties=0));
+
+
 
 // Desafio 6
 function highestCount() {
