@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(boolean1, boolean2) {
-  if (boolean1 === true && boolean2 === true) {
+  if (boolean1 && boolean2 === true) {
     return true;
   }
   else {
@@ -39,8 +39,21 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  let initialNumber = array[0];
+  let countRepeats = 0;
+  for (i = 0 ; i < array.length ; i += 1) {
+    if (array[i] > initialNumber) {
+      initialNumber = array[i];
+    }
+  }
+  for (k = 0 ; k <array.length ; k += 1 ) {
+    if (array[k] === initialNumber) {
+      countRepeats +=1;
+    }
+  }
+    return countRepeats; 
+  // seu código aqui}
 }
 
 // Desafio 7
