@@ -19,13 +19,12 @@ function splitSentence(frase) {
 
 // Desafio 4
 function concatName(vetorPalavras) {
-
   return vetorPalavras[vetorPalavras.length -1] + ", " + vetorPalavras[0]
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins,ties) {
+  return (wins * 3) + ties
 }
 
 // Desafio 6
