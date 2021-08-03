@@ -66,11 +66,18 @@ function generatePhoneNumber(numbers) {
   return phoneNumber;
 }
 
-console.log(generatePhoneNumber([5, 2, 8, 1, 5, 3, 7, 2, 8, 9, 0]));
-
 // Desafio 12
-function triangleCheck() {
+function checkLine(a, b, c) {
+  return a < b + c && a > Math.abs(b - c);
+}
+
+function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
+  const isLineAOk = checkLine(lineA, lineB, lineC);
+  const isLineBOk = checkLine(lineB, lineA, lineC);
+  const isLineCOk = checkLine(lineC, lineA, lineB);
+
+  return isLineAOk && isLineBOk && isLineCOk;
 }
 
 // Desafio 13
