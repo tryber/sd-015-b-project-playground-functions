@@ -62,8 +62,27 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(arr) {
-  if(typeof arr === )
+  if(typeof arr === 'object' && arr.length > 0) {
+    let max = arr[0];
+    for (let i of arr) {
+      if (i >= max) {
+        max = i;
+      }
+    }
+    let cont = 0;
+    for (let i of arr) {
+      if (i === max) {
+        cont += 1;
+      }
+    }
+    return cont;
+  }
 }
+
+// console.log( highestCount([9, 1, 2, 3, 9, 5, 7]) ) // teste 1
+// console.log( highestCount([0, 4, 4, 4, 9, 2, 1]) ) // teste 2
+// console.log( highestCount([0, 0, 0]) ) // teste 3
+// console.log( highestCount([])) // teste extra
 
 // Desafio 7
 function catAndMouse() {
