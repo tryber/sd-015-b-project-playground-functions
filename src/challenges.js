@@ -59,8 +59,8 @@ console.log(highestCount(numberList));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let distancia1 = cat1 - mouse;
-  let distancia2 = cat2 - mouse;
+  let distancia1 = Math.abs(cat1 - mouse);
+  let distancia2 = Math.abs(cat2 - mouse);
   if (distancia2 < distancia1) {
     console.log('cat2');
   } else if (distancia1 < distancia2) {
@@ -70,9 +70,10 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 }
 
-catAndMouse(10, 25, 15);
+catAndMouse(10, 5, 15);
 
 // Desafio 8
+// eslint-disable-next-line complexity
 function fizzBuzz(arrayNum) {
   let result = [];
   for (let num of arrayNum) {
@@ -104,6 +105,9 @@ function decode(msg) {
 
 console.log(encode('hi there!'));
 console.log(decode('h3 th2r2!'));
+
+// Desafio 10
+
 
 module.exports = {
   calcArea,
