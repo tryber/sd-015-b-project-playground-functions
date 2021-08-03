@@ -105,7 +105,6 @@ function fizzBuzz(arr) {
 // Desafio 9
 function encode(str) {
   let strEncoded = '';
-
   let vowels = {
     a: 1,
     e: 2,
@@ -116,8 +115,8 @@ function encode(str) {
 
   for (let index = 0; index < str.length; index += 1) {
     let verification = false;
-    
-    for (let letter in vowels) {        
+
+    for (let letter in vowels) {
       if (str[index] === letter) {
         strEncoded += vowels[letter];
         verification = true;
@@ -127,8 +126,6 @@ function encode(str) {
     if (verification === false) {
       strEncoded += str[index];
     }
-
-    verification = false;
   }
 
   return strEncoded;
@@ -136,7 +133,6 @@ function encode(str) {
 
 function decode(str) {
   let strDecoded = '';
-
   let vowels = {
     1: 'a',
     2: 'e',
@@ -147,8 +143,7 @@ function decode(str) {
 
   for (let index = 0; index < str.length; index += 1) {
     let verification = false;
-
-    for (let letter in vowels) {        
+    for (let letter in vowels) {
       if (str[index] === letter) {
         strDecoded += vowels[letter];
         verification = true;
@@ -158,10 +153,8 @@ function decode(str) {
     if (verification === false) {
       strDecoded += str[index];
     }
-
-    verification = false;
   }
-
+  
   return strDecoded;
 }
 
