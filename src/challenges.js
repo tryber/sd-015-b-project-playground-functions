@@ -1,3 +1,4 @@
+/* eslint-disable max-lines-per-function */
 // Desafio 1
 function compareTrue(valorUm, valorDois) {
   if (valorUm === true && valorDois === true) {
@@ -47,8 +48,15 @@ function highestCount(numbers) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let cat1Distance = (cat1 > mouse ? (cat1 - mouse) : (mouse - cat1));
+  let cat2Distance = (cat2 > mouse ? (cat2 - mouse) : (mouse - cat2));
+  if (cat1Distance < cat2Distance) {
+    return 'cat1';
+  } if (cat2Distance < cat1Distance) {
+    return 'cat2';
+  }
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
