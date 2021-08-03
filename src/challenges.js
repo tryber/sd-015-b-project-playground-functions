@@ -53,7 +53,6 @@ function highestCount(numeros) {
 
   for (let index = 0; index < numeros.length; index++) {
     let numeroAtual = numeros[index];
-
     if (numeroAtual > maior) {
       maior = numeroAtual;
       quantidade = 1;
@@ -85,11 +84,16 @@ function fizzBuzz(numeros) {
   let resultado = [];
   for (numero of numeros) {
     let print = '';
+      
     if (numero % 3 === 0) {
       print += 'fizz';
     }
     if (numero % 5 === 0) {
-      print += 'buzz';
+      if (print === "fizz"){
+        print += 'Buzz';
+      } else {
+        print += 'buzz';
+       }
     }
     if (print === '') {
       print += 'bug!';
