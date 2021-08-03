@@ -1,28 +1,27 @@
-function encode(str) {
-  string = str.split('')
-  let strings = []
-  for (letter of string) {
-    if (letter === 'a') {
-      strings.push('1')
-    }
-    else if (letter === 'e') {
-      strings.push('2')
-    }
-    else if (letter === 'i') {
-      strings.push('3')
-    }
-    else if (letter === 'o') {
-      strings.push('4')
-    }
-    else if (letter === 'u') {
-      strings.push('5')
-    }
-    else{
-      strings.push(letter)
-    }
-
+function generatePhoneNumber(vetor) {
+  if (vetor.length!=11) {
+    return "Array com tamanho incorreto."
   }
-  console.log(strings.join(''));
-  return strings.join('')
+  ramal = '(' + vetor[0] + vetor[1] + ')';
+  numFirst = ' '+vetor[2] + vetor[3] + vetor[4] + vetor [5] + vetor[6];
+  numLast = '-'+vetor[7]+vetor[8]+vetor[9]+vetor[10];
+  for (numero of vetor) {
+    let count = 0
+    if (numero < 0) {
+      return "não é possível gerar um número de telefone com esses valores"
+    }
+    else if (numero>9) {
+      return "não é possível gerar um número de telefone com esses valores"
+    }
+    for (index in vetor) {
+      if (vetor[index] === numero){
+        count +=1
+        if (count ===3) {
+          return "não é possível gerar um número de telefone com esses valores"
+        }
+      }
+    }
+  }
+  return ramal+numFirst+numLast
 }
-console.log(encode("hi there!"));
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))

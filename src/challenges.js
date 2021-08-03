@@ -164,7 +164,7 @@ function decode(str) {
     }
   }
   return strings.join('')
-  }
+}
 
 module.exports = {
   calcArea,
