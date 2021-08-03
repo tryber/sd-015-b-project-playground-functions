@@ -10,15 +10,15 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence(a) {
-  let resultado = a.split(' ');
+function splitSentence(frase) {
+  let resultado = frase.split(' ');
   return resultado;
 }
-console.log(splitSentence('sayro damaceno'))
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  let concat = array[0] + ', ' + array[array.length - 1];
+  return concat;
 }
 
 // Desafio 5
