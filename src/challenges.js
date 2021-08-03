@@ -84,39 +84,9 @@ let newArray = []
     return newArray
   }
 // Desafio 9
-function encode(string) {
-let newString = []
-let newString2 =''
-for(let i = 0; i < string.length; i++){
-    newString.push(string[i]) 
-  }  
-for(let i = 0; i < string.length; i++){
-      if (string[i]=='a'){
-        newString[i] = 1;
-      continue
-      } 
-        else if (string[i]=='e'){
-          newString[i] = 2;
-        continue
-        } 
-          else if(string[i]=='i'){
-            newString[i] = 3;
-          continue
-          }
-            else if (string[i]=='o'){
-              newString[i] = 4;
-            continue
-            }
-              else if (string[i]=='u'){
-                newString[i] = 5;
-              } 
-  }
-for(let i = 0; i < newString.length; i++){
-      newString2 += newString[i]
-  }
-  return newString2
+function encode() {
+  // seu código aqui
 }
-console.log(encode("aeiou"))
 function decode() {
   // seu código aqui
 }
