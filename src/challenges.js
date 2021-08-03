@@ -2,22 +2,24 @@
 function compareTrue(entradas) {
   // seu código aqui
   let entrada1 = 0;
-  let comparativo = "true";
+  let comparativo = 'true';
   for (let indice in entradas) {
     if (entradas[entrada1] === comparativo && entradas[indice] === comparativo) {
       return true;
     }
-    else {
-      return false;
-    }
   }
+  return false;
 }
-console.log(compareTrue(["false", "false"]));
+
 
 // Desafio 2
-function calcArea() {
+function calcArea(base, height) {
   // seu código aqui
+  return (base * height) / 2;
 }
+console.log(calcArea(10, 50));
+console.log(calcArea(5, 2));
+console.log(calcArea(51, 1));
 
 // Desafio 3
 function splitSentence() {
