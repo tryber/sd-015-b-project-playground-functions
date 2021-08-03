@@ -47,13 +47,13 @@ function highestCount(arr) {
   let counter = 0;
   let largestNumber = arr[0];
 
-  for (index in arr) {
+  for (let index in arr) {
     if (arr[index] > largestNumber) {
       largestNumber = arr[index];
     }
   }
 
-  for (index in arr) {
+  for (let index in arr) {
     if (arr[index] === largestNumber) {
       counter += 1;
     }
@@ -82,7 +82,7 @@ function fizzBuzz(arr) {
   // seu código aqui
   let arrayFizzBuzz = [];
 
-  for (num of arr) {
+  for (let num of arr) {
     if (num % 3 === 0 && num % 5 !== 0) {
       arrayFizzBuzz.push('fizz');
     } else if (num % 5 === 0 && num % 3 !== 0) {
@@ -101,7 +101,7 @@ function encode(str) {
   // seu código aqui
   let strSplit = str.split('');
 
-  for (index in strSplit) {
+  for (let index in strSplit) {
     if (strSplit[index] === 'a') {
       strSplit[index] = 1;
     } else if (strSplit[index] === 'e') {
@@ -123,7 +123,7 @@ function decode(str) {
   // seu código aqui
   let strSplit = str.split('');
 
-  for (index in strSplit) {
+  for (let index in strSplit) {
     if (strSplit[index] == 1) {
       strSplit[index] = 'a';
     } else if (strSplit[index] == 2) {

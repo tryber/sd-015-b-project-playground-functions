@@ -6,7 +6,7 @@ function techList(arr, name) {
   let arrayTech = [];
 
   if (arr.length > 0) {
-    for (tech of sortedArray) {
+    for (let tech of sortedArray) {
       objectTech['name'] = name;
       objectTech['tech'] = tech;
       arrayTech.push(objectTech);
@@ -60,8 +60,12 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
+function hydrate(str) {
   // seu código aqui
+  for (let index in str) {
+    for (let nextIndex in str) {
+    }
+  }
 }
 
 module.exports = {
