@@ -75,11 +75,9 @@ function catAndMouse(mouse, cat1, cat2) {
 let gato1 = "cat1"
 let gato2 = "cat2"
 let trombam = 'os gatos trombam e o rato foge'
-let distanciaGato1 = cat1 + mouse
-let distanciaGato2 = cat2 + mouse
-  if(distanciaGato1 === distanciaGato2){
+  if(mouse - cat1 === mouse - cat2 + 2){
     return trombam;
-  } else if (distanciaGato1 < distanciaGato2) {
+  } else if (mouse + cat1 <  mouse + cat2) {
     return gato1
   } else {
     return gato2
