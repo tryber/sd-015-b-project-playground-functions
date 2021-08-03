@@ -1,20 +1,11 @@
-function fizzBuzz(vetor) {
-  let vec = []
-  for (number of vetor) {
-    if (number % 3 ===0 && number % 5 ===0) {
-      vec.push("fizzBuzz")
-    }
-    else if (number % 3 ===0) {
-      vec.push("fizz")
-    }
-    else if (number % 5 ===0) {
-      vec.push("buzz")
-    }
-    
-    else {
-      vec.push("bug!")
+function techList(vetor,name) {
+  let obj = {}
+  for (index in vetor) {
+    obj[index] = {
+      tech: vetor[index],
+      name: name
     }
   }
-  return vec
+  return obj
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45],));
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"],"Lucas"));

@@ -43,21 +43,21 @@ function footballPoints(wins,ties) {
 }
 
 // Desafio 6
-// function highestCount(vetor) {
-//   let contagem = {}
-//   let maior = -2
-//     for (key in vetor) {
-//         count = 0
-//         for (number of vetor){
-//             if(vetor[key] === number){
-//                 count+=1
-//                 contagem[vetor[key]] = count
-//             }
-//         }       
-//     }
-//   return count
-// }
-// console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
+function highestCount(vetor) {
+  let contagem = {}
+  let maior = -2
+    for (key in vetor) {
+        count = 0
+        for (number of vetor){
+            if(vetor[key] === number){
+                count+=1
+                contagem[vetor[key]] = count
+            }
+        }       
+    }
+  return count
+}
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
 function catAndMouse(mouse,cat1,cat2) {
@@ -137,11 +137,32 @@ function fizzBuzz(vetor) {
   }
   return vec
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45],));
+
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(str) {
+  string = str.split('')
+  let strings = []
+  for (letter of string) {
+    if (letter === a) {
+      strings.push('1')
+    }
+    else if (letter === i) {
+      strings.push('3')
+    }
+    else if (letter === o) {
+      strings.push('4')
+    }
+    else if (letter === u) {
+      strings.push('5')
+    }
+    else{
+      strings.push(letter)
+    }
+
+  }
+  return strings.join('')
 }
+
 function decode() {
   // seu código aqui
 }
