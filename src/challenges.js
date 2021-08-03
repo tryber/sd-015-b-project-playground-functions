@@ -5,15 +5,16 @@ function compareTrue() {
 
 // Desafio 2
 function calcArea(base, height) {
-  let area = base * height / 2;
-  return area; 
+  let area = ((base * height) / 2);
+  return area;
 }
-console.log(calcArea("2","3"))
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(a) {
+  let resultado = a.split(' ');
+  return resultado;
 }
+console.log(splitSentence('sayro damaceno'))
 
 // Desafio 4
 function concatName() {
