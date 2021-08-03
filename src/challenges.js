@@ -1,7 +1,15 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+// 1 - Crie uma função usando o operador &&.
+function compareTrue(par1, par2) {
+  if (par1 && par2) {
+    return true;
+  } else {
+    return false;
+  }
 }
+console.log(compareTrue(false, true));
+console.log(compareTrue(false, false));
+console.log(compareTrue(true, true));
 
 // Desafio 2
 function calcArea() {
