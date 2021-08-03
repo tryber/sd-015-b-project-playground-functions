@@ -22,10 +22,12 @@ function splitSentence(string) {
   return splitString;
   // seu código aqui
 }
-console.log(splitSentence("go Trybe"))
-
 // Desafio 4
-function concatName() {
+function concatName(array) {
+  for (i=0 ; i<array.length ; i +=1) {
+    let name =array[array.length-1] + ", " + array[0];
+    return name;
+  }
   // seu código aqui
 }
 
