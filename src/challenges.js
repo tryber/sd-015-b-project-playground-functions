@@ -1,15 +1,15 @@
 // Desafio 1
 let value = true;
-function compareTrue(n1,n2) {
+function compareTrue(n1, n2) {
   // seu código aqui
-if (n1 === n2 && typeof(Number)){
+if ( n1 === n2 && n2 === n1 ) {
     return value;
-} else {
+} if ( n1 !== n2 && n2 !== n1 ){
     value = false;
     return value;
+  }
 }
-}
-console.log(compareTrue(1,1))
+console.log(compareTrue(1, 1));
 
 // Desafio 2
 function calcArea() {
