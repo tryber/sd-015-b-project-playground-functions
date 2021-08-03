@@ -65,7 +65,7 @@ function verificationOfNumberRepetition(numbers) {
 function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
   let boolean
-  if(Math.abs(lineA - lineC) < lineA && lineA < lineB + lineC) boolean = true
+  if(Math.abs(lineA - lineC) < lineA && lineA < lineB + lineC && Math.abs(lineA - lineC) < lineB && lineB < lineA + lineC && Math.abs(lineA - lineC) < lineC && lineC < lineA + lineC) boolean = true
   else boolean = false
 
   return boolean
