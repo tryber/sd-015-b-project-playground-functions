@@ -36,15 +36,15 @@ function highestCount(array) {
   for (let item of array) {
     if (item > largest) {
       largest = item;
-    }
-  }
-  for (let item of array) {
-    if (item === largest) {
+      count = 1;
+    } else if (item === largest) {
       count += 1;
     }
   }
   return count;
 }
+let myArray = [10, 2, 3, 10, 8, 1, 12]
+console.log(highestCount(myArray))
 
 // Desafio 7
 function catAndMouse() {
