@@ -1,15 +1,11 @@
-function compareTrue(valor1, valor2){ 
-    return valor1 && valor2;
-};
-
-
-function calcArea (base, height) {
-    return ((base * height) / 2);
-    };
-
 
 function splitSentence(text) {
     let separa = text.split(' ');
+    console.log(separa);
     return separa;
-    };
+};
+
+splitSentence('go Trybe');
+splitSentence('vamo que vamo');
+splitSentence('foguete');
 
