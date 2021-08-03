@@ -72,6 +72,7 @@ function triangleCheck(lineA, lineB, lineC) {
 function hydrate(phrase) {
   let referenceList = [1, 2 , 3, 4, 5, 6, 7, 8, 9];
   let counter = 0;
+  let returnString;
   phrase = phrase.split("");
   for (let letter of phrase) {
     if (Number(letter) in referenceList) {
@@ -79,11 +80,11 @@ function hydrate(phrase) {
     }
   }
   if (counter === 1) {
-    let retornString = counter.toString() + " copo de água";
+    returnString = counter.toString() + " copo de água";
   } else if (counter > 1) {
-    let retornString = counter.toString() + " copos de água";
+    returnString = counter.toString() + " copos de água";
   }
-  return retornString;
+  return returnString;
 }
 
 module.exports = {
