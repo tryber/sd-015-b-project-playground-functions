@@ -54,7 +54,7 @@ function highestCount(arrOfNumbers) {
       highestNumberCount++;
     }
   }
-  
+
   return highestNumberCount;
 }
 
@@ -73,7 +73,24 @@ function catAndMouse() {
 
 // Desafio 8
 function fizzBuzz() {
-  // seu código aqui
+  let arrOfFizzBuzz = [];
+
+  for (let i in arrOfNumbers) {
+    if (arrOfNumbers[i] % 3 === 0 && arrOfNumbers[i] % 5 === 0) {
+      arrOfFizzBuzz.push("fizzBuzz");
+    }
+    else if (arrOfNumbers[i] % 3 === 0) {
+      arrOfFizzBuzz.push("fizz");
+    }
+    else if (arrOfNumbers[i] % 5 === 0) {
+      arrOfFizzBuzz.push("buzz");
+    }
+    else {
+      arrOfFizzBuzz.push("bug!");
+    }
+  }
+  
+  return arrOfFizzBuzz;
 }
 
 // Desafio 9
