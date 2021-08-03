@@ -30,7 +30,6 @@ function footballPoints(wins, ties) {
   return footballPoints;
 }
 
-
 // Desafio 6
 function highestCount(array1) {
   let indiceMaior= 0;
@@ -47,7 +46,6 @@ function highestCount(array1) {
   }
   return contador;  
 }
-
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -98,15 +96,20 @@ function fizzBuzz(arrays) {
 
 }
 
-
-
-
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(stringer) {
+
+  for(let index = 0 ; index < stringer.length ; stringer += 1){
+    if(stringer[index] = "a"){
+      stringer[index].replace("1");
+    }
+  }
+  return stringer;
 }
+console.log(encode("Ola"));
+
 function decode() {
-  // seu código aqui
+  
 }
 
 module.exports = {
