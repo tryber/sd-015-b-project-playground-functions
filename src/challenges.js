@@ -3,9 +3,9 @@ function compareTrue(x, y) {
   // seu código aqui
   if (x > y && y === 1) {
     return true;
-    } else {
-      return false;
-      }
+  } else {
+    return false;
+    }
 }
 
 // Desafio 2
