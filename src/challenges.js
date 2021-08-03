@@ -75,9 +75,9 @@ if (cat1 <= 0 || cat2 <= 0 || mouse <=0) {
 
 // Desafio 8
 function fizzBuzz(array) {
-  for (let i in array.length) {
-    if ()
-  }
+  // for (let i in array.length) {
+  //   if ()
+  // }
 }
 
 // Desafio 9
