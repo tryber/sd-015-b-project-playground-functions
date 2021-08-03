@@ -1,21 +1,17 @@
-function teste(texto) {
+function techList(array, name) {
   // seu código aqui
-  let novoTexto = ''
-  for(let letra of texto){
-    if(letra=='a'){
-      novoTexto += 1
-    }else if(letra=='e'){
-      novoTexto += 2
-    }else if(letra=='i'){
-      novoTexto += 3
-    }else if(letra=='o'){
-      novoTexto += 4
-    }else if(letra=='u'){
-      novoTexto += 5
-    }else{
-      novoTexto += letra
+  let novaLista = [];
+  if(array.length == 0){
+    console.log ("Vazio!");
+  } else {
+    for (let item of array) {
+      let objeto = {};
+      objeto['tech'] = item;
+      objeto['name'] = name;
+      novaLista.push(objeto);
     }
+    console.log (novaLista);
   }
-  console.log(novoTexto)
 }
-encode('oi')
+let lista = ['JavaScript', 'HTML']
+techList(lista, "Rodrigo")
