@@ -1,6 +1,5 @@
 // Desafio 1
 function compareTrue(a, b) {
-
   if(a == true && b == true){
     return true
   }else{
@@ -28,8 +27,15 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numeros) {
+  let a = Math.max.apply(null, numeros)
+  let contador = 0;
+  for(let i = 0; i <= numeros.length; i++){
+    if(a == numeros[i]){
+      contador++
+    }
+  }
+  return contador
 }
 
 // Desafio 7
