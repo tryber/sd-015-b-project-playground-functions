@@ -29,13 +29,15 @@ function concatName(arraystring) {
   let storelafr = storelaf.join()
    return(storelafr);
   }
-console.log(concatName(["joao","maria","cleiton","claudia","josé"]));
-  
 
-// Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins,ties) {
+  let contw = (3 * wins);
+  let contt = ties;
+  let pontos = (contt + contw);
+  return(pontos + " pontos");  
+
 }
+
 
 // Desafio 6
 function highestCount() {
