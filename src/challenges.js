@@ -37,9 +37,6 @@ function highestCount(arr) {
     }
     if (num === save) count++;
   }
-  for (let num of arr) {
-  }
-
   return count;
 }
 
