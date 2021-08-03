@@ -84,7 +84,11 @@ function hydrate(str) {
       aqua += number;
     }
   }
-  return aqua + ' copos de água';
+  if (aqua === 1) {
+    return aqua + ' copo de água';
+  } else if (aqua > 1) {
+    return aqua + ' copos de água';
+  }
 }
 
 // console.log(hydrate("1 cerveja")); // teste 1
