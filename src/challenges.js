@@ -1,13 +1,11 @@
 // Desafio 1
-function compareTrue(t,f) {
-  if(t && f !== true){
-    return false;
-  } else if(t && f !== false){
-    return false;
-  } else if(t && f === false){
+function compareTrue(parametro1, parametro2) {
+  if(parametro1 && parametro2 === true){
+    return true;
+  } else if(parametro1 && parametro2 === false){
     return false;
   } else {
-    return true;
+    return false;
   }
 }
 
@@ -26,19 +24,51 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  let indexCont  = 0
+  let ultimaArray = []
+  let primeiraArray = array[0]
+  let resultado = ""
+  for(index = 0; index < array.length; index+=1) {
+    if (index > indexCont){
+      indexCont = index;
+      ultimaArray = array[indexCont];
+    }
+  }
+  resultado = ultimaArray + "," + " " + primeiraArray;
+  return resultado;
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+pontosVitoria = wins * 3;
+pontosEmpate = ties * 1;
+resultado = pontosVitoria + pontosEmpate;
+return resultado;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numeros) {
+  let contRepetido = 0;
+  let contNumero = 0;
+  let indexNumeroRepetido = 0;
+
+for(index = 0; index < numeros.length; index+=1) {
+  let verificaNumero = numeros[index];
+  for(index2 = 0; index2 < numeros.length; index2+=1) {
+    if(verificaNumero === numeros[index2]) {
+      contNumero = contNumero + 1;
+    }
+  }
+  if (contNumero > contRepetido){
+    contRepetido = contNumero;
+    indexNumeroRepetido = index;
+  }
+  contNumero = 0;
 }
+return numeros[indexNumeroRepetido]
+}
+
 
 // Desafio 7
 function catAndMouse() {
