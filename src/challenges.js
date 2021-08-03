@@ -98,7 +98,7 @@ function fizzBuzz(arrNumeros) {
 function encode(stringRecebida) {
   let resultado = '';
   for (let letter of stringRecebida) {
-    if (letter === 'a'){
+    if (letter === 'a') {
       resultado += '1';
     } else if (letter === 'e') {
       resultado += '2';
@@ -117,7 +117,7 @@ function encode(stringRecebida) {
 function decode(stringRecebida) {
   let resultado = '';
   for (let letter of stringRecebida) {
-    if (letter === '1'){
+    if (letter === '1') {
       resultado += 'a';
     } else if (letter === '2') {
       resultado += 'e';
