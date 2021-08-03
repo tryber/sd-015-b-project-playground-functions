@@ -5,9 +5,9 @@ function compareTrue(a, b) {
 
 // Desafio 2
 function calcArea(base, height) {
-  return (base * height) /2 
+  return (base * height) / 2; 
 }
-console.log(calcArea(50 , 10));
+console.log(calcArea(50, 10));
 
 // Desafio 3
 function splitSentence(string) {
@@ -16,9 +16,11 @@ function splitSentence(string) {
 console.log(splitSentence('Vamos que vamos!'));
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  return array[array.length-1] + ', ' + array[0];
 }
+array = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']
+console.log(concatName(array))
 
 // Desafio 5
 function footballPoints() {
