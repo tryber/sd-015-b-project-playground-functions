@@ -1,11 +1,6 @@
 // Desafio 1
 function compareTrue(par1, par2) {
-  if (par1 === true && par2 === true) {
-    return true;
-  }
-  else{
-    return false
-  }
+  return par1 === true && par2 === true;
 }
 
 // Desafio 2
@@ -30,7 +25,7 @@ function concatName(vetor) {
       resultado.push(vetor[index]);
     }
   }
-  resultado = resultado.reverse()
+  resultado = resultado.reverse();
   resultado = resultado.join(', ');
   return resultado;
 }
@@ -42,41 +37,42 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount(vetor) {
-  let count = 0;
+function defineMaior(vetor) {
   let maior = -10000;
-  for (number of vetor) {
+  for (let number of vetor) {
     if (number > maior) {
       maior = number;
     }
   }
-
-  for (number of vetor) {
+  return maior;
+}
+function highestCount(vetor) {
+  let count = 0;
+  let maior = defineMaior(vetor);
+  for (let number of vetor) {
     if (number === maior) {
       count += 1;
     }
   }
   return count;
 }
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let distCat1 = Math.abs(cat1 - mouse);
-  let distCat2 = Math.abs(cat2 - mouse)
+  let distCat2 = Math.abs(cat2 - mouse);
   if (distCat1 > distCat2) {
     return 'cat2';
-  }
-  else if (distCat1 < distCat2) {
+  } else if (distCat1 < distCat2) {
     return 'cat1';
-  }
-  else{
+  } else if (distCat1 === distCat2) {
     return 'os gatos trombam e o rato foge';
   }
 }
 
-
 // Desafio 8
-function fizzBuzz(vetor) {
+function definea(vetor) {
   let vec = [];
   for (let number of vetor) {
     if (number % 3 === 0 && number % 5 === 0) {
@@ -88,7 +84,11 @@ function fizzBuzz(vetor) {
     } else {
       vec.push('bug!');
     }
-  }
+}
+return vec
+}
+function fizzBuzz(vetor) {
+  let vec = definea(vetor)
   return vec;
 }
 
@@ -115,9 +115,9 @@ function encode(str) {
 }
 
 function decode(str) {
-  string = str.split('');
+  let string = str.split('');
   let strings = [];
-  for (letter of string) {
+  for (let letter of string) {
     if (letter === '1') {
       strings.push('a');
     } else if (letter === '2') {
