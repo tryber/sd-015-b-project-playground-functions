@@ -23,10 +23,11 @@ function splitSentence(frase) {
 }
 
 // Desafio 4
-function concatName() {
+function concatName(lista) {
   // seu código aqui
+  return lista[lista.length -1] + " " + lista[0];
 }
-
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 // Desafio 5
 function footballPoints(wins, ties) {
   // seu código aqui
@@ -37,7 +38,7 @@ function footballPoints(wins, ties) {
 function highestCount(lista) {
   // seu código aqui
   let maior = 0;
-  let repete = 0
+  let repete = 0;
   for (i = 0; i <= lista.length + 1; i ++){
     if (maior < lista[i]) {
       maior = lista[i];
@@ -75,16 +76,16 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(lista) {
   // seu código aqui
   for (i = 0; i <= lista.length + 1; i ++) {
-    if (((lista / 3) == 0) && ((lista / 5) != 0)) {
+    if (((lista / 3) == 0) && ((lista / 5) !== 0)) {
       lista[i] = "fizz";
     }
-    else if (((lista / 3) != 0) && ((lista / 5) == 0)) {
+    else if (((lista / 3) !== 0) && ((lista / 5) == 0)) {
       lista[i] = "buzz";
     }
     else if (((lista / 3) == 0) && ((lista / 5) == 0)) {
       lsita[i] = "fizzBuzz";
     }
-    else if (((lista / 3) != 0) && ((lista / 5) != 0)) {
+    else if (((lista / 3) !== 0) && ((lista / 5) !== 0)) {
       lista[i] = "bug!";
     }
   }
@@ -94,7 +95,9 @@ function fizzBuzz(lista) {
 // Desafio 9
 function encode() {
   // seu código aqui
+  
 }
+
 function decode() {
   // seu código aqui
 }
