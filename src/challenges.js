@@ -32,12 +32,26 @@ function footballPoints(wins, ties) {
   // seu código aqui
   return (wins * 3) + ties;
 }
-console.log(footballPoints(14, 8));
-console.log(footballPoints(1, 2));
-console.log(footballPoints(0, 0));
+
 // Desafio 6
-function highestCount() {
+function highestCount(lista) {
   // seu código aqui
+  let maior = 0;
+  let repete = 0
+  for (i = 0; i <= lista.length + 1; i ++){
+    if (maior < lista[i]) {
+      maior = lista[i];
+    }
+    else {
+      maior = maior;
+    }
+  }
+  for (i = 0; i <= lista.length + 1; i ++){
+    if (maior == lista[i]) {
+      repete ++;
+    }
+  }
+  return repete;
 }
 
 // Desafio 7
