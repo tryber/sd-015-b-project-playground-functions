@@ -1,4 +1,3 @@
-/* eslint-disable max-lines-per-function */
 // Desafio 1
 function compareTrue(valorUm, valorDois) {
   if (valorUm === true && valorDois === true) {
@@ -60,8 +59,24 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numberArr) {
+  let arrayFizz = [];
+  function numberToString(number) {
+    if (number % 3 === 0 && number % 5 === 0) {
+      arrayFizz.push('fizzBuzz');
+    } else if (number % 5 === 0) {
+      arrayFizz.push('buzz');
+    } else if (number % 3 === 0) {
+      arrayFizz.push('fizz');
+    } else {
+      arrayFizz.push('bug!');
+    }
+  }
+
+  for (let index = 0; index < numberArr.length; index += 1) {
+    numberToString(numberArr[index]);
+  }
+  return arrayFizz;
 }
 
 // Desafio 9
