@@ -47,7 +47,7 @@ function highestCount(numbers) {
   let highestNumber = numbers[0];
   let count = 0;
 
-  for (number of numbers) {
+  for (let number of numbers) {
     if (number > highestNumber) {
       highestNumber = number;
       count = 1;
@@ -63,14 +63,17 @@ function highestCount(numbers) {
 function catAndMouse(mouse, cat1, cat2) {
   let distanceCat1 = Math.abs(cat1 - mouse);
   let distanceCat2 = Math.abs(cat2 - mouse);
+  let result = '';
 
   if (distanceCat1 < distanceCat2) {
-    return 'cat1';
+    result = 'cat1';
   } else if (distanceCat2 < distanceCat1) {
-    return 'cat2';
+    result = 'cat2';
   } else {
-    return 'os gatos trombam e o rato foge';
+    result = 'os gatos trombam e o rato foge';
   }
+
+  return result;
 }
 
 // Desafio 8
