@@ -1,22 +1,30 @@
 // Desafio 1
 function compareTrue(a, b) {
-  if ( typeof( a ) == 'boolean' && typeof( b ) == 'boolean' ) {
+  if (typeof a === 'boolean' && typeof b === 'boolean') {
     return a && b;
   } else {
-    console.log( 'Type of args are not boolean' );
-    return 'ERROR';
+    console.log('Type of args are not boolean');
   }
 }
 
 // console.log( compareTrue(false, true) ); // teste 1
 // console.log( compareTrue(false, false) ); // teste 2
 // console.log( compareTrue(true, true) ); // teste 3
-console.log( compareTrue(1, true) ); // teste extra
+// console.log( compareTrue(1, true) ); // teste extra
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  if (typeof base === 'number' && typeof height === 'number') {
+    return base * height * 0.5;
+  } else {
+    console.log('Type of args are not number');
+  }
 }
+
+// console.log( calcArea(10, 50) ); // teste 1
+// console.log( calcArea(5, 2) ); // teste 2
+// console.log( calcArea(51, 1) ); // teste 3
+// console.log( calcArea(5, '5') ); // teste extra
 
 // Desafio 3
 function splitSentence() {
