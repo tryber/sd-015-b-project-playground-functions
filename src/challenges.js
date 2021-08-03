@@ -93,33 +93,22 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(numbers) {
 
+  let max = Number.NEGATIVE_INFINITY;
+
+  let min = 0;
+
   for (let compare of numbers) {
-
-    let max = -50000000000;
-
-    let min = 0;
-
-    let repeat = 0;
-
     if (compare > max) {
       max = compare;
-
-      for (let counter = 0; counter < numbers.length; counter += 1) {
-            
-        if (max === numbers[counter]) {
-
-          min += 1;
-
-        }
-
-        if (min > repeat) {
-
-          repeat = min;
-        }
-      }
     }
-    return repeat;
   }
+
+  for (let counter = 0; counter < numbers.length; counter += 1) {
+    if (max === numbers[counter]) {
+      min +=1
+    }
+  }
+  return min;
 }
 
 // Desafio 7
@@ -139,7 +128,8 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(numbers) {
+
   // seu código aqui
 }
 
