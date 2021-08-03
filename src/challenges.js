@@ -55,21 +55,32 @@ function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
   let distance1 = Math.abs(cat1 - mouse);
   let distance2 = Math.abs(cat2 - mouse);
-  
+
   if (distance1 > distance2) {
-    return "cat2";
-  }else if (distance2 > distance1) {
-    return "cat1";
-  }else {
-    return "os gatos trombam e o rato foge";
+    return 'cat2';
+  } else if (distance2 > distance1) {
+    return 'cat1';
+  } else {
+    return 'os gatos trombam e o rato foge';
   }
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(numbersArray) {
   // seu código aqui
+  let newNumbersArray = [];
+  for (let index = 0; index < numbersArray.length; index += 1) {
+    if (numbersArray[index] % 3 === 0 && numbersArray[index] % 5 !== 0) {
+        newNumbersArray.push("fizz")
+    }else if (numbersArray[index] % 5 === 0 && numbersArray[index] % 3 !== 0) {
+      newNumbersArray.push("buzz");
+    }else if (numbersArray[index] % 3 === 0 && numbersArray[index] % 5 === 0) {
+      newNumbersArray.push("fizzBuzz")
+    }else {
+      newNumbersArray.push("bug!")
+    }
+  } return newNumbersArray;
 }
-
 // Desafio 9
 function encode() {
   // seu código aqui
