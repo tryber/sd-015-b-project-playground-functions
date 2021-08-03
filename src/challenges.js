@@ -5,22 +5,22 @@ function compareTrue(a, b) {
   } else {
     return false;
   }
-};
+}
 
 // Desafio 2
 function calcArea(base, height) {
-  return (base*height) / 2;
+  return (base * height) / 2;
 }
 
 // Desafio 3
 function splitSentence(string) {
-  let array = string.split(" ");
+  let array = string.split(' ');
   return array;
 }
 
 // Desafio 4
 function concatName(array) {
-  let string = array.pop() + ", " + array.shift();
+  let string = array.pop() + ', ' + array.shift();
   return string;
 }
 
@@ -34,19 +34,18 @@ function footballPoints(wins, ties) {
 function highestCount(arrayNumbers) {
   let maiorNumero = arrayNumbers[0];
   let vezesQueRepete = 0;
-    for (let index = 0; index < arrayNumbers.length; index += 1) {
+  for (let index = 0; index < arrayNumbers.length; index += 1) {
     if (arrayNumbers[index] >= maiorNumero) {
       maiorNumero = arrayNumbers[index];
     }
   }
-    for (let index = 0; index < arrayNumbers.length; index += 1) {
-      if (maiorNumero === arrayNumbers[index]) {
-        vezesQueRepete = vezesQueRepete + 1
-      }
+  for (let index = 0; index < arrayNumbers.length; index += 1) {
+    if (maiorNumero === arrayNumbers[index]) {
+      vezesQueRepete += 1;
     }
-    return vezesQueRepete;
   }
-
+  return vezesQueRepete;
+}
 
 // Desafio 7
 
@@ -55,33 +54,31 @@ function catAndMouse(mouse, cat1, cat2) {
   let cat2Absoluto = Math.abs(mouse - cat2);
 
   if (cat1Absoluto > cat2Absoluto) {
-    return "cat2";
+    return 'cat2';
   } else if (cat1Absoluto < cat2Absoluto) {
-    return "cat1";
+    return 'cat1';
   }
-  return "os gatos trombam e o rato foge";
+  return 'os gatos trombam e o rato foge';
 }
 catAndMouse(1, 0, 2);
-
 
 // Desafio 8
 
 function fizzBuzz(arrayNumbers) {
-
   let arrayFizzBuzz = [];
   for (let index of arrayNumbers) {
     if (index % 3 === 0 && index % 5 === 0) {
-      arrayFizzBuzz.push("fizzBuzz");
+      arrayFizzBuzz.push('fizzBuzz');
     } else if (index % 3 === 0){
-      arrayFizzBuzz.push("fizz");
+      arrayFizzBuzz.push('fizz');
     } else if (index % 5 === 0) {
-      arrayFizzBuzz.push("buzz");
-      } else {
-        arrayFizzBuzz.push("bug!");
-      }
+      arrayFizzBuzz.push('buzz');
+    } else {
+      arrayFizzBuzz.push('bug!');
     }
-    return (arrayFizzBuzz)
   }
+  return (arrayFizzBuzz);
+}
 
 // Desafio 9
 function encode() {
