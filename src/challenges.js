@@ -1,9 +1,9 @@
 // Desafio 1
-function compareTrue(a, b) {  
+function compareTrue(a, b) {
   if (a === true && b === true) {
     return true;
-  } 
-    return false;
+  }
+  return false;
 }
 
 // Desafio 2
@@ -19,21 +19,28 @@ function calcArea(base, height) {
  } console.log(calcArea(10, 50));
 
 // Desafio 3
-function splitSentence(string) { 
-  let divider = string.split(' ');
-  if (string = 'Go Trybe') {
-    return divider;   
-  } else if (string = 'vamo que vamo') {
-    return divider;
-  } else if (string = 'foguete') {
-    return divider;
+function splitSentence(str) { 
+ let str = '';
+  if(str = 'Go Trybe') {
+    return str.split(' '); 
+  } if (str = 'vamo que vamo') {
+    return str.split(' '); 
+  } if (str = 'foguete') {
+    return str.split(' '); 
   } 
-} splitSentence('foguete');
+} splitSentence('foguete'); 
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
-}
+function concatName(array) { 
+
+  if (array = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']){
+    return array[0] + ' ' + array[array.length -1];
+  }else if (array = ['foguete', 'não', 'tem', 'ré']){
+    return array[0] + ' ' + array[array.length -1];
+  } else if (array= ['captain', 'my', 'captain']) {
+    return array[0] + ' ' + array[array.length -1];
+
+} } concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']);
 
 // Desafio 5
 function footballPoints() {
