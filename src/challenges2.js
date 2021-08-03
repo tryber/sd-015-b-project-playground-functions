@@ -58,8 +58,6 @@ function generatePhoneNumber(phone) {
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
-  // lineA > LineB + LineC && LineA > Math.abs (LineB - LineC);
-
   let checks = 0;
   if (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC)) {
     return true;
@@ -70,10 +68,17 @@ function triangleCheck(lineA, lineB, lineC) {
   }
   return false;
 }
-console.log(triangleCheck(10, 14, 8));
+
 // Desafio 13
-function hydrate() {
+function hydrate(string) {
   // seu código aqui
+  let coposAgua = 0;
+  for (caractere of string){
+    if (!isNaN(parseInt(caractere))){
+      coposAgua += parseInt(caractere);
+    }
+  }
+  return coposAgua + " copos de água";
 }
 
 module.exports = {
