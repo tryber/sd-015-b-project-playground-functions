@@ -99,7 +99,7 @@ function encode(textToEncode) {
   }
   return text;
 }
-function decode() {
+function decode(textToEncode) {
   let text = textToEncode;
   for (let i in text){
     text = text.replace('1', 'a');
