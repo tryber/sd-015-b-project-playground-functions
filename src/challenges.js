@@ -56,6 +56,7 @@ function highestCount(arrayDeNumeros) {
   return repeticoes.length
 }
 
+
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let calcCat01 = mouse - cat1
@@ -85,30 +86,64 @@ function fizzBuzz(numEntrada) {
   let numarray = []
   for (let index = 0; index < numEntrada.length; index += 1){
 
-    if ( numEntrada[index] % 3 == 0 && numEntrada[index] % 5 == 0){
+    if ( numEntrada[index] % 3 === 0 && numEntrada[index] % 5 === 0){
       numarray.push("fizzBuzz")
-    } else if ( numEntrada[index] % 3 == 0){
+    } else if ( numEntrada[index] % 3 === 0){
       numarray.push("fizz")
 
-    } else if ( numEntrada[index] % 5 == 0) { 
+    } else if ( numEntrada[index] % 5 ===0) { 
       numarray.push("buzz")
       
-    } else if ( numEntrada[index] % 3 != 0 && numEntrada[index] % 5 != 0) {
+    } else if ( numEntrada[index] % 3 !== 0 && numEntrada[index] % 5 != 0) {
       numarray.push("bug!")
     }
   }
   return numarray
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
-function encode() {
+function encode(fraseParaCode) {
   // seu código aqui
+  let fraseSplit = fraseParaCode.split('')
+  let fraseUni = []
 
+  for(let key of fraseSplit) {
+    if (key === 'a')
+      fraseUni.push(1)
+    else if (key === 'e')
+      fraseUni.push(2)
+    else if (key === 'i')
+      fraseUni.push(3)
+    else if (key === 'o')
+      fraseUni.push(4)
+    else if (key === 'u')
+      fraseUni.push(5)
+  }
+  return mais = fraseUni.join('')
 }
-function decode() {
+console.log(encode("forma de fazer minha forma"));
+
+function decode(fraseParaCode) {
   // seu código aqui
+  let fraseSplit = fraseParaCode.split('')
+  let fraseUni = []
+  
+  for (let key of fraseSplit) {
+    if (key === '1')
+      fraseUni2.push('a')
+    else if (key === '1')
+      fraseUni2.push('e')
+    else if (key === '1')
+      fraseUni2.push('i')
+    else if (key === '1')
+      fraseUni2.push('o')
+    else if (key === '1')
+      fraseUni2.push('u')
+  }
+  return fraseUni.join('')
 }
+
+console.log(fraseParaCode("ola mundo"))
 
 module.exports = {
   calcArea,
