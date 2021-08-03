@@ -40,13 +40,16 @@ function concatName(arrayStrings) {
 
   return nomeConcat;
 }
-console.log('Desafio 4');
-console.log(concatName(['captain', 'my', 'captain']));
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let pontos;
+
+  pontos = 3 * wins + ties;
+
+  return pontos;
 }
+
 // Desafio 6
 function highestCount() {
   // seu código aqui
