@@ -10,7 +10,7 @@ function compareTrue(valor1, valor2) {
 function calcArea(base, height) {
   // seu código aqui
 
-  return base * height/2;
+  return base * height / 2;
 }
 
 // Desafio 3
@@ -20,8 +20,10 @@ function splitSentence(str) {
 }
 
 // Desafio 4
-function concatName() {
+
+function concatName(array) {
   // seu código aqui
+  return array[array.length-1] + ', ' + array[0];
 }
 
 // Desafio 5
