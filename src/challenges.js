@@ -39,10 +39,17 @@ function highestCount(numeros) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse( mouse, cat1, cat2, ) {
+    let distanciaCat1 = Math.abs(cat1 - mouse)
+    let distanciaCat2 =  Math.abs(cat2 - mouse)
+    if(distanciaCat1 < distanciaCat2){
+      return "cat1"
+    }else if(distanciaCat2 < distanciaCat1){
+      return "cat2"
+    }else{
+      return "os gatos trombam e o rato foge"
+    }
 }
-
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
