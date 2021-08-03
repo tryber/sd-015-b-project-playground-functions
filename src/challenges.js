@@ -18,10 +18,10 @@ function splitSentence(str) {
   let separa = str.split(" ");
   return separa;
 }
-console.log(splitSentence('vamo que vamo'))
+
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(str) {
+  return ((str[str.length-1]) + ", " + (str[0]));
 }
 
 // Desafio 5
