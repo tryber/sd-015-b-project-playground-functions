@@ -7,7 +7,6 @@ function compareTrue(x, y, z) {
 function calcArea(base, height) {
   return (base * height)/2;
 }
-calcArea((10, 50))
 
 // Desafio 3
 function splitSentence(string) {
@@ -24,8 +23,6 @@ function concatName(names) {
 function footballPoints(wins, ties) {
   return (wins * 3) + ties;
 }
-footballPoints((14, 8))
-
 
 // Desafio 6
 function highestCount() {
@@ -33,8 +30,16 @@ function highestCount() {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  if (cat1 > cat2){
+    return 'cat2';
+  }
+  else if (cat1 < cat2){
+    return 'cat1'
+  }
+  else{
+    return "os gatos trombam e o rato foge";
+  }
 }
 
 // Desafio 8
