@@ -1,6 +1,6 @@
 // Desafio 1
-function compareTrue(boolean_1, boolean_2) {
-  if((boolean_1 && boolean_2) === true) {
+function compareTrue(boolean1, boolean2) {
+  if((boolean1 && boolean2) === true) {
     return true;
   } else {
     return false;
@@ -15,33 +15,33 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(phrase) {
-  split_phrase = phrase.split(" ");
-  return split_phrase;
+  splitPhrase = phrase.split(" ");
+  return splitPhrase;
 }
 
 // Desafio 4
-function concatName(name_array) {
-  return_string = name_array[name_array.length - 1].concat(", ", name_array[0]);
-  return return_string;
+function concatName(nameArray) {
+  returnString = nameArray[nameArray.length - 1].concat(", ", nameArray[0]);
+  return returnString;
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  total_points = (wins * 3) + ties;
-  return total_points;
+  totalPoints = (wins * 3) + ties;
+  return totalPoints;
 }
 
 // Desafio 6
-function highestCount(numbers_array) {
-  let highest_number = Number.NEGATIVE_INFINITY;
+function highestCount(numbersArray) {
+  let highestNumber = Number.NEGATIVE_INFINITY;
   let counter = 0;
-  for(number of numbers_array) {
-    if(number > highest_number) {
-      highest_number = number;
+  for(number of numbersArray) {
+    if(number > highestNumber) {
+      highestNumber = number;
     }
   }
-  for (number of numbers_array) {
-    if(number === highest_number) {
+  for (number of numbersArray) {
+    if(number === highestNumber) {
       counter += 1;
     }
   }
@@ -50,38 +50,48 @@ function highestCount(numbers_array) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let d_cat1 = Math.abs(cat1 - mouse);
-  let d_cat2 = Math.abs(cat2 - mouse);
-  if (d_cat1 < d_cat2) {
+  let dCat1 = Math.abs(cat1 - mouse);
+  let dCat2 = Math.abs(cat2 - mouse);
+  if (dCat1 < dCat2) {
     return "cat1";
-  } else if (d_cat2 < d_cat1) {
+  } else if (dCat2 < dCat1) {
     return "cat2";
-  } else if (d_cat2 === d_cat1) {
+  } else if (dCat2 === dCat1) {
     return "os gatos trombam e o rato foge";
   }
 }
 
 // Desafio 8
-function fizzBuzz(numbers_array) {
-  let return_array = [];
-  for(number of numbers_array) {
+function fizzBuzz(numbersArray) {
+  let returnArray = [];
+  for(number of numbersArray) {
     if(((number % 3) === 0) && ((number % 5) === 0)) {
-      return_array.push("fizzBuzz");
+      returnArray.push("fizzBuzz");
     } else if((number % 3) === 0) {
-      return_array.push("fizz");
+      returnArray.push("fizz");
     } else if ((number % 5) === 0) {
-      return_array.push("buzz");
+      returnArray.push("buzz");
     } else {
-      return_array.push("bug!");
+      returnArray.push("bug!");
     }
   }
-  return return_array;
+  return returnArray;
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+
+let encoder = {
+  "a" : 1,
+  "e" : 2,
+  "i" : 3,
+  "o" : 4,
+  "u" : 5,
 }
+
+function encode() {
+
+}  
+
 function decode() {
   // seu código aqui
 }
