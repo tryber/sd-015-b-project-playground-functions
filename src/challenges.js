@@ -17,12 +17,12 @@ function splitSentence(str) {
 
 // Desafio 4
 function concatName(array) {
-  return array[array.length -1] + ', ' + array[0];
+  return array[array.length - 1] + ', ' + array[0];
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(win, ties) {
+  return ((win * 3) + (ties * 1))
 }
 
 // Desafio 6
