@@ -1,16 +1,19 @@
 // Desafio 1
-function compareTrue() {
-  ...
+function compareTrue(valor1, valor2) {
+  let comparacao = valor1 && valor2;
+  return comparacao;
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  let triangle = (base * height) / 2;
+  return triangle;
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  let stringSeparada = string.split(' ');
+  return stringSeparada;
 }
 
 // Desafio 4
