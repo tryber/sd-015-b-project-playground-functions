@@ -3,7 +3,7 @@ function compareTrue(a, b) {
   return a && b;
 }
 
-console.log(compareTrue(false, true));
+compareTrue(false, true);
 
 // Desafio 2
 function calcArea(base, height) {
@@ -11,12 +11,14 @@ function calcArea(base, height) {
   return sum;
 }
 
-console.log(calcArea(5, 2));
+calcArea(5, 2);
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  return string.split(" ");
 }
+
+console.log(splitSentence('vamo que vamo'));
 
 // Desafio 4
 function concatName() {
