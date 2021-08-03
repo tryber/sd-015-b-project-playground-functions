@@ -78,8 +78,26 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(numbers) {
   // seu código aqui
+  let answer = [];
+
+  for (const num of numbers) {
+    let isDivisibleBy3 = num % 3 === 0;
+    let isDivisibleBy5 = num % 5 === 0;
+
+    if (isDivisibleBy3 && isDivisibleBy5) {
+      answer.push('fizzBuzz');
+    } else if (isDivisibleBy3) {
+      answer.push('fizz');
+    } else if (isDivisibleBy5) {
+      answer.push('buzz');
+    } else {
+      answer.push('bug!');
+    }
+  }
+
+  return answer;
 }
 
 // Desafio 9
