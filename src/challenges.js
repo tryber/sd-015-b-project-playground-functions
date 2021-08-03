@@ -1,17 +1,13 @@
 // Desafio 1 a
 function compareTrue(a, b) {
-  if (a === b) {
-    return true;
-  } else {
-    return false;
-  }
+  return a && b;
 }
 
-console.log(compareTrue(true, true));
+console.log(compareTrue(false, true));
 
 // Desafio 2
 function calcArea(base, height) {
-  let sum = base*height/2;
+  let sum = (base * height) / 2;
   return sum;
 }
 
