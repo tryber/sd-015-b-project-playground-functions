@@ -1,2 +1,5 @@
 let arr = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
-console.log(arr[arr.length - 1]);
+arr.push["oie eu sou o goku"];
+
+
+console.log(arr.length)

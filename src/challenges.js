@@ -22,22 +22,24 @@ function splitSentence(strin) {
 }
 
 
-
+//ex-4
 function concatName(arraystring) {
-
-  let storelaf = [arraystring[arraystring.length - 1],arraystring[0]];
-  let storelafr = storelaf.join()
+    
+   let storelaf = []; 
+   storelaf.push(arraystring[arraystring.length - 1], arraystring[0]);
+   let storelafr = storelaf.join(", ")
    return(storelafr);
   }
+  console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
+//ex-5
 function footballPoints(wins,ties) {
   let contw = (3 * wins);
   let contt = ties;
-  let pontos = (contt + contw);
-  return(pontos + " pontos");  
-
+  let pontos = (contw + contt);
+  return(pontos);   
 }
-
+console.log(footballPoints(10,15));
 
 // Desafio 6
 function highestCount() {
