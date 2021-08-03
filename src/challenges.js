@@ -108,8 +108,31 @@ function encode(string) {
   } return enCoded;
 
 }
-function decode() {
-  // seu código aqui
+function decode(stringNum) {
+  let arrayStrinNum = stringNum.split('');
+  let enCodeN = [];
+  let enCodedN = "";
+  // string -> array
+  for (i = 0; i < arrayStrinNum.length; i ++) {
+    if (arrayStrinNum[i] === '1') {
+      enCodeN.push('a');
+    } else if (arrayStrinNum[i] === '2') {
+      enCodeN.push('e');
+    } else if (arrayStrinNum[i] === '3') {
+      enCodeN.push('i');
+    } else if (arrayStrinNum[i] === '4') {
+      enCodeN.push('o');
+    } else if (arrayStrinNum[i] === '5') {
+      enCodeN.push('u');
+    } else { 
+      enCodeN.push(arrayStrinNum[i]);
+    }
+  }
+
+  //mapear array => string
+  for (j = 0; j < enCodeN.length; j++) {
+    enCodedN = enCodedN + enCodeN[j];
+  } return enCodedN;
 }
 
 module.exports = {
