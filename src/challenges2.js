@@ -73,19 +73,23 @@ function generatePhoneNumber(array) {
 }
 
 // Desafio 12
-function checkSum(lineA, lineB, lineC) {
+function createSideArray(lineA, lineB, lineC) {
   let sideArray = [lineA, lineB, lineC];
+  return sideArray
+}
+function createSumArray(lineA, lineB, lineC) {
   let sumAB = lineA + lineB;
   let sumAC = lineA + lineC;
   let sumBC = lineB + lineC;
-  let sumArray = [sumAB, sumAC, sumBC];
-  let sideMinusSum = [];
-  for (let side of sideArray) {
-    for (let sum of sumArray) {
-      sideMinusSum.push(sum - side);
-    }
+  let sumArray = [sumBC, sumAC, sumAB];
+  return sumArray;
+}
+function checkSum(lineA, lineB, lineC) {
+  let sideArray = createSideArray(lineA, lineB, lineC);
+  let sumArray = createSumArray(lineA, lineB, lineC);
+  for (let counter = 0; counter < sideArray.lenght; counter += 1) {
+    
   }
-  return sideMinusSum;
 }
 function checkDiff() {
   let diffAB = Math.abs(lineA - lineB);
