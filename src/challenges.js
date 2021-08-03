@@ -1,23 +1,23 @@
 // Desafio 1
 function compareTrue(param1, param2) {
   // seu código aqui
-  if (param1 && param2 % 2 === 0) {
-    return true
+  if (param1 && param2 === true) {
+    return true;
   } else {
-    return false
+    return false;
   }
 }
 
 // Desafio 2
 function calcArea(base, height) {
   // seu código aqui
-  return (base * height) / 2
+  return (base * height) / 2;
 }
 
 // Desafio 3
 function splitSentence(string) {
   // seu código aqui
-    return string.split(" ")
+  return string.split(' ');
 }
 
 // Desafio 4
