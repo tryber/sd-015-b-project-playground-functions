@@ -85,6 +85,7 @@ function encode(string) {
   // converter a string em array
   let arrayString = string.split('');
   let enCode = [];
+  let enCoded = "";
   for (i = 0; i < arrayString.length; i++){
     
     if (arrayString[i] === 'a') {
@@ -102,8 +103,11 @@ function encode(string) {
     }
   }
   // pegar a array e joga-la como string
-  return enCode.toString();
-} console.log(encode("hi there!"));
+  for (j = 0; j < enCode.length; j ++) {
+    enCoded = enCoded + enCode[j];
+  } return enCoded;
+
+}
 function decode() {
   // seu código aqui
 }
