@@ -33,15 +33,20 @@ function splitSentence(array) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arrayStrings) {
+  let nomeConcat = '';
+
+  nomeConcat = `${arrayStrings[arrayStrings.length - 1]}, ${arrayStrings[0]}`;
+
+  return nomeConcat;
 }
+console.log('Desafio 4');
+console.log(concatName(['captain', 'my', 'captain']));
 
 // Desafio 5
 function footballPoints() {
   // seu código aqui
 }
-
 // Desafio 6
 function highestCount() {
   // seu código aqui
