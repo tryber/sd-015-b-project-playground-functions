@@ -69,10 +69,7 @@ function fizzBuzz(array) {
 }
 // Desafio 9
 function encode(oi) {
-  let cript = oi;
-  }console.log(cript)
-encode('ola meu amigo')
-
+}
 function decode() {
   // seu código aqui
 }
