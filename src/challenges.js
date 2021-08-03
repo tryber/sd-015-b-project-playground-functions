@@ -6,12 +6,19 @@ function compareTrue(parmUm, parmDois) {
       return false;
     }
 }
- console.log(compareTrue(true,true))
+console.log(compareTrue(false,true))
+console.log(compareTrue(false,false))
+console.log(compareTrue(true,true))
+
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base,height) {
+  let areaTriangulo = (base * height) / 2;
+  return areaTriangulo;
 }
+console.log(calcArea(10,50));
+console.log(calcArea(5,2));
+console.log(calcArea(51,1));
 
 // Desafio 3
 function splitSentence() {
