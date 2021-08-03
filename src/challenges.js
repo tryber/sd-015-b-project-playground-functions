@@ -7,6 +7,7 @@ function compareTrue(valor1, valor2) {
 }
 
 compareTrue(true, true);
+console.log(true)
 
 // Desafio 2
 function calcArea() {
