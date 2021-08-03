@@ -43,13 +43,28 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
+function highestCount(amount) {
   // seu código aqui
+  let highNumber = amount[0]
+  let contagem = 0
+  // 2- Qual o maior numero da array //for
+  for (let index = 0; index < amount.length; index+= 1){
+    if (amount[index] > highNumber){
+      highNumber = amount[index]
+    }
+  }
+  for (let index = 0; index < amount.length; index+= 1){
+    if (amount[index] === highNumber){
+    contagem += 1
+  }
+}
+  return contagem;
 }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
+
 }
 
 // Desafio 8
