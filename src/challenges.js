@@ -111,8 +111,24 @@ function catAndMouse(mouse,cat1,cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(array) {
   // seu código aqui
+  // Basicamente um for que divide do 2 até o número atual e caso o resultado da divisão for um número inteiro, ele retorna um resultado diferente.
+  let result = [];
+
+  for (i = 0; i < array.length; i += 1) {
+    if (Number.isInteger(array[i] / 3) && Number.isInteger(array[i] / 5)) {
+      result.push('fizzBuzz')
+    } else if (Number.isInteger(array[i] / 3)) {
+      result.push('fizz')
+    } else if (Number.isInteger(array[i] / 5)) {
+      result.push('buzz')
+    } else {
+      result.push('bug!')
+    }
+  }
+
+  return result;
 }
 
 // Desafio 9
@@ -141,3 +157,4 @@ console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 console.log(footballPoints(14,8));
 console.log(highestCount([0, 0, 0]));
 console.log(catAndMouse(1,0,2));
+console.log(fizzBuzz([2, 15, 7, 9, 45]))
