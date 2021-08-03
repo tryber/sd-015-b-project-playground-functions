@@ -28,8 +28,11 @@ function splitSentence(frase) {
 }
 
 // Desafio 4
-function concatName() {
+function concatName(concatenation) {
   // seu código aqui
+    let primeiro = concatenation[concatenation.length - 1] ;
+    let segundo = concatenation[0] ;
+    return primeiro + ', ' + segundo  
 }
 
 // Desafio 5
