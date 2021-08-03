@@ -7,10 +7,15 @@ function compareTrue(a, b) {
   }
 } compareTrue(1, 2);
 
-// Desafio 2
-function calcArea() {
-  // seu código aqui
-}
+function calcArea(base, height) {
+  let area = (base * height)/2;
+  if (calcArea(10,50)){
+      console.log(area) ;
+  }else if (calcArea(2,10)) {
+    console.log(area) ;
+  } else if (calcArea(51,1)){
+    console.log(area) ;
+} calcArea(10,50);
 
 // Desafio 3
 function splitSentence(string) {
@@ -39,9 +44,21 @@ function catAndMouse() {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
-}
+function fizzBuzz(entrada) {
+  if (typeof entrada !== 'number'){
+    return 'Não é número'; 
+  } else if ((entrada % 2 === 0) && (entrada % 3 === 0)){  
+  return 'FizzBuzz';
+  } else if (entrada % 2 === 0){
+    return 'Fizz';
+  } else if (entrada % 3 === 0){
+    return 'Buzz'; 
+  } else{
+    return entrada;  
+   }
+  }
+let resultado = fizzBuzz(9);
+console.log(resultado);
 
 // Desafio 9
 function encode() {
