@@ -1,5 +1,5 @@
 // Desafio 1
-function compareTrue(boolean1 , boolean2) {
+function compareTrue(boolean1,boolean2) {
   if (boolean1 === true && boolean2 === true) {
     return true;
   }
@@ -10,7 +10,9 @@ function compareTrue(boolean1 , boolean2) {
 }
 
 // Desafio 2
-function calcArea() {
+function calcArea(base,height) {
+  area = (base * height)/2;
+  return area;
   // seu código aqui
 }
 
