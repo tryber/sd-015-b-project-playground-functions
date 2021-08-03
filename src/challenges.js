@@ -1,5 +1,5 @@
 // Desafio 1
-function compareTrue(boolean1,boolean2) {
+function compareTrue(boolean1, boolean2) {
   if (boolean1 === true && boolean2 === true) {
     return true;
   }
@@ -10,16 +10,19 @@ function compareTrue(boolean1,boolean2) {
 }
 
 // Desafio 2
-function calcArea(base,height) {
-  area = (base * height)/2;
+function calcArea(base, height) {
+  let area = (base * height) / 2;
   return area;
   // seu código aqui
 }
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(string) {
+  let splitString = string.split(" ");
+  return splitString;
   // seu código aqui
 }
+console.log(splitSentence("go Trybe"))
 
 // Desafio 4
 function concatName() {
