@@ -1,9 +1,9 @@
 // Desafio 1
 function compareTrue(boolean1, boolean2) { 
   if(boolean1 === true && boolean2 === true){
-    return `true`;
+    return true;
   } else {
-    return `false`;
+    return false;
   }
 }
 // Desafio 2
@@ -12,10 +12,10 @@ function calcArea(base, height) {
    return resultado; 
 }
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+    let novoArray = string.split([" "])
+    return novoArray;
 }
-
 // Desafio 4
 function concatName() {
   // seu código aqui
