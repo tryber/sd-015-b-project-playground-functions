@@ -8,7 +8,7 @@ function compareTrue(a, b) {
   }
   
 }
-console.log(compareTrue(1 === 1, 'casa' === 'casa'));
+// console.log(compareTrue(1 === 1, 'casa' === 'casa'));
 
 
 
@@ -25,11 +25,11 @@ console.log(calcArea(10, 50));
 
 
 // Desafio 3
-// function splitSentence(string) {
-//   let resultado = string.split(" ");
-//   return resultado;
-// }
-// console.log(splitSentence('foguete'));
+function splitSentence(string) {
+  let resultado = string.split(" ");
+  return resultado;
+}
+console.log(splitSentence('foguete'));
 
 
 
