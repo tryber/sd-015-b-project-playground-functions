@@ -93,12 +93,17 @@ let arrayFizzBuzz = [9, 25];
 console.log(fizzBuzz(arrayFizzBuzz));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(msg) {
+  let replaceMsg = msg.replace(/a/g, '1').replace(/e/g, '2').replace(/i/g, '3').replace(/o/g, '4').replace(/u/g, '5');
+  return replaceMsg;
 }
-function decode() {
-  // seu código aqui
+function decode(msg) {
+  let replaceMsg = msg.replace(/1/g, 'a').replace(/2/g, 'e').replace(/3/g, 'i').replace(/4/g, 'o').replace(/5/g, 'u');
+  return replaceMsg;
 }
+
+console.log(encode('hi there!'));
+console.log(decode('h3 th2r2!'));
 
 module.exports = {
   calcArea,
