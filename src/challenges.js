@@ -54,7 +54,18 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 // Desafio 8
 function fizzBuzz(array) {
-
+    let acumulador = [];
+    for(let i in array){
+      if(array[i]% 3 === 0 && array[i]%5 === 0){
+        acumulador.push('fizzBuzz')
+    } else if(array[i]% 3 === 0){
+        acumulador.push('fizz')
+    } else if (array[i]% 5 === 0){
+        acumulador.push('buzz')
+    } else {
+        acumulador.push('bug!')
+    }
+  } return acumulador
 }
 
 // Desafio 9
