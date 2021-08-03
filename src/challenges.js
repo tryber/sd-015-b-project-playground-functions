@@ -59,16 +59,14 @@ function catAndMouse(mouse, cat1, cat2) {
   let dCat1 = cat1 - mouse;
   let dCat2 = cat2 - mouse;
   if (dCat1 < 0) {
-    dCat1 = dCat1 * -1;
+    dCat1 *= -1;
   }
-  
   if (dCat2 < 0) {
-    dCat2 = dCat2 * -1;
+    dCat2 *= -1;
   }
-  
   if (dCat1 > dCat2) {
     return 'cat2';
-  } else if(dCat1 === dCat2) {
+  } else if (dCat1 === dCat2) {
     return 'os gatos trombam e o rato foge';
   } else {
     return 'cat1';
