@@ -72,15 +72,16 @@ function catAndMouse(mouse, cat1, cat2) {
     let posEquals = 'Os gatos trombam e o rato foge';
     return posEquals;
   }
-  else if (cat2 > cat1 || cat2 === mouse){
+  else if (cat2 > cat1){
     let cat1MaisPerto = 'cat2';
     return cat1MaisPerto;
   }
-  else if(cat1 > cat2 || cat1 === mouse){
+  else if(cat1 > cat2){
     let cat2MaisPerto = 'cat1';
     return cat2MaisPerto;
   }
-}
+};
+console.log(catAndMouse(20, 8, 8));
 
 // Desafio 8
 function fizzBuzz(array) {
@@ -101,7 +102,7 @@ function fizzBuzz(array) {
   }
   return string;
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
+
 // Desafio 9
 function encode() {
   // seu código aqui
