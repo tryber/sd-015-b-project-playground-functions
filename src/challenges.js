@@ -18,14 +18,14 @@ calcArea(51, 1)
 // Desafio 3
 function splitSentence(phrase){
   let result = phrase.split(" ")
-  return console.log(result)
+  return (result)
 }
 splitSentence ("go trybe")
 
 // Desafio 4
 function concatName(name){
   let result = name[name.length - 1]+ ", "+ name[0]
-  return console.log(result)
+  return (result)
 }
 concatName(['captain', 'my', 'captain'])
 
