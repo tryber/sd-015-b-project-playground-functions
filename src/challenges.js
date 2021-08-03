@@ -27,18 +27,16 @@ function highestCount(arrayNumeros) {
   let maiorNumero = arrayNumeros[0];
   
   for (let numero of arrayNumeros) {
-  if (numero > maiorNumero) {
-  maiorNumero = numero;
-  contador += 1;
-  
+    if (numero > maiorNumero) {
+    maiorNumero = numero;
+    contador += 1;
   } else if (numero === maiorNumero) {
   contador += 1;
   }
   }
   return contador;
-  } 
-
-
+} 
+  console.log(highestCount([9, 1, 2, 3, 9, 5, 7])) 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2){
   if(cat1 < cat2){
