@@ -15,7 +15,7 @@ function splitSentence(str) {
 
 // Desafio 4
 function concatName(arr) {
-  return `${arr[arr.length - 1]} ${arr[0]}`;
+  return `${arr[arr.length - 1]}, ${arr[0]}`;
 }
 
 // Desafio 5
@@ -28,20 +28,16 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(arr) {
-  let count = 0;
   let save = 0;
-  for (let i in arr) {
-    for (let j in arr) {
-      if (arr[i] === arr[j]) {
-        count++;
-      }
-    }
-    if (count > save) {
-      save = count;
-    }
-    count = 0;
+  let count = 0;
+  for (let num of arr) {
+    if (num > save) save = num;
   }
-  return save;
+  for (let num of arr) {
+    if (num === save) count++;
+  }
+
+  return count;
 }
 
 // Desafio 7
@@ -61,7 +57,7 @@ function fizzBuzz(arr) {
   for (let num of arr) {
     if (num % 5 === 0 && num % 3 === 0) {
       fizzBuzzArray.push(`fizzBuzz`);
-    } else if (num % 5 == 0) {
+    } else if (num % 5 === 0) {
       fizzBuzzArray.push(`buzz`);
     } else if (num % 3 === 0) {
       fizzBuzzArray.push(`fizz`);
@@ -71,6 +67,8 @@ function fizzBuzz(arr) {
   }
   return fizzBuzzArray;
 }
+
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode(str) {
@@ -101,7 +99,6 @@ function decode(str) {
     .map((el) => nums[el] || el)
     .join('');
 }
-console.log(decode(`h3 th2r2!`));
 
 module.exports = {
   calcArea,
