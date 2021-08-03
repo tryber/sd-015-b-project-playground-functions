@@ -9,23 +9,25 @@ function compareTrue(value1, value2) {
 compareTrue(true, true)
 
 // Desafio 2
-function calcArea(base, height) {
+function calcArea(base, height){
   return (base * height / 2) 
   
 }
 calcArea(51, 1)
 
 // Desafio 3
-function splitSentence(phrase) {
+function splitSentence(phrase){
   let result = phrase.split(" ")
-  return (result)
+  return console.log(result)
 }
-splitSentence ("foguete")
+splitSentence ("go trybe")
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(name){
+  let result = name[name.length - 1]+ ", "+ name[0]
+  return console.log(result)
 }
+concatName(['captain', 'my', 'captain'])
 
 // Desafio 5
 function footballPoints() {
