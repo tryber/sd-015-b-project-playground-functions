@@ -22,8 +22,10 @@ function splitSentence(valor) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(valor) {
+  let virgulaEspaco = ', ';
+  let concatNames = valor[valor.length - 1] + virgulaEspaco + valor[0];
+  return concatNames;
 }
 
 // Desafio 5
