@@ -13,9 +13,25 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  let array = [];
+  let word = '';
+
+  for (let index in string) {
+    if (string[index] === ' ') {
+      array.push(word);
+      word = '';
+    } else if (parseInt(index, 10) === string.length - 1) {
+      word += string[index];
+      array.push(word);
+    } else {
+      word += string[index];
+    }
+  }
+
+  return array;
 }
+splitSentence('vamo que vamo');
 
 // Desafio 4
 function concatName() {
