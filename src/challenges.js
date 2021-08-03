@@ -87,20 +87,22 @@ function highestCount(arr) {
 // Desafio 7
 function catAndMouse(cat1, cat2) {
   let mouse = 0;
+  let line;
   let dist1 = Math.abs(cat1 - mouse);
   let dist2 = Math.abs(cat2 - mouse);
   if (dist1 > dist2) {
-    return 'cat1';
+    line = 'cat2';
   } else if (dist1 < dist2) {
-    return 'cat2';
+    line = 'cat1';
   } else if (dist1 === dist2) {
-    return 'os gatos trombam e o rato foge';
+    line = 'os gatos trombam e o rato foge';
   }
+  return line;
 }
 
-// console.log( catAndMouse(0, 3, 2) ); // teste 1
-// console.log( catAndMouse(0, 6, 12) ); // teste 2
-// console.log( catAndMouse(0, 5, 5) ); // teste 3
+console.log( catAndMouse(3, 2) ); // teste 1
+console.log( catAndMouse(6, 12) ); // teste 2
+console.log( catAndMouse(5, 5) ); // teste 3
 
 // Desafio 8
 function fizzBuzz(arr) {
@@ -128,23 +130,23 @@ function encode(str) {
   let aux = '';
   for (let i of str) {
     switch (i) {
-      case 'a':
-        aux += 1;
-        break;
-      case 'e':
-        aux += 2;
-        break;
-      case 'i':
-        aux += 3;
-        break;
-      case 'o':
-        aux += 4;
-        break;
-      case 'u':
-        aux += 5;
-        break;
-      default:
-        aux += i;
+    case 'a':
+      aux += 1;
+      break;
+    case 'e':
+      aux += 2;
+      break;
+    case 'i':
+      aux += 3;
+      break;
+    case 'o':
+      aux += 4;
+      break;
+    case 'u':
+      aux += 5;
+      break;
+    default:
+      aux += i;
     }
   }
   return aux;
@@ -156,23 +158,23 @@ function decode(str) {
   let aux = '';
   for (let i of str) {
     switch (i) {
-      case '1':
-        aux += 'a';
-        break;
-      case '2':
-        aux += 'e';
-        break;
-      case '3':
-        aux += 'i';
-        break;
-      case '4':
-        aux += 'o';
-        break;
-      case '5':
-        aux += 'u';
-        break;
-      default:
-        aux += i;
+    case '1':
+      aux += 'a';
+      break;
+    case '2':
+      aux += 'e';
+      break;
+    case '3':
+      aux += 'i';
+      break;
+    case '4':
+      aux += 'o';
+      break;
+    case '5':
+      aux += 'u';
+      break;
+    default:
+      aux += i;
     }
   }
   return aux;
