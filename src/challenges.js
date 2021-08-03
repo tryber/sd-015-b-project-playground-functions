@@ -94,30 +94,62 @@ function fizzBuzz(arrOfNumbers) {
 }
 
 // Desafio 9
-//Função que altera o valor de uma string numa posição X.
-function replaceCharAt(string, index, char) {
-  if (index > string.length - 1) {
-    return string;
-  }
-  else {
-    return string.substring(0, index) + char + string.substring(index + 1);
-  }
-}
 function encode(string) {
-  let vogals = [1, 'a', 2, 'e', 3, 'i', 4, 'o', 5, 'u'];
-  let newString;
+  let encodedString = string.split('');
 
-  for (let i in string) {
-  
+  for (let i in encodedString) {
+    switch (encodedString[i]) {
+      case "a":
+        encodedString[i] = '1';
+        break;
+      case "e":
+        encodedString[i] = '2';
+        break;
+      case "i":
+        encodedString[i] = '3';
+        break;
+      case "o":
+        encodedString[i] = '4';
+        break;
+      case "u":
+        encodedString[i] = '5';
+        break;
+      default:
+        break;
+    }
   }
-  return newString;
+
+  return encodedString.join('');
 }
 
-// console.log(encode("hi there"));
-function decode() {
-  // seu código aqui
-}
+function decode(string) {
+  let decodedString = string.split('');
 
+  for (let i in decodedString) {
+    switch (decodedString[i]) {
+      case "1":
+        decodedString[i] = 'a';
+        break;
+      case "2":
+        decodedString[i] = 'e';
+        break;
+      case "3":
+        decodedString[i] = 'i';
+        break;
+      case "4":
+        decodedString[i] = 'o';
+        break;
+      case "5":
+        decodedString[i] = 'u';
+        break;
+      default:
+        break;
+    }
+  }
+
+  return decodedString.join('');
+}
+console.log(decode('x1bl15'));
 module.exports = {
   calcArea,
   catAndMouse,
