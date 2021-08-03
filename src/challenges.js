@@ -8,20 +8,19 @@ function calcArea() {
   // seu código aqui
   let base;
   let height;
-  return base * height / 2;
+  let result = base * height / 2;
+  return result;
 }
-calcArea()
+calcArea();
 
 // Desafio 3
 function splitSentence() {
   // seu código aqui
-  let palavra = '';
-  let divide = palavra.split(' ',2);
- 
-  console.log(divide);
-
-}
-splitSentence()
+  let palavra = ' ';
+  let divide = palavra.split(' ', 2);
+  return divide;
+};
+splitSentence();
 
 // Desafio 4
 function concatName() {
