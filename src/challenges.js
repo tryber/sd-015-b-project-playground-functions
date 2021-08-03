@@ -23,13 +23,13 @@ function splitSentence(string) {
 function concatName(arrayStr) {
   lastItem = arrayStr[arrayStr.length - 1];
   firstItem = arrayStr[0];
-  let resultado = [lastItem, firstItem];
-  return resultado;
+  return (lastItem + ", " + firstItem);
 }
+console.log(concatName(['foguete', 'não', 'tem', 'ré']));
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  
 }
 
 // Desafio 6
