@@ -17,8 +17,10 @@ function splitSentence(parametro) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arrayTeste) {
+  let novaLista =
+    arrayTeste[arrayTeste.length - 1] + ', '.concat(arrayTeste[0]);
+  return novaLista;
 }
 
 // Desafio 5
