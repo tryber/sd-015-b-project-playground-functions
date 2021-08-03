@@ -31,8 +31,8 @@ function footballPoints(wins, ties) {
 function highestCount(numbers) {
   let howMany = 0;
   let biggestNumber = Math.max(...numbers);
-  for (let count = 0; count < numbers.length; count += 1) {
-    if (biggestNumber === numbers[count]) {
+  for (let number of numbers) {
+    if (biggestNumber === number) {
       howMany += 1;
     }
   }
@@ -58,13 +58,13 @@ function fizzBuzz(values) {
   let answer = [];
 
   for (let key in values) {
-    if (values[key] % 3 === 0 && values[key] % 5 !== 0) {
-      answer.push('fizz');
-    } else if (values[key] % 3 !== 0 && values[key] % 5 === 0) {
-      answer.push('buzz');
-    } else if (values[key] % 3 === 0 && values[key] % 5 === 0) {
+    if (values[key] % 3 === 0 && values[key] % 5 === 0) {
       answer.push('fizzBuzz');
-    } else if (values[key] % 3 !== 0 && values[key] % 5 !== 0) {
+    } else if (values[key] % 3 === 0) {
+      answer.push('fizz');
+    } else if (values[key] % 5 === 0) {
+      answer.push('buzz');
+    } else {
       answer.push('bug!');
     }
   }
@@ -72,8 +72,9 @@ function fizzBuzz(values) {
 }
 
 // Desafio 9
-function encode() {
-  
+function encode(encoding) {
+  let splitValue = encoding.split("");
+  let 
 }
 function decode() {
   // seu código aqui
