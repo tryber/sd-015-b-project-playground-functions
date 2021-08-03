@@ -3,26 +3,29 @@ function compareTrue(a, b) {
   if (a === true && b === true) {
     return true;
   } else {
-    return false;
-  }
+  return false;
+}
+}
 
 // Desafio 2
 function calcArea(base, height) {
-  let area = (base * height)/2;
-  if (calcArea(10,50)){
-      return area ;
-  }else if (calcArea(2,10)) {
-      return area ;
-  } else if (calcArea(51,1)){
-      return area ;
-} 
+  let area = (base * height) / 2;
+  if (calcArea(10, 50)) {
+    return area;
+  } else if (calcArea(2, 10)) {
+    return area;
+  } else if (calcArea(51, 1)) {
+    return area;
+  }
+}
+console.log(calcArea(10, 50));
 
 // Desafio 3
 function splitSentence(string) {
   let resultado = string.split('');
   console.log(resultado);
-
-} splitSentence('go Trybe');
+}
+splitSentence('go Trybe');
 
 // Desafio 4
 function concatName() {
@@ -46,18 +49,18 @@ function catAndMouse() {
 
 // Desafio 8
 function fizzBuzz(entrada) {
-  if (typeof entrada !== 'number'){
-    return 'Não é número'; 
-  } else if ((entrada % 2 === 0) && (entrada % 3 === 0)){  
-  return 'FizzBuzz';
-  } else if (entrada % 2 === 0){
+  if (typeof entrada !== 'number') {
+    return 'Não é número';
+  } else if (entrada % 2 === 0 && entrada % 3 === 0) {
+    return 'FizzBuzz';
+  } else if (entrada % 2 === 0) {
     return 'Fizz';
-  } else if (entrada % 3 === 0){
-    return 'Buzz'; 
-  } else{
-    return entrada;  
-   }
+  } else if (entrada % 3 === 0) {
+    return 'Buzz';
+  } else {
+    return entrada;
   }
+}
 let resultado = fizzBuzz(9);
 console.log(resultado);
 
