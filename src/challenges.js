@@ -1,12 +1,20 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+
+function compareTrue(value1,value2) {
+  if (value1 && value2 === true){
+    return(true)
+  }else {
+    return(false)
+  }
 }
 
 // Desafio 2
-function calcArea() {
+function calcArea(base,height) {
   // seu código aqui
+  area = (base * height) / 2;
+  return("A area do seu triangulo é : ", area);
 }
+console.log(calcArea(10,20));
 
 // Desafio 3
 function splitSentence() {
