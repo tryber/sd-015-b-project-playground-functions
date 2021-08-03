@@ -15,21 +15,33 @@ function calcArea(base,height) {
   return (base * height)/2;
 }
 calcArea(51,1);
+
 // Desafio 3
 function splitSentence(string) {
   // seu código aqui
   return string.split(' ',);
 }
-console.log(splitSentence("vamo que vamo"))
+console.log(splitSentence("vamo que vamo"));
+
 // Desafio 4
-function concatName() {
+function concatName(array) {
   // seu código aqui
+  let first = array[0];
+  let last = array[array.length-1];
+  let arr = [last, first];
+  return arr
 }
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins,ties) {
   // seu código aqui
+   wins *= 3;
+   ties += 0;
+   let total = wins + ties;
+   return total;
 }
+console.log(footballPoints(0,0));
 
 // Desafio 6
 function highestCount() {
