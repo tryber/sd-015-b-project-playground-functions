@@ -1,7 +1,17 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(a, b) {
+  if ( typeof( a ) == 'boolean' && typeof( b ) == 'boolean' ) {
+    return a && b;
+  } else {
+    console.log( 'Type of args are not boolean' );
+    return 'ERROR';
+  }
 }
+
+// console.log( compareTrue(false, true) ); // teste 1
+// console.log( compareTrue(false, false) ); // teste 2
+// console.log( compareTrue(true, true) ); // teste 3
+console.log( compareTrue(1, true) ); // teste extra
 
 // Desafio 2
 function calcArea() {
