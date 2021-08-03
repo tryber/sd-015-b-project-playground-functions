@@ -42,8 +42,6 @@ function highestCount(array) {
   return numberCount[highestNumber];
 }
 
-console.log(highestCount([0, 0, 0]));
-
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
