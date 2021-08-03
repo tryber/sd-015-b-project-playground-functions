@@ -4,6 +4,9 @@ function compareTrue(a, b) {
   if (a == true && b == true) {
     return true;
   }
+  else {
+    return false;
+  }
 }
 
 // Desafio 2
@@ -13,10 +16,14 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(frase) {
   // seu código aqui
+  let worlds = frase.split(' ');
+  return worlds;
 }
-
+console.log(splitSentence('go Trybe'));
+console.log(splitSentence('vamo que vamo'));
+console.log(splitSentence('foguete'));
 // Desafio 4
 function concatName() {
   // seu código aqui
