@@ -19,21 +19,27 @@ function techList(techNames, names) {
 
 // Desafio 11
 function generatePhoneNumber(numbers) {
-  if(numbers.length !== 11){
-    return "Array com tamanho incorreto."
+  function arrayLengthValid(){
+    if(numbers.length !== 11){
+      return false
+    }
   }
-  else{
+  function arrayNumbersValid(){
+    let numbers = [2 ,2 ,3 , 5];
+    let contador = 0;
     for(let index in numbers){
-      if(numbers[index] < 0){
-        return "não é possível gerar um número de telefone com esses valores"
-        break;
+      if (numbers[index] == numbers[index + 1]){
+        contador += 1;
+        }
       }
-      else{
         
+      
+      console.log(contador);
+      if (numbers[index] > 9 || numbers[index] < 0 || contador > 2){
+        return false
       }
     }
   }
-}
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
@@ -49,8 +55,19 @@ function triangleCheck(lineA, lineB, lineC) {
 
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(drinks) {
+  let numberOfDrinks = drinks.match(/[0-9]+/g)
+  totalWater = 0;
+  for(let index in numberOfDrinks){
+    let numberDrinks = parseInt(numberOfDrinks[index]);
+    totalWater += numberDrinks;
+  }
+  if (totalWater == 1){
+    return totalWater + " copo de água"
+  }
+  else{
+    return totalWater + " copos de água"
+  }
 }
 
 module.exports = {
