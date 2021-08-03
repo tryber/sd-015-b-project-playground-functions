@@ -61,19 +61,25 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
+function checkDivision(number) {
+  if (number % 15 === 0) {
+    return 'fizzBuzz';
+  }
+  if (number % 5 === 0) {
+    return 'buzz';
+  }
+  if (number % 3 === 0) {
+    return 'fizz';
+  }
+  return 'bug!';
+}
+function addToArray(array, number) {
+  array.push(number);
+}
 function fizzBuzz(array) {
   let zArray = [];
   for (let item of array) {
-    // Tira &&
-    if (item % 3 && item % 5) {
-      zArray.push('bug!');
-    } else if (item % 3) {
-      zArray.push('buzz');
-    } else if (item % 5) {
-      zArray.push('fizz');
-    } else {
-      zArray.push('fizzBuzz');
-    }
+    addToArray(zArray, checkDivision(item));
   }
   return zArray;
 }

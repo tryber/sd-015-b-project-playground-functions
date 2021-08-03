@@ -15,10 +15,23 @@ function techList(array, name) {
   return finalArray;
 }
 
-
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(array) {
+  let phoneNumber = '';
+  for (let counter = 0; counter < array.length; counter += 1) {
+    if (counter === 0) {
+      phoneNumber += '(';
+    } else if (counter === 3) {
+      phoneNumber += ')';
+    } else if (counter === 4) {
+      phoneNumber += ' ';
+    }
+  }
+  return phoneNumber;
+}
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+function checkPosition() {
+  
 }
 
 // Desafio 12
