@@ -99,11 +99,23 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(vogais) {
+  let vogaisa = vogais.replace(/a/g, "1");
+  let vogaise = vogaisa.replace(/e/g, "2");
+  let vogaisi = vogaise.replace(/i/g, "3");
+  let vogaiso = vogaisi.replace(/o/g, "4");
+  let vogaisu = vogaiso.replace(/u/g, "5");
+
+  return vogaisu;
 }
-function decode() {
-  // seu código aqui
+function decode(numeros) {
+  let numeros1 = numeros.replace(/1/g, "a");
+  let numeros2 = numeros1.replace(/2/g, "e");
+  let numeros3 = numeros2.replace(/3/g, "i");
+  let numeros4 = numeros3.replace(/4/g, "o");
+  let numeros5 = numeros4.replace(/5/g, "u");
+
+  return numeros5;
 }
 
 module.exports = {
