@@ -27,7 +27,7 @@ function concatName(lista) {
   // seu código aqui
   return lista[lista.length -1] + " " + lista[0];
 }
-console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
+
 // Desafio 5
 function footballPoints(wins, ties) {
   // seu código aqui
