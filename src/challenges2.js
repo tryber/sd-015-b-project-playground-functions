@@ -96,11 +96,20 @@ function triangleCheck(lineA, lineB, lineC) {
   }
   return true;
 }
-triangleCheck(10, 14, 8);
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let wantedNumbers = /[0-9]/g;
+  let matchResult = string.match(wantedNumbers);
+  let drinks = 0;
+
+  for (const number of matchResult) {
+    drinks += parseInt(number, 10);
+  }
+  if (drinks > 1) {
+    return `${parseInt(drinks, 10)} copos de água`;
+  }
+  return `${parseInt(drinks, 10)} copo de água`;
 }
 
 module.exports = {
