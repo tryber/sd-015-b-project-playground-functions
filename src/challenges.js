@@ -34,12 +34,11 @@ function highestCount(array2) {
   let biggest = Math.max.apply(null, array2 );
   let count = 0;
   for(let index = 0; index < array2.length; index++) {
-    if (biggest === array[index]) { 
+    if (biggest === array2[index]) { 
       count++
     }
   } return (count)
 }
-
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -87,14 +86,13 @@ function encode(stringer) {
   return (stringer)
 }
 function decode(stringer2) {
-  stringer2 = stringer2.replace(/1/gi, 'a')
-  stringer2 = stringer2.replace(/2/gi, 'e')
-  stringer2 = stringer2.replace(/3/gi, 'i')
-  stringer2 = stringer2.replace(/4/gi, 'o')
-  stringer2 = stringer2.replace(/5/gi, 'u')
-  return (stringer2)
+  stringer2 = stringer2.replace(/1/gi, 'a');
+  stringer2 = stringer2.replace(/2/gi, 'e');
+  stringer2 = stringer2.replace(/3/gi, 'i');
+  stringer2 = stringer2.replace(/4/gi, 'o');
+  stringer2 = stringer2.replace(/5/gi, 'u');
+  return (stringer2);
 }
-
 
 module.exports = {
   calcArea,
