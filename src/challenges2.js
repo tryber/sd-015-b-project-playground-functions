@@ -48,7 +48,7 @@ function generatePhoneNumber(arrRecebido) {
   }
   if (continua) {
     resultado = '(' + arrRecebido[0] + arrRecebido[1] + ') ';
-    resultado = resultado + arrRecebido[2] + arrRecebido[3] + arrRecebido[4] + arrRecebido[5] + arrRecebido[6]; 
+    resultado = resultado + arrRecebido[2] + arrRecebido[3] + arrRecebido[4] + arrRecebido[5] + arrRecebido[6];
     resultado = resultado + '-' + arrRecebido[7] + arrRecebido[8] + arrRecebido[9] + arrRecebido[10];
   }
   return resultado;
@@ -69,7 +69,7 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function hydrate(stringRecebida) {
-  let resultado; 
+  let resultado;
   let soma = 0;
   let reg = /\d+/g;
   let indexNum;
@@ -79,7 +79,7 @@ function hydrate(stringRecebida) {
     soma += indexNum;
   }
   if (soma === 1) {
-    resultado = '1 copo de água'
+    resultado = '1 copo de água';
   } else {
     resultado = '' + soma + ' copos de água';
   }
