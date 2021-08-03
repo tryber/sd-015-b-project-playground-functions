@@ -32,13 +32,40 @@ function footballPoints(win,ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  let reptedNumber=0;
+  let numberConter=0;
+  let indexReptedNumber=0;
+  for(let index in array){
+    let numberVerification=array[index];
+    for(let index2 in array){
+      if(numberVerification===array[index2]){
+        numberConter+=1;
+      }
+    }
+    if(numberConter>reptedNumber){
+      reptedNumber=numberConter;
+      indexReptedNumber=index;
+    }
+    numberConter=0;
+  }
+  return array[indexReptedNumber];
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse,cat1,cat2) {
+  let mouseCat1=cat1-mouse;
+  let mouseCat2=cat2-mouse;
+  let mouseCat22=Math.abs(mouseCat2)
+  let mouseCat11=Math.abs(mouseCat1)
+  if (mouseCat22===mouseCat11){
+    return "os gatos trombam e o rato foge";
+  }else if(mouseCat22>mouseCat11){
+    return "cat1"
+  }else{
+    return 'cat2'
+  }
+
 }
 
 // Desafio 8
