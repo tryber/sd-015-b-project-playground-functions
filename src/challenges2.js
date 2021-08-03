@@ -18,14 +18,35 @@ function techList(techNames, names) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(numbers) {
+  if(numbers.length !== 11){
+    return "Array com tamanho incorreto."
+  }
+  else{
+    for(let index in numbers){
+      if(numbers[index] < 0){
+        return "não é possível gerar um número de telefone com esses valores"
+        break;
+      }
+      else{
+        
+      }
+    }
+  }
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  if(lineA < (lineB + lineC) && lineA > (Math.abs(lineB-lineC))){
+    return true;
+  }
+  else{
+    return false;
+  }
 }
+
+  
+
 
 // Desafio 13
 function hydrate() {
