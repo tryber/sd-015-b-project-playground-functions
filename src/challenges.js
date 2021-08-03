@@ -17,10 +17,12 @@ function splitSentence(string) {
     return novoArray;
 }
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(string) {
+    let primeiroObj = string.shift();
+    let ultimoObj = string.pop();
+    let uneTudo = ultimoObj + ', ' + primeiroObj;
+    return uneTudo.concat()
 }
-
 // Desafio 5
 function footballPoints() {
   // seu código aqui
