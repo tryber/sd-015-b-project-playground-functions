@@ -19,26 +19,24 @@ function splitSentence(phrase) {
 }
 // console.log('Desaafio 3' , splitSentence('Go trybe'))
 
-// Desafio 4 DONE 
-
+// Desafio 4
 //usar index[0] e index[index.length - 1]
 //invertedArray[0] + invertedArray[invertedArray.length - 1];
 //preciso colocar os dois do array em uma string usarei o join
 //retorne uma string com o ultimo e 1 elemnto
 //preciso colocar os dois elementos do array em uma stringg
-
-
 function concatName(array) {
   let myArray = array;
   let invertedArray = myArray.reverse();
   let result1 = invertedArray[0];
   let result2 = invertedArray[invertedArray.length-1];
-  let result = result1 + result2;
+  let result = result1 +', '+ result2;
 
   return result;
 } 
+let nomes = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']
 
-// console.log(concatName(nomes))
+console.log(concatName(nomes))
 
 // Desafio 5 DONE
 function footballPoints(wins, ties) {
@@ -84,26 +82,30 @@ function catAndMouse(mouse, cat1, cat2) {
   return resposta
 }
 
-console.log(catAndMouse(10, 5, 15));
-console.log(catAndMouse(0, 6, 12));
-console.log(catAndMouse(0, 1, 1))
+// console.log(catAndMouse(10, 5, 15));
+// console.log(catAndMouse(0, 3, 2));
+// console.log(catAndMouse(0, 6, 12));
+// console.log(catAndMouse(0, 1, 1))
 
 // Desafio 8
+
+// let myArray = [] ; 
+// for (let i = 0; i < numeros.length; i += 1){
+//   if(numeros % 3 === 0 && numeros[i] % 5 === 0){
+//    myArray.push("fizzBuzz")
+//   }else if (numeros[i] % 5 === 0){
+//    myArray.push("buzz")
+//   } else if ( numeros % 3 === 0 ){
+//    myArray.push("fizz")
+//   } else { myArray.push("bug!")}
+// }
+// return myArray
+
 // posso fazer uma função que recebe os parametros que sao os fizzbuzz, buzz, fizz & bug 
-function fizzBuzz(numeros) {
-  let myArray = [] ; 
-  for (let i = 0; i < numeros.length; i += 1){
-    if(numeros % 3 === 0 && numeros[i] % 5 === 0){
-     myArray.push("fizzBuzz")
-    }else if (numeros[i] % 5 === 0){
-     myArray.push("buzz")
-    } else if ( numeros % 3 === 0 ){
-     myArray.push("fizz")
-    } else { myArray.push("bug!")}
-  }
-  return myArray
-}
-let theArray = [45, 15, 7, 9, 45]
+// function fizzBuzz(numeros) {
+//   function 
+// }
+// let theArray = [45, 15, 7, 9, 45]
 // console.log(fizzBuzz(theArray))
 
 // Desafio 9
