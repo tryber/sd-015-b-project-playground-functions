@@ -18,7 +18,10 @@ function splitSentence(string) {
   return string.split(' ');
 }
 // Desafio 4
-function concatName() {}
+function concatName(array) {
+  let string = array[array.length - 1] + ', ' + array[0];
+  return string;
+}
 
 // Desafio 5
 function footballPoints() {
