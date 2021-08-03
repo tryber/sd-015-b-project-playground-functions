@@ -40,15 +40,12 @@ function highestCount(arr) {
   return count;
 }
 
-console.log(highestCount([-2, -2, -1]));
-
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let xcat1 = 0;
   let xcat2 = 0;
   cat1 > mouse ? (xcat1 = cat1 - mouse) : (xcat1 = mouse - cat1);
   cat2 > mouse ? (xcat2 = cat2 - mouse) : (xcat2 = mouse - cat2);
-  console.log(xcat1, xcat2);
   if (xcat1 === xcat2) return `os gatos trombam e o rato foge`;
   return xcat1 > xcat2 ? `cat2` : `cat1`;
 }
