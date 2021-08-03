@@ -38,13 +38,13 @@ function highestCount(values) {
   // seu código aqui
   let quantidade = 0;
   let maior = values[0];
-  for(let index = 0; index < values.length; index += 1){
-    if(values[index] > maior){
+  for (let index = 0; index < values.length; index += 1) {
+    if (values[index] > maior) {
       maior = values[index];
     }
   }
-  for(let index = 0; index < values.length; index += 1){
-    if(values[index] === maior){
+  for (let index = 0; index < values.length; index += 1) {
+    if (values[index] === maior) {
       quantidade += 1;
     }
   }
@@ -52,8 +52,21 @@ function highestCount(values) {
 }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
+  let resultado = '';
+  let distanciaMouseAteCat1 = Math.abs(mouse - cat1);
+  let distanciaMouseAteCat2 = Math.abs(mouse - cat2);
+  if(distanciaMouseAteCat1 > distanciaMouseAteCat2) {
+    resultado = 'cat2';
+  }
+  else if( distanciaMouseAteCat2 > distanciaMouseAteCat1) {
+    resultado = 'cat1';
+  }
+  else {
+    resultado = 'os gatos trombam e o rato foge';
+  }
+  return resultado;
 }
 
 // Desafio 8
