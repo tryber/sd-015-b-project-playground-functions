@@ -41,9 +41,30 @@ return totalPoints;
 
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  let maiorValor = 0;
+  let contador = 0;
+  
+  for (let i = 0; i < array.length  ; i+=1){
+    if(array[i] > maiorValor){
+      maiorValor = array[i];
+    }
+  }
+
+  for (let j = 0; j < array.length  ; j+=1){
+      if(array[j] === maiorValor){
+        contador += 1;
+      }
+  }
+
+ return contador;
 }
+
+// for(let key in array.length){
+//   if(array[key] === maiorValor){
+//     contador+=1;
+//   }
+// }
 
 // Desafio 7
 function catAndMouse() {
