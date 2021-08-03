@@ -73,10 +73,34 @@ function generatePhoneNumber(array) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function checkSum(lineA, lineB, lineC) {
+  let sideArray = [lineA, lineB, lineC];
+  let sumAB = lineA + lineB;
+  let sumAC = lineA + lineC;
+  let sumBC = lineB + lineC;
+  let sumArray = [sumAB, sumAC, sumBC];
+  let sideMinusSum = [];
+  for (let side of sideArray) {
+    for (let sum of sumArray) {
+      sideMinusSum.push(sum - side);
+    }
+  }
+  return sideMinusSum;
 }
-
+function checkDiff() {
+  let diffAB = Math.abs(lineA - lineB);
+  let diffAC = Math.abs(lineA - lineC);
+  let diffBC = Math.abs(lineB - lineC);
+}
+function triangleCheck(lineA, lineB, lineC) {
+  let test = checkSum(lineA, lineB, lineC);
+  if (test < 0) {
+    return false;
+  }
+  
+  return test;
+}
+console.log(triangleCheck(10, 14, 8))
 // Desafio 13
 function hydrate() {
   // seu código aqui
