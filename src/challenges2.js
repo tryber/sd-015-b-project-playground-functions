@@ -16,22 +16,60 @@ function techList(array, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber(array) {
-  let phoneNumber = '';
-  for (let counter = 0; counter < array.length; counter += 1) {
-    if (counter === 0) {
-      phoneNumber += '(';
-    } else if (counter === 3) {
-      phoneNumber += ')';
-    } else if (counter === 4) {
-      phoneNumber += ' ';
+function checkPosition(string) {
+  if (string.length === 0) {
+    return '(';
+  }
+  if (string.length === 3) {
+    return ') ';
+  }
+  if (string.length === 10) {
+    return '-';
+  }
+  return '';
+}
+function createFrequencyArray(array) {
+  let myDict = {};
+  for (let item of array) {
+    if (Object.keys(myDict).includes(String(item))) {
+      myDict[item] += 1;
+    } else {
+      myDict[item] = 1;
     }
   }
-  return phoneNumber;
+  return myDict;
 }
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
-function checkPosition() {
-  
+function checkRepetition(dict) {
+  for (let key in dict) {
+    if (dict[key] >= 3) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
+  }
+}
+function checkValidity(array) {
+  if (array.length !== 11) {
+    return 'Array com tamanho incorreto.';
+  }
+  for (let item of array) {
+    if (item < 0 || item > 9) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
+  }
+}
+function generatePhoneNumber(array) {
+  let phoneNumber = '';
+  for (let item of array) {
+    phoneNumber += checkPosition(phoneNumber);
+    phoneNumber += item;
+  }
+  if (checkValidity(array)) {
+    return checkValidity(array);
+  }
+  let myDict = createFrequencyArray(array);
+  if (checkRepetition(myDict)) {
+    return checkRepetition(myDict);
+  }
+  return phoneNumber;
 }
 
 // Desafio 12
