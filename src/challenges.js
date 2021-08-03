@@ -1,8 +1,9 @@
 // Desafio 1
-function compareTrue() {
+function compareTrue(argument1, argument2) {
   // seu código aqui
-  
-
+  if (argument1 === true && argument2 === true) {
+    return true;
+  } return false;
 }
 
 // Desafio 2
