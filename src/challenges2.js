@@ -10,19 +10,19 @@ function techList(techArray, name) {
   if (returnArray.length !== 0) {
     return returnArray;
   } else {
-    return "Vazio!";
+    return 'Vazio!';
   }
 }
 
 // Desafio 11
 function generatePhoneNumber(numbersArray) {
-  let returnString = "";
+  let returnString = '';
   // Inicio checkagem de números
   if (numbersArray.length === 11) {
     let counter = 0;
     for (let number of numbersArray) {
       if ((counter >= 3) || (number < 0) || (number > 9)) {
-        return "não é possível gerar um número de telefone com esses valores";
+        return 'não é possível gerar um número de telefone com esses valores';
       }
       counter = 0;
       for (let number2 of numbersArray) {
@@ -32,13 +32,13 @@ function generatePhoneNumber(numbersArray) {
       }
     }
   } else {
-    return "Array com tamanho incorreto.";
+    return 'Array com tamanho incorreto.';
   }
   // Inicio da formatação
   let base = {
-    0: "(",
-    2: ") ",
-    7: "-",
+    0: '(',
+    2: ') ',
+    7: '-',
   };
   for (let index = 0; index < numbersArray.length; index += 1) {
     if (index in base) {
@@ -70,19 +70,19 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function hydrate(phrase) {
-  let referenceList = [1, 2 , 3, 4, 5, 6, 7, 8, 9];
+  let referenceList = [1, 2, 3, 4, 5, 6, 7, 8, 9];
   let counter = 0;
   let returnString;
-  phrase = phrase.split("");
+  phrase = phrase.split('');
   for (let letter of phrase) {
     if (Number(letter) in referenceList) {
       counter += Number(letter);
     }
   }
   if (counter === 1) {
-    returnString = counter.toString() + " copo de água";
+    returnString = counter.toString() + ' copo de água';
   } else if (counter > 1) {
-    returnString = counter.toString() + " copos de água";
+    returnString = counter.toString() + ' copos de água';
   }
   return returnString;
 }
