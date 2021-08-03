@@ -49,11 +49,16 @@ function triangleCheck(a, b, c) {
   return bool;
 }
 
-console.log(triangleCheck(10, 14, 8));
-
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(str) {
+  let regex = /\d+/g;
+  const match = str.match(regex);
+  const copos = match
+    .join('')
+    .split('')
+    .reduce((acc, val) => Number(acc) + Number(val));
+
+  return copos > 1 ? copos + ' copos de água' : copos + ' copo de água';
 }
 
 module.exports = {
