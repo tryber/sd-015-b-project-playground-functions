@@ -22,22 +22,25 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
   - [Avaliador Automático](#avaliador-automático)
 - [Requisitos do projeto](#requisitos-do-projeto)
 
-    `Requisitos obrigatórios:`
-    - [1 - Crie uma função usando o operador &&](#1---crie-uma-função-usando-o-operador-)
-    - [2 - Crie uma função que calcule a área de um triângulo](#2---crie-uma-função-que-calcule-a-área-de-um-triângulo)
-    - [3 - Crie uma função que divida a frase](#3---crie-uma-função-que-divida-a-frase)
-    - [4 - Crie uma função que use concatenação de strings](#4---crie-uma-função-que-use-concatenação-de-strings)
-    - [5 - Crie uma função que calcule a quantidade de pontos no futebol](#5---crie-uma-função-que-calcule-a-quantidade-de-pontos-no-futebol)
-    - [6 - Crie uma função que calcule a repetição do maior número](#6---crie-uma-função-que-calcule-a-repetição-do-maior-número)
-    - [7 - Crie uma função de Caça ao rato](#7---crie-uma-função-de-caça-ao-rato)
-    - [8 - Crie uma função FizzBuzz](#8---crie-uma-função-fizzbuzz)
-    - [9 - Crie uma função que Codifique e Decodifique](#9---crie-uma-função-que-codifique-e-decodifique)
-    - [10 - Crie uma função de Lista de tecnologias](#10---crie-uma-função-de-lista-de-tecnologias)
+  `Requisitos obrigatórios:`
 
-    `Requisitos bônus:`
-    - [11 - Crie uma função de Número de telefone](#11---crie-uma-função-de-número-de-telefone)
-    - [12 - Crie uma função de Condição de existência de um triângulo](#12---crie-uma-função-de-condição-de-existência-de-um-triângulo)
-    - [13 - Crie uma função de Boas Vindas ao Bar da Trybe!](#13---crie-uma-função-de-boas-vindas-ao-bar-da-trybe!)
+  - [1 - Crie uma função usando o operador &&](#1---crie-uma-função-usando-o-operador-)
+  - [2 - Crie uma função que calcule a área de um triângulo](#2---crie-uma-função-que-calcule-a-área-de-um-triângulo)
+  - [3 - Crie uma função que divida a frase](#3---crie-uma-função-que-divida-a-frase)
+  - [4 - Crie uma função que use concatenação de strings](#4---crie-uma-função-que-use-concatenação-de-strings)
+  - [5 - Crie uma função que calcule a quantidade de pontos no futebol](#5---crie-uma-função-que-calcule-a-quantidade-de-pontos-no-futebol)
+  - [6 - Crie uma função que calcule a repetição do maior número](#6---crie-uma-função-que-calcule-a-repetição-do-maior-número)
+  - [7 - Crie uma função de Caça ao rato](#7---crie-uma-função-de-caça-ao-rato)
+  - [8 - Crie uma função FizzBuzz](#8---crie-uma-função-fizzbuzz)
+  - [9 - Crie uma função que Codifique e Decodifique](#9---crie-uma-função-que-codifique-e-decodifique)
+  - [10 - Crie uma função de Lista de tecnologias](#10---crie-uma-função-de-lista-de-tecnologias)
+
+  `Requisitos bônus:`
+
+  - [11 - Crie uma função de Número de telefone](#11---crie-uma-função-de-número-de-telefone)
+  - [12 - Crie uma função de Condição de existência de um triângulo](#12---crie-uma-função-de-condição-de-existência-de-um-triângulo)
+  - [13 - Crie uma função de Boas Vindas ao Bar da Trybe!](#13---crie-uma-função-de-boas-vindas-ao-bar-da-trybe!)
+
 - [Depois de terminar o desenvolvimento](#depois-de-terminar-o-desenvolvimento)
 - [Revisando um pull request](#revisando-um-pull-request)
 - [Avisos Finais](#avisos-finais)
@@ -78,63 +81,69 @@ Lembre-se que você pode consultar nosso conteúdo sobre [Git & GitHub](https://
 
 ## Data de Entrega
 
-  - Será `1` dia de projeto.
-  - Data de entrega para avaliação final do projeto: `10/08/2021 - 14:00h`.
+- Será `1` dia de projeto.
+- Data de entrega para avaliação final do projeto: `10/08/2021 - 14:00h`.
 
 # Instruções para entregar seu projeto
 
 ## Antes de começar a desenvolver
 
 1. Clone o repositório
-  * `git clone git@github.com:tryber/sd-015-b-project-playground-functions.git`
-  * Entre na pasta do repositório que você acabou de clonar:
-    * `cd sd-015-b-project-playground-functions`
+
+- `git clone git@github.com:tryber/sd-015-b-project-playground-functions.git`
+- Entre na pasta do repositório que você acabou de clonar:
+  - `cd sd-015-b-project-playground-functions`
 
 2. Instale as dependências e inicialize o projeto
-  * Instale as dependências:
-    * npm install
+
+- Instale as dependências:
+  - npm install
 
 3. Crie uma branch a partir da branch `master`
-  * Verifique que você está na branch `master`
-    * Exemplo: `git branch`
-  * Se não estiver, mude para a branch `master`
-    * Exemplo: `git checkout master`
-  * Agora, crie uma branch onde você vai guardar os `commits` do seu projeto
-    * Você deve criar uma branch no seguinte formato: `nome-sobrenome-playground-functions`
-    * Exemplo: `git checkout -b joao-silva-playground-functions`
+
+- Verifique que você está na branch `master`
+  - Exemplo: `git branch`
+- Se não estiver, mude para a branch `master`
+  - Exemplo: `git checkout master`
+- Agora, crie uma branch onde você vai guardar os `commits` do seu projeto
+  - Você deve criar uma branch no seguinte formato: `nome-sobrenome-playground-functions`
+  - Exemplo: `git checkout -b joao-silva-playground-functions`
 
 4. Adicione as mudanças ao _stage_ do Git e faça um `commit`
-  * Verifique que as mudanças ainda não estão no _stage_
-    * Exemplo: `git status` (devem aparecer listados os novos arquivos em vermelho)
-  * Adicione o novo arquivo ao _stage_ do Git
-      * Exemplo:
-        * `git add .` (adicionando todas as mudanças - _que estavam em vermelho_ - ao stage do Git)
-        * `git status` (devem aparecer listados os arquivos em verde)
-  * Faça o `commit` inicial
-      * Exemplo:
-        * `git commit -m 'iniciando o projeto. VAMOS COM TUDO :rocket:'` (fazendo o primeiro commit)
-        * `git status` (deve aparecer uma mensagem tipo _nothing to commit_ )
+
+- Verifique que as mudanças ainda não estão no _stage_
+  - Exemplo: `git status` (devem aparecer listados os novos arquivos em vermelho)
+- Adicione o novo arquivo ao _stage_ do Git
+  - Exemplo:
+    - `git add .` (adicionando todas as mudanças - _que estavam em vermelho_ - ao stage do Git)
+    - `git status` (devem aparecer listados os arquivos em verde)
+- Faça o `commit` inicial
+  - Exemplo:
+    - `git commit -m 'iniciando o projeto. VAMOS COM TUDO :rocket:'` (fazendo o primeiro commit)
+    - `git status` (deve aparecer uma mensagem tipo _nothing to commit_ )
 
 5. Adicione a sua branch com o novo `commit` ao repositório remoto
-  * Usando o exemplo anterior: `git push -u origin joao-silva-playground-functions`
+
+- Usando o exemplo anterior: `git push -u origin joao-silva-playground-functions`
 
 6. Crie um novo `Pull Request` _(PR)_
-  * Vá até a página de _Pull Requests_ do [repositório no GitHub](https://github.com/tryber/sd-015-b-project-playground-functions/pulls)
-  * Clique no botão verde _"New pull request"_
-  * Clique na caixa de seleção _"Compare"_ e escolha a sua branch **com atenção**
-  * Adicione uma descrição para o _Pull Request_, um título que o identifique, e clique no botão verde _"Create pull request"_. Crie da seguinte forma: `[JOAO-SILVA] Projeto Playground Functions`  
-  * **Não se preocupe em preencher mais nada por enquanto!**
-  * Volte até a [página de _Pull Requests_ do repositório](https://github.com/tryber/sd-015-b-project-playground-functions/pulls) e confira que o seu _Pull Request_ está criado. 😀
+
+- Vá até a página de _Pull Requests_ do [repositório no GitHub](https://github.com/tryber/sd-015-b-project-playground-functions/pulls)
+- Clique no botão verde _"New pull request"_
+- Clique na caixa de seleção _"Compare"_ e escolha a sua branch **com atenção**
+- Adicione uma descrição para o _Pull Request_, um título que o identifique, e clique no botão verde _"Create pull request"_. Crie da seguinte forma: `[JOAO-SILVA] Projeto Playground Functions`
+- **Não se preocupe em preencher mais nada por enquanto!**
+- Volte até a [página de _Pull Requests_ do repositório](https://github.com/tryber/sd-015-b-project-playground-functions/pulls) e confira que o seu _Pull Request_ está criado. 😀
 
 ---
 
 ## Durante o desenvolvimento
 
-* Faça `commits` das alterações que você fizer no código regularmente.
+- Faça `commits` das alterações que você fizer no código regularmente.
 
-* Lembre-se de sempre após um (ou alguns) `commits` atualizar o repositório remoto.
+- Lembre-se de sempre após um (ou alguns) `commits` atualizar o repositório remoto.
 
-* Os comandos que você utilizará com mais frequência são:
+- Os comandos que você utilizará com mais frequência são:
   1. `git status` _(para verificar o que está em vermelho - fora do stage - e o que está em verde - no stage)_
   2. `git add` _(para adicionar arquivos ao stage do Git)_
   3. `git commit` _(para criar um commit com os arquivos que estão no stage do Git)_
@@ -157,29 +166,28 @@ npm run lint
 
 ### Avaliador automático
 
-* Os requisitos do seu projeto são avaliados automaticamente
+- Os requisitos do seu projeto são avaliados automaticamente
 
 Para verificar se a sua avaliação foi computada com sucesso, você pode verificar os **detalhes da execução do avaliador**.
 
-* Na página do seu _Pull Request_, acima do "botão de merge", procure por _**"Evaluator job"**_ e clique no link _**"Details"**_;
+- Na página do seu _Pull Request_, acima do "botão de merge", procure por _**"Evaluator job"**_ e clique no link _**"Details"**_;
 
-* Na página que se abrirá, procure pela linha _**"Evaluator step"**_ e clique nela;
+- Na página que se abrirá, procure pela linha _**"Evaluator step"**_ e clique nela;
 
-* Caso tenha dúvidas, procure as pessoas instrutoras.
+- Caso tenha dúvidas, procure as pessoas instrutoras.
 
 Para rodar o avaliador automático localmente no seu projeto, execute um dos comandos abaixo:
 
-
 Para executar todos os testes utilize:
+
 ```bash
 npm test
 ```
 
-
-***ou***
-
+**_ou_**
 
 Para executar um arquivo de teste específico, utilize `npm test nomeDoArquivoDeTeste`:
+
 ```bash
 npm test compareTrue
 ```
@@ -196,8 +204,8 @@ O não cumprimento de um requisito, total ou parcialmente, impactará em sua ava
 
 ### 👀 Observações importantes:
 
-* Para verificar se a sua função foi criada corretamente você pode instalar a extensão `code runner` no _VSCode_.
-* Utilize `console.log()` para testar as funções localmente, mas pode remover antes de fazer o push 😉.
+- Para verificar se a sua função foi criada corretamente você pode instalar a extensão `code runner` no _VSCode_.
+- Utilize `console.log()` para testar as funções localmente, mas pode remover antes de fazer o push 😉.
 
 ---
 
@@ -224,7 +232,7 @@ Faça a função somente utilizando o operador `&&`.
 
 Escreva uma função com o nome `calcArea` que receba um valor de base (chamado `base`) e outro de altura (chamado `height`) de um triângulo e retorne o cálculo da sua área.
 
-Lembre-se que a área de um triângulo é calculada através da seguinte fórmula: (base * altura) / 2.
+Lembre-se que a área de um triângulo é calculada através da seguinte fórmula: (base \* altura) / 2.
 
 **O que será verificado:**
 
@@ -327,7 +335,6 @@ Exemplo: caso o parâmetro seja [2, 15, 7, 9, 45], sua função deverá retornar
 
 - Retorne as strings ['fizz', 'buzz'] quando é passado os parâmetros [9, 25] para a função fizzBuzz
 
-
 ### 9 - Crie uma função que Codifique e Decodifique
 
 Crie duas funções: a primeira deverá se chamar `encode` e, ao receber uma string como parâmetro, deverá trocar todas as vogais minúsculas por números, de acordo com o formato a seguir:
@@ -366,6 +373,7 @@ Estes objetos devem ser inseridos em uma nova lista em ordem crescente a partir 
 A saída da sua função deve ser uma lista de objetos ordenada pelo campo `tech` dos objetos com o formato acima.
 
 Exemplo:
+
 ```
 Entradas da função:
 
@@ -457,6 +465,7 @@ Exemplo: o retorno de `triangleCheck(10, 14, 8)` deverá ser `true`.
 Segundo as regras desse bar, a cada bebida deve-se beber um copo de água para que não se tenha ressaca.
 
 Crie a função `hydrate` que recebe uma string, e retorne a sugestão de quantos copos de água você deve beber. Exemplos:
+
 ```
 String recebida:
   "1 cerveja"
@@ -496,10 +505,10 @@ String retornada:
 
 Para **"entregar"** seu projeto, siga os passos a seguir:
 
-* Vá até a página **DO SEU** _Pull Request_, adicione a label de _"code-review"_ e marque outras pessoas estudantes da sua turma
-  * No menu à direita, clique no _link_ **"Labels"** e escolha a _label_ **code-review**
-  * No menu à direita, clique no _link_ **"Assignees"** e escolha **o seu usuário**
-  * No menu à direita, clique no _link_ **"Reviewers"** e digite `students`, selecione o time `tryber/students-sd-015-b`
+- Vá até a página **DO SEU** _Pull Request_, adicione a label de _"code-review"_ e marque outras pessoas estudantes da sua turma
+  - No menu à direita, clique no _link_ **"Labels"** e escolha a _label_ **code-review**
+  - No menu à direita, clique no _link_ **"Assignees"** e escolha **o seu usuário**
+  - No menu à direita, clique no _link_ **"Reviewers"** e digite `students`, selecione o time `tryber/students-sd-015-b`
 
 Se ainda houver alguma dúvida sobre como entregar seu projeto, [aqui tem um video explicativo](https://vimeo.com/362189205).
 
