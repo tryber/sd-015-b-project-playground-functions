@@ -50,7 +50,7 @@ function highestCount(arrayNum) {
       counter.push(highestNumber);
     }
   }
-  return counter.length; 
+  return counter.length;
 }
 
 // Desafio 7
