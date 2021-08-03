@@ -78,7 +78,12 @@ function hydrate(string) {
       coposAgua += parseInt(caractere);
     }
   }
-  return coposAgua + " copos de água";
+
+  if (coposAgua > 1){
+    return coposAgua + " copos de água";
+  } else{
+    return coposAgua + " copo de água";
+  }
 }
 
 module.exports = {
