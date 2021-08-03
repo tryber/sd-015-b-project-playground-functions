@@ -2,8 +2,11 @@
 function compareTrue(entrada1, entrada2) {
   // seu código aqui
   let comparativo = 'true';
-  return (entrada1 && entrada2 === comparativo);
+  return (entrada1 === comparativo && entrada2 === comparativo);
 }
+console.log(compareTrue('false', 'true'));
+console.log(compareTrue('false', 'false'));
+console.log(compareTrue('false', 'false'));
 console.log(compareTrue('true', 'true'));
 
 // Desafio 2
