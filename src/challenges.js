@@ -2,9 +2,11 @@
 function compareTrue(param1, param2) {
   if (param1 === param2 && param1 === false) {
     return false;
-  } else if (param1 != param2) {
+  }
+  if (param1 !== param2) {
     return false;
-  } else if (param1 === param2 && param1 === true) {
+  }
+  if (param1 === param2 && param1 === true) {
     return true;
   }
 }
@@ -16,13 +18,17 @@ function calcArea(base, altura) {
 
 // Desafio 3
 function splitSentence(string) {
-  let separate = string.split(' ');  
+  let separate = string.split(' ');
   return separate;
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  let primeiro = array[0];
+  let ultimo = array[array.length -1];
+  let concat = ultimo.concat(', ', primeiro);
+
+  return concat;
 }
 
 // Desafio 5
