@@ -1,168 +1,168 @@
 // Desafio 1
 function compareTrue(param1, param2) {
   if (param1 && param2 === true) {
-    return true
+    return true;
   } else {
-    return false
+    return false;
   }
 }
 
 // Desafio 2
 function calcArea(param1, param2) {
-  let base = param1
-  let height = param2
-  let area = (base * height) / 2
+  let base = param1;
+  let height = param2;
+  let area = (base * height) / 2;
 
-  return area
+  return area;
 }
 
 // Desafio 3
 function splitSentence(str) {
-  let strSeparated = str.split(' ')
+  let strSeparated = str.split(' ');
 
-  return strSeparated
+  return strSeparated;
 }
 
 // Desafio 4
 function concatName(arr) {
-  let names = []
-    
-  names.push(arr[arr.length - 1])
-  names.push(arr[0])
+  let names = [];
 
-  return names.join(', ')
+  names.push(arr[arr.length - 1]);
+  names.push(arr[0]);
+
+  return names.join(', ');
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let winPoints = 3
-  let tiePoints = 1
-  let total = (wins * winPoints) + (ties * tiePoints)
+  let winPoints = 3;
+  let tiePoints = 1;
+  let total = (wins * winPoints) + (ties * tiePoints);
 
-  return total
+  return total;
 }
 
 // Desafio 6
 function highestCount(arr) {
-  let maior = arr[0]
-  let count = 0
+  let maior = arr[0];
+  let count = 0;
 
   for (let index = 0; index < arr.length; index += 1) {
     if (arr[index] > maior) {
-      maior = arr[index]
+      maior = arr[index];
     }
   }
 
   for (let index = 0; index < arr.length; index += 1) {
     if (maior === arr[index]) {
-      count += 1
+      count += 1;
     }
   }
 
-  return count
+  return count;
 }
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let distanceCat1 = mouse - cat1
-  let distanceCat2 = mouse - cat2
+  let distanceCat1 = mouse - cat1;
+  let distanceCat2 = mouse - cat2;
 
   if (distanceCat1 < 0) {
-      distanceCat1 = distanceCat1 * -1
+    distanceCat1 = distanceCat1 * -1;
   }
   if (distanceCat2 < 0) {
-      distanceCat2 = distanceCat2 * -1
+    distanceCat2 = distanceCat2 * -1;
   }
 
   if (distanceCat1 < distanceCat2) {
-    return 'cat1'
+    return 'cat1';
   } else if (distanceCat2 < distanceCat1) {
-    return 'cat2'
+    return 'cat2';
   } else if (distanceCat1 === distanceCat2) {
-    return 'os gatos trombam e o rato foge'
+    return 'os gatos trombam e o rato foge';
   }
 }
 
 // Desafio 8
 function fizzBuzz(arr) {
-  let final = []
+  let final = [];
 
   for (let index = 0; index < arr.length; index += 1) {
     if ((arr[index] % 3 === 0) && (arr[index] % 5 === 0)) {
-      final.push('fizzBuzz')
+      final.push('fizzBuzz');
     } else if (arr[index] % 3 === 0) {
-      final.push('fizz')
+      final.push('fizz');
     } else if (arr[index] % 5 === 0) {
-      final.push('buzz')
+      final.push('buzz');
     } else {
-      final.push('bug!')
+      final.push('bug!');
     }
   }
 
-  return final
+  return final;
 }
 
 // Desafio 9
 function encode(str) {
-  let strEncoded = ''
+  let strEncoded = '';
 
   let vowels = {
     a: 1,
     e: 2,
     i: 3,
     o: 4,
-    u: 5
-  }
+    u: 5,
+  };
 
   for (let index = 0; index < str.length; index += 1) {
-    let verification = false
+    let verification = false;
     
     for (let letter in vowels) {        
       if (str[index] === letter) {
-        strEncoded += vowels[letter]
-        verification = true
+        strEncoded += vowels[letter];
+        verification = true;
       }
     }
 
     if (verification === false) {
-      strEncoded += str[index]
+      strEncoded += str[index];
     }
 
-    verification = false
+    verification = false;
   }
 
-  return strEncoded
+  return strEncoded;
 }
 
 function decode(str) {
-  let strDecoded = ''
+  let strDecoded = '';
 
   let vowels = {
     1: 'a',
     2: 'e',
     3: 'i',
     4: 'o',
-    5: 'u'
-  }
+    5: 'u',
+  };
 
   for (let index = 0; index < str.length; index += 1) {
-    let verification = false
+    let verification = false;
 
     for (let letter in vowels) {        
       if (str[index] === letter) {
-      strDecoded += vowels[letter]
-      verification = true
+        strDecoded += vowels[letter];
+        verification = true;
       }
     }
 
     if (verification === false) {
-      strDecoded += str[index]
+      strDecoded += str[index];
     }
 
-    verification = false
+    verification = false;
   }
 
-  return strDecoded
+  return strDecoded;
 }
 
 module.exports = {
