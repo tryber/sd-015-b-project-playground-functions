@@ -2,8 +2,6 @@
 function compareTrue(a, b) {
   if (typeof a === 'boolean' && typeof b === 'boolean') {
     return a && b;
-  } else {
-    console.log('Type of args are not boolean');
   }
 }
 
@@ -16,8 +14,6 @@ function compareTrue(a, b) {
 function calcArea(base, height) {
   if (typeof base === 'number' && typeof height === 'number') {
     return base * height * 0.5;
-  } else {
-    console.log('Type of args are not number');
   }
 }
 
@@ -27,9 +23,16 @@ function calcArea(base, height) {
 // console.log( calcArea(5, '5') ); // teste extra
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(str) {
+  if (typeof str === 'string') {
+    return str.split(' ');
+  }
 }
+
+// console.log(splitSentence('go Trybe')); // teste 1
+// console.log(splitSentence('vamo que vamo')); // teste 2
+// console.log(splitSentence('foguete')); // teste 3
+// console.log(splitSentence(123)); // teste extra
 
 // Desafio 4
 function concatName() {
