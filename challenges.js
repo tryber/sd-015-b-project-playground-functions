@@ -6,10 +6,10 @@ function compareTrue(param1, param2){
     }
 }
 
-console.log(compareTrue(3, 3))
-
 function calcArea (base, height){
     return (base * height) / 2
 }
 
-console.log(calcArea(51, 1))
+function splitSentence(string){
+    return string.split(" ")
+}
