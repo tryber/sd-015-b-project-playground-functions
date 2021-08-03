@@ -1,38 +1,49 @@
 // Desafio 1
-function compareTrue(a, b){
-  if (a === true && b === true) {
-    return true;
-  }
-  return false;
+function compareTrue(){
+
 }
+// function compareTrue(a, b){
+//   if (a === true && b === true) {
+//     return true;
+//   }
+//   return false;
+// }
 
 // Desafio 2
-function calcArea(base, height){
-   let area = (base * height) / 2;
-   if (base === 10 && height === 50) {
-    return area;
-   } else if (base === 5 && height === 2) {
-    return area;
-   } else if (base === 51 && height === 1) {
-     return area;
-   }
- } console.log(calcArea(10, 50));
+function calcArea(){
+
+}
+// function calcArea(base, height){
+//    let area = (base * height) / 2;
+//    if (base === 10 && height === 50) {
+//     return area;
+//    } else if (base === 5 && height === 2) {
+//     return area;
+//    } else if (base === 51 && height === 1) {
+//      return area;
+//    }
+//  } console.log(calcArea(10, 50));
 
 // Desafio 3
-function splitSentence(str){ 
-  switch (str){
-    case 'Go Trybe':    
-    break;
-    case 'vamo que vamo':
-    return  str.split(' '); 
-    break;
-    default:
-    return 'foguete';    
-    }
-      splitSentence('foguete'); 
+function splitSentence(){
+
+}
+// function splitSentence(str) { 
+//   switch (str){
+//     case 'Go Trybe':
+//     break;
+//     case 'vamo que vamo':
+//     return  str.split(' ');
+//     break;
+//     default:
+//     return 'foguete';
+//     }
+//       splitSentence('foguete');
 
 // Desafio 4
-function concatName(){ }
+function concatName(){ 
+
+}
 // function concatName(string){ 
 //   if (string= ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']){
 //     return string[0] + ' ' + string[string.length -1];
@@ -44,7 +55,9 @@ function concatName(){ }
 // } concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']);
 
 // Desafio 5
-function footballPoints(){}
+function footballPoints(){
+
+}
 // function footballPoints(){
 //   let wins = [];
 //   let ties = [];
@@ -58,7 +71,7 @@ function footballPoints(){}
 // }
 
 // Desafio 6
-function highestCount(array) {
+function highestCount() {
   // seu código aqui
 }
 
@@ -80,8 +93,7 @@ function fizzBuzz() {
 //     } else if (array[i] % 5 === 0) {
 //       return 'Buzz';
 //     }
-//   }
-  
+//   }  
 //  } fizzBuzz = [2, 15, 7, 9, 45];
 
 // Desafio 9
