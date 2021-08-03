@@ -17,10 +17,11 @@ function splitSentence(string) {
   return a
 }
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arrayString) {
+  let a = arrayString.length - 1
+  let b = arrayString[0]
+  return `${arrayString[a]}, ${b}`
 }
-
 // Desafio 5
 function footballPoints() {
   // seu código aqui
