@@ -37,12 +37,11 @@ function highestCount(numbers) {
     if (numbers[index] > maior_numero) {
       maior_numero = numbers[index]
     }
+  } if (numbers[index] === maior_numero) {
+    contador+=1
   }
-  for (let index=0; index < numbers.length; index+=1) {
-    if (numbers[index] === maior_numero) {
-      contador+=1
-    }
-  }
+  
+}
   return (contador)
 }
 // Desafio 7
