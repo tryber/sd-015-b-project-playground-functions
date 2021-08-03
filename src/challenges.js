@@ -103,6 +103,20 @@ function decode(string) {
   return vecString.join('')
 }
 
+function listOfTechs(array, name) {
+  let techList = []
+  array = array.sort()
+  for(let i = 0; i < array.length; i += 1){
+    let obj = {
+      tech: array[i],
+      name: name,
+    }
+    techList.push(obj)
+  }
+  console.log(techList)
+}
+listOfTechs(["React", "Jest", "HTML", "CSS", "JavaScript"], 'Erickson')
+
 module.exports = {
   calcArea,
   catAndMouse,
