@@ -49,7 +49,7 @@ function catAndMouse(mouse, cat1, cat2) {
   } else if (Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)) {
     return "cat2";
   } else {
-    return "os gatos trombam e o rato foge"
+    return 'os gatos trombam e o rato foge'
   }
 }
 
@@ -75,22 +75,59 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
-}
-function decode() {
-  // seu código aqui
+function encode(string) {
+  let code = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5
+  };
+
+  let stringArray = string.split("");
+
+  for (index = 0; index < stringArray.length; index += 1) {
+    for (letter in code) {
+      if (stringArray[index] === letter) {
+        stringArray[index] = code[letter];
+      }
+    }
+  }
+
+  return stringArray.join("");
 }
 
-// module.exports = {
-//   calcArea,
-//   catAndMouse,
-//   compareTrue,
-//   concatName,
-//   decode,
-//   encode,
-//   fizzBuzz,
-//   footballPoints,
-//   highestCount,
-//   splitSentence,
-// };
+function decode(string) {
+  let code = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5
+  };
+
+  let stringArray = string.split("");
+
+  for (index = 0; index < stringArray.length; index += 1) {
+    for (letter in code) {
+      if (stringArray[index] === code[letter].toString()) {
+        stringArray[index] = letter;
+      }
+    }
+  }
+
+  return stringArray.join("");
+}
+
+module.exports = {
+  calcArea,
+  catAndMouse,
+  compareTrue,
+  concatName,
+  decode,
+  encode,
+  fizzBuzz,
+  footballPoints,
+  highestCount,
+  splitSentence,
+};
