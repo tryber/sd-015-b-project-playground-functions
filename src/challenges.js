@@ -13,9 +13,11 @@ function calcArea(base,height) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
-}
+function splitSentence(string) {
+  return string.split(" ");
+  // Função .split foi encontrada buscando "how to split sentences in js?"
+// e dentro da função '.split()' se coloca a condição para a separação, no caso, o espaço.
+  }
 
 // Desafio 4
 function concatName() {
