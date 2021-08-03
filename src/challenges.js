@@ -33,8 +33,10 @@ function splitSentence(frase) {
 }
 
 // Desafio 4
-function concatName() {
+function concatName(lista) {
   // seu código aqui
+  let resultado = lista[lista.length - 1] + ", " + lista[0];
+  return resultado;
 }
 
 // Desafio 5
