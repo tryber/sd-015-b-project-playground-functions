@@ -48,17 +48,33 @@ function highestCount(arrayNumeros) {
   return contador;
 }
 // Desafio 7
-function catAndMouse(mouse, cat1, cat2) {
-  if (Math.abs((cat1 - mouse)) < Math.abs((cat2 - mouse))) {
+function catAndMouse(mouse,cat1,cat2) {
+ 
+  let distanciaRatoGato1 = cat1 - mouse;
+  let distanciaRatoGato2 = cat2 - mouse;
+
+  if (distanciaRatoGato1 < 0) {
+    distanciaRatoGato1 = -1 * distanciaRatoGato1;
+  }
+
+  if (distanciaRatoGato2 < 0){
+    distanciaRatoGato2 = -1 * distanciaRatoGato2;
+  }
+
+  if (distanciaRatoGato1 < distanciaRatoGato2){
     return 'cat1';
   } 
-  else if (Math.abs((cat2 - mouse)) < Math.abs((cat1 - mouse))) {
+  else if (distanciaRatoGato2 < distanciaRatoGato1){
     return 'cat2';
   } 
-  else {
+  else if (distanciaRatoGato1 == distanciaRatoGato2){
     return 'os gatos trombam e o rato foge';
+  } 
+  else {
+    return 'erro de valores fornecidos';
   }
 }
+
 
 // Desafio 8
 function fizzBuzz(array) {
