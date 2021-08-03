@@ -32,28 +32,30 @@ function splitSentence(str){
       splitSentence('foguete'); 
 
 // Desafio 4
-function concatName(string){ 
-  if (string= ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']){
-    return string[0] + ' ' + string[string.length -1];
-  }else if (string = ['foguete', 'não', 'tem', 'ré']){
-    return string[0] + ' ' + string[string.length -1];
-  } else if (string= ['captain', 'my', 'captain']) {
-    return string[0] + ' ' + string[string.length -1];
-} 
-} concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']);
+function concatName(){ }
+// function concatName(string){ 
+//   if (string= ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']){
+//     return string[0] + ' ' + string[string.length -1];
+//   }else if (string = ['foguete', 'não', 'tem', 'ré']){
+//     return string[0] + ' ' + string[string.length -1];
+//   } else if (string= ['captain', 'my', 'captain']) {
+//     return string[0] + ' ' + string[string.length -1];
+// } 
+// } concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']);
 
 // Desafio 5
-function footballPoints(){
-  let wins = [];
-  let ties = [];
-  if(wins[14] && ties[8]){
-    return 50 + 'pontos';
-  } else if (wins[1] && ties[2]){
-    return 5 + 'pontos';
-  } else if(wins[0] && ties[0]){
-    return 0 + 'pontos';
-  }
-}
+function footballPoints(){}
+// function footballPoints(){
+//   let wins = [];
+//   let ties = [];
+//   if(wins[14] && ties[8]){
+//     return 50 + 'pontos';
+//   } else if (wins[1] && ties[2]){
+//     return 5 + 'pontos';
+//   } else if(wins[0] && ties[0]){
+//     return 0 + 'pontos';
+//   }
+// }
 
 // Desafio 6
 function highestCount(array) {
@@ -66,6 +68,8 @@ function catAndMouse() {
 }
 
 // // Desafio 8
+function fizzBuzz() {
+}
 // function fizzBuzz(array) {
 
 //   for (let index = 1; index <= array.length; index += 1) {
