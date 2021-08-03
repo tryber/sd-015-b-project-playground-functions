@@ -74,13 +74,21 @@ function catAndMouse(mouse, cat1, cat2) {
   return "cat2"
 }
 
-catAndMouse(5, 2, 3);
-catAndMouse(13, 7, );
-console.log(catAndMouse(0, 3, 2));
-
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numeros) {
+  let ar = [];
+  for (let i of numeros) {
+    if (i % 3 === 0 && i % 5 === 0) {
+      ar.push("fizzBuzz");
+    } else if (i % 3 === 0) {
+      ar.push("fizz");
+    } else if (i % 5 === 0) {
+      ar.push("buzz");
+    } else {
+      ar.push("bug!");
+    }
+  }
+  return ar
 }
 
 // Desafio 9
