@@ -14,7 +14,7 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(string) {
-  let array = [];
+  const array = [];
   let word = '';
 
   for (let index in string) {
@@ -28,7 +28,6 @@ function splitSentence(string) {
       word += string[index];
     }
   }
-
   return array;
 }
 
@@ -39,13 +38,14 @@ function concatName(array) {
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  const points = (3 * wins + ties);
+  return points;
 }
 
 // Desafio 6
 function highestCount() {
-  // seu código aqui
+
 }
 
 // Desafio 7
