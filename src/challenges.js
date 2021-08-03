@@ -10,7 +10,9 @@ function compareTrue(booleanOne, booleanTwo) {
 }
 
 // Desafio 2
-function calcArea(base, height) {}
+function calcArea(base, height) {
+  return (base * height) / 2;
+}
 // Desafio 3
 function splitSentence(phrase) {}
 
