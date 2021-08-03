@@ -199,12 +199,3 @@ module.exports = {
   highestCount,
   splitSentence,
 };
-
-console.log(splitSentence('foguete'));
-console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
-console.log(footballPoints(14,8));
-console.log(highestCount([0, 0, 0]));
-console.log(catAndMouse(1,0,2));
-console.log(fizzBuzz([2, 15, 7, 9, 45]))
-console.log(encode("this is a test to see if it works!"))
-console.log(decode("th3s 3s 1 t2st t4 s22 3f 3t w4rks!"))
