@@ -2,12 +2,16 @@
 
 // Retornar true se ambos os valores forem verdadeiros;
 // Retornar false se um ou ambos os parâmetros forem falsos.
-function compareTrue(a, b){
-    if(a == true && b == true){
-        return true
+function compareTrue(a, b) {
+    if (a === true && b === true) {
+        return true;
     }
-    else{
-        return false
+    else if (a === true && b === false) {
+        return false;
+    }
+    else {
+        return false;
     }
 }
-console.log(compareTrue(false, true));
+
+// Escreva uma função com o nome calcArea que receba um valor de base (chamado base) e outro de altura (chamado height) de um triângulo e retorne o cálculo da sua área.
