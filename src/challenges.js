@@ -6,12 +6,13 @@ function compareTrue() {
 // Desafio 2
 function calcArea() {
   // seu código aqui
-  let base;
-  let height;
-  let result = base * height / 2;
-  return result;
+  let base = 10;
+  let height = 50;
+  let result1 = base * height;
+  let result2 = result1 / 2;
+  return result2;
 }
-calcArea();
+console.log(calcArea());
 
 // Desafio 3
 function splitSentence() {
@@ -19,8 +20,8 @@ function splitSentence() {
   let palavra = ' ';
   let divide = palavra.split(' ', 2);
   return divide;
-};
-splitSentence();
+}
+console.log(splitSentence());
 
 // Desafio 4
 function concatName() {
