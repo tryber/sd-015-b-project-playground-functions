@@ -55,19 +55,19 @@ function highestCount(lista) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-  let distanciaGato1 = mouse - cat1;
-  let distanciaGato2 = mouse - cat2;
-  if (distanciaGato1 > distanciaGato2) {
+  let distanciaGato1 = Math.abs(mouse - cat1);
+  let distanciaGato2 = Math.abs(mouse - cat2);
+  if (distanciaGato1 < distanciaGato2) {
     return "cat1";
   }
-  else if (distanciaGato2 > distanciaGato1) {
+  else if (distanciaGato2 < distanciaGato1) {
     return "cat2";
   }
-  else if (distanciaGato1 == distanciaGato2) {
+  else {
     return "os gatos trombam e o rato foge";
   }
 
-}
+}// Econtrei a funcao Math.abs no documento, estava procurando uma forma de "anular" o numero negativo e consegui por meio dela
 
 // Desafio 8
 function fizzBuzz() {
