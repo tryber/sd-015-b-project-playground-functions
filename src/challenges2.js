@@ -2,7 +2,7 @@
 function techList(array, name) {
   // seu código aqui
   if (array.length === 0) {
-    return 'Vazio!'
+    return 'Vazio!';
   }
   let ordem = array.sort();
   let conteudo = [];
@@ -11,7 +11,7 @@ function techList(array, name) {
     obj = {
       tech: ordem[key],
       name: name
-    }
+    };
     conteudo.push(obj);
   }
   return conteudo;

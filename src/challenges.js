@@ -55,17 +55,19 @@ function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
   let distMouseCat1 = mouse - cat1;
   let distMouseCat2 = mouse - cat2;
-	if (distMouseCat1 < 0) {
-		distMouseCat1 *= (-1);
-	}
-	if (distMouseCat2 < 0) {
-		distMouseCat2 *= (-1);
-	}
+  if (distMouseCat1 < 0) {
+    distMouseCat1 *= (-1);
+  }
+  if (distMouseCat2 < 0) {
+    distMouseCat2 *= (-1);
+  }
   if (distMouseCat1 === distMouseCat2) {
     return 'os gatos trombam e o rato foge';
-  } else if (distMouseCat1 < distMouseCat2) {
+  }
+  else if (distMouseCat1 < distMouseCat2) {
     return 'cat1';
-  } else {
+  }
+  else {
     return 'cat2';
   }
 }
@@ -93,7 +95,7 @@ function encodeA(string) {
   let array = string.split('');
   for (let key in array) {
     if (array[key] === 'a') {
-      array.splice(key, 1,'1');
+      array.splice(key, 1, '1');
     }
   }
   return array;
@@ -102,7 +104,7 @@ function encodeA(string) {
 function encodeE(array) {
   for (let key in array) {
     if (array[key] === 'e') {
-      array.splice(key, 1,'2');
+      array.splice(key, 1, '2');
     }
   }
   return array;
@@ -111,7 +113,7 @@ function encodeE(array) {
 function encodeI(array) {
   for (let key in array) {
     if (array[key] === 'i') {
-      array.splice(key, 1,'3');
+      array.splice(key, 1, '3');
     }
   }
   return array;
@@ -120,7 +122,7 @@ function encodeI(array) {
 function encodeO(array) {
   for (let key in array) {
     if (array[key] === 'o') {
-      array.splice(key, 1,'4');
+      array.splice(key, 1, '4');
     }
   }
   return array;
@@ -129,7 +131,7 @@ function encodeO(array) {
 function encodeU(array) {
   for (let key in array) {
     if (array[key] === 'u') {
-      array.splice(key, 1,'5');
+      array.splice(key, 1, '5');
     }
   }
   return array;
@@ -144,12 +146,13 @@ function encode(string) {
   let encode5 = encodeU(encode4).join('');
   return encode5;
 }
-//encode
+
+  // encode
 function decode1(string) {
   let array = string.split('');
   for (let key in array) {
     if (array[key] === '1') {
-      array.splice(key, 1,'a');
+      array.splice(key, 1, 'a');
     }
   }
   return array;
@@ -158,7 +161,7 @@ function decode1(string) {
 function decode2(array) {
   for (let key in array) {
     if (array[key] === '2') {
-      array.splice(key, 1,'e');
+      array.splice(key, 1, 'e');
     }
   }
   return array;
@@ -167,7 +170,7 @@ function decode2(array) {
 function decode3(array) {
   for (let key in array) {
     if (array[key] === '3') {
-      array.splice(key, 1,'i');
+      array.splice(key, 1, 'i');
     }
   }
   return array;
@@ -176,7 +179,7 @@ function decode3(array) {
 function decode4(array) {
   for (let key in array) {
     if (array[key] === '4') {
-      array.splice(key, 1,'o');
+      array.splice(key, 1, 'o');
     }
   }
   return array;
@@ -185,7 +188,7 @@ function decode4(array) {
 function decode5(array) {
   for (let key in array) {
     if (array[key] === '5') {
-      array.splice(key, 1,'u');
+      array.splice(key, 1, 'u');
     }
   }
   return array;
