@@ -74,8 +74,12 @@ function checkRepeatedDigits(array) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  return lineCheck(lineA, lineB, lineC) && lineCheck(lineB, lineA, lineC) && lineCheck(lineC, lineA, lineB);
+}
+
+function lineCheck(line1, line2, line3) {
+  return line1 < line2 + line3 && line1 > Math.abs(line2 - line3);
 }
 
 // Desafio 13
