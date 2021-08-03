@@ -60,16 +60,25 @@ function catAndMouse(mouse,cat1,cat2) {
   } else if (Math.abs(mouse - cat2) < Math.abs(mouse - cat1)) {
     return("cat2");
   } else if (Math.abs(mouse - cat1) === Math.abs(mouse - cat2)){
-    return("Os gatos trombam e o rato foge");
+    return("os gatos trombam e o rato foge");
   }
-} console.log(catAndMouse(1,0,2));
+} 
 
 // Desafio 8
 function fizzBuzz(arrayFizzBuzz) {
+  let newArrayFizzBuzz = [];
   for (i = 0; i < arrayFizzBuzz.length; i++){
-
-  }
-}
+    if (arrayFizzBuzz[i] % 3 === 0 && arrayFizzBuzz[i] % 5 != 0) {
+      newArrayFizzBuzz.push("fizz");
+    } else if (arrayFizzBuzz[i] % 5 === 0 && arrayFizzBuzz[i] % 3 != 0) {
+      newArrayFizzBuzz.push("buzz");
+    } else if (arrayFizzBuzz[i] % 3 === 0 && arrayFizzBuzz[i] % 5 === 0) {
+      newArrayFizzBuzz.push("fizzBuzz");
+    } else {
+      newArrayFizzBuzz.push("bug!");
+    }
+  } return newArrayFizzBuzz;
+} console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode() {
