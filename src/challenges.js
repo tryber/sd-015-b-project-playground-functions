@@ -19,8 +19,11 @@ function splitSentence(sentence) {
 }
 
 // Desafio 4
-function concatName() {
+function concatName(names) {
   // seu código aqui
+  firstName = names[0];
+  lastName = names[names.length - 1];
+  return lastName + ", " + firstName;
 }
 
 // Desafio 5
