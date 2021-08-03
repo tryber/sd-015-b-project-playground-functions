@@ -92,9 +92,24 @@ function encode(yourString) {
     }
   } return newString;
 };
-function decode() {
-  // seu código aqui
-}
+function decode(yourString) {
+  let newString = ""
+  for (let index = 0; index < yourString.length; index += 1) {
+    if (yourString[index] == 1) {
+      newString += "a";
+    } else if (yourString[index] == 2) {
+      newString += "e";
+    } else if (yourString[index] == 3) {
+      newString += "i";
+    } else if (yourString[index] == 4) {
+      newString += "o";
+    } else if (yourString[index] == 5) {
+      newString+= "u";
+    } else {
+      newString += yourString[index];
+    }
+  } return newString;
+};
 
 module.exports = {
   calcArea,
