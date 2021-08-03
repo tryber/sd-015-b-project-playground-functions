@@ -92,11 +92,77 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
+function encode(string) {
   // seu código aqui
+  let arrayString = string.split('');
+  let resultado = [];
+  for (let key = 0; key < arrayString.length; key += 1) {
+
+    switch (arrayString[key]) {
+      case 'a':
+        resultado.push(arrayString[key].replace('a', '1'));
+        // console.log(resultado);
+        break;
+      case 'e':
+        resultado.push(arrayString[key].replace('e', '2'));
+        // console.log(resultado);
+        break;
+      case 'i':
+        resultado.push(arrayString[key].replace('i', '3'));
+        // console.log(resultado);
+        break;
+      case 'o':
+        resultado.push(arrayString[key].replace('o', '4'));
+        // console.log(resultado);
+        break;
+      case 'u':
+        resultado.push(arrayString[key].replace('u', '5'));
+        // console.log(resultado);
+        break;
+      default:
+        resultado.push(arrayString[key]);
+    }
+    ;
+    // return console.log(resultado);
+  }
+  return resultado.join('');
 }
-function decode() {
+let string = 'hello';
+encode(string);
+function decode(string) {
   // seu código aqui
+  let arrayString = string.split('');
+  let resultado = [];
+  for (let key = 0; key < arrayString.length; key += 1) {
+
+    switch (arrayString[key]) {
+      case '1':
+        resultado.push(arrayString[key].replace('1', 'a'));
+        // console.log(resultado);
+        break;
+      case '2':
+        resultado.push(arrayString[key].replace('2', 'e'));
+        // console.log(resultado);
+        break;
+      case '3':
+        resultado.push(arrayString[key].replace('3', 'i'));
+        // console.log(resultado);
+        break;
+      case '4':
+        resultado.push(arrayString[key].replace('4', 'o'));
+        // console.log(resultado);
+        break;
+      case '5':
+        resultado.push(arrayString[key].replace('5', 'u'));
+        // console.log(resultado);
+        break;
+      default:
+        resultado.push(arrayString[key]);
+    }
+    ;
+    // return console.log(resultado);
+  }
+  return resultado.join('');
 }
 
 module.exports = {
