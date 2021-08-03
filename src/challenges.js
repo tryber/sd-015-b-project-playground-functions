@@ -52,8 +52,28 @@ function concatName(obj) {
 // concatName(Teste); // [DEBUG]
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
+  // retorna 50 quando 14 vitórias/ 08 empates
+  // 50 = x * 14 + y * 08
+  // 50 = 14x + 8y
+
+  // retorna 05 quando 01 vitórias/ 02 empates
+  // 5 = x * 01 + y * 02
+  // 5 = 1x + 2y
+
+  // retorna 00 quando 00 vitórias/ 00 empates
+  // 0 = x * 00 + y * 00
+  // 0 = 0x + 0y
+
+  // 55 = (14x + 8y) + (1x + 2y)
+  // 55 = (15x + 10y)
+  // 55 = (15x + 10y)
+  // 55 = 15*3 + 10 * 1
+  // x = 3
+  // y = 1
+  return ( (wins * 3) + ties);
+
 }
 
 // Desafio 6
