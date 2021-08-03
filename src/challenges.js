@@ -27,7 +27,6 @@ function concatName(array) {
   let resultado = `${ultimaString}, ${primeiraString}`;
   return resultado;
 }
-console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -64,31 +63,32 @@ function catAndMouse(mouse, cat1, cat2) {
   } if (distanciaCat1 < distanciaCat2) {
     return 'cat1';
   } return 'os gatos trombam e o rato foge';
-} 
+}
 
 // Desafio 8
-function arrayNumber(array) {
+function fizzBuzz(array) {
+  let resultado = [];
   for (let index = 0; index < array.length; index += 1) {
-    let numero = array[index];
-    return numero;
+    if (array[index] % 3 === 0 && array[index] % 5 != 0) {
+    resultado.push('fizz');
+  } else if (array[index] % 5 === 0 && array[index] % 3 != 0) {
+    resultado.push('buzz');
+  } else if (array[index] % 3 === 0 && array[index] % 5 === 0) {
+    resultado.push('fizzBuzz');
+  } else {
+    resultado.push('bug!');
   }
 }
-function fizzBuzz() {
-  arrayNumber(array);
-  if (array[numero] % 3 === 0 && array[numero] % 5 !== 0) {
-    console.log('fizz');
-  } if (array[numero] % 5 === 0 && array[numero] % 3 !== 0) {
-    console.log('buzz');
-  } if (array[numero] % 3 === 0 && array[numero] % 5 === 0) {
-    console.log('fizzBuzz')
-  } console.log('bug!')  
-}
-
+return resultado;
+} console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
-}
+function encode(string) {
+  let vowels = ['a', 'e', 'i', 'o', 'u'];
+  let numbers = [1, 2, 3, 4, 5];
+  return string.replace('e', '2');
+} console.log(encode('hi there!'));
+
 function decode() {
   // seu código aqui
 }
