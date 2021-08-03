@@ -51,10 +51,21 @@ function catAndMouse( mouse, cat1, cat2, ) {
     }
 }
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
-}
-
+function fizzBuzz(numeros) {
+  let array = []
+    for(let i = 0; i < numeros.length; i++){
+      if(numeros[i] % 3 === 0 && numeros[i] % 5 === 0){
+        array.push('fizzBuzz') 
+      }else if(numeros[i] % 3 === 0){
+        array.push('fizz')
+      }else if(numeros[i] % 5 === 0){
+        array.push('buzz')
+      }else{
+        array.push('bug!')
+      }
+    }
+    return array
+  }
 // Desafio 9
 function encode() {
   // seu código aqui
