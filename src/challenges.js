@@ -1,17 +1,18 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(booleanOne, booleanTwo) {
+  if (booleanOne === true && booleanTwo === true) {
+    return true;
+  } else if (booleanOne === false && booleanTwo === false) {
+    return false;
+  } else {
+    return false;
+  }
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
-}
-
+function calcArea(base, height) {}
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
-}
+function splitSentence(phrase) {}
 
 // Desafio 4
 function concatName() {
