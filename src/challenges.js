@@ -3,6 +3,9 @@ function compareTrue(par1, par2) {
   if (par1 === true && par2 === true) {
     return true;
   }
+  else{
+    return false
+  }
 }
 
 // Desafio 2
@@ -27,6 +30,7 @@ function concatName(vetor) {
       resultado.push(vetor[index]);
     }
   }
+  resultado = resultado.reverse()
   resultado = resultado.join(', ');
   return resultado;
 }
