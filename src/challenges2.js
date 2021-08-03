@@ -1,7 +1,6 @@
 // Desafio 10
 function techList(arrRecebido, name) {
   arrRecebido = arrRecebido.sort();
-  let listaOrdenada;
   let resultado = [];
   let objeto;
   if (arrRecebido.length === 0) {
@@ -11,7 +10,7 @@ function techList(arrRecebido, name) {
       objeto = {
         tech: index,
         name: name,
-      }
+      };
       resultado.push(objeto);
     }
   }
@@ -22,7 +21,7 @@ function techList(arrRecebido, name) {
 function generatePhoneNumber(arrRecebido) {
   let resultado;
   let continua = true;
-  if (arrRecebido.length != 11) {
+  if (arrRecebido.length !== 11) {
     resultado = 'Array com tamanho incorreto.';
     continua = false;
   } else if (continua) {
@@ -48,7 +47,9 @@ function generatePhoneNumber(arrRecebido) {
     }
   }
   if (continua) {
-    resultado = '(' + arrRecebido[0] + arrRecebido[1] + ') ' + arrRecebido[2] + arrRecebido[3] + arrRecebido[4] + arrRecebido[5] + arrRecebido[6] + '-' + arrRecebido[7] + arrRecebido[8] + arrRecebido[9] + arrRecebido[10]
+    resultado = '(' + arrRecebido[0] + arrRecebido[1] + ') ';
+    resultado = resultado + arrRecebido[2] + arrRecebido[3] + arrRecebido[4] + arrRecebido[5] + arrRecebido[6]; 
+    resultado = resultado + '-' + arrRecebido[7] + arrRecebido[8] + arrRecebido[9] + arrRecebido[10];
   }
   return resultado;
 }
@@ -60,7 +61,7 @@ function triangleCheck(lineA, lineB, lineC) {
     resultado = false;
   } else if (lineB > lineA + lineC) {
     resultado = false;
-  } else if (lineB > lineB + lineA) {
+  } else if (lineC > lineB + lineA) {
     resultado = false;
   }
   return resultado;
