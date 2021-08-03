@@ -5,15 +5,15 @@ function compareTrue(n1, n2) {
   if (n1 && n2 === true) {
     value = true;
     return value;
-  } else if (n1 && n2 !== true){
-    return value
+  } else if (n1 && n2 !== true) {
+    return value;
   }
   else {
     value = false;
-    return value
+    return value;
   }
 }
-console.log(compareTrue(false, false));
+console.log(compareTrue(false, true));
 
 // Desafio 2
 function calcArea() {
@@ -21,9 +21,12 @@ function calcArea() {
 }
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(frase) {
+  frase = frase.split(" ");
+  return frase;
   // seu código aqui
 }
+console.log(splitSentence("sempre é assim"))
 
 // Desafio 4
 function concatName() {
