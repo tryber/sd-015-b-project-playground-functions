@@ -71,9 +71,22 @@ return numeros[indexNumeroRepetido]
 
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
-}
+function catAndMouse(mouse, cat1, cat2) {
+let gato1 = "cat1"
+let gato2 = "cat2"
+let trombam = 'os gatos trombam e o rato foge'
+let distanciaGato1 = cat1 + mouse
+let distanciaGato2 = cat2 + mouse
+  if(distanciaGato1 === distanciaGato2){
+    return trombam;
+  } else if (distanciaGato1 < distanciaGato2) {
+    return gato1
+  } else {
+    return gato2
+  }
+} 
+console.log(catAndMouse(1,0,2))
+
 
 // Desafio 8
 function fizzBuzz() {
