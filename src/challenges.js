@@ -71,7 +71,6 @@ function fizzBuzz(array) {
 function encode(oi) {
   let cript = oi;
   }console.log(cript)
-}
 encode('ola meu amigo')
 
 function decode() {
