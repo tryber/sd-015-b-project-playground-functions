@@ -49,7 +49,7 @@ function footballPoints(wins, ties){
     let pointTotal = wins * 3 + ties
     return pointTotal
 }
-footballPoints(0, 0)
+
 
 
 // Desafio 6
@@ -67,7 +67,7 @@ return quantidade
 
 }
 
-highestCount([00, 00, 00, 0])
+
 
 
 // Desafio 7 
@@ -84,7 +84,7 @@ function catAndMouse(mouse, cat1, cat2){
         return "os gatos trombam e o rato foge"
 }
 }
-catAndMouse(8, 2, 2);
+
 
 // Desafio 8
 function fizzBuzz(a){
@@ -104,7 +104,7 @@ function fizzBuzz(a){
     }
     return newA
 }
-fizzBuzz([7, 9])
+
 
 // Desafio 9
 function encode() {
