@@ -88,10 +88,16 @@ if (a > less3 && a < sum3) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(bebidas) {
+    let str = bebidas.replace(/[^0-9]/g,"");
+    let sum = 0;
+    for (let i=0; i < str.length; i += 1){
+        sum += parseInt(str[i], 10);
+    }
+    if (sum > 1){
+    return sum + " copos de água";
+    } else if (sum === 1) {return sum + " copo de água"}
 }
-
 module.exports = {
   generatePhoneNumber,
   techList,
