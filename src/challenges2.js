@@ -35,7 +35,6 @@ function generatePhoneNumber(numbers) {
     return 'não é possível gerar um número de telefone com esses valores'
   }
 }
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 9, 9]))
 
 function verificationOfPhoneNumber(numbers) {
   for (let i = 0; i < numbers.length; i += 1) {
@@ -63,8 +62,13 @@ function verificationOfNumberRepetition(numbers) {
 }
 
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
+  let boolean
+  if(Math.abs(lineA - lineC) < lineA && lineA < lineB + lineC) boolean = true
+  else boolean = false
+
+  return boolean
 }
 
 // Desafio 13
