@@ -26,10 +26,10 @@ function splitSentence(string) {
   // seu código aqui
   var space = ' ';
   var arrayOfStrings = string.split(space);
-  //console.log(arrayOfStrings); [DEBUG]
-  return arrayOfStrings;
+  console.log(arrayOfStrings);// [DEBUG]
+  //return arrayOfStrings;
 }
-//splitSentence("O Rato Roeu a Roupa do Rei de Roma"); [DEBUG]
+ // splitSentence("O Rato Roeu a Roupa do Rei de Roma"); // [DEBUG]
 
 // Desafio 4
 function concatName(name) {
