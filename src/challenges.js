@@ -1,21 +1,31 @@
 // Desafio 1
 function compareTrue(param1, param2) {
-  if (param1 === true && param2 === true){
+  if (param1 === true && param2 === true) {
     return true;
   }
-  else if (param1 === false && param2 === true){
-    return false; 
-  } 
-  else {
-    return false;
+    else if (param1 === false && param2 === true) {
+      return false; 
+  }
+    else {
+      return false;
   }
 }
 console.log(compareTrue(true, true))
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  let result = 0;
+  if (height < 2){
+    height = 0
+    result = base /2;
+  return result;
+  }
+  else {
+    result = (base * height) /2;
+    return result;
+  }
 }
+console.log(calcArea(51, 1))
 
 // Desafio 3
 function splitSentence() {
