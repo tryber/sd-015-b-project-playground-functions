@@ -39,9 +39,9 @@ function concatName(string) {
   let resultado = string;
   let pos1 = resultado[0];
   let pos2 = resultado.pop();
-  return (pos1 + "," + pos2);
+  return ("'" + pos1 + "," + pos2 + "'");
 }
-console.log(concatName(['lucas','cassiano','ferraz','paolillo']))
+console.log(concatName(['captain', 'my', 'captain']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -87,7 +87,7 @@ function catAndMouse(cat1, cat2) {
     return cat2MaisPerto;
   }
 }
-console.log(catAndMouse(6, 12))
+console.log(catAndMouse(6, 12));
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
