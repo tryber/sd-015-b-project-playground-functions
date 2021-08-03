@@ -54,9 +54,26 @@ console.log(footballPoints(1, 2));
 console.log(footballPoints(0, 0));
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+// 6 - Crie uma função que calcule a repetição do maior número
+function highestCount(arrayNumeros) {
+  let numeroMaior = -2;
+  let numeroDeRepeticoes = 0;
+  for (let i in arrayNumeros) {
+    if (numeroMaior < arrayNumeros[i]) {
+      numeroMaior = arrayNumeros[i];
+    }
+  }
+  for (let i2 in arrayNumeros) {
+    if (numeroMaior === arrayNumeros[i2]) {
+      numeroDeRepeticoes += 1;
+    }
+  }
+  return numeroDeRepeticoes;
 }
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
+console.log(highestCount([0, 4, 4, 4, 9, 2, 1]));
+console.log(highestCount([-2, -2, -1]));
+console.log(highestCount([0, 0, 0]));
 
 // Desafio 7
 function catAndMouse() {
