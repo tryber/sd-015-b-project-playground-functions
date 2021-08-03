@@ -68,13 +68,13 @@ function catAndMouse() {
 // Desafio 8
 function fizzBuzz(array) {
 
-  for (let index = 1; index <= 5; index += 1) {
-    if (index % 3 === 0 && index % 5 === 0) {
-     return  array.push('FizzBuzz');
-    } else if (index % 3 === 0) {
-      return array.push('Fizz');
-    } else if (index % 5 === 0) {
-      return array.push('Buzz');
+  for (let index = 1; index <= array.length; index += 1) {
+    if (array[i] % 3 === 0 && array[i] % 5 === 0) {
+     return  'FizzBuzz';
+    } else if (array[i] % 3 === 0) {
+      return 'Fizz';
+    } else if (array[i] % 5 === 0) {
+      return 'Buzz';
     }
   }
   
