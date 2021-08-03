@@ -104,13 +104,74 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+
+// eslint-disable-next-line complexity
+function selectLetterToEncode(letterIndex, string) {
+  switch (string[letterIndex]) {
+    case 'a':
+      return '1';
+    case 'e':
+      return '2';
+    case 'i':
+      return '3';
+    case 'o':
+      return '4';
+    case 'u':
+      return '5';
+    default:
+      return string[letterIndex];
+  }
 }
 
-function decode() {
-  // seu código aqui
+// eslint-disable-next-line complexity
+function selectLetterToDecode(letterIndex, string) {
+  switch (string[letterIndex]) {
+    case '1':
+      return 'a';
+    case '2':
+      return 'e';
+    case '3':
+      return 'i';
+    case '4':
+      return 'o';
+    case '5':
+      return 'u';
+    default:
+      return string[letterIndex];
+  }
 }
+
+function arrayToString(array) {
+  let string = '';
+  for (const iterator of array) {
+    string += `${iterator}`;
+  }
+  return string;
+}
+
+function encode(string) {
+  string = Array.from(string);
+  for (const letterIndex in string) {
+    if (letterIndex >= 0) {
+      string[letterIndex] = selectLetterToEncode(letterIndex, string);
+    }
+  }
+  return arrayToString(string);
+}
+
+function decode(string) {
+  string = Array.from(string);
+  for (const letterIndex in string) {
+    if (letterIndex >= 0) {
+      string[letterIndex] = selectLetterToDecode(letterIndex, string);
+    }
+  }
+
+  return arrayToString(string);
+}
+
+encode('hello');
+decode('h2ll4');
 
 module.exports = {
   calcArea,
