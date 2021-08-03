@@ -19,7 +19,6 @@ function compareTrue(a, b) {
   //codigo da Danielen Cestari
 }
 
-
 // Desafio 2
 function calcArea(base, height) {
   let area = (base * height) / 2;
@@ -35,9 +34,20 @@ function splitSentence(sentenca) {
 
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(nomes) {
+  let valor1 = nomes[nomes.length - 1];
+  let valor2 = nomes[0];
+  let valorFinal = [valor1, valor2];
+  return valorFinal.join(', ');
+  //feito com o auxilio do codigo do Valdênio que esta no slack.
 }
+
+
+
+
+
+
+
 
 // Desafio 5
 function footballPoints() {
