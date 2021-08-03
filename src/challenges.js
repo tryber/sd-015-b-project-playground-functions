@@ -18,10 +18,10 @@ function splitSentence() {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  let newArray = array[array.length -1] + ', ' + array[0]
+  return newArray
 }
-
 // Desafio 5
 function footballPoints() {
   // seu código aqui
