@@ -23,12 +23,11 @@ return stringDividida;
 function concatName(array) {
   let primeiroValor = array[0]
   let ultimoValor = array[array.length-1]
-  let stringConcatenada = primeiroValor + ", " + ultimoValor;
+  let stringConcatenada = ultimoValor + ", " + primeiroValor;
 
   return stringConcatenada;
 }
-let array=['arthur','luiz','viegas']
-console.log(concatName(array));
+
 // Desafio 5
 function footballPoints() {
   // seu código aqui
