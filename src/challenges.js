@@ -30,23 +30,45 @@ function splitSentence(phrase) {
 function concatName(array) {
   let myArray = array;
   let invertedArray = myArray.reverse();
-  let result = invertedArray[0 , invertedArray.length-1]
+  let result1 = invertedArray[0];
+  let result2 = invertedArray[invertedArray.length-1];
+  let result = result1 +', '+ result2;
 
   return result;
 } 
 let nomes = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']
 
-console.log(concatName(nomes))
+// console.log(concatName(nomes))
 
 // Desafio 5
-function footballPoints() {
-
+function footballPoints(wins, ties) {
+  let victories = 3 * wins;
+  let draws = 1 * ties
+  let points = victories + draws;
+  return points;
 }
+// console.log(footballPoints(1, 2) , 'pontos')
 
 // Desafio 6
-function highestCount() {
 
+//a função verifica quantas vezes que o  maior numro do array se repete. 
+//portanto preciso: 1- verificar qual o maior numero do array
+//                  2- contar quantas vezes o numero se repete    tipo if (numero[i] === maior numero[i]) { contador += 1}
+// retornarei SOMENTE  quantas vezes ele se repete 
+function highestCount(numbersArray) {
+  let ordenedArray = numbersArray.sort(function(a, b){return b - a;});
+  let higherNumber = ordenedArray[0];
+  let quantasVezesSeRepete = 0;
+
+  for(let index = 0; index < ordenedArray.length; index += 1) {
+    if (ordenedArray[index] == higherNumber) {
+       quantasVezesSeRepete += 1;
+    }
 }
+      return quantasVezesSeRepete;
+}
+let numberisArray = [9, 1, 2, 3, 9, 5, 7];
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
 
 // Desafio 7
 function catAndMouse() {
@@ -54,9 +76,21 @@ function catAndMouse() {
 }
 
 // Desafio 8
-function fizzBuzz() {
-
+function fizzBuzz(numeros) {
+  let myArray = [] ; 
+  for (let i = 0; i < numeros.length; i += 1){
+    if(numeros % 3 === 0 && numeros[i] % 5 === 0){
+     myArray.push("fizzBuzz")
+    }else if (numeros[i] % 5 === 0){
+     myArray.push("buzz")
+    } else if ( numeros % 3 === 0 ){
+     myArray.push("fizz")
+    } else { myArray.push("bug!")}
+  }
+  return myArray
 }
+let theArray = [45, 15, 7, 9, 45]
+// console.log(fizzBuzz(theArray))
 
 // Desafio 9
 function encode() {
@@ -77,4 +111,4 @@ module.exports = {
   footballPoints,
   highestCount,
   splitSentence,
-};
+} ;
