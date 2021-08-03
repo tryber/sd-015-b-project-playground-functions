@@ -30,11 +30,11 @@ function splitSentence(phrase) {
 // Desafio 4
 function concatName(names) {
 
-  let firstName = [names[0]]
+  let firstName = names[0]
 
-  let lastName = names[names.length - 1]
+  let lastName = [names[names.length - 1]]
 
-  let firstAndLastName = firstName.concat(lastName)
+  let firstAndLastName = lastName.concat(firstName)
 
   return firstAndLastName;
 }
@@ -83,11 +83,11 @@ function highestCount(numbers) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
 
-  if ((cat1 - mouse) > (cat2 - mouse)) {
+  if (Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)) {
     return 'cat2';
   }
 
-  else if ((cat1 - mouse) < (cat2 - mouse)) {
+  else if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
     return 'cat1';
   }
 
