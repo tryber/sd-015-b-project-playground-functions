@@ -29,7 +29,7 @@ function concatName(array) {
   let first = array[0];
   let last = array[array.length-1];
   let arr = [last, first];
-  return arr.join();
+  return arr.join(', ');
 }
 concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']);
 
@@ -75,6 +75,12 @@ function catAndMouse(mouse,cat1,cat2) {
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
+  let arr =  [2, 15, 7, 9, 45];
+  for(let i = 0; i < arr.length; i+=1){
+    if(arr[i] % 3 == 0){
+      console.log("fizz")
+    }
+  }
 }
 
 // Desafio 9
