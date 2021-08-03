@@ -3,12 +3,15 @@ function compareTrue(bool1, bool2) {
   return bool1 && bool2;
 }
 
-console.log(compareTrue(false, true));
+compareTrue(false, true);
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  let area = (base * height) / 2;
+  return area;
 }
+
+calcArea(51, 1);
 
 // Desafio 3
 function splitSentence() {
