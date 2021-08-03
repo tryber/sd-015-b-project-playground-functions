@@ -39,25 +39,28 @@ function highestCount(number) {
     }
   }
   return contador;
-};
+}
 
 // Desafio 7
-function catAndMouse(mouse, cat1, cat2) {
-
+function catAndMouse(mouse, cat1, cat2) {}
 
 // Desafio 8
 function fizzBuzz(arrayNumeros) {
-  if (arrayNumeros % 3 === 0) {
-    console.log ('fizz');
-  } else if (arrayNumeros % 5 === 0) {
-    console.log ('buzz');
-  } else if (arrayNumeros % 5 === 0 & arrayNumeros % 3 === 0){
-    return "fizzbuzz"
-  } else {
-return "bug!", "fizzBuzz", "bug!", "fizz", "fizzBuzz"
-  }
-}
+  let novaArray = [];
 
+  for (num of arrayNumeros) {
+    if (num % 3 === 0 && num % 5 !== 0) {
+      novaArray.push('fizz');
+    } else if (num % 5 === 0 && num % 3 !== 0) {
+      novaArray.push('buzz');
+    } else if (num % 5 === 0 && num % 3 === 0) {
+      novaArray.push('fizzBuzz');
+    } else {
+      novaArray.push('bug!');
+    }
+  }
+  return novaArray;
+}
 
 // Desafio 9
 function encode() {
