@@ -1,12 +1,22 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui.
+// função deve receber 2 valores bolleanos
+// retorna true se ambos forem verdadeiros
+// retorna false se um dos 2 forem falsos
+// // retorna false se os 2 forem falsos
+function compareTrue(cor1,cor2) {
+  if (cor1 === true && cor2 === true) {
+  return true;
+} else {
+  return false;
+}
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
-}
+function calcArea(base, height) {
+  let result = (base * height) / 2;
+  
+  return result
+  }
 
 // Desafio 3
 function splitSentence() {
