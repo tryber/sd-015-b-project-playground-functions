@@ -1,11 +1,11 @@
 // Desafio 1
 function compareTrue(a, b) {
-  if (a + b === b + a && a * b === b * a) {
-    console.log(true);
+  if (a && b) {
+    return true;
   } else {
-    console.log(false);
+    return false;
   }
-} compareTrue(1, 2);
+} compareTrue(1, 1);
 
 // Desafio 2
 function calcArea(base, height) {
