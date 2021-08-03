@@ -44,7 +44,6 @@ function highestCount(numeros) {
     return count;
   }
 }
-console.log(highestCount([-9, -4, -4, -4, -9, -12, -14]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -53,15 +52,12 @@ function catAndMouse(mouse, cat1, cat2) {
     return stringCats;
   }
   if (cat1 > cat2 && cat1 > mouse) {
-    let catN2 = 'cat2';
-    return catN2;
+    return 'catN2';
   }
   if (cat2 > cat1 && cat2 > mouse) {
-    let catN1 = 'cat1';
-    return catN1;
+    return 'catN1';
   }
 }
-console.log(catAndMouse(1, 4, 3));
 
 // Desafio 8
 function fizzBuzz() {
