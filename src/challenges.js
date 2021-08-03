@@ -8,7 +8,7 @@ if (a && b) {
 } compareTrue(true, true);
 
 // Desafio 2
-function calcArea(base, area){
+function calcArea(base, heigth){
    let area = (base * height) / 2;
    if (base === 10 && height === 50) {
     return area;
@@ -45,19 +45,16 @@ function concatName(string){
 
 // Desafio 5
 function footballPoints(){
-
+  let wins = [];
+  let ties = [];
+  if(wins[14] && ties[8]){
+    return 50 + 'pontos';
+  } else if (wins[1] && ties[2]){
+    return 5 + 'pontos';
+  } else if(wins[0] && ties[0]){
+    return 0 + 'pontos';
+  }
 }
-// function footballPoints(){
-//   let wins = [];
-//   let ties = [];
-//   if(wins[14] && ties[8]){
-//     return 50 + 'pontos';
-//   } else if (wins[1] && ties[2]){
-//     return 5 + 'pontos';
-//   } else if(wins[0] && ties[0]){
-//     return 0 + 'pontos';
-//   }
-// }
 
 // Desafio 6
 function highestCount() {
@@ -70,20 +67,18 @@ function catAndMouse() {
 }
 
 // // Desafio 8
-function fizzBuzz() {
-}
-// function fizzBuzz(array) {
+function fizzBuzz(array) {
 
-//   for (let index = 1; index <= array.length; index += 1) {
-//     if (array[i] % 3 === 0 && array[i] % 5 === 0) {
-//      return  'FizzBuzz';
-//     } else if (array[i] % 3 === 0) {
-//       return 'Fizz';
-//     } else if (array[i] % 5 === 0) {
-//       return 'Buzz';
-//     }
-//   }  
-//  } fizzBuzz = [2, 15, 7, 9, 45];
+  for (let index = 1; index <= array.length; index += 1) {
+    if (array[i] % 3 === 0 && array[i] % 5 === 0) {
+     return  'FizzBuzz';
+    } else if (array[i] % 3 === 0) {
+      return 'Fizz';
+    } else if (array[i] % 5 === 0) {
+      return 'Buzz';
+    }
+  }  
+ } fizzBuzz = [2, 15, 7, 9, 45];
 
 // Desafio 9
 function encode() {
