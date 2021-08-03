@@ -40,23 +40,20 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(array) {
-  let numeroAtual = array[0];
-  let numeroVezes = 0;
-  let numeroVezesMaisRepetido = 0;
-  for (let mudancaDeNum = 0; mudancaDeNum < array.length; mudancaDeNum += 1) {
-    numeroAtual = array[mudancaDeNum];
-    for (let comparacao = 0; comparacao < array.length; comparacao += 1) {
-      if (numeroAtual === array[comparacao]) {
-        numeroVezes += 1;
-        if (numeroVezes > numeroVezesMaisRepetido) {
-          numeroVezesMaisRepetido = numeroVezes;
-        }
-      }
+  let maiorNumero = array[0];
+  let vezesMaiorNumero = 0;
+  for (let index = 0; index < array.length; index += 1) {
+    if (array[index] > maiorNumero) {
+      maiorNumero = array[index];
     }
-    numeroVezes = 0;
   }
-  return numeroVezesMaisRepetido;
-}console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
+  for (let contador = 0; contador < array.length; contador += 1) {
+    if (maiorNumero === array[contador]) {
+      vezesMaiorNumero += 1;
+    }
+  }
+  return vezesMaiorNumero;
+}
 
 // Desafio 7
 function catAndMouse() {
