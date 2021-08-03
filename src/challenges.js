@@ -21,8 +21,15 @@ function calcArea(base, heigth) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(array) {
+  let arraySeparada = [];
+
+  // Usa método nativo split, conforme pode ser verificado em
+  // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split
+
+  arraySeparada = array.split(' ');
+
+  return arraySeparada;
 }
 
 // Desafio 4
