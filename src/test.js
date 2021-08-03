@@ -1,18 +1,6 @@
 function splitSentence(phrase) {
-  let array = [];
-  for (palavras of phrase) {
-    array.push('oi');
-  }
-
-  console.log(array);
+  console.log(phrase.split(' '));
+  return phrase.split(' ');
 }
 
-splitSentence('Da certo moss pfv');
-
-let array = [];
-for (palavras of phrase) {
-  array.push(phrase[palavras]);
-  console.log(array);
-}
-
-return (base * height) / 2;
+splitSentence('Vish moss deu bom?');
