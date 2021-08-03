@@ -1,11 +1,10 @@
 // Desafio 1
 function compareTrue(a, b) {
-if (a && b) {
- return true;
-} else {
- return false;
-}
-} compareTrue(true, true);
+  if (a == true && b == true) {
+   return true;
+  } else {
+   return false;
+  } 
 
 // Desafio 2
 function calcArea(base, heigth){
@@ -30,7 +29,7 @@ function splitSentence(str) {
     default:
     return 'foguete';
     }
-      splitSentence('foguete');
+    } splitSentence('foguete');
 
 // Desafio 4
 function concatName(string){ 
