@@ -76,6 +76,7 @@ console.log(highestCount([-2, -2, -1]));
 console.log(highestCount([0, 0, 0]));
 
 // Desafio 7
+// 7 - Crie uma função de Caça ao Rato
 function catAndMouse(mouse, cat1, cat2) {
   let distCat1 = cat1 - mouse;
   let distCat2 = cat2 - mouse;
@@ -98,6 +99,7 @@ console.log(catAndMouse(0, 5, 5));
 console.log(catAndMouse(1, 0, 2));
 
 // Desafio 8
+// 8 - Crie uma função FizzBuzz
 function fizzBuzz(listaNumeros) {
   let listaFizzBuzz = [];
   for (let index = 0; index < listaNumeros.length; index += 1) {
@@ -118,12 +120,45 @@ console.log(fizzBuzz([7, 9]));
 console.log(fizzBuzz([9, 25]));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+// 9 - Crie uma função que Codifique e Decodifique
+function encode(frase1) {
+  let listaFrase1 = frase1.split('');
+  for (let i in listaFrase1) {
+    if (listaFrase1[i] === 'a') {
+      listaFrase1[i] = '1';
+    } else if (listaFrase1[i] === 'e') {
+      listaFrase1[i] = '2';
+    } else if (listaFrase1[i] === 'i') {
+      listaFrase1[i] = '3';
+    } else if (listaFrase1[i] === 'o') {
+      listaFrase1[i] = '4';
+    } else if (listaFrase1[i] === 'u') {
+      listaFrase1[i] = '5';
+    }
+  }
+  return listaFrase1.join('');
 }
-function decode() {
-  // seu código aqui
+console.log(encode('hi there!'));
+
+function decode(frase1) {
+  let listaFrase1 = frase1.split('');
+  for (let i in listaFrase1) {
+    if (listaFrase1[i] === '1') {
+      listaFrase1[i] = 'a';
+    } else if (listaFrase1[i] === '2') {
+      listaFrase1[i] = 'e';
+    } else if (listaFrase1[i] === '3') {
+      listaFrase1[i] = 'i';
+    } else if (listaFrase1[i] === '4') {
+      listaFrase1[i] = 'o';
+    } else if (listaFrase1[i] === '5') {
+      listaFrase1[i] = 'u';
+    }
+  }
+  return listaFrase1.join('');
 }
+
+console.log(decode('h3 th2r2!'));
 
 module.exports = {
   calcArea,
