@@ -86,7 +86,7 @@ function fizzBuzz(numbersArray) {
 }
 
 
-// Desafio 9
+// Desafio 9 - CHECK
 function encode(phrase) {
   // seu código aqui
   let encodedPhrase = '';
