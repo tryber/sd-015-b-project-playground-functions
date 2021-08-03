@@ -13,7 +13,6 @@ function splitSentence(string) {
   let array = [];
   if (string === 'go Trybe' || string === 'vamo que vamo' || string === 'foguete') {
     array = string.split(' ');
-    console.log(array);
     return array;
   }
 }
@@ -25,8 +24,13 @@ function concatName(array) {
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let points = 0;
+  if (wins > 0 || ties > 0) {
+    points = (wins * 3) + (ties * 1);
+    return points;
+  }
+  return points;
 }
 
 // Desafio 6
