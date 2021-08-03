@@ -46,13 +46,23 @@ function highestCount(numberList) {
     if (numberList[index] === highestNumber) {
       sum += 1;
     }
-  } return sum;
-
+  }
+  return sum;
 }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
+  let distance1 = Math.abs(cat1 - mouse);
+  let distance2 = Math.abs(cat2 - mouse);
+  
+  if (distance1 > distance2) {
+    return "cat2";
+  }else if (distance2 > distance1) {
+    return "cat1";
+  }else {
+    return "os gatos trombam e o rato foge";
+  }
 }
 
 // Desafio 8
