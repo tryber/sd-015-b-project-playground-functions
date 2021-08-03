@@ -19,13 +19,18 @@ function calcArea(param1, param2) {
 // Desafio 3
 function splitSentence(str) {
   let strSeparated = str.split(' ')
-  
+
   return strSeparated
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arr) {
+  let names = []
+    
+  names.push(arr[arr.length - 1])
+  names.push(arr[0])
+
+  return names.join(', ')
 }
 
 // Desafio 5
