@@ -99,34 +99,34 @@ function encode(frase) {
   }return fraseCodificada.join("")
 }
 function decode(frase) {
-let fraseCodificada = [];
-for (let index = 0; index < frase.length; index +=1) {
-    switch (frase[index]) {
-        case "1":
-            fraseCodificada[index] = "a";
-            break;
-
-        case "2":
-            fraseCodificada[index] = "e";
-            break;
-        
-        case "3":
-            fraseCodificada[index] = "i";
-            break;
-
-        case "4":
-            fraseCodificada[index] = "o";
-            break;
-
-        case "5":
-            fraseCodificada[index] = "u";
-            break;
-
-        default:
-          fraseCodificada[index] = frase [index]
-            break;
-    }
-  }return fraseCodificada.join("")
+  let fraseCodificada = [];
+  for (let index = 0; index < frase.length; index +=1) {
+      switch (frase[index]) {
+          case "1":
+              fraseCodificada[index] = "a";
+              break;
+  
+          case "2":
+              fraseCodificada[index] = "e";
+              break;
+          
+          case "3":
+              fraseCodificada[index] = "i";
+              break;
+  
+          case "4":
+              fraseCodificada[index] = "o";
+              break;
+  
+          case "5":
+              fraseCodificada[index] = "u";
+              break;
+  
+          default:
+            fraseCodificada[index] = frase [index]
+              break;
+      }
+    }return fraseCodificada.join("")
 }
 
 module.exports = {
