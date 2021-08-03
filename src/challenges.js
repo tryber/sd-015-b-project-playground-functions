@@ -1,7 +1,6 @@
 // Desafio 1
-function compareTrue() {
-  let comparar = (a,b) 
-  if (a = true) && (b = true)
+function compareTrue(a,b) {
+  if (a === true) && (b === true)
   return true; 
 } else {
   return false;
@@ -9,9 +8,8 @@ function compareTrue() {
 
 // Desafio 2
 function calcArea(a,b) {
-  let base = a
-  let height = b
-  area = (a*b)/2
+  
+  area = (base*hei)/2
   return console.log(area)
 }
 
