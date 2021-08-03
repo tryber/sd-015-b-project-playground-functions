@@ -43,24 +43,19 @@ return totalPoints;
 
 // Desafio 6
 function highestCount(array) {
-  let maiorValor = 0;
   let contador = 0;
-  
-  for (let i = 0; i < array.length  ; i+=1){
-    if(array[i] > maiorValor){
-      maiorValor = array[i];
-    }
-  }
+  let maiorValor = array.reduce(function(a, b) {
+    return Math.max(a, b);
+  });
 
   for (let j = 0; j < array.length  ; j+=1){
       if(array[j] === maiorValor){
         contador += 1;
       }
   }
-
- return contador;
+return contador
 }
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
+
 
 // Desafio 7
 function catAndMouse() {
