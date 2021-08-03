@@ -31,10 +31,13 @@ function highestCount(arr) {
   let save = 0;
   let count = 0;
   for (let num of arr) {
-    if (num > save) save = num;
+    if (num > save) {
+      save = num;
+      count = 0;
+    }
+    if (num === save) count++;
   }
   for (let num of arr) {
-    if (num === save) count++;
   }
 
   return count;
