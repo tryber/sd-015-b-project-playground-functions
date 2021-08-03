@@ -43,13 +43,10 @@ function highestCount(lista) {
     if (maior < lista[i]) {
       maior = lista[i];
     }
-    else {
-      maior = maior;
-    }
   }
   for (i = 0; i <= lista.length + 1; i ++){
     if (maior == lista[i]) {
-      repete ++;
+    repete ++
     }
   }
   return repete;
@@ -73,23 +70,8 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz(lista) {
+function fizzBuzz() {
   // seu código aqui
-  for (i = 0; i <= lista.length + 1; i ++) {
-    if (((lista / 3) == 0) && ((lista / 5) !== 0)) {
-      lista[i] = "fizz";
-    }
-    else if (((lista / 3) !== 0) && ((lista / 5) == 0)) {
-      lista[i] = "buzz";
-    }
-    else if (((lista / 3) == 0) && ((lista / 5) == 0)) {
-      lsita[i] = "fizzBuzz";
-    }
-    else if (((lista / 3) !== 0) && ((lista / 5) !== 0)) {
-      lista[i] = "bug!";
-    }
-  }
-  return lista;
 }
 
 // Desafio 9
