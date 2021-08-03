@@ -72,8 +72,28 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function checkDivisibleBy3or5(number, array) {
+  if (number % 3 === 0) {
+    array.push('fizz');
+  }
+  if (number % 5 === 0) {
+    array.push('buzz');
+  }
+  if (number % 3 !== 0 && number % 5 !== 0) {
+    array.push('bug!');
+  }
+}
+
+function fizzBuzz(array) {
+  let newArray = [];
+  for (let number of array) {
+    if (number % 3 === 0 && number % 5 === 0) {
+      newArray.push('fizzBuzz');
+    } else {
+      checkDivisibleBy3or5(number, newArray);
+    }
+  }
+  return newArray;
 }
 
 // Desafio 9
