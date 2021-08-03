@@ -2,25 +2,22 @@
 function compareTrue(param1, param2) {
   if (param1 === true && param2 === true) {
     return true;
-  }
-    else if (param1 === false && param2 === true) {
-      return false; 
-  }
-    else {
-      return false;
+  } else if (param1 === false && param2 === true) {
+    return false;
+  } else {
+    return false;
   }
 }
 
 // Desafio 2
 function calcArea(base, height) {
   let result = 0;
-  if (height < 2){
-    height = 0
-    result = base /2;
-  return result;
-  }
-  else {
-    result = (base * height) /2;
+  if (height < 2) {
+    height = 0;
+    result = base / 2;
+    return result;
+  } else {
+    result = (base * height) / 2;
     return result;
   }
 }
@@ -34,9 +31,9 @@ function splitSentence(sentence) {
 // Desafio 4
 function concatName(string) {
   let resultado = string;
-  let pos1 = resultado[0];
-  let pos2 = resultado.pop();
-  return ("'" + pos1 + "," + pos2 + "'");
+  let pos1 = resultado.pop();
+  let pos2 = resultado[0];
+  return pos1 + ', ' + pos2;
 }
 
 // Desafio 5
@@ -52,15 +49,15 @@ function footballPoints(wins, ties) {
 function highestCount(maior) {
   let nMaior = maior[0];
   //Este trecho, peguei inspiração em alguns exercícios realizados anteriormente.
-  for (let index = 1; index < maior.length; index += 1){
-    if (maior[index] > nMaior){
+  for (let index = 1; index < maior.length; index += 1) {
+    if (maior[index] > nMaior) {
       nMaior = maior[index];
     }
   }
   let quantidadeNMaior = 0;
-  for (let index = 0; index < maior.length; index += 1){
-    if (nMaior === maior[index]){
-      quantidadeNMaior++
+  for (let index = 0; index < maior.length; index += 1) {
+    if (nMaior === maior[index]) {
+      quantidadeNMaior++;
     }
   }
   return quantidadeNMaior;
@@ -69,35 +66,28 @@ function highestCount(maior) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let distanceCat1 = Math.abs(mouse - cat1);
-  let distanciaCat2 = Math.abs(mouse - cat2)
-  if (distanceCat1 === distanciaCat2){
-    return 'Os gatos trombam e o rato foge';
+  let distanciaCat2 = Math.abs(mouse - cat2);
+  if (distanceCat1 === distanciaCat2) {
+    return 'os gatos trombam e o rato foge';
+  } else if (distanciaCat2 > distanceCat1) {
+    return 'cat1';
+  } else {
+    return 'cat2';
   }
-  else if (distanciaCat2 > distanceCat1){
-    let cat1MaisPerto = 'cat2';
-    return cat1MaisPerto;
-  }
-  else if(distanceCat1 > distanciaCat2){
-    let cat2MaisPerto = 'cat1';
-    return cat2MaisPerto;
-  }
-};
+}
 console.log(catAndMouse(10, 7, 8));
 
 // Desafio 8
 function fizzBuzz(array) {
   let string = [];
-  for (let key in array){
-    if((array[key] % 3) === 0 && (array[key] % 5) === 0){
+  for (let key in array) {
+    if (array[key] % 3 === 0 && array[key] % 5 === 0) {
       string.push('fizzBuzz');
-    }
-    else if ((array[key] % 3) === 0){
+    } else if (array[key] % 3 === 0) {
       string.push('fizz');
-    }
-    else if ((array[key] % 5) === 0){
+    } else if (array[key] % 5 === 0) {
       string.push('buzz');
-    }
-    else {
+    } else {
       string.push('bug!');
     }
   }
