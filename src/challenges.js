@@ -29,14 +29,39 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numeros) {
+  for (let index of numeros) {
+    let store = 0;
+    let count = 0;
+    if (index > store) {
+      store = index;
+    }
+    for (let index2 of numeros) {
+      if (index2 === store) {
+        count += 1;
+      }
+    }
+    return count;
+  }
 }
+console.log(highestCount([-9, -4, -4, -4, -9, -12, -14]));
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  if (cat1 === cat2) {
+    let stringCats = 'os gatos trombam e o rato foge';
+    return stringCats;
+  }
+  if (cat1 > cat2 && cat1 > mouse) {
+    let catN2 = 'cat2';
+    return catN2;
+  }
+  if (cat2 > cat1 && cat2 > mouse) {
+    let catN1 = 'cat1';
+    return catN1;
+  }
 }
+console.log(catAndMouse(1, 4, 3));
 
 // Desafio 8
 function fizzBuzz() {
