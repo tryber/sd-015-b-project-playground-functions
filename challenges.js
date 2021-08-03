@@ -1,9 +1,5 @@
 function compareTrue(param1, param2) {
-    if (param1 == true && param2 == true) {
-        return true;
-    } else {
-        return false;
-    }
+    return param1 && param2;
 }
 
 function calcArea(base, height) {
@@ -14,4 +10,8 @@ function splitSentence(string) {
     return string.split(" ");
 }
 
-console.log(splitSentence("foguete"));
+function concatName(array) {
+    return array[array.length - 1] + ", " + array[0];
+}
+
+console.log(compareTrue(false, false));
