@@ -1,17 +1,17 @@
 // Desafio 1
-function compareTrue(x,y) {
+function compareTrue(x, y) {
   // seu código aqui
-  if(x === true && y ===true){
+  if (x === true && y === true) {
     return true;
-  }else{
+  } else {
     return false;
   }
 }
 
 // Desafio 2
-function calcArea(base,height) {
+function calcArea(base, height) {
   // seu código aqui
-  return (base*height)/2;
+  return (base * height) / 2;
 }
 
 // Desafio 3
@@ -19,12 +19,14 @@ function splitSentence(stringStart) {
   // seu código aqui
   let resultado = stringStart.split(" ");
   return resultado;
-  
+
 }
 
 // Desafio 4
-function concatName() {
+function concatName(phrase) {
   // seu código aqui
+  return phrase[phrase.length - 1] + ", " + phrase[0];
+
 }
 
 // Desafio 5
