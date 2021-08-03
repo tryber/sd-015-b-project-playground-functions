@@ -22,7 +22,7 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence(string, space) {
+function splitSentence(string) {
   // seu código aqui
   var space = ' ';
   var arrayOfStrings = string.split(space);
@@ -32,8 +32,9 @@ function splitSentence(string, space) {
 //splitSentence("O Rato Roeu a Roupa do Rei de Roma"); [DEBUG]
 
 // Desafio 4
-function concatName() {
+function concatName(name) {
   // seu código aqui
+  return name.concat();
 }
 
 // Desafio 5
