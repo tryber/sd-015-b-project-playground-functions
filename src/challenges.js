@@ -2,7 +2,10 @@
 function compareTrue(entrada1, entrada2) {
   // seu código aqui
   let comparativo = 'true';
-  return (entrada1 === comparativo && entrada2 === comparativo);
+  if (entrada1 === comparativo && entrada2 === comparativo) {
+    return true;
+  }
+  return false;
 }
 console.log(compareTrue('false', 'true'));
 console.log(compareTrue('false', 'false'));
@@ -43,19 +46,38 @@ console.log(concatName(['captain', 'my', 'captain']));
 // Desafio 5
 function footballPoints(wins, ties) {
   // seu código aqui
-let vitoria = 3;
-let empate = 1;
-let soma = (wins * vitoria) + (ties * empate);
-return soma;
+  let vitoria = 3;
+  let empate = 1;
+  let soma = (wins * vitoria) + (ties * empate);
+  return soma;
 }
 console.log(footballPoints(14, 8));
 console.log(footballPoints(1, 2));
 console.log(footballPoints(0, 0));
 
 // Desafio 6
-function highestCount() {
+function highestCount(numeros) {
   // seu código aqui
+  let numeroMaior = 0;
+  let contador = 0;
+  let verificaMaiorNumero = 0;
+  let contNumeroMaior = 0;
+  for (let index in numeros) {
+    if (numeros[numeroMaior] < numeros[index]) {
+      numeroMaior = index;
+    }
+    verificaMaiorNumero = numeros[numeroMaior];
+  }
+  for (contador in numeros) {
+    if (verificaMaiorNumero === numeros[contador]){
+      contNumeroMaior += 1;
+    }
+  }
+  return contNumeroMaior;
 }
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
+console.log(highestCount([0, 4, 4, 4, 9, 2, 1]));
+console.log(highestCount([0, 0, 0]));
 
 // Desafio 7
 function catAndMouse() {
