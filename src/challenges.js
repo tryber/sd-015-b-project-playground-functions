@@ -137,15 +137,21 @@ function decode(string)
   {
     if (string[index] == 1)
     {
-      newString = newString + 'a';
-    }
-    else if (string[index] == 2)
-    {
-      newString = newString + 'e';
-    }
-    else if (string[index] == 3)
-    {
-      newString = newString + 'i';
+      newString = newString + 'a';// Desafio 11
+      function generatePhoneNumber(numeroDeTelefone) {
+        // seu código aqui
+        let cont = 0;
+      if(numeroDeTelefone.length !== 11){
+        return "Array com tamanho incorreto."
+      }
+      for(let index = 0; index < numeroDeTelefone.length; index += 1){
+        if(numeroDeTelefone[index] < 0 | numeroDeTelefone[index] > 9){
+          return "não é possível gerar um número de telefone com esses valores"
+        }
+      }
+      return "(" + numeroDeTelefone[0] + numeroDeTelefone[1] + ") " + numeroDeTelefone[2] + numeroDeTelefone[3] + numeroDeTelefone[4] + numeroDeTelefone[5] + numeroDeTelefone[6] + "-"  + numeroDeTelefone[7] + numeroDeTelefone[8] + numeroDeTelefone[9] + numeroDeTelefone[10];
+      }
+      
     }
     else if (string[index] == 4)
     {
@@ -178,4 +184,4 @@ module.exports = {
   footballPoints,
   highestCount,
   splitSentence,
-}
+};
