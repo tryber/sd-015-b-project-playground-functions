@@ -18,8 +18,9 @@ function splitSentence(frase) {
 }
 
 // Desafio 4
-function concatName(frase) {
-  return frase.join("")
+function concatName(vetorPalavras) {
+
+  return vetorPalavras[vetorPalavras.length -1] + ", " + vetorPalavras[0]
 }
 
 // Desafio 5
