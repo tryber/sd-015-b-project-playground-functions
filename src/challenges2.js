@@ -1,17 +1,15 @@
 // Desafio 10
 function techList(tech, name) {
-  let object = {};
-  let saida = [];
+  let object = [];
+  let techOrder = tech.sort();
 
   if (tech.length === 0) {
     return 'Vazio!';
   }
   for (let index = 0; index < tech.length; index += 1) {
-    object.tech = tech[index];
-    object.name = name;
-    saida.push(object);
+    object[index] = { tech: techOrder[index], name };
   }
-  return saida;
+  return object;
 }
 
 // Desafio 11
@@ -20,7 +18,7 @@ function generatePhoneNumber(array) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
   for (let index = 0; index < 11; index += 1) {
-    if (array[index] > 0 || array[index]) {
+    if (array[index] < 0 || array[index] > 10) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
   }
