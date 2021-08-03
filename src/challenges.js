@@ -86,10 +86,21 @@ let trombam = 'os gatos trombam e o rato foge'
 
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+resultado = []
+for (index = 0; index < array.length; index+=1){
+  if (array[index] % 3 === 0 && array[index] % 5 === 0){
+    resultado.push("fizzBuzz");
+} else if (array[index] % 5 === 0){
+  resultado.push("buzz");
+} else if(array[index] % 3 === 0) {
+  resultado.push("fizz");
+} else {
+  resultado.push("bug!");
 }
-
+}
+return resultado;
+}
 // Desafio 9
 function encode() {
   // seu código aqui
