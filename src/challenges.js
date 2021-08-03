@@ -1,20 +1,15 @@
 // Desafio 1
 function compareTrue(a, b) {
-  if (a === true && b === true) {
+  if (a && b) {
     return true;
-  } else if (a === false && b === false) {
-    return false;
-  } else if (a === false && b === true) {
-    return false;
-  } else if (a === true && b === false) {
+  } else {
     return false;
   }
 }
 
 // Desafio 2
 function calcArea(base, height) {
-  let resultado = (base * height) / 2;
-  return resultado;
+  return (base * height) / 2;
 }
 
 // Desafio 3
@@ -24,16 +19,12 @@ function splitSentence(phrase) {
 
 // Desafio 4
 function concatName(values) {
-  let first = values[0];
-  let last = values[values.length - 1];
-  let concat = last + ', ' + first;
-  return concat;
+  return (values[values.length - 1]) + ', ' + values[0];
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let points = (wins * 3) + (ties * 1);
-  return points;
+  return (wins * 3) + (ties * 1);
 }
 
 // Desafio 6
