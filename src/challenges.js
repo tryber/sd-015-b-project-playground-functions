@@ -18,14 +18,12 @@ function splitSentence(str) {
   let array = str.split (" ");
   return array;
 }
-console.log(splitSentence("go Trybe"));
-console.log(splitSentence("vamo que vamo"));
-console.log(splitSentence("foguete"));
-
 
 // Desafio 4
-function concatName() {
+function concatName(array) {
   // seu código aqui
+  let resultado = (array[array.length -1] + ', ' + array[0]);
+  return resultado;
 }
 
 // Desafio 5
