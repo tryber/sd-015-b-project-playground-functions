@@ -27,28 +27,30 @@ function highestCount(arrayNumeros) {
   let maiorNumero = arrayNumeros[0];
   
   for (let numero of arrayNumeros) {
-    if (numero > maiorNumero) {
-    maiorNumero = numero;
-    contador += 1;
-  } else if (numero === maiorNumero) {
+  if (numero > maiorNumero) {
+  maiorNumero = numero;
+  contador = 1;
+  }else if (numero === maiorNumero) {
   contador += 1;
   }
   }
-  return contador;
+return contador;
 } 
   console.log(highestCount([9, 1, 2, 3, 9, 5, 7])) 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2){
-if((cat1 - mouse) > (cat2 - mouse)){
-  return 'cat2'
-}else if((cat2 - mouse) > (cat1 - mouse)){
+if (cat1 - cat2 === 0 || cat1 === cat2 ) {
+  return 'os gatos trombam e o rato foge';
+  } else if (cat1 - mouse < cat2 - mouse) {
   return 'cat1'
-}else return 'os gatos trombam e o rato foge'
-}
-
+  } else {
+  return 'cat2'
+  }
+} 
+catAndMouse(1,0,2)
 // Desafio 8
 function fizzBuzz() {
-  // seu código aqui
+  
 }
 
 // Desafio 9
