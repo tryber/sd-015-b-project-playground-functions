@@ -34,18 +34,18 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(array) {
   // seu código aqui
-  let maior = array[0]
-  let contador = 0
+  let maior = array[0];
+  let contador = 0;
   for (let valor of array) {
     if (valor > maior) {
       maior = valor;
       contador = 0;
       contador += 1;
-    } else if (valor == maior) {
-      contador +=1;
+    } else if (valor === maior) {
+      contador += 1;
     }
   }
-  return(contador);
+  return (contador);
 }
 
 // Desafio 7
@@ -53,35 +53,28 @@ function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
   let distancia1 = Math.abs(mouse - cat1);
   let distancia2 = Math.abs(mouse - cat2);
-  if (distancia1 == distancia2) {
-    return ("os gatos trombam e o rato foge");
+  if (distancia1 === distancia2) {
+    return ('os gatos trombam e o rato foge');
   } else if (distancia1 > distancia2) {
-    return ("cat2");
+    return ('cat2');
   } else {
-    return ("cat1");
+    return ('cat1');
   }
 }
 
 // Desafio 8
 function fizzBuzz(array) {
   // seu código aqui
-  let novoArray = []
+  let novoArray = [];
   for(let item of array){
-    if (item % 3 == 0) {
-      if (item % 5 == 0) {
-        novoArray.push("fizzBuzz");
-      }
-      else {
-        novoArray.push("fizz");
-      }
-    } else if (item % 5 == 0) {
-      if (item % 3 == 0) {
-        novoArray.push("fizzBuzz");
-      } else {
-        novoArray.push("buzz");
-      }
+    if (item % 3 === 0 && item % 5 === 0) {
+      novoArray.push('fizzBuzz');
+    } else if (item % 5 === 0) {
+      novoArray.push('buzz');
+    } else if (item % 3 === 0) {
+      novoArray.push('fizz')
     } else {
-      novoArray.push("bug!");
+      novoArray.push('bug!');
     }
   }
   return (novoArray);
@@ -92,15 +85,15 @@ function encode(texto) {
   // seu código aqui
   let novoTexto = '';
   for (let letra of texto) {
-    if (letra == 'a') {
+    if (letra === 'a') {
       novoTexto += '1';
-    } else if (letra == 'e') {
+    } else if (letra === 'e') {
       novoTexto += '2';
-    } else if ( letra == 'i') {
+    } else if ( letra === 'i') {
       novoTexto += '3';
-    } else if (letra == 'o') {
+    } else if (letra === 'o') {
       novoTexto += '4';
-    } else if (letra == 'u') {
+    } else if (letra === 'u') {
       novoTexto += '5';
     } else {
       novoTexto += letra;
@@ -112,15 +105,15 @@ function decode(texto) {
   // seu código aqui
   let novoTexto = '';
   for (let letra of texto){
-    if (letra == '1') {
+    if (letra === '1') {
       novoTexto += 'a';
-    } else if (letra == '2') {
+    } else if (letra === '2') {
       novoTexto += 'e';
-    } else if (letra == '3') {
+    } else if (letra === '3') {
       novoTexto += 'i';
-    } else if (letra == '4') {
+    } else if (letra === '4') {
       novoTexto += 'o';
-    } else if (letra == '5') {
+    } else if (letra === '5') {
       novoTexto += 'u';
     } else {
       novoTexto += letra;
