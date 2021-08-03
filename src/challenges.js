@@ -17,7 +17,7 @@ function calcArea(base, heigth){
    } else if (base === 51 && height === 1) {
      return area;
    }
- } 
+ } calcArea(10, 50);
 
 // Desafio 3
 function splitSentence(str) { 
@@ -54,7 +54,7 @@ function footballPoints(){
   } else if(wins[0] && ties[0]){
     return 0 + 'pontos';
   }
-}
+}footballPoints= [14, 8];
 
 // Desafio 6
 function highestCount() {
