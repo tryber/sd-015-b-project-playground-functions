@@ -39,8 +39,12 @@ function highestCount(array_numbers) {
 console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  if (cat1 - mouse === cat2 - mouse || cat2 - mouse === (cat1 - mouse) * -1) {
+    return 'os gatos trombam e o rato foge';
+  } if (cat1 - mouse < cat2 - mouse) {
+    return 'cat1';
+  } return 'cat2';
 }
 
 // Desafio 8
