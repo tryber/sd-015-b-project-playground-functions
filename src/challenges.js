@@ -1,61 +1,57 @@
 // Desafio 1
-function compareTrue(a,b) {
-  if (a && b === true){
+function compareTrue(a, b) {
+  if (a && b === true) {
     return true;
-  }else{
-    return false
   }
 }
-// Desafio 2
-function calcArea(base,heigh) {
-  areaTriangulo = (base * heigh) / 2;
 
-  return areaTriangulo
+// Desafio 2
+function calcArea(base, heigh) {
+  let areaTriangulo = (base * heigh) / 2;
+
+  return areaTriangulo;
 }
 
 // Desafio 3
 function splitSentence(string) {
   let stringDividida = string.split(' ');
 
-return stringDividida;
+  return stringDividida;
 }
-
 
 
 // Desafio 4
 function concatName(array) {
-  let primeiroValor = array[0]
-  let ultimoValor = array[array.length-1]
-  let stringConcatenada = ultimoValor + ", " + primeiroValor;
+  let primeiroValor = array[0];
+  let ultimoValor = array[array.length - 1];
+  let stringConcatenada = ultimoValor + ', ' + primeiroValor;
 
-return stringConcatenada;
+  return stringConcatenada;
 }
 
 // Desafio 5
-function footballPoints(wins,ties) {
+function footballPoints(wins, ties) {
   let winPoints = wins * 3;
   let tiePoints = ties * 1;
   let totalPoints = winPoints + tiePoints;
 
-return totalPoints;
+  return totalPoints;
 }
-
 
 // Desafio 6
 function highestCount(array) {
   let contador = 0;
-  let maiorValor = array.reduce(function(a, b) {
+  let maiorValor = array.reduce (function(a, b) {
     return Math.max(a, b);
   });
 
-  for (let j = 0; j < array.length  ; j+=1){
-      if(array[j] === maiorValor){
-        contador += 1;
-      }
+  for ( let j = 0; j < array.length; j += 1){
+    if (array [j] === maiorValor){
+      contador += 1;
+    }
   }
-return contador
+  return contador;
 }
-
 
 // Desafio 7
 function catAndMouse() {
