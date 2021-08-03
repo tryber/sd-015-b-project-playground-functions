@@ -59,7 +59,7 @@ function highestCount(arrOfNumbers) {
 }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   if (mouse - cat1 < mouse - cat2) {
     return "cat1";
   }
@@ -72,7 +72,7 @@ function catAndMouse() {
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(arrOfNumbers) {
   let arrOfFizzBuzz = [];
 
   for (let i in arrOfNumbers) {
@@ -89,7 +89,7 @@ function fizzBuzz() {
       arrOfFizzBuzz.push("bug!");
     }
   }
-  
+
   return arrOfFizzBuzz;
 }
 
