@@ -1,15 +1,14 @@
 // Desafio 1
-function compareTrue() {
-  let a = 1;
-  let b = 1;
-  let c = 1;
-  if (a === b && a === c) {
-    return true;
-  }
-  else {
-    return false;
-  }
-}
+function compareTrue(a, b) {
+ 
+ if (a === true && b === true) {
+   return true;
+ }
+ else {
+   return false;
+ }
+} 
+// console.log(compareTrue(1 === 1, 2 === 2));
 
 
 
