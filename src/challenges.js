@@ -1,8 +1,18 @@
-//Welckson Valentim
 // Desafio 1
-function compareTrue() {
+function compareTrue(entradas) {
   // seu código aqui
+  let entrada1 = 0;
+  let comparativo = "true";
+  for (let indice in entradas) {
+    if (entradas[entrada1] === comparativo && entradas[indice] === comparativo) {
+      return true;
+    }
+    else {
+      return false;
+    }
+  }
 }
+console.log(compareTrue(["false", "false"]));
 
 // Desafio 2
 function calcArea() {
