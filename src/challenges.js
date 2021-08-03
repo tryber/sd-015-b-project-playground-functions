@@ -2,14 +2,14 @@
 let value = true;
 function compareTrue(n1, n2) {
   // seu código aqui
-if ( n1 === n2 && n2 === n1 ) {
+  if (n1 && n2 === true) {
     return value;
-} if ( n1 !== n2 && n2 !== n1 ){
+} if (n1 && n2 !== true) {
     value = false;
     return value;
   }
 }
-console.log(compareTrue(1, 1));
+console.log(compareTrue(true, true));
 
 // Desafio 2
 function calcArea() {
