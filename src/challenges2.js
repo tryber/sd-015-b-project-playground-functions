@@ -67,7 +67,6 @@ function triangleCheck(lineA, lineB, lineC) {
   if(Math.abs(lineB - lineC) < lineA && lineA < (lineB + lineC) && Math.abs(lineA - lineC) < lineB && lineB < (lineA + lineC) && Math.abs(lineA - lineB) < lineC && lineC < (lineA + lineB)) return true
   else return false
 }
-console.log(triangleCheck(2, 3, 4))
 
 // Desafio 13
 function hydrate() {
