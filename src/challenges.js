@@ -99,19 +99,19 @@ function encode(string) {
 
   for (let i in encodedString) {
     switch (encodedString[i]) {
-      case "a":
+      case 'a':
         encodedString[i] = '1';
         break;
-      case "e":
+      case 'e':
         encodedString[i] = '2';
         break;
-      case "i":
+      case 'i':
         encodedString[i] = '3';
         break;
-      case "o":
+      case 'o':
         encodedString[i] = '4';
         break;
-      case "u":
+      case 'u':
         encodedString[i] = '5';
         break;
       default:
@@ -127,19 +127,19 @@ function decode(string) {
 
   for (let i in decodedString) {
     switch (decodedString[i]) {
-      case "1":
+      case '1':
         decodedString[i] = 'a';
         break;
-      case "2":
+      case '2':
         decodedString[i] = 'e';
         break;
-      case "3":
+      case '3':
         decodedString[i] = 'i';
         break;
-      case "4":
+      case '4':
         decodedString[i] = 'o';
         break;
-      case "5":
+      case '5':
         decodedString[i] = 'u';
         break;
       default:
