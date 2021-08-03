@@ -1,6 +1,7 @@
 // Desafio 1
 function compareTrue(a, b) {
   let resposta;
+
   if (a === b) {
     resposta = true;
   } else {
@@ -11,8 +12,12 @@ function compareTrue(a, b) {
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, heigth) {
+  let Area;
+
+  Area = (base * heigth) / 2;
+
+  return Area;
 }
 
 // Desafio 3
