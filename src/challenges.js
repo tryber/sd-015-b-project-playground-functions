@@ -20,15 +20,19 @@ function splitSentence(strin) {
   let arraystr = strin.split(" ");  
   return(arraystr);
 }
-console.log(splitSentence("oi eu sou o goku"));
-
-
 
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
-}
+//ao por um array ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'],
+// minha função retorna arraystring[length - 1] && arraystring[0]
+function concatName(arraystring) {
+
+  let storelaf = [arraystring[arraystring.length - 1],arraystring[0]];
+  storelaf.join()
+   return(storelaf.join());
+  }
+
+  
 
 // Desafio 5
 function footballPoints() {
