@@ -1,3 +1,5 @@
+/* eslint-disable no-restricted-globals */
+/* eslint-disable no-undef */
 // Desafio 1
 function compareTrue(a, b) {
   return a === true && b === true;
@@ -15,9 +17,10 @@ function splitSentence(string) {
 } console.log(splitSentence('turma trybecat!'));
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
-}
+function concatName(array) {
+  return array[0] + array[array.length - 1];
+} array = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
+console.log(concatName(array));
 
 // Desafio 5
 function footballPoints() {
