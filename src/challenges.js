@@ -4,17 +4,18 @@ function compareTrue() {
   let b = true
   if(a === true && b === true){
     return true
-  }else if(a === false && b === true){
+    console.log(compareTrue)
+  }else if(a === false && b === true || a === true && b === false){
     return false
   }else if(a === false && b ===false){
     return false
   }
-
 }
-
 // Desafio 2
 function calcArea() {
-  // seu código aqui
+  let base = 10
+  let height = 100
+
 }
 
 // Desafio 3
