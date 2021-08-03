@@ -13,9 +13,10 @@ function calcArea() {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
-}
+function splitSentence(string) {
+  let resultado = string.split('');
+  console.log(resultado);
+} splitSentence('go Trybe');
 
 // Desafio 4
 function concatName() {
