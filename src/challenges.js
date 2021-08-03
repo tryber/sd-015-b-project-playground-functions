@@ -1,13 +1,9 @@
 // Desafio 1
 function compareTrue(param1, param2) {
-  if (param1 === param2 && param1 === false) {
-    return false;
-  }
-  if (param1 !== param2) {
-    return false;
-  }
-  if (param1 === param2 && param1 === true) {
+  if (param1 === true && param2 === true) {
     return true;
+  } else {
+    return false;
   }
 }
 
@@ -54,13 +50,12 @@ function highestCount(array) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let distancia1 = cat1 - mouse;
-  let distancia2 = cat2 - mouse;
+  let distancia1 = Math.abs(cat1 - mouse);
+  let distancia2 = Math.abs(cat2 - mouse);
 
   if (distancia1 < distancia2) {
     return 'cat1';
-  }
-  if (distancia1 > distancia2) {
+  } else if (distancia1 > distancia2) {
     return 'cat2';
   } else {
     return 'os gatos trombam e o rato foge';
