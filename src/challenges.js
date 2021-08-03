@@ -8,7 +8,9 @@ function compareTrue(a, b) {
 
 // Desafio 2
 function calcArea(){
+  return (base*height)/2;
 }
+console.log(calcArea(10, 50))
 
 // Desafio 3
 function splitSentence() {
