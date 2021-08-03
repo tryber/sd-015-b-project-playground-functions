@@ -37,20 +37,17 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(lista) {
   // seu código aqui
-  let maior = 0;
   let repete = 0;
-  for (i = 0; i <= lista.length + 1; i ++){
-    if (maior < lista[i]) {
-      maior = lista[i];
-    }
-  }
-  for (i = 0; i <= lista.length + 1; i ++){
-    if (maior == lista[i]) {
-    repete ++
+  let maior = lista.reduce(function(a, b) {
+    return Math.max(a, b);
+  });
+  for (i = 0; i < lista.length; i ++) {
+    if (maior == lista[i]){
+      repete ++
     }
   }
   return repete;
-}
+}// Aqui utilizei um metodo que econtrei na documentacao, que compara cada valor para retornar o maior (dentro de uma array). Econtrei outros como o getMaxOfArray mas achei ele complexo... creio que o array.reduce() fiquei mais simplificado de entender no codigo.
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
