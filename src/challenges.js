@@ -34,11 +34,12 @@ function concatName(array) {
   return phrase.join(', ');
 }
 
-
-
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let vitoria = 3 * wins;
+  let empate = 1 * ties;
+
+  return vitoria + empate;
 }
 
 // Desafio 6
