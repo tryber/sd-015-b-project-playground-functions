@@ -1,16 +1,10 @@
 // Desafio 1
-function compareTrue(entradas) {
+function compareTrue(entrada1, entrada2) {
   // seu código aqui
-  let entrada1 = 0;
   let comparativo = 'true';
-  for (let indice in entradas) {
-    if (entradas[entrada1] === comparativo && entradas[indice] === comparativo) {
-      return true;
-    }
-  }
-  return false;
+  return (entrada1 === comparativo && entrada2 === comparativo);
 }
-
+console.log(compareTrue('false', 'true'));
 
 // Desafio 2
 function calcArea(base, height) {
@@ -22,9 +16,14 @@ console.log(calcArea(5, 2));
 console.log(calcArea(51, 1));
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(frase) {
   // seu código aqui
+  let transformaArray = [];
+  return transformaArray = frase.split(' ');
 }
+console.log(splitSentence('go Trybe'));
+console.log(splitSentence('vamo que vamo'));
+console.log(splitSentence('foguete'));
 
 // Desafio 4
 function concatName() {
