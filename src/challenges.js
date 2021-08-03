@@ -67,18 +67,18 @@ function catAndMouse() {
 
 // Desafio 8
 function fizzBuzz(array) {
-  var array = [2, 15, 7, 9, 45];
+
   for (let index = 1; index <= 5; index += 1) {
     if (index % 3 === 0 && index % 5 === 0) {
-      array.push('FizzBuzz');
+     return  array.push('FizzBuzz');
     } else if (index % 3 === 0) {
-      array.push('Fizz');
+      return array.push('Fizz');
     } else if (index % 5 === 0) {
-      array.push('Buzz');
+      return array.push('Buzz');
     }
   }
-  return array;
-} fizzBuzz();
+  
+} fizzBuzz = [2, 15, 7, 9, 45];
 
 // Desafio 9
 function encode() {
