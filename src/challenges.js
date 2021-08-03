@@ -16,10 +16,8 @@ function compareTrue(a, b) {
   else {
     return false;
   }
+  //codigo da Danielen Cestari
 }
-//codigo da Danielen Cestari
-console.log(compareTrue(true, true));
-
 
 
 // Desafio 2
@@ -29,9 +27,12 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
-}
+function splitSentence(sentenca) {
+  let arreio = sentenca.split(' ');
+  return arreio;
+ }
+
+
 
 // Desafio 4
 function concatName() {
