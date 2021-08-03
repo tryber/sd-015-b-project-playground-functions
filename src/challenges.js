@@ -1,10 +1,9 @@
 // Desafio 1
 function compareTrue(compareValor1, compareValor2) {
   let resultado;
-  if ( compareValor1 && compareValor2 ) {
+  if (compareValor1 && compareValor2) {
     resultado = true;
-  }
-  else{
+  } else {
     resultado = false;
   }
   return resultado;
@@ -16,12 +15,12 @@ function calcArea(base, altura) {
 }
 
 // Desafio 3
-function splitSentence(stringRecebida){
+function splitSentence(stringRecebida) {
   let stringFeita = '';
   let resultado = [];
-  for ( let letter of stringRecebida){
-    if ( letter !== ' ') {
-      stringFeita = stringFeita + letter;
+  for (let letter of stringRecebida) {
+    if (letter !== ' ') {
+      stringFeita += letter;
     } else {
       resultado.push(stringFeita);
       stringFeita = '';
@@ -34,7 +33,7 @@ function splitSentence(stringRecebida){
 // Desafio 4
 function concatName(arrayStrings) {
   let resultado = arrayStrings[arrayStrings.length - 1] + ', ' + arrayStrings[0];
-  return resultado
+  return resultado;
 }
 
 // Desafio 5
@@ -73,15 +72,15 @@ function catAndMouse(mouse, cat1, cat2) {
   } else {
     resultado = 'os gatos trombam e o rato foge';
   }
-  return resultado;  
+  return resultado;
 }
 
 // Desafio 8
 function fizzBuzz(arrNumeros) {
   let resultado = [];
   for (let index of arrNumeros) {
-    if (index % 3 === 0){
-      if (index % 5 === 0){
+    if (index % 3 === 0) {
+      if (index % 5 === 0) {
         resultado.push('fizzBuzz');
       } else {
         resultado.push('fizz');
@@ -100,22 +99,17 @@ function encode(stringRecebida) {
   let resultado = '';
   for (let letter of stringRecebida) {
     if (letter === 'a'){
-      resultado = resultado + '1';
-    } 
-    else if (letter === 'e') {
-      resultado = resultado + '2';
-    } 
-    else if (letter === 'i') {
-      resultado = resultado + '3';
-    } 
-    else if (letter === 'o') {
-      resultado = resultado + '4';
-    } 
-    else if (letter === 'u') {
-      resultado = resultado + '5';
-    } 
-    else {
-      resultado = resultado + letter;
+      resultado += '1';
+    } else if (letter === 'e') {
+      resultado += '2';
+    } else if (letter === 'i') {
+      resultado += '3';
+    } else if (letter === 'o') {
+      resultado += '4';
+    } else if (letter === 'u') {
+      resultado += '5';
+    } else {
+      resultado += letter;
     }
   }
   return resultado;
@@ -124,22 +118,17 @@ function decode(stringRecebida) {
   let resultado = '';
   for (let letter of stringRecebida) {
     if (letter === '1'){
-      resultado = resultado + 'a';
-    } 
-    else if (letter === '2') {
-      resultado = resultado + 'e';
-    } 
-    else if (letter === '3') {
-      resultado = resultado + 'i';
-    } 
-    else if (letter === '4') {
-      resultado = resultado + 'o';
-    } 
-    else if (letter === '5') {
-      resultado = resultado + 'u';
-    } 
-    else {
-      resultado = resultado + letter;
+      resultado += 'a';
+    } else if (letter === '2') {
+      resultado += 'e';
+    } else if (letter === '3') {
+      resultado += 'i';
+    } else if (letter === '4') {
+      resultado += 'o';
+    } else if (letter === '5') {
+      resultado += 'u';
+    } else {
+      resultado += letter;
     }
   }
   return resultado;
