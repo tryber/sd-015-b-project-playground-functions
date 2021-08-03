@@ -88,11 +88,27 @@ function fizzBuzz(number) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(textToEncode) {
+  let text = textToEncode;
+  for (let i in text){
+    text = text.replace('a', '1');
+    text = text.replace('e', '2');
+    text = text.replace('i', '3');
+    text = text.replace('o', '4');
+    text = text.replace('u', '5');
+  }
+  return text;
 }
 function decode() {
-  // seu código aqui
+  let text = textToEncode;
+  for (let i in text){
+    text = text.replace('1', 'a');
+    text = text.replace('2', 'e');
+    text = text.replace('3', 'i');
+    text = text.replace('4', 'o');
+    text = text.replace('5', 'u');
+  }
+  return text;
 }
 
 module.exports = {
