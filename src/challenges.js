@@ -22,16 +22,21 @@ console.log(splitSentence('vamo que vamo'));
 
 // Desafio 4
 function concatName(lista) {
-  return lista[lista.length - 1] + ', ' + lista[0];
+  let lastName = lista[lista.length - 1];
+  let firstName = lista[0];
+  return `${lastName}, ${firstName}`;
 }
 
 let nomes = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
 console.log(concatName(nomes));
 
 // Desafio 5
-function footballPoints(wins) {
-  
+function footballPoints(wins, ties) {
+  let points = wins * 3 + ties * 1;
+  return points;
 }
+
+console.log(footballPoints(14, 8));
 
 // Desafio 6
 function highestCount() {
