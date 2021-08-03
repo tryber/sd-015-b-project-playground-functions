@@ -30,8 +30,20 @@ tiePoints = 1
   return pontos
 }
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  let counter = 0
+  let maior = 0
+    for( let i = 0; i < array.length; i++){
+      if(array[i] > maior){
+        maior = array[i]
+      }
+    }
+    for( let i = 0; i < array.length; i++){
+      if(array[i] == maior){
+        counter = counter + 1
+      }
+  }
+  return counter 
 }
 
 // Desafio 7
