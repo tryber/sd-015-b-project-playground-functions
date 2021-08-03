@@ -10,16 +10,20 @@ function compareTrue(value1,value2) {
 
 // Desafio 2
 function calcArea(base,height) {
-  // seu código aqui
-  area = (base * height) / 2;
+    area = (base * height) / 2;
   return("A area do seu triangulo é : ", area);
 }
-console.log(calcArea(10,20));
+
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(strin) {
+  let arraystr = strin.split(" ");  
+  return(arraystr);
 }
+console.log(splitSentence("oi eu sou o goku"));
+
+
+
 
 // Desafio 4
 function concatName() {
