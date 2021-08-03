@@ -35,12 +35,12 @@ function footballPoints(wins, ties) {
 function highestCount(numbersArray) {
   let highestNumber = Number.NEGATIVE_INFINITY;
   let counter = 0;
-  for(number of numbersArray) {
+  for(let number of numbersArray) {
     if(number > highestNumber) {
       highestNumber = number;
     }
   }
-  for (number of numbersArray) {
+  for (let number of numbersArray) {
     if(number === highestNumber) {
       counter += 1;
     }
@@ -64,7 +64,7 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(numbersArray) {
   let returnArray = [];
-  for(number of numbersArray) {
+  for(let number of numbersArray) {
     if(((number % 3) === 0) && ((number % 5) === 0)) {
       returnArray.push("fizzBuzz");
     } else if((number % 3) === 0) {
@@ -81,19 +81,36 @@ function fizzBuzz(numbersArray) {
 // Desafio 9
 
 let encoder = {
-  "a" : 1,
-  "e" : 2,
-  "i" : 3,
-  "o" : 4,
-  "u" : 5,
+  "a" : "1",
+  "e" : "2",
+  "i" : "3",
+  "o" : "4",
+  "u" : "5",
 }
 
-function encode() {
-
+function encode(phrase) {
+  phrase = phrase.split("")
+  for (let letter in encoder) {
+    for(let index = 0; index < phrase.length; ++index) {
+      if(phrase[index] === letter) {
+        phrase[index] = encoder[letter]
+      }
+    }
+  }
+  return phrase.join("")
 }  
+console.log(decode(encode("hi there!")))
 
-function decode() {
-  // seu código aqui
+function decode(phrase) {
+  phrase = phrase.split("")
+  for (let letter in encoder) { 
+    for(let index = 0; index < phrase.length; ++index) {
+      if(phrase[index] === encoder[letter]) {
+        phrase[index] = letter;
+      }
+    }
+  }
+  return phrase.join("")
 }
 
 module.exports = {
