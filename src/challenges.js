@@ -1,10 +1,7 @@
 // Desafio 1
-let tempo = 'frio';
-let agasalho = 'jaqueta';
-
-function compareTrue(tempo, agasalho) {
+function compareTrue(comidaX, comidaY) {
   // seu código aqui
-if (tempo === 'frio' &&  agasalho === 'jaqueta') {
+if (comidaX === 'bolo' && comidaY === 'pao') {
   return true;
 } else {
   return false;
