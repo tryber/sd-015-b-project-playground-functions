@@ -103,9 +103,9 @@ function decode(string) {
     5: 'u',
   };
   let newString = string;
-  for (let letter of newString) {
-    if (Object.keys(myCode).includes(letter)) {
-      newString = newString.replace(letter, myCode[letter]);
+  for (let char of newString) {
+    if (Object.keys(myCode).includes(char)) {
+      newString = newString.replace(char, myCode[char]);
     }
   }
   return newString;
