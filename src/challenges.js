@@ -1,46 +1,110 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui 
+function compareTrue(valora, valorb) {
+  // seu código aqui
+  if (valora === true && valorb === true){
+    return true
+  } else {
+    return false
+  }
 }
 
 // Desafio 2
-function calcArea() {
+function calcArea(base, height) {
   // seu código aqui
+  return calc = base * height / 2
 }
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(fraseJunta) {
   // seu código aqui
+  return fraseSeparada = fraseJunta.split(" ")
 }
 
 // Desafio 4
-function concatName() {
+function concatName(recebeNomes) {
   // seu código aqui
+  let primeiro = recebeNomes[0]
+  let ultimo = recebeNomes[recebeNomes.length -1]
+  return final = ultimo + ", " + primeiro
 }
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
+  let pontosWin = wins * 3
+  let pontosTies = ties * 1
+  return final = pontosWin + pontosTies
 }
 
+
 // Desafio 6
-function highestCount() {
+function highestCount(arrayDeNumeros) {
   // seu código aqui
+  let maiorPosition = arrayDeNumeros[0]
+  let repeticoes = [] 
+  for (let index = 0; index < arrayDeNumeros.length; index += 1){
+    if ( arrayDeNumeros[index] > maiorPosition){
+      maiorPosition = arrayDeNumeros[index] 
+    }
+  }
+  for (let index = 0; index < arrayDeNumeros.length; index += 1){
+    if (maiorPosition == arrayDeNumeros[index]){
+      repeticoes.push(arrayDeNumeros[index])
+    }
+
+  }
+  return repeticoes.length
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let calcCat01 = mouse - cat1
+  let calcCat02 = mouse - cat2
+
+  if (cat1 === 0 ){
+    calcCat01 = cat1 - mouse
+  }
+
+  if (cat2 === 0 ){
+    calcCat02 = cat1 - mouse
+  }
+
+  if ( calcCat01 > calcCat02) {
+    return "cat1"
+  } else if (calcCat01 < calcCat02){
+    return "cat2"
+  } else if (calcCat02 === calcCat01 ) {
+    return "os gatos trombam e o rato foge"
+  }
 }
 
+
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(numEntrada) {
   // seu código aqui
+  let numarray = []
+  for (let index = 0; index < numEntrada.length; index += 1){
+
+    if ( numEntrada[index] % 3 == 0 && numEntrada[index] % 5 == 0){
+      numarray.push("fizzBuzz")
+    } else if ( numEntrada[index] % 3 == 0){
+      numarray.push("fizz")
+
+    } else if ( numEntrada[index] % 5 == 0) { 
+      numarray.push("buzz")
+      
+    } else if ( numEntrada[index] % 3 != 0 && numEntrada[index] % 5 != 0) {
+      numarray.push("bug!")
+    }
+  }
+  return numarray
 }
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode() {
   // seu código aqui
+
 }
 function decode() {
   // seu código aqui
