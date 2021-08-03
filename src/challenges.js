@@ -62,12 +62,27 @@ function fizzBuzz(fizzBuzzArray) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let encodedString = string.replace(/a/g, '1');
+  encodedString = encodedString.replace(/e/g, '2');
+  encodedString = encodedString.replace(/i/g, '3');
+  encodedString = encodedString.replace(/o/g, '4');
+  encodedString = encodedString.replace(/u/g, '5');
+  return encodedString
 }
-function decode() {
-  // seu código aqui
+
+function decode (string) {
+  let encodedString = string.replace(/1/g, 'a');
+  encodedString = encodedString.replace(/2/g, 'e');
+  encodedString = encodedString.replace(/3/g, 'i');
+  encodedString = encodedString.replace(/4/g, 'o');
+  encodedString = encodedString.replace(/5/g, 'u');
+  return encodedString
 }
+let string = 'abelha aeiou'
+console.log(encode(string))
+string = encode(string)
+console.log(decode(string))
 
 module.exports = {
   calcArea,
