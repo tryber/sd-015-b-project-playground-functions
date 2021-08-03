@@ -49,18 +49,20 @@ function highestCount(arrayNumbers) {
 
 
 // Desafio 7
+
 function catAndMouse(mouse, cat1, cat2) {
-  let cat1Absoluto = Math.abs(cat1);
-  let cat2Absoluto = Math.abs(cat2);
+  let cat1Absoluto = Math.abs(mouse - cat1);
+  let cat2Absoluto = Math.abs(mouse - cat2);
 
   if (cat1Absoluto > cat2Absoluto) {
-    return "cat2"
+    return "cat2";
   } else if (cat1Absoluto < cat2Absoluto) {
-    return "cat1"
+    return "cat1";
   }
-  return "os gatos trombam e o rato foge"
+  return "os gatos trombam e o rato foge";
 }
-console.log(catAndMouse(1, 0, 2));
+catAndMouse(1, 0, 2);
+
 
 // Desafio 8
 function fizzBuzz() {
