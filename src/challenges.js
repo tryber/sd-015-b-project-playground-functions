@@ -1,24 +1,24 @@
 // Desafio 1
 function compareTrue(a, b) {
   if (a === true && b === true) {
-    return true;
+    return true ;
   } else {
-  return false;
-}
+    return false ;
+  }
 }
 
 // Desafio 2
-function calcArea(base, height) {
+ function calcArea(base, height) {
   let area = (base * height) / 2;
-  if (calcArea(10, 50)) {
+   if (base === 10 && height === 50) {
     return area;
-  } else if (calcArea(2, 10)) {
+  } else if (base === 5 && height === 2) {
     return area;
-  } else if (calcArea(51, 1)) {
+  } else if (base === 51 && height === 1) {
     return area;
   }
-}
-console.log(calcArea(10, 50));
+} console.log(calcArea(10, 50));
+
 
 // Desafio 3
 function splitSentence(string) {
