@@ -9,8 +9,6 @@ function techList(arr, name) {
   return list;
 }
 
-console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas'));
-
 // Desafio 11
 function generatePhoneNumber(arr) {
   if (arr.length !== 11) return `Array com tamanho incorreto.`;
@@ -36,12 +34,22 @@ function generatePhoneNumber(arr) {
     .join('')}`;
 }
 
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
-
 // Desafio 12
-function triangleCheck(lineA, lineB, lineC) {}
+function triangleCheck(a, b, c) {
+  let bool;
+  if (
+    (a + b > c && c > Math.abs(a - b)) ||
+    (c + a > b && b > Math.abs(c - a)) ||
+    (c + b > a && a > Math.abs(c - b))
+  ) {
+    bool = true;
+  } else {
+    bool = false;
+  }
+  return bool;
+}
 
-console.log(triangleCheck(10, 2, 8));
+console.log(triangleCheck(10, 14, 8));
 
 // Desafio 13
 function hydrate() {
