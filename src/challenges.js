@@ -1,13 +1,15 @@
 // Desafio 1
 function compareTrue(param1, param2) {
   // seu código aqui
- let resultado = param1 && param2;
- return resultado;
+  let resultado = param1 && param2;
+  return resultado;
 }
 
 // Desafio 2
-function calcArea() {
+function calcArea(base, height) {
   // seu código aqui
+  let areaDeTriangulo = ((base * height)/2);
+  return areaDeTriangulo;
 }
 
 // Desafio 3
