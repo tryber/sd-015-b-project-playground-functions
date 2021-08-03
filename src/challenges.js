@@ -10,10 +10,11 @@ function compareTrue(param1,param2) {
 compareTrue(true,true);
 
 // Desafio 2
-function calcArea() {
+function calcArea(base,height) {
   // seu código aqui
+  return (base * height)/2;
 }
-
+calcArea(51,1);
 // Desafio 3
 function splitSentence() {
   // seu código aqui
