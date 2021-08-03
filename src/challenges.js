@@ -4,7 +4,7 @@ function compareTrue(a, b) {
   if (a && b) {
     return true
   }
-  else if ((a === false && b) || (b === false && b)) {
+  else if (a === false && b === false ) {
     return false
   }
   else {
@@ -25,18 +25,40 @@ function splitSentence(frase) {
 }
 
 // Desafio 4
-function concatName() {
+function concatName(array) {
   // seu código aqui
+  let primeiraeultima = (array[array.length - 1]) + ', ' + array[0]
+  return primeiraeultima
+
+}
+// Desafio 5
+function footballPoints(wins, ties) {
+  // seu código aqui
+  let pontos = 0
+  for (let index = 0; index < wins; index += 1) {
+    pontos += 3
+  }
+  for (let index = 0; index < ties; index += 1) {
+    pontos += 1
+  }
+  return pontos
 }
 
-// Desafio 5
-function footballPoints() {
-  // seu código aqui
+function maxOfArray(array) {
+  return Math.max.apply(null, array)
 }
 
 // Desafio 6
-function highestCount() {
+function highestCount(array) {
   // seu código aqui
+  let maiornum = maxOfArray(array)
+  let contagemmaiornum = 0
+  for (let index = 0; index < array.length; index += 1) {
+    if (array[index] === maiornum) {
+      contagemmaiornum += 1
+    }
+  }
+  return contagemmaiornum
 }
 
 // Desafio 7
