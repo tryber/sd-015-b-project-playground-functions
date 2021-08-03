@@ -2,8 +2,7 @@
 function compareTrue(valor1, valor2) {
   if (valor1 && valor2 === true) {
     return true;
-  }
-  return false;
+  } return false;
   // seu código aqui
 }
 
@@ -33,7 +32,7 @@ function concatName(array) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let resultadoDePontos = wins * 3 + ties * 1;
+  let resultadoDePontos = (wins * 3) + (ties * 1);
   return resultadoDePontos;
   // seu código aqui
 }
