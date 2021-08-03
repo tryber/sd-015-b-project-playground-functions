@@ -2,9 +2,8 @@
 function compareTrue(a, b) {
   if (a && b) {
     return true;
-  } 
+  }
   return false;
-  
 }
 
 compareTrue(false, true);
@@ -20,9 +19,13 @@ calcArea(5, 2);
 calcArea(51, 1);
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(s) {
+  return s.split(" ");
 }
+
+splitSentence("go trybe");
+splitSentence("vamo que vamo");
+splitSentence("foguete");
 
 // Desafio 4
 function concatName() {
