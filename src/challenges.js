@@ -44,22 +44,24 @@ function footballPoints(wins,ties) {
 footballPoints(14,8);
 
 // Desafio 6
-let qtd = 0;
 function highestCount(arr) {
-  // seu código aqui  
-  function maiorNumero(a,b){
-    return b -a;
-  }
-    let lista = arr.sort(maiorNumero);
-    for(let i = 0; i < arr.length; i+=1){
-      if(arr[i] === lista[0]){
-        qtd++;
-      }
+  // seu código aqui 
+  let maiorNumero = 0;
+  let numCount = {};
+  for (i = 0; i < arr.length; i += 1){
+    if(arr[i] > maiorNumero){
+      maiorNumero = arr[i];
     }
-    console.log(qtd);
-    return qtd;
-  }
-  highestCount([9, 1, 2, 3, 9, 5, 7])
+
+    if(numCount[arr[i]]){
+      numCount[arr[i]] += 1;
+    }else {
+      numCount[arr[i]] = 1;
+    }
+  } 
+  return[numCount[maiorNumero]];
+}
+  console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
 function catAndMouse(mouse,cat1,cat2) {
