@@ -43,21 +43,42 @@ function footballPoints(wins,ties) {
 }
 
 // Desafio 6
+// function highestCount(vetor) {
+//   let contagem = {}
+//   let maior = -2
+//     for (key in vetor) {
+//         count = 0
+//         for (number of vetor){
+//             if(vetor[key] === number){
+//                 count+=1
+//                 contagem[vetor[key]] = count
+//             }
+//         }       
+//     }
+//     for (count in contagem) {
+//       if (contagem[count] > maior) {
+//         maior = contagem[count]
+//       }
+//     }
+//   return maior
+// }
 function highestCount(vetor) {
-  let contagem = {}
-  let maior = -2
-    for (key in vetor) {
-        count = 0
-        for (number of vetor){
-            if(vetor[key] === number){
-                count+=1
-                contagem[vetor[key]] = count
-            }
-        }       
+  let count = 0
+  let maior = -10000;
+  for (number of vetor){
+    if (number>maior) {
+      maior = number
     }
+  }
+  
+  for (number of vetor) {
+    if (number === maior) {
+      count +=1
+    }
+  }
   return count
 }
-
+console.log(highestCount([1, 9, 2, 3, 9, 5, 7]));
 // Desafio 7
 function catAndMouse(mouse,cat1,cat2) {
   if (cat1> mouse) {
