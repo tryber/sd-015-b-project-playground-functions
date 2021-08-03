@@ -48,11 +48,11 @@ function highestCount(arrayOfNumbers) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  if (mouse - cat1 < mouse - cat2) {
+  if ((mouse - cat1)**2 < (mouse - cat2)**2) {
     return "cat1";
-  } else if (mouse - cat2 < mouse - cat1) {
+  } else if ((mouse - cat2)**2 < (mouse - cat1)**2) {
     return "cat2";
-  } else {
+  } else if ((mouse - cat1)**2 === (mouse - cat2)**2) {
     return "os gatos trombam e o rato foge"
   }
 };
@@ -74,9 +74,24 @@ function fizzBuzz(array) {
 };
 
 // Desafio 9
-function encode() {
-  // seu código aqui
-}
+function encode(yourString) {
+  let newString = ""
+  for (let index = 0; index < yourString.length; index += 1) {
+    if (yourString[index] === "a") {
+      newString += 1;
+    } else if (yourString[index] === "e") {
+      newString += 2;
+    } else if (yourString[index] === "i") {
+      newString += 3;
+    } else if (yourString[index] === "o") {
+      newString += 4;
+    } else if (yourString[index] === "u") {
+      newString+= 5;
+    } else {
+      newString += yourString[index];
+    }
+  } return newString;
+};
 function decode() {
   // seu código aqui
 }
@@ -93,3 +108,4 @@ module.exports = {
   highestCount,
   splitSentence,
 };
+
