@@ -4,11 +4,11 @@ function compareTrue(a, b) {
 }
 
 // Desafio 2
-function calcArea(a,b) {
-  
-  area = (base*hei)/2
-  return console.log(area)
+function calcArea(base, height) {
+  area = (base*height)/2
+  return (area)
 }
+console.log(calcArea(51,1))
 
 // Desafio 3
 function splitSentence() {
