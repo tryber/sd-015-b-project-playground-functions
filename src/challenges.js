@@ -96,16 +96,62 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   return msg;
 }
+// Sub-funções do desafio 8
+function fizz(numero) {
+  let fizzCheck = '';
+
+  if ((numero % 3 === 0) && (numero % 5 !== 0)) {
+    fizzCheck = 'fizz';
+  }
+  return fizzCheck;
+}
+
+function buzz(numero) {
+  let buzzCheck = '';
+
+  if ((numero % 3 !== 0) && (numero % 5 === 0)) {
+    buzzCheck = 'buzz';
+  }
+  return buzzCheck;
+}
+
+function fbuzz(numero) {
+  let fizzBuzzCheck = '';
+
+  if ((numero % 3 === 0) && (numero % 5 === 0)) {
+    fizzBuzzCheck = 'fizzBuzz';
+  }
+  return fizzBuzzCheck;
+}
+function bug(numero) {
+  let bugCheck = '';
+
+  if ((numero % 3 !== 0) && (numero % 5 !== 0)) {
+    bugCheck = 'bug!';
+  }
+  return bugCheck;
+}
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numeros) {
+  let arrayFizzBuzz = [];
+  let f; let b; let fb; let bg;
+
+  for (let i = 0; i < numeros.length; i += 1) {
+    f = fizz(numeros[i]); b = buzz(numeros[i]);
+    fb = fbuzz(numeros[i]); bg = bug(numeros[i]);
+    arrayFizzBuzz[i] = f + b + fb + bg;
+  }
+
+  return arrayFizzBuzz;
 }
+console.log(fizzBuzz([9, 25]));
 
 // Desafio 9
 function encode() {
   // seu código aqui
 }
+
 function decode() {
   // seu código aqui
 }
