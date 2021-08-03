@@ -17,8 +17,10 @@ function calcArea(param1, param2) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(str) {
+  let strSeparated = str.split(' ')
+  
+  return strSeparated
 }
 
 // Desafio 4
