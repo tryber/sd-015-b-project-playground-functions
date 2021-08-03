@@ -42,8 +42,8 @@ function highestCount(array) {
 }
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-    let gato1 = mouse - cat1;
-    let gato2 = mouse - cat2;
+    let gato1 = cat1 - mouse;
+    let gato2 = cat2 - mouse;
     if ( gato1 > gato2){
       return "cat2"
     } else if (gato2 > gato1){
@@ -67,11 +67,13 @@ function fizzBuzz(array) {
     }
   } return acumulador
 }
-
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(oi) {
+  let cript = oi;
+  }console.log(cript)
 }
+encode('ola meu amigo')
+
 function decode() {
   // seu código aqui
 }
