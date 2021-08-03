@@ -89,7 +89,7 @@ let encoder = {
 }
 
 function encode(phrase) {
-  let phrase = phrase.split("");
+  phrase = phrase.split("");
   for (let letter in encoder) {
     for (let index = 0; index < phrase.length; index += 1) {
       if (phrase[index] === letter) {
