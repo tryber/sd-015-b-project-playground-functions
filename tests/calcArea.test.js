@@ -14,7 +14,4 @@ describe('2 - Crie uma função que calcule a área do triângulo', () => {
   });
 });
 
-function calcArea (base, height){
-  return (base * height)/2;
-}
-calcArea((10, 50))
+
