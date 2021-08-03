@@ -24,10 +24,12 @@ function concatName(string) {
     return uneTudo.concat()
 }
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+    let vitorias = wins * 3;
+    let empates = ties;
+    let pontos = vitorias + empates;
+    return pontos + ' pontos'
 }
-
 // Desafio 6
 function highestCount() {
   // seu código aqui
