@@ -11,7 +11,7 @@ function techList(arrTech, name) {
   }
       return arrAns;
   } else {return 'Vazio!'}
-  }
+}
 
 // Desafio 11
 
@@ -76,8 +76,15 @@ function generatePhoneNumber(telNumber) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(a, b, c) { 
+sum3 = b + c;
+less3 = Math.abs(b - c);
+
+if (a > less3 && a < sum3) {
+    return true;
+}else{
+    return false;
+}  
 }
 
 // Desafio 13
