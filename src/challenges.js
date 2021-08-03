@@ -35,9 +35,17 @@ function splitSentence(str) {
 // console.log(splitSentence(123)); // teste extra
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arr) {
+  if (typeof arr === 'object') {
+    phrase = arr[arr.length - 1] + ', ' + arr[0];
+    return phrase;
+  }
 }
+
+// console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'])); // teste 1
+// console.log(concatName(['foguete', 'não', 'tem', 'ré'])); // teste 2
+// console.log(concatName(['captain', 'my', 'captain'])); // teste 3
+// console.log(concatName('123')); // teste extra
 
 // Desafio 5
 function footballPoints() {
