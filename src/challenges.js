@@ -44,11 +44,19 @@ function concatName(string){
 
 // Desafio 5
 function footballPoints(){
-  // seu código aqui
+  let wins = [];
+  let ties = [];
+  if(wins[14] && ties[8]){
+    return 50 + 'pontos';
+  } else if (wins[1] && ties[2]){
+    return 5 + 'pontos';
+  } else if(wins[0] && ties[0]){
+    return 0 + 'pontos';
+  }
 }
 
 // Desafio 6
-function highestCount() {
+function highestCount(array) {
   // seu código aqui
 }
 
@@ -70,8 +78,7 @@ function fizzBuzz(array) {
     }
   }
   return array;
-}
-fizzBuzz();
+} fizzBuzz();
 
 // Desafio 9
 function encode() {
