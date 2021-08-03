@@ -27,7 +27,7 @@ function splitSentence(sentence) {
 
 // Desafio 4
 function concatName(arrOfStrings) {
-  let concatString = arrOfStrings[arrOfStrings.length -1] + ", " + arrOfStrings[0];
+  let concatString = arrOfStrings[arrOfStrings.length - 1] + ', ' + arrOfStrings[0];
 
   return concatString;
 }
@@ -51,7 +51,7 @@ function highestCount(arrOfNumbers) {
   }
   for (let i in arrOfNumbers) {
     if (arrOfNumbers[i] === highestNumber) {
-      highestNumberCount++;
+      highestNumberCount += 1;
     }
   }
 
@@ -60,14 +60,14 @@ function highestCount(arrOfNumbers) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  if (mouse - cat1 < mouse - cat2) {
-    return "cat1";
+  if (Math.abs(mouse - cat1) < Math.abs(mouse - cat2)) {
+    return 'cat1';
   }
-  else if (mouse - cat1 > mouse - cat2) {
-    return "cat2";
+  else if (Math.abs(mouse - cat1) > Math.abs(mouse - cat2)) {
+    return 'cat2';
   }
   else {
-    return "os gatos trombam e o rato foge"
+    return 'os gatos trombam e o rato foge'
   }
 }
 
@@ -77,16 +77,16 @@ function fizzBuzz(arrOfNumbers) {
 
   for (let i in arrOfNumbers) {
     if (arrOfNumbers[i] % 3 === 0 && arrOfNumbers[i] % 5 === 0) {
-      arrOfFizzBuzz.push("fizzBuzz");
+      arrOfFizzBuzz.push('fizzBuzz');
     }
     else if (arrOfNumbers[i] % 3 === 0) {
-      arrOfFizzBuzz.push("fizz");
+      arrOfFizzBuzz.push('fizz');
     }
     else if (arrOfNumbers[i] % 5 === 0) {
-      arrOfFizzBuzz.push("buzz");
+      arrOfFizzBuzz.push('buzz');
     }
     else {
-      arrOfFizzBuzz.push("bug!");
+      arrOfFizzBuzz.push('bug!');
     }
   }
 
@@ -94,9 +94,26 @@ function fizzBuzz(arrOfNumbers) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+//Função que altera o valor de uma string numa posição X.
+function replaceCharAt(string, index, char) {
+  if (index > string.length - 1) {
+    return string;
+  }
+  else {
+    return string.substring(0, index) + char + string.substring(index + 1);
+  }
 }
+function encode(string) {
+  let vogals = [1, 'a', 2, 'e', 3, 'i', 4, 'o', 5, 'u'];
+  let newString;
+
+  for (let i in string) {
+  
+  }
+  return newString;
+}
+
+// console.log(encode("hi there"));
 function decode() {
   // seu código aqui
 }
