@@ -76,7 +76,7 @@ function encode(entrada) {
   let u = o.replace(/u/gm, 5);
   return u
 }
-function decode(oi) {
+function decode(entrada) {
   let a = entrada.replace(/1/gm, 'a');
   let e = a.replace(/2/gm, 'e');
   let i = e.replace(/3/gm, 'i');
