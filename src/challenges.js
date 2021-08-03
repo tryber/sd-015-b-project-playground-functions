@@ -1,11 +1,31 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(a, b) {
+  //meu codigo
+//   if ( a > b && b < a){
+//     return true;
+//   }
+//   else{
+//     return false;
+//   }
+// }
+// console.log(compareTrue(7, 1))
+
+  if (a === true && b === true) {
+    return true;
+  } 
+  else {
+    return false;
+  }
 }
+//codigo da Danielen Cestari
+console.log(compareTrue(true, true));
+
+
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  let area = (base * height) / 2;
+  return area;
 }
 
 // Desafio 3
