@@ -44,17 +44,19 @@ let highNumber = [];
 let cont = 0;
 
 function highestCount(numbers) {
+  let highestNumber = numbers[0];
+  let count = 0;
   for (let index = 0; index < numbers.length; index += 1) {
-    if (numbers[index] > highNumber) {
-      highNumber = numbers[index];
-    } if (highNumber === numbers[index]) {
-      cont += 1;
+    if (numbers[index] > highestNumber) {
+      highestNumber = numbers[index];
+      count = 0;
+    } if (numbers[index] === highestNumber) {
+      count += 1;
     }
-  }
-  return cont;
-} 
+  } return count;
+}
 
-let array = [0, 1 , 2, 3, 4, 4, 2];
+let array = [0, 4, 4, 4, 9, 2, 1];
 console.log(highestCount(array));
 
 // Desafio 7
@@ -62,11 +64,11 @@ function catAndMouse(mouse, cat1, cat2) {
   let distanciaCat1 = cat1 - mouse;
   let distanciaCat2 = cat2 - mouse;
   if (distanciaCat2 < distanciaCat1) {
-    console.log("cat 2");
+    console.log('cat 2');
   } else if (distanciaCat1 < distanciaCat2) {
-    console.log("cat 1");
+    console.log('cat 1');
   } else if (distanciaCat1 === distanciaCat2) {
-    console.log("os gatos trombam e o rato foge");
+    console.log('os gatos trombam e o rato foge');
   }
 }
 
