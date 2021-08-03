@@ -38,14 +38,25 @@ function concatName(array) {
 function footballPoints(wins, ties) {
   let pointsWins = wins * 3;
   let pointsTies = ties;
-  let totalPoints = pointsWins + pointsTies;
+  let totalPoints = pointsWins + pointsTies;                                                                                                
 
   return totalPoints
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(arrayNumeros) {
+  let saveNum = arrayNumeros[0];
+  let contNum = arrayNumeros[0];
+  for (let num of arrayNumeros) {
+    if (num > saveNum) {
+    saveNum = num;
+    contNum = 0;
+    }
+    if (num === saveNum) {
+    contNum++
+   }
+   }
+    return contNum;
 }
 
 // Desafio 7
