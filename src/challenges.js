@@ -37,8 +37,7 @@ function splitSentence(str) {
 // Desafio 4
 function concatName(arr) {
   if (typeof arr === 'object') {
-    phrase = arr[arr.length - 1] + ', ' + arr[0];
-    return phrase;
+    return arr[arr.length - 1] + ', ' + arr[0];;
   }
 }
 
@@ -48,13 +47,22 @@ function concatName(arr) {
 // console.log(concatName('123')); // teste extra
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  if (typeof wins === 'number' && typeof ties === 'number' && wins >= 0 && ties >= 0 && Math.floor(wins) === wins && Math.floor(ties) === ties ) {
+    return wins * 3 + ties;
+  }
 }
 
+// console.log( footballPoints(14, 8) ); // teste 1
+// console.log( footballPoints(1, 2) ); // teste 2
+// console.log( footballPoints(0, 0) ); // teste 3
+// console.log( footballPoints(true, 0) ); // teste extra
+// console.log( footballPoints(1.5, 0) ); // teste extra
+// console.log( footballPoints(-2, 0) ); // teste extra
+
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(arr) {
+  if(typeof arr === )
 }
 
 // Desafio 7
