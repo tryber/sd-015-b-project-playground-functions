@@ -28,7 +28,7 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(array) {
-  let arrayMax = Math.max(array); // ref: https://pt.stackoverflow.com/questions/35202/como-saber-o-maior-valor-de-um-array
+  let arrayMax = Math.max(array); // ref.: https://pt.stackoverflow.com/questions/35202/como-saber-o-maior-valor-de-um-array
   let arrayMaxCount = 0;
   for (let index = 0; index < array; index += 1) {
     if (array[index] === arrayMax) {
@@ -39,8 +39,17 @@ function highestCount(array) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let distanceMouseCat1 = Math.abs(mouse - cat1); // ref.: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
+  let distanceMouseCat2 = Math.abs(mouse - cat2);
+
+  if (distanceMouseCat1 === distanceMouseCat2) {
+    return 'os gatos trombam e o rato foge';
+  }
+  if (distanceMouseCat1 < distanceMouseCat2) {
+    return cat1;
+  }
+  return cat2;
 }
 
 // Desafio 8
