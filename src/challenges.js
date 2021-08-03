@@ -18,9 +18,8 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(string) {
-
+  return `${string[string.length - 1]}, ${string[0]}`;
 }
-console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -32,7 +31,7 @@ function footballPoints(wins, ties) {
 function highestCount(numeros) {
   for (let index of numeros) {
     let store = 0;
-    let count = 0;
+    let count = {};
     if (index > store) {
       store = index;
     }
