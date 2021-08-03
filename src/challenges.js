@@ -37,11 +37,10 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(valor) {
   let hitCounts = 0;
-  for (let show of valor) {
-    for (let key of valor) {
-      if (show === key) {
-        hitCounts += 1;
-      }
+  let number = Math.max(...valor);
+  for (let key of valor) {
+    if (number === key) {
+      hitCounts += 1;
     }
   }
   return hitCounts;
@@ -75,9 +74,6 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
-}
 
 // Desafio 9
 function encode() {
