@@ -75,20 +75,20 @@ catAndMouse(5, 7, 7);
 // Desafio 8
 function fizzBuzz(numbers) {
   for (let index = 0; index < numbers.length; index += 1) {
-    if (numbers[index] % 3 === 0) {
+    if (numbers[index] % 3 === 0 && numbers[index] % 5 === 0) {
+      console.log('fizzBuzz');
+    } else if(numbers[index] % 3 === 0) {
       console.log('fizz');
     } else if (numbers[index] % 5 === 0) {
       console.log('buzz');
-    } else if (numbers[index] % 3 === 0 && numbers[index] % 5 === 0) {
-      console.log('fizzBuzz');
     } else {
       console.log('bug');
     }
   }
 }
 
-let array = [2, 15, 7, 9, 45];
-fizzBuzz(array);
+let array2 = [2, 15, 7, 9, 45];
+fizzBuzz(array2);
 
 // Desafio 9
 function encode() {
