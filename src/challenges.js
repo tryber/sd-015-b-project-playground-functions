@@ -1,21 +1,29 @@
 // Desafio 1
-function compareTrue(x, y) {
+let tempo = 'frio';
+let agasalho = 'jaqueta';
+
+function compareTrue(tempo, agasalho) {
   // seu código aqui
-  if (x > y && y === 1) {
-    return true;
-  } else {
-    return false;
-    }
+if (tempo === 'frio' &&  agasalho === 'jaqueta') {
+  return true;
+} else {
+  return false;
+}
 }
 
 // Desafio 2
-function calcArea() {
+function calcArea(base, height) {
   // seu código aqui
+  calculo = (base * height) / 2;
+  return calculo;
 }
 
 // Desafio 3
-function splitSentence() {
+frase = 'go trybe'
+function splitSentence(frase) {
   // seu código aqui
+  sentenca = frase.split(" ");
+  return sentenca;
 }
 
 // Desafio 4
