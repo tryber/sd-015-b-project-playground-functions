@@ -2,7 +2,8 @@
 function techList(arr, name) {
   if (arr.length < 1) {
     return 'Vazio!'
-  } else {
+  }
+
   arr.sort()
   let techsAndNames = []
 
@@ -16,7 +17,6 @@ function techList(arr, name) {
   }
 
   return techsAndNames
-  }  
 }
 
 // Desafio 11
