@@ -2,9 +2,9 @@
 function compareTrue(entrada1, entrada2) {
   // seu código aqui
   let comparativo = 'true';
-  return (entrada1 === comparativo && entrada2 === comparativo);
+  return (entrada1 && entrada2 === comparativo);
 }
-console.log(compareTrue('false', 'true'));
+console.log(compareTrue('true', 'true'));
 
 // Desafio 2
 function calcArea(base, height) {
@@ -26,9 +26,15 @@ console.log(splitSentence('vamo que vamo'));
 console.log(splitSentence('foguete'));
 
 // Desafio 4
-function concatName() {
+function concatName(arrayPalavras) {
   // seu código aqui
+  let index= 0;
+  let index2 = (arrayPalavras.length -1);
+  let primeiraPalavra = arrayPalavras[index];
+  let segundaPalavra = arrayPalavras[index2];
+      return primeiraPalavra + ', ' + segundaPalavra;
 }
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
 function footballPoints() {
