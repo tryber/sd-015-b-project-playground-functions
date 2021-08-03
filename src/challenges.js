@@ -1,8 +1,8 @@
 // Desafio 1
-function compareTrue(a, b) {
+function compareTrue(a) {
   let resposta;
 
-  if (a === b) {
+  if (a === true) {
     resposta = true;
   } else {
     resposta = false;
@@ -96,6 +96,7 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   return msg;
 }
+
 // Sub-funções do desafio 8
 function fizz(numero) {
   let fizzCheck = '';
@@ -105,7 +106,6 @@ function fizz(numero) {
   }
   return fizzCheck;
 }
-
 function buzz(numero) {
   let buzzCheck = '';
 
@@ -145,12 +145,17 @@ function fizzBuzz(numeros) {
 
   return arrayFizzBuzz;
 }
-console.log(fizzBuzz([9, 25]));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(frase) {
+  let fraseEncode = frase;
+
+  console.log(fraseEncode.split);
+
+  return fraseEncode;
 }
+
+console.log(('gato'.indexOf('a')));
 
 function decode() {
   // seu código aqui
