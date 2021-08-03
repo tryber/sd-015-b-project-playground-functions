@@ -132,11 +132,59 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
+function encode(string) {
   // seu código aqui
+  let result = '';
+  let code = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5,
+  }
+
+  // Um for que checa cada letra, e outro for dentro do for que vai ser um for in que chega cada chave do objeto, e compara a chave para a letra. Se a letra for a mesma, ela transplanta a tradução. Se não tiver nenhuma letra que combina, ela apenas retorna a letra da string.
+  for (i = 0; i < string.length; i +=1) {
+    for (key in code) {
+      if (code.hasOwnProperty(string[i])) {
+        if (key === string[i]) {
+          result += code[key];
+        }
+      } else {
+        result += string[i];
+        break;
+      }
+    }
+  }
+
+  return result;
 }
-function decode() {
+function decode(string) {
   // seu código aqui
+  // seu código aqui
+  let result = '';
+  let code = {
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u',
+  }
+
+  for (i = 0; i < string.length; i +=1) {
+    for (key in code) {
+      if (code.hasOwnProperty(string[i])) {
+        if (key === string[i]) {
+          result += code[key];
+        }
+      } else {
+        result += string[i];
+        break;
+      }
+    }
+  }
+
+  return result;
 }
 
 module.exports = {
@@ -158,3 +206,5 @@ console.log(footballPoints(14,8));
 console.log(highestCount([0, 0, 0]));
 console.log(catAndMouse(1,0,2));
 console.log(fizzBuzz([2, 15, 7, 9, 45]))
+console.log(encode("this is a test to see if it works!"))
+console.log(decode("th3s 3s 1 t2st t4 s22 3f 3t w4rks!"))
