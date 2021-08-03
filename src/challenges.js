@@ -32,10 +32,18 @@ function splitSentence(string) {
  // splitSentence("O Rato Roeu a Roupa do Rei de Roma"); // [DEBUG]
 
 // Desafio 4
-function concatName(name) {
+let alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+let numeric = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+function concatName(array) {
   // seu código aqui
-  return name.concat();
+  let concatenation = "";
+  for (index = 0; index < array.lenght; index+=1)
+  {
+    concatenation += array[index];
+  }
+  console.log(concatenation);
 }
+concatName(alphabet);
 
 // Desafio 5
 function footballPoints() {
