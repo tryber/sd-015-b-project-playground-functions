@@ -1,9 +1,8 @@
 // Desafio 1
 function compareTrue(a, b) {
-  if (a === true && b === true) {
-    return true;
-  }return false;
-}
+  function compareTrue(a, b)
+    return a === true && b === true;
+} 
 // Desafio 2
 function calcArea(base, height) {
   return ((base * height) / 2); 
@@ -14,14 +13,14 @@ function splitSentence(str) {
   return str.split(' ');
 }
 // Desafio 4
-function concatName() {
-  return 
+function concatName(lista) {
+  return lista[lista.length- 1] + lista[0]
 }
 
 // Desafio 5
-function footballPoints(wins, ties) {
-  return wins;
-}return ties;
+function footballPoints(wins, ties){
+  return (wins * 3) + ties;
+}
 
 // Desafio 6
 function highestCount(numbers) {
