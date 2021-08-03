@@ -13,13 +13,21 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(str) {
+  let charConv = [];
+  charConv = str.split(' ');
+  return charConv;
 }
 
+var sentense = ['David', 'Alexandre', 'Souza'];
+console.log(sentense.length)
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(sentense) {
+  let arr = sentense;
+  let strConc;
+  let position = arr.length - 1;
+  strConc = sentense[position] + ', ' + sentense[0];
+  return strConc;
 }
 
 // Desafio 5
