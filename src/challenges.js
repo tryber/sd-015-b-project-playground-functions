@@ -67,8 +67,47 @@ function highestCount(array) {
 }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse,cat1,cat2) {
   // seu código aqui
+  // Escrever uma função para descobrir qual das variáveis entre cat1 e cat2 está mais próxima do número que está em mouse. Caso a distância seja a mesma, eles trombam.
+  // Tem uma maneira bem mais fácil de fazer isso com for mas queria testar essa maneira que fiz.
+  let dCat1 = 0;
+  let dCat2 = 0;
+
+  if (cat1 > mouse) {
+    // for diminuindo para cat 1
+    for (i = cat1; i > mouse; i -= 1) {
+      dCat1 += 1;
+    }
+  } else {
+    // for aumentando para cat 1
+    for (i = cat1; i < mouse; i += 1) {
+      dCat1 += 1;
+    }
+  }
+  
+  if (cat2 > mouse) {
+    // for diminuindo para cat 2
+    for (i = cat2; i > mouse; i -= 1) {
+      dCat2 += 1;
+    }
+  } else {
+    // for aumentando para cat 2
+    for (i = cat2; i < mouse; i += 1) {
+      dCat2 += 1;
+    }
+  }
+
+  console.log(dCat1, dCat2)
+
+  if (dCat1 > dCat2) {
+    return 'cat2';
+  } else if (dCat2 > dCat1) {
+    return 'cat1';
+  } else {
+    return 'os gatos trombam e o rato foge';
+  }
+
 }
 
 // Desafio 8
@@ -101,3 +140,4 @@ console.log(splitSentence('foguete'));
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 console.log(footballPoints(14,8));
 console.log(highestCount([0, 0, 0]));
+console.log(catAndMouse(1,0,2));
