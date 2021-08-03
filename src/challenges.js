@@ -95,7 +95,7 @@ function highestCount(numbers) {
 
   for (let compare of numbers) {
 
-    let max = 0;
+    let max = -50000000000;
 
     let min = 0;
 
@@ -118,29 +118,24 @@ function highestCount(numbers) {
         }
       }
     }
-    else if (compare === 0) {
-      for (let counter = 0; counter < numbers.length; counter += 1) {
-            
-        if (compare === numbers[counter]) {
-
-          min += 1;
-
-        }
-
-        if (min > repeat) {
-
-          repeat = min;
-        }
-      }
-    }
     return repeat;
   }
 }
 
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+
+  if ((cat1 - mouse) > (cat2 - mouse)) {
+    return 'cat1';
+  }
+
+  else if ((cat1 - mouse) < (cat2 - mouse)) {
+    return 'cat2';
+  }
+
+  else {
+    return 'os gatos trombam e o rato foge';
+  }
 }
 
 // Desafio 8
