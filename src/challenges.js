@@ -24,10 +24,10 @@ function splitSentence(string) {
 function concatName(array) {
   let ultimaString = array.pop();
   let primeiraString = array.shift();
-  let resultado = ultimaString + ' ' + primeiraString;
-
+  let resultado = ultimaString + ', ' + primeiraString;
   return resultado;
-}console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
+}
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -67,9 +67,23 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function arrayNumber(array) {
+  for (let index = 0; index < array.length; index += 1) {
+    let numero = array[index];
+    return numero;
+  }
 }
+function fizzBuzz() {
+  arrayNumber(array);
+  if (array[numero] % 3 === 0 && array[numero] % 5 !== 0) {
+    console.log('fizz');
+  } if (array[numero] % 5 === 0 && array[numero] % 3 !== 0) {
+    console.log('buzz');
+  } if (array[numero] % 3 === 0 && array[numero] % 5 === 0) {
+    console.log('fizzBuzz')
+  } console.log('bug!')  
+}
+
 
 // Desafio 9
 function encode() {
