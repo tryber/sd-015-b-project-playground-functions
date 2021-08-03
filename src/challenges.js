@@ -1,17 +1,28 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
-  ds
+function compareTrue(t,f) {
+  if(t && f !== true){
+    return false;
+  } else if(t && f !== false){
+    return false;
+  } else if(t && f === false){
+    return false;
+  } else {
+    return true;
+  }
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+let resultado = 0
+resultado = (base * height) / 2
+return resultado;
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  resultado = []
+  resultado = string.split(" ")
+  return resultado;
 }
 
 // Desafio 4
