@@ -5,6 +5,8 @@ function compareTrue() {
 // seu código aqui
 }
                                     console.log(compareTrue(num1=5, num2=10));
+
+
 // Desafio 2
 function calcArea() {
   let area = ((base * height)/2);
@@ -14,10 +16,20 @@ function calcArea() {
                                     console.log(calcArea(base=10, height=50));
                                     console.log(calcArea(base=5, height=2));
                                     console.log(calcArea(base=51, height=1));
+
+
+
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
-}
+function splitSentence(frase) {
+    let palavras = frase;
+    return palavras.split(' ');
+     // seu código aqui
+  }
+                                    console.log(splitSentence("go Trybe"));
+                                    console.log(splitSentence("vamo que vamo"));
+                                    console.log(splitSentence("foguete"));
+ 
+
 
 // Desafio 4
 function concatName() {
