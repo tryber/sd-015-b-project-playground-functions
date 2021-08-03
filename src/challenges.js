@@ -19,7 +19,8 @@ function splitSentence(stringSentence) {
 
 // Desafio 4
 function concatName(array1) {
-  let string1 = array1[array1.length - 1] + ', ' + array1[0];
+  let string1 
+  string1.concat([array1.length - 1], ', ', array1[0])
   return (string1);
 }
 
@@ -33,12 +34,12 @@ function footballPoints(wins, ties) {
 function highestCount(array2) {
   let biggest = Math.max.apply(null, array2);
   let count = 0;
-  for(let index = 0; index < array2.length; index++) {
+  for (let index = 0; index < array2.length; index++) {
     if (biggest === array2[index]) {
-      count++ 
+      count++
     }
   } return (count)
-}
+};
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -51,7 +52,8 @@ function catAndMouse(mouse, cat1, cat2) {
   else if (dist1 > dist2) {
     return ('cat2');
   }
-  else {return ('cat1');
+  else {
+    return ('cat1');
   }
 }
 
@@ -61,16 +63,16 @@ function fizzBuzz(array3) {
   for (let index = 0; index < array3.length; index++) {
     if (array3[index] % 3 === 0 && array3[index] % 5 === 0) {
       frase.push('fizzBuzz');
-    } 
+    }
     else if (array3[index] % 3 === 0) {
       frase.push('fizz');
-    } 
+    }
     else if (array3[index] % 5 === 0) {
       frase.push('buzz');
-    } 
+    }
     else {
       frase.push('bug!');
-    }   
+    }
   }
 
   return (frase);
