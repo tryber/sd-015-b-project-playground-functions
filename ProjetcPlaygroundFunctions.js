@@ -3,9 +3,9 @@
 function compareTrue(a ,b){
 
     if (a && b === true){
-     return(true)
+     return true
     } else {
-        return(false)
+        return false
     }
 
 }
@@ -13,7 +13,7 @@ compareTrue(false, false)
 
 2 
 function calcArea(base, height){
-    return(base * height / 2)
+    return base * height / 2
 }
 
 calcArea(51, 1)
@@ -23,7 +23,7 @@ function splitSentence(a){
 let x;
 x = a.split(' ')
 
-    return(x)
+    return x
 }
 
 splitSentence('go Trybe')
@@ -37,7 +37,7 @@ function concatName(a){
    
    xe = xd[xd.length - 1] + ',' + ' ' + xd[0]
     
-    return(xe)
+    return xe
  
 }
 concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'])
@@ -45,7 +45,7 @@ concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'])
 5 
 function footballPoints(wins, ties){
     let pointTotal = wins * 3 + ties
-    return(pointTotal)
+    return pointTotal
 }
 footballPoints(0, 0)
 
@@ -60,7 +60,7 @@ let quantidade = 0;
 }   
 }
 
-return(quantidade)
+return quantidade
 
 }
 
@@ -72,11 +72,11 @@ function catAndMouse(mouse, cat1, cat2){
     let DistanceCat1 = mouse - cat1
     let DistanceCat2 = mouse - cat2
     if (DistanceCat1 < DistanceCat2){
-        return("cat1")
+        return "cat1"
     } else if (DistanceCat1 > DistanceCat2){ 
-        return("cat2")
+        return "cat2"
     } else { 
-        return("os gatos trombam e o rato foge")
+        return "os gatos trombam e o rato foge"
 }
 }
 catAndMouse(8, 2, 2);
@@ -97,6 +97,28 @@ function fizzBuzz(a){
             newA.push("bug!")
         }
     }
-    return(newA)
+    return newA
 }
 fizzBuzz([7, 9])
+
+9 
+
+function encode(a){
+    let AS = [];
+    for (let i = 0; i <= a.length; i ++){
+        if (a[i] === "a") {
+            AS.push(1)
+        } else if (a[i] === "e"){
+            AS.push(2)
+        } else if (a[i] === "i"){
+            AS.push(3)
+        } else if (a[i] === "o"){
+            AS.push(4)
+        } else if (a[i] === "u"){
+            AS.push(5)
+    }
+   console.log(AS)
+}
+}
+
+encode("aeixdxdouxd")
