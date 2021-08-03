@@ -1,9 +1,9 @@
 // Desafio 1
 function compareTrue() {
-  // seu código aqui
+  // seu código aqu
 }
 
-// Desafio 2
+// Desafio 
 function calcArea() {
   // seu código aqui
 }
