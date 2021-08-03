@@ -23,9 +23,26 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  let highestNumber = 0;
+  let numberCount = {};
+
+  for (index = 0; index < array.length; index += 1) {
+    if (array[index] > highestNumber) {
+      highestNumber = array[index];
+    }
+
+    if (numberCount[array[index]]) {
+      numberCount[array[index]] += 1;
+    } else {
+      numberCount[array[index]] = 1;
+    }
+  }
+
+  return [numberCount[highestNumber]];
 }
+
+console.log(highestCount([0, 0, 0]))
 
 // Desafio 7
 function catAndMouse() {
@@ -45,15 +62,15 @@ function decode() {
   // seu código aqui
 }
 
-module.exports = {
-  calcArea,
-  catAndMouse,
-  compareTrue,
-  concatName,
-  decode,
-  encode,
-  fizzBuzz,
-  footballPoints,
-  highestCount,
-  splitSentence,
-};
+// module.exports = {
+//   calcArea,
+//   catAndMouse,
+//   compareTrue,
+//   concatName,
+//   decode,
+//   encode,
+//   fizzBuzz,
+//   footballPoints,
+//   highestCount,
+//   splitSentence,
+// };
