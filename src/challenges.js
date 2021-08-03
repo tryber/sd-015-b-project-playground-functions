@@ -45,14 +45,13 @@ function highestCount(array) {
   for (let index = 0; index < array.length; index += 1) {
     if (bigestNumber === null || array[index] > bigestNumber) {
       bigestNumber = array[index];
+      numberOfTimes = 0;
     }
-  }
-
-  for (let index = 0; index < array.length; index++) {
     if (bigestNumber === array[index]) {
       numberOfTimes += 1;
     }
   }
+
   return numberOfTimes;
 }
 
