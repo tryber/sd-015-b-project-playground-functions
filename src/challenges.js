@@ -3,9 +3,8 @@
 function compareTrue(par1, par2) {
   if (par1 && par2) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
 console.log(compareTrue(false, true));
 console.log(compareTrue(false, false));
