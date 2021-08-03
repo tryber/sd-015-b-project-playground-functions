@@ -71,12 +71,58 @@ function fizzBuzz(array8) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(text) {
+  let resultado = '';
+  for (let i = 0; i < text.length; i += 1) {
+    switch (text[i]) {
+      case 'a':
+        resultado += '1';
+        break;
+      case 'e':
+        resultado += '2';
+        break;
+      case 'i':
+        resultado += '3';
+        break;
+      case 'o':
+        resultado += '4';
+        break;
+      case 'u':
+        resultado += '5';
+        break;
+      default: //"regra padrão"
+        resultado += text[i];
+    }
+  }
+  return resultado;
 }
-function decode() {
-  // seu código aqui
+
+function decode(text) {
+  let resultado = '';
+  for (let i = 0; i < text.length; i += 1) {
+    switch (text[i]) {
+      case '1':
+        resultado += 'a';
+        break;
+      case '2':
+        resultado += 'e';
+        break;
+      case '3':
+        resultado += 'i';
+        break;
+      case '4':
+        resultado += 'o';
+        break;
+      case '5':
+        resultado += 'u';
+        break;
+      default: 
+        resultado += text[i]; 
+    }
+  }
+  return resultado;
 }
+
 
 module.exports = {
   calcArea,
