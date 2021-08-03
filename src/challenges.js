@@ -27,7 +27,7 @@ function concatName(array) {
   let resultado = ultimaString + primeiraString;
 
   return resultado;
-}console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
+}console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -39,9 +39,24 @@ function footballPoints(wins, ties) {
 }console.log(footballPoints(0, 0));
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
-}
+function highestCount(array) {
+  let numeroAtual = array[0];
+  let numeroVezes = 0;
+  let numeroVezesMaisRepetido = 0;
+  for (let mudancaDeNum = 0; mudancaDeNum < array.length; mudancaDeNum += 1) {
+    numeroAtual = array[mudancaDeNum];
+    for (let comparacao = 0; comparacao < array.length; comparacao += 1) {
+      if (numeroAtual === array[comparacao]) {
+        numeroVezes += 1;
+        if (numeroVezes > numeroVezesMaisRepetido) {
+          numeroVezesMaisRepetido = numeroVezes;
+        }
+      }
+    }
+    numeroVezes = 0;
+  }
+  return numeroVezesMaisRepetido;
+}console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
 function catAndMouse() {
