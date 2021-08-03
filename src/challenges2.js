@@ -1,6 +1,9 @@
 // Desafio 10
 function techList(array, name) {
   // seu código aqui
+  if (array.length === 0) {
+    return 'Vazio!'
+  }
   let ordem = array.sort();
   let conteudo = [];
   let obj = {};
