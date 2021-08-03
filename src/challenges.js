@@ -102,11 +102,46 @@ for (index = 0; index < array.length; index+=1){
 return resultado;
 }
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(array) {
+coletor = array.split("")
+resultado = []
+for(index = 0; index < array.length; index+=1){
+  if(coletor[index] === "a"){
+   resultado.push("1")
+  } else if (coletor[index] === "e"){
+    resultado.push("2")
+  } else if (coletor[index] === "i"){
+    resultado.push("3")
+  } else if (coletor[index] === "o"){
+    resultado.push("4")
+  } else if (coletor[index] === "u"){
+    resultado.push("5")
+  } else {
+    resultado.push(coletor[index])
+  }
 }
-function decode() {
-  // seu código aqui
+return resultado.join('')
+}
+
+function decode(array) {
+coletor = array.split("")
+resultado = []
+for(index = 0; index < array.length; index+=1){
+  if(coletor[index] === "1"){
+   resultado.push("a")
+  } else if (coletor[index] === "2"){
+    resultado.push("e")
+  } else if (coletor[index] === "3"){
+    resultado.push("i")
+  } else if (coletor[index] === "4"){
+    resultado.push("o")
+  } else if (coletor[index] === "5"){
+    resultado.push("u")
+  } else {
+    resultado.push(coletor[index])
+  }
+}
+return resultado.join('')
 }
 
 module.exports = {
