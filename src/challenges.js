@@ -25,10 +25,11 @@ function splitSentence(string) {
 }
 splitSentence('Go trybe');
 // Desafio 4
-function concatName() {
+function concatName(array) {
   // seu código aqui
+  let resultado = `${array[array.length - 1]}, ${array[0]}`;
+  return resultado;
 }
-
 // Desafio 5
 function footballPoints() {
   // seu código aqui
