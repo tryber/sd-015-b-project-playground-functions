@@ -1,18 +1,14 @@
 // Desafio 1
-function compareTrue(a,b) {
+function compareTrue(a, b) {
   // seu código aqui
-  if (a && b) {
-    return true;
-  } else {
-    return false;
-  }
+  if (a && b) { return true; }
+  return false;
 }
 
 // Desafio 2
-function calcArea(base,height) {
+function calcArea(base, height) {
   // seu código aqui
   return (base * height) / 2;
-
 }
 
 // Desafio 3
@@ -21,7 +17,7 @@ function splitSentence(string) {
   let word = '';
   let result = [];
 
-  for (i = 0; i <= string.length; i += 1) {
+  for (let i = 0; i <= string.length; i += 1) {
     if (string[i] === ' ' || i === string.length) {
       result.push(word);
       word = '';
@@ -37,13 +33,12 @@ function splitSentence(string) {
 function concatName(stringArray) {
   // seu código aqui
   // Vou precisar criar uma variável que adiciona o último item da string e o primeiro item da string, não preciso de for para isso
-  let string = '';
-  string += stringArray[stringArray.length-1], string += ', ', string += stringArray[0];
-  return string
+  let string = `${stringArray[stringArray.length - 1]}, ${stringArray[0]}`;
+  return string;
 }
 
 // Desafio 5
-function footballPoints(wins,ties) {
+function footballPoints(wins, ties) {
   // seu código aqui
   // Preciso criar as variáveis winPoints para traduzir a quantidade de vitórias em vezes 3. Depois, só somar winPoints com ties e retornar o resultado.
   let winPoints = wins * 3;
@@ -57,74 +52,36 @@ function highestCount(array) {
   let highestNumber = Math.max(...array);
   let repeat = 0;
 
-  for (number of array) {
+  for (let number of array) {
     if (number === highestNumber) {
       repeat += 1;
     }
   }
-  
   return repeat;
 }
 
 // Desafio 7
-function catAndMouse(mouse,cat1,cat2) {
-  // seu código aqui
-  // Escrever uma função para descobrir qual das variáveis entre cat1 e cat2 está mais próxima do número que está em mouse. Caso a distância seja a mesma, eles trombam.
-  // Tem uma maneira bem mais fácil de fazer isso com for mas queria testar essa maneira que fiz.
-  let dCat1 = 0;
-  let dCat2 = 0;
-
-  if (cat1 > mouse) {
-    // for diminuindo para cat 1
-    for (i = cat1; i > mouse; i -= 1) {
-      dCat1 += 1;
-    }
-  } else {
-    // for aumentando para cat 1
-    for (i = cat1; i < mouse; i += 1) {
-      dCat1 += 1;
-    }
-  }
-  
-  if (cat2 > mouse) {
-    // for diminuindo para cat 2
-    for (i = cat2; i > mouse; i -= 1) {
-      dCat2 += 1;
-    }
-  } else {
-    // for aumentando para cat 2
-    for (i = cat2; i < mouse; i += 1) {
-      dCat2 += 1;
-    }
-  }
-
-  console.log(dCat1, dCat2)
-
-  if (dCat1 > dCat2) {
-    return 'cat2';
-  } else if (dCat2 > dCat1) {
-    return 'cat1';
-  } else {
-    return 'os gatos trombam e o rato foge';
-  }
-
+function catAndMouse(mouse, cat1, cat2) {
+  let result = [];
+  result.push(Math.abs(cat1 - mouse)); result.push(Math.abs(cat2 - mouse));
+  if (result[0] > result[1]) { return 'cat2'; }
+  if (result[0] < result[1]) { return 'cat1'; }
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
 function fizzBuzz(array) {
-  // seu código aqui
-  // Basicamente um for que divide do 2 até o número atual e caso o resultado da divisão for um número inteiro, ele retorna um resultado diferente.
   let result = [];
 
-  for (i = 0; i < array.length; i += 1) {
+  for (let i = 0; i < array.length; i += 1) {
     if (Number.isInteger(array[i] / 3) && Number.isInteger(array[i] / 5)) {
-      result.push('fizzBuzz')
+      result.push('fizzBuzz');
     } else if (Number.isInteger(array[i] / 3)) {
-      result.push('fizz')
+      result.push('fizz');
     } else if (Number.isInteger(array[i] / 5)) {
-      result.push('buzz')
+      result.push('buzz');
     } else {
-      result.push('bug!')
+      result.push('bug!');
     }
   }
 
@@ -133,20 +90,12 @@ function fizzBuzz(array) {
 
 // Desafio 9
 function encode(string) {
-  // seu código aqui
   let result = '';
-  let code = {
-    a: 1,
-    e: 2,
-    i: 3,
-    o: 4,
-    u: 5,
-  }
+  let code = { a: 1, e: 2, i: 3, o: 4, u: 5 };
 
-  // Um for que checa cada letra, e outro for dentro do for que vai ser um for in que chega cada chave do objeto, e compara a chave para a letra. Se a letra for a mesma, ela transplanta a tradução. Se não tiver nenhuma letra que combina, ela apenas retorna a letra da string.
-  for (i = 0; i < string.length; i +=1) {
-    for (key in code) {
-      if (code.hasOwnProperty(string[i])) {
+  for (let i = 0; i < string.length; i += 1) {
+    for (let key in code) {
+      if (Object.prototype.hasOwnProperty.call(code, string[i])) {
         if (key === string[i]) {
           result += code[key];
         }
@@ -159,21 +108,14 @@ function encode(string) {
 
   return result;
 }
-function decode(string) {
-  // seu código aqui
-  // seu código aqui
-  let result = '';
-  let code = {
-    1: 'a',
-    2: 'e',
-    3: 'i',
-    4: 'o',
-    5: 'u',
-  }
 
-  for (i = 0; i < string.length; i +=1) {
-    for (key in code) {
-      if (code.hasOwnProperty(string[i])) {
+function decode(string) {
+  let result = '';
+  let code = { 1: 'a', 2: 'e', 3: 'i', 4: 'o', 5: 'u' };
+
+  for (let i = 0; i < string.length; i += 1) {
+    for (let key in code) {
+      if (Object.prototype.hasOwnProperty.call(code, string[i])) {
         if (key === string[i]) {
           result += code[key];
         }
