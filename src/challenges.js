@@ -22,9 +22,14 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(string, space) {
   // seu código aqui
+  var space = ' ';
+  var arrayOfStrings = string.split(space);
+  //console.log(arrayOfStrings); [DEBUG]
+  return arrayOfStrings;
 }
+//splitSentence("O Rato Roeu a Roupa do Rei de Roma"); [DEBUG]
 
 // Desafio 4
 function concatName() {
