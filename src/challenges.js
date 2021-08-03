@@ -22,7 +22,7 @@ function splitSentence(str) {
 // Desafio 4
 function concatName(array) {
   // seu código aqui
-  let resultado = (array[array.length - 1] + ' , ' + array[0]);
+  let resultado = ((array[array.length - 1]) + ', ' + (array[0]));
   return resultado;
 }
 
