@@ -28,15 +28,10 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(array) {
-  let arrayMax = array[0];
+  let arrayMax = Math.max(array); // ref: https://pt.stackoverflow.com/questions/35202/como-saber-o-maior-valor-de-um-array
   let arrayMaxCount = 0;
-  for (let indexMaxNumber = 0; indexMaxNumber < array.length; indexMaxNumber += 1) {
-    if (array[indexMaxNumber] > arrayMax) {
-      arrayMax = array[indexMaxNumber];
-    }
-  }
-  for (let indexMaxCount = 0; indexMaxCount < array.length; indexMaxCount += 1) {
-    if (array[indexMaxCount] === arrayMax) {
+  for (let index = 0; index < array; index += 1) {
+    if (array[index] === arrayMax) {
       arrayMaxCount += 1;
     }
   }
