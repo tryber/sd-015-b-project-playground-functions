@@ -15,22 +15,22 @@ calcArea(5, 2);
 
 // Desafio 3
 function splitSentence(string) {
-  return string.split(" ");
+  return string.split(' ');
 }
 
 console.log(splitSentence('vamo que vamo'));
 
 // Desafio 4
 function concatName(lista) {
-  return lista[lista.length-1] + ", " + lista[0];
+  return lista[lista.length - 1] + ', ' + lista[0];
 }
 
 let nomes = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
 console.log(concatName(nomes));
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins) {
+  
 }
 
 // Desafio 6
