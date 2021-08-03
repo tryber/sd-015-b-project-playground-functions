@@ -51,8 +51,19 @@ function footballPoints(wins,ties) {
 }
 
 // Desafio 6
-function highestCount() {
+function highestCount(array) {
   // seu código aqui
+  // Criar um for que recebe o maior valor em uma variável, e no final do for com um if ele abre outro for que calcula a quantidade de vezes que foi repetido.
+  let highestNumber = Math.max(...array);
+  let repeat = 0;
+
+  for (number of array) {
+    if (number === highestNumber) {
+      repeat += 1;
+    }
+  }
+  
+  return repeat;
 }
 
 // Desafio 7
@@ -89,3 +100,4 @@ module.exports = {
 console.log(splitSentence('foguete'));
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 console.log(footballPoints(14,8));
+console.log(highestCount([0, 0, 0]));
