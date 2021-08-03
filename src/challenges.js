@@ -34,8 +34,12 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName() {
+function concatName(stringArray) {
   // seu código aqui
+  // Vou precisar criar uma variável que adiciona o último item da string e o primeiro item da string, não preciso de for para isso
+  let string = '';
+  string += stringArray[stringArray.length-1], string += ', ', string += stringArray[0];
+  return string
 }
 
 // Desafio 5
@@ -80,3 +84,4 @@ module.exports = {
 };
 
 console.log(splitSentence('foguete'));
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
