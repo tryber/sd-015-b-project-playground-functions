@@ -18,8 +18,20 @@ function techList(array, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
+function generatePhoneNumber(numbers) {
   // seu código aqui
+  if(numbers.length !== 11){
+    return 'Array com tamanho incorreto.'
+  }else{
+    let phoneNumber = []
+    for(let i = 0; i < numbers.length;i += 1){
+      if(i === 0) phoneNumber.push('(')
+      else if(i === 2) phoneNumber.push(') ')
+      else if(i === 7) phoneNumber.push('-')
+      phoneNumber.push(numbers[i])
+    }
+    return phoneNumber.join('')
+  }
 }
 
 // Desafio 12
