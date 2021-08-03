@@ -58,16 +58,16 @@ function checkValidity(array) {
 }
 function generatePhoneNumber(array) {
   let phoneNumber = '';
-  for (let item of array) {
-    phoneNumber += checkPosition(phoneNumber);
-    phoneNumber += item;
-  }
   if (checkValidity(array)) {
     return checkValidity(array);
   }
   let myDict = createFrequencyArray(array);
   if (checkRepetition(myDict)) {
     return checkRepetition(myDict);
+  }
+  for (let item of array) {
+    phoneNumber += checkPosition(phoneNumber);
+    phoneNumber += item;
   }
   return phoneNumber;
 }
