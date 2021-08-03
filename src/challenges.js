@@ -73,10 +73,21 @@ function highestCount(maior) {
 console.log(highestCount([0,4,4,4,9,2,1]))
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(cat1, cat2) {
+  if (cat1 === cat2){
+    let posEquals = 'Os gatos trombam e o rato foge';
+    return posEquals;
+  }
+  else if (cat1 < cat2){
+    let cat1MaisPerto = 'cat1';
+    return cat1MaisPerto;
+  }
+  else {
+    let cat2MaisPerto = 'cat2';
+    return cat2MaisPerto;
+  }
 }
-
+console.log(catAndMouse(6, 12))
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
