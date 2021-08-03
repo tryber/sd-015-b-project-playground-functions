@@ -42,7 +42,7 @@ function highestCount(array) {
     if (num > numberMaior) numberMaior = num;
   }
   for (let num of array) {
-    if (num === numberMaior) count++;
+    if (num === numberMaior) count += 1;
   }
   return count;
 }
@@ -59,8 +59,20 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz (arrayNumbers) {
+  let phrase = [];
+  for (let num of arrayNumbers) {
+    if (num % 5 === 0 && num % 3 === 0) {
+      phrase.push('fizzBuzz');
+    } else if (num % 5 === 0) {
+      phrase.push('buzz');
+    } else if (num % 3 === 0) {
+      phrase.push('fizz');
+    } else {
+      phrase.push('bug!');
+    }
+  }
+  return phrase;
 }
 
 // Desafio 9
