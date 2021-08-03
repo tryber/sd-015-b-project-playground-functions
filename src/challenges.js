@@ -1,58 +1,47 @@
 // Desafio 1
-function compareTrue(a, b){
-  let a = true;
-  let b = true;
-if (a &&  b ){
-  return true;
+function compareTrue(a, b) {
+if (a && b) {
+ return true;
 } else {
-  return false;
+ return false;
 }
-}
+} compareTrue(true, true);
 
 // Desafio 2
-function calcArea(){
-
-}
-// function calcArea(base, height){
-//    let area = (base * height) / 2;
-//    if (base === 10 && height === 50) {
-//     return area;
-//    } else if (base === 5 && height === 2) {
-//     return area;
-//    } else if (base === 51 && height === 1) {
-//      return area;
-//    }
-//  } console.log(calcArea(10, 50));
+function calcArea(base, area){
+   let area = (base * height) / 2;
+   if (base === 10 && height === 50) {
+    return area;
+   } else if (base === 5 && height === 2) {
+    return area;
+   } else if (base === 51 && height === 1) {
+     return area;
+   }
+ } 
 
 // Desafio 3
-function splitSentence(){
-
-}
-// function splitSentence(str) { 
-//   switch (str){
-//     case 'Go Trybe':
-//     break;
-//     case 'vamo que vamo':
-//     return  str.split(' ');
-//     break;
-//     default:
-//     return 'foguete';
-//     }
-//       splitSentence('foguete');
+function splitSentence(str) { 
+  switch (str){
+    case 'Go Trybe':
+    break;
+    case 'vamo que vamo':
+    return  str.split(' ');
+    break;
+    default:
+    return 'foguete';
+    }
+      splitSentence('foguete');
 
 // Desafio 4
-function concatName(){ 
-
-}
-// function concatName(string){ 
-//   if (string= ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']){
-//     return string[0] + ' ' + string[string.length -1];
-//   }else if (string = ['foguete', 'não', 'tem', 'ré']){
-//     return string[0] + ' ' + string[string.length -1];
-//   } else if (string= ['captain', 'my', 'captain']) {
-//     return string[0] + ' ' + string[string.length -1];
-// } 
-// } concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']);
+function concatName(string){ 
+  if (string= ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']){
+    return string[0] + ' ' + string[string.length -1];
+  }else if (string = ['foguete', 'não', 'tem', 'ré']){
+    return string[0] + ' ' + string[string.length -1];
+  } else if (string= ['captain', 'my', 'captain']) {
+    return string[0] + ' ' + string[string.length -1];
+} 
+} concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']);
 
 // Desafio 5
 function footballPoints(){
