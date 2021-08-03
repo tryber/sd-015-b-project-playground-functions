@@ -21,19 +21,20 @@ function splitSentence(frase) {
   let worlds = frase.split(' ');
   return worlds;
 }
-console.log(splitSentence('go Trybe'));
-console.log(splitSentence('vamo que vamo'));
-console.log(splitSentence('foguete'));
+
 // Desafio 4
 function concatName() {
   // seu código aqui
 }
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
+  return (wins * 3) + ties;
 }
-
+console.log(footballPoints(14, 8));
+console.log(footballPoints(1, 2));
+console.log(footballPoints(0, 0));
 // Desafio 6
 function highestCount() {
   // seu código aqui
