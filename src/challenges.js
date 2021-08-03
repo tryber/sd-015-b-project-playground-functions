@@ -28,7 +28,7 @@ function footballPoints(wins, ties) {
     let vitorias = wins * 3;
     let empates = ties;
     let pontos = vitorias + empates;
-    return pontos + ' pontos'
+    return pontos;
 }
 // Desafio 6
 function highestCount() {
