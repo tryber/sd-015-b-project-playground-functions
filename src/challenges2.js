@@ -29,7 +29,7 @@ function techList(lista, nome) {
   }
 }
 
-techList(listaTecnologias, nome);
+// techList(listaTecnologias, nome); // [DEBUG]
 
 // Desafio 11
 function generatePhoneNumber() {
