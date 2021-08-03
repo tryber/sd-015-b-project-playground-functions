@@ -64,8 +64,16 @@ function triangleCheck(lineA,lineB,lineC) {
 }
 
 // Desafio 13
-function hydrate() {
+function hydrate(string) {
   // seu código aqui
+  let water = string.match(/\d+/g).map(Number)
+  let result = 0;
+
+  for (i = 0; i < water.length; i += 1) {
+    result = result + water[i]
+  }
+
+  return result;
 }
 
 module.exports = {
@@ -75,4 +83,4 @@ module.exports = {
   triangleCheck,
 };
 
-console.log(triangleCheck(10, 14, 8))
+console.log(hydrate("4 copos de cerveja e 5 de agua com 12 de vinho"))
