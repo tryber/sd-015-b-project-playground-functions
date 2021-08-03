@@ -106,38 +106,38 @@ function fizzBuzz(array) {
 // Desafio 9
 
 // eslint-disable-next-line complexity
-function selectLetterToEncode(letterIndex, string) {
-  switch (string[letterIndex]) {
-    case 'a':
-      return '1';
-    case 'e':
-      return '2';
-    case 'i':
-      return '3';
-    case 'o':
-      return '4';
-    case 'u':
-      return '5';
-    default:
-      return string[letterIndex];
+function selectLetterToEncode(letterIndex, array) {
+  switch (array[letterIndex]) {
+  case 'a':
+    return '1';
+  case 'e':
+    return '2';
+  case 'i':
+    return '3';
+  case 'o':
+    return '4';
+  case 'u':
+    return '5';
+  default:
+    return array[letterIndex];
   }
 }
 
 // eslint-disable-next-line complexity
-function selectLetterToDecode(letterIndex, string) {
-  switch (string[letterIndex]) {
-    case '1':
-      return 'a';
-    case '2':
-      return 'e';
-    case '3':
-      return 'i';
-    case '4':
-      return 'o';
-    case '5':
-      return 'u';
-    default:
-      return string[letterIndex];
+function selectLetterToDecode(letterIndex, array) {
+  switch (array[letterIndex]) {
+  case '1':
+    return 'a';
+  case '2':
+    return 'e';
+  case '3':
+    return 'i';
+  case '4':
+    return 'o';
+  case '5':
+    return 'u';
+  default:
+    return array[letterIndex];
   }
 }
 
@@ -150,24 +150,23 @@ function arrayToString(array) {
 }
 
 function encode(string) {
-  string = Array.from(string);
-  for (const letterIndex in string) {
+  const array = Array.from(string);
+  for (const letterIndex in array) {
     if (letterIndex >= 0) {
-      string[letterIndex] = selectLetterToEncode(letterIndex, string);
+      array[letterIndex] = selectLetterToEncode(letterIndex, array);
     }
   }
-  return arrayToString(string);
+  return arrayToString(array);
 }
 
 function decode(string) {
-  string = Array.from(string);
-  for (const letterIndex in string) {
+  const array = Array.from(string);
+  for (const letterIndex in array) {
     if (letterIndex >= 0) {
-      string[letterIndex] = selectLetterToDecode(letterIndex, string);
+      array[letterIndex] = selectLetterToDecode(letterIndex, array);
     }
   }
-
-  return arrayToString(string);
+  return arrayToString(array);
 }
 
 encode('hello');
