@@ -40,9 +40,6 @@ console.log(footballPoints(14, 8));
 
 // Desafio 6
 
-let highNumber = [];
-let cont = 0;
-
 function highestCount(numbers) {
   let highestNumber = numbers[0];
   let count = 0;
@@ -60,6 +57,7 @@ let array = [0, 4, 4, 4, 9, 2, 1];
 console.log(highestCount(array));
 
 // Desafio 7
+
 function catAndMouse(mouse, cat1, cat2) {
   let distanciaCat1 = cat1 - mouse;
   let distanciaCat2 = cat2 - mouse;
@@ -67,7 +65,7 @@ function catAndMouse(mouse, cat1, cat2) {
     console.log('cat 2');
   } else if (distanciaCat1 < distanciaCat2) {
     console.log('cat 1');
-  } else if (distanciaCat1 === distanciaCat2) {
+  } else {
     console.log('os gatos trombam e o rato foge');
   }
 }
