@@ -7,12 +7,23 @@ function compareTrue(a, b) {
 function calcArea(base, height) {
   return (base * height) / 2;
 }
-let area = calcArea(51, 1);
-console.log(area);
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(sentence) {
+  let splited = [];
+
+  let word = '';
+  for (let i = 0; i < sentence.length; i += 1) {
+    if (sentence[i] === ' ') {
+      splited.push(word);
+      word = '';
+    } else {
+      word += sentence[i];
+    }
+  }
+
+  splited.push(word);
+  return splited;
 }
 
 // Desafio 4
