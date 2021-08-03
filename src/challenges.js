@@ -6,17 +6,16 @@ function compareTrue(a, b) {
     return false;
   }
 
-
 // Desafio 2
 function calcArea(base, height) {
   let area = (base * height)/2;
   if (calcArea(10,50)){
-      console.log(area) ;
+      return area ;
   }else if (calcArea(2,10)) {
-    console.log(area) ;
+      return area ;
   } else if (calcArea(51,1)){
-    console.log(area) ;
-} calcArea(10,50);
+      return area ;
+} 
 
 // Desafio 3
 function splitSentence(string) {
