@@ -3,8 +3,7 @@ function compareTrue(param1, param2) {
   // seu código aqui
   if (param1 === true && param2 === true) {
     return true;
-  }
-  else {
+  } else {
     return false;
   }
 }
@@ -56,14 +55,18 @@ function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
   let distMouseCat1 = mouse - cat1;
   let distMouseCat2 = mouse - cat2;
-  if (distMouseCat1 === distMouseCat2) {
-    return "os gatos trombam e o rato foge";
-  }
-  else if (distMouseCat1 < distMouseCat2) {
-    return "cat2"
-  }
-  else {
-    return "cat1"
+	if (distMouseCat1 < 0) {
+		distMouseCat1 *= (-1);
+	}
+	if (distMouseCat2 < 0) {
+		distMouseCat2 *= (-1);
+	}
+  if (distMouseCat1 == distMouseCat2) {
+    return 'os gatos trombam e o rato foge';
+  } else if (distMouseCat1 < distMouseCat2) {
+    return 'cat2';
+  } else {
+    return 'cat1';
   }
 }
 
