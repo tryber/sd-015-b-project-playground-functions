@@ -1,16 +1,15 @@
 // Desafio 1
 function compareTrue(a, b) {
-  if(a && b) {
+  if (a && b) {
     return true;
-  } else {
-    return false;
-  }
+  } 
+  return false;
+  
 }
 
 compareTrue(false, true);
 compareTrue(false, false);
 compareTrue(true, true);
-
 // Desafio 2
 function calcArea(base, height) {
   return (base* height)/2;
