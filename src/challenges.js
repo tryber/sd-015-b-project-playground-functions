@@ -45,8 +45,6 @@ function highestCount(array) {
   }
   return count;
 }
-let array = [0, 4, 4, 4, 9, 2, 1];
-console.log(highestCount(array));
 
 // Desafio 7
 function catAndMouse() {
