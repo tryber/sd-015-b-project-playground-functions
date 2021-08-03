@@ -5,13 +5,18 @@ function compareTrue(booleanPar1, booleanPar2) {
   }
   return false;
 }
-console.log('Resultado ', compareTrue(true, true));
+console.log('1° Resultado ', compareTrue(true, true));
+
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, heigth) {
+  let triArea = (base * heigth) / 2;
+  return triArea;
 }
 
+console.log('2° Resultado ', calcArea(51, 1));
+
 // Desafio 3
+
 function splitSentence() {
   // seu código aqui
 }
