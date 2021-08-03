@@ -17,9 +17,11 @@ console.log('2° Resultado ', calcArea(51, 1));
 
 // Desafio 3
 
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  const splitStr = string.split(' ');
+  return splitStr;
 }
+console.log('3° Divide a senteça', splitSentence('go Trybe'));
 
 // Desafio 4
 function concatName() {
