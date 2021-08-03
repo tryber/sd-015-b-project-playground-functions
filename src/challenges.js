@@ -28,11 +28,11 @@ function footballPoints(wins, ties) {
   // seu código aqui
   return (wins * 3) + ties
 }
-console.log(footballPoints(0, 0))
 
 // Desafio 6
 function highestCount() {
   // seu código aqui
+
 }
 
 // Desafio 7
