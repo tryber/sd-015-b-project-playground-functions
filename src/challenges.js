@@ -27,7 +27,7 @@ function splitSentence(str){
     return  str.split(' '); 
     break;
     default:
-      return 'foguete';    
+    return 'foguete';    
     }
       splitSentence('foguete'); 
 
