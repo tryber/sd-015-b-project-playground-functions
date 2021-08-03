@@ -75,7 +75,7 @@ function fizzBuzz(array) {
   // seu código aqui
   let contador = [];
   for (let key in array) {
-    if  (array[key] % 3 === 0 && array[key] % 5 === 0) {
+    if (array[key] % 3 === 0 && array[key] % 5 === 0) {
       contador.push('fizzBuzz');
     } else if (array[key] % 3 === 0) {
       contador.push('fizz');
@@ -89,11 +89,52 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
+function encode(string) {
   // seu código aqui
+  let array = string.split('');
+  for (let key in array) {
+    if (array[key] === 'a') {
+      array.splice(key, 1,'1');
+    }
+    else if (array[key] === 'e') {
+      array.splice(key, 1, '2');
+    }
+    else if (array[key] === 'i') {
+      array.splice(key, 1, '3');
+    }
+    else if (array[key] === 'o') {
+      array.splice(key, 1, '4')
+    }
+    else if (array[key] === 'u') {
+      array.splice(key, 1, '5')
+    }
+  }
+  let text = array.join('');
+  return text;
 }
+
 function decode() {
   // seu código aqui
+  let array = string.split('');
+  for (let key in array) {
+    if (array[key] === '1') {
+      array.splice(key, 1,'a');
+    }
+    else if (array[key] === '2') {
+      array.splice(key, 1, 'e');
+    }
+    else if (array[key] === '3') {
+      array.splice(key, 1, 'i');
+    }
+    else if (array[key] === '4') {
+      array.splice(key, 1, 'o')
+    }
+    else if (array[key] === '5') {
+      array.splice(key, 1, 'u')
+    }
+  }
+  let text = array.join('');
+  return text;
 }
 
 module.exports = {
