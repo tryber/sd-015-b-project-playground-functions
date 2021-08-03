@@ -64,6 +64,7 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(array) {
   let zArray = [];
   for (let item of array) {
+    // Tira &&
     if (item % 3 && item % 5) {
       zArray.push('bug!');
     } else if (item % 3) {
