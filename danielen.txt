@@ -1,2 +1,9 @@
 Projeto 02 - JavaScript 
 
+function compareTrue(a, b) {
+  if (a === true && b === true) 
+    return true; 
+  else 
+    return false;
+} 
+console.log(compareTrue(true, true));
