@@ -83,7 +83,6 @@ let trombam = 'os gatos trombam e o rato foge'
     return gato2
   }
 } 
-console.log(catAndMouse(1,0,2))
 
 
 // Desafio 8
