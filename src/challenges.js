@@ -18,6 +18,7 @@ function calcArea(base, altura) {
 function splitSentence(string) {
  return string.split(" ");
 }
+//pesquisa feita pelo w3schools para entender como .split se comporta
 
 // Desafio 4
 function concatName() {
