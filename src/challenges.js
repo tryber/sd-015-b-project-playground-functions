@@ -63,10 +63,8 @@ function highestCount(numbers) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-  let distanceCat1 = mouse - cat1;
-  distanceCat1 *= Math.sign(distanceCat1);
-  let distanceCat2 = mouse - cat2;
-  distanceCat2 *= Math.sign(distanceCat2);
+  let distanceCat1 = Math.abs(mouse - cat1);
+  let distanceCat2 = Math.abs(mouse - cat2);
 
   if (distanceCat1 < distanceCat2) {
     return 'cat1';
@@ -83,8 +81,8 @@ function fizzBuzz(numbers) {
   let answer = [];
 
   for (const num of numbers) {
-    let isDivisibleBy3 = num % 3 === 0;
-    let isDivisibleBy5 = num % 5 === 0;
+    const isDivisibleBy3 = num % 3 === 0;
+    const isDivisibleBy5 = num % 5 === 0;
 
     if (isDivisibleBy3 && isDivisibleBy5) {
       answer.push('fizzBuzz');
