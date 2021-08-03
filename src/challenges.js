@@ -2,17 +2,20 @@
 function compareTrue() {
   let a = true;
   let b = true;
-  if (a === true && b === true){
-    return true
-  }
-}console.log(compareTrue(true,true))
+  if (a === true && b === true) {
+    return true;
+  } return false;
+
+} ;
 // Desafio 2
 function calcArea(base, height) {
-    return ((base * height) / 2)  
+  return ((base * height) / 2)  
 }
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(str) {
+  return str.split(" ")
+  
 }
 
 // Desafio 4
@@ -21,8 +24,9 @@ function concatName() {
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return footballPoints
+  
 }
 
 // Desafio 6
