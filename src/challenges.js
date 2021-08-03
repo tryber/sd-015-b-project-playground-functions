@@ -1,25 +1,35 @@
 // Desafio 1
 function compareTrue() {
-  // seu código aqui
+  let isEven = ((num1 % 2)=== 0) && ((num2 % 2)=== 0);
+  return isEven;
+// seu código aqui
 }
 
 // Desafio 2
 function calcArea() {
+  let area = ((base * height)/2);
+  return area;  
   // seu código aqui
 }
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(frase) {
+  let palavras = frase;
+  return palavras.split(' ');
   // seu código aqui
-}
+  }
 
 // Desafio 4
-function concatName() {
+function concatName(array) {
+  let {length, 0: first, [length-1]: last} = array;
+  return last+first;
   // seu código aqui
 }
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(jogos) {
+  let pontos = ((wins*3)+(ties*1));
+  return pontos;
   // seu código aqui
 }
 
