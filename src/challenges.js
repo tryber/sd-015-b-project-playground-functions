@@ -43,12 +43,21 @@ function highestCount(array) {
   }
   return count;
 }
-let myArray = [10, 2, 3, 10, 8, 1, 12]
-console.log(highestCount(myArray))
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let distanceCat1 = Math.abs(mouse - cat1);
+  let distanceCat2 = Math.abs(mouse - cat2);
+  let cat1Cat2 = distanceCat1 - distanceCat2;
+  let result = null;
+  if (cat1Cat2 > 0) {
+    result = 'cat2';
+  } else if (cat1Cat2 < 0) {
+    result = 'cat1';
+  } else {
+    result = 'os gatos trombam e o rato foge';
+  }
+  return result;
 }
 
 // Desafio 8
