@@ -85,8 +85,7 @@ function highestCount(arr) {
 // console.log( highestCount([])) // teste extra
 
 // Desafio 7
-function catAndMouse(cat1, cat2) {
-  let mouse = 0;
+function catAndMouse(mouse, cat1, cat2) {
   let line;
   let dist1 = Math.abs(cat1 - mouse);
   let dist2 = Math.abs(cat2 - mouse);
