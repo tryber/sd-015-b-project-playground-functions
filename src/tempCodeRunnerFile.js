@@ -1,15 +1,28 @@
-function triangleCheck(lineA,lineB,lineC) {
-  if (lineA < lineB+lineC && lineA > Math.abs(lineB-lineC)) {
-    return true
+function encode(str) {
+  string = str.split('')
+  let strings = []
+  for (letter of string) {
+    if (letter === 'a') {
+      strings.push('1')
+    }
+    else if (letter === 'e') {
+      strings.push('2')
+    }
+    else if (letter === 'i') {
+      strings.push('3')
+    }
+    else if (letter === 'o') {
+      strings.push('4')
+    }
+    else if (letter === 'u') {
+      strings.push('5')
+    }
+    else{
+      strings.push(letter)
+    }
+
   }
-  else if (lineB < lineA+lineC && lineB > Math.abs(lineA-lineC)) {
-    return true
-  }
-  else if (lineC < lineB+lineA && lineC > Math.abs(lineB-lineA)) {
-    return true
-  }
-  else {
-    return false
-  }
+  console.log(strings.join(''));
+  return strings.join('')
 }
-console.log(triangleCheck(10, 14, 8));
+console.log(encode("hi there!"));
