@@ -4,7 +4,7 @@ function compareTrue(n1, n2) {
   // seu código aqui
   if (n1 && n2 === true) {
     return value;
-} if (n1 && n2 !== true) {
+  } else {
     value = false;
     return value;
   }
