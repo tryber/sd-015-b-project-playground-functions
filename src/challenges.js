@@ -48,7 +48,7 @@ function highestCount(arrayNumeros) {
   return contador;
 }
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   if (Math.abs((cat1 - mouse)) < Math.abs((cat2 - mouse))) {
     return 'cat1';
   } 
@@ -100,6 +100,8 @@ function decode(numeros) {
   numeros = numeros.replace(/5/g, 'u');
   return numeros;
 } 
+
+//método replace pesquisado em https://blog.betrybe.com/javascript/javascript-replace/
 
 module.exports = {
   calcArea,
