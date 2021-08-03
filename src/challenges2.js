@@ -62,9 +62,18 @@ function triangleCheck(lineA, lineB, lineC) {
 // Desafio 13
 function hydrate(str) {
   // seu código aqui
-  for (let index in str) {
-    for (let nextIndex in str) {
-    }
+  let regularExpression = /\d+/g;
+  let arrayNumbers = str.match(regularExpression);
+  let sumWaterCups = 0;
+
+  for (index in arrayNumbers) {
+    numberInteger = parseInt(arrayNumbers[index]);
+    sumWaterCups += numberInteger;
+  }
+  if (sumWaterCups == 1) {
+    return sumWaterCups + ' copo de água';
+  } else {
+    return sumWaterCups + ' copos de água';
   }
 }
 
