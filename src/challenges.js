@@ -1,6 +1,7 @@
 // Desafio 1
 function compareTrue(bool1, bool2) {
   let result;
+
   if (bool1 && bool2) { 
     result = true;
   }
@@ -13,24 +14,28 @@ function compareTrue(bool1, bool2) {
 // Desafio 2
 function calcArea(base, height) {
   let result = (base * height) / 2;
+
   return result;
 }
 
 // Desafio 3
 function splitSentence(sentence) {
   let arrOfStrings = sentence.split(' ');
+
   return arrOfStrings;
 }
 
 // Desafio 4
 function concatName(arrOfStrings) {
   let concatString = arrOfStrings[arrOfStrings.length -1] + ", " + arrOfStrings[0];
+
   return concatString;
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
   let totalPoints = (wins * 3) + ties;
+
   return totalPoints;
 }
 
@@ -49,12 +54,21 @@ function highestCount(arrOfNumbers) {
       highestNumberCount++;
     }
   }
+  
   return highestNumberCount;
 }
 
 // Desafio 7
 function catAndMouse() {
-  // seu código aqui
+  if (mouse - cat1 < mouse - cat2) {
+    return "cat1";
+  }
+  else if (mouse - cat1 > mouse - cat2) {
+    return "cat2";
+  }
+  else {
+    return "os gatos trombam e o rato foge"
+  }
 }
 
 // Desafio 8
