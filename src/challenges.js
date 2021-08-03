@@ -48,8 +48,20 @@ function biggestNumber(numbers){
 }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, catOne, catTwo) {
   // seu código aqui
+  let catOneDis = calcDis(mouse, catOne)
+  let catTwoDis = calcDis(mouse, catTwo)
+  let string = ''
+
+  if (catOneDis < catTwoDis) string = 'cat1'
+  else if (catTwoDis < catOneDis) string = 'cat2'
+  else string = 'os gatos trombam e o rato foge'
+
+  return string
+}
+function calcDis(mouse, cat){
+  return Math.abs(mouse - cat)
 }
 
 // Desafio 8
