@@ -103,17 +103,17 @@ function encode(string) {
       array.splice(key, 1, '3');
     }
     else if (array[key] === 'o') {
-      array.splice(key, 1, '4')
+      array.splice(key, 1, '4');
     }
     else if (array[key] === 'u') {
-      array.splice(key, 1, '5')
+      array.splice(key, 1, '5');
     }
   }
   let text = array.join('');
   return text;
 }
 
-function decode() {
+function decode(string) {
   // seu código aqui
   let array = string.split('');
   for (let key in array) {
@@ -127,10 +127,10 @@ function decode() {
       array.splice(key, 1, 'i');
     }
     else if (array[key] === '4') {
-      array.splice(key, 1, 'o')
+      array.splice(key, 1, 'o');
     }
     else if (array[key] === '5') {
-      array.splice(key, 1, 'u')
+      array.splice(key, 1, 'u');
     }
   }
   let text = array.join('');
