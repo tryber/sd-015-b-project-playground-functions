@@ -55,22 +55,29 @@ function highestCount(array) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let resultado = undefined;
-  if (cat1 <= 0 || cat2 <=0 || mouse <= 0){
-    resultado = false;
-  } else if ((cat1 >= mouse && cat1 < cat2) || (cat1 <= mouse && cat1 > cat2)){
-    resultado = 'cat1';
-  } else if (cat1 === cat2) {
-    resultado = 'os gatos trombam e o rato foge';
-  } else {
-    resultado = 'cat2';
-  }
+
+if (cat1 <= 0 || cat2 <= 0 || mouse <=0) {
+  resultado = false;
+} else if ((Math.abs(cat1 - mouse)) < (Math.abs(cat2 - mouse))) {
+  resultado = 'cat1';
+} else if ((Math.abs(cat2 - mouse)) < (Math.abs(cat1 - mouse))) {
+  resultado = 'cat2';
+} else if ((Math.abs(cat1 - mouse)) === (Math.abs(cat2 - mouse))) {
+  resultado = 'os gatos trombam e o rato foge';
+} else {
+  resultado = false;
+}
+
+
   return resultado;
 }
 
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  for (let i in array.length) {
+    if ()
+  }
 }
 
 // Desafio 9
