@@ -77,8 +77,29 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numbers) {
+  let result = [];
+
+  let divide3 = 'fizz';
+  let divide5 = 'buzz';
+  let divideBoth = 'fizzBuzz';
+  let cannotDivide = 'bug!';
+
+  for (let number of numbers) {
+    if (number % 3 === 0) {
+      if (number % 5 === 0) {
+        result.push(divideBoth);
+      } else {
+        result.push(divide3);
+      }
+    } else if (number % 5 === 0) {
+      result.push(divide5);
+    } else {
+      result.push(cannotDivide);
+    }
+  }
+
+  return result;
 }
 
 // Desafio 9
