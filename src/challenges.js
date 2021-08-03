@@ -1,29 +1,18 @@
 // Desafio 1
 function compareTrue() {
-  let a = true
-  let b = true
-  if(a === true && b === true){
+  let a = true;
+  let b = true;
+  if (a === true && b === true){
     return true
   }
-}
+}console.log(compareTrue(true,true))
 // Desafio 2
-function calcArea() {
-  let base = 10
-  let height = 50
-  let calcArea =((base * height) / 2)
-    if(calcArea === 250){
-      return 250gi 
-    }else if(calcArea === 5){
-      return 5
-     } else if(calcArea === 25.5){
-       return 25.5
-     }
+function calcArea(base, height) {
+    return ((base * height) / 2)  
 }
 
 // Desafio 3
 function splitSentence() {
-  let a = b
-  l
 }
 
 // Desafio 4
