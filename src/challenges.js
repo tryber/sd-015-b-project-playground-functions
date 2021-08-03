@@ -1,8 +1,11 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(booleanPar1, booleanPar2) {
+  if (booleanPar1 && booleanPar2 === true) {
+    return true;
+  }
+  return false;
 }
-
+console.log('Resultado ', compareTrue(true, true));
 // Desafio 2
 function calcArea() {
   // seu código aqui
@@ -42,6 +45,7 @@ function fizzBuzz() {
 function encode() {
   // seu código aqui
 }
+
 function decode() {
   // seu código aqui
 }
