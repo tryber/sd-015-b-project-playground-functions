@@ -37,7 +37,6 @@ function concatName(array) {
 
   return result;
 } 
-console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // console.log(concatName(nomes))
 
@@ -75,7 +74,7 @@ function highestCount(numbersArray) {
 function catAndMouse(mouse, cat1, cat2) {
   let resposta = 0;
   
-  if ( cat1 == cat2 ) {
+  if ( cat1 - mouse === cat2 - mouse || cat1 - mouse ===  mouse - cat2 ||  mouse - cat1 === mouse -cat2 || mouse - cat1 === cat2 - mouse) {
     resposta = 'os gatos trombam e o rato foge'
   } else if (cat1 < cat2){
     resposta = 'cat1'
@@ -85,10 +84,12 @@ function catAndMouse(mouse, cat1, cat2) {
   return resposta
 }
 
-console.log(catAndMouse(0, 3, 2));
+console.log(catAndMouse(10, 5, 15));
 console.log(catAndMouse(0, 6, 12));
 console.log(catAndMouse(0, 1, 1))
+
 // Desafio 8
+// posso fazer uma função que recebe os parametros que sao os fizzbuzz, buzz, fizz & bug 
 function fizzBuzz(numeros) {
   let myArray = [] ; 
   for (let i = 0; i < numeros.length; i += 1){
