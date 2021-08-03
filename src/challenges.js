@@ -25,8 +25,10 @@ function splitSentence(frase) {
 // Desafio 4
 function concatName(lista) {
   // seu código aqui
-  return lista[lista.length -1] + " " + lista[0];
-}
+  let ultimoItem = lista[lista.length - 1];
+  let primeiroItem = lista[0];
+  return ultimoItem + ", " + primeiroItem;
+}// Separei o ultimo item da array e o primeiro em 2 variaveis. Utilizei o tamanho da lista - 1 para pegar o ultimo valor (Seguindo a logica de que, como o index comeca no 0, o tamanho da lista sera 1 numero maior que o index) e o index 0 para pegar o primeiro valor.
 
 // Desafio 5
 function footballPoints(wins, ties) {
