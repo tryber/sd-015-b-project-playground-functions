@@ -73,7 +73,7 @@ function hydrate(string) {
     result = result + water[i]
   }
 
-  return result;
+  return result + " copos de água";
 }
 
 module.exports = {
@@ -83,4 +83,4 @@ module.exports = {
   triangleCheck,
 };
 
-console.log(hydrate("4 copos de cerveja e 5 de agua com 12 de vinho"))
+console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"))
