@@ -22,27 +22,10 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(phrase) {
 
-  let word = "";
-  let words = [];
+  let words = phrase.split(' ')
 
-  for (let index = 0; index < phrase.length; index += 1) {
-
-    if (phrase[index] !== " ") {
-
-      word = word + phrase[index]
-
-    }
-
-    else if (phrase[index] === " ") {
-
-      words.push(word);
-
-      word = "";
-
-    }
-  }
-  return words;
-} //VOLTAR
+  return words
+}
 
 // Desafio 4
 function concatName(names) {
@@ -129,7 +112,6 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(numbers) {
-
   // seu código aqui
 }
 
