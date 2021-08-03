@@ -29,7 +29,7 @@ function concatName(array) {
 // Desafio 5
 function footballPoints(wins, ties) {
   // seu código aqui
-  return ((wins*3)+(ties))
+  return ((wins * 3) + (ties));
 }
 
 // Desafio 6
@@ -51,11 +51,17 @@ function highestCount(array) {
   return numberRepeat
 }
 
-
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-}
+  if (Math.abs(mouse - cat1) > Math.abs(mouse - cat2)) {
+    return 'cat2';
+  } if (Math.abs(mouse - cat1) < Math.abs(mouse - cat2)) {
+    return 'cat1';
+  } 
+    return 'os gatos trombam e o rato foge';
+  }
+
 
 // Desafio 8
 function fizzBuzz() {
