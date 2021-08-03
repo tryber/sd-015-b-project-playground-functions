@@ -8,14 +8,20 @@ function compareTrue(param1, param2) {
 // Desafio 2
 function calcArea(base, height) {
   // seu código aqui
-  let areaDeTriangulo = ((base * height)/2);
+  let areaDeTriangulo = ((base * height) / 2);
   return areaDeTriangulo;
 }
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(str) {
   // seu código aqui
+  let array = str.split (" ");
+  return array;
 }
+console.log(splitSentence("go Trybe"));
+console.log(splitSentence("vamo que vamo"));
+console.log(splitSentence("foguete"));
+
 
 // Desafio 4
 function concatName() {
