@@ -21,8 +21,8 @@ function splitSentence(str) {
 function concatName(names) {
   // seu código aqui
   let arrResult = [];
-  for (let i = names.length-1; i >= 0;  i -= 1) {
-    if (names[i] === names[names.length-1] || names[i] === names[0]) {
+  for (let i = names.length - 1; i >= 0; i -= 1) {
+    if (names[i] === names[names.length - 1] || names[i] === names[0]) {
       arrResult.push(names[i]);
     }
   }
@@ -30,8 +30,9 @@ function concatName(names) {
 }
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
+  return (wins*3) + (ties);
 }
 
 // Desafio 6
