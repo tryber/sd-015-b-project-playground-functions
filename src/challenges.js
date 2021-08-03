@@ -43,8 +43,11 @@ function concatName(stringArray) {
 }
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins,ties) {
   // seu código aqui
+  // Preciso criar as variáveis winPoints para traduzir a quantidade de vitórias em vezes 3. Depois, só somar winPoints com ties e retornar o resultado.
+  let winPoints = wins * 3;
+  return winPoints + ties;
 }
 
 // Desafio 6
@@ -85,3 +88,4 @@ module.exports = {
 
 console.log(splitSentence('foguete'));
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
+console.log(footballPoints(14,8));
