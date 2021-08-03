@@ -22,12 +22,12 @@ function techList(array, name) {
 // Desafio 11
 function generatePhoneNumber(array) {
   // seu código aqui
-  let arraySort = array.sort;
+  let arraySort = array.slice().sort();
   if (array.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
   for (let index = 0; index < arraySort.length; index += 1) {
-    if (arraySort[index] === arraySort[index + 1] && arraySort[index] === arraySort[index + 2]) {
+    if (arraySort[index] === arraySort[index + 2] || arraySort[index] < 0 || arraySort[index] > 9) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
   }
@@ -35,13 +35,26 @@ function generatePhoneNumber(array) {
 }
 
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
+  if (Math.abs(lineA - lineB) > lineC || Math.abs(lineC - lineA) > lineB) {
+    return false;
+  }
+  if (Math.abs(lineB - lineC) > lineA) {
+    return false;
+  }
+  return true;
 }
 
 // Desafio 13
-function hydrate() {
+function hydrate(string) {
   // seu código aqui
+  let water = string.match(/\d+/g).map(Number).reduce((a, b) => a + b, 0);
+
+  if (water === 1) {
+    return `${water} copo de água`;
+  }
+  return `${water} copos de água`;
 }
 
 module.exports = {
