@@ -56,7 +56,7 @@ function highestCount(arrayNumbers) {
     }
   }
   return counter;
-}console.log(highestCount([9, 1, 2, 3, 9, 5, 7, 9]));
+}
 
 // Desafio 7
 function catAndMouse() {
