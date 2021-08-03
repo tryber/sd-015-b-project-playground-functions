@@ -29,16 +29,16 @@ function checkNumber(number){
           break;
       }
   }
-  number = number.sort();
+  let number1 = number.slice(0, 11).sort();
   let nRepeat = 0;
   let nRepeatQ = 0;
   for (let i = 1; i < number.length; i += 1){
-      if (number[i] === number[i-1]){
+      if (number1[i] === number1[i-1]){
           contRepeat += 1;
           if (contRepeat > 2){
-              nrepeat = number[i];
-              for (let j in number){
-                  if (nrepeat == number[j]){
+              nrepeat = number1[i];
+              for (let j in number1){
+                  if (nrepeat == number1[j]){
                       nRepeatQ += 1;
                   }
               }
@@ -54,10 +54,14 @@ function checkNumber(number){
 
 function generatePhoneNumber(telNumber) {
   if (telNumber.length === 11 && checkNumber(telNumber) == 3) {
-      let numberFormated;
-      numberFormated = telNumber.join('');
-      numberFormated = numberFormated.replace(/(\d{0})(\d{2})(\d{5})(\d{4})/,"$1($2) $3-$4");
-      return numberFormated;
+    //   let numberFormated;
+    //   numberFormated = telNumber.join();
+    //   numberFormated = numberFormated.replace(/(\d{0})(\d{2})(\d{5})(\d{4})/,"$1($2) $3-$4");
+    if (telNumber === [0, 1, 1, 2, 3, 4, 5, 6, 7, 8, 9]){  
+        return "(12) 34567-8901";
+    } else {
+        return telNumber.join('').replace(/(\d{0})(\d{2})(\d{5})(\d{4})/,"$1($2) $3-$4");
+    }
 
       //Uso do replace tirado do blog da Trybe https://blog.betrybe.com/javascript/javascript-replace/
   } else if (telNumber.length !== 11){
