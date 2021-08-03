@@ -11,6 +11,7 @@ console.log(compareTrue(false, false));
 console.log(compareTrue(true, true));
 
 // Desafio 2
+// 2 - Crie uma função que calcule a área de um triângulo
 function calcArea(base, height) {
   let resultado = (base * height) / 2;
 
@@ -21,6 +22,7 @@ console.log(calcArea(5, 2));
 console.log(calcArea(51, 1));
 
 // Desafio 3
+// 3 - Crie uma função que divida a frase
 function splitSentence(string) {
   let arrayString = string.split(' ');
   return arrayString;
@@ -30,9 +32,14 @@ console.log(splitSentence('vamo que vamo'));
 console.log(splitSentence('foguete'));
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+// 4 - Crie uma função que use concatenação de strings
+function concatName(arrayString) {
+  let concatString = arrayString[arrayString.length - 1] + ', ' + arrayString[0];
+  return concatString;
 }
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
+console.log(concatName(['foguete', 'não', 'tem', 'ré']));
+console.log(concatName(['captain', 'my', 'captain']));
 
 // Desafio 5
 function footballPoints() {
