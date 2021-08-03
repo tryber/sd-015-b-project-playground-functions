@@ -78,18 +78,19 @@ function fizzBuzz(array) {
   let fizbuz = [];
   for (let show of array) {
     if (show % 3 === 0 && show % 5 === 0) {
-      return 'fizzBuzz';
+      fizbuz.push('fizzBuzz');
     }
     else if (show % 3 === 0) {
-      return 'fizz';
+      fizbuz.push('fizz');
     }
     else if (show % 5 == 0) {
-      return 'buzz';
+      fizbuz.push('buzz');
     }
     else {
-      return 'bug!';
+      fizbuz.push('bug!');
     }
   }
+  return fizbuz;
 }
 
 // Desafio 9
