@@ -49,14 +49,16 @@ function highestCount(arr) {
     let save = 0;
     let count = 0;
     for (let num of arr) {
-      if (num > save) save = num;
+      if (num > save){
+        save = num;
+      } 
     }
     for (let num of arr) {
       if (num === save) count++;
     }
     return count;
   }
-  highestCount([9, 1, 2, 3, 9, 5, 7]);
+  console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
 function catAndMouse() {
