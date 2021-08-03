@@ -59,18 +59,16 @@ console.log(highestCount(numberList));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let distancia1 = Math.abs(cat1 - mouse);
-  let distancia2 = Math.abs(cat2 - mouse);
+  let distancia1 = Math.abs(mouse - cat1);
+  let distancia2 = Math.abs(mouse - cat2);
   if (distancia2 < distancia1) {
-    console.log('cat2');
-  } else if (distancia1 < distancia2) {
-    console.log('cat1');
-  } else {
-    console.log('os gatos trombam e o rato foge');
-  }
+    return 'cat2';
+  } if (distancia1 < distancia2) {
+    return 'cat1';
+  } return 'os gatos trombam e o rato foge';
 }
 
-catAndMouse(10, 5, 15);
+console.log(catAndMouse(10, 5, 15));
 
 // Desafio 8
 // eslint-disable-next-line complexity
@@ -105,9 +103,6 @@ function decode(msg) {
 
 console.log(encode('hi there!'));
 console.log(decode('h3 th2r2!'));
-
-// Desafio 10
-
 
 module.exports = {
   calcArea,
