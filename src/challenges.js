@@ -65,20 +65,20 @@ function catAndMouse() {
   // seu código aqui
 }
 
-// Desafio 8
-function fizzBuzz(array) {
+// // Desafio 8
+// function fizzBuzz(array) {
 
-  for (let index = 1; index <= array.length; index += 1) {
-    if (array[i] % 3 === 0 && array[i] % 5 === 0) {
-     return  'FizzBuzz';
-    } else if (array[i] % 3 === 0) {
-      return 'Fizz';
-    } else if (array[i] % 5 === 0) {
-      return 'Buzz';
-    }
-  }
+//   for (let index = 1; index <= array.length; index += 1) {
+//     if (array[i] % 3 === 0 && array[i] % 5 === 0) {
+//      return  'FizzBuzz';
+//     } else if (array[i] % 3 === 0) {
+//       return 'Fizz';
+//     } else if (array[i] % 5 === 0) {
+//       return 'Buzz';
+//     }
+//   }
   
-} fizzBuzz = [2, 15, 7, 9, 45];
+//  } fizzBuzz = [2, 15, 7, 9, 45];
 
 // Desafio 9
 function encode() {
