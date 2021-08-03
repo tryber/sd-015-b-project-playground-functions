@@ -9,7 +9,7 @@ function compareTrue(valor1, valor2) {
 
 // Desafio 2
 function calcArea(base, height) {
-  return base * height / 2;
+  return (base * height) / 2;
 }
 
 // Desafio 3
@@ -31,8 +31,8 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(highestCount) {
   let count = 0;
-  let max = Math.max(...highestCount); //função max do objeto Math (... é spread operator)
-  for (let i= 0; i < highestCount.length; i += 1) {
+  let max = Math.max(...highestCount); //função max do objeto Math (... é spread syntax, chama a função)
+  for (let i = 0; i < highestCount.length; i += 1) {
     if (highestCount[i] === max) {
       count += 1;
     }
@@ -41,8 +41,16 @@ function highestCount(highestCount) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let diferencaCat1 = Math.abs(cat1 - mouse);
+  let diferencaCat2 = Math.abs(cat2 - mouse);
+  if (diferencaCat2 > diferencaCat1) {
+    return 'cat1'
+  } else if (diferencaCat1 > diferencaCat2){
+    return 'cat2'
+  } else if (diferencaCat1 === diferencaCat2) {
+    return 'os gatos trombam e o rato foge'
+  }
 }
 
 // Desafio 8
