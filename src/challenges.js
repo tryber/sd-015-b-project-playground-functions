@@ -37,19 +37,86 @@ function concatName(vetor) {
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins,ties) {
+  pontos = wins*3 + ties
+  return pontos
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
-}
+// function highestCount(vetor) {
+//   let contagem = {}
+//   let maior = -2
+//     for (key in vetor) {
+//         count = 0
+//         for (number of vetor){
+//             if(vetor[key] === number){
+//                 count+=1
+//                 contagem[vetor[key]] = count
+//             }
+//         }       
+//     }
+//   return count
+// }
+// console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse,cat1,cat2) {
+  if (cat1> mouse) {
+    distCat1 = cat1-mouse
+    if (cat2>mouse) {
+      distCat2 = cat2-mouse
+      if (distCat1>distCat2) {
+        return 'cat2'
+      }
+      else if (distCat1<distCat2){
+        return 'cat1'
+      }
+      else {
+        return 'os gatos trombam e o rato foge'
+      }
+    }
+    else if (cat2<mouse) {
+      distCat2 = mouse-cat2
+      if (distCat1>distCat2) {
+        return 'cat2'
+      }
+      else if (distCat1<distCat2){
+        return 'cat1'
+      }
+      else {
+        return 'os gatos trombam e o rato foge'
+      }
+    }
+  }
+  else if (cat1<mouse) {
+    distCat1 = mouse-cat1
+    if (cat2>mouse) {
+      distCat2 = cat2-mouse
+      if (distCat1>distCat2) {
+        return 'cat2'
+      }
+      else if (distCat1<distCat2){
+        return 'cat1'
+      }
+      else {
+        return 'os gatos trombam e o rato foge'
+      }
+    }
+    else if (cat2<mouse) {
+      distCat2 = mouse-cat2
+      if (distCat1>distCat2) {
+        return 'cat2'
+      }
+      else if (distCat1<distCat2){
+        return 'cat1'
+      }
+      else {
+        return 'os gatos trombam e o rato foge'
+      }
+    }
+  }
 }
+console.log(catAndMouse(0,3,3));
 
 // Desafio 8
 function fizzBuzz() {
