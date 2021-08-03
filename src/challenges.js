@@ -69,13 +69,13 @@ function fizzBuzz(a) {
       resultado.push('buzz')
     } 
     else {
-      resultado.push('bug')
+      resultado.push('bug!')
     }
   }
   return resultado;
 }
 
-console.log(fizzBuzz([9, 25]))
+console.log(fizzBuzz([2, 15, 7, 9, 45]))
 
 // Desafio 9
 function encode() {
