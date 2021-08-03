@@ -5,7 +5,7 @@ function compareTrue(booleanPar1, booleanPar2) {
   }
   return false;
 }
-console.log('1° Resultado: ', compareTrue(true, true));
+//console.log('1° Resultado: ', compareTrue(true, true));
 
 // Desafio 2
 function calcArea(base, heigth) {
@@ -13,7 +13,7 @@ function calcArea(base, heigth) {
   return triArea;
 }
 
-console.log('2° Resultado: ', calcArea(51, 1));
+//console.log('2° Resultado: ', calcArea(51, 1));
 
 // Desafio 3
 
@@ -21,12 +21,12 @@ function splitSentence(string) {
   const splitStr = string.split(' ');
   return splitStr;
 }
-console.log('3° Divide a senteça: ', splitSentence('go Trybe'));
+//console.log('3° Divide a senteça: ', splitSentence('go Trybe'));
 
 // Desafio 4
 
 function concatName(arrayStr) {
-  return `${arrayStr[0]}, ${arrayStr[arrayStr.length - 1]}`;
+  return `${arrayStr[arrayStr.length - 1]}, ${arrayStr[0]}`;
 }
 
 console.log('4° Último Item, Primeiro Item:',
@@ -34,7 +34,7 @@ console.log('4° Último Item, Primeiro Item:',
 
 // Desafio 5
 function footballPoints() {
-  
+
 }
 
 // Desafio 6
