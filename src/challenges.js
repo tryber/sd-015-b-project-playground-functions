@@ -103,24 +103,6 @@ function decode(string) {
   return vecString.join('')
 }
 
-function listOfTechs(array, name) {
-
-  if (array.length > 0) {
-    let techList = []
-    array = array.sort()
-    for (let i = 0; i < array.length; i += 1) {
-      let obj = {
-        tech: array[i],
-        name: name,
-      }
-      techList.push(obj)
-    }
-    return techList
-  } else {
-    return 'Vazio!'
-  }
-}
-
 module.exports = {
   calcArea,
   catAndMouse,
