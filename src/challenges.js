@@ -43,18 +43,24 @@ function highestCount(numberArray) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  if (cat1 === cat2) {
+  if (cat1 - mouse === cat2 - mouse || cat2 - mouse === (cat1 - mouse)*-1) {
     return 'os gatos trombam e o rato foge';
   } else if (cat1 - mouse < cat2 - mouse) {
-    return 'cat1'
+    return 'cat1';
   } else {
-    return 'cat2'
+    return 'cat2';
   }
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(fizzBuzzArray) {
+  // for (let key in fizzBuzzArray) {
+  //   if (fizzBuzzArray[key] % 3 === 0 && fizzBuzzArray[key] % 5 === 0){
+  //     return 'FizzBuzz'
+  //   } else if () {
+
+  //   }
+  // }
 }
 
 // Desafio 9
