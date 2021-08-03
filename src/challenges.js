@@ -121,7 +121,6 @@ function encode(fraseParaCode) {
   }
   return mais = fraseUni.join('')
 }
-console.log(encode("forma de fazer minha forma"));
 
 function decode(fraseParaCode) {
   // seu código aqui
@@ -143,7 +142,6 @@ function decode(fraseParaCode) {
   return fraseUni.join('')
 }
 
-console.log(fraseParaCode("ola mundo"))
 
 module.exports = {
   calcArea,
