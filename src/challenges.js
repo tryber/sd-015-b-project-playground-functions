@@ -57,7 +57,50 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
+function divisibleByThree(number) {
+  if ((number % 3) === 0 && (number % 5) !== 0) {
+    return true;
+  }
+}
+
+function divisibleByFive(number) {
+  if ((number % 3) !== 0 && (number % 5) === 0) {
+    return true;
+  }
+}
+
+function divisibleByFiveAndThree(number) {
+  if ((number % 3) === 0 && (number % 5) === 0) {
+    return true;
+  }
+}
+function notDivisible(number) {
+  if ((number % 3) !== 0 && (number % 5) !== 0) {
+    return true;
+  }
+}
+
+function checkStatus(parameter) {
+  if (divisibleByThree(parameter) === true) {
+    return 'fizz';
+  }
+  if (divisibleByFive(parameter) === true) {
+    return 'buzz';
+  }
+  if (divisibleByFiveAndThree(parameter) === true) {
+    return 'fizzBuzz';
+  }
+  if (notDivisible(parameter) === true) {
+    return 'bug!';
+  }
+}
+
+function fizzBuzz(numberArray) {
+  let newArray = [];
+  for (let index = 0; index < numberArray.length; index += 1) {
+    newArray.push(checkStatus(numberArray[index]));
+  }
+  return newArray;
 }
 
 // Desafio 9
