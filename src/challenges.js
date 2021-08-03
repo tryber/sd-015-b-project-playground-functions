@@ -117,9 +117,40 @@ let newString2 =''
 return newString2
 }
 
-function decode() {
-  // seu código aqui
-}
+function decode(string) {
+  let newString = []
+  let newString2 =''
+    for(let i = 0; i < string.length; i++){
+        newString.push(string[i]) 
+      }  
+    for(let i = 0; i < string.length; i++){
+          if (string[i]== 1 ){
+            newString[i] = 'a';
+          continue
+          } 
+            else if (string[i]== 2 ){
+              newString[i] = 'e';
+            continue
+            } 
+              else if(string[i]== 3 ){
+                newString[i] = 'i';
+              continue
+              }
+                else if (string[i]== 4 ){
+                  newString[i] = 'o';
+                continue
+                }
+                  else if (string[i]== 5 ){
+                    newString[i] = 'u';
+                  } 
+      }
+    for(let i = 0; i < newString.length; i++){
+          newString2 += newString[i]
+      }
+  return newString2
+  }
+console.log(decode("3333333"))
+
 
 module.exports = {
   calcArea,
