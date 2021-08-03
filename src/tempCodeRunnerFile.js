@@ -1,57 +1,20 @@
-function catAndMouse(mouse,cat1,cat2) {
-  if (cat1> mouse) {
-    distCat1 = cat1-mouse
-    if (cat2>mouse) {
-      distCat2 = cat2-mouse
-      if (distCat1>distCat2) {
-        return 'cat2'
-      }
-      else if (distCat1<distCat2){
-        return 'cat1'
-      }
-      else {
-        return 'os gatos trombam e o rato foge'
-      }
+function fizzBuzz(vetor) {
+  let vec = []
+  for (number of vetor) {
+    if (number % 3 ===0 && number % 5 ===0) {
+      vec.push("fizzBuzz")
     }
-    else if (cat2<mouse) {
-      distCat2 = mouse-cat2
-      if (distCat1>distCat2) {
-        return 'cat2'
-      }
-      else if (distCat1<distCat2){
-        return 'cat1'
-      }
-      else {
-        return 'os gatos trombam e o rato foge'
-      }
+    else if (number % 3 ===0) {
+      vec.push("fizz")
+    }
+    else if (number % 5 ===0) {
+      vec.push("buzz")
+    }
+    
+    else {
+      vec.push("bug!")
     }
   }
-  else if (cat1<mouse) {
-    distCat1 = mouse-cat1
-    if (cat2>mouse) {
-      distCat2 = cat2-mouse
-      if (distCat1>distCat2) {
-        return 'cat2'
-      }
-      else if (distCat1<distCat2){
-        return 'cat1'
-      }
-      else {
-        return 'os gatos trombam e o rato foge'
-      }
-    }
-    else if (cat2<mouse) {
-      distCat2 = mouse-cat2
-      if (distCat1>distCat2) {
-        return 'cat2'
-      }
-      else if (distCat1<distCat2){
-        return 'cat1'
-      }
-      else {
-        return 'os gatos trombam e o rato foge'
-      }
-    }
-  }
+  return vec
 }
-console.log(catAndMouse(0,3,3));
+console.log(fizzBuzz([2, 15, 7, 9, 45],));

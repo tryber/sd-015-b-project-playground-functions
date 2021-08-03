@@ -116,13 +116,28 @@ function catAndMouse(mouse,cat1,cat2) {
     }
   }
 }
-console.log(catAndMouse(0,3,3));
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(vetor) {
+  let vec = []
+  for (number of vetor) {
+    if (number % 3 ===0 && number % 5 ===0) {
+      vec.push("fizzBuzz")
+    }
+    else if (number % 3 ===0) {
+      vec.push("fizz")
+    }
+    else if (number % 5 ===0) {
+      vec.push("buzz")
+    }
+    
+    else {
+      vec.push("bug!")
+    }
+  }
+  return vec
 }
-
+console.log(fizzBuzz([2, 15, 7, 9, 45],));
 // Desafio 9
 function encode() {
   // seu código aqui
