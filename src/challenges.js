@@ -23,7 +23,7 @@ function concatName(names) {
   // seu código aqui
   let firstName = names[0];
   let lastName = names[names.length - 1];
-  return lastName + ', ' + firstName;
+  return `${lastName}, ${firstName}`;
 }
 
 // Desafio 5
@@ -70,11 +70,11 @@ function catAndMouse(mouse, cat1, cat2) {
 
   if (distanceCat1 < distanceCat2) {
     return 'cat1';
-  } else if (distanceCat1 > distanceCat2) {
-    return 'cat2';
-  } else {
-    return 'os gatos trombam e o rato foge';
   }
+  if (distanceCat1 > distanceCat2) {
+    return 'cat2';
+  }
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
@@ -96,7 +96,6 @@ function fizzBuzz(numbers) {
       answer.push('bug!');
     }
   }
-
   return answer;
 }
 
@@ -119,7 +118,6 @@ function encode(sentence) {
       sentenceChars[i] = encodedChars[char];
     }
   }
-
   return sentenceChars.join('');
 }
 
@@ -141,7 +139,6 @@ function decode(sentence) {
       sentenceChars[i] = decodedChars[char];
     }
   }
-
   return sentenceChars.join('');
 }
 

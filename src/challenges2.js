@@ -6,18 +6,16 @@ function techList(techs, name) {
     techs.sort();
 
     for (const tech of techs) {
-      let obj = {};
-
-      obj.tech = tech;
-      obj.name = name;
-
+      let obj = {
+        tech,
+        name,
+      };
       objList.push(obj);
     }
 
     return objList;
-  } else {
-    return 'Vazio!';
   }
+  return 'Vazio!';
 }
 
 // Desafio 11
@@ -48,11 +46,11 @@ function isValidNumber(numbers) {
 
 function generatePhoneNumber(numbers) {
   // seu código aqui
-  if (numbers.length != 11) {
+  if (numbers.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
 
-  //https://www.samanthaming.com/tidbits/35-es6-way-to-clone-an-array/
+  // https://www.samanthaming.com/tidbits/35-es6-way-to-clone-an-array/
   if (isValidNumber([...numbers]) === false) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
@@ -61,7 +59,7 @@ function generatePhoneNumber(numbers) {
   let ddd = phoneNumber.substr(0, 2);
   let firstPart = phoneNumber.substr(0 + 2, 5);
   let secondPart = phoneNumber.substr(0 + 2 + 5, 4);
-  phoneNumber = '(' + ddd + ')' + ' ' + firstPart + '-' + secondPart;
+  phoneNumber = `(${ddd}) ${firstPart}-${secondPart}`;
 
   return phoneNumber;
 }
@@ -88,14 +86,14 @@ function hydrate(sentence) {
   let sum = 0;
 
   for (const num of numbers) {
-    sum += parseInt(num);
+    sum += parseInt(num, 10);
   }
 
   if (sum === 1) {
-    return sum + ' copo de água';
-  } else {
-    return sum + ' copos de água';
+    return `${sum} copo de água`;
   }
+
+  return `${sum} copos de água`;
 }
 
 module.exports = {
