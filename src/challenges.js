@@ -1,7 +1,6 @@
 // Desafio 1
 function compareTrue(a, b) {
-  function compareTrue(a, b)
-    return a === true && b === true;
+  return a === true && b === true;
 } 
 // Desafio 2
 function calcArea(base, height) {
@@ -14,7 +13,7 @@ function splitSentence(str) {
 }
 // Desafio 4
 function concatName(lista) {
-  return lista[lista.length- 1] + lista[0]
+  return lista[lista.length- 1] + ', ' + lista[0]
 }
 
 // Desafio 5
