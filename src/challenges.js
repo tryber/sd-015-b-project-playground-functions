@@ -3,7 +3,8 @@ function compareTrue(argument1, argument2) {
   // seu código aqui
   if (argument1 === true && argument2 === true) {
     return true;
-  } return false;
+  }
+  return false;
 }
 
 // Desafio 2
@@ -13,8 +14,9 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(sentence) {
   // seu código aqui
+  return sentence.split(" ");
 }
 
 // Desafio 4
