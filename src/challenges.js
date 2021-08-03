@@ -89,52 +89,115 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode(string) {
-  // seu código aqui
+function encodeA(string) {
   let array = string.split('');
   for (let key in array) {
     if (array[key] === 'a') {
       array.splice(key, 1,'1');
     }
-    else if (array[key] === 'e') {
-      array.splice(key, 1, '2');
-    }
-    else if (array[key] === 'i') {
-      array.splice(key, 1, '3');
-    }
-    else if (array[key] === 'o') {
-      array.splice(key, 1, '4');
-    }
-    else if (array[key] === 'u') {
-      array.splice(key, 1, '5');
-    }
   }
-  let text = array.join('');
-  return text;
+  return array;
 }
 
-function decode(string) {
+function encodeE(array) {
+  for (let key in array) {
+    if (array[key] === 'e') {
+      array.splice(key, 1,'2');
+    }
+  }
+  return array;
+}
+
+function encodeI(array) {
+  for (let key in array) {
+    if (array[key] === 'i') {
+      array.splice(key, 1,'3');
+    }
+  }
+  return array;
+}
+
+function encodeO(array) {
+  for (let key in array) {
+    if (array[key] === 'o') {
+      array.splice(key, 1,'4');
+    }
+  }
+  return array;
+}
+
+function encodeU(array) {
+  for (let key in array) {
+    if (array[key] === 'u') {
+      array.splice(key, 1,'5');
+    }
+  }
+  return array;
+}
+
+function encode(string) {
   // seu código aqui
+  let encode1 = encodeA(string);
+  let encode2 = encodeE(encode1);
+  let encode3 = encodeI(encode2);
+  let encode4 = encodeO(encode3);
+  let encode5 = encodeU(encode4).join('');
+  return encode5;
+}
+//encode
+function decode1(string) {
   let array = string.split('');
   for (let key in array) {
     if (array[key] === '1') {
       array.splice(key, 1,'a');
     }
-    else if (array[key] === '2') {
-      array.splice(key, 1, 'e');
-    }
-    else if (array[key] === '3') {
-      array.splice(key, 1, 'i');
-    }
-    else if (array[key] === '4') {
-      array.splice(key, 1, 'o');
-    }
-    else if (array[key] === '5') {
-      array.splice(key, 1, 'u');
+  }
+  return array;
+}
+
+function decode2(array) {
+  for (let key in array) {
+    if (array[key] === '2') {
+      array.splice(key, 1,'e');
     }
   }
-  let text = array.join('');
-  return text;
+  return array;
+}
+
+function decode3(array) {
+  for (let key in array) {
+    if (array[key] === '3') {
+      array.splice(key, 1,'i');
+    }
+  }
+  return array;
+}
+
+function decode4(array) {
+  for (let key in array) {
+    if (array[key] === '4') {
+      array.splice(key, 1,'o');
+    }
+  }
+  return array;
+}
+
+function decode5(array) {
+  for (let key in array) {
+    if (array[key] === '5') {
+      array.splice(key, 1,'u');
+    }
+  }
+  return array;
+}
+function decode(string) {
+  // seu código aqui
+  let decodeA = decode1(string);
+  let decodeE = decode2(decodeA);
+  let decodeI = decode3(decodeE);
+  let decodeO = decode4(decodeI);
+  let decodeU = decode5(decodeO).join('');
+  return decodeU;
 }
 
 module.exports = {
