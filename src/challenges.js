@@ -104,18 +104,22 @@ function decode(string) {
 }
 
 function listOfTechs(array, name) {
-  let techList = []
-  array = array.sort()
-  for(let i = 0; i < array.length; i += 1){
-    let obj = {
-      tech: array[i],
-      name: name,
+
+  if (array.length > 0) {
+    let techList = []
+    array = array.sort()
+    for (let i = 0; i < array.length; i += 1) {
+      let obj = {
+        tech: array[i],
+        name: name,
+      }
+      techList.push(obj)
     }
-    techList.push(obj)
+    return techList
+  } else {
+    return 'Vazio!'
   }
-  console.log(techList)
 }
-listOfTechs(["React", "Jest", "HTML", "CSS", "JavaScript"], 'Erickson')
 
 module.exports = {
   calcArea,
