@@ -1,21 +1,27 @@
 // Desafio 1
 function compareTrue() {
+  // seu código aqui
 }
 
 // Desafio 2
 function calcArea() {
+  // seu código aqui
   let base;
   let height;
   return base * height / 2;
 }
 calcArea()
 
-
 // Desafio 3
 function splitSentence() {
-  
+  // seu código aqui
+  let palavra = '';
+  let divide = palavra.split(' ',2);
+ 
+  console.log(divide);
 
 }
+splitSentence()
 
 // Desafio 4
 function concatName() {
