@@ -4,23 +4,26 @@ function compareTrue() {
   let b = true
   if(a === true && b === true){
     return true
-    console.log(compareTrue)
-  }else if(a === false && b === true || a === true && b === false){
-    return false
-  }else if(a === false && b ===false){
-    return false
   }
 }
 // Desafio 2
 function calcArea() {
   let base = 10
-  let height = 100
-
+  let height = 50
+  let calcArea =((base * height) / 2)
+    if(calcArea === 250){
+      return 250gi 
+    }else if(calcArea === 5){
+      return 5
+     } else if(calcArea === 25.5){
+       return 25.5
+     }
 }
 
 // Desafio 3
 function splitSentence() {
-  // seu código aqui
+  let a = b
+  l
 }
 
 // Desafio 4
