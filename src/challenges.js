@@ -69,7 +69,7 @@ function highestCount(numeros) {
     verificaMaiorNumero = numeros[numeroMaior];
   }
   for (contador in numeros) {
-    if (verificaMaiorNumero === numeros[contador]){
+    if (verificaMaiorNumero === numeros[contador]) {
       contNumeroMaior += 1;
     }
   }
@@ -80,9 +80,24 @@ console.log(highestCount([0, 4, 4, 4, 9, 2, 1]));
 console.log(highestCount([0, 0, 0]));
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
+  let distanciaMouseCat1 = cat1 - mouse;
+  let distanciaMouseCat2 = cat2 - mouse;
+  let winCat1 = "cat1";
+  let winCat2 = "cat2";
+  let winMouse = "os gatos trombam e o rato foge";
+    if (distanciaMouseCat1 === distanciaMouseCat2) {
+      return winMouse
+    }
+    else if (distanciaMouseCat1 > distanciaMouseCat2) {
+       return winCat2
+    }
+    else {
+      return winCat1
+    }
 }
+console.log(catAndMouse(0, 3, 2));
 
 // Desafio 8
 function fizzBuzz() {
