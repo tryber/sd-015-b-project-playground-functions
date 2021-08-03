@@ -95,21 +95,17 @@ function fizzBuzz(arrays) {
     return arrayFinal;
 
 }
+console.log(fizzBuzz([3,5,8,9,7]))
 
 // Desafio 9
-function encode(stringer) {
-
-  for(let index = 0 ; index < stringer.length ; stringer += 1){
-    if(stringer[index] = "a"){
-      stringer[index].replace("1");
-    }
-  }
-  return stringer;
+function encode(string) {
+  let novaString = string.replace(/a/g, 1).replace(/e/g, 2).replace(/i/g, 3).replace(/o/g, 4).replace(/u/g, 5);
+  return novaString;
 }
-console.log(encode("Ola"));
-
-function decode() {
-  
+    
+function decode(string) {
+  let novaString = string.replace(/1/g, 'a').replace(/2/g, 'e').replace(/3/g, 'i').replace(/4/g, 'o').replace(/5/g, 'u');
+  return novaString;
 }
 
 module.exports = {
