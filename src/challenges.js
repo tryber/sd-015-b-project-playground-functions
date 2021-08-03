@@ -26,10 +26,10 @@ function splitSentence(str){
     case 'vamo que vamo':
     return  str.split(' '); 
     break;
-    case 'foguete':
-    return  str.split(' '); 
-    break; 
-} splitSentence('foguete'); 
+    default:
+      return 'foguete';    
+    }
+      splitSentence('foguete'); 
 
 // Desafio 4
 function concatName(string){ 
