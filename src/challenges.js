@@ -1,33 +1,33 @@
 // Desafio 1
 function compareTrue(boolean1, boolean2) {
-  if((boolean1 && boolean2) === true) {
-    return true;
-  } else {
-    return false;
+  let returnBoolean = false;
+  if ((boolean1 && boolean2) === true) {
+    returnBoolean = true;
   }
+  return returnBoolean
 }
 
 // Desafio 2
 function calcArea(base, height) {
-  result = (base * height) / 2;
+  let result = (base * height) / 2;
   return result;
 }
 
 // Desafio 3
 function splitSentence(phrase) {
-  splitPhrase = phrase.split(" ");
+  let splitPhrase = phrase.split(" ");
   return splitPhrase;
 }
 
 // Desafio 4
 function concatName(nameArray) {
-  returnString = nameArray[nameArray.length - 1].concat(", ", nameArray[0]);
+  let returnString = nameArray[nameArray.length - 1].concat(", ", nameArray[0]);
   return returnString;
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  totalPoints = (wins * 3) + ties;
+  let totalPoints = (wins * 3) + ties;
   return totalPoints;
 }
 
@@ -35,8 +35,8 @@ function footballPoints(wins, ties) {
 function highestCount(numbersArray) {
   let highestNumber = Number.NEGATIVE_INFINITY;
   let counter = 0;
-  for(let number of numbersArray) {
-    if(number > highestNumber) {
+  for (let number of numbersArray) {
+    if (number > highestNumber) {
       highestNumber = number;
     }
   }
@@ -64,10 +64,10 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(numbersArray) {
   let returnArray = [];
-  for(let number of numbersArray) {
-    if(((number % 3) === 0) && ((number % 5) === 0)) {
+  for (let number of numbersArray) {
+    if (((number % 3) === 0) && ((number % 5) === 0)) {
       returnArray.push("fizzBuzz");
-    } else if((number % 3) === 0) {
+    } else if ((number % 3) === 0) {
       returnArray.push("fizz");
     } else if ((number % 5) === 0) {
       returnArray.push("buzz");
@@ -81,36 +81,35 @@ function fizzBuzz(numbersArray) {
 // Desafio 9
 
 let encoder = {
-  "a" : "1",
-  "e" : "2",
-  "i" : "3",
-  "o" : "4",
-  "u" : "5",
+  a: "1",
+  e: "2",
+  i: "3",
+  o: "4",
+  u: "5",
 }
 
 function encode(phrase) {
-  phrase = phrase.split("")
+  let phrase = phrase.split("");
   for (let letter in encoder) {
-    for(let index = 0; index < phrase.length; ++index) {
-      if(phrase[index] === letter) {
-        phrase[index] = encoder[letter]
+    for (let index = 0; index < phrase.length; index += 1) {
+      if (phrase[index] === letter) {
+        phrase[index] = encoder[letter];
       }
     }
   }
-  return phrase.join("")
+  return phrase.join("");
 }  
-console.log(decode(encode("hi there!")))
 
 function decode(phrase) {
-  phrase = phrase.split("")
+  let phrase = phrase.split("");
   for (let letter in encoder) { 
-    for(let index = 0; index < phrase.length; ++index) {
-      if(phrase[index] === encoder[letter]) {
+    for (let index = 0; index < phrase.length; index += 1) {
+      if (phrase[index] === encoder[letter]) {
         phrase[index] = letter;
       }
     }
   }
-  return phrase.join("")
+  return phrase.join("");
 }
 
 module.exports = {

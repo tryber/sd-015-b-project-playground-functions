@@ -9,9 +9,9 @@ function techList(techArray, name) {
     //console.log(returnArray)
   }
   if (returnArray.length !== 0) {
-    return returnArray
+    return returnArray;
   } else {
-    return "Vazio!"
+    return "Vazio!";
   }
 }
 
@@ -23,7 +23,7 @@ function generatePhoneNumber(numbersArray) {
     let counter = 0;
     for (let number of numbersArray) {
       if ((counter >= 3) || (number < 0) || (number > 9)) {
-        return "não é possível gerar um número de telefone com esses valores"
+        return "não é possível gerar um número de telefone com esses valores";
       }
       counter = 0;
       for (let number2 of numbersArray) {
@@ -33,37 +33,37 @@ function generatePhoneNumber(numbersArray) {
       }
     }
   } else {
-    return "Array com tamanho incorreto."
+    return "Array com tamanho incorreto.";
   }
   // Inicio da formatação
     let base = {
-      0 : "(",
-      2 : ") ",
-      7 : "-"
+      0: "(",
+      2: ") ",
+      7: "-",
     } 
-    for(let index = 0; index < numbersArray.length; ++index) {
+    for (let index = 0; index < numbersArray.length; ++index) {
       if (index in base) {
         returnString += base[index] + numbersArray[index].toString()
-      } else{
+      } else {
         returnString += numbersArray[index].toString()
       }
     }
-    return returnString
+    return returnString;
 } 
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   let possible = true;
   // Verificação Linha A
-  if(!(lineA < (lineB + lineC)) || !(lineA > Math.abs(lineB - lineC))) {
+  if (!(lineA < (lineB + lineC)) || !(lineA > Math.abs(lineB - lineC))) {
     possible = false;
   }
   //Verificação Linha B
-  if(!(lineB < (lineA + lineC)) || !(lineB > Math.abs(lineA - lineC))) {
+  if (!(lineB < (lineA + lineC)) || !(lineB > Math.abs(lineA - lineC))) {
     possible = false;
   }
   //Verificação Linha C
-  if(!(lineC < (lineA + lineB)) || !(lineC > Math.abs(lineA - lineB))) {
+  if (!(lineC < (lineA + lineB)) || !(lineC > Math.abs(lineA - lineB))) {
     possible = false;
   }
   return possible;
@@ -71,18 +71,18 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function hydrate(phrase) {
-  let referenceList = [1,2,3,4,5,6,7,8,9]
+  let referenceList = [1,2,3,4,5,6,7,8,9];
   let counter = 0;
   phrase = phrase.split("");
-  for(let letter of phrase) {
+  for (let letter of phrase) {
     if (Number(letter) in referenceList) {
       counter += Number(letter);
     }
   }
   if (counter === 1) {
-    retornString = counter.toString() + " copo de água"
+    retornString = counter.toString() + " copo de água";
   } else if (counter > 1) {
-    retornString = counter.toString() + " copos de água"
+    retornString = counter.toString() + " copos de água";
   }
   return retornString;
 }
