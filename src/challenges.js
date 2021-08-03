@@ -69,13 +69,23 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arrayDeNumeros2) {
+  let d8 = [];
+  for (let n of arrayDeNumeros2) {
+    if (n % 3 === 0 && n % 5 === 0) {
+      d8.push('fizzBuzz');
+    } else if (n % 3 === 0) {
+      d8.push('fizz');
+    } else if (n % 5 === 0) {
+      d8.push('buzz');
+    } else { d8.push('bug!'); }
+  }
+  return d8;
 }
 
 // Desafio 9
 function encode() {
-  // seu código aqui
+  
 }
 function decode() {
   // seu código aqui
