@@ -48,12 +48,15 @@ function highestCount(numeros) {
   console.log(contador);
   return contador;
 }
-highestCount([1, 9, 2, 3, 9, 5, 7]);
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let distanciaGato1 = cat1 - mouse;
-  let distanciaGato2 = cat2 - mouse;
+  let distanciaGato1 = (cat1 - mouse);
+  let distanciaGato2 = (cat2 - mouse);
+  if(distanciaGato1 < 0){
+    distanciaGato1 *= -1;
+  }
+  
   if(distanciaGato1 < distanciaGato2){
     return 'cat1';
   }else if (distanciaGato2 < distanciaGato1){
@@ -61,8 +64,8 @@ function catAndMouse(mouse, cat1, cat2) {
   }else {
     return 'os gatos trombam e o rato foge';
   }
-  
 }
+catAndMouse(1, 0, 2);
 
 // Desafio 8
 function fizzBuzz() {
