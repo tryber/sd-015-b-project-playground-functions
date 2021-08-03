@@ -26,8 +26,8 @@ function splitSentence(phrase) {
 function concatName(values) {
   let first = values[0];
   let last = values[values.length - 1];
-
-  return (last + ', ' + first);
+  let concat = last + ', ' + first;
+  return concat;
 }
 
 // Desafio 5
@@ -66,14 +66,14 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(values) {
   let answer = [];
 
-  for(let key in values){
-    if (values[key] % 3 === 0 && values[key] % 5 != 0) {
+  for (let key in values) {
+    if (values[key] % 3 === 0 && values[key] % 5 !== 0) {
       answer.push('fizz');
-    } else if (values[key] % 3 != 0 && values[key] % 5 === 0) {
+    } else if (values[key] % 3 !== 0 && values[key] % 5 === 0) {
       answer.push('buzz');
     } else if (values[key] % 3 === 0 && values[key] % 5 === 0) {
       answer.push('fizzBuzz');
-    } else if (values[key] % 3 != 0 && values[key] % 5 != 0) {
+    } else if (values[key] % 3 !== 0 && values[key] % 5 !== 0) {
       answer.push('bug!');
     }
   }
@@ -82,7 +82,7 @@ function fizzBuzz(values) {
 
 // Desafio 9
 function encode() {
-  // seu código aqui
+  
 }
 function decode() {
   // seu código aqui
