@@ -78,12 +78,32 @@ function fizzBuzz(arrayFizzBuzz) {
       newArrayFizzBuzz.push("bug!");
     }
   } return newArrayFizzBuzz;
-} console.log(fizzBuzz([2, 15, 7, 9, 45]));
+}
 
 // Desafio 9
-function encode() {
-  // seu código aqui
-}
+function encode(string) {
+  // converter a string em array
+  let arrayString = string.split('');
+  let enCode = [];
+  for (i = 0; i < arrayString.length; i++){
+    
+    if (arrayString[i] === 'a') {
+      enCode.push("1");
+    } else if (arrayString[i] === 'e') {
+      enCode.push("2");
+    } else if (arrayString[i] === 'i') {
+     enCode.push("3"); 
+    } else if (arrayString[i] === 'o') {
+      enCode.push("4");
+    } else if (arrayString[i] === 'u') {
+      enCode.push("5");
+    } else {
+      enCode.push(arrayString[i]);
+    }
+  }
+  // pegar a array e joga-la como string
+  return enCode.toString();
+} console.log(encode("hi there!"));
 function decode() {
   // seu código aqui
 }
