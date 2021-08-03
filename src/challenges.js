@@ -41,7 +41,7 @@ function highestCount(numeros) {
   console.log(maiorNumero)
 
   for(let count = 0; count < numeros.length; count++){
-    if(maiorNumero === numeros[count]){
+    if(maiorNumero === numeros[count]) {
       contador += 1;
     }
   }
@@ -70,7 +70,7 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(numeros) {
   array = [];
   for(let count = 0; count < numeros.length; count++){
-    if((numeros[count] % 3 === 0) && (numeros[count] % 5 === 0)){
+    if ((numeros[count] % 3 === 0) && (numeros[count] % 5 === 0)){
       array.push('fizzBuzz');
     }else{
       if(numeros[count] % 3 === 0){
@@ -86,11 +86,20 @@ function fizzBuzz(numeros) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let frase = '';
+  for(count = 0; count < string.length; count++){
+    frase = string.replace(/["a"]/g, "1").replace(/["e"]/g, "2").replace(/["i"]/g, "3").replace(/["o"]/g, "4").replace(/["u"]/g, "5");
+  }
+  return frase;
 }
-function decode() {
-  // seu código aqui
+
+function decode(string) {
+  let frase = '';
+  for(count = 0; count < string.length; count++){
+    frase = string.replace(/["1"]/g, "a").replace(/["2"]/g, "e").replace(/["3"]/g, "i").replace(/["4"]/g, "o").replace(/["5"]/g, "u");
+  }
+  return frase;
 }
 
 module.exports = {
