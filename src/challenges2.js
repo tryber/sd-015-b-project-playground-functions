@@ -8,7 +8,7 @@ function techList(arr, name) {
     for (let i of aux) {
       resp.push( {tech: i, name: name} );
   }
-  return resp;  
+    return resp;  
   }
 }
 
@@ -62,9 +62,28 @@ function generatePhoneNumber(arr) {
 
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let resp = true;
+  // condição lineA
+  let aux1 = (lineA < lineB + lineC);
+  let aux2 = (lineA > Math.abs(lineB - lineC));
+  let aux3 = (lineA > 0);
+  resp = resp && aux1 && aux2 && aux3;
+  // condição lineB
+  aux1 = (lineB < lineA + lineC);
+  aux2 = (lineB > Math.abs(lineA - lineC));
+  aux3 = (lineB > 0);
+  resp = resp && aux1 && aux2 && aux3;
+  // condição lineC
+  aux1 = (lineC < lineA + lineB);
+  aux2 = (lineC > Math.abs(lineA - lineB));
+  aux3 = (lineC > 0);
+  resp = resp && aux1 && aux2 && aux3;
+  // Verificação
+  return resp;
 }
+
+console.log(triangleCheck(5, 13, 12));
 
 // Desafio 13
 function hydrate() {
