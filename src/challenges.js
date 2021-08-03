@@ -45,17 +45,16 @@ function catAndMouse(mouse, cat1, cat2) {
     let gato1 = mouse - cat1;
     let gato2 = mouse - cat2;
     if ( gato1 > gato2){
-      console.log('cat2')
+      return "cat2"
     } else if (gato2 > gato1){
-      console.log('cat1')
+      return "cat1"
     } else if (gato2 === gato1){
-      console.log("os gatos trombam e o rato foge")
+      return "os gatos trombam e o rato foge"
     }
 }
-
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+
 }
 
 // Desafio 9
