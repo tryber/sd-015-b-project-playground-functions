@@ -9,18 +9,30 @@ function compareTrue(a, b) {
 
 // Desafio 2
 function calcArea(base, height) {
-  return (base * height)/2
+  return (base * height)/2;
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(value) {
+  let palavra = "";
+  let retorno = [];
+  value = value + " ";
+  for (let caractere of value) {
+    if (caractere != " ") {
+      palavra = palavra + String(caractere);
+    } else {
+      retorno.push(palavra);
+      palavra = "";
+    }
+  } return retorno;
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(value) {
+  return value[(value.length -1)] + ", " + value[0];
 }
+
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
 
 // Desafio 5
 function footballPoints() {
