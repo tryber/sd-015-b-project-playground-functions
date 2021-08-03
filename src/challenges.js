@@ -74,6 +74,23 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
+function fizzBuzz(array) {
+  let fizbuz = [];
+  for (let show of array) {
+    if (show % 3 === 0 && show % 5 === 0) {
+      return 'fizzBuzz';
+    }
+    else if (show % 3 === 0) {
+      return 'fizz';
+    }
+    else if (show % 5 == 0) {
+      return 'buzz';
+    }
+    else {
+      return 'bug!';
+    }
+  }
+}
 
 // Desafio 9
 function encode() {
