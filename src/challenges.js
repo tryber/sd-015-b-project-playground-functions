@@ -9,6 +9,7 @@ function compareTrue(a, b) {
 compareTrue(false, true);
 compareTrue(false, false);
 compareTrue(true, true);
+
 // Desafio 2
 function calcArea(base, height) {
   return (base* height)/2;
@@ -38,9 +39,13 @@ concatName(['foguete', 'não', 'tem', 'ré']);
 concatName(['captain', 'my', 'captain']);
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return ((wins * 3)+(ties * 1));
 }
+
+footballPoints(14, 8);
+footballPoints(1, 2);
+footballPoints(0, 0);
 
 // Desafio 6
 function highestCount() {
