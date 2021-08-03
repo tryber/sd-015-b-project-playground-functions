@@ -40,19 +40,18 @@ function highestCount(arrayNum) {
   for (let i = 0; i < arrayNum.length; i++){
     let number = arrayNum[i];
     
-    if (number > highestNumber) {
+    if (number >= highestNumber) {
       highestNumber = number; 
     }
   }
   //contando maior numero
   for (let j = 0; j < arrayNum.length; j++){
     if ( highestNumber === arrayNum[j]){
-      counter = [counter + "," + highestNumber];
+      counter.push(highestNumber);
     }
   }
-  return counter;
-  
-} console.log(highestCount([2, 15, 45, 9, 45]));
+  return counter.length; 
+}
 
 // Desafio 7
 function catAndMouse() {
