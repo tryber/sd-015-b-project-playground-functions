@@ -19,7 +19,7 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(phrase) {
-  return(phrase.split([" "]));
+  return (phrase.split([' ']));
 }
 
 // Desafio 4
@@ -27,7 +27,7 @@ function concatName(values) {
   let first = values[0];
   let last = values[values.length - 1];
 
-  return last + ", " + first;
+  return last + ', ' + first;
 }
 
 // Desafio 5
@@ -37,8 +37,16 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+// recebe o array
+function highestCount(numbers) {
+  let howMany = 0;
+  let biggestNumber = Math.max(...numbers);
+  for(count = 0; count < numbers.length; count += 1){
+    if (biggestNumber === numbers[count]){
+      howMany += 1;
+    }
+  }
+  return howMany;
 }
 
 // Desafio 7
