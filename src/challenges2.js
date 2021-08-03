@@ -20,18 +20,46 @@ function techList(array, name) {
 // Desafio 11
 function generatePhoneNumber(numbers) {
   // seu código aqui
-  if(numbers.length !== 11){
+  if (numbers.length !== 11) {
     return 'Array com tamanho incorreto.'
-  }else{
+  } else if (verificationOfPhoneNumber(numbers) === true && verificationOfNumberRepetition(numbers)) {
     let phoneNumber = []
-    for(let i = 0; i < numbers.length;i += 1){
-      if(i === 0) phoneNumber.push('(')
-      else if(i === 2) phoneNumber.push(') ')
-      else if(i === 7) phoneNumber.push('-')
+    for (let i = 0; i < numbers.length; i += 1) {
+      if (i === 0) phoneNumber.push('(')
+      else if (i === 2) phoneNumber.push(') ')
+      else if (i === 7) phoneNumber.push('-')
       phoneNumber.push(numbers[i])
     }
     return phoneNumber.join('')
+  } else {
+    return 'não é possível gerar um número de telefone com esses valores'
   }
+}
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 9, 9]))
+
+function verificationOfPhoneNumber(numbers) {
+  for (let i = 0; i < numbers.length; i += 1) {
+    if (numbers[i] < 0 || numbers[i] > 9) {
+      return false
+    }
+  }
+  return true
+}
+function verificationOfNumberRepetition(numbers) {
+  let validNumbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+  for (let i = 0; i < numbers.length; i += 1) {
+    let cont = 0
+
+    for (let j = 0; j < numbers.length; j += 1) {
+      if (validNumbers[i] === numbers[j]){
+        cont += 1
+      }
+      if(cont >= 3){
+        return false
+      }
+    }
+  }
+  return true
 }
 
 // Desafio 12
