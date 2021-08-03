@@ -1,18 +1,21 @@
 // Desafio 1
-function compareTrue() {
+function compareTrue(num1, num2) {
   // seu código aqui
+  if (num1 && num2) {
+    return true;     
+  }
+  else {
+    return false;
+  }
 }
+compareTrue();
 
 // Desafio 2
-function calcArea() {
+function calcArea(base, height) {
   // seu código aqui
-  let base = 10;
-  let height = 50;
-  let result1 = base * height;
-  let result2 = result1 / 2;
-  return result2;
+  return base * height / 2;
 }
-console.log(calcArea());
+calcArea();
 
 // Desafio 3
 function splitSentence() {
@@ -21,11 +24,12 @@ function splitSentence() {
   let divide = palavra.split(' ', 2);
   return divide;
 }
-console.log(splitSentence());
+splitSentence();
 
 // Desafio 4
 function concatName() {
   // seu código aqui
+
 }
 
 // Desafio 5
