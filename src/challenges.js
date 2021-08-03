@@ -8,14 +8,15 @@ function compareTrue(boolean1, boolean2) {
 };
 
 // Desafio 2
-  function calcArea(base, height) {
+function calcArea(base, height) {
     return (base * height) / 2
-  };
+};
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
-}
+function splitSentence(stringToSplit, separator) {
+  let words = stringToSplit.split(separator);
+  return words;
+}; console.log (splitSentence("Meu nome é Lucas e eu tenho 30 anos", " "))
 
 // Desafio 4
 function concatName() {
