@@ -1,9 +1,11 @@
 // Desafio 1
 function compareTrue(a, b) {
   if (a && b) {
-    return true;
+    // return true; 
+ return true;
   } else {
-   return false;
+  //  return false;
+  return false;
   }
 } compareTrue(true, true);
 
