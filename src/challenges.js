@@ -39,7 +39,7 @@ return contador;
   console.log(highestCount([9, 1, 2, 3, 9, 5, 7])) 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2){
-if (cat1 - cat2 === 0 || cat1 === cat2 ) {
+if (cat1 - mouse === cat2 - mouse || cat2 - mouse === (cat1 - mouse)*-1) {
   return 'os gatos trombam e o rato foge';
   } else if (cat1 - mouse < cat2 - mouse) {
   return 'cat1'
