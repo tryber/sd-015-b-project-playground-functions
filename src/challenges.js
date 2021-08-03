@@ -21,13 +21,10 @@ function splitSentence(sentense) {
 function concatName(fullName) {
   return fullName[fullName.length - 1] + ", " + fullName[0];
 }
-fullName = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
-concatName(fullName);
-console.log(concatName(fullName));
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return (wins * 3) + (ties);
 }
 
 // Desafio 6
