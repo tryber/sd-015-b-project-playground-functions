@@ -30,22 +30,35 @@ console.log(splitSentence('foguete'));
 function concatName(array) {
   let ultimo = array[array.length - 1];
   let primeiro = array[0];
-  let soma = ultimo + ' ' + primeiro;
+  let soma = ultimo + ', ' + primeiro;
   return soma;
 }
 console.log(concatName(['a', 'b', 'c']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
- let resultado = wins * 3  + ties
- return resultado;
+  let resultado = wins * 3 + ties;
+  return resultado;
 }
 console.log(footballPoints(0, 0));
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+
+function highestCount(array) {
+  let save = array[0];
+  let count = 0;
+  for (let numero of array) {
+    if (numero > save) {
+      save = numero;
+      count = 0;
+    }
+    if (numero === save) {
+      count += 1;
+    }
+  }
+  return count;
 }
+console.log(highestCount([1, 3, 4, 7, 7, 7, 7]));
 
 // Desafio 7
 function catAndMouse() {
