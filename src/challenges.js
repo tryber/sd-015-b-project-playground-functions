@@ -27,10 +27,13 @@ function splitSentence(frase) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  let arrayReverse = array.reverse();
+  
+  return array[0] + ', ' + array[array.length - 1];
+  
 }
-
+concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'])
 // Desafio 5
 function footballPoints() {
   // seu código aqui
