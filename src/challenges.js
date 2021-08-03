@@ -1,5 +1,3 @@
-/* eslint-disable no-restricted-globals */
-/* eslint-disable no-undef */
 // Desafio 1
 function compareTrue(a, b) {
   return a === true && b === true;
@@ -17,26 +15,27 @@ function splitSentence(string) {
 } console.log(splitSentence('turma trybecat!'));
 
 // Desafio 4
-function concatName(array) {
-  return `${[array.length - 1]}, ${array[0]}`;
-} array = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
-console.log(concatName(array));
+function concatName(lista) {
+  return (lista - [lista.length - 1] + lista[0]);
+}
 
 // Desafio 5
 function footballPoints() {
   return (wins * 3) + ties;
 }
 // Desafio 6
-function highestCount(array_numbers) {
-  let order_array = array_numbers.sort();
-  let highest_number = order_array[order_array.lenght - 1];
+function highestCount(arrayNumeros) {
   let contador = 0;
-  for (index = 0; index < array_numbers.lenght; index += 1) {
-    if (array_numbers[index] === highest_number) contador += 1;
+  let maiorNumero = arrayNumeros[0];
+
+  for (let numero of arrayNumeros) {
+    if (numero > maiorNumero) {
+      maiorNumero = numero;
+      contador += 1;
+    } else if (numero === maiorNumero) { contador += 1; }
   }
   return contador;
 }
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
