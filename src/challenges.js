@@ -39,22 +39,10 @@ function concatName(lista) {
 }
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
-  let maior = 0;
-  let quantidade = 0;
-
-  for (let index = 0; index < numeros.length; index++) {
-    let numeroAtual = numeros[index];
-
-    if (numeroAtual > maior) {
-      maior = numeroAtual;
-      quantidade = 1;
-    } else if (numeroAtual === maior) {
-      quantidade += 1;
-    }
-  }
-  return quantidade;
+  let pontosWins = wins * 3;
+  return pontosWins + ties;
 }
 
 // Desafio 6
