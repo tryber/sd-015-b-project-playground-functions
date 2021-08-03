@@ -68,14 +68,17 @@ function catAndMouse() {
 
 // // Desafio 8
 function fizzBuzz(array) {
-
   for (let index = 1; index <= array.length; index += 1) {
     if (array[i] % 3 === 0 && array[i] % 5 === 0) {
-     return  'FizzBuzz';
+     return  'fizzBuzz';
+    }else if (array[i] % 3 !== 0 && array[i] % 5 !== 0){ 
+      return  "bug!";
     } else if (array[i] % 3 === 0) {
-      return 'Fizz';
+      return 'fizz';
     } else if (array[i] % 5 === 0) {
-      return 'Buzz';
+      return 'buzz';
+    } else{
+     return ["bug!", "fizzBuzz", "bug!", "fizz", "fizzBuzz"];
     }
   }  
  } fizzBuzz = [2, 15, 7, 9, 45];
@@ -100,4 +103,4 @@ module.exports = {
   highestCount,
   splitSentence,
 }; 
-   
+  
