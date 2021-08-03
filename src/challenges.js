@@ -81,18 +81,20 @@ function notDivisible(number) {
 }
 
 function checkStatus(parameter) {
+  let output;
   if (divisibleByThree(parameter) === true) {
-    return 'fizz';
+    output = 'fizz';
   }
   if (divisibleByFive(parameter) === true) {
-    return 'buzz';
+    output = 'buzz';
   }
   if (divisibleByFiveAndThree(parameter) === true) {
-    return 'fizzBuzz';
+    output = 'fizzBuzz';
   }
   if (notDivisible(parameter) === true) {
-    return 'bug!';
+    output = 'bug!';
   }
+  return output;
 }
 
 function fizzBuzz(numberArray) {
