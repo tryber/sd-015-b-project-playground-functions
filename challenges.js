@@ -15,3 +15,7 @@ function compareTrue(a, b) {
 }
 
 // Escreva uma função com o nome calcArea que receba um valor de base (chamado base) e outro de altura (chamado height) de um triângulo e retorne o cálculo da sua área.
+function calcArea(base, height) {
+    return (base * height) / 2;
+}
+console.log(calcArea(51, 1))
