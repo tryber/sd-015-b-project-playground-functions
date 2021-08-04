@@ -27,41 +27,33 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(number) {
-  highestNumber = number[0];
-  count = 0;
+  let highestNumber = number[0];
+  let count = 0;
   for (let key in number) {
     if (highestNumber < number[key]) {
       highestNumber = number[key]
       count = 0;
     }
-    if (highestNumber === number[key])
-      count++;     
+    if (highestNumber === number[key]) count++;     
   }
   return count;
 }
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  if ((Math.abs(mouse - cat1)) < (Math.abs(mouse - cat2)))
-    return 'cat1';
-  else if ((Math.abs(mouse - cat1)) == (Math.abs(mouse - cat2)))
-    return 'os gatos trombam e o rato foge';
-  else
-    return 'cat2';
+  if ((Math.abs(mouse - cat1)) < (Math.abs(mouse - cat2))) return 'cat1';
+  else if ((Math.abs(mouse - cat1)) === (Math.abs(mouse - cat2))) return 'os gatos trombam e o rato foge';
+  return 'cat2';
 }
 
 // Desafio 8
 function fizzBuzz(number) {
   let array = [];
   for(let key in number){
-    if (((number[key] % 3) === 0) && ((number[key] % 5) === 0))
-      array[key] = 'fizzBuzz'
-    else if ((number[key] % 3) === 0)
-      array[key] = 'fizz';
-    else if ((number[key] % 5) === 0)
-      array[key] = 'buzz';
-    else
-      array[key] = 'bug!';
+    if (((number[key] % 3) === 0) && ((number[key] % 5) === 0)) array[key] = 'fizzBuzz'
+    else if ((number[key] % 3) === 0) array[key] = 'fizz';
+    else if ((number[key] % 5) === 0) array[key] = 'buzz';
+    else array[key] = 'bug!';
   }
   return array;  
 }
@@ -74,9 +66,9 @@ function encode(str) {
   encodeStr = encodeStr.replace(/i/g, 3);
   encodeStr = encodeStr.replace(/o/g, 4);
   encodeStr = encodeStr.replace(/u/g, 5);
-
   return encodeStr;
 }
+
 function decode(str) {
   let decodeStr = str;
   decodeStr = decodeStr.replace(/1/g, 'a');
@@ -84,7 +76,6 @@ function decode(str) {
   decodeStr = decodeStr.replace(/3/g, 'i');
   decodeStr = decodeStr.replace(/4/g, 'o');
   decodeStr = decodeStr.replace(/5/g, 'u');
-
   return decodeStr;
 }
 
