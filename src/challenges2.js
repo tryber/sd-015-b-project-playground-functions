@@ -22,18 +22,34 @@ function techList(arr, str) {
 // console.log(techList([], 'André')); // teste 2
 
 // Desafio 11
+
+function verifyValues(arr) {
+  let aux = false;
+  let conf = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+  for (let i of arr) {
+    conf[i] += 1;
+    if (i < 0 || i > 9 || conf[i] >= 3) {
+      aux = true;
+    }
+  }
+  return aux;
+}
+
+function makeNumber(arr) {
+  let number = `(${arr[0]}${arr[1]}) ${arr.slice(2,7).join('')}-${arr.slice(7,11).join('')}`;
+  return number;
+}
+
 function generatePhoneNumber(arr) {
   let number = '';
   if (arr.length === 11) {
-    number = `(${arr[0]}${arr[1]}) ${arr.slice(2, 7).join('')}-${arr.slice(7, 11).join('')}`;
-    for (let i of arr) {
-      let aux = arr.filter(function(x){ return x==i }).length;
-      if (i < 0 || i > 9 || aux >= 3) {
-        number = 'não é possível gerar um número de telefone com esses valores';
-      }
+    if (verifyValues(arr)) {
+      number = 'não é possível gerar um número de telefone com esses valores';
+    } else {
+      number = makeNumber(arr);
     }
-  } else{
-    number += 'Array com tamanho incorreto.';
+  } else {
+    number = 'Array com tamanho incorreto.';
   }
   return number;
 }

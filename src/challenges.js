@@ -141,7 +141,7 @@ function encode(str) {
     if (objEncode[i] !== undefined) {
       aux += objEncode[i];
     } else {
-      aux += i;      
+      aux += i;
     }
   }
   return aux;
