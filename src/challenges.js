@@ -85,35 +85,64 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function coder(phrase, codigo) {
-  let phraseDivider = phrase.split('');
-  for (let index = 0; index < phraseDivider.length; index += 1) {
-    if (codigo[phraseDivider[index]] !== undefined) {
-      phraseDivider[index] = codigo[phraseDivider[index]];
-    }
-  }
-  return phraseDivider.join('');
+  function encode(string1) {
+    let array = [];
+    let string2 = "";
+    array = splitSentence = string1.split("")  
+    for(let i = 0, j = array.length; i<j; i +=1 ){
+         switch (array[i]) {
+            case "a":
+                array[i] = "1";
+                break;
+            case "e":
+                array[i] ="2";
+                break;
+            case "i":
+                array[i] ="3";
+                break;
+            case "o":
+                array[i] ="4";
+                break;
+            case "u":
+                array[i] ="5";
+                break;
+             default:
+                 break;
+         }
+     }
+     for(let i = 0, j = array.length; i<j; i +=1 ){
+      string2 += array[i]}
+      return string2
 }
 
-function encode(phrase) {
-  let encoder = {
-    a: 1,
-    e: 2,
-    i: 3,
-    o: 4,
-    u: 5,
-  };
-  return coder(phrase, encoder);
-}
 function decode() {
-  let decoder = {
-    1: 'a',
-    2: 'e',
-    3: 'i',
-    4: 'o',
-    5: 'u',
-  };
-  return coder('phrase', decoder);
+  let array = [];
+  let string2 = "";
+  array = splitSentence = string1.split("");
+  for(let i = 0, j = array.length; i<j; i +=1 ) {
+    switch (array[i]) {
+      case "1":
+        array[i] = "a"
+      break;
+      case "2":
+        array[i] ="e"
+      break;
+      case "3":
+        array[i] ="i"
+      break;
+      case "4":
+        array[i] ="o"
+      break;
+      case "5":
+        array[i] ="u"
+      break;
+      default:
+      break;
+       }
+   }
+   for  (let i = 0, j = array.length; i<j; i +=1) {
+    string2 += array[i]}
+   return string2
 }
 
 module.exports = {
