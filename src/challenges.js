@@ -1,11 +1,10 @@
 // Desafio 1
 function compareTrue(a, b) {
-  if (a && b){
+  if (a && b) {
     return true; 
-  } else {
-    return false;
-  }  
-} compareTrue(true, true);
+  } 
+  }compareTrue(true, true);
+
 
 // Desafio 2
 let area = 0;
