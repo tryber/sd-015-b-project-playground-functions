@@ -37,10 +37,10 @@ function highestCount(times) {
   // seu código aqui
   let higher = 0;
   let times2 = 0;
-  for (let count = 0; count <= times.length; count += 1) {
+  for (let count = 0; count < times.length; count += 1) {
     if(times[count] > higher) higher = times[count];
   }
-  for (let count = 0; count <= times.length; count += 1){
+  for (let count = 0; count < times.length; count += 1){
     if(times[count] === higher) times2 = times2 + 1;
   }
 return times2;
@@ -72,8 +72,12 @@ function catAndMouse(mouse, cat1, cat2) {
 
 
 // Desafio 8  
-function fizzBuzz() {
+function fizzBuzz(array) {
   // seu código aqui
+  let bug = [];
+  for (let count = 0; count <= array.length; count += 1){
+    if (array[count] )
+  }
 }
 
 // Desafio 9
