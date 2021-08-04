@@ -74,9 +74,11 @@ function fizzBuzz(array) {
     } else if (array[index] % 3 === 0) {
       retorno.push('fizz');
     } else {
-      retorno.push('!bug');
+      retorno.push('bug!');
     }
   }
+
+  return retorno;
 }
 // Desafio 9
 function encode() {
