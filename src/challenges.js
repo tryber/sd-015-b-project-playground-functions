@@ -47,15 +47,14 @@ function highestCount(arrayNumbers) {
   let counter = 0;
 
   for (let index = 0; index < arrayNumbers.length; index += 1) {
-    if (arrayNumbers[index] > larger) {
-      larger = arrayNumbers[index];
-    }
-  }
-  for (let secondIndex = 0; secondIndex < arrayNumbers.length; secondIndex += 1) {
-    if (arrayNumbers[secondIndex] === larger) {
+    if (arrayNumbers[index] === larger) {
       counter += 1;
+    } else if (arrayNumbers[index] > larger) {
+      larger = arrayNumbers[index];
+      counter = 1;
     }
   }
+
   return counter;
 }
 
