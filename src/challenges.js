@@ -52,10 +52,19 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz(arrayNumbers) {
-  for (let index = 0; index < arrayNumbers.length; index += 1) {
-    
+function fizzBuzz(numbers) {
+  for (let index = 0; index < numbers.length; index += 1) {
+    if (numbers[index] % 15 === 0) {
+      numbers[index] = 'fizzBuzz';
+    } else if (numbers[index] % 3 === 0) {
+      numbers[index] = 'fizz';
+    } else if (numbers[index] % 5 === 0) {
+      numbers[index] = 'buzz';
+    } else {
+      numbers[index] = 'bug!';
+    }
   }
+  return numbers;
 }
 
 // Desafio 9
