@@ -18,14 +18,14 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName() {
-  
+  // seu código aqui
 }
 
 // Desafio 5
 function footballPoints(wins, ties) { 
- let newWins = 3 * wins;  
- let totalPoints = newWins + ties;
- return totalPoints;
+  let newWins = 3 * wins;
+  let totalPoints = newWins + ties;
+  return totalPoints;
 } console.log(footballPoints(14, 8));
 
 // Desafio 6
@@ -40,19 +40,19 @@ function catAndMouse(mouse, cat1, cat2) {
   } else {
     cat1 = cat1 - mouse;
   }
-    if (mouse > cat2) {
+  if (mouse > cat2) {
     cat2 = mouse - cat2;
   } else { 
     cat2 = cat2 - mouse;
   }
- if (cat1 === cat2) {
+  if (cat1 === cat2) {
     return 'os gatos trombam e o rato foge';
   } if (cat1 > cat2) {
     return 'cat2';
   } if (cat2 > cat1) {
     return 'cat1';
   }
-  }
+}
 
 // Desafio 8
 function fizzBuzz(array) {
