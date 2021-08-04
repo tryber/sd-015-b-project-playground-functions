@@ -67,7 +67,7 @@ function highestCount(arr) {
   for (let i of arr) {
     if (i >= max) {
       max = i;
-      aux = arr.filter( function(x) {
+      aux = arr.filter(function (x) {
         return x === i;
       }).length;
     }
@@ -100,21 +100,20 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(arr) {
-  let aux = [];
-  for (let i of arr) {
-    let div3 = i % 3 === 0;
-    let div5 = i % 5 === 0;
+  for (let i in arr) {
+    let div3 = arr[i] % 3 === 0;
+    let div5 = arr[i] % 5 === 0;
     if (div3 && div5) {
-      aux.push('fizzBuzz');
+      arr[i] = ('fizzBuzz');
     } else if (div5) {
-      aux.push('buzz');
+      arr[i] = ('buzz');
     } else if (div3) {
-      aux.push('fizz');
+      arr[i] = ('fizz');
     } else {
-      aux.push('bug!');
+      arr[i] = ('bug!');
     }
   }
-  return aux;
+  return arr;
 }
 
 console.log(fizzBuzz([2, 15, 7, 9, 45])); // teste 1
