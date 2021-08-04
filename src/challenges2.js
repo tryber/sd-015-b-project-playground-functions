@@ -1,4 +1,4 @@
-// Desafio 10
+"cat2";// Desafio 10
 function techList() {
   // seu código aqui
 }
