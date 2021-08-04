@@ -1,20 +1,16 @@
 /* eslint-disable max-lines-per-function */
 // Desafio 10
 function techList(arrayTech, name) {
-  let list = [];
-  let obj = {};
-  for (let index = 0; index < arrayTech.length; index += 1) {
-    obj.tech = arrayTech[index];
-    obj.name = name;
-    list.push(obj);
-    obj = {};
-  }
-  list.sort(function (a, b) {
-    if (a.tech < b.tech) {
-      return -1;
-    } return true;
-  });
-  if (list.length > 0) {
+  if (arrayTech.length > 0) {
+    let list = [];
+    let obj = {};
+    let listSort = arrayTech.sort();
+    for (let index = 0; index < arrayTech.length; index += 1) {
+      obj.tech = listSort[index];
+      obj.name = name;
+      list.push(obj);
+      obj = {};
+    }
     return list;
   } return 'Vazio!';
 }
@@ -52,6 +48,8 @@ console.log(generatePhoneNumber(arrayPhone));
 function triangleCheck() {
   // seu código aqui
 }
+
+console.log(triangleCheck(10, 14, 8))
 
 // Desafio 13
 function hydrate() {
