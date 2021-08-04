@@ -64,8 +64,20 @@ function highestCount(amount) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-
-}
+  // 1- Calcular a distancia entre os gatos e rato
+  let distancia1 = Math.abs(cat1 - mouse)
+  let distancia2 = Math.abs(cat2 - mouse)
+  // 2- Encontrar e retornar qual o felino pega o rato mais rapido
+  if (distancia1 > distancia2){
+    return "cat2";
+  }
+  else if (distancia1 < distancia2){
+    return "cat1";
+  }
+  else{
+    return "os gatos trombam e o rato foge";
+  } 
+} 
 
 // Desafio 8
 function fizzBuzz() {
