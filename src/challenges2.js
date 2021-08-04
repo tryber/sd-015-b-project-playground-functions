@@ -29,9 +29,9 @@ function generatePhoneNumber(arr) {
       } 
     }
     for (let i of conf) {
-      if ( i >= 3 ) { ver = false; }
+      if (i >= 3) { ver = false; }
     }
-    let number = '(' + arr[0] + arr[1] + ') ' + arr[2] + arr[3] + arr[4] + arr[5] + arr[6] + '-' + arr[7] + arr[8] + arr[9]+ arr[10];
+    let number = '(' + arr[0] + arr[1] + ') ' + arr[2] + arr[3] + arr[4] + arr[5] + arr[6] + '-' + arr[7] + arr[8] + arr[9] + arr[10];
     if (ver === false) {
       return 'não é possível gerar um número de telefone com esses valores';
     } else {
@@ -56,17 +56,6 @@ function triangleCheck(lineA, lineB, lineC) {
   let aux2 = (lineA > Math.abs(lineB - lineC));
   let aux3 = (lineA > 0);
   resp = resp && aux1 && aux2 && aux3;
-  // condição lineB
-  aux1 = (lineB < lineA + lineC);
-  aux2 = (lineB > Math.abs(lineA - lineC));
-  aux3 = (lineB > 0);
-  resp = resp && aux1 && aux2 && aux3;
-  // condição lineC
-  aux1 = (lineC < lineA + lineB);
-  aux2 = (lineC > Math.abs(lineA - lineB));
-  aux3 = (lineC > 0);
-  resp = resp && aux1 && aux2 && aux3;
-  // Verificação
   return resp;
 }
 
