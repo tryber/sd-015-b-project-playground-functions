@@ -85,64 +85,12 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-  function encode(string1) {
-    let array = [];
-    let string2 = "";
-    array = splitSentence = string1.split("")  
-    for(let i = 0, j = array.length; i<j; i +=1 ){
-         switch (array[i]) {
-            case "a":
-                array[i] = "1";
-                break;
-            case "e":
-                array[i] ="2";
-                break;
-            case "i":
-                array[i] ="3";
-                break;
-            case "o":
-                array[i] ="4";
-                break;
-            case "u":
-                array[i] ="5";
-                break;
-             default:
-                 break;
-         }
-     }
-     for(let i = 0, j = array.length; i<j; i +=1 ){
-      string2 += array[i]}
-      return string2
+function encode() {
+// seu código aqui
 }
 
 function decode() {
-  let array = [];
-  let string2 = "";
-  array = splitSentence = string1.split("");
-  for(let i = 0, j = array.length; i<j; i +=1 ) {
-    switch (array[i]) {
-      case "1":
-        array[i] = "a"
-      break;
-      case "2":
-        array[i] ="e"
-      break;
-      case "3":
-        array[i] ="i"
-      break;
-      case "4":
-        array[i] ="o"
-      break;
-      case "5":
-        array[i] ="u"
-      break;
-      default:
-      break;
-       }
-   }
-   for  (let i = 0, j = array.length; i<j; i +=1) {
-    string2 += array[i]}
-   return string2
+// seu código aqui
 }
 
 module.exports = {

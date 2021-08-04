@@ -1,7 +1,18 @@
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(stacks) {
+  stacks = stacks.sort();
+
+  if (stacks.length === 0) {
+    stacks = 'Empty';
+  } else {
+    for (const key in stacks) {
+      stacks.push({
+        tech: stacks[key],
+        name: nome,
+      })
+    } return stacks;
 }
+} techList(['Nodejs', 'Reactjs', 'SCRUM'], Gustavo);
 
 // Desafio 11
 function generatePhoneNumber() {
