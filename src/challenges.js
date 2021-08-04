@@ -51,7 +51,7 @@ function highestCount(numbers) {
        countNumber++
      }
   }
-  return console.log(countNumber)
+  return (countNumber)
 }
 
 highestCount([9, 1, 2, 3, 9, 5, 7])
@@ -65,13 +65,13 @@ function catAndMouse(mouse, cat1, cat2) {
   let distanceCat2 = mouse - cat2
   
   if(distanceCat1 < distanceCat2){
-    return console.log("cat1")
+    return ("cat1")
 
   }else if(distanceCat2 < distanceCat1){
-    return console.log("cat2")
+    return ("cat2")
 
   }else{
-    return console.log("os gatos trombam e o rato foge")
+    return ("os gatos trombam e o rato foge")
   }
 }
   catAndMouse(10,1,3)
