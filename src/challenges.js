@@ -104,41 +104,21 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-
-// eslint-disable-next-line complexity
-function selectLetterToEncode(letterIndex, array) {
-  switch (array[letterIndex]) {
-  case 'a':
-    return '1';
-  case 'e':
-    return '2';
-  case 'i':
-    return '3';
-  case 'o':
-    return '4';
-  case 'u':
-    return '5';
-  default:
-    return array[letterIndex];
+function searchForCode(array, wantedCode) {
+  let indexes = [];
+  let codeIndex = array.indexOf(wantedCode);
+  while (codeIndex !== -1) {
+    indexes.push(codeIndex);
+    codeIndex = array.indexOf(wantedCode, codeIndex + 1);
   }
+  return indexes;
 }
 
-// eslint-disable-next-line complexity
-function selectLetterToDecode(letterIndex, array) {
-  switch (array[letterIndex]) {
-  case '1':
-    return 'a';
-  case '2':
-    return 'e';
-  case '3':
-    return 'i';
-  case '4':
-    return 'o';
-  case '5':
-    return 'u';
-  default:
-    return array[letterIndex];
+function placeCodesInPlaces(originalArray, indexesToChange, newCode) {
+  for (let index = 0; index < indexesToChange.length; index += 1) {
+    originalArray[indexesToChange[index]] = newCode;
   }
+  return originalArray;
 }
 
 function arrayToString(array) {
@@ -150,27 +130,30 @@ function arrayToString(array) {
 }
 
 function encode(string) {
-  const array = Array.from(string);
-  for (const letterIndex in array) {
-    if (letterIndex >= 0) {
-      array[letterIndex] = selectLetterToEncode(letterIndex, array);
-    }
+  const arrayToWork = Array.from(string);
+
+  const letters = ['a', 'e', 'i', 'o', 'u'];
+  const numbers = ['1', '2', '3', '4', '5'];
+
+  for (let index = 0; index < letters.length; index += 1) {
+    let indexes = searchForCode(arrayToWork, letters[index]);
+    placeCodesInPlaces(arrayToWork, indexes, numbers[index]);
   }
-  return arrayToString(array);
+  return arrayToString(arrayToWork);
 }
 
 function decode(string) {
-  const array = Array.from(string);
-  for (const letterIndex in array) {
-    if (letterIndex >= 0) {
-      array[letterIndex] = selectLetterToDecode(letterIndex, array);
-    }
-  }
-  return arrayToString(array);
-}
+  const arrayToWork = Array.from(string);
 
-encode('hello');
-decode('h2ll4');
+  const letters = ['a', 'e', 'i', 'o', 'u'];
+  const numbers = ['1', '2', '3', '4', '5'];
+
+  for (let index = 0; index < numbers.length; index += 1) {
+    let indexes = searchForCode(arrayToWork, numbers[index]);
+    placeCodesInPlaces(arrayToWork, indexes, letters[index]);
+  }
+  return arrayToString(arrayToWork);
+}
 
 module.exports = {
   calcArea,
