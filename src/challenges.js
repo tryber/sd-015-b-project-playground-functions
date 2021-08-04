@@ -35,10 +35,15 @@ function footballPoints(wins, ties) {
 function highestCount(numbers) {
   let highestNumber = Math.max.apply(null, numbers);
   let repeat = [];
-  let noRepeat = [0, 0, 0];
-  for(let i = 0; i < numbers.length; i += 1) {
-    if(numbers[i] === highestNumber) {
-       repeat += numbers[i]
+  let numberRepeat = [0, 0, 0];
+  for (let i = 0; i < numbers.length; i += 1) {
+    if (numbers[i] === highestNumber) {
+      repeat += numbers[i];
+    }
+    for(let i = 0; i < numbers.length; i += 1) {
+      if(numbers[i] === numberRepeat) {
+        return numberRepeat.length
+      }
     }
   }
   return repeat.length
