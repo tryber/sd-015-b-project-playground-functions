@@ -2,38 +2,41 @@
 function compareTrue(a, b) {
 	return a && b
 } 
-console.log(compareTrue(true, true));
+compareTrue(true, true);
 
 // Desafio 2
 function calcArea (base, height) {
     return base * height /2;
 } 
-console.log(calcArea (10, 50));
-
-function calcArea (base, height) {
-    return base * height /2;
-} 
-console.log(calcArea (5, 2));
-
-function calcArea (base, height) {
-    return base * height /2;
-} 
-console.log(calcArea (51, 1));
+calcArea (10, 50);
+calcArea (5, 2);
+calcArea (51, 1);
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
-}
+function splitSentence (string) {
+    return string.split(' ');
+ }
+ splitSentence("go Trybe");
+ splitSentence("vamo que vamo");
+ splitSentence("foguete");
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName (name) {
+    let first = [0];
+    let last = name.length-1
+    return name [last] + ', ' + name[first];  
 }
+ concatName (['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']);
+ concatName (['foguete', 'não', 'tem', 'ré']);
+ concatName (['captain', 'my', 'captain']);
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints (wins, ties) {
+    return (wins * 3) + (ties * 1)
 }
+footballPoints(14, 8);
+footballPoints(1, 2);
+footballPoints(0, 0); 
 
 // Desafio 6
 function highestCount() {
