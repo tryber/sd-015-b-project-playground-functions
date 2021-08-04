@@ -56,30 +56,63 @@ function highestCount(numeros) {
 
 // busca maior numero
   for (let index = 0; index < tamanho; index++){
-      if (numeros[index] > maiorNumero){
-          maiorNumero = numeros[index]    
-      }
-
+    if (numeros[index] > maiorNumero){
+      maiorNumero = numeros[index]    
+    }
   }
 
   // busca quantas vezes o maior numero apareceu no array
   for (let index = 0; index < tamanho; index++){
-      if (numeros[index] === maiorNumero){
-          contador++;
-      }
+    if (numeros[index] === maiorNumero){
+      contador++;
+    }
   }
   return contador;
 }
 
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let distancia1 = 0;
+  let distancia2 = 0;
+  // calcula distancia rato - gato1:
+  if (mouse > cat1){
+    distancia1 = mouse - cat1;
+  } else {
+    distancia1 = cat1 - mouse;
+  }
+  // calcula distancia rato - gato2:
+  if (mouse > cat2){
+    distancia2 = mouse - cat2;
+  } else {
+    distancia2 = cat2 - mouse;
+  }
+  // compara distancias:
+  if (distancia1 > distancia2){
+    return 'cat2';
+  } else if (distancia2 > distancia1){
+    return 'cat1';
+  } else {
+    return 'os gatos trombam e o rato foge'
+  }
 }
 
+
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arrayNumeros) {
+  let arrayPalavras = [];
+  for (index = 0; index < arrayNumeros.length; index++){
+    if ((arrayNumeros[index] % 3 === 0) && (arrayNumeros[index] % 5 === 0)){
+      arrayPalavras[index] = 'fizzBuzz';
+    } else if (arrayNumeros[index] %3 === 0){
+      arrayPalavras[index] = 'fizz'
+    } else if (arrayNumeros[index] %5 === 0 ){
+      arrayPalavras[index] = 'fizz'
+    } else {
+      arrayPalavras[index] = 'bug!'
+    }
+  }
+  return arrayPalavras;
 }
 
 // Desafio 9
