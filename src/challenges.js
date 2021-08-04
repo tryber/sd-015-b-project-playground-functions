@@ -30,16 +30,15 @@ function footballPoints(wins, ties) {
 } console.log(footballPoints(14, 8));
 
 // Desafio 6
-function highestCount() {
-  function highestNum(arrayNumbers) {
-    let highNumber = arrayNumbers[0];
-  
-    for (let number of arrayNumbers) {
-      if (number > highNumber) {
+let numbers = [9, 1, 2, 3, 9, 5, 7];
+function highestCount(numbers) { 
+    let highNumber = numbers[0];  
+      for (let number of numbers) {
+        if (number > highNumber) {
         highNumber = number;
       }
     }
-    return highNumber;
+      return highNumber;
   }
     
 
@@ -52,13 +51,13 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   if (mouse > cat2) {
     cat2 = mouse - cat2;
-} else {
+  } else {
     cat2 = cat2 - mouse; 
-}
+  }
   if (cat1 === cat2) {
-    return 'os gatos trombam e o rato foge';
+     return 'os gatos trombam e o rato foge';
     } if (cat1 > cat2) {
-    return 'cat2';
+     return 'cat2';
     } if (cat2 > cat1) {
   return 'cat1';
   } 
@@ -71,14 +70,14 @@ function fizzBuzz(array) {
   if ((index % 3) === 0 && (index % 5) === 0) {
     fizzBuzz.push("fizzBuzz");
       } else if ((index % 3) === 0) {
-      fizzBuzz.push("fizz");
-    } else if ((index % 5) === 0) {
+        fizzBuzz.push("fizz");
+     } else if ((index % 5) === 0) {
   fizzBuzz.push("buzz");
-  } else {
+       } else {
       fizzBuzz.push("bug!");
     }
     }
-  return fizzBuzz;
+    return fizzBuzz;
 }
 
 // Desafio 9
