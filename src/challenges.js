@@ -100,10 +100,11 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(arr) {
-  for (let i in arr) {
+  for (let i = 0; i < arr.length; i += 1) {
     let div3 = arr[i] % 3 === 0;
     let div5 = arr[i] % 5 === 0;
-    if (div3 && div5) {
+    let div35 = div3 && div5;
+    if (div35) {
       arr[i] = ('fizzBuzz');
     } else if (div5) {
       arr[i] = ('buzz');
@@ -116,9 +117,9 @@ function fizzBuzz(arr) {
   return arr;
 }
 
-console.log(fizzBuzz([2, 15, 7, 9, 45])); // teste 1
-console.log(fizzBuzz([7, 9])); // teste 2
-console.log(fizzBuzz([9, 25])); // teste 3
+// console.log(fizzBuzz([2, 15, 7, 9, 45])); // teste 1
+// console.log(fizzBuzz([7, 9])); // teste 2
+// console.log(fizzBuzz([9, 25])); // teste 3
 
 // Desafio 9
 function encode(str) {
