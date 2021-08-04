@@ -9,8 +9,8 @@ function compareTrue(a, b) {
 
 // Desafio 2
 let area = 0;
-function calcArea(base, height) { 
-  area === ( base * height ) / 2;
+function calcArea(base, height){  
+  area === (base * height)/2;
   return area;
 } console.log(calcArea(10, 50));
 
@@ -24,9 +24,12 @@ function concatName() {
 } 
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
-}
+function footballPoints(wins, ties) {
+  let newWins;
+  newWins = 3 * wins;  
+  totalPoints = newWins + ties;
+  return totalPoints;
+} console.log(footballPoints(14, 8));
 
 // Desafio 6
 function highestCount() {
