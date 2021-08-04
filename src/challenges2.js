@@ -5,15 +5,13 @@ function techList(lista, name) {
   // seu código aqui
   let tamanhoArray = lista.length;
 
-  if (tamanhoArray === 0)
-  {
+  if (tamanhoArray === 0) {
     return 'Vazio!';
 
   } else {
     let aux = lista.sort();
     let result = [];
-    for (let index of aux)
-    {
+    for (let index of aux) {
       result.push( {tech: index, name: name} );
     }
     return result;
