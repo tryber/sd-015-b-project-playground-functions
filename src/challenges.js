@@ -76,7 +76,7 @@ function fizzBuzz(array) {
   let str = [];
   for(let index = 0; index < array.length; index += 1) {
     numero = array[index];
-    if (numero % 3 === 0 && numero % 5 === 0){
+    if (numero % 3 === 0 && numero % 5 === 0) {
       str.push('fizzBuzz');
     }
     else if (numero % 5 === 0) {
@@ -93,11 +93,16 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
+function encode(str) {
   // seu código aqui
+  let resultado = str.replace(/a/gi, 1).replace(/e/gi, 2).replace(/i/gi, 3).replace(/o/gi, 4).replace(/u/gi, 5);
+  return resultado;
 }
-function decode() {
+
+function decode(str) { 
   // seu código aqui
+  let resultado = str.replace(/1/gi, 'a').replace(/2/gi, 'e').replace(/3/gi, 'i').replace(/4/gi, 'o').replace(/5/gi, 'u');
+  return resultado;
 }
 
 module.exports = {
