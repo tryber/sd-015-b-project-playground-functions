@@ -5,12 +5,12 @@ function techList(arrayDeNomes, name) {
   if (arrayNomes.length === 0) {
     return 'Vazio!';
   } else {
-    for (let index = 0; index < arrayNomes.length; index++) {
+    for (let index = 0; index < arrayNomes.length; index += 1) {
       array.push(
         (objeto = {
           tech: arrayNomes[index],
           name: name,
-        })
+        }),
       );
     }
   }
