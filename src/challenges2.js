@@ -6,13 +6,13 @@ function techList(lista, name) {
   let tamanhoArray = lista.length;
 
   if (tamanhoArray === 0) {
+    
     return 'Vazio!';
-
   } else {
     let aux = lista.sort();
     let result = [];
     for (let index of aux) {
-      result.push( {tech: index, name: name} );
+      result.push({ tech: index, name: name });
     }
     return result;
   }
