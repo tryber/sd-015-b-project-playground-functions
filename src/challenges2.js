@@ -5,35 +5,40 @@ function techList(array, name) {
   array.sort();
   if (array.length === 0) {
     return ('Vazio!');
-  } else {
-    for (let item of array) {
-      let objeto = {};
-      objeto.tech = item;
-      objeto.name = name;
-      novaLista.push(objeto);
-    }
-    return (novaLista);
   }
+  for (let item of array) {
+    let objeto = {
+      tech: '',
+      name: '',
+    };
+    objeto.tech = item;
+    objeto.name = name;
+    novaLista.push(objeto);
+  }
+  return (novaLista);
 }
 
 // Desafio 11
-function generatePhoneNumber(array) {
+function generatePhoneNumber() {
   // seu código aqui
-  if (array.length !== 11) {
-    return ('Array com tamanho incorreto');
-  }
 }
 
 // Desafio 12
+function checa(ladoA, ladoB, ladoC) {
+  let checaSeMenor = ladoA < (ladoB + ladoC);
+  let checaSeMaior = ladoA > Math.abs(ladoB - ladoC);
+  return (checaSeMenor && checaSeMaior);
+}
+
 function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
-    return (((lineA < (lineB + lineC)) && (lineA > (Math.abs(lineB-lineC)))) && ((lineB < (lineA + lineC)) && (lineB > (Math.abs(lineA-lineC)))) && ((lineC < (lineB + lineA)) && (lineC > (Math.abs(lineB-lineA)))));
+  return (checa(lineA, lineB, lineC) && checa(lineB, lineA, lineC) && checa(lineC, lineB, lineA));
 }
 
 // Desafio 13
 function hydrate(string) {
   // seu código aqui
-  let separaVirgula = string.split(' ')
+  let separaVirgula = string.split(' ');
   let numeros = [];
   for (let item of separaVirgula) {
     numeros.push(item.match(/\d+/));
@@ -43,10 +48,9 @@ function hydrate(string) {
     soma += Number(item);
   }
   if (soma > 1) {
-    return (soma + ' copos de água');
-  } else {
-    return (soma + ' copo de água');
+    return (`${soma} copos de água`);
   }
+  return (`${soma} copo de água`);
 }
 
 module.exports = {
