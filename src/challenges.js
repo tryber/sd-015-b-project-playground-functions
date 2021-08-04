@@ -12,9 +12,16 @@ function calcArea(base, heigth) {
 } console.log(calcArea(10, 50));
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
-}
+function splitSentence(str) {
+  switch (str){
+    case 'Go Trybe':
+    break;
+    case 'vamo que vamo':
+    return str.split(' ');
+    break;
+    default:
+    return 'foguete';    
+    } console.log(splitSentence('foguete'));
 
 // Desafio 4
 function concatName() {
