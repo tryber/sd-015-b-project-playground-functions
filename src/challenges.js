@@ -60,7 +60,7 @@ function catAndMouse(mouse, cat1, cat2) {
   let distanceCat2 = Math.abs(mouse - cat2);
 
   if (distanceCat1 < distanceCat2) {
-    return 'Cat1';
+    return 'cat1';
   } else if (distanceCat2 < distanceCat1) {
     return 'cat2';
   } else {
