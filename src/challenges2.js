@@ -17,7 +17,7 @@ function generatePhoneNumber(phoneNumber) {
   if (phoneNumber.length !== 11) {
     return 'Array com tamanho incorreto.';
   } else if (phoneNumber.length === 11) {
-    for (let number in phoneNumber){
+    for (let number in phoneNumber) {
   } 
   } else if ((phoneNumber -1) < 0 || (phoneNumber / 2) < 5 || phoneNumber([0, 1, 6]) === Number) {
     return 'não é possível gerar um número de telefone com esses valores';
@@ -30,14 +30,14 @@ function generatePhoneNumber(phoneNumber) {
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   let check = false;
-  if (lineA > lineB + lineC || 
-    lineB > lineA + lineC || 
-    lineC > lineA + lineB) {
+  if (lineA > lineB + lineC 
+|| lineB > lineA + lineC 
+|| lineC > lineA + lineB) {
     check = false;
   } else if (
-    lineA < Math.abs(lineB - lineC) || 
-    lineB < Math.abs(lineA - lineC) || 
-    lineC < Math.abs(lineA - lineB)) {
+lineA < Math.abs(lineB - lineC) 
+|| lineB < Math.abs(lineA - lineC) 
+|| lineC < Math.abs(lineA - lineB)) {
     check = false;
   } else {
     check = true;
@@ -46,10 +46,10 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-let bebida = "1 cerveja"
+let bebida = '1 cerveja';
 function hydrate(bebida) {
   let quantity = /\d+/g;
-  for(let number of quantity){
+  for (let number of quantity) {
     return number;
   }
 }
