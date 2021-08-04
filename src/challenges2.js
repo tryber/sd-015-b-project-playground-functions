@@ -8,7 +8,7 @@ function techList(stacks) {
     for (const key in stacks) {
       stacks.push({
         tech: stacks[key],
-        name: nome,
+        name: '',
       })
     } return stacks;
 }
