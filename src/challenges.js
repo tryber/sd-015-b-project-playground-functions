@@ -74,13 +74,13 @@ return quantidade
  
 
 function catAndMouse(mouse, cat1, cat2) {
-    
+    let ProximeCat;
     let negativeCat1 = cat1 - mouse;
-    let negativeCat2 = cat2 - mouse;
+    
     if (negativeCat1 < 0) {
       negativeCat1 = negativeCat1 * (-1);
     }
-    
+    let negativeCat2 = cat2 - mouse;
     if (negativeCat2 < 0) {
       negativeCat2 = negativeCat2 * (-1);
     }
@@ -91,7 +91,7 @@ function catAndMouse(mouse, cat1, cat2) {
     } else {
       ProximeCat = 'os gatos trombam e o rato foge';
     }
-    let ProximeCat;
+  
     return ProximeCat;
   }
 // Desafio 8
