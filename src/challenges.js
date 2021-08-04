@@ -5,7 +5,7 @@ function compareTrue(a, b) {
   } else {
     return false;
   }  
-} compareTrue (true, true);
+} 
 
 // Desafio 2
 let area = 0;
@@ -21,14 +21,7 @@ function splitSentence() {
 
 // Desafio 4
 function concatName() {
-  if (string= ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']){
-    return string[0] + ' ' + string[string.length -1];
-  }else if (string = ['foguete', 'não', 'tem', 'ré']){
-    return string[0] + ' ' + string[string.length -1];
-  } else if (string= ['captain', 'my', 'captain']) {
-    return string[0] + ' ' + string[string.length -1];
 } 
-} console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
 function footballPoints() {
