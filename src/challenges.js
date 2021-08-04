@@ -67,11 +67,22 @@ function fizzBuzz() {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let stringNumber = string.replace('a', '1')
+    .replace('e', '2')
+    .replace('i', '3')
+    .replace('o', '4')
+    .replace('u', '5');
+  return stringNumber;
 }
-function decode() {
-  // seu código aqui
+
+function decode(string) {
+  let stringVowel = string.replace('1', 'a')
+    .replace('2', 'e')
+    .replace('3', 'i')
+    .replace('4', 'o')
+    .replace('5', 'u');
+  return stringVowel;
 }
 
 module.exports = {
