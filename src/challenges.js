@@ -48,9 +48,9 @@ function catAndMouse(mouse, cat1, cat2) {
   let distance2 = mouse - cat2;
 
   if (distance < 0) {
-    distance = Math.abs(-1, distance);
+    distance = Math.abs(-distance);
   } else if (distance2 < 0) {
-    distance2 = Math.abs(-distance2, distance2);
+    distance2 = Math.abs(-distance2);
   }
 
   if (distance < distance2) {
