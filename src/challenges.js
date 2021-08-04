@@ -1,7 +1,7 @@
 // Desafio 1
 function compareTrue(a, b) {
   let d1;
-  if (a === true && b === true) {
+  if (a && b) {
     d1 = true;
   } else { d1 = false; }
   return d1;
@@ -69,26 +69,42 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz(arrayDeNumeros2) {
+function oquePushar(x) {
+  let push;
+  if (x % 3 === 0 && x % 5 === 0) {
+    push = 'fizzBuzz';
+  } else if (x % 3 === 0) {
+    push = 'fizz';
+  } else if (x % 5 === 0) {
+    push = 'buzz';
+  } else { push = 'bug!'; }
+  return push;
+}
+function fizzBuzz(arrayDeNumeros) {
   let d8 = [];
-  for (let n of arrayDeNumeros2) {
-    if (n % 3 === 0 && n % 5 === 0) {
-      d8.push('fizzBuzz');
-    } else if (n % 3 === 0) {
-      d8.push('fizz');
-    } else if (n % 5 === 0) {
-      d8.push('buzz');
-    } else { d8.push('bug!'); }
+  for (let n of arrayDeNumeros) {
+    d8.push(oquePushar(n));
   }
   return d8;
 }
 
 // Desafio 9
-function encode() {
-  
+function encode(string) {
+  let encoded = string.replace(/a/g, '1');
+  encoded = encoded.replace(/e/g, '2');
+  encoded = encoded.replace(/i/g, '3');
+  encoded = encoded.replace(/o/g, '4');
+  encoded = encoded.replace(/u/g, '5');
+  return encoded;
 }
-function decode() {
-  // seu código aqui
+
+function decode(string) {
+  let decoded = string.replace(/1/g, 'a');
+  decoded = decoded.replace(/2/g, 'e');
+  decoded = decoded.replace(/3/g, 'i');
+  decoded = decoded.replace(/4/g, 'o');
+  decoded = decoded.replace(/5/g, 'u');
+  return decoded;
 }
 
 module.exports = {
