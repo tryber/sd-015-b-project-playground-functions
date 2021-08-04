@@ -40,8 +40,8 @@ function highestCount(numbers) {
       repeat += numbers[i];
     }
   }
-    return repeat.length
-  }
+  return repeat.length;
+}
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
