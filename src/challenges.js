@@ -94,6 +94,7 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
+// Funcao .replace utilizada baseando-se na documentacao :https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace
 function encode(string) {
   string = string.replace(/a/g,'1');
   string = string.replace(/e/g,'2');
