@@ -1,10 +1,11 @@
 // Desafio 1
-function compareTrue(valor1, valor2) {
-  if (valor1 === true && valor2 === true){ 
-   return true; 
-  } else { 
-   return false; 
-  } console.log(compareTrue(true , true)); 
+function compareTrue(a,b) {
+  if (a && b) {
+    return true;
+    } else {
+    return false;
+    }
+} 
 
 // Desafio 2
 function calcArea(base, heigth){
@@ -54,11 +55,7 @@ function footballPoints(){
  let numbers = [9, 1, 2, 3, 9, 5, 7];
  let quantidade = 0;
 function highestCount(numbers) {
- 
-for(key in highestCount){
-  if (highestCount[i]){
 
-    }  
 }
 
 // Desafio 7

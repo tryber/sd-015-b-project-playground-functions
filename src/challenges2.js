@@ -9,9 +9,7 @@ function generatePhoneNumber() {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
-}
+function triangleCheck() {}
 
 // Desafio 13
 function hydrate() {
