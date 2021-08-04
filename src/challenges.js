@@ -118,30 +118,31 @@ function encode(fraseParaCode) {
       fraseUni.push(4)
     else if (key === 'u')
       fraseUni.push(5)
-  }
-  return mais = fraseUni.join('')
-}
-
-function decode(fraseParaCode) {
-  // seu código aqui
-  let fraseSplit = fraseParaCode.split('')
-  let fraseUni = []
-  
-  for (let key of fraseSplit) {
-    if (key === '1')
-      fraseUni2.push('a')
-    else if (key === '1')
-      fraseUni2.push('e')
-    else if (key === '1')
-      fraseUni2.push('i')
-    else if (key === '1')
-      fraseUni2.push('o')
-    else if (key === '1')
-      fraseUni2.push('u')
+    else fraseUni.push(key)
   }
   return fraseUni.join('')
 }
 
+function decode(fraseParaDecode) {
+  // seu código aqui
+  let fraseSplit = fraseParaDecode.split('')
+  let fraseOrigi = []
+  
+  for (let key of fraseSplit) {
+    if (key === '1')
+      fraseOrigi.push('a')
+    else if (key === '2')
+      fraseOrigi.push('e')
+    else if (key === '3')
+      fraseOrigi.push('i')
+    else if (key === '4')
+      fraseOrigi.push('o')
+    else if (key === '5')
+      fraseOrigi.push('u')
+    else fraseOrigi.push(key)
+  }
+  return fraseOrigi.join('')
+}
 
 module.exports = {
   calcArea,
