@@ -20,11 +20,11 @@ calcArea();
 // Desafio 3
 function splitSentence(palavra) {
   // seu código aqui
-  let divide = " ";
-  palavra = divide.split(' ', 3);
-  return palavra;
+  palavra = ' ';
+  let divide = palavra.split(' ');
+  return divide;
 }
-splitSentence();
+console.log(splitSentence());
 
 // Desafio 4
 function concatName(array) {
@@ -36,10 +36,24 @@ return result;
 concatName();
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
+wins;
+wins;
+let pointWins = 3;
+let pointTies = 1;
+
+if (pointWins > 0 || pointTies > 0) {
+  let result1 = wins * pointWins;
+  let result2 = ties * pointTies;
+  let result = result1 + result2;
+  return result;
+}
+else {
 
 }
+}
+footballPoints()
 
 // Desafio 6
 function highestCount() {
