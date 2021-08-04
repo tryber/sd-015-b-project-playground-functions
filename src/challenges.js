@@ -39,13 +39,8 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(array) {
-  let maiorNumero = array[0];
   let vezesMaiorNumero = 0;
-  for (let index = 0; index < array.length; index += 1) {
-    if (array[index] > maiorNumero) {
-      maiorNumero = array[index];
-    }
-  }
+  let maiorNumero = Math.max(...array);
   for (let contador = 0; contador < array.length; contador += 1) {
     if (maiorNumero === array[contador]) {
       vezesMaiorNumero += 1;
@@ -85,7 +80,7 @@ function fizzBuzz(array) {
 // Desafio 9
 function encode(string) {
   let encodeMsg = string.split('');
-  for (key in encodeMsg) {
+  for (let key in encodeMsg) {
     if (encodeMsg[key] === 'a') {
       encodeMsg[key] = '1'
     } else if (encodeMsg[key] === 'e') {
@@ -100,11 +95,11 @@ function encode(string) {
   }
   let message = encodeMsg.join('');
   return message;
-  } 
+}
 
 function decode(message) {
   let decodeMsg = message.split('');
-  for (key in decodeMsg) {
+  for (let key in decodeMsg) {
     if (decodeMsg[key] === '1') {
       decodeMsg[key] = 'a'
     } else if (decodeMsg[key] === '2') {
@@ -119,7 +114,7 @@ function decode(message) {
   }
   let stringDecode = decodeMsg.join('');
   return stringDecode;
-  } console.log(decode("h3 th2r2!"))
+}
 
 module.exports = {
   calcArea,
