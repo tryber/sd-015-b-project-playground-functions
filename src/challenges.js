@@ -69,29 +69,57 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(array) {
   let resultado = [];
   for (let index = 0; index < array.length; index += 1) {
-    if (array[index] % 3 === 0 && array[index] % 5 != 0) {
-    resultado.push('fizz');
-  } else if (array[index] % 5 === 0 && array[index] % 3 != 0) {
-    resultado.push('buzz');
-  } else if (array[index] % 3 === 0 && array[index] % 5 === 0) {
-    resultado.push('fizzBuzz');
-  } else {
-    resultado.push('bug!');
+    if (array[index] % 3 === 0 && array[index] % 5 !== 0) {
+      resultado.push('fizz');
+    } else if (array[index] % 5 === 0 && array[index] % 3 !== 0) {
+      resultado.push('buzz');
+    } else if (array[index] % 3 === 0 && array[index] % 5 === 0) {
+      resultado.push('fizzBuzz');
+    } else {
+      resultado.push('bug!');
+    }
   }
+  return resultado;
 }
-return resultado;
-} console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode(string) {
-  let vowels = ['a', 'e', 'i', 'o', 'u'];
-  let numbers = [1, 2, 3, 4, 5];
-  return string.replace('e', '2');
-} console.log(encode('hi there!'));
+  let encodeMsg = string.split('');
+  for (key in encodeMsg) {
+    if (encodeMsg[key] === 'a') {
+      encodeMsg[key] = '1'
+    } else if (encodeMsg[key] === 'e') {
+      encodeMsg[key] = '2'
+    } else if (encodeMsg[key] === 'i') {
+      encodeMsg[key] = '3'
+    } else if (encodeMsg[key] === 'o') {
+      encodeMsg[key] = '4'
+    } else if (encodeMsg[key] === 'u') {
+      encodeMsg[key] = '5'
+    }
+  }
+  let message = encodeMsg.join('');
+  return message;
+  } 
 
-function decode() {
-  // seu código aqui
-}
+function decode(message) {
+  let decodeMsg = message.split('');
+  for (key in decodeMsg) {
+    if (decodeMsg[key] === '1') {
+      decodeMsg[key] = 'a'
+    } else if (decodeMsg[key] === '2') {
+      decodeMsg[key] = 'e'
+    } else if (decodeMsg[key] === '3') {
+      decodeMsg[key] = 'i'
+    } else if (decodeMsg[key] === '4') {
+      decodeMsg[key] = 'o'
+    } else if (decodeMsg[key] === '5') {
+      decodeMsg[key] = 'u'
+    }
+  }
+  let stringDecode = decodeMsg.join('');
+  return stringDecode;
+  } console.log(decode("h3 th2r2!"))
 
 module.exports = {
   calcArea,
