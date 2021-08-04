@@ -113,10 +113,10 @@ function highestCount(arrayNumeros) {
 // highestCount(meuArray); //[DEBUG]
 
 // Desafio 7
-function catAndMouse(cat1, cat2, rat) {
+function catAndMouse(cat1, cat2, mouse) {
   // seu código aqui
-  let distanciaGato1 = Math.abs(cat1 - rat);
-  let distanciaGato2 = Math.abs(cat2 - rat);
+  let distanciaGato1 = Math.abs(cat1 - mouse);
+  let distanciaGato2 = Math.abs(cat2 - mouse);
 
   if (distanciaGato1 < distanciaGato2)
   {
