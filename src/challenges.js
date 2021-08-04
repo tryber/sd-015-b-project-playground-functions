@@ -20,21 +20,25 @@ calcArea();
 // Desafio 3
 function splitSentence(palavra) {
   // seu código aqui
-  palavra = ' ';
-  let divide = palavra.split(' ');
-  return divide;
+  let divide = " ";
+  palavra = divide.split(' ', 3);
+  return palavra;
 }
 splitSentence();
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
-
+function concatName(array) {
+  // seu código aqui+
+array = [];
+let result = array[0] + ', ' + array[array.length-1];
+return result;
 }
+concatName();
 
 // Desafio 5
 function footballPoints() {
   // seu código aqui
+
 }
 
 // Desafio 6
