@@ -1,7 +1,6 @@
-/* eslint-disable sonarjs/cognitive-complexity */
 // Desafio 1
 function compareTrue(number1, number2) {
-  if (number1 === true && number2 === true) {
+  if (number1 && number2) {
     return true;
   } return false;
 }
