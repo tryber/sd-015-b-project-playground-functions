@@ -111,7 +111,7 @@ function subFizzBuzz(element) {
   } else {
     aux = 'bug!';
   }
-  return aux
+  return aux;
 }
 
 function fizzBuzz(arr) {
@@ -126,59 +126,73 @@ function fizzBuzz(arr) {
 // console.log(fizzBuzz([9, 25])); // teste 3
 
 // Desafio 9
+
+function subEncode(str) {
+  let aux;
+  switch (str) {
+  case 'a':
+    aux = 1;
+    break;
+  case 'e':
+    aux = 2;
+    break;
+  case 'i':
+    aux = 3;
+    break;
+  case 'o':
+    aux = 4;
+    break;
+  case 'u':
+    aux = 5;
+    break;
+  default:
+    aux = str;
+  }
+  return aux;
+}
+
 function encode(str) {
   let aux = '';
   for (let i of str) {
-    switch (i) {
-    case 'a':
-      aux += 1;
-      break;
-    case 'e':
-      aux += 2;
-      break;
-    case 'i':
-      aux += 3;
-      break;
-    case 'o':
-      aux += 4;
-      break;
-    case 'u':
-      aux += 5;
-      break;
-    default:
-      aux += i;
-    }
+    aux += subEncode(i);
   }
   return aux;
 }
 
 // console.log( encode('hi there!') ); // teste 1
 
-function decode(str) {
-  let aux = '';
-  for (let i of str) {
-    switch (i) {
-    case '1':
-      aux += 'a';
-      break;
-    case '2':
-      aux += 'e';
-      break;
-    case '3':
-      aux += 'i';
-      break;
-    case '4':
-      aux += 'o';
-      break;
-    case '5':
-      aux += 'u';
-      break;
-    default:
-      aux += i;
-    }
+function subDecode(str) {
+  let aux;
+  switch (str) {
+  case '1':
+    aux = 'a';
+    break;
+  case '2':
+    aux = 'e';
+    break;
+  case '3':
+    aux = 'i';
+    break;
+  case '4':
+    aux = 'o';
+    break;
+  case '5':
+    aux = 'u';
+    break;
+  default:
+    aux = str;
   }
   return aux;
 }
+
+function decode(str) {
+  let aux = '';
+  for (let i of str) {
+    aux += subDecode(i);
+  }
+  return aux;
+}
+
 
 // console.log( decode('h3 th2r2!') ); // teste 1
 
