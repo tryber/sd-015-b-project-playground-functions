@@ -1,11 +1,12 @@
 // Desafio 1
-function compareTrue(comidaX, comidaY) {
+
+function compareTrue(a, b) {
   // seu código aqui
-if (comidaX === 'bolo' && comidaY === 'pao') {
-  return true;
-} else {
-  return false;
-}
+  if (a === 'pensar' && b === 'logoExisto') {
+    return true;
+  } else {
+    return false;
+} 
 }
 
 // Desafio 2
@@ -24,9 +25,24 @@ function splitSentence(frase) {
 }
 
 // Desafio 4
-function concatName() {
+names = ['joão', 'paulo', 'daniel'];
+
+function concatName(names) {
   // seu código aqui
-}
+  let primeiroItem =""
+  for (let name in names) {
+    primeiroItem = primeiroItem + names[name[0]];
+    return(primeiroItem);    
+  }
+  let ultimoItem = ""
+  for (let name in names) {
+    let ultimoItem = ultimoItem + names[name[1]];
+    return ultimoItem;
+  }
+  }
+
+console.log(concatName(names));
+
 
 // Desafio 5
 function footballPoints() {
