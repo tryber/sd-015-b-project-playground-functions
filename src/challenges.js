@@ -21,7 +21,7 @@ calcArea();
 function splitSentence(palavra) {
   // seu código aqui
   palavra = ' ';
-  let divide = palavra.split(' ', 2);
+  let divide = palavra.split(' ');
   return divide;
 }
 splitSentence();
