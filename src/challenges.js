@@ -52,14 +52,23 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(fizzBuzzArray) {
-  // for (let key in fizzBuzzArray) {
-  //   if (fizzBuzzArray[key] % 3 === 0 && fizzBuzzArray[key] % 5 === 0){
-  //     return 'FizzBuzz'
-  //   } else if () {
-
-  //   }
-  // }
+  var output = [];
+  for (let key in fizzBuzzArray) {
+    if (fizzBuzzArray[key] % 3 === 0 && fizzBuzzArray[key] % 5 === 0) {
+       output.push('fizzBuzz')
+      } else if (fizzBuzzArray[key] % 3 === 0) {
+        output.push('fizz')
+      } else if (fizzBuzzArray[key] % 5 === 0) {
+        output.push('buzz')
+      } else {
+        output.push('bug!')
+      }
+  }
+  return output;
 }
+
+let fizzBuzzArray = [2, 15, 7, 9, 45];
+console.log(fizzBuzz(fizzBuzzArray))
 
 // Desafio 9
 function encode(string) {
@@ -68,7 +77,7 @@ function encode(string) {
   encodedString = encodedString.replace(/i/g, '3');
   encodedString = encodedString.replace(/o/g, '4');
   encodedString = encodedString.replace(/u/g, '5');
-  return encodedString
+  return encodedString;
 }
 
 function decode (string) {
@@ -77,12 +86,8 @@ function decode (string) {
   encodedString = encodedString.replace(/3/g, 'i');
   encodedString = encodedString.replace(/4/g, 'o');
   encodedString = encodedString.replace(/5/g, 'u');
-  return encodedString
+  return encodedString;
 }
-let string = 'abelha aeiou'
-console.log(encode(string))
-string = encode(string)
-console.log(decode(string))
 
 module.exports = {
   calcArea,
