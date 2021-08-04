@@ -4,7 +4,7 @@ function compareTrue(a, b) {
    return true;
   } else {
    return false;  
-  } compareTrue(true, true);
+  }} compareTrue(true, true);
 
 // Desafio 2
 function calcArea(base, heigth){
@@ -57,7 +57,13 @@ function footballPoints(){
 
 // Desafio 6
 function highestCount() {
-  // seu código aqui
+
+  let highestCount = [9, 1, 2, 3, 9, 5, 7];
+  for(key in highestCount){
+    if (highestCount[i])
+  }
+ 
+
 }
 
 // Desafio 7
@@ -90,15 +96,15 @@ function decode() {
   // seu código aqui
 }
 
-// module.exports = {
-//   calcArea,
-//   catAndMouse,
-//   compareTrue,
-//   concatName,
-//   decode,
-//   encode,
-//   fizzBuzz,
-//   footballPoints,
-//   highestCount,
-//   splitSentence,
-// };  
+module.exports = {
+  calcArea,
+  catAndMouse,
+  compareTrue,
+  concatName,
+  decode,
+  encode,
+  fizzBuzz,
+  footballPoints,
+  highestCount,
+  splitSentence,
+};  
