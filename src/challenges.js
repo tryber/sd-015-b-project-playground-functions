@@ -60,8 +60,9 @@ function highestCount() {
 
   let highestCount = [9, 1, 2, 3, 9, 5, 7];
   for(key in highestCount){
-    if (highestCount[i])
-  }
+    if (highestCount[i]){
+
+    }  
 }
 
 // Desafio 7
@@ -96,13 +97,13 @@ function decode() {
 
 module.exports = {
   calcArea,
-  catAndMouse,
-  compareTrue,
-  concatName,
-  decode,
-  encode,
-  fizzBuzz,
-  footballPoints,
-  highestCount,
-  splitSentence,
+  // catAndMouse,
+  // compareTrue,
+  // concatName,
+  // decode,
+  // encode,
+  // fizzBuzz,
+  // footballPoints,
+  // highestCount,
+  // splitSentence,
 };  
