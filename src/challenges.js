@@ -31,9 +31,11 @@ function concatName(txt){
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
-}
+function footballPoints(wins, ties) {
+  console.log((wins * 3) + ties)
+  return ((wins * 3) + ties);
+ };
+
 
 // Desafio 6
 function highestCount() {
