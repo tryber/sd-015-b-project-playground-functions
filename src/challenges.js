@@ -116,11 +116,48 @@ function fizzBuzz(arrayNumeros) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(arrayNormal) {
+  let arrayCodificado = [];
+  let mensagem = '';
+  for(index = 0; index < arrayNormal.length; index++){    
+    if (arrayNormal[index] === 'a'){
+      arrayCodificado[index] = '1';
+    } else if (arrayNormal[index] === 'e'){
+      arrayCodificado[index] = '2';
+    } else if (arrayNormal[index] === 'i'){
+      arrayCodificado[index] = '3'
+    } else if (arrayNormal[index] === 'o'){
+      arrayCodificado[index] = '4'
+    } else if (arrayNormal[index] === 'u'){
+      arrayCodificado[index] = '5'
+    } else {
+      arrayCodificado[index] = arrayNormal[index]
+    }
+    mensagem = arrayCodificado.join('');
+  }
+return mensagem;
 }
-function decode() {
-  // seu código aqui
+
+function decode(arrayCodificado) {
+  let arrayNormal = [];
+  let mensagem = '';
+  for(index = 0; index < arrayCodificado.length; index++){    
+    if (arrayCodificado[index] === '1'){
+      arrayNormal[index] = 'a';
+    } else if (arrayCodificado[index] === '2'){
+      arrayNormal[index] = 'e';
+    } else if (arrayCodificado[index] === '3'){
+      arrayNormal[index] = 'i'
+    } else if (arrayCodificado[index] === '4'){
+      arrayNormal[index] = 'o'
+    } else if (arrayCodificado[index] === '5'){
+      arrayNormal[index] = 'u'
+    } else {
+      arrayNormal[index] = arrayCodificado[index]
+    }
+    mensagem = arrayNormal.join('');
+  }
+return mensagem;
 }
 
 module.exports = {
