@@ -85,25 +85,35 @@ function triangleCheck(lineA, lineB, lineC) {
 // console.log(triangleCheck(5, 13, 12)); // teste 3
 
 // Desafio 13
-function hydrate(str) {
-  let aqua = 0;
+
+function identifyNumbers(str) {
   let aux = str.split(' ');
-  for (let i in aux) {
-    let number = parseInt(aux[i], 10);
-        if (number == aux[i]) {
-      aqua += number;
+  let resp = [];
+  for (let i of aux) {
+    let number = parseInt(i, 10);
+    if (isNaN(number) !== true) {
+      resp.push(number);
     }
   }
-  if (aqua === 1) {
-    return aqua + ' copo de água';
-  } else if (aqua > 1) {
-    return aqua + ' copos de água';
+  return resp;
+}
+
+function hydrate(str) {
+  let aux = identifyNumbers(str);
+  let cont = 0;
+  for (let i of aux) {
+    cont += i;
   }
+  if (cont === 1) {
+    aux = '1 copo de água';
+  } else {
+    aux = `${cont} copos de água`;
+  }
+  return aux;
 }
 
 // console.log(hydrate("1 cerveja")); // teste 1
 // console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho")); // teste 2
-// console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho")); // teste 3
 
 module.exports = {
   generatePhoneNumber,
