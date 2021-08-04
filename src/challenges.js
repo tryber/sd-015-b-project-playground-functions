@@ -100,7 +100,7 @@ function encode(string) {
     }
   }
   let final = result.join('');
-  
+
   return final;
 }
 
@@ -123,7 +123,7 @@ function decode(string) {
     }
   }
   let final = result.join('');
-  
+
   return final;
 }
 
