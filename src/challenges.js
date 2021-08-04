@@ -39,17 +39,11 @@ function concatName(string){
 } console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
-function footballPoints(){
-  let wins = [];
-  let ties = [];
-  if(wins[14] && ties[8]){
-    return 50 + 'pontos';
-  } else if (wins[1] && ties[2]){
-    return 5 + 'pontos';
-  } else if(wins[0] && ties[0]){
-    return 0 + 'pontos';
-  }
-}footballPoints= [14, 8];
+function footballPoints(wins, ties){
+  totalPontos = totalWins + totalTies;
+  return totalPontos;
+}
+console.log(footballPoints(14,8));
 
 // Desafio 6
  let numbers = [9, 1, 2, 3, 9, 5, 7];
