@@ -1,8 +1,9 @@
 // Desafio 1
-
-function compareTrue(a, b) {
+let vida = true;
+let codar = false;
+function compareTrue(vida, codar) {
   // seu código aqui
-  if (a > 1 && b > 1) {
+  if (vida && codar) {
     return true;
   } else {
     return false;
