@@ -2,7 +2,7 @@
 
 function compareTrue(a, b) {
   // seu código aqui
-  if (a === 'pensar' && b === 'logoExisto') {
+  if (a > 1 && b > 1) {
     return true;
   } else {
     return false;
