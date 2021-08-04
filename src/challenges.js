@@ -1,40 +1,40 @@
 // Desafio 1
-function compareTrue(a, b) {
+  function compareTrue(a, b) {
   if ( a && b ) {
     return true;
   } else {
     return false;
   }
- } compareTrue(true, true);
+  } compareTrue(true, true);
  
  // Desafio 2
- let area = 0;
- function calcArea(base, height) {
+  let area = 0;
+  function calcArea(base, height) {
    area = (base * height) / 2;
    return area;
- } console.log(calcArea(10, 50));
+   } console.log(calcArea(10, 50));
  
  // Desafio 3
- function splitSentence(str) {
-   switch (str){
-     case 'Go Trybe':
-     break;
-     case 'vamo que vamo':
-     return str.split(' ');
-     break;
-     default:
-     return 'foguete';    
-     } console.log(splitSentence('foguete'));
+  function splitSentence(str) {
+  switch (str){
+   case 'Go Trybe':
+   break;
+   case 'vamo que vamo':
+   return str.split(' ');
+   break;
+   default:
+   return 'foguete';    
+   } console.log(splitSentence('foguete'));
  
  
  // Desafio 4
  function concatName() {
-   if (string= ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']){
-     return string[0] + ' ' + string[string.length -1];
-   }else if (string = ['foguete', 'não', 'tem', 'ré']){
-     return string[0] + ' ' + string[string.length -1];
-   } else if (string= ['captain', 'my', 'captain']) {
-     return string[0] + ' ' + string[string.length -1];
+  if (string= ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']){
+    return string[0] + ' ' + string[string.length -1];
+  }else if (string = ['foguete', 'não', 'tem', 'ré']){
+    return string[0] + ' ' + string[string.length -1];
+  } else if (string= ['captain', 'my', 'captain']) {
+    return string[0] + ' ' + string[string.length -1];
  } 
  } console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
  
