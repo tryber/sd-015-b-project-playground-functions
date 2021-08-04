@@ -1,10 +1,11 @@
 // Desafio 1
 function compareTrue(a, b) {
-  if (a && b) {
+  if (a && b){
     return true; 
-  } 
-  }compareTrue(true, true);
-
+  } else {
+    return false;
+  }  
+} compareTrue(true, true);
 
 // Desafio 2
 let area = 0;
@@ -55,10 +56,21 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   }
 
-
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  let fizzBuzz = [];
+    for (let i of array) {
+    if ((i % 3) === 0 && (i % 5) === 0) {
+    fizzBuzz.push("fizzBuzz");
+  } else if ((i % 3) === 0) {
+    fizzBuzz.push("fizz");
+  } else if ((i % 5) === 0) {
+    fizzBuzz.push("buzz");
+  } else {
+    fizzBuzz.push("bug!")
+  }
+  }
+    return fizzBuzz;
 }
 
 // Desafio 9
