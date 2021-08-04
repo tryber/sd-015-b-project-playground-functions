@@ -121,13 +121,13 @@ function verificaTermo(number)
 {
   let resultado;
 
-  if (number % 3 === 0 && number / 5 === 0)
+  if (number % 3 === 0 && number % 5 === 0)
   {
     resultado = 'fizzBuzz';
   } else if (number % 3 === 0 )
   {
     resultado = 'fizz';
-  } else if (number / 5 === 0 )
+  } else if (number % 5 === 0 )
   {
     resultado = 'buzz';
   } else
