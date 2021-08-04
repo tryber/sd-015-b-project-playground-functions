@@ -47,13 +47,12 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   if (cat1 - mouse < cat2 - mouse) {
     return 'cat1';
-  } 
-  return 'cat2';
+  } return 'cat2';
 }
 
 // Desafio 8
 function fizzBuzz(fizzBuzzArray) {
-  var output = [];
+  let output = [];
   for (let key in fizzBuzzArray) {
     if (fizzBuzzArray[key] % 3 === 0 && fizzBuzzArray[key] % 5 === 0) {
       output.push('fizzBuzz');
@@ -78,7 +77,7 @@ function encode(string) {
   return encodedString;
 }
 
-function decode (string) {
+function decode(string) {
   let encodedString = string.replace(/1/g, 'a');
   encodedString = encodedString.replace(/2/g, 'e');
   encodedString = encodedString.replace(/3/g, 'i');
