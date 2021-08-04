@@ -25,26 +25,24 @@ function techList(arr, str) {
 function generatePhoneNumber(arr) {
   let number = '';
   if (arr.length === 11) {
-    number = `(${number}${arr[0]}${arr[1]}) `;
-    number = `${number}${arr.slice(2, 7).join('')}-`;
-    number = `${number}${arr.slice(7, 11).join('')}`;
+    number = `(${arr[0]}${arr[1]}) ${arr.slice(2, 7).join('')}-${arr.slice(7, 11).join('')}`;
     for (let i of arr) {
-      let aux = arr.filter(function(x){ return x==2 }).length;
+      let aux = arr.filter(function(x){ return x==i }).length;
       if (i < 0 || i > 9 || aux >= 3) {
         number = 'não é possível gerar um número de telefone com esses valores';
       }
     }
-  } else {
+  } else{
     number += 'Array com tamanho incorreto.';
   }
   return number;
 }
 
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 9])); // teste 1
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, -1, 7, 8, 9, 0, 1])); // teste 2
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 10, 9, 0, 1])); // teste 3
-console.log(generatePhoneNumber([1, 2, 2, 2, 5, 6, 7, 8, 9, 0, 1])); // teste 4
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1])); // teste 5
+// console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 9])); // teste 1
+// console.log(generatePhoneNumber([1, 2, 3, 4, 5, -1, 7, 8, 9, 0, 1])); // teste 2
+// console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 10, 9, 0, 1])); // teste 3
+// console.log(generatePhoneNumber([1, 2, 2, 2, 5, 6, 7, 8, 9, 0, 1])); // teste 4
+// console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1])); // teste 5
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {

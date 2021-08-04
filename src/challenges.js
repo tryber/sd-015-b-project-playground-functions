@@ -37,7 +37,7 @@ function splitSentence(str) {
 // Desafio 4
 function concatName(arr) {
   if (typeof arr === 'object') {
-    return arr[arr.length - 1] + ', ' + arr[0];
+    return `${arr[arr.length - 1]}, ${arr[0]}`;
   }
 }
 
