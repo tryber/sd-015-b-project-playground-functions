@@ -96,7 +96,7 @@ function catAndMouse(mouse, cat1, cat2){
     }
    
    else { 
-        console.log("os gatos trombam e o rato foge")
+        return "os gatos trombam e o rato foge"
 }
 }
 
@@ -141,7 +141,7 @@ function encode(a) {
     }
     
     }
-   console.log(AS.join(''))
+  returnAS.join('')
     
     }   
      encode("hi there!")
@@ -167,7 +167,7 @@ function decode(b) {
     
     }
    
-   console.log(BS.join(''))
+   return BS.join('')
 
 }
 decode('h3 th2r2!')
