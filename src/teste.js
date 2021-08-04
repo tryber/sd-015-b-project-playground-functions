@@ -1,5 +1,5 @@
-let num = 'ola'
+let cars = ['Saab', 'Volvo', 'BMW'];
 
-for (let index = 0; index < string.length; index += 1) {
-    console.log(num[index])
+for (let index in cars) {
+  console.log(cars[index]);
 }
