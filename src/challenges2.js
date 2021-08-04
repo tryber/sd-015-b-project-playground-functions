@@ -7,16 +7,19 @@ function techList(arr, name) {
     let aux = arr.sort();
     resp = [];
     for (let i of aux) {
-      resp.push({ tech: i, name: name });
+      resp.push({
+        tech: i,
+        name: name
+      });
     }  
   }
   return resp;
 }
 
-let arr = ["React", "Jest", "HTML", "CSS", "JavaScript"]; // teste 1
-let name = 'André'; // teste 1
-console.log(techList(arr, name)); // teste 1
-console.log(techList([], 'André')); // teste 2
+// let arr = ["React", "Jest", "HTML", "CSS", "JavaScript"]; // teste 1
+// let name = 'André'; // teste 1
+// console.log(techList(arr, name)); // teste 1
+// console.log(techList([], 'André')); // teste 2
 
 // Desafio 11
 function generatePhoneNumber(arr) {
