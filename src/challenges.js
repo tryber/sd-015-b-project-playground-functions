@@ -32,9 +32,9 @@ function concatName(names) {
 
   let firstName = names[0]
 
-  let lastName = [names[names.length - 1]]
+  let lastName = names[names.length - 1]
 
-  let firstAndLastName = lastName.concat(firstName)
+  let firstAndLastName = lastName + ", " + firstName
 
   return firstAndLastName;
 }
