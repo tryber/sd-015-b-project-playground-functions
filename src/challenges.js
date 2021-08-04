@@ -26,7 +26,7 @@ function concatName(novoArray) {
   // seu código aqui
   let juntaString = novoArray[novoArray.length-1];
   juntaString += (', ' + novoArray[0]);
-    return juntaString;
+  return juntaString;
 }
 
 // Desafio 5
@@ -78,16 +78,67 @@ function catAndMouse(mouse,cat1,cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(antigoArray) {
   // seu código aqui
+  let novaArray = [];
+
+  for (let index = 0; index < antigoArray.length; index += 1){
+    if (antigoArray[index] % 3 === 0 && antigoArray[index] % 5 === 0){
+      novaArray.push('fizzBuzz');
+    } else{
+      if (antigoArray[index] % 3 === 0){
+        novaArray.push('fizz');
+      } else if (antigoArray[index] % 5 === 0){
+        novaArray.push('buzz');
+      } else {
+        novaArray.push('bug!');
+      }
+    }
+  }
+  return novaArray;
 }
 
 // Desafio 9
-function encode() {
+function encode(palavra) {
   // seu código aqui
+  let tabelaNumeros = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5
+  };
+  let letras = palavra.split('');
+
+  for (let index = 0; index < letras.length; index += 1) {
+    for (index2 in tabelaNumeros) {
+      if (letras[index] === index2) {
+        letras[index] = tabelaNumeros[index2];
+      }
+    }
+  }
+  return letras.join('');
 }
-function decode() {
+
+function decode(palavra) {
   // seu código aqui
+  let tabelaNumeros = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5
+  };  
+  let letras = palavra.split('');  
+
+  for (let index = 0; index < letras.length; index += 1) {
+    for (index2 in tabelaNumeros) {
+      if (letras[index] === tabelaNumeros[index2].toString()) {
+        letras[index] = index2;
+      }
+    }
+  }
+  return letras.join('');
 }
 
 module.exports = {
@@ -102,5 +153,3 @@ module.exports = {
   highestCount,
   splitSentence,
 };
-
-console.log(catAndMouse(7,10,9))
