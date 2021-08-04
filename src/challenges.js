@@ -2,9 +2,9 @@
 function compareTrue(a, b) {
   if (a && b === true) {
     return true; 
-  } 
-   return false;
-}
+} 
+    return false;
+} compareTrue(true, true);
 
 // Desafio 2
 let area = 0;
