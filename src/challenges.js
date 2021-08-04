@@ -67,7 +67,7 @@ function highestCount(arr) {
   for (let i of arr) {
     if (i >= max) {
       max = i;
-      aux = arr.filter(function(x) {
+      aux = arr.filter( function(x) {
         return x === i;
       }).length;
     }
@@ -102,11 +102,13 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(arr) {
   let aux = [];
   for (let i of arr) {
-    if (i % 5 === 0 && i % 3 === 0) {
+    let div3 = i % 3 === 0;
+    let div5 = i % 5 === 0;
+    if (div3 && div5) {
       aux.push('fizzBuzz');
-    } else if (i % 5 === 0) {
+    } else if (div5) {
       aux.push('buzz');
-    } else if (i % 3 === 0) {
+    } else if (div3) {
       aux.push('fizz');
     } else {
       aux.push('bug!');
@@ -115,9 +117,9 @@ function fizzBuzz(arr) {
   return aux;
 }
 
-// console.log(fizzBuzz([2, 15, 7, 9, 45])); // teste 1
-// console.log(fizzBuzz([7, 9])); // teste 2
-// console.log(fizzBuzz([9, 25])); // teste 3
+console.log(fizzBuzz([2, 15, 7, 9, 45])); // teste 1
+console.log(fizzBuzz([7, 9])); // teste 2
+console.log(fizzBuzz([9, 25])); // teste 3
 
 // Desafio 9
 function encode(str) {
