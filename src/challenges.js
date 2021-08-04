@@ -20,7 +20,7 @@ function splitSentence(string) {
 function concatName(array) {
   let combo = array[array.length - 1] + ', ' + array[0];
   return combo;
-} concatName('Lucas', 'Cassiano', 'Ferraz', 'Paolillo');
+} console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -60,9 +60,9 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   if (cat1 === cat2) {
     return 'os gatos trombam e o rato foge';
-    } if (cat1 > cat2) {
-    return 'cat2';
-    } if (cat2 > cat1) {
+  } if (cat1 > cat2) {
+  return 'cat2';
+  } if (cat2 > cat1) {
     return 'cat1';
   } 
 }
@@ -74,13 +74,13 @@ function fizzBuzz(array) {
     if ((index % 3) === 0 && (index % 5) === 0) {
       fizzBuzz.push('fizzBuzz');
     } else if ((index % 3) === 0) {
-      fizzBuzz.push("fizz");
+      fizzBuzz.push('fizz');
     } else if ((index % 5) === 0) {
       fizzBuzz.push('buzz');
     } else {
       fizzBuzz.push('bug!');
     }
-}
+  }
 return fizzBuzz;
 }
 
