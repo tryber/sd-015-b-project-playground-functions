@@ -29,7 +29,6 @@ function footballPoints(win, ties) {
 function highestCount(numberArray) {
   let counter = 0;
   let higherNumber = numberArray[0];
-  
   for (let number of numberArray) {
     if (number > higherNumber) {
       higherNumber = number;
@@ -45,9 +44,11 @@ function highestCount(numberArray) {
 function catAndMouse(mouse, cat1, cat2) {
   if (cat1 - mouse === cat2 - mouse || cat2 - mouse === (cat1 - mouse) * -1) {
     return 'os gatos trombam e o rato foge';
-  } else if (cat1 - mouse < cat2 - mouse) {
+  }
+  if (cat1 - mouse < cat2 - mouse) {
     return 'cat1';
-  } return 'cat2';
+  } 
+  return 'cat2';
 }
 
 // Desafio 8
