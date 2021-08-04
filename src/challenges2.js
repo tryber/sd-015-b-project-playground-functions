@@ -1,5 +1,5 @@
 // Desafio 10
-function techList(arr, name) {
+function techList(arr, str) {
   let resp;
   if (arr.length === 0) {
     resp = 'Vazio!';
@@ -9,9 +9,9 @@ function techList(arr, name) {
     for (let i of aux) {
       resp.push({
         tech: i,
-        name: name
+        name: str,
       });
-    }  
+    }
   }
   return resp;
 }
