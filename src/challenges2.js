@@ -22,7 +22,7 @@ function techList(arr, name) {
 // Desafio 11
 function generatePhoneNumber(arr) {
   let phoneNumber = '';
-  
+
   if (arr.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
@@ -54,7 +54,6 @@ function generatePhoneNumber(arr) {
       phoneNumber += arr[index];
     }
   }
-  
   return phoneNumber;
 }
 
@@ -72,7 +71,7 @@ function hydrate(str) {
   let count = 0;
 
   for (let index = 0; index < onlyNumbers.length; index += 1) {
-    count += parseInt(onlyNumbers[index]);
+    count += parseInt(onlyNumbers[index], 10);
   }
 
   if (count <= 1) {
