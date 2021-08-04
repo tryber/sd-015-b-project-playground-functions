@@ -115,18 +115,37 @@ function highestCount(arrayNumeros) {
 // Desafio 7
 function catAndMouse(cat1, cat2, rat) {
   // seu código aqui
-  if ( ( Math.abs(cat1 - rat) ) < ( Math.abs(cat2 - rat) ) )
+  let distanciaGato1 = Math.abs(cat1 - rat);
+  let distanciaGato2 = Math.abs(cat2 - rat);
+
+  if (distanciaGato1 < distanciaGato2)
+  {
+    return 'cat1';
+  } else if (distanciaGato1 > distanciaGato2)
+  {
+    return 'cat2';
+  } else if (cat1 === cat2)
+  {
+    return 'os gatos trombam e o rato foge';
+  }
+  else
+  {
+    return 0;
+  }
+  /*
+  if ( Math.abs(cat1 - rat) < Math.abs(cat2 - rat) )
   {
     return 'cat1';
 
-  } else if ( (Math.abs(cat1 - rat)) === ( Math.abs(cat2 - rat)) )
-  {
-    return 'os gatos trombam e o rato foge';
-    
-  } else 
+  } else if ( Math.abs(cat1 - rat) > Math.abs(cat2 - rat) )
   {
     return 'cat2';
+
+  } else 
+  {
+    return 'os gatos trombam e o rato foge';
   }
+  */
 }
 
 function verificaTermo(number)
