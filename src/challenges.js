@@ -5,14 +5,14 @@ function compareTrue(a,b) {
     } else {
     return false;
     }
-} compareTrue(true, true);
+} console.log(compareTrue(true, true));
 
 // Desafio 2
-function calcArea(base, heigth){
+function calcArea(base, height){
     let area = 0;
     area = (base * height)/2;
     return area;
- } calcArea(10, 50);
+ } console.log(calcArea(10, 50));
 
 // Desafio 3
 function splitSentence(str) { 
@@ -25,7 +25,7 @@ function splitSentence(str) {
     default:
     return 'foguete';
     }
-    } splitSentence('foguete');
+    } console.log(splitSentence('foguete'));
 
 // Desafio 4
 function concatName(string){ 
@@ -36,7 +36,7 @@ function concatName(string){
   } else if (string= ['captain', 'my', 'captain']) {
     return string[0] + ' ' + string[string.length -1];
 } 
-} concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']);
+} console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
 function footballPoints(){
