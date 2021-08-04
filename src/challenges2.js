@@ -91,7 +91,7 @@ function identifyNumbers(str) {
   let resp = [];
   for (let i of aux) {
     let number = parseInt(i, 10);
-    if (isNaN(number) !== true) {
+    if (Number.isNaN(number) !== true) {
       resp.push(number);
     }
   }
