@@ -43,7 +43,7 @@ function concatName(obj) {
   if ( comparar == true )
   {
     let concatenacao = obj[tamanho - 1] + ', ' + obj[0];
-    //console.log(concatenacao);
+    // console.log(concatenacao); // [DEBUG]
     return concatenacao;
   }
 
@@ -76,11 +76,41 @@ function footballPoints(wins, ties) {
 
 }
 
-// Desafio 6
-function highestCount() {
-  // seu código aqui
-}
+function defineMaior(array) {
 
+  let maior = Number.NEGATIVE_INFINITY;
+
+  for (let number of array)
+  {
+    if (number > maior)
+    {
+
+      maior = number;
+    }
+  }
+  console.log("Maior Número [DENTRO DA FUNÇÃO SECUNDÁRIA]: " + maior);
+  return maior;
+
+}
+// Desafio 6
+function highestCount(arrayNumeros) {
+  // seu código aqui
+  let maiorNumero = defineMaior(arrayNumeros);
+  let contadorDoMaior = 0;
+  console.log("Maior Número: " + maiorNumero); // [DEBUG]
+
+  for (number of arrayNumeros)
+  {
+    if (number == maiorNumero)
+    {
+      contadorDoMaior +=1;
+    }
+  }
+  console.log("Contador do Maior Número: " + contadorDoMaior); // [DEBUG]
+  return contadorDoMaior;
+}
+meuArray = [10, 8, 7, 3, 5, 4, 1, 9, 10, 10];
+ highestCount(meuArray); //[DEBUG]
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
