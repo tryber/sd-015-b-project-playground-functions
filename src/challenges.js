@@ -128,11 +128,11 @@ function fizzBuzz(arr) {
 // Desafio 9
 
 let objEncode = {
-  a :'1',
-  e :'2',
-  i :'3',
-  o :'4',
-  u :'5',
+  a: '1',
+  e: '2',
+  i: '3',
+  o: '4',
+  u: '5',
 };
 
 function encode(str) {
@@ -150,11 +150,11 @@ function encode(str) {
 // console.log( encode('hi there!') ); // teste 1
 
 let objDecode = {
-  1 :'a',
-  2 :'e',
-  3 :'i',
-  4 :'o',
-  5 :'u',
+  1: 'a',
+  2: 'e',
+  3: 'i',
+  4: 'o',
+  5: 'u',
 };
 
 function decode(str) {
@@ -163,7 +163,7 @@ function decode(str) {
     if (objDecode[i] !== undefined) {
       aux += objDecode[i];
     } else {
-      aux += i;    
+      aux += i;
     }
   }
   return aux;
