@@ -30,15 +30,21 @@ function footballPoints(wins, ties) {
 } console.log(footballPoints(14, 8));
 
 // Desafio 6
-function highestCount(numbers) { 
-    let highNumber = numbers[0];  
-      for (let number of numbers) {
-        if (number > highNumber) {
-        highNumber = number;
-      }
-    }
-      return highNumber;
+function highestCount(numbersArray) {
+  let highestNumber = numbersArray[0];
+  let count = 0;
+  for (let i of numbersArray) {
+    if (i > highestNumber) {
+      highestNumber = i;
+    } 
   }
+  for (let j of numbersArray) {
+    if (j === highestNumber) {
+      count += 1;
+    }
+  }
+  return count; 
+}
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
