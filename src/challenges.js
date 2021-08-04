@@ -105,13 +105,13 @@ function fizzBuzz(arr) {
     let div5 = arr[i] % 5 === 0;
     let div35 = div3 && div5;
     if (div35) {
-      arr[i] = ('fizzBuzz');
+      arr[i] = 'fizzBuzz';
     } else if (div5) {
-      arr[i] = ('buzz');
+      arr[i] = 'buzz';
     } else if (div3) {
-      arr[i] = ('fizz');
+      arr[i] = 'fizz';
     } else {
-      arr[i] = ('bug!');
+      arr[i] = 'bug!';
     }
   }
   return arr;
