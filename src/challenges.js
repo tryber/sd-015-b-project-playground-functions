@@ -102,7 +102,7 @@ function catAndMouse(mouse, cat1, cat2) {
 
 function subFizzBuzz(element) {
   let aux;
-  if (element % 3 === 0 element % 5 === 0) {
+  if (element % 3 === 0 && element % 5 === 0) {
     aux = 'fizzBuzz';
   } else if (element % 3 === 0) {
     aux = 'fizz'
@@ -121,9 +121,9 @@ function fizzBuzz(arr) {
   return arr;
 }
 
-console.log(fizzBuzz([2, 15, 7, 9, 45])); // teste 1
-console.log(fizzBuzz([7, 9])); // teste 2
-console.log(fizzBuzz([9, 25])); // teste 3
+// console.log(fizzBuzz([2, 15, 7, 9, 45])); // teste 1
+// console.log(fizzBuzz([7, 9])); // teste 2
+// console.log(fizzBuzz([9, 25])); // teste 3
 
 // Desafio 9
 function encode(str) {
