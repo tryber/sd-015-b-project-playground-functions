@@ -72,10 +72,26 @@ function fizzBuzz(values) {
 
 // Desafio 9
 function encode(encoding) {
-  
+  let encValue = encoding.split('')
+  for (let index = 0; index < encValue.length; index += 1) {
+    if (encValue[index] === 'a') encValue[index] = 1
+    else if (encValue[index] === 'e') encValue[index] = 2
+    else if (encValue[index] === 'i') encValue[index] = 3
+    else if (encValue[index] === 'o') encValue[index] = 4
+    else if (encValue[index] === 'u') encValue[index] = 5
+  }
+  return encValue.join('')
 }
-function decode() {
-  // seu código aqui
+function decode(decoding) {
+  let decValue = decoding.split('')
+  for (let index = 0; index < decValue.length; index += 1) {
+    if (decValue[index] === '1') decValue[index] = 'a'
+    else if (decValue[index] === '2') decValue[index] = 'e'
+    else if (decValue[index] === '3') decValue[index] = 'i'
+    else if (decValue[index] === '4') decValue[index] = 'o'
+    else if (decValue[index] === '5') decValue[index] = 'u'
+  }
+  return decValue.join('')
 }
 
 module.exports = {
