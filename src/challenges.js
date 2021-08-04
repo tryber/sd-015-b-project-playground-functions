@@ -8,7 +8,7 @@ function compareTrue(a, b) {
 } compareTrue(true, true);
 
 // Desafio 2
-let area === 0;
+let area = 0;
 function calcArea(base, height){  
   area === (base * height)/2;
   return area;
