@@ -1,21 +1,16 @@
 // Desafio 1
-function compareTrue(a, b) {
-  if (a && b ) {
-   return true;
-  } else {
-   return false;  
-  }} 
+function compareTrue(valor1, valor2) {
+  if (valor1 === true && valor2 === true){ 
+   return true; 
+  } else { 
+   return false; 
+  } console.log(compareTrue(true , true)); 
 
 // Desafio 2
 function calcArea(base, heigth){
-   let area = (base * height) / 2;
-   if (base === 10 && height === 50) {
+    let area = 0;
+    area = (base * height)/2;
     return area;
-   } else if (base === 5 && height === 2) {
-    return area;
-   } else if (base === 51 && height === 1) {
-     return area;
-   }
  } calcArea(10, 50);
 
 // Desafio 3
@@ -56,11 +51,12 @@ function footballPoints(){
 }footballPoints= [14, 8];
 
 // Desafio 6
-function highestCount() {
-
-  let highestCount = [9, 1, 2, 3, 9, 5, 7];
-  for(key in highestCount){
-    if (highestCount[i]){
+ let numbers = [9, 1, 2, 3, 9, 5, 7];
+ let quantidade = 0;
+function highestCount(numbers) {
+ 
+for(key in highestCount){
+  if (highestCount[i]){
 
     }  
 }
@@ -71,21 +67,22 @@ function catAndMouse() {
 }
 
 // // Desafio 8
-function fizzBuzz(array) {
-  for (let index = 1; index <= array.length; index += 1) {
-    if (array[i] % 3 === 0 && array[i] % 5 === 0) {
-     return  'fizzBuzz';
-    }else if (array[i] % 3 !== 0 && array[i] % 5 !== 0){ 
-      return  "bug!";
-    } else if (array[i] % 3 === 0) {
-      return 'fizz';
-    } else if (array[i] % 5 === 0) {
-      return 'buzz';
-    } else{
-     return ["bug!", "fizzBuzz", "bug!", "fizz", "fizzBuzz"];
-    }
-  }  
- } fizzBuzz = [2, 15, 7, 9, 45];
+function fizzBuzz(string) {
+  let array = [];
+   for (let index = 0; index < string.length; index += 1){
+       if (string[index] % 3 === 0 && string[index] % 5 === 0) {
+          array.push("fizzBuzz");
+      } else if (string[index]  % 5 === 0){
+         array.push("buzz");
+      } else if  (string[index] % 3 === 0 && string[index] % 5 !== 0) {
+      array.push("fizz");
+      } else if (string[index] % 3 !== 0 && string[index] % 5 !== 0){
+      array.push("bug!");
+      } else  {
+        array.push("bug!");
+      }   
+      return array;
+    } fizzBuzz([2, 15, 7, 9, 45]);
 
 // Desafio 9
 function encode() {
@@ -97,13 +94,13 @@ function decode() {
 
 module.exports = {
   calcArea,
-  // catAndMouse,
-  // compareTrue,
-  // concatName,
-  // decode,
-  // encode,
-  // fizzBuzz,
-  // footballPoints,
-  // highestCount,
-  // splitSentence,
+  catAndMouse,
+  compareTrue,
+  concatName,
+  decode,
+  encode,
+  fizzBuzz,
+  footballPoints,
+  highestCount,
+  splitSentence,
 };  
