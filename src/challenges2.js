@@ -1,3 +1,4 @@
+/* eslint-disable max-lines-per-function */
 // Desafio 10
 function techList(arrayTech, name) {
   let list = [];
@@ -23,23 +24,29 @@ let name = 'Amanda';
 console.log(techList(arrayTech, name));
 
 // Desafio 11
+// eslint-disable-next-line complexity
 function generatePhoneNumber(arrayPhone) {
   if (arrayPhone.length !== 11) {
-    console.log('Array com tamanho incorreto.');
-  } 
-  if {
-    for (let num of arrayPhone) {
-      if (num < 0 || num > 9) {
-        return console.log('Não é possível gerar um número de telefone com esses valores');
-      } let stringPhone = arrayPhone.join('');
-      let resultado = stringPhone.replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3');
-      console.log(resultado);
+    return 'Array com tamanho incorreto.';
+  }
+  for (let index = 0; index < arrayPhone.length; index += 1) {
+    let count = 0;
+    for (let segIndex = 0; segIndex < arrayPhone.length; segIndex += 1) {
+      if (arrayPhone[index] === arrayPhone[segIndex]) {
+        count += 1;
+      }
+    }
+    if (arrayPhone[index] < 0 || arrayPhone[index] > 9 || count >= 3) {
+      return 'não é possível gerar um número de telefone com esses valores';
     }
   }
+  let stringPhone = arrayPhone.join('');
+  let resultado = stringPhone.replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3');
+  return resultado;
 }
 
 let arrayPhone = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
-generatePhoneNumber(arrayPhone);
+console.log(generatePhoneNumber(arrayPhone));
 
 // Desafio 12
 function triangleCheck() {
