@@ -83,8 +83,18 @@ function lineCheck(line1, line2, line3) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let drinksQuantities = string.match(/\d+/g);
+  let waterCupsQuantity = 0;
+  for (index = 0; index < drinksQuantities.length; index += 1) {
+    waterCupsQuantity += parseInt(drinksQuantities[index]);
+  }
+  if (waterCupsQuantity > 1) {
+    return waterCupsQuantity + " copos de água";
+  } else {
+    return waterCupsQuantity + " copo de água";
+  }
+  
 }
 
 module.exports = {
