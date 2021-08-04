@@ -105,11 +105,11 @@ function subFizzBuzz(element) {
   if (element % 3 === 0 && element % 5 === 0) {
     aux = 'fizzBuzz';
   } else if (element % 3 === 0) {
-    aux = 'fizz'
+    aux = 'fizz';
   } else if (element % 5 === 0) {
-    aux = 'buzz'
+    aux = 'buzz';
   } else {
-    aux = 'bug!'
+    aux = 'bug!';
   }
   return aux
 }
