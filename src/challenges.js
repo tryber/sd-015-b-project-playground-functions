@@ -67,7 +67,9 @@ function highestCount(arr) {
   for (let i of arr) {
     if (i >= max) {
       max = i;
-      aux = arr.filter (function(x) { return x === i; }).length;
+      aux = arr.filter(function(x) {
+        return x === i;
+      }).length;
     }
   }
   return aux;
