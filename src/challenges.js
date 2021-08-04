@@ -80,10 +80,8 @@ function defineMaior(array) {
 
   let maior = Number.NEGATIVE_INFINITY;
 
-  for (let number of array)
-  {
-    if (number > maior)
-    {
+  for (let number of array){
+    if (number > maior){
 
       maior = number;
     }
@@ -93,17 +91,15 @@ function defineMaior(array) {
 
 }
 // Desafio 6
-function highestCount(arrayNumeros) {
+function highestCount(arrayNumeros){
   // seu código aqui
   let maiorNumero = defineMaior(arrayNumeros);
   let contadorDoMaior = 0;
   // .log("Maior Número: " + maiorNumero); // [DEBUG]
 
-  for (number of arrayNumeros)
-  {
-    if (number == maiorNumero)
-    {
-      contadorDoMaior +=1;
+  for (number of arrayNumeros){
+    if (number === maiorNumero){
+      contadorDoMaior += 1;
     }
   }
   // console.log("Contador do Maior Número: " + contadorDoMaior); // [DEBUG]
@@ -155,14 +151,11 @@ function verificaTermo(number)
   if (number % 3 === 0 && number % 5 === 0)
   {
     resultado = 'fizzBuzz';
-  } else if (number % 3 === 0 )
-  {
+  } else if (number % 3 === 0){
     resultado = 'fizz';
-  } else if (number % 5 === 0 )
-  {
+  } else if (number % 5 === 0){
     resultado = 'buzz';
-  } else
-  {
+  } else {
     resultado = 'bug!';
   }
   return resultado;
@@ -171,9 +164,8 @@ function verificaTermo(number)
 function fizzBuzz(arrayNumeros) {
   // seu código aqui
   let result = [];
-  for (let number of arrayNumeros)
-  {
-    result.push(verificaTermo(number) );
+  for (let number of arrayNumeros){
+    result.push(verificaTermo(number));
   }
   return result;
 }
