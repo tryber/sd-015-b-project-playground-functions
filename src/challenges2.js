@@ -72,13 +72,22 @@ function triangleCheck(lineA, lineB, lineC) {
   if (lineA < (lineB + lineC) && lineB < (lineA + lineC)) {
     return true
   }
-
   return false
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(str) {
+  let onlyNumbers = str.replace(/\D/g, '')
+  let count = 0
+
+  for (let index = 0; index < onlyNumbers.length; index += 1) {
+      count += parseInt(onlyNumbers[index])
+  }
+
+  if (count <= 1) {
+    return `${count} copo de água`
+  }
+  return `${count} copos de água`
 }
 
 module.exports = {
