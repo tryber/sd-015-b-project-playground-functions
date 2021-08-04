@@ -141,7 +141,7 @@ function encode(a) {
     }
     
     }
-  returnAS.join('')
+  return AS.join('')
     
     }   
      encode("hi there!")
