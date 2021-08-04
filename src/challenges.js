@@ -97,7 +97,7 @@ function highestCount(arrayNumeros) {
   // seu código aqui
   let maiorNumero = defineMaior(arrayNumeros);
   let contadorDoMaior = 0;
-  console.log("Maior Número: " + maiorNumero); // [DEBUG]
+  // .log("Maior Número: " + maiorNumero); // [DEBUG]
 
   for (number of arrayNumeros)
   {
@@ -106,11 +106,12 @@ function highestCount(arrayNumeros) {
       contadorDoMaior +=1;
     }
   }
-  console.log("Contador do Maior Número: " + contadorDoMaior); // [DEBUG]
+  // console.log("Contador do Maior Número: " + contadorDoMaior); // [DEBUG]
   return contadorDoMaior;
 }
-meuArray = [10, 8, 7, 3, 5, 4, 1, 9, 10, 10];
- highestCount(meuArray); //[DEBUG]
+// meuArray = [10, 8, 7, 3, 5, 4, 1, 9, 10, 10];
+// highestCount(meuArray); //[DEBUG]
+
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
