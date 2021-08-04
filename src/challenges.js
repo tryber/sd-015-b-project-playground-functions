@@ -123,7 +123,7 @@ function verificaTermo(number)
 
   if (number % 3 === 0 && number / 5 === 0)
   {
-    resultado = 'fizzbuzz';
+    resultado = 'fizzBuzz';
   } else if (number % 3 === 0 )
   {
     resultado = 'fizz';
