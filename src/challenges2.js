@@ -23,34 +23,29 @@ function techList(arr, str) {
 
 // Desafio 11
 function generatePhoneNumber(arr) {
-  let ver = true;
-  let conf = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+  let number = '';
+  let conf = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
   if (arr.length === 11) {
+    number += '(' + arr[0] + arr[1] + ') ';
+    number += arr.slice(2, 7).join('') + '-';
+    number += arr.slice(7, 11).join('');
     for (let i of arr) {
       conf[i] += 1;
-      if ( i < 0 || i > 9) {
-        ver = false;
-      } 
-    }
-    for (let i of conf) {
-      if (i >= 3) { ver = false; }
-    }
-    let number = '(' + arr[0] + arr[1] + ') ' + arr[2] + arr[3] + arr[4] + arr[5] + arr[6] + '-' + arr[7] + arr[8] + arr[9] + arr[10];
-    if (ver === false) {
-      return 'não é possível gerar um número de telefone com esses valores';
-    } else {
-      return number;
+      if (i < 0 || i > 9 || conf[i] >= 3) {
+        number = 'não é possível gerar um número de telefone com esses valores';
+      }
     }
   } else {
-    return 'Array com tamanho incorreto.';
+    number += 'Array com tamanho incorreto.';
   }
+  return number;
 }
 
-// console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 9])); // teste 1
-// console.log(generatePhoneNumber([1, 2, 3, 4, 5, -1, 7, 8, 9, 0, 1])); // teste 2
-// console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 10, 9, 0, 1])); // teste 3
-// console.log(generatePhoneNumber([1, 2, 2, 2, 5, 6, 7, 8, 9, 0, 1])); // teste 4
-// console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1])); // teste 5
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 9])); // teste 1
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, -1, 7, 8, 9, 0, 1])); // teste 2
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 10, 9, 0, 1])); // teste 3
+console.log(generatePhoneNumber([1, 2, 2, 2, 5, 6, 7, 8, 9, 0, 1])); // teste 4
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1])); // teste 5
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
