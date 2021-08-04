@@ -73,34 +73,27 @@ return quantidade
 // Desafio 7 
  
 
-function catAndMouse(mouse, cat1, cat2){
-    let DistanceCat1 = mouse - cat1
-    let DistanceCat2 = mouse - cat2
+function catAndMouse(mouse, cat1, cat2) {
     
-    if (DistanceCat1 <  DistanceCat2 && cat1 > 0 && cat2 > 0){
-        return "cat1"
-    } else if (DistanceCat1 > DistanceCat2 && cat1 > 0 && cat2 > 0){ 
-        return "cat2"
-    } 
-    let GatoNegativo = cat1 - mouse;
-   if (GatoNegativo < 0){
-       GatoNegativo = GatoNegativo * (-1)
-   } 
-   let GatoNegativo2 = cat2 - mouse;
-    if (GatoNegativo2 < 0) {
-        GatoNegativo2 = GatoNegativo2 * (-1)
-    } else if (GatoNegativo > GatoNegativo2){
-        return 'cat2'
-    } else if (GatoNegativo < GatoNegativo2){
-        return'cat1'
+    let negativeCat1 = cat1 - mouse;
+    let negativeCat2 = cat2 - mouse;
+    if (negativeCat1 < 0) {
+      negativeCat1 = negativeCat1 * (-1);
     }
-   
-   else { 
-        return "os gatos trombam e o rato foge"
-}
-}
-
-catAndMouse(-2, -4, -5)
+    
+    if (negativeCat2 < 0) {
+      negativeCat2 = negativeCat2 * (-1);
+    }
+    if (negativeCat1 < negativeCat2) {
+      ProximeCat = 'cat1';
+    } else if (negativeCat1 > negativeCat2) {
+      ProximeCat = 'cat2';
+    } else {
+      ProximeCat = 'os gatos trombam e o rato foge';
+    }
+    let ProximeCat;
+    return ProximeCat;
+  }
 // Desafio 8
 function fizzBuzz(a){
     let newA = []
