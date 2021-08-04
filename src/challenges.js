@@ -56,7 +56,6 @@ function footballPoints(wins, ties) {
 
   let totalPoints = tiePoints + winPoints
   return totalPoints;
-  // seu código aqui
 }
 
 // Desafio 6
