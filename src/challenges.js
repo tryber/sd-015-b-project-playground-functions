@@ -99,28 +99,31 @@ function catAndMouse(mouse, cat1, cat2) {
 // console.log( catAndMouse(5, 5) ); // teste 3
 
 // Desafio 8
+
+function subFizzBuzz(element) {
+  let aux;
+  if (element % 3 === 0 element % 5 === 0) {
+    aux = 'fizzBuzz';
+  } else if (element % 3 === 0) {
+    aux = 'fizz'
+  } else if (element % 5 === 0) {
+    aux = 'buzz'
+  } else {
+    aux = 'bug!'
+  }
+  return aux
+}
+
 function fizzBuzz(arr) {
   for (let i = 0; i < arr.length; i += 1) {
-    let div3 = arr[i] % 3 === 0;
-    let div5 = arr[i] % 5 === 0;
-    let div35 = div3 && div5;
-    if (div35) {
-      aux = 'fizzBuzz';
-    } else if (div5) {
-      aux = 'buzz';
-    } else if (div3) {
-      aux = 'fizz';
-    } else {
-      aux = 'bug!';
-    }
-    arr[i] = aux;
+    arr[i] = subFizzBuzz(arr[i]);
   }
   return arr;
 }
 
-// console.log(fizzBuzz([2, 15, 7, 9, 45])); // teste 1
-// console.log(fizzBuzz([7, 9])); // teste 2
-// console.log(fizzBuzz([9, 25])); // teste 3
+console.log(fizzBuzz([2, 15, 7, 9, 45])); // teste 1
+console.log(fizzBuzz([7, 9])); // teste 2
+console.log(fizzBuzz([9, 25])); // teste 3
 
 // Desafio 9
 function encode(str) {
