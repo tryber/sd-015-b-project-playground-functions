@@ -57,10 +57,10 @@ function catAndMouse(mouse, cat1, cat2) {
   let resultado = '';
   let distanciaMouseAteCat1 = Math.abs(mouse - cat1);
   let distanciaMouseAteCat2 = Math.abs(mouse - cat2);
-  if(distanciaMouseAteCat1 > distanciaMouseAteCat2) {
+  if (distanciaMouseAteCat1 > distanciaMouseAteCat2) {
     resultado = 'cat2';
   }
-  else if( distanciaMouseAteCat2 > distanciaMouseAteCat1) {
+  else if (distanciaMouseAteCat2 > distanciaMouseAteCat1) {
     resultado = 'cat1';
   }
   else {
@@ -70,8 +70,26 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(array) {
   // seu código aqui
+  let numero = 0;
+  let str = [];
+  for(let index = 0; index < array.length; index += 1) {
+    numero = array[index];
+    if (numero % 3 === 0 && numero % 5 === 0){
+      str.push('fizzBuzz');
+    }
+    else if (numero % 5 === 0) {
+      str.push('buzz');
+    }
+    else if (numero % 3 === 0) {
+      str.push('fizz');
+    }
+    else {
+      str.push('bug!');
+    }
+  }
+  return str;
 }
 
 // Desafio 9
