@@ -1,6 +1,5 @@
 // Desafio 1
 function compareTrue(a, b) {
-
   if (a && b === true) {
     return true;
   }
@@ -13,6 +12,7 @@ function calcArea(base, altura) {
 }
 
 // Desafio 3
+/** Sourse: https://stackoverflow.com/questions/18473326/javascript-break-sentence-by-words */
 function splitSentence(sentense) {
   return sentense.split(" ");
 }
@@ -28,17 +28,21 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+/** Source: https://stackoverflow.com/questions/46640420/how-to-find-number-of-occurrence-of-highest-element-in-an-javascript-array/46640571 */
+function highestCount(arr) {
+  let max = Math.max(...arr);
+  let count = arr.filter(x => x === max).length;
+  return count;
 }
 
+
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(array) {
   // seu código aqui
 }
 
