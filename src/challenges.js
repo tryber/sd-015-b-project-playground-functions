@@ -40,9 +40,12 @@ function compareTrue(a, b) {
  
  
  // Desafio 5
- function footballPoints() {
-   // seu código aqui
- }
+ function footballPoints(wins, ties) {
+  let newWins;
+  newWins = 3 * wins;  
+  totalPoints = newWins + ties;
+  return totalPoints;
+ } console.log(footballPoints(14, 8));
  
  // Desafio 6
  function highestCount() {
