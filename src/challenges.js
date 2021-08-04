@@ -88,7 +88,7 @@ function defineMaior(array) {
       maior = number;
     }
   }
-  console.log("Maior Número [DENTRO DA FUNÇÃO SECUNDÁRIA]: " + maior);
+  // console.log("Maior Número [DENTRO DA FUNÇÃO SECUNDÁRIA]: " + maior); // [DEBUG]
   return maior;
 
 }
@@ -117,9 +117,34 @@ function catAndMouse() {
   // seu código aqui
 }
 
+function verificaTermo(number)
+{
+  let resultado;
+
+  if (number % 3 === 0 && number / 3 === 0)
+  {
+    resultado = 'fizzbuzz';
+  } else if (number % 3 === 0 )
+  {
+    resultado = 'fizz';
+  } else if (number / 3 === 0 )
+  {
+    resultado = 'buzz';
+  } else
+  {
+    resultado = 'bug!';
+  }
+  return resultado;
+}
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(arrayNumeros) {
   // seu código aqui
+  let result = [];
+  for (let number of arrayNumeros)
+  {
+    result.push(verificaTermo(number) );
+  }
+  return result;
 }
 
 // Desafio 9
