@@ -113,8 +113,20 @@ function highestCount(arrayNumeros) {
 // highestCount(meuArray); //[DEBUG]
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(cat1, cat2, rat) {
   // seu código aqui
+  if ( ( Math.abs(cat1 - rat) ) < ( Math.abs(cat2 - rat) ) )
+  {
+    return 'cat1';
+
+  } else if ( (Math.abs(cat1 - rat)) === ( Math.abs(cat2 - rat)) )
+  {
+    return 'os gatos trombam e o rato foge';
+    
+  } else 
+  {
+    return 'cat2';
+  }
 }
 
 function verificaTermo(number)
