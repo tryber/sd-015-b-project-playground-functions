@@ -62,21 +62,88 @@ function highestCount(array) {
 }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
+  if ((Math.abs(cat1 - mouse)) < (Math.abs(cat2 - mouse)))
+    return "cat1"
+  else if ((Math.abs(cat1 - mouse)) > (Math.abs(cat2 - mouse)))
+    return "cat2"
+  else {
+    return "os gatos trombam e o rato foge"
+  }
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(array) {
   // seu código aqui
+  let fizzBuzzArr = []
+  for (let num of array)
+    if (num % 3 === 0 && num % 5 === 0) {
+    fizzBuzzArr.push('fizzBuzz')
+    }
+    else if (num % 5 === 0) {
+      fizzBuzzArr.push('buzz')
+    }
+    else if (num % 3 === 0) {
+      fizzBuzzArr.push('fizz')
+    }
+    else {
+      fizzBuzzArr.push('bug!')
+    }
+  return fizzBuzzArr
 }
 
 // Desafio 9
-function encode() {
+function encode(frase) {
   // seu código aqui
+  let fraseEncoded = ''
+  for (let letra in frase)
+    switch (frase[letra]) {
+      case 'a':
+        fraseEncoded = fraseEncoded.concat('1')
+        break
+      case 'e':
+        fraseEncoded = fraseEncoded.concat('2')
+        break
+      case 'i':
+        fraseEncoded = fraseEncoded.concat('3')
+        break
+      case 'o':
+        fraseEncoded = fraseEncoded.concat('4')
+        break
+      case 'u':
+        fraseEncoded = fraseEncoded.concat('5')
+        break
+      default:
+        fraseEncoded = fraseEncoded.concat(frase[letra])
+    } 
+  return fraseEncoded
 }
-function decode() {
+
+function decode(frase) {
   // seu código aqui
+  let fraseEncoded = ''
+  for (let letra in frase)
+    switch (frase[letra]) {
+      case '1':
+        fraseEncoded = fraseEncoded.concat('a')
+        break
+      case '2':
+        fraseEncoded = fraseEncoded.concat('e')
+        break
+      case '3':
+        fraseEncoded = fraseEncoded.concat('i')
+        break
+      case '4':
+        fraseEncoded = fraseEncoded.concat('o')
+        break
+      case '5':
+        fraseEncoded = fraseEncoded.concat('u')
+        break
+      default:
+        fraseEncoded = fraseEncoded.concat(frase[letra])
+    } 
+  return fraseEncoded
 }
 
 module.exports = {
