@@ -72,9 +72,36 @@ function catAndMouse(gato1, gato2, rato) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
-}
+function fizzBuzz(arr) {
+
+  let novoArray = [];
+
+  let fizz = 'fizz';
+  let buzz = 'buzz';
+  let fizzBuzz = 'fizzBuzz';
+  let bug = 'bug!';
+
+  let divisivelPor3 = false;
+  let divisivelPor5 = false;
+
+  for (const key in arr) { 
+    divisivelPor3 = arr[key] % 3 === 0;
+    divisivelPor5 = arr[key] % 5 === 0;
+  
+  if (divisivelPor3 === true && divisivelPor5 === false) {
+      novoArray.push(fizz);
+  
+  } else if (divisivelPor5 === true && divisivelPor3 === false){
+      novoArray.push(buzz);
+  
+  } else if (divisivelPor5 === true && divisivelPor3 === true){
+      novoArray.push(fizzBuzz);
+  } else {
+      novoArray.push(bug);
+  }
+  }
+    return novoArray;
+  }
 
 // Desafio 9
 function encode() {
