@@ -34,8 +34,10 @@ function techList(lista, nome) {
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
-}
+  // let arrayNumero = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
 
+}
+generatePhoneNumber();
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
