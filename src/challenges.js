@@ -17,46 +17,45 @@ function splitSentence(string) {
 } splitSentence('go Trybe');
 
 // Desafio 4
-function concatName() {
-  
+function concatName(array) {
+let result = array[array.length -1] + " " + array[0];
+return result;
 }
 
 // Desafio 5
 function footballPoints(wins, ties) { 
- let newWins = 3 * wins;  
- let totalPoints = newWins + ties;
- return totalPoints;
+let newWins = 3 * wins;  
+let totalPoints = newWins + ties;
+return totalPoints;
 } console.log(footballPoints(14, 8));
 
 // Desafio 6
 function highestCount() {
-  // seu código aqui
+  let count = 0;
+  for (index = 0; index < numbers.length; index += 1){
+  if (numbers.length(index) > numbers.length(index - 1)) {
+      count += 1;
+}else {
+      count = 0;
+}
+ }
+  return count;  
 }
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  if (mouse > cat1) {
-    cat1 = mouse - cat1;
-  } else {
-    cat1 = cat1 - mouse;
-  }
-    if (mouse > cat2) {
-    cat2 = mouse - cat2;
-  } else { 
-    cat2 = cat2 - mouse;
-  }
- if (cat1 === cat2) {
-    return 'os gatos trombam e o rato foge';
-  } if (cat1 > cat2) {
-    return 'cat2';
-  } if (cat2 > cat1) {
+  if (mouse - cat1 < mouse - cat2) {
     return 'cat1';
+  } else if (mouse - cat1 > mouse - cat2) {
+    return 'cat2';
+  } else {
+    return 'Os gatos trombam e o gato foge';
   }
-  }
+}
 
 // Desafio 8
 function fizzBuzz(array) {
-  let fizzBuzz = [];
+   let fizzBuzz = [];
     for (let index of array) {
     if ((index % 3) === 0 && (index % 5) === 0) {
     fizzBuzz.push("fizzBuzz");
@@ -73,10 +72,45 @@ function fizzBuzz(array) {
 
 // Desafio 9
 function encode() {
-  // seu código aqui
+  const cripto = {
+    "a":1,
+    "e":2,
+    "i":3,
+    "o":4,
+    "u":5,
+  }
+  let phrase = string.split("");
+  for (const character in phrase){
+    for (const keys in cripto){
+      if(phrase[character] == keys){
+        phrase[character] = cripto[keys];
+        break;
+      }
+    }
+  }
+  let result = phrase.join("");
+  return result;
 }
+
 function decode() {
-  // seu código aqui
+  const cripto = {
+    "1":"a",
+    "2":"e",
+    "3":"i",
+    "4":"o",
+    "5":"u",
+  }
+  let phrase = string.split("");
+  for (const character in phrase){
+    for (const keys in cripto){
+      if(phrase[character] == keys){
+        phrase[character] = cripto[keys];
+        break;
+      }
+    }
+  }
+  let result = word.join("");
+  return result;
 }
 
 module.exports = {
