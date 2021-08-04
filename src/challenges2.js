@@ -36,7 +36,7 @@ function verifyValues(arr) {
 }
 
 function makeNumber(arr) {
-  let number = `(${arr[0]}${arr[1]}) ${arr.slice(2,7).join('')}-${arr.slice(7,11).join('')}`;
+  let number = `(${arr[0]}${arr[1]}) ${arr.slice(2, 7).join('')}-${arr.slice(7, 11).join('')}`;
   return number;
 }
 
@@ -61,12 +61,21 @@ function generatePhoneNumber(arr) {
 // console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1])); // teste 5
 
 // Desafio 12
-function triangleCheck(lineA, lineB, lineC) {
+
+function triangleIdentities(lineA, lineB, lineC) {
   let resp = true;
-  // condição lineA
   let aux1 = (lineA < lineB + lineC);
   let aux2 = (lineA > Math.abs(lineB - lineC));
   let aux3 = (lineA > 0);
+  resp = resp && aux1 && aux2 && aux3;
+  return resp;
+}
+
+function triangleCheck(lineA, lineB, lineC) {
+  let resp = true;
+  let aux1 = triangleIdentities(lineA, lineB, lineC);
+  let aux2 = triangleIdentities(lineB, lineA, lineC);
+  let aux3 = triangleIdentities(lineC, lineA, lineB);
   resp = resp && aux1 && aux2 && aux3;
   return resp;
 }
