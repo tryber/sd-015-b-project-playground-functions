@@ -10,8 +10,9 @@ function compareTrue(a, b) {
 // Desafio 2
 let area = 0;
 function calcArea(base, height) {  
-return area === (base * height) / 2; 
-} console.log(calcArea(10, 50));
+ area === (base * height) / 2; 
+ return area;
+} calcArea(10, 50);
 
 // Desafio 3
 function splitSentence() {
@@ -38,21 +39,21 @@ function highestCount() {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  if (mouse > cat1){
+  if (mouse > cat1) {
     cat1 = mouse - cat1;
   } else {
     cat1 = cat1 - mouse;
   }
-    if (mouse > cat2){
+    if (mouse > cat2) {
     cat2 = mouse - cat2;
   } else { 
     cat2 = cat2 - mouse;
   }
- if (cat1 === cat2){
-    return 'os gatos trombam e o rato foge'
-  } if (cat1 > cat2){
+ if (cat1 === cat2) {
+    return 'os gatos trombam e o rato foge';
+  } if (cat1 > cat2) {
     return 'cat2';
-  } if (cat2 > cat1){
+  } if (cat2 > cat1) {
     return 'cat1';
   }
   }
@@ -68,7 +69,7 @@ function fizzBuzz(array) {
   } else if ((i % 5) === 0) {
     fizzBuzz.push("buzz");
   } else {
-    fizzBuzz.push("bug!")
+    fizzBuzz.push("bug!");
   }
   }
     return fizzBuzz;
