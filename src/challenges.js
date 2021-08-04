@@ -62,8 +62,6 @@ function highestCount() {
   for(key in highestCount){
     if (highestCount[i])
   }
- 
-
 }
 
 // Desafio 7
