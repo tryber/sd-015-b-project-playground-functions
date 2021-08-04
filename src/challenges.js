@@ -1,14 +1,14 @@
 // Desafio 1
 function compareTrue(a, b) {
-  if ( a == true && b == true ){
+  if ( a && b ){
     return true; 
   } else {
     return false;
   }  
-} 
+} compareTrue(true, true);
 
 // Desafio 2
-let area = 0;
+let area === 0;
 function calcArea(base, height){  
   area === (base * height)/2;
   return area;
@@ -26,8 +26,9 @@ function concatName() {
 // Desafio 5
 function footballPoints(wins, ties) {
   let newWins;
-  newWins = 3 * wins;  
-  totalPoints = newWins + ties;
+  let totalPoints;
+  newWins === 3 * wins;  
+  totalPoints === newWins + ties;
   return totalPoints;
 } console.log(footballPoints(14, 8));
 
