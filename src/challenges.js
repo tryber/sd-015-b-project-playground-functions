@@ -7,7 +7,7 @@ function compareTrue(a, b) {
   }
 }
 
-console.log(compareTrue(true, false))
+//console.log(compareTrue(true, false))
 
 // Desafio 2
 function calcArea(base, height) {
@@ -35,17 +35,24 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(array) {
-  let cont = 0;
-  array.sort();
+  //let array = [-2, -2, -1]
+  let higherNumber = array[0];
+  let cont = 0
   for (let i = 0; i < array.length; i += 1) {
-    if (array[i] === array[array.length - 1]) {
+    if (array[i] > higherNumber) {
+      higherNumber = array[i];
+    }
+  }
+  for (let j = 0; j < array.length; j += 1) {
+    if (array[j] === higherNumber) {
       cont += 1;
     }
+    //console.log(cont)
   }
   return cont;
 }
 
-//console.log(highestCount([-2, -2, -1]))
+console.log(highestCount([1, 9, 2, 3, 9, 5, 7]))
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
