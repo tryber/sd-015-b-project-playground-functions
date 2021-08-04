@@ -15,6 +15,13 @@ function techList(arrayTecnologies, name) {
 }
 
 // Desafio 11
+function testNumOccurrences(arrayNumber, number, maxRepeat) {
+  if (arrayNumber.reduce((acc, cur) => (cur === number ? acc + 1 : acc), 0) >= maxRepeat) {
+    return true;
+  }
+  return false;
+}
+
 function thereInvalidNumber(arrayNumber) {
   for (let index = 0; index < arrayNumber.length; index += 1) {
     if (arrayNumber[index] < 0 || arrayNumber[index] > 9) {
@@ -26,7 +33,7 @@ function thereInvalidNumber(arrayNumber) {
 
 function thereNumberRepeted3Times(arrayNumber) {
   for (let index = 0; index < arrayNumber.length; index += 1) {
-    if (arrayNumber.reduce((acc, cur) => (cur === arrayNumber[index] ? acc + 1 : acc), 0) >= 3) {
+    if (testNumOccurrences(arrayNumber, arrayNumber[index], 3)) {
       return true;
     }
   }
@@ -75,10 +82,6 @@ function hydrate(phrase) {
   }
   return (`${counter} copos de água`);
 }
-
-console.log(hydrate('1 cerveja'));
-console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
-console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
 
 module.exports = {
   generatePhoneNumber,
