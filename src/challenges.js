@@ -1,11 +1,7 @@
 // Desafio 1
 function compareTrue(a, b) {
-  if (a === true && b === true) {
-    return true;
-  } else {
-    return false;
-  }
-}
+  return a && b;
+} // Aprendi essa abreviação com o Isaac no codereview
 
 // Desafio 2
 function calcArea(base, height) {
@@ -81,12 +77,47 @@ function fizzBuzz(arrayNumbers) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(str) {
+    let codado = [];
+  for (let index = 0; index <= str.length; index += 1) {
+    if (str[index] === "a") {
+      codado.push("1")
+    } else if (str[index] === "e") {
+      codado.push("2");
+    } else if (str[index] === "i") {
+      codado.push("3");
+    }  else if (str[index] === "o") {
+      codado.push("4");
+    }  else if (str[index] === "u") {
+      codado.push("5");
+    }  else {
+      codado.push(str[index]);
+    }
+  }
+  return(codado.join(''));
 }
-function decode() {
-  // seu código aqui
+encode("hll");
+
+function decode(str) {
+  let codado = [];
+  for (let index = 0; index <= str.length; index += 1) {
+    if (str[index] === "1") {
+      codado.push("a")
+    } else if (str[index] === "2") {
+      codado.push("e");
+    } else if (str[index] === "3") {
+      codado.push("i");
+    }  else if (str[index] === "4") {
+      codado.push("o");
+    }  else if (str[index] === "5") {
+      codado.push("u");
+    }  else {
+      codado.push(str[index]);
+    }
+  }
+  return(codado.join(''));
 }
+decode("h2ll4");
 
 module.exports = {
   calcArea,
