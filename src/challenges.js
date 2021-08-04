@@ -47,20 +47,17 @@ function footballPoints(wins, ties) {
   return totalPontos;
 }
 
-
 // Desafio 6
 function highestCount(numeros) {
   let maiorNumero = 0;
   let contador = 0;
   let tamanho = numeros.length
-
-// busca maior numero
+  // busca maior numero
   for (let index = 0; index < tamanho; index++){
     if (numeros[index] > maiorNumero){
       maiorNumero = numeros[index]    
     }
   }
-
   // busca quantas vezes o maior numero apareceu no array
   for (let index = 0; index < tamanho; index++){
     if (numeros[index] === maiorNumero){
@@ -69,7 +66,6 @@ function highestCount(numeros) {
   }
   return contador;
 }
-
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -96,7 +92,6 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'os gatos trombam e o rato foge'
   }
 }
-
 
 // Desafio 8
 function fizzBuzz(arrayNumeros) {
