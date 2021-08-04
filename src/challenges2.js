@@ -18,7 +18,7 @@ function hydrate() {
   // seu código aqui
 }
 
-module.exports = {
+module.exports = { 
   generatePhoneNumber,
   techList,
   hydrate,
