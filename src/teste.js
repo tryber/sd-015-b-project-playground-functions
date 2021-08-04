@@ -1,3 +1,5 @@
-let num = -3
+let num = 'ola'
 
-console.log(Math.abs (num))
+for (let index = 0; index < string.length; index += 1) {
+    console.log(num[index])
+}

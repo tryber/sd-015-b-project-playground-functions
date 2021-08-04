@@ -64,7 +64,6 @@ function catAndMouse(mouse, cat1, cat2) {
 
 
 // Desafio 8
-// eslint-disable-next-line complexity
 function fizzBuzz(array) {
   // seu código aqui
   let arrayStrings = []
@@ -86,11 +85,25 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
+function encode(string) {
   // seu código aqui
+let encondeString = string.replace(/a/gi, '1');
+encondeString = encondeString.replace(/e/gi, '2');
+encondeString = encondeString.replace(/i/gi, '3');
+encondeString = encondeString.replace(/o/gi, '4');
+encondeString = encondeString.replace(/u/gi, '5');
+
+return encondeString
 }
-function decode() {
+function decode(string) {
   // seu código aqui
+let decodeString = string.replace(/1/gi, 'a');
+decodeString = decodeString.replace(/2/gi, 'e');
+decodeString = decodeString.replace(/3/gi, 'i');
+decodeString = decodeString.replace(/4/gi, 'o');
+decodeString = decodeString.replace(/5/gi, 'u');
+
+return decodeString
 }
 
 module.exports = {
