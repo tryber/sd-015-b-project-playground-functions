@@ -68,11 +68,24 @@ function fizzBuzz(numbers) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let wordEncode = '';
+  wordEncode = string.replace(/a/g, '1'); // ref.: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/replace
+  wordEncode = wordEncode.replace(/e/g, '2');
+  wordEncode = wordEncode.replace(/i/g, '3');
+  wordEncode = wordEncode.replace(/o/g, '4');
+  wordEncode = wordEncode.replace(/u/g, '5');
+  return wordEncode;
 }
-function decode() {
-  // seu código aqui
+
+function decode(string) {
+  let wordDecode = '';
+  wordDecode = string.replace(/1/g, 'a'); // ref.: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/replace
+  wordDecode = wordDecode.replace(/2/g, 'e');
+  wordDecode = wordDecode.replace(/3/g, 'i');
+  wordDecode = wordDecode.replace(/4/g, 'o');
+  wordDecode = wordDecode.replace(/5/g, 'u');
+  return wordDecode;
 }
 
 module.exports = {
