@@ -17,10 +17,9 @@ function splitSentence(string) {
 } splitSentence('go Trybe');
 
 // Desafio 4
-function concatName(array) {
-  let stringResponse = array[array.length - 1] + ', ' + array[0];
-  return stringResponse;
-} concatName('Lucas', 'Cassiano', 'Ferraz', 'Paolillo');
+function concatName() {
+  
+}
 
 // Desafio 5
 function footballPoints(wins, ties) { 
