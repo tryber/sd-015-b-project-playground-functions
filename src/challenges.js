@@ -1,16 +1,16 @@
 // Desafio 1
 function compareTrue(a, b) {
-  if (a && b){
+  if (a && b) {
     return true; 
   } else {
     return false;
-  }  
+}  
 } compareTrue(true, true);
 
 // Desafio 2
 let area = 0;
 function calcArea(base, height) {  
-  return area === (base * height) / 2; 
+return area === (base * height) / 2; 
 } console.log(calcArea(10, 50));
 
 // Desafio 3
@@ -20,6 +20,7 @@ function splitSentence() {
 
 // Desafio 4
 function concatName() {
+
 } 
 
 // Desafio 5
@@ -37,21 +38,21 @@ function highestCount() {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  if(mouse > cat1){
+  if (mouse > cat1){
     cat1 = mouse - cat1;
   } else {
     cat1 = cat1 - mouse;
   }
-    if(mouse > cat2){
+    if (mouse > cat2){
     cat2 = mouse - cat2;
-  } else {
+  } else { 
     cat2 = cat2 - mouse;
   }
-  if (cat1 == cat2){
+ if (cat1 === cat2){
     return 'os gatos trombam e o rato foge'
-  } else if (cat1 > cat2){
+  } if (cat1 > cat2){
     return 'cat2';
-  } else if(cat2 > cat1){
+  } if (cat2 > cat1){
     return 'cat1';
   }
   }
