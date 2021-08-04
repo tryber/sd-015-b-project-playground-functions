@@ -80,21 +80,21 @@ function encode(string) {
   let palavraMinuscula = string;
   let arrayCode = [];
   for (let index = 0; index < palavraMinuscula.length; index += 1) {
-    if (palavraMinuscula[index] === "a") {
+    if (palavraMinuscula[index] === 'a') {
       arrayCode.push(1);
-    } else if (palavraMinuscula[index] === "e") {
+    } else if (palavraMinuscula[index] === 'e') {
       arrayCode.push(2);
-    } else if (palavraMinuscula[index] === "i") {
+    } else if (palavraMinuscula[index] === 'i') {
       arrayCode.push(3);
-    } else if (palavraMinuscula[index] === "o") {
+    } else if (palavraMinuscula[index] === 'o') {
       arrayCode.push(4);
-    } else if (palavraMinuscula[index] === "u") {
+    } else if (palavraMinuscula[index] === 'u') {
       arrayCode.push(5);
     } else {
       arrayCode.push(palavraMinuscula[index]);
     }
   }
-  let frase = arrayCode.join("");
+  let frase = arrayCode.join('');
   return frase;
   // seu código aqui
 }
