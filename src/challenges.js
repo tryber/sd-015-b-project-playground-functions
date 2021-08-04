@@ -16,10 +16,11 @@ function compareTrue(n1, n2) {
 console.log(compareTrue(false, true));
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  let valor = base * height / 2;
+  return valor;
 }
-
+console.log(calcArea(51, 1));
 // Desafio 3
 function splitSentence(frase) {
   frase = frase.split(' ');
@@ -34,11 +35,11 @@ function concatName(palavras) {
     for ( let contador = palavras.length - 1; contador >= 0 ; contador -= 1){
       let firstStringLetter = palavras[index];
       let lastStringLetter = palavras[contador];
-      return lastStringLetter + ", " + firstStringLetter;
+      return lastStringLetter + ', ' + firstStringLetter;
     }
   }  
 }
-console.log(concatName(["Axe", "is", "more", "rules"]))
+console.log(concatName(['Axe', 'is', 'more', 'rules']));
 
 // Desafio 5
 function footballPoints() {
