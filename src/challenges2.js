@@ -141,9 +141,21 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let num = string.replace(/[^0-9]/g, '');
+  let sum = 0;
+  for (let number of num) {
+    number = Number(number);
+    sum += number;
+  }
+  if (sum > 1) {
+    return `${sum} copos de água`;
+  }
+  if (sum === 1) {
+    return `${sum} copo de água`;
+  }
 }
+console.log(hydrate('1 Guilherme '))
 
 module.exports = {
   generatePhoneNumber,
