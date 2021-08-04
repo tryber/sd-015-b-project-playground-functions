@@ -105,8 +105,21 @@ if(cont9 >= 3){
 return "(" + numeroDeTelefone[0] + numeroDeTelefone[1] + ") " + numeroDeTelefone[2] + numeroDeTelefone[3] + numeroDeTelefone[4] + numeroDeTelefone[5] + numeroDeTelefone[6] + "-"  + numeroDeTelefone[7] + numeroDeTelefone[8] + numeroDeTelefone[9] + numeroDeTelefone[10];
 }
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
+  let a = lineB - lineC;
+  let b = lineA - lineC;
+  let c = lineA - lineB;
+  if(lineA > lineB + lineC | lineB > lineA + lineC | lineC > lineB + lineA ){
+    return false;
+  }
+  if(lineA < Math.abs (a) | lineB < Math.abs (b) | lineC < Math.abs (c)){
+    return false;
+  }
+  else {
+    return true;
+  }
+
 }
 
 // Desafio 13
