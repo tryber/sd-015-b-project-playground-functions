@@ -58,37 +58,72 @@ function catAndMouse(mouse, cat1, cat2) {
 
   if (cat1Recalc < cat2Recalc) {
     return "cat1";
-  } else if (cat1Recalc > cat2Recalc){
+  } else if (cat1Recalc > cat2Recalc) {
     return "cat2";
   } else {
-    return "os gatos trombam e o rato foge"
+    return "os gatos trombam e o rato foge";
   }
 }
 
 // Desafio 8
 function fizzBuzz(array) {
-  let rulesFB = []
-  let numbers = array
+  let rulesFB = [];
+  let numbers = array;
   for (let index in array) {
     if ((numbers[index] % 5 === 0) && (numbers[index] % 3 === 0)) {
       rulesFB.push('fizzBuzz');
     } else if (numbers[index] % 5 === 0) {
       rulesFB.push('buzz');
     } else if (numbers[index] % 3 === 0) {
-      rulesFB.push('fizz')
+      rulesFB.push('fizz');
     } else {
-      rulesFB.push('bug!')
+      rulesFB.push('bug!');
     }
   }
   return rulesFB
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(entrada) {
+  const vogais = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5,
+  };
+  let encode = "";
+  let frase = "";
+  frase = entrada;
+  for (let indice in frase) {
+    if (vogais[frase[indice]] === undefined) {
+      encode += frase[indice];
+    } else {
+      encode += vogais[frase[indice]];
+    }
+  }
+  return encode;
 }
-function decode() {
-  // seu código aqui
+
+function decode(entrada) {
+  const vogais = {
+    1: "a",
+    2: "e",
+    3: "i",
+    4: "o",
+    5: "u",
+  };
+  let encode = "";
+  let frase = "";
+  frase = entrada;
+  for (let indice in frase) {
+    if (vogais[frase[indice]] === undefined) {
+      encode += frase[indice];
+    } else {
+      encode += vogais[frase[indice]];
+    }
+  }
+  return encode;
 }
 
 module.exports = {
