@@ -1,3 +1,4 @@
+/* eslint-disable sonarjs/cognitive-complexity */
 // Desafio 1
 function compareTrue(number1, number2) {
   if (number1 === true && number2 === true) {
@@ -59,8 +60,15 @@ function highestCount(arrayNumbers) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  if ((Math.abs(cat1) - Math.abs(mouse)) < (Math.abs(cat2) - Math.abs(mouse))) {
+    return 'cat1';
+  }
+  if ((Math.abs(cat1) - Math.abs(mouse)) > (Math.abs(cat2) - Math.abs(mouse))) {
+    return 'cat2';
+  }
+
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
