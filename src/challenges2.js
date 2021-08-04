@@ -1,18 +1,7 @@
 // Desafio 10
-function techList(stacks) {
-  stacks = stacks.sort();
-
-  if (stacks.length === 0) {
-    stacks = 'Empty';
-  } else {
-    for (const key in stacks) {
-      stacks.push({
-        tech: stacks[key],
-        name: '',
-      })
-    } return stacks;
+function techList() {
+  // seu código aqui
 }
-} techList(['Nodejs', 'Reactjs', 'SCRUM'], Gustavo);
 
 // Desafio 11
 function generatePhoneNumber() {
@@ -22,15 +11,15 @@ function generatePhoneNumber() {
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   if (
-    lineA >= lineB + lineC ||
-    lineB >= lineA + lineC ||
+    lineA >= lineB + lineC || 
+    lineB >= lineA + lineC || 
     lineC >= lineB + lineA)
   {
     return false;
-  } else {
+  } 
     return true;
   }
-}
+
 
 // Desafio 13
 function hydrate() {
