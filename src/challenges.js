@@ -68,20 +68,20 @@ function fizzBuzz() {
 
 // Desafio 9
 function encode(string) {
-  let stringNumber = string.replace('a', '1')
-    .replace('e', '2')
-    .replace('i', '3')
-    .replace('o', '4')
-    .replace('u', '5');
+  let stringNumber = string.replace(/a/g, '1')
+    .replace(/e/g, '2')
+    .replace(/i/g, '3')
+    .replace(/o/g, '4')
+    .replace(/u/g, '5');
   return stringNumber;
 }
 
 function decode(string) {
-  let stringVowel = string.replace('1', 'a')
-    .replace('2', 'e')
-    .replace('3', 'i')
-    .replace('4', 'o')
-    .replace('5', 'u');
+  let stringVowel = string.replace(/1/g, 'a')
+    .replace(/2/g, 'e')
+    .replace(/3/g, 'i')
+    .replace(/4/g, 'o')
+    .replace(/5/g, 'u');
   return stringVowel;
 }
 
