@@ -50,16 +50,13 @@ function highestCount(numbers) {
   }
   return countNumber;
 }
+highestCount([9, 1, 2, 3, 9, 5, 7])
+highestCount([0, 4, 4, 4, 9, 2, 1])
+highestCount([0, 0, 0])
 
 // Desafio 7
-function catAndMouse(cat1, cat2) {
-  if (cat1 < cat2) {
-    return 'cat1';
-  } else if (cat2 < cat1) {
-    return 'cat2';
-  } else {
-    return 'os gatos trombam e o rato foge';
-  }
+function catAndMouse() {
+ 
 }
 
 // Desafio 8
