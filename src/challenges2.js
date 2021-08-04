@@ -24,14 +24,13 @@ function techList(arr, str) {
 // Desafio 11
 function generatePhoneNumber(arr) {
   let number = '';
-  let conf = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
   if (arr.length === 11) {
-    number += '(' + arr[0] + arr[1] + ') ';
-    number += arr.slice(2, 7).join('') + '-';
-    number += arr.slice(7, 11).join('');
+    number = `(${number}${arr[0]}${arr[1]}) `;
+    number = `${number}${arr.slice(2, 7).join('')}-`;
+    number = `${number}${arr.slice(7, 11).join('')}`;
     for (let i of arr) {
-      conf[i] += 1;
-      if (i < 0 || i > 9 || conf[i] >= 3) {
+      let aux = arr.filter(function(x){ return x==2 }).length;
+      if (i < 0 || i > 9 || aux >= 3) {
         number = 'não é possível gerar um número de telefone com esses valores';
       }
     }
