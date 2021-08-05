@@ -40,7 +40,7 @@ function highestCount(numbers) {
   // seu código aqui
   let maior = biggestNumber(numbers);
   let cont = 0;
-  for (let i = 0;i < numbers.length;i += 1) {
+  for (let i = 0; i < numbers.length; i += 1) {
     if (numbers[i] === maior) cont += 1;
   }
   return cont;
