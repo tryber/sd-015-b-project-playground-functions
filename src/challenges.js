@@ -38,20 +38,24 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount(array) {
-  let numeroRepetido = array[0];
+function repete(numerorepetido, numeros) {
   let resultado = 0;
-  for (let index = 0; index < array.length; index += 1) {
-    if (array[index] > numeroRepetido) {
-      numeroRepetido = array[index];
-    }
-  }
-  for (let index = 0; index < array.length; index += 1) {
-    if (numeroRepetido === array[index]) {
+  for (let index = 0; index < numeros.length; index += 1) {
+    if (numerorepetido === numeros[index]) {
       resultado += 1;
     }
   }
   return resultado;
+}
+function highestCount(array) {
+  let numeros = array;
+  let numeroRepetido = array[0];
+  for (let index = 0; index < numeros.length; index += 1) {
+    if (numeros[index] > numeroRepetido) {
+      numeroRepetido = numeros[index];
+    }
+  }
+  return repete(numeroRepetido, numeros);
   // seu código aqui
 }
 
