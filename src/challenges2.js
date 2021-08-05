@@ -8,9 +8,8 @@ function techList(names, name) {
       lista.push({ tech: tecnologia, name: name });
     }
     return lista;
-  } else {
-    return 'Vazio!';
-  }
+  } 
+  return 'Vazio!';
 }
 
 // Desafio 11
