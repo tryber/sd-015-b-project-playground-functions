@@ -45,11 +45,29 @@ let arrayPhone = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
 console.log(generatePhoneNumber(arrayPhone));
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  if (validaLado(lineA, lineB, lineC) === false || validaDif(lineA, lineB, lineC) === false) {
+    return false;
+  }
+  return true;
+}
+function validaLado(lineA, lineB, lineC) {
+  if (lineA > lineB + lineC
+    || lineB > lineA + lineC
+    || lineC > lineA + lineB) {
+    return false;
+  }
 }
 
-console.log(triangleCheck(10, 14, 8))
+function validaDif(lineA, lineB, lineC) {
+  if (lineA < Math.abs(lineB - lineC)
+    || lineB < Math.abs(lineA - lineC)
+    || lineC < Math.abs(lineA - lineB)) {
+    return false;
+  }
+}
+
+console.log(triangleCheck(10, 24, 8));
 
 // Desafio 13
 function hydrate() {
