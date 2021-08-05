@@ -60,9 +60,13 @@ function generatePhoneNumber(numbers) {
 }
 
 // Desafio 12
+function conditionCheck(lineOne, lineTwo, lineThree) {
+  
+  return (Math.abs(lineOne - lineTwo) < lineThree && lineThree < (lineOne + lineTwo));
+}
 function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
-  return (Math.abs(lineB - lineC) < lineA && lineA < (lineB + lineC) && Math.abs(lineA - lineC) < lineB && lineB < (lineA + lineC) && Math.abs(lineA - lineB) < lineC && lineC < (lineA + lineB));
+  return conditionCheck(lineB, lineC, lineA) && conditionCheck(lineA, lineC, lineB) && conditionCheck(lineA, lineB, lineC);
 }
 
 // Desafio 13
