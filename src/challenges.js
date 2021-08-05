@@ -30,7 +30,8 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function biggestNumber(numbers) {
-  maior = numbers[0];
+  let [maior] = numbers;
+  console.log(maior)
   for (number of numbers) {
     if (number > maior) maior = number;
   }
