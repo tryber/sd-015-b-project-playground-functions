@@ -58,16 +58,15 @@ function catAndMouse(mouse, cat1, cat2) {
 
   if (distanceCat1 < distanceCat2) {
     return 'cat1';
-  } else if (distanceCat2 < distanceCat1) {
+  } if (distanceCat2 < distanceCat1) {
     return 'cat2';
-  } else {
-    return 'os gatos trombam e o rato foge';
   }
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
 function fizzBuzz(arrayNumbers) {
-  let stringsArray = []
+  let stringsArray = [];
   for (let index in arrayNumbers) {
     if (arrayNumbers[index] % 3 === 0 && arrayNumbers[index] % 5 === 0) {
       stringsArray.push('fizzBuzz');
@@ -85,59 +84,58 @@ function fizzBuzz(arrayNumbers) {
 // Desafio 9
 function encode(string) {
   let encodedString = '';
-  
+
   for (let i in string) {
     switch (string[i]) {
-      case 'a':
-        encodedString += '1';
-        break;
-      case 'e':
-        encodedString += '2';
-        break;
-      case 'i':
-        encodedString += '3';
-        break;
-      case 'o':
-        encodedString += '4';
-        break;
-      case 'u':
-        encodedString += '5';
-        break;
-      default:
-        encodedString += string[i];
-        break;
+    case 'a':
+      encodedString += '1';
+      break;
+    case 'e':
+      encodedString += '2';
+      break;
+    case 'i':
+      encodedString += '3';
+      break;
+    case 'o':
+      encodedString += '4';
+      break;
+    case 'u':
+      encodedString += '5';
+      break;
+    default:
+      encodedString += string[i];
+      break;
     }
   }
   return encodedString;
 }
 function decode(string) {
   let decodedString = '';
-  
+
   for (let i in string) {
     switch (string[i]) {
-      case '1':
-        decodedString += 'a';
-        break;
-      case '2':
-        decodedString += 'e';
-        break;
-      case '3':
-        decodedString += 'i';
-        break;
-      case '4':
-        decodedString += 'o';
-        break;
-      case '5':
-        decodedString += 'u';
-        break;
-      default:
-        decodedString += string[i];
-        break;
+    case '1':
+      decodedString += 'a';
+      break;
+    case '2':
+      decodedString += 'e';
+      break;
+    case '3':
+      decodedString += 'i';
+      break;
+    case '4':
+      decodedString += 'o';
+      break;
+    case '5':
+      decodedString += 'u';
+      break;
+    default:
+      decodedString += string[i];
+      break;
     }
   }
   return decodedString;
 }
-
 
 module.exports = {
   calcArea,

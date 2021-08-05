@@ -12,16 +12,15 @@ function techList(arrayTech, name) {
       techObject = {};
     }
     return arrayObjects;
-  } else {
-    return 'Vazio!';
   }
+  return 'Vazio!';
 }
-  
-
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(arrayNumbers) {
+  if (arrayNumbers.length !== 11) {
+    return 'Array com tamanho incorreto.';
+  }
 }
 
 // Desafio 12
