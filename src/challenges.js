@@ -67,7 +67,7 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz(fizzBuzz) {
+function fizzBuzz() {
   let result = [];
   for (let key in numbers) {
   if (numbers[key] % 3 === 0 && numbers[key] % 5 === 0){
@@ -85,11 +85,11 @@ return result;
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
-function encode(string) {
+function encode() {
   // seu código aqui
 }
 
-function decode(str) {
+function decode() {
   // seu código aqui
 }
 
