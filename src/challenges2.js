@@ -60,13 +60,12 @@ function generatePhoneNumber(numbers) {
 }
 
 // Desafio 12
-function conditionCheck(lineOne, lineTwo, lineThree) {
-  
+function triAux(lineOne, lineTwo, lineThree) {
   return (Math.abs(lineOne - lineTwo) < lineThree && lineThree < (lineOne + lineTwo));
 }
 function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
-  return conditionCheck(lineB, lineC, lineA) && conditionCheck(lineA, lineC, lineB) && conditionCheck(lineA, lineB, lineC);
+  return triAux(lineB, lineC, lineA) && triAux(lineA, lineC, lineB) && triAux(lineA, lineB, lineC);
 }
 
 // Desafio 13
