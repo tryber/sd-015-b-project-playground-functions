@@ -76,8 +76,8 @@ function fizzBuzzCheck(number) {
 function fizzBuzz(numbers) {
   // seu código aqui
   let fizzBuzzes = [];
-  for (number of numbers) {
-    fizzBuzzes.push(fizzBuzzCheck(number))
+  for (let number of numbers) {
+    fizzBuzzes.push(fizzBuzzCheck(number));
   }
   return fizzBuzzes;
 }
