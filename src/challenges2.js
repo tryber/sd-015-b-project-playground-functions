@@ -64,8 +64,8 @@ function generatePhoneNumber(arr) {
     return 'Array com tamanho incorreto.';
   }
   if (
-    isThreeOrNineOrZero(arr) ===
-    'não é possível gerar um número de telefone com esses valores'
+    isThreeOrNineOrZero(arr)
+    === 'não é possível gerar um número de telefone com esses valores'
   ) {
     numberPhone = isThreeOrNineOrZero(arr);
     return numberPhone;
@@ -85,12 +85,12 @@ function triangleCheck(lineA, lineB, lineC) {
   let subBC = Math.abs(lineB - lineC);
 
   if (
-    lineA > somaBC ||
-    lineA < subBC ||
-    lineB > somaAC ||
-    lineB < subAC ||
-    lineC > somaAB ||
-    lineC < subAB
+    lineA > somaBC
+    || lineA < subBC
+    || lineB > somaAC
+    || lineB < subAC
+    || lineC > somaAB
+    || lineC < subAB
   ) {
     return false;
   }
