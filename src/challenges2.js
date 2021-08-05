@@ -2,7 +2,6 @@
 function techList(techs, name) {
   let techsList = [];
   techs.sort();
-
   for (let tech of techs) {
     techsList.push({ tech, name });
   }
@@ -13,30 +12,35 @@ function techList(techs, name) {
 }
 
 // Desafio 11
+// Fonte sobre RegEx: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/RegExp
 function generatePhoneNumber(phoneNumber) {
   if (phoneNumber.length !== 11) {
     return 'Array com tamanho incorreto.';
-  } else if (phoneNumber.length === 11) {
-    for (let number in phoneNumber) {
-  } 
-  } else if ((phoneNumber -1) < 0 || (phoneNumber / 2) < 5 || phoneNumber([0, 1, 6]) === Number) {
-    return 'não é possível gerar um número de telefone com esses valores';
-  } else {
-    let fullPhoneNumber = '(' + phoneNumber[0] + phoneNumber[1] + ') ' + phoneNumber[2] + phoneNumber[3] + phoneNumber[4] + phoneNumber[5] + phoneNumber[6] + '-' + phoneNumber[7] + phoneNumber[8] + phoneNumber[9] + phoneNumber[10];
-    return fullPhoneNumber;
   }
+  for (let count = 0; count < phoneNumber.length; count += 1) {
+    let numberTimes = 0;
+    for (let count2 = 0; count2 < phoneNumber.length; count2 += 1) {
+      if (phoneNumber[count] === phoneNumber[count2]){
+        numberTimes += 1;
+      }
+    }
+    if (phoneNumber[count] < 0 || phoneNumber[count] > 9 || numberTimes >= 3){
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
+  }
+  return phoneNumber.join('').replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3');
 }
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   let check = false;
-  if (lineA > lineB + lineC 
-|| lineB > lineA + lineC 
+  if (lineA > lineB + lineC
+|| lineB > lineA + lineC
 || lineC > lineA + lineB) {
     check = false;
   } else if (
-lineA < Math.abs(lineB - lineC) 
-|| lineB < Math.abs(lineA - lineC) 
+    lineA < Math.abs(lineB - lineC)
+|| lineB < Math.abs(lineA - lineC)
 || lineC < Math.abs(lineA - lineB)) {
     check = false;
   } else {
@@ -46,7 +50,7 @@ lineA < Math.abs(lineB - lineC)
 }
 
 // Desafio 13
-let bebida = '1 cerveja';
+// Fonte: https://stackoverflow.com/questions/1623221/how-to-find-a-number-in-a-string-using-javascript/30160994
 function hydrate(bebida) {
   let quantity = /\d+/g;
   for (let number of quantity) {
