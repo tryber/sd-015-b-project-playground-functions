@@ -62,7 +62,7 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz (arrayNumbers) {
   let phrase = [];
   for (let num of arrayNumbers) {
-    if (num % 5 === 0 && num % 3 === 0) {
+    if (num % 15 === 0) {
       phrase.push('fizzBuzz');
     } else if (num % 5 === 0) {
       phrase.push('buzz');
@@ -79,6 +79,7 @@ function fizzBuzz (arrayNumbers) {
 function encode() {
   // seu código aqui
 }
+
 function decode() {
   // seu código aqui
 }
