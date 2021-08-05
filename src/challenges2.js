@@ -69,8 +69,17 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
+function hydrate(stringFrase) {
   // seu código aqui
+  let stringNumeros = stringFrase.match(/\d/g);
+  let somaNumerosInteiros = 0;
+  let stringFraseRetorno = '';
+
+  for (let index = 0; index < stringNumeros.length; index += 1){
+    somaNumerosInteiros += parseInt(stringNumeros[index]);
+  }
+  stringFraseRetorno = ('String recebida: ' + stringFrase + ' String retornada: ' + somaNumerosInteiros + ' copos de água');
+  return stringFraseRetorno
 }
 
 module.exports = {
@@ -79,5 +88,3 @@ module.exports = {
   hydrate,
   triangleCheck,
 };
-
-console.log(triangleCheck(1,2,3))
