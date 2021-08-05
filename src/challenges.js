@@ -66,11 +66,10 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   if (dCat1 > dCat2) {
     return 'cat2';
-  } else if (dCat1 === dCat2) {
+  } if (dCat1 === dCat2) {
     return 'os gatos trombam e o rato foge';
-  } else {
-    return 'cat1';
   }
+  return 'cat1';
 }
 
 // Desafio 8
@@ -92,11 +91,64 @@ function fizzBuzz(numbers) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encodeLowerVowel (string) {
+  switch (string) {
+    case "a":
+      return 1;
+    case "e":
+      return 2;
+    case "i":
+      return 3;
+    case "o":
+      return 4;
+    case "u":
+      return 5;
+    default:
+      return string;
+  }
 }
-function decode() {
+
+function encodeReceivedString(received) {
+  let arrayEncodedString = [];
+  for (let index = 0; index < received.length; index += 1) {
+    arrayEncodedString.push(encodeLowerVowel(received[index]));
+  }
+  return arrayEncodedString.join('');
+}
+
+function encode(string) {
   // seu código aqui
+  return encodeReceivedString(string);
+}
+
+function decodeLowerVowel (string) {
+  switch (string) {
+    case '1':
+      return "a";
+    case '2':
+      return "e";
+    case '3':
+      return "i";
+    case '4':
+      return "o";
+    case '5':
+      return "u";
+    default:
+      return string;
+  }
+}
+
+function decodeReceivedString(received) {
+  let arraydecodedString = [];
+  for (let index = 0; index < received.length; index += 1) {
+    arraydecodedString.push(decodeLowerVowel(received[index]));
+  }
+  return arraydecodedString.join('');
+}
+
+function decode(string) {
+  // seu código aqui
+  return decodeReceivedString(string);
 }
 
 module.exports = {
