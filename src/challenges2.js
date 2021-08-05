@@ -18,7 +18,7 @@ function triangleCheck(lineA, lineB, lineC) {
   let somalineBLineC = (lineB + lineC);
   let subtracaoLineBLineC = Math.abs(lineB-lineC);
   let resultado = 0;
-  if (somalineBLineC > lineA  < subtracaoLineBLineC && somaLineALineC > lineB < subtracaoLineALineC && somaLineALineB > lineC < subtracaoLineALineB) {
+  if ((lineA < somalineBLineC && lineA > subtracaoLineBLineC) && (lineB < somaLineALineC && lineB > subtracaoLineALineC) && (lineC < somaLineALineB && lineC > subtracaoLineALineB)){
     resultado = true;
   }
   else {
@@ -26,6 +26,13 @@ function triangleCheck(lineA, lineB, lineC) {
   }
   return resultado;
 }
+console.log(triangleCheck(16, 9, 2))
+console.log(triangleCheck(10, 3, 4))
+console.log(triangleCheck(6, 2, 2))
+console.log("\n"); 
+console.log(triangleCheck(10, 14, 8))
+console.log(triangleCheck(2, 3, 4))
+console.log(triangleCheck(16, 20, 30))
 
 // Desafio 13
 function hydrate() {
