@@ -16,6 +16,46 @@ console.log(compareTrue('false', 'false'));
 console.log(compareTrue('false', 'false'));
 console.log(compareTrue('true', 'true'));
 
+// Desafio 1
+function compareTrue(entrada1, entrada2) {
+  // seu código aqui
+  return ((entrada1 === comparativo) && (entrada2 === comparativo))
+}
+console.log(compareTrue('false', 'true'));
+console.log(compareTrue('false', 'false'));
+console.log(compareTrue('false', 'false'));
+console.log(compareTrue('true', 'true'));
+
+// Desafio 1
+function compareTrue(entrada1, entrada2) {
+  // seu código aqui
+  if ((entrada1 === comparativo) && (entrada2 === comparativo)) {
+    return 'true';
+  }
+  else {
+    return 'false';
+  }
+}
+console.log(compareTrue('false', 'true'));
+console.log(compareTrue('false', 'false'));
+console.log(compareTrue('false', 'false'));
+console.log(compareTrue('true', 'true'));
+
+// Desafio 1
+function compareTrue(entrada1, entrada2) {
+  // seu código aqui
+  let comparativo = 'true';
+  let testeEntradas = '';
+  if ((entrada1 === comparativo) && (entrada2 === comparativo)) {
+    testeEntradas = 'true';
+  }
+  else {
+    testeEntradas = 'false';
+  }
+  return testeEntradas;
+}
+
+
 // Desafio 2
 function calcArea(base, height) {
   // seu código aqui
@@ -92,7 +132,7 @@ function catAndMouse(mouse, cat1, cat2) {
   if (distanciaMouseCat1 === distanciaMouseCat2) {
     return winMouse;
   }
-  if (distanciaMouseCat1 > distanciaMouseCat2) {
+  else if (distanciaMouseCat1 > distanciaMouseCat2) {
     return winCat2;
   }
   return winCat1;
@@ -108,16 +148,16 @@ function fizzBuzz(variavelNumeros) {
   for (let index = 0; index < variavelNumeros.length; index += 1) {
     if ((variavelNumeros[index] % 3) !== 0 && (variavelNumeros[index] % 5) !== 0) {
       variavelRetorno.push('bug!');
-      }
+    }
     else if ((variavelNumeros[index] % 3) === 0 && (variavelNumeros[index] % 5) === 0) {
       variavelRetorno.push('fizzBuzz');
-      }
+    }
     else if ((variavelNumeros[index] % 5) === 0) {
       variavelRetorno.push('buzz');
-      }
+    }
     else {
       variavelRetorno.push('fizz');
-      }
+    }
   }
   return variavelRetorno;
 }
