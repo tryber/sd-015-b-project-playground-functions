@@ -46,7 +46,7 @@ footballPoints(14,8);
 // Desafio 6
 function highestCount(array) {
   // seu código aqui   
-let maiorNum = 0;
+let maiorNum = array[0];
 let count = 0;
 
 for (i = 0; i < array.length; i += 1){  
@@ -61,33 +61,16 @@ for (i = 0; i < array.length; i += 1){
 }
 return count;
 }
-highestCount([1, 2, 3, -2, 9, 5, 7, 9, 9]);
+console.log(highestCount([1, 2, 3, -2, 9, 5, 7, 9, 9]));
 
 // Desafio 7
 function catAndMouse(mouse,cat1,cat2) {
   // seu código aqui
-  if((cat1 && cat2) != mouse && cat2 < cat1){
-    console.log("cat2")
-  }else if((cat1 && cat2) != mouse & cat2 > cat1){
-    console.log("cat1")
-  }else if(cat1 == mouse && cat2 == mouse){
-    console.log("os gatos trombam e o rato foge")
-  }
-}catAndMouse(2,2,3)
-
+}
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
-  let arr =  [2, 15, 7, 9, 45];
-  for(let i = 0; i < arr.length; i+=1){
-    if(arr[i] % 3 == 0){
-      console.log("fizz")
-    }if(arr[i] % 5 == 0){
-      console.log("buzz")
-    }if(arr[i] % 3 == 0 && arr[i] % 5 == 0){
-      console.log("fizzbuzz")
-    }
-  }
+  
 }
 fizzBuzz();
 // Desafio 9
