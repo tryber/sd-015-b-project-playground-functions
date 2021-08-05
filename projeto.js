@@ -5,5 +5,16 @@
     } else {
         return false;    }
     }
-    compareTrue(10, 10);
-    compareTrue(8, 10);
+    compareTrue();
+    
+    //2
+    function calcArea(base, height){
+        return (base*height)/2;
+    }
+
+    calcArea(10, 50);
+    calcArea(5, 2);
+    calcArea(51, 1);
+
+    //3
+    
