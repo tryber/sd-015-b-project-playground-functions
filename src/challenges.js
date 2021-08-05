@@ -45,7 +45,11 @@ function highestCount(numbers) {
  for (let index = 0; index < numbers.length; index++){
      if (numbers[index] > highestNumber){
          highestNumber = numbers[index];
-     }
+     } else if (highestNumber === 0){
+      if  (numbers[index] < highestNumber){
+          highestNumber = numbers[index];
+      }
+  }
  }
  for (let index = 0; index < numbers.length; index++){
       if (numbers[index] === highestNumber){
