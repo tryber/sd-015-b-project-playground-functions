@@ -1,14 +1,14 @@
 // Desafio 1
 let value = false;
 function compareTrue(n1, n2) {
-  // seu código aqui
   if (n1 && n2 === true) {
     value = true;
     return value;
   } else if (n1 && n2 !== true) {
     return value;
   }
-  else {
+  else 
+ {
     value = false;
     return value;
   }
@@ -31,11 +31,11 @@ console.log(splitSentence('sempre é assim'));
 
 // Desafio 4
 function concatName(palavras) {
-  for ( let index = 0 ; index <= palavras.length ; index += 1){
-    for ( let contador = palavras.length - 1; contador >= 0 ; contador -= 1){
+  for (let index = 0; index <= palavras.length; index += 1) {
+    for (let contador = palavras.length - 1; contador >= 0; contador -= 1) {
       let firstStringLetter = palavras[index];
       let lastStringLetter = palavras[contador];
-      return lastStringLetter + ', ' + firstStringLetter;
+      return lastStringLetter + ", " + firstStringLetter;
     }
   }  
 }
