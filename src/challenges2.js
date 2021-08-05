@@ -29,12 +29,10 @@ function generatePhoneNumber(array) {
     } count = 0;
     for (let numbers in array) {
       if (array[numbers] === array[i]) {
-        count += 1;
-      }}
+        count += 1; } }
     if (count >= 3) {
       error = true;
-      break;
-    }}
+      break; } }
   if (error) {
     return 'não é possível gerar um número de telefone com esses valores';
   } return ('(' + array[0] + array[1] + ') '
@@ -44,9 +42,9 @@ function generatePhoneNumber(array) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  if (lineA >= lineB + lineC ||
-    lineB >= lineA + lineC ||
-    lineC >= lineB + lineA) {
+  if (lineA >= lineB + lineC 
+    ||lineB >= lineA + lineC 
+    ||lineC >= lineB + lineA) {
     return false;
   }
   return true;
