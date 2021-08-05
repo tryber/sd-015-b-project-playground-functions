@@ -11,7 +11,7 @@ function generatePhoneNumber() {
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   if (
-    lineA >= lineB + lineC || lineB >= lineA + lineC || lineC >= lineB + lineA) {
+    (lineA >= lineB + lineC) || (lineB >= lineA + lineC) || (lineC >= lineB + lineA) {
     return false;
   }
   return true;
