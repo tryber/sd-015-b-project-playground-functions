@@ -1,10 +1,15 @@
-let array = [1, -5, 10, 9]
 
+let string = '8poas 9 sakndk 5 as4'
+let numstr = string.match(/\d+/g)
+let numbers = []
+let soma = 0
 
-for (let index of array) {
-    if (index < 9) {
-      console.log('não é possível gerar um número de telefone com esses valores')
-    } else {
-        console.log('ok')
-    }
+for (let index of numstr) {
+    numbers.push(parseInt(index))
+}
+
+for (let cont in numbers) {
+    soma += numbers[cont] 
   }
+
+console.log(numbers)
