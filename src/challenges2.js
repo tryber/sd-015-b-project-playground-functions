@@ -43,8 +43,8 @@ function generatePhoneNumber(numberFone) {
 
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  return lineA < (lineC + lineB) && lineB < (lineA + lineC)&& lineC < (lineA + lineB)
 }
 
 // Desafio 13
