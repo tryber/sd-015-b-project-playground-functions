@@ -112,9 +112,9 @@ function encode(phrase) {
       result += phrase[index];
     }
   }
-  return console.log(result);
+  return result;
 }
-encode('hi there!');
+encode('this is an encoding test.');
 
 function decode(phrase) {
   let result = ' ';
@@ -133,9 +133,9 @@ function decode(phrase) {
       result += phrase[index];
     }
   }
-  return console.log(result);
+  return result;
 }
-decode('h3 th2r2!');
+decode('h2ll4!');
 
 module.exports = {
   calcArea,
