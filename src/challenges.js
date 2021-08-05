@@ -5,7 +5,7 @@ function compareTrue(entrada1, entrada2) {
   let testeEntradas = '';
   if ((entrada1 === comparativo) && (entrada2 === comparativo)) {
     testeEntradas = 'true';
-    }
+  }
   else {
     testeEntradas = 'false';
   }
@@ -70,7 +70,7 @@ function highestCount(numeros) {
     }
     verificaMaiorNumero = numeros[numeroMaior];
   }
-    for (contador in numeros) {
+    for (contador = 0; contador < numeros.length; contador += 1) {
     if (verificaMaiorNumero === numeros[contador]) {
       contNumeroMaior += 1;
     }
