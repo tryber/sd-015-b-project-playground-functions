@@ -96,7 +96,7 @@ fizzBuzz([9, 25]);
 
 // Desafio 9
 function encode(phrase) {
-  let result = ' ';
+  let result = '';
   for (let index = 0; index < phrase.length; index += 1) {
     if (phrase[index] === 'a') {
       result += 1;
@@ -117,7 +117,7 @@ function encode(phrase) {
 encode('this is an encoding test.');
 
 function decode(phrase) {
-  let result = ' ';
+  let result = '';
   for (let index = 0; index < phrase.length; index += 1) {
     if (phrase[index] === '1') {
       result += 'a';
