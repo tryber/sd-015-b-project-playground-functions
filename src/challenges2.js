@@ -3,10 +3,10 @@ function techList(tech, name) {
   if (tech.length > 0) {
     let techAndName = [];
     tech.sort();
-    for (let index of tech) {
+    for (let index in tech) {
       let store = {};
       store.name = name;
-      store.tech = tech;
+      store.tech = tech[index];
       techAndName.push(store);
     }
     return techAndName;
