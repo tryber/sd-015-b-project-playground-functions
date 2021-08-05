@@ -3,8 +3,7 @@ function compareTrue(a, b) {
   if (a === true && b === true) {
     return true;
   } return false;
-}
-console.log(compareTrue(true, true));
+} console.log(compareTrue(true, true));
 
 // Desafio 2
 function calcArea(base, height) {
@@ -53,7 +52,7 @@ function catAndMouse(mouse, cat1, cat2) {
   let resposta = '';
   if (distCat1 > distCat2) {
     resposta = 'cat2';
-  } else if (distCat2 > distCat1) {s
+  } else if (distCat2 > distCat1) {
     resposta = 'cat1';
   } else if (distCat1 === distCat2) {
     resposta = 'os gatos trombam e o rato foge';
