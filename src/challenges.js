@@ -106,26 +106,15 @@ function fizzBuzz(numeros) {
 // Desafio 9
 function encode(texto) {
   // seu código aqui
+  let tabelaCaracteres = {a: "1", e: "2", i: "3", o: "4", u: "5"}
   let textoCodificado = '';
   for (let index = 0; index < texto.length; index++) {
-    switch (texto[index]) {
-      case 'a':
-        textoCodificado += '1';
-        break;
-      case 'e':
-        textoCodificado += '2';
-        break;
-      case 'i':
-        textoCodificado += '3';
-        break;
-      case 'o':
-        textoCodificado += '4';
-        break;
-      case 'u':
-        textoCodificado += '5';
-        break;
-      default:
-        textoCodificado += texto[index];
+    let caractereAtual = texto[index];
+    if(tabelaCaracteres[caractereAtual] !== undefined){
+      textoCodificado += tabelaCaracteres[caractereAtual];
+    }
+    else{
+      textoCodificado += caractereAtual;
     }
   }
   return textoCodificado;
@@ -133,26 +122,15 @@ function encode(texto) {
 
 function decode(texto) {
   // seu código aqui
+  let tabelaCaracteres = {1: "a", 2: "e", 3: "i", 4: "o", 5: "u"}
   let textoDecodificado = '';
   for (let index = 0; index < texto.length; index++) {
-    switch (texto[index]) {
-      case '1':
-        textoDecodificado += 'a';
-        break;
-      case '2':
-        textoDecodificado += 'e';
-        break;
-      case '3':
-        textoDecodificado += 'i';
-        break;
-      case '4':
-        textoDecodificado += 'o';
-        break;
-      case '5':
-        textoDecodificado += 'u';
-        break;
-      default:
-        textoDecodificado += texto[index];
+    let caractereAtual = texto[index];
+    if(tabelaCaracteres[caractereAtual] !== undefined){
+      textoDecodificado += tabelaCaracteres[caractereAtual];
+    }
+    else{
+      textoDecodificado += caractereAtual;
     }
   }
   return textoDecodificado;
