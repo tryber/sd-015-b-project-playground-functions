@@ -17,7 +17,7 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(array) {
-  let combo = array[array.length - 1] + ', ' + array[0];
+  let combo = array[array.length - 1] + ', ' + array[0]; //erro
   return combo;
 } console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
@@ -62,42 +62,45 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
   function fizzBuzz() { 
-    let fizzBuzz = [2, 15, 7, 9, 45];  
-    for (let posicao = 0; posicao <= fizzBuzz.length; posicao+=1) {
-      if ((fizzBuzz[posicao] % 3) === 0 && (fizzBuzz[posicao] % 5) === 0) {
-        fizzBuzz.push('fizzBuzz');
-      } else if ((fizzBuzz[posicao] % 3) === 0) {
-        fizzBuzz.push('fizz');
-      } else if ((fizzBuzz[posicao] % 5) === 0) {
-        fizzBuzz.push('buzz');
-      } else {
-        fizzBuzz.push('bug!');
-      }
-    }
-    return fizzBuzz;
+  //   let fizzBuzz = [2, 15, 7, 9, 45];  
+  //   for (let posicao = 0; posicao <= fizzBuzz.length; posicao+=1) {
+  //     if ((fizzBuzz[posicao] % 3) === 0 && (fizzBuzz[posicao] % 5) === 0) {
+  //       fizzBuzz.push('fizzBuzz');
+  //     } else if ((fizzBuzz[posicao] % 3) === 0) {
+  //       fizzBuzz.push('fizz');
+  //     } else if ((fizzBuzz[posicao] % 5) === 0) {
+  //       fizzBuzz.push('buzz');
+  //     } else {
+  //       fizzBuzz.push('bug!');
+  //     }
+  //   }
+  //   return fizzBuzz;
+  // }
   }
 
 // Desafio 9
 function encode(str) {
- let objetos = {
-    a: 1, 
-    e: 2,
-    i: 3,
-    o: 4,
-    u: 5 
-    };
-  return str.replace(/[aeiou]/gi, (v) => objetos[v]);
+// function encode(str) {
+//  let objetos = {
+//     a: 1, 
+//     e: 2,
+//     i: 3,
+//     o: 4,
+//     u: 5 
+//     };
+//   return str.replace(/[aeiou]/gi, (v) => objetos[v]);
 }
 
 function decode(str) {
-  let objetos = { 
-    1: 'a', 
-    2: 'e', 
-    3: 'i', 
-    4: 'o', 
-    5: 'u',
-  };
-  return str.replace(/[1-5]/g, (v) => objetos[v]);
+// function decode(str) {
+//   let objetos = { 
+//     1: 'a', 
+//     2: 'e', 
+//     3: 'i', 
+//     4: 'o', 
+//     5: 'u',
+//   };
+//   return str.replace(/[1-5]/g, (v) => objetos[v]);
 }
 
 module.exports = {
