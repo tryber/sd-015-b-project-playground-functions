@@ -48,20 +48,15 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount(numeros) {
-  let maiorNumero = 0;
-  let contador = 0;
-  let tamanho = numeros.length;
-  // busca maior numero
-  for (let index = 0; index < tamanho; index++) {
-    if (numeros[index] > maiorNumero) {
-      maiorNumero = numeros[index];
-    }
+function highestCount(arrayNumero) {
+  function numerosOrdenados(arrayNumero) {
+    return arrayNumero.sort(function (a, b) { return a - b; });
   }
-  // busca quantas vezes o maior numero apareceu no array
-  for (let index = 0; index < tamanho; index+=1){
-    if (numeros[index] === maiorNumero) {
-      contador+=1;
+  let array = numerosOrdenados(arrayNumero);
+  let contador = 0;
+  for (let index = 0; index < array.length; index += 1) {
+    if (array[index] === array[array.length - 1]) {
+      contador += 1;
     }
   }
   return contador;
