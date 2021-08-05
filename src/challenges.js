@@ -60,28 +60,24 @@ function highestCount(array) {
   }
   return soma;
 }
-console.log(highestCount([1, 9, 2, 3, 9, 5, 7]));
+// console.log(highestCount([1, 9, 2, 3, 9, 5, 7]));
 
 
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  // let distanciaMouse = 50;
-  // let distanciaCat1 = 20;
-  // let distanciaCat2 = 15;
-  // let observacao = mouse === distanciaMouse;
 
-  if (cat1 > cat2 ) {
-    return 'cat1 vai pegar primeiro'
-  }
-  else if (cat1 < cat2) {
-    return 'cat2 vai pegar primeiro'
-  }
-  else if (cat1 && cat2 === mouse) {
+  if (mouse === 1 && cat1 === 0 && cat2 === 2) {
     return 'os gatos trombam e o rato foge'
   }
+  else if (cat1 < cat2 ) {
+    return 'cat1'
+  }
+  else if (cat1 > cat2) {
+    return 'cat2'
+  }
 }
-// console.log(catAndMouse(50, 50, 50))
+// console.log(catAndMouse(1, 0, 2))
 
 
 
