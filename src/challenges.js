@@ -2,12 +2,12 @@
 function compareTrue(entrada1, entrada2) {
   // seu código aqui
   let comparativo = 'true';
-  let testeEntradas = "";
+  let testeEntradas = '';
   if ((entrada1 === comparativo) && (entrada2 === comparativo)) {
-    testeEntradas = "true";
+    testeEntradas = 'true';
   }
   else {
-    testeEntradas = "false";
+    testeEntradas = 'false';
   }
   return testeEntradas;
 }
@@ -39,9 +39,9 @@ function concatName(arrayPalavras) {
   // seu código aqui
   let index = 0;
   let index2 = (arrayPalavras.length - 1);
-  let newSentenca = '';
-  newSentenca = arrayPalavras[index2] + ', ' + arrayPalavras[index];
-  return newSentenca;
+  
+  return arrayPalavras[index2] + ', ' + arrayPalavras[index];
+  
 }
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 console.log(concatName(['foguete', 'não', 'tem', 'ré']));
@@ -66,13 +66,13 @@ function highestCount(numeros) {
   let contador = 0;
   let verificaMaiorNumero = 0;
   let contNumeroMaior = 0;
-  for (let index in numeros) {
+  for (let index = 0; index < numeros.length; index += 1) {
     if (numeros[numeroMaior] < numeros[index]) {
       numeroMaior = index;
     }
+    verificaMaiorNumero = numeros[numeroMaior];
   }
-  verificaMaiorNumero = numeros[numeroMaior];
-  for (contador in numeros) {
+    for (contador in numeros) {
     if (verificaMaiorNumero === numeros[contador]) {
       contNumeroMaior += 1;
     }
@@ -92,10 +92,10 @@ function catAndMouse(mouse, cat1, cat2) {
   let winCat2 = 'cat2';
   let winMouse = 'os gatos trombam e o rato foge';
   if (distanciaMouseCat1 === distanciaMouseCat2) {
-  return winMouse;
+    return winMouse;
   }
   if (distanciaMouseCat1 > distanciaMouseCat2) {
-  return winCat2;
+    return winCat2;
   }
   return winCat1;
 }
@@ -106,9 +106,8 @@ console.log(catAndMouse(0, 4, 4));
 // Desafio 8
 function fizzBuzz(variavelNumeros) {
   // seu código aqui
-  let index = 0;
   let variavelRetorno = [];
-  for (index in variavelNumeros) {
+  for (let index = 0; index < variavelNumeros.length; index += 1) {
     if ((variavelNumeros[index] % 3) !== 0 && (variavelNumeros[index] % 5) !== 0) {
       variavelRetorno.push('bug!');
     }
