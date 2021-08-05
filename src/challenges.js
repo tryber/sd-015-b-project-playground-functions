@@ -75,32 +75,67 @@ catAndMouse(5, -3, -3);
 
 // Desafio 8
 function fizzBuzz(numbers) {
-  let result = []
+  let result = [];
 
-  for(let index = 0; index < numbers.length; index++){
-    if(numbers[index] % 3 === 0 && numbers[index] % 5 === 0){
-      result.push('fizzBuzz')
-    }else if(numbers[index] % 3 === 0){
-      result.push('fizz')
-    }else if(numbers[index] % 5 === 0){
-      result.push('buzz')
-    }else{
-      result.push('bug!')
+  for (let index = 0; index < numbers.length; index++) {
+    if (numbers[index] % 3 === 0 && numbers[index] % 5 === 0) {
+      result.push('fizzBuzz');
+    } else if (numbers[index] % 3 === 0) {
+      result.push('fizz');
+    } else if (numbers[index] % 5 === 0) {
+      result.push('buzz');
+    } else {
+      result.push('bug!');
     }
   }
-  return (result)
+  return result;
 }
-  fizzBuzz([2,15,7,9,45])
-  fizzBuzz([7, 9])
-  fizzBuzz([9,25])
+fizzBuzz([2, 15, 7, 9, 45]);
+fizzBuzz([7, 9]);
+fizzBuzz([9, 25]);
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(phrase) {
+  let result = ' '
+  for(let index = 0; index < phrase.length; index+= 1){
+    if(phrase[index] === 'a'){
+      result += 1
+    }else if(phrase[index] === 'e'){
+      result += 2
+    }else if(phrase[index] === 'i'){
+      result += 3
+    }else if(phrase[index] === 'o'){
+      result += 4
+    }else if(phrase[index] === 'u'){
+      result += 5
+    }else{
+      result += phrase[index]
+    }
+  }
+  return console.log(result)
 }
+encode('hi there!')
+
 function decode() {
-  // seu código aqui
+  let result = ' '
+  for(let index = 0; index < phrase.length; index+= 1){
+    if(phrase[index] === '1'){
+      result += 'a'
+    }else if(phrase[index] === '2'){
+      result += 'b'
+    }else if(phrase[index] === '3'){
+      result += 'c'
+    }else if(phrase[index] === '4'){
+      result += 'd'
+    }else if(phrase[index] === '5'){
+      result += 'e'
+    }else{
+      result += phrase[index]
+    }
+  }
+  return console.log(result)
 }
+decode(h3 th2r2!'')
 
 module.exports = {
   calcArea,
