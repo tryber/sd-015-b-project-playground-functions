@@ -109,10 +109,10 @@ function encode(string) {
 function decodeAux(num) {
   let charReturn = 0;
   let chars = ['a', 'e', 'i', 'o', 'u'];
-  let numbers = [1, 2, 3, 4, 5];
+  let numbers = ['1', '2', '3', '4', '5'];
 
   for (let i = 0; i < chars.length; i += 1) {
-    if (num == numbers[i]) {
+    if (num === numbers[i]) {
       charReturn = chars[i];
     }
   }
