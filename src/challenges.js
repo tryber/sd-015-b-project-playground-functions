@@ -25,7 +25,7 @@ function splitSentence(frase) {
 // Desafio 4
 function concatName(array) {
   array.reverse();
-  return (array[0] + ', ' + array[array.length - 1]);
+  return `${array[0]}, ${array[array.length - 1]}`;
 }
 
 // Desafio 5

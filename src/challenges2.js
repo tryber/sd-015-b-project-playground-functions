@@ -6,7 +6,7 @@ function techList(namesTech, name) {
   let namesTechArray = [];
   let listOrden = namesTech.sort();
   for (let index = 0; index < namesTech.length; index += 1) {
-    namesTechArray.push({ tech: listOrden[index], name: name });
+    namesTechArray.push({ tech: listOrden[index], name });
   }
   return namesTechArray;
 }
