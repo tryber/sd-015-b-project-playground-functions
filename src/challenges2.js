@@ -3,24 +3,70 @@ function techList(valor1, valor2) {
   valor1 = valor1.sort();
   let techInfo;
   if (valor1.length > 0) {
-    let saida = [];  
+    let saida = [];
     for (let key in valor1) {
       techInfo = {
         tech: valor1[key],
-        name: valor2
+        name: valor2,
       };
       saida.push(techInfo);
     }
     return saida;
-  } else if (valor1.length === 0) {
+  } if (valor1.length === 0) {
     return 'Vazio!';
   }
-
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function checkNumbers(numbers) {
+  let output = false;
+  if (numbers.length !== 11) {
+    output = true;
+  }
+  return output;
+}
+
+function checkHighLowNumber(numbers) {
+  let output = false;
+  for (let n of numbers) {
+    if (n > 10 || n < 0) {
+      output = true;
+    } 
+  } 
+  return output;
+}
+
+function checkRepetNumber(numbers) {
+  let count = 0;
+  for (let n of numbers) {
+    count = 0;
+    for (let n2 of numbers) {
+      if (n2 === n) {
+        count += 1;
+      }
+    }
+    if (count >= 3) {
+      return count;
+    }
+  }
+}
+function compareNumberValidate(numbers) {
+  return checkHighLowNumber(numbers) || checkRepetNumber(numbers) >= 3;
+}
+function transformNumber (numbers) {
+  let dd = '('+numbers.slice(0, 2).join('')+') ';
+  let firstFivePrefix = numbers.slice(2, 7).join('');
+  let secondFourPrefix = numbers.slice(7, 11).join('');
+  return dd + firstFivePrefix + '-' + secondFourPrefix;
+}
+function generatePhoneNumber(numbers) {
+  if (checkNumbers(numbers)) {
+    return 'Array com tamanho incorreto.';
+  }
+  if (compareNumberValidate(numbers)) {
+    return 'não é possível gerar um número de telefone com esses valores';
+  }
+  return transformNumber(numbers);
 }
 
 // Desafio 12
@@ -30,7 +76,7 @@ function triangleCheck(lineA, lineB, lineC) {
     if (lineA > lineB + lineC || lineB > lineA + lineC || lineC > lineA + lineB) {
       output = false;
     } else {
-    output = true;
+      output = true;
     }
   } else {
     output = false;
@@ -44,12 +90,12 @@ function hydrate(comanda) {
   let output = '';
 
   for (let key of quantidade) {
-    coposAgua += parseInt(key, 10);
+    coposAgua += parseInt(key, 20);
   }
   if (coposAgua === 1) {
-    output = coposAgua + ' copo de água';
+    output = `${coposAgua} copo de água`;
   } else {
-    output = coposAgua + ' copos de água';
+    output = `${coposAgua} copos de água`;
   }
   return output;
 }

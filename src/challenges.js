@@ -66,9 +66,9 @@ function catAndMouse(mouse, cat1, cat2) {
 
   if (position === position2) {
     return 'os gatos trombam e o rato foge';
-  } else if (position < position2) {
+  } if (position < position2) {
     return 'cat1';
-  } else if (position2 < position) {
+  } if (position2 < position) {
     return 'cat2';
   }
 }
@@ -79,14 +79,11 @@ function fizzBuzz(array) {
   for (let show of array) {
     if (show % 3 === 0 && show % 5 === 0) {
       fizbuz.push('fizzBuzz');
-    }
-    else if (show % 3 === 0) {
+    } else if (show % 3 === 0) {
       fizbuz.push('fizz');
-    }
-    else if (show % 5 == 0) {
+    } else if (show % 5 == 0) {
       fizbuz.push('buzz');
-    }
-    else {
+    } else {
       fizbuz.push('bug!');
     }
   }
@@ -101,49 +98,41 @@ function encode(valor) {
   for (let show of split) {
     if (show === 'a') {
       juncao2.push(1);
-    }
-    else if (show === 'e') {
+    } else if (show === 'e') {
       juncao2.push(2);
-    }
-    else if (show === 'i') {
+    } else if (show === 'i') {
       juncao2.push(3);
-    }
-    else if (show === 'o') {
+    } else if (show === 'o') {
       juncao2.push(4);
-    }
-    else if (show === 'u') {
+    } else if (show === 'u') {
       juncao2.push(5);
-    }
-    else {
+    } else {
       juncao2.push(show);
     }
   }
   return juncao2.join('', retorno);
-  
 }
 
-
 function decode(valor) {
-  let split = valor.split("");
+  let split = valor.split('');
   let juncao = [];
-  let retorno = "";
+  let retorno = '';
   for (let show of split) {
     if (show === '1') {
       juncao.push('a');
-    }  else if (show === '2') {
+    } else if (show === '2') {
       juncao.push('e');
-    }  else if (show === '3') {
+    } else if (show === '3') {
       juncao.push('i');
-    }  else if (show === '4') {
+    } else if (show === '4') {
       juncao.push('o');
-    }  else if (show === '5') {
+    } else if (show === '5') {
       juncao.push('u');
-    }  else {
+    } else {
       juncao.push(show);
     }
   }
   return juncao.join('', retorno);
-  
 }
 
 module.exports = {
