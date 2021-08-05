@@ -16,46 +16,6 @@ console.log(compareTrue('false', 'false'));
 console.log(compareTrue('false', 'false'));
 console.log(compareTrue('true', 'true'));
 
-// Desafio 1
-function compareTrue(entrada1, entrada2) {
-  // seu código aqui
-  return ((entrada1 === comparativo) && (entrada2 === comparativo))
-}
-console.log(compareTrue('false', 'true'));
-console.log(compareTrue('false', 'false'));
-console.log(compareTrue('false', 'false'));
-console.log(compareTrue('true', 'true'));
-
-// Desafio 1
-function compareTrue(entrada1, entrada2) {
-  // seu código aqui
-  if ((entrada1 === comparativo) && (entrada2 === comparativo)) {
-    return 'true';
-  }
-  else {
-    return 'false';
-  }
-}
-console.log(compareTrue('false', 'true'));
-console.log(compareTrue('false', 'false'));
-console.log(compareTrue('false', 'false'));
-console.log(compareTrue('true', 'true'));
-
-// Desafio 1
-function compareTrue(entrada1, entrada2) {
-  // seu código aqui
-  let comparativo = 'true';
-  let testeEntradas = '';
-  if ((entrada1 === comparativo) && (entrada2 === comparativo)) {
-    testeEntradas = 'true';
-  }
-  else {
-    testeEntradas = 'false';
-  }
-  return testeEntradas;
-}
-
-
 // Desafio 2
 function calcArea(base, height) {
   // seu código aqui
