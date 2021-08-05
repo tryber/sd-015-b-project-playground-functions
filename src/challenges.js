@@ -28,8 +28,7 @@ console.log(calcArea(51, 1));
 // Desafio 3
 function splitSentence(frase) {
   // seu código aqui
-  let transformaArray = [];
-  return transformaArray = frase.split(' ');
+  return frase.split(' ');
 }
 console.log(splitSentence('go Trybe'));
 console.log(splitSentence('vamo que vamo'));
@@ -40,7 +39,8 @@ function concatName(arrayPalavras) {
   // seu código aqui
   let index = 0;
   let index2 = (arrayPalavras.length - 1);
-  let newSentenca = arrayPalavras[index2] + ', ' + arrayPalavras[index];
+  let newSentenca = '';
+  newSentenca = arrayPalavras[index2] + ', ' + arrayPalavras[index];
   return newSentenca;
 }
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
@@ -70,8 +70,8 @@ function highestCount(numeros) {
     if (numeros[numeroMaior] < numeros[index]) {
       numeroMaior = index;
     }
-    verificaMaiorNumero = numeros[numeroMaior];
   }
+  verificaMaiorNumero = numeros[numeroMaior];
   for (contador in numeros) {
     if (verificaMaiorNumero === numeros[contador]) {
       contNumeroMaior += 1;
@@ -110,16 +110,16 @@ function fizzBuzz(variavelNumeros) {
   let variavelRetorno = [];
   for (index in variavelNumeros) {
     if ((variavelNumeros[index] % 3) !== 0 && (variavelNumeros[index] % 5) !== 0) {
-      variavelRetorno.push("bug!");
+      variavelRetorno.push('bug!');
     }
     else if ((variavelNumeros[index] % 3) === 0 && (variavelNumeros[index] % 5) === 0) {
-      variavelRetorno.push("fizzBuzz"); 
+      variavelRetorno.push('fizzBuzz'); 
     }
     else if ((variavelNumeros[index] % 5) === 0) {
-      variavelRetorno.push("buzz");  
+      variavelRetorno.push('buzz');  
     }
     else {
-      variavelRetorno.push("fizz");  
+      variavelRetorno.push('fizz');  
     }
   }
   return variavelRetorno;
