@@ -29,7 +29,7 @@ function splitSentence(frase) {
 // Desafio 4
 function concatName(array) {
   let {length, 0: first, [length-1]: last} = array;
-  return last+first;
+  return last+ ', '+first;
 }
 //console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
@@ -58,7 +58,9 @@ function highestCount(numbers) {
     }
   return contador;
 }
- console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
+ //console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
+
+
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
