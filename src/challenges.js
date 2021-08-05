@@ -106,11 +106,52 @@ function fizzBuzz(numberArray) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function replaceLowerCaseA(phrase) {
+  return phrase.replace(/a/g, '1');
 }
-function decode() {
-  // seu código aqui
+
+function replaceLowerCaseE(phrase) {
+  return replaceLowerCaseA(phrase).replace(/e/g, '2');
+}
+
+function replaceLowerCaseI(phrase) {
+  return replaceLowerCaseE(phrase).replace(/i/g, '3');
+}
+
+function replaceLowerCaseO(phrase) {
+  return replaceLowerCaseI(phrase).replace(/o/g, '4');
+}
+
+function replaceLowerCaseU(phrase) {
+  return replaceLowerCaseO(phrase).replace(/u/g, '5');
+}
+
+function encode(phrase) {
+  return replaceLowerCaseU(phrase);
+}
+
+function replaceNumber1(phrase) {
+  return phrase.replace(/1/g, 'a');
+}
+
+function replaceNumber2(phrase) {
+  return replaceNumber1(phrase).replace(/2/g, 'e');
+}
+
+function replaceNumber3(phrase) {
+  return replaceNumber2(phrase).replace(/3/g, 'i');
+}
+
+function replaceNumber4(phrase) {
+  return replaceNumber3(phrase).replace(/4/g, 'o');
+}
+
+function replaceNumber5(phrase) {
+  return replaceNumber4(phrase).replace(/5/g, 'u');
+}
+
+function decode(phrase) {
+  return replaceNumber5(phrase);
 }
 
 module.exports = {
