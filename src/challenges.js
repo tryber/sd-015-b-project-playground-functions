@@ -61,8 +61,7 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() { 
-    let fizzBuzz = [2, 15, 7, 9, 45];  
+function fizzBuzz(fizzBuzz) {    
     for (let posicao = 0; posicao <= fizzBuzz.length; posicao+=1) {
       if ((fizzBuzz[posicao] % 3) === 0 && (fizzBuzz[posicao] % 5) === 0) {
         fizzBuzz.push('fizzBuzz');
@@ -75,10 +74,10 @@ function fizzBuzz() {
       }
     }
     return fizzBuzz;  
-}
+} fizzBuzz(2, 15, 7, 9, 45);
 
 // Desafio 9
-function encode(str) {
+function encode() {
 // function encode(str) {
 //  let objetos = {
 //     a: 1, 
@@ -90,7 +89,7 @@ function encode(str) {
 //   return str.replace(/[aeiou]/gi, (v) => objetos[v]);
 }
 
-function decode(str) {
+function decode() {
 // function decode(str) {
 //   let objetos = { 
 //     1: 'a',
