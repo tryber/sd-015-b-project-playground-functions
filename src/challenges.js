@@ -66,27 +66,63 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz(numbersArray) {
+function fizzBuzz(number) {
   // seu código aqui
-  let newNumbersArray = [];
-  for (let index = 0; index < numbersArray.length; index += 1) {
-    if (numbersArray[index] % 3 === 0 && numbersArray[index] % 5 !== 0) {
-        newNumbersArray.push("fizz")
-    }else if (numbersArray[index] % 5 === 0 && numbersArray[index] % 3 !== 0) {
-      newNumbersArray.push("buzz");
-    }else if (numbersArray[index] % 3 === 0 && numbersArray[index] % 5 === 0) {
-      newNumbersArray.push("fizzBuzz")
-    }else {
-      newNumbersArray.push("bug!")
+  let valor = [];
+  for (let index = 0; index < number.length; index++){
+    if (number[index] % 3 === 0){
+      valor.push("fizz");
+    } else if (number[index] % 5 === 0){
+      valor.push("buzz");
+    } else if (number[index] % 3 === 0 && number[index] % 5 === 0){
+      valor.push("fizzBuzz");
+    } else{
+      valor.push("bug!");
     }
-  } return newNumbersArray;
+  }
+  return valor;
 }
+
 // Desafio 9
-function encode() {
+function encode(phraseOne) {
   // seu código aqui
-}
-function decode() {
+  let newPhrase = "";  
+  for (let index = 0; index <phraseOne.length; index += 1) {
+    if (phraseOne[index] === "a") {
+      newPhrase += "1";
+    } else if (phraseOne[index] === "e") {
+      newPhrase += "2";
+    } else if (phraseOne[index] === "i") {
+      newPhrase += "3";
+    } else if (phraseOne[index] === "o") {
+      newPhrase += "4";
+    } else if (phraseOne[index] === "u") {
+      newPhrase += "5";
+    } else {
+      newPhrase += phraseOne[index];
+    } 
+  } return newPhrase;
+
+} 
+
+function decode(phrase2) {
   // seu código aqui
+  let newPhrase2 = "";  
+  for (let index = 0; index <phrase2.length; index += 1) {
+    if (phrase2[index] === "1") {
+      newPhrase2 += "a";
+    } else if (phrase2[index] === "2") {
+      newPhrase2 += "e";
+    } else if (phrase2[index] === "3") {
+      newPhrase2 += "i";
+    } else if (phrase2[index] === "4") {
+      newPhrase2 += "o";
+    } else if (phrase2[index] === "5") {
+      newPhrase2 += "u";
+    } else {
+      newPhrase2 += phrase2[index];
+    } 
+  } return newPhrase2;
 }
 
 module.exports = {
