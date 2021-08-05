@@ -70,12 +70,39 @@ function generatePhoneNumber(array) {
 
   return phoneNumber;
 }
+
 // Desafio 12
-function triangleCheck() {}
+function triangleCheck(lineA, lineB, lineC) {
+  if (lineA > lineB + lineC || lineB > lineA + lineC || lineC > lineA + lineB) {
+    return false;
+  }
+
+  if (
+    (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC)) ||
+    (lineB < lineA + lineC && lineB > Math.abs(lineA - lineC)) ||
+    (lineC < lineA + lineB && lineC > Math.abs(lineA - lineB))
+  ) {
+    return true;
+  }
+}
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  string = string.replace(/\D/g, '');
+  let takeWaterCup = 0;
+  for (index = 0; index < string.length; index++) {
+    let waterCup = parseInt(string[index], 10);
+    takeWaterCup = takeWaterCup + waterCup;
+  }
+
+  switch (takeWaterCup) {
+    case 1:
+      return `${takeWaterCup} copo de água`;
+      break;
+
+    default:
+      return `${takeWaterCup} copos de água`;
+  }
 }
 
 module.exports = {
