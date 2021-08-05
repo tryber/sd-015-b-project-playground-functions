@@ -2,10 +2,14 @@
 function compareTrue(entrada1, entrada2) {
   // seu código aqui
   let comparativo = 'true';
-  if (entrada1 === comparativo && entrada2 === comparativo) {
-    return true;
+  let testeEntradas = "";
+  if ((entrada1 === comparativo) && (entrada2 === comparativo)) {
+    testeEntradas = "true";
   }
-  return false;
+  else {
+    testeEntradas = "false";
+  }
+  return testeEntradas;
 }
 console.log(compareTrue('false', 'true'));
 console.log(compareTrue('false', 'false'));
@@ -90,7 +94,7 @@ function catAndMouse(mouse, cat1, cat2) {
   if (distanciaMouseCat1 === distanciaMouseCat2) {
   return winMouse;
   }
-  else if (distanciaMouseCat1 > distanciaMouseCat2) {
+  if (distanciaMouseCat1 > distanciaMouseCat2) {
   return winCat2;
   }
   return winCat1;
@@ -100,9 +104,30 @@ console.log(catAndMouse(0, 6, 12));
 console.log(catAndMouse(0, 4, 4));
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(variavelNumeros) {
   // seu código aqui
+  let index = 0;
+  let variavelRetorno = [];
+  for (index in variavelNumeros) {
+    if ((variavelNumeros[index] % 3) !== 0 && (variavelNumeros[index] % 5) !== 0) {
+      variavelRetorno.push("bug!");
+    }
+    else if ((variavelNumeros[index] % 3) === 0 && (variavelNumeros[index] % 5) === 0) {
+      variavelRetorno.push("fizzBuzz"); 
+    }
+    else if ((variavelNumeros[index] % 5) === 0) {
+      variavelRetorno.push("buzz");  
+    }
+    else {
+      variavelRetorno.push("fizz");  
+    }
+  }
+  return variavelRetorno;
 }
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
+console.log(fizzBuzz([7, 9]));
+console.log(fizzBuzz([9, 25]));
+
 
 // Desafio 9
 function encode() {
