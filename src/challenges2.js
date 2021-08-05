@@ -1,9 +1,9 @@
-// Desafio 10
+// Desafio 10 - CHECK
 function techList(techs, name) {
   // seu código aqui
   let techsList = [];
   techs.sort();
-  for(let i = 0; i < techs.length; i ++){
+  for (let i = 0; i < techs.length; i ++) {
     let obj = {
       name: name,
       tech: techs[i],
@@ -11,14 +11,12 @@ function techList(techs, name) {
 
     techsList.push(obj);
   }
-  if(techs.length <= 1){
+  if (techs.length <= 1) {
     return 'Vazio!';
-  }else {
+  } else {
     return techsList;
   }
 }
-// arr = ['CSS', 'HTML', 'JavaScript', 'Jest', 'React', 'Lucas'];
-// console.log(techList(arr));
 
 // Desafio 11 - CHECK
 function generatePhoneNumber(numbers) {
@@ -77,10 +75,21 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
+function hydrate(drinks) {
   // seu código aqui
-}
+  let digits = drinks.replace(/\D/g, "");
+  let sum = 0;
 
+  for(let i = 0; i < digits.length; i ++ ){
+    sum += parseInt(digits[i], 10);
+  }
+  
+  if(sum === 1){
+    return sum + ' copo de água';
+  } 
+
+  return sum + ' copos de água';
+}
 
 module.exports = {
   generatePhoneNumber,
