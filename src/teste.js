@@ -1,5 +1,10 @@
-let cars = ['Saab', 'Volvo', 'BMW'];
+let array = [1, -5, 10, 9]
 
-for (let index in cars) {
-  console.log(cars[index]);
-}
+
+for (let index of array) {
+    if (index < 9) {
+      console.log('não é possível gerar um número de telefone com esses valores')
+    } else {
+        console.log('ok')
+    }
+  }
