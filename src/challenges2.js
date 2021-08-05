@@ -19,7 +19,7 @@ function techList(tecnologias, name) {
 
 // Desafio 11
 function generatePhoneNumber(numTelefone){
-  if (numTelefone.length != 11){
+  if (numTelefone.length !== 11){
     return 'Array com tamanho incorreto.';
   }
   for (let index = 0; index < numTelefone.length; index += 1){
@@ -41,24 +41,26 @@ function generatePhoneNumber(numTelefone){
         numeroTelefone += numTelefone[index] + ') ';
       } else if (index === 6){
         numeroTelefone += numTelefone[index] + '-';
-      } else{
+      } else {
         numeroTelefone += numTelefone[index];
       }
     }
   return numeroTelefone;
 }
 
+// false a >(b + c)
+
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  if (lineA < (lineB + lineC) && lineA > Math.abs(lineB%lineC)){
-    return true
-  } else if (lineB < (lineA + lineC) && lineB > Math.abs(lineA%lineC)){
-    return true
-  } else if (lineC < (lineA + lineA) && lineC > Math.abs(lineA%lineB)){
-    return true
+  if (lineA > (lineB + lineC) && lineA > Math.abs(lineB%lineC)){
+    return false
+  } else if (lineB > (lineA + lineC) && lineB > Math.abs(lineA%lineC)){
+    return false
+  } else if (lineC > (lineA + lineB) && lineC > Math.abs(lineA%lineB)){
+    return false
   }
    else {
-    return false
+    return true
   }
 }
 
@@ -71,7 +73,11 @@ function hydrate(stringFrase) {
   for (let index = 0; index < stringNumeros.length; index += 1){
     somaNumerosInteiros += parseInt(stringNumeros[index]);
   }
-  return stringFraseRetorno = ('String recebida: ' + stringFrase + ' String retornada: ' + somaNumerosInteiros + ' copos de água');
+  if (somaNumerosInteiros > 1){
+    return (somaNumerosInteiros + ' copos de água');
+  } else {
+    return (somaNumerosInteiros + ' copo de água');
+  }
 }
 
 module.exports = {
@@ -80,3 +86,5 @@ module.exports = {
   hydrate,
   triangleCheck,
 };
+
+console.log(triangleCheck(6,2,2))

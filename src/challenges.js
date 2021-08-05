@@ -1,14 +1,14 @@
 // Desafio 1
-function compareTrue(valor1,valor2) {
-  if (valor1 === true && valor2 === true){
+function compareTrue(valor1, valor2) {
+  if (valor1 === true && valor2 === true) {
     return true;
-  } else{
+  } else {
     return false;
   }
 }
 
 // Desafio 2
-function calcArea(base,altura) {
+function calcArea(base, altura) {
   return (base * altura) / 2;
 }
 
@@ -38,7 +38,7 @@ function highestCount(novoArray) {
   let contador = 0;
   
   for (let index = 0; index < novoArray.length; index += 1){
-    if (numMaior === novoArray[index]){
+    if (numMaior === novoArray[index]) {
       contador += 1;
     }
   }
@@ -46,16 +46,16 @@ function highestCount(novoArray) {
 }
 
 // Desafio 7
-function catAndMouse(mouse,cat1,cat2) {
+function catAndMouse(mouse, cat1, cat2) {
   let calcCat1 = 0;
   let calcCat2 = 0;
 
-  if (cat1 < mouse){
+  if (cat1 < mouse) {
     calcCat1 = mouse - cat1;
-  } else{
+  } else {
     calcCat1 = cat1 - mouse;
   }  
-  if (cat2 < mouse){
+  if (cat2 < mouse) {
     calcCat2 = mouse - cat2;
   } else{
     calcCat2 = cat2 - mouse;
@@ -76,7 +76,7 @@ function fizzBuzz(antigoArray) {
   for (let index = 0; index < antigoArray.length; index += 1){
     if (antigoArray[index] % 3 === 0 && antigoArray[index] % 5 === 0){
       novaArray.push('fizzBuzz');
-    } else{
+    } else {
       if (antigoArray[index] % 3 === 0){
         novaArray.push('fizz');
       } else if (antigoArray[index] % 5 === 0){
@@ -101,7 +101,7 @@ function encode(palavra) {
   let letras = palavra.split('');
 
   for (let index = 0; index < letras.length; index += 1) {
-    for (index2 in tabelaNumeros) {
+    for (let index2 in tabelaNumeros) {
       if (letras[index] === index2) {
         letras[index] = tabelaNumeros[index2];
       }
@@ -121,7 +121,7 @@ function decode(palavra) {
   let letras = palavra.split('');  
 
   for (let index = 0; index < letras.length; index += 1) {
-    for (index2 in tabelaNumeros) {
+    for (let index2 in tabelaNumeros) {
       if (letras[index] === tabelaNumeros[index2].toString()) {
         letras[index] = index2;
       }
