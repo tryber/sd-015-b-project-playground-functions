@@ -1,12 +1,10 @@
 // Desafio 1
 function compareTrue(entrada1, entrada2) {
   // seu código aqui
-  if((entrada1 === 'true') && (entrada2 === 'true')) {
+  if ((entrada1 === ('true')) && (entrada2 === ('true'))) {
     return 'true';
   }
-  else {
     return 'false';
-  }
 }
 console.log(compareTrue('false', 'true'));
 console.log(compareTrue('false', 'false'));
