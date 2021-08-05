@@ -5,6 +5,7 @@ function compareTrue(booleanPar1, booleanPar2) {
   }
   return false;
 }
+
 console.log('1° Resultado: ', compareTrue(true, true));
 
 // Desafio 2
@@ -16,15 +17,14 @@ function calcArea(base, heigth) {
 console.log('2° Resultado: ', calcArea(51, 1));
 
 // Desafio 3
-
 function splitSentence(string) {
   const splitStr = string.split(' ');
   return splitStr;
 }
+
 console.log('3° Divide a senteça: ', splitSentence('go Trybe'));
 
 // Desafio 4
-
 function concatName(arrayStr) {
   return `${arrayStr[arrayStr.length - 1]}, ${arrayStr[0]}`;
 }
@@ -43,9 +43,24 @@ function footballPoints(wins, ties) {
 console.log('5° Resultado: ', footballPoints(14, 8));
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(arrayVa) {
+  let highestNumber = arrayVa[0];
+  let counter = 0;
+
+  for (let index = 0; index < arrayVa.length; index += 1) {
+    if (arrayVa[index] > highestNumber) {
+      highestNumber = arrayVa[index];
+    }
+  }
+
+  for (let index = 0; index < arrayVa.length; index += 1) {
+    if (highestNumber === arrayVa[index]) {
+      counter += 1;
+    }
+  }
+  return counter;
 }
+console.log(highestCount([-1, -2, -2]));
 
 // Desafio 7
 function catAndMouse() {
