@@ -2,9 +2,9 @@
 function compareTrue(entrada1, entrada2) {
   // seu código aqui
   if ((entrada1 === ('true')) && (entrada2 === ('true'))) {
-    return 'true';
+    return Boolean(true);
   }
-    return 'false';
+  return Boolean(false);
 }
 console.log(compareTrue('false', 'true'));
 console.log(compareTrue('false', 'false'));
