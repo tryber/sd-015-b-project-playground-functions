@@ -72,24 +72,54 @@ console.log(catAndMouse(10, 5, 15));
 
 // Desafio 8
 // eslint-disable-next-line complexity
-function fizzBuzz(arrayNum) {
+function isDivisible(dividend, divisor) {
+  return dividend % divisor === 0;
+}
+
+function isFizz(num, arrayFizzBuzz) {
+  let divisibleThree = isDivisible(num, 3);
+  let divisibleFive = isDivisible(num, 5);
+  if (divisibleThree && !divisibleFive) {
+    arrayFizzBuzz.push('fizz');
+  }
+}
+
+function isBuzz(num, arrayFizzBuzz) {
+  let divisibleThree = isDivisible(num, 3);
+  let divisibleFive = isDivisible(num, 5);
+  if (divisibleFive && !divisibleThree) {
+    arrayFizzBuzz.push('buzz');
+  }
+}
+
+function isFizzBuzz(num, arrayFizzBuzz) {
+  let divisibleThree = isDivisible(num, 3);
+  let divisibleFive = isDivisible(num, 5);
+  if (divisibleThree && divisibleFive) {
+    arrayFizzBuzz.push('fizzBuzz');
+  }
+}
+function isBug(num, arrayFizzBuzz) {
+  let divisibleThree = isDivisible(num, 3);
+  let divisibleFive = isDivisible(num, 5);
+  if (!divisibleThree && !divisibleFive) {
+    arrayFizzBuzz.push('bug!');
+  }
+}
+function fizzBuzz(arrayFizzBuzz) {
   let result = [];
-  for (let num of arrayNum) {
-    if (num % 3 === 0 && num % 5 === 0) {
-      result.push('fizzBuzz');
-    } else if (num % 5 === 0) {
-      result.push('buzz');
-    } else if (num % 3 === 0) {
-      result.push('fizz');
-    } else {
-      result.push('bug!');
-    }
+  for (let pos of arrayFizzBuzz) {
+    let num = pos;
+    isFizz(num, result);
+    isBuzz(num, result);
+    isFizzBuzz(num, result);
+    isBug(num, result);
   }
   return result;
 }
 
-let arrayFizzBuzz = [9, 25];
-console.log(fizzBuzz(arrayFizzBuzz));
+let fizzBuzzArray = [2, 15, 7, 9, 45];
+console.log(fizzBuzz(fizzBuzzArray));
 
 // Desafio 9
 function encode(msg) {

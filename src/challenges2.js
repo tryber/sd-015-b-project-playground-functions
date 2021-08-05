@@ -75,7 +75,7 @@ function hydrate(string) {
   let array = string.match(numbers);
   let cups = 0;
   for (let pos of array) {
-    cups += parseInt(pos);
+    cups += parseInt(pos, 10);
   }
   if (cups === 1) {
     return `${cups} copo de água`;
