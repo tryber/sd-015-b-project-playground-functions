@@ -103,8 +103,13 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(drinks) {
+  let regExp = /\d+/g;
+  let amounts = eval(drinks.match(regExp).join('+'));
+  if (amounts > 1) {
+    return `${amounts} copos de água`;
+  }
+  return `${amounts} copo de água`;
 }
 
 module.exports = {
