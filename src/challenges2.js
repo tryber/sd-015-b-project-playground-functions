@@ -98,7 +98,8 @@ function verifyLineC(lineA, lineB, lineC) {
 
 function triangleCheck(lineA, lineB, lineC) {
   // eslint-disable-next-line max-len
-  return verifyLineA(lineA, lineB, lineC) && verifyLineB(lineA, lineB, lineC) && verifyLineC(lineA, lineB, lineC);
+  return verifyLineA(lineA, lineB, lineC) && verifyLineB(lineA, lineB, lineC)
+    && verifyLineC(lineA, lineB, lineC);
 }
 
 // Desafio 13
