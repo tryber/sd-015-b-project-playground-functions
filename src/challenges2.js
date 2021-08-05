@@ -83,8 +83,22 @@ function generatePhoneNumber(numbersArray) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+
+function verifyLineA(lineA, lineB, lineC) {
+  return (lineA < (lineB + lineC) && lineA > Math.abs(lineB - lineC));
+}
+
+function verifyLineB(lineA, lineB, lineC) {
+  return (lineB < (lineA + lineC) && lineB > Math.abs(lineA - lineC));
+}
+
+function verifyLineC(lineA, lineB, lineC) {
+  return (lineC < (lineB + lineA) && lineC > Math.abs(lineB - lineA));
+}
+
+function triangleCheck(lineA, lineB, lineC) {
+  // eslint-disable-next-line max-len
+  return verifyLineA(lineA, lineB, lineC) && verifyLineB(lineA, lineB, lineC) && verifyLineC(lineA, lineB, lineC);
 }
 
 // Desafio 13
