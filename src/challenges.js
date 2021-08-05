@@ -24,11 +24,14 @@ function splitSentence(frase) {
   return palavras.split(' ');
 }
 //console.log(splitSentence("vamo que vamo"));
-// Desafio 4
-function concatName() {
-  // seu código aqui
-}
 
+
+// Desafio 4
+function concatName(array) {
+  let {length, 0: first, [length-1]: last} = array;
+return last+first;
+}
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 // Desafio 5
 function footballPoints() {
   // seu código aqui
