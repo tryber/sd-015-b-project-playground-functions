@@ -84,17 +84,17 @@ function fizzBuzz(numbers) {
 
 // Desafio 9
 function encodeAux(char) {
-  let charReturn = 0;
+  let numReturn = 0;
   let chars = ['a', 'e', 'i', 'o', 'u'];
   let numbers = [1, 2, 3, 4, 5];
 
   for (let i = 0; i < chars.length; i += 1) {
     if (char === chars[i]) {
-      charReturn = numbers[i];
+      numReturn = numbers[i];
     }
   }
 
-  return charReturn;
+  return numReturn;
 }
 function encode(string) {
   // seu código aqui
@@ -106,15 +106,25 @@ function encode(string) {
   }
   return vecString.join('');
 }
+function decodeAux(num) {
+  let charReturn = 0;
+  let chars = ['a', 'e', 'i', 'o', 'u'];
+  let numbers = [1, 2, 3, 4, 5];
+
+  for (let i = 0; i < chars.length; i += 1) {
+    if (num == numbers[i]) {
+      charReturn = chars[i];
+    }
+  }
+  return charReturn;
+}
 function decode(string) {
   // seu código aqui
   let vecString = string.split('');
   for (let i = 0; i < vecString.length; i += 1) {
-    if (vecString[i] === '1') vecString[i] = 'a';
-    else if (vecString[i] === '2') vecString[i] = 'e';
-    else if (vecString[i] === '3') vecString[i] = 'i';
-    else if (vecString[i] === '4') vecString[i] = 'o';
-    else if (vecString[i] === '5') vecString[i] = 'u';
+    if (decodeAux(vecString[i]) !== 0) {
+      vecString[i] = decodeAux(vecString[i]);
+    }
   }
   return vecString.join('');
 }
