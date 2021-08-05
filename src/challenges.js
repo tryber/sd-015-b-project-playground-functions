@@ -1,9 +1,9 @@
 // Desafio 1
 function compareTrue(valor1, valor2) {
   if (valor1 === true && valor2 === true) {
-       return true
+    return true;
     } else {
-       return false
+    return false;
   }
 }
 
@@ -76,14 +76,7 @@ function catAndMouse(gato1, gato2, rato) {
 
 // Desafio 8
 function fizzBuzz(arr) {
-
   let novoArray = [];
-
-  let fizz = 'fizz';
-  let buzz = 'buzz';
-  let fizzBuzz = 'fizzBuzz';
-  let bug = 'bug!';
-
   let divisivelPor3 = false;
   let divisivelPor5 = false;
 
@@ -92,15 +85,13 @@ function fizzBuzz(arr) {
     divisivelPor5 = arr[key] % 5 === 0;
   
     if (divisivelPor3 === true && divisivelPor5 === false) {
-      novoArray.push(fizz);
-  
+      novoArray.push('fizz'); 
     } else if (divisivelPor5 === true && divisivelPor3 === false) {
-      novoArray.push(buzz);
-  
+      novoArray.push('buzz');
     } else if (divisivelPor5 === true && divisivelPor3 === true) {
-      novoArray.push(fizzBuzz);
+      novoArray.push('fizzBuzz');
     } else {
-      novoArray.push(bug);
+      novoArray.push('bug!');
     }
   }
   return novoArray;
@@ -158,8 +149,6 @@ function decode(text) {
   str = str.join('');
   return str;
 }
-
-
 
 module.exports = {
   calcArea,
