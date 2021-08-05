@@ -73,7 +73,7 @@ function fizzBuzz() {
 
 
 // Desafio 9
-function encode(vogal) {
+function encode() {
   let vogal = '';
 for (let key in vogaisStrings) {
   switch (vogaisStrings[key]) {
