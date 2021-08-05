@@ -71,14 +71,17 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
+function dividirPor(numero, divisor) {
+  return numero % divisor === 0;
+}
 function fizzBuzz(array) {
   let resultado = [];
   for (let index = 0; index < array.length; index += 1) {
-    if (array[index] % 3 === 0 && array[index] % 5 === 0) {
+    if (dividirPor(array[index], 15)) {
       resultado.push('fizzBuzz');
-    } else if (array[index] % 3 === 0) {
+    } else if (dividirPor(array[index], 3)) {
       resultado.push('fizz');
-    } else if (array[index] % 5 === 0) {
+    } else if (dividirPor(array[index], 5)) {
       resultado.push('buzz');
     } else {
       resultado.push('bug!');
