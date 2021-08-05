@@ -24,7 +24,6 @@ function tamanho(number) {
     return true;
   }
 }
-console.log(tamanho([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]));
 
 function CompararNumero(number) {
   let resultado = true;
@@ -35,8 +34,6 @@ function CompararNumero(number) {
   }
   return resultado;
 }
-
-console.log(CompararNumero([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]));
 
 function repeat(number) {
   let vezesRepete = 0;
@@ -54,7 +51,6 @@ function repeat(number) {
   }
   return result;
 }
-console.log(repeat([1, 1, 3, 3, 5, 6, 7, 8, 9, 10, 11]));
 
 // Desafio 11
 function generatePhoneNumber(number) {
@@ -90,7 +86,6 @@ function triangleCheck(lineA, lineB, lineC) {
     return false;
   }
 }
-console.log(triangleCheck(10, 10, 10));
 
 // Desafio 13
 function hydrate(bebida) {
@@ -104,8 +99,6 @@ function hydrate(bebida) {
   }
   return numeroInteiro + ' copos de água';
 }
-
-console.log(hydrate('1 cerveja, 7 cenoura'));
 
 module.exports = {
   generatePhoneNumber,
