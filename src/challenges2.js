@@ -33,8 +33,53 @@ function techList(techArray, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function verifyLength(array) {
+  return array.length !== 11;
+}
+
+function verifyNumbersValues(array) {
+  let valueError = false;
+  for (let index = 0; index < array.length; index += 1) {
+    if (array[index] < 0 || array[index] > 9) {
+      valueError = true;
+    }
+  }
+  return valueError;
+}
+
+function verifyNumbersRepetition(array) {
+  let counter = {};
+  for (let number of array) {
+    if (counter[number]) {
+      counter[number] += 1;
+    } else {
+      counter[number] = 1;
+    }
+  }
+  let repeats = (Object.values(counter).sort());
+  return repeats[repeats.length - 1] > 2;
+}
+
+function compareConditions(array) {
+  return (verifyNumbersRepetition(array) || verifyNumbersValues(array));
+}
+
+function formatPhoneNumber(numbersArray) {
+  let array = numbersArray.join('');
+  let ddd = array.slice(0, 2);
+  let half1 = array.slice(2, 7);
+  let half2 = array.slice(7, 11);
+  return `(${ddd}) ${half1}-${half2}`; 
+}
+
+function generatePhoneNumber(numbersArray) {
+  if (verifyLength(numbersArray)) {
+    return 'Array com tamanho incorreto.';
+  }
+  if (compareConditions(numbersArray)) {
+    return 'não é possível gerar um número de telefone com esses valores';
+  }
+  return formatPhoneNumber(numbersArray);
 }
 
 // Desafio 12
