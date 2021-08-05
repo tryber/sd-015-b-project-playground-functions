@@ -13,7 +13,8 @@
     return objeto.sort(function (a, b) {
       return a.tech > b.tech;
     });
-  }
+  } techList(["React", "Jest", "HTML", "CSS", "JavaScript"],
+  "Lucas")
 
 // Desafio 11
 function generatePhoneNumber(array) {
