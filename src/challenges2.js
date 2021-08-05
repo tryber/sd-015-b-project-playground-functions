@@ -21,53 +21,58 @@ function techList(techs, name) {
 }
 
 // Desafio 11
-function checkArrayLength(array) {
-  return (array.length !== 11);
+function checkLength(array, length) {
+  return (array.length !== length);
 }
 
-function checkArrayContents(array) {
-  let isAValidDigit = true;
+function checkOneDigit(numbers) {
+  let isValid = true;
 
-  for (let index = 0; index < array.length; index += 1) {
-    if (array[index] < 0 || array[index] > 9) {
-      isAValidDigit = false;
+  for (let index = 0; index < numbers.length; index += 1) {
+    if (numbers[index] < 0 || numbers[index] > 9) {
+      isValid = false;
     }
   }
-  return isAValidDigit;
+  return isValid;
 }
 
-function countRepeatedDigits(array) {
-  let numberCount = {};
+function countRepetitions(array) {
+  let repetitionCounter = {};
 
   for (let index = 0; index < array.length; index += 1) {
-    if (numberCount[array[index]]) {
-      numberCount[array[index]] += 1;
+    if (repetitionCounter[array[index]]) {
+      repetitionCounter[array[index]] += 1;
     } else {
-      numberCount[array[index]] = 1;
+      repetitionCounter[array[index]] = 1;
     }
   }
 
-  return numberCount;
+  return repetitionCounter;
 }
 
-function checkRepeatedDigits(array) {
-  let isAValidNumber = true;
-  let countingArray = Object.values(countRepeatedDigits(array));
+function checkRepetitions(array) {
+  let isValid = true;
+  let repetitions = Object.values(countRepetitions(array));
 
-  for (let index = 0; index < countingArray.length; index += 1) {
-    if (countingArray[index] >= 3) {
-      isAValidNumber = false;
+  for (let index = 0; index < repetitions.length; index += 1) {
+    if (repetitions[index] >= 3) {
+      isValid = false;
     }
   }
 
-  return isAValidNumber;
+  return isValid;
 }
+
+function checkDigits(numbers) {
+  return !checkOneDigit(numbers) || !checkRepetitions(numbers);
+}
+
 function generatePhoneNumber(numbers) {
-  if (checkArrayLength(numbers)) {
+  if (checkLength(numbers, 11)) {
     return 'Array com tamanho incorreto.';
   }
 
-  if (checkArrayContents(numbers) === false || checkRepeatedDigits(numbers) === false) {
+  if (checkDigits(numbers)) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
 
@@ -92,9 +97,11 @@ function hydrate(string) {
   for (let index = 0; index < drinksQuantities.length; index += 1) {
     waterCupsQuantity += parseInt(drinksQuantities[index], 10);
   }
+
   if (waterCupsQuantity > 1) {
     return `${waterCupsQuantity} copos de água`;
   }
+
   return `${waterCupsQuantity} copo de água`;
 }
 

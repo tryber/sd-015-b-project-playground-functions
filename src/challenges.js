@@ -1,6 +1,6 @@
 // Desafio 1
-function compareTrue(param1, param2) {
-  return param1 && param2;
+function compareTrue(bool1, bool2) {
+  return bool1 && bool2;
 }
 
 // Desafio 2
@@ -8,14 +8,15 @@ function calcArea(base, height) {
   return (base * height) / 2;
 }
 // Desafio 3
-function splitSentence(string) {
-  return string.split(' ');
+function splitSentence(sentence) {
+  return sentence.split(' ');
 }
 
 // Desafio 4
-function concatName(array) {
-  let firstElement = array[0];
-  let lastElement = array[array.length - 1];
+function concatName(strings) {
+  let firstElement = strings[0];
+  let lastElement = strings[strings.length - 1];
+
   return `${lastElement}, ${firstElement}`;
 }
 
@@ -25,44 +26,54 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function getHighestNumber(array) {
-  let highestNumber = array[0];
+function countRepetitions(array) {
+  let repetitionCounter = {};
 
   for (let index = 0; index < array.length; index += 1) {
-    if (array[index] > highestNumber) {
-      highestNumber = array[index];
+    if (repetitionCounter[array[index]]) {
+      repetitionCounter[array[index]] += 1;
+    } else {
+      repetitionCounter[array[index]] = 1;
+    }
+  }
+
+  return repetitionCounter;
+}
+
+function getHighestNumber(numbers) {
+  let highestNumber = numbers[0];
+
+  for (let index = 0; index < numbers.length; index += 1) {
+    if (numbers[index] > highestNumber) {
+      highestNumber = numbers[index];
     }
   }
 
   return highestNumber;
 }
 
-function highestCount(array) {
-  let numberCount = {};
+function highestCount(numbers) {
+  let highestNumber = [getHighestNumber(numbers)];
 
-  for (let index = 0; index < array.length; index += 1) {
-    if (numberCount[array[index]]) {
-      numberCount[array[index]] += 1;
-    } else {
-      numberCount[array[index]] = 1;
-    }
-  }
-
-  return numberCount[getHighestNumber(array)];
+  return countRepetitions(numbers)[highestNumber];
 }
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
+  let outcome;
+
   if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
-    return 'cat1';
+    outcome = 'cat1';
   }
 
   if (Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)) {
-    return 'cat2';
+    outcome = 'cat2';
   }
 
   if (Math.abs(cat1 - mouse) === Math.abs(cat2 - mouse)) {
-    return 'os gatos trombam e o rato foge';
+    outcome = 'os gatos trombam e o rato foge';
   }
+
+  return outcome;
 }
 
 // Desafio 8
@@ -78,17 +89,15 @@ function checkFizzBuzz(number, destinationArray) {
   }
 }
 
-function fizzBuzz(array) {
-  let fizzBuzzArray = [];
+function fizzBuzz(numbers) {
+  let results = [];
 
-  for (let index = 0; index < array.length; index += 1) {
-    checkFizzBuzz(array[index], fizzBuzzArray);
+  for (let index = 0; index < numbers.length; index += 1) {
+    checkFizzBuzz(numbers[index], results);
   }
 
-  return fizzBuzzArray;
+  return results;
 }
-
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode(string) {
