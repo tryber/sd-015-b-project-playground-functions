@@ -50,7 +50,11 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(arrayNumero) {
   function numerosOrdenados(arrayNumero) {
-    return arrayNumero.sort(function (a, b) { return a - b; });
+    return arrayNumero.sort(
+      function (a, b) { 
+        return a - b; 
+      }
+    );
   }
   let array = numerosOrdenados(arrayNumero);
   let contador = 0;
@@ -66,19 +70,16 @@ function highestCount(arrayNumero) {
 function catAndMouse(mouse, cat1, cat2) {
   let distancia1 = 0;
   let distancia2 = 0;
-  // calcula distancia rato - gato1:
   if (mouse > cat1) {
     distancia1 = mouse - cat1;
   } else {
     distancia1 = cat1 - mouse;
   }
-  // calcula distancia rato - gato2:
   if (mouse > cat2) {
     distancia2 = mouse - cat2;
   } else {
     distancia2 = cat2 - mouse;
   }
-  // compara distancias:
   if (distancia1 > distancia2) {
     return 'cat2';
   } else if (distancia2 > distancia1) {
@@ -91,19 +92,23 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(arrayNumeros) {
   let arrayPalavras = [];
-  for (let index = 0; index < arrayNumeros.length; index+=1) {
+  for (let index = 0; index < arrayNumeros.length; index +=1 ) {
     if ((arrayNumeros[index] % 3 === 0) && (arrayNumeros[index] % 5 === 0)) {
-      arrayPalavras[index] = 'fizzBuzz';
+      arrayPalavras.push('fizzBuzz');
     } else if (arrayNumeros[index] % 3 === 0) {
-      arrayPalavras[index] = 'fizz';
+      arrayPalavras.push('fizz');
     } else if (arrayNumeros[index] % 5 === 0) {
-      arrayPalavras[index] = 'fizz';
+      arrayPalavras.push('buzz');
     } else {
-      arrayPalavras[index] = 'bug!';
+      arrayPalavras.push('bug!') ;
     }
   }
   return arrayPalavras;
 }
+
+console.log(fizzBuzz([2, 15, 7, 9, 45])); //*['bug!', 'fizzBuzz', 'bug!', 'fizz', 'fizzBuzz'] 
+console.log(fizzBuzz([7, 9])); //*['bug!', 'fizz'] 
+console.log(fizzBuzz([2, 25])); //*['fizz', 'buzz'] 
 
 // Desafio 9
 function encode(arrayNormal) {
