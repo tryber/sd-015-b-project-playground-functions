@@ -31,12 +31,15 @@ function concatName(array) {
   let {length, 0: first, [length-1]: last} = array;
 return last+first;
 }
-console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
-// Desafio 5
-function footballPoints() {
-  // seu código aqui
-}
+//console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
+
+// Desafio 5
+function footballPoints(wins , ties) {
+  let pontos = ((wins*3)+(ties*1));
+return pontos;
+}
+console.log(footballPoints(14, 8));
 // Desafio 6
 function highestCount() {
   // seu código aqui
