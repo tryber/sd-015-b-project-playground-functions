@@ -40,8 +40,8 @@ function checkRepeatingNumbers(phoneNumber) {
 }
 
 function validateArrayValue(phoneNumber) {
-  for (let i in phoneNumber) {
-    if (phoneNumber[i] < 0 || phoneNumber[i] > 9) {
+  for (let i of phoneNumber) {
+    if (i < 0 || i > 9) {
       return false;
     }
   }
@@ -49,23 +49,49 @@ function validateArrayValue(phoneNumber) {
   return true;
 }
 
+function getErrorMessage(phoneNumber) {
+  if (!validateArraySize(phoneNumber)) return 'Array com tamanho incorreto.';
+  if (!checkRepeatingNumbers(phoneNumber) || !validateArrayValue(phoneNumber)) {
+    return 'não é possível gerar um número de telefone com esses valores';
+  }
+}
+
 function isValidNumber(phoneNumber) {
   return validateArraySize(phoneNumber) && validateArrayValue(phoneNumber) && checkRepeatingNumbers(phoneNumber);
 }
 
-function phoneNumberMask() {
-  let maskedArr = ['(', 0, 0, ')', 0, 0, 0, 0, 0, '-', 0, 0, 0, 0,];
-  return maskedArr;
+function getDDD(phoneNumber) {
+  let ddd = []
+  for (let i = 0; i < 2; i += 1) {
+    ddd.push(phoneNumber[i]);
+  }
+
+  return ddd.join('');
+}
+
+function getFirstPart(phoneNumber) {
+  let firstPart = [];
+  for (let i = 2; i < 7; i += 1) {
+    firstPart.push(phoneNumber[i]);
+  }
+
+  return firstPart.join('');
+}
+
+function getSecondPart(phoneNumber) {
+  let secondPart = [];
+  for (let i = 7; i < phoneNumber.length; i += 1) {
+    secondPart.push(phoneNumber[i]);
+  }
+
+  return secondPart.join('');
 }
 
 function generatePhoneNumber(phoneNumber) {
-  if (!isValidNumber(phoneNumber)) return 'Array inválido';
+  if (!isValidNumber(phoneNumber)) return getErrorMessage(phoneNumber);
 
-  for (let i in phoneNumberMask()) {
-    return `(${ddd})${primeira-parte}-${ultima-parte}`;
-  }
+  return `(${getDDD(phoneNumber)}) ${getFirstPart(phoneNumber)}-${getSecondPart(phoneNumber)}`;
 }
-//console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
 function triangleCheck() {
@@ -96,7 +122,6 @@ function hydrate(string) {
   
   return `${sumOfDrinks} copos de água`;
 }
-console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
 
 module.exports = {
   generatePhoneNumber,
