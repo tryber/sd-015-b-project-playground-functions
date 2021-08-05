@@ -1,5 +1,5 @@
 // Desafio 1
-function compareTrue (parameter1, parameter2) {
+function compareTrue (parameter1, parameter2){
   if (parameter1 === true && parameter2 === true) {
     return true;
   } else {
@@ -8,19 +8,19 @@ function compareTrue (parameter1, parameter2) {
 }
 
 // Desafio 2
-function calcArea (base, height) {
+function calcArea (base, height){
   const triangleArea = (base * height) / 2
   return triangleArea;
 }
 // Desafio 3
-function splitSentence (phrase) {
+function splitSentence (phrase){
   const myString = phrase;
   const splitedSentence = myString.split(' ');
   return splitedSentence;
 }
 
 // Desafio 4
-function concatName (array) {
+function concatName (array){
   const myArray = array;
   const invertedArray = myArray.reverse();
   const result1 = invertedArray[0];
@@ -30,7 +30,7 @@ function concatName (array) {
   return result;
 }
 // Desafio 5
-function footballPoints (wins, ties) {
+function footballPoints (wins, ties){
   const victories = 3 * wins;
   const draws = 1 * ties;
   const points = victories + draws;
@@ -38,7 +38,7 @@ function footballPoints (wins, ties) {
 }
 
 // Desafio 6
-function highestCount (numbersArray) {
+function highestCount (numbersArray){
   const ordenedArray = numbersArray.sort(function (a, b) { return b - a });
   const higherNumber = ordenedArray[0];
   let quantasVezesSeRepete = 0;
@@ -51,7 +51,7 @@ function highestCount (numbersArray) {
   return quantasVezesSeRepete;
 }
 // Desafio 7
-function catAndMouse (mouse, cat1, cat2) {
+function catAndMouse (mouse, cat1, cat2){
   let resposta = 0;
   if (cat1 - mouse === cat2 - mouse || cat1 - mouse === mouse - cat2 || mouse - cat1 === mouse - cat2 || mouse - cat1 === cat2 - mouse) {
     resposta = 'os gatos trombam e o rato foge';
@@ -63,7 +63,7 @@ function catAndMouse (mouse, cat1, cat2) {
   return resposta
 }
 // Desafio 8
-function fizzBuzz (numbers) {
+function fizzBuzz (numbers){
   const answer = [];
 
   for (let index = 0; index < numbers.length; index += 1) {
@@ -83,16 +83,17 @@ function fizzBuzz (numbers) {
 }
 
 // Desafio 9
-function encode (string) {
+function encode (string){
   let phrase = string;
-  let encodedA = phrase.replace(/A/g, '1');
+  let encodedA = phrase.replace(/a/g, '1');
   let encodedE = encodedA.replace(/e/g, '2');
   let encodedI = encodedE.replace(/i/g, '3');
   let encodedO = encodedI.replace(/o/g, '4');
   let encoded = encodedO.replace(/u/g, '5');
+  
   return encoded;
 }
-console.log(encode('Artua'))
+console.log(encode('hi there'))
 
 function decode (codedString) {
   let phrase = codedString;
