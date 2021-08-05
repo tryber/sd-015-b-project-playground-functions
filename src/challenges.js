@@ -18,7 +18,7 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(array) {
-  let combo = array[array.length - 1].concat(' ', array[0]);
+  let combo = array[array.length - 1] + ', ' + array[0];
   return combo;
 } console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
@@ -30,11 +30,16 @@ function footballPoints(wins, ties) {
 } console.log(footballPoints(14, 8));
 
 // Desafio 6
-function highestCount(numbersCheck) {
+function highestCount(numbersArray) {
+  let highestNumber = numbersArray[0];
   let count = 0;
-  let highestNumber = Math.max(...numbersCheck);
-  for (const number of numbersCheck) {
-    if (number === highestNumber) {
+  for (let i of numbersArray) {
+    if (i > highestNumber) {
+      highestNumber = i;
+    }
+  }
+  for (let j of numbersArray) {
+    if (j === highestNumber) {
       count += 1;
     }
   }
@@ -57,19 +62,20 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-  function fizzBuzz(fizzBuzz) {
-    for (i in fizzBuzz) {
-     if (fizzBuzz[i] %5 === 0 && fizzBuzz[i] %3 === 0) {
-         array.push('fizzBuzz');
-     } else if(fizzBuzz[i] % 5 === 0){
-         array.push('buzz');
-     } else if (fizzBuzz[i] % 3 === 0) {
-         array.push('fizz');
-     } else {
-         array.push("bug!");
-     }
- return array; 
-}
+function fizzBuzz(array) {
+  let fizzBuzz = [];
+  for (let index of array) {
+    if ((index % 3) === 0 && (index % 5) === 0) {
+      fizzBuzz.push('fizzBuzz');
+    } else if ((index % 3) === 0) {
+      fizzBuzz.push('fizz');
+    } else if ((index % 5) === 0) {
+      fizzBuzz.push('buzz');
+    } else {
+      fizzBuzz.push('bug!');
+    }
+  }
+  return fizzBuzz;
 }
 
 // Desafio 9
