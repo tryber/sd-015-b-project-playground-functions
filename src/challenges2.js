@@ -1,17 +1,19 @@
 // Desafio 10
 function techList(array, nome) {
-  if (array.length === 0) {
-    return 'Vazio!';
-  } else {
+  let listObject = [];
+  if (array.length !== 0) {
     array.sort();
     for (let key in array) {
       let object = {
-        tech: array[key],
-        name: nome,
-      }
-    return object
+      tech: array[key],
+      name: nome,
     }
+  listObject.push(object);
+}
+} else {
+    listObject = 'Vazio!';
   }
+  return listObject;
 } console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas'));
 
 // Desafio 11

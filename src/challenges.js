@@ -82,15 +82,15 @@ function encode(string) {
   let encodeMsg = string.split('');
   for (let key in encodeMsg) {
     if (encodeMsg[key] === 'a') {
-      encodeMsg[key] = '1'
+      encodeMsg[key] = '1';
     } else if (encodeMsg[key] === 'e') {
-      encodeMsg[key] = '2'
+      encodeMsg[key] = '2';
     } else if (encodeMsg[key] === 'i') {
-      encodeMsg[key] = '3'
+      encodeMsg[key] = '3';
     } else if (encodeMsg[key] === 'o') {
-      encodeMsg[key] = '4'
+      encodeMsg[key] = '4';
     } else if (encodeMsg[key] === 'u') {
-      encodeMsg[key] = '5'
+      encodeMsg[key] = '5';
     }
   }
   let message = encodeMsg.join('');
@@ -101,15 +101,15 @@ function decode(message) {
   let decodeMsg = message.split('');
   for (let key in decodeMsg) {
     if (decodeMsg[key] === '1') {
-      decodeMsg[key] = 'a'
+      decodeMsg[key] = 'a';
     } else if (decodeMsg[key] === '2') {
-      decodeMsg[key] = 'e'
+      decodeMsg[key] = 'e';
     } else if (decodeMsg[key] === '3') {
-      decodeMsg[key] = 'i'
+      decodeMsg[key] = 'i';
     } else if (decodeMsg[key] === '4') {
-      decodeMsg[key] = 'o'
+      decodeMsg[key] = 'o';
     } else if (decodeMsg[key] === '5') {
-      decodeMsg[key] = 'u'
+      decodeMsg[key] = 'u';
     }
   }
   let stringDecode = decodeMsg.join('');
