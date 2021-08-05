@@ -41,6 +41,7 @@ function highestCount(number) {
   return contador;
 }
 
+
 //Desafio 7
 function catAndMouse(mouse, cat1, cat2) {}
 
