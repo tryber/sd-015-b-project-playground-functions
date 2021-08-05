@@ -42,7 +42,15 @@ function generatePhoneNumber(array) {
 }
 
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(lineA, lineB, lineC) {
+  let linhaA = Math.abs(lineA);
+  let linhaB = Math.abs(lineB);
+  let linhaC = Math.abs(lineC);
+  let resultado = "";
+  
+  if ((linhaA < linhaB + linhaC) && (linhaB < linhaA + linhaC) && (linhaC < linhaA + linhaB)) {
+    return true;
+  } return false;
   // seu código aqui
 }
 
