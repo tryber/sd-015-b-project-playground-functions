@@ -19,7 +19,8 @@ console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas'));
 // Desafio 11
 function generatePhoneNumber(array) {
   if (array.length !== 11) {
-    return 'Array com tamanho incorreto'; }
+    return 'Array com tamanho incorreto'; 
+  }
   let count = 0;
   let error = false;
   for (let i = 0; i < array.length; i += 1) {
@@ -29,10 +30,14 @@ function generatePhoneNumber(array) {
     } count = 0;
     for (let numbers in array) {
       if (array[numbers] === array[i]) {
-        count += 1; } }
+        count += 1; 
+      } 
+    }
     if (count >= 3) {
       error = true;
-      break; } }
+      break;
+     }
+     }
   if (error) {
     return 'não é possível gerar um número de telefone com esses valores';
   } return ('(' + array[0] + array[1] + ') '
@@ -51,9 +56,17 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // codigo aqui
+function hydrate(strings) {
+	numbers = (strings.match(/\d+/g))
+	sum = 0
+	for (let i in numbers) {
+		sum += parseInt(numbers[i])
+	}
+	return `${sum} copos de água`
 }
+// console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"));
+// console.log(hydrate("1 cerveja"));
+
 
 module.exports = {
   generatePhoneNumber,
