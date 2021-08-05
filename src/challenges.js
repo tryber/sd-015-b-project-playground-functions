@@ -65,10 +65,13 @@ function catAndMouse(mouse, catOne, catTwo) {
 
 // Desafio 8
 function fizzBuzzCheck(number) {
-  if (number % 3 === 0 && number % 5 === 0) return 'fizzBuzz';
-  else if (number % 3 === 0) return 'fizz';
-  else if (number % 5 === 0) return 'buzz';
-  return 'bug!';
+  let string = '';
+  if (number % 3 === 0 && number % 5 === 0) string = 'fizzBuzz';
+  else if (number % 3 === 0) string = 'fizz';
+  else if (number % 5 === 0) string = 'buzz';
+  else string = 'bug!';
+
+  return string;
 }
 function fizzBuzz(numbers) {
   // seu código aqui
