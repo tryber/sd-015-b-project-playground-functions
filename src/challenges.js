@@ -68,20 +68,21 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(fizzBuzz) {
-  for (let posicao = 0; posicao <= fizzBuzz.length; posicao += 1) {
-    if (fizzBuzz[posicao] % 3 === 0 && fizzBuzz[posicao] % 5 === 0) {
-      fizzBuzz.push('fizzBuzz');
-    } else if (fizzBuzz[posicao] % 3 === 0) {
-      fizzBuzz.push('fizz');
-    } else if (fizzBuzz[posicao] % 5 === 0) {
-      fizzBuzz.push('buzz');
-    } else {
-      fizzBuzz.push('bug!');
-    }
+  let result = [];
+  for (let key in numbers) {
+  if (numbers[key] % 3 === 0 && numbers[key] % 5 === 0){
+   result.push('fizzBuzz');
+  } else if (numbers[key] % 5 === 0){
+   result.push('buzz');     
+  } else if (numbers[key] % 3 === 0){
+    result.push('fizz');
+  } else {
+    result.push('bug!');
   }
-  return fizzBuzz;
 }
-fizzBuzz([2, 15, 7, 9, 45]);
+return result;
+}
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode(string) {
