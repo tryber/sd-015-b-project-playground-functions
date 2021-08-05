@@ -61,7 +61,7 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz(fizzBuzz) {    
+function fizzBuzz(fizzBuzz) {  
     for (let posicao = 0; posicao <= fizzBuzz.length; posicao+=1) {
       if ((fizzBuzz[posicao] % 3) === 0 && (fizzBuzz[posicao] % 5) === 0) {
         fizzBuzz.push('fizzBuzz');
@@ -71,34 +71,32 @@ function fizzBuzz(fizzBuzz) {
         fizzBuzz.push('buzz');
       } else {
         fizzBuzz.push('bug!');
-      }
-    }
-    return fizzBuzz;  
-} fizzBuzz(2, 15, 7, 9, 45);
+  }
+  }
+  return fizzBuzz;  
+} fizzBuzz([2, 15, 7, 9, 45]);
 
 // Desafio 9
-function encode() {
-// function encode(str) {
-//  let objetos = {
-//     a: 1, 
-//     e: 2,
-//     i: 3,
-//     o: 4,
-//     u: 5 
-//     };
-//   return str.replace(/[aeiou]/gi, (v) => objetos[v]);
+function encode(str) {
+ let objetos = {
+    a: 1, 
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5 
+    };
+  return str.replace(/[aeiou]/gi, (v) => objetos[v]);
 }
 
-function decode() {
-// function decode(str) {
-//   let objetos = { 
-//     1: 'a',
-//     2: 'e',
-//     3: 'i',
-//     4: 'o',
-//     5: 'u'
-//   };
-//   return str.replace(/[1-5]/g, (v) => objetos[v]);
+function decode(str) {
+  let objetos = { 
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u'
+  };
+  return str.replace(/[1-5]/g, (v) => objetos[v]);
 }
 
 module.exports = {
