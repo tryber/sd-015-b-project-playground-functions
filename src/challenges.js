@@ -96,46 +96,46 @@ fizzBuzz([9, 25]);
 
 // Desafio 9
 function encode(phrase) {
-  let result = ' '
-  for(let index = 0; index < phrase.length; index+= 1){
-    if(phrase[index] === 'a'){
-      result += 1
-    }else if(phrase[index] === 'e'){
-      result += 2
-    }else if(phrase[index] === 'i'){
-      result += 3
-    }else if(phrase[index] === 'o'){
-      result += 4
-    }else if(phrase[index] === 'u'){
-      result += 5
-    }else{
-      result += phrase[index]
+  let result = ' ';
+  for (let index = 0; index < phrase.length; index += 1) {
+    if (phrase[index] === 'a') {
+      result += 1;
+    } else if (phrase[index] === 'e') {
+      result += 2;
+    } else if (phrase[index] === 'i') {
+      result += 3;
+    } else if (phrase[index] === 'o') {
+      result += 4;
+    } else if (phrase[index] === 'u') {
+      result += 5;
+    } else {
+      result += phrase[index];
     }
   }
-  return console.log(result)
+  return console.log(result);
 }
-encode('hi there!')
+encode('hi there!');
 
-function decode() {
-  let result = ' '
-  for(let index = 0; index < phrase.length; index+= 1){
-    if(phrase[index] === '1'){
-      result += 'a'
-    }else if(phrase[index] === '2'){
-      result += 'b'
-    }else if(phrase[index] === '3'){
-      result += 'c'
-    }else if(phrase[index] === '4'){
-      result += 'd'
-    }else if(phrase[index] === '5'){
-      result += 'e'
-    }else{
-      result += phrase[index]
+function decode(phrase) {
+  let result = ' ';
+  for (let index = 0; index < phrase.length; index += 1) {
+    if (phrase[index] === '1') {
+      result += 'a';
+    } else if (phrase[index] === '2') {
+      result += 'e';
+    } else if (phrase[index] === '3') {
+      result += 'i';
+    } else if (phrase[index] === '4') {
+      result += 'o';
+    } else if (phrase[index] === '5') {
+      result += 'u';
+    } else {
+      result += phrase[index];
     }
   }
-  return console.log(result)
+  return console.log(result);
 }
-decode(h3 th2r2!'')
+decode('h3 th2r2!');
 
 module.exports = {
   calcArea,
