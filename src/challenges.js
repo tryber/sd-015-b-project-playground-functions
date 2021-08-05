@@ -98,12 +98,61 @@ function fizzBuzz(number) {
 }
 
 // Desafio 9
-function encode() {
+function encode(text) {
   // seu código aqui
+  let store = ""
+  for (let index = 0; index < text.length; index++){
+    let letraAtual = text[index] 
+    if (letraAtual == "a"){
+        store += 1 
+    }
+    else if (letraAtual == "e"){
+        store += 2
+    }
+    else if (letraAtual == "i"){
+        store += 3
+    }
+    else if (letraAtual == "o"){
+        store += 4
+    }
+    else if (letraAtual == "u"){
+        store += 5
+    }
+    else {
+      store += letraAtual
+    }
+    
+  } 
+  return store
 }
-function decode() {
+
+function decode(number){
   // seu código aqui
+  let store = ""
+  for (let index = 0; index < number.length; index++){
+      let numeroAtual = number[index]
+      if (numeroAtual == "1"){
+          store += "a"
+      }
+      else if (numeroAtual == "2"){
+          store += "e"
+      }
+      else if (numeroAtual == "3"){
+          store += "i"
+      }
+      else if (numeroAtual == "4"){
+          store += "o"
+      }
+      else if (numeroAtual == "5"){
+          store += "u"
+      }
+      else {
+        store += numeroAtual
+      }    
+  }
+  return store
 }
+  console.log(decode("h3 th2r2!"))
 
 module.exports = {
   calcArea,
