@@ -130,20 +130,15 @@ function decode(valor) {
   for (let show of split) {
     if (show === '1') {
       juncao.push('a');
-    }
-    else if (show === '2') {
+    }  else if (show === '2') {
       juncao.push('e');
-    }
-    else if (show === '3') {
+    }  else if (show === '3') {
       juncao.push('i');
-    }
-    else if (show === '4') {
+    }  else if (show === '4') {
       juncao.push('o');
-    }
-    else if (show === '5') {
+    }  else if (show === '5') {
       juncao.push('u');
-    }
-    else {
+    }  else {
       juncao.push(show);
     }
   }
