@@ -1,6 +1,5 @@
 // Desafio 1
 function compareTrue(valor1,valor2) {
-  // seu código aqui
   if (valor1 === true && valor2 === true){
     return true;
   } else{
@@ -10,20 +9,17 @@ function compareTrue(valor1,valor2) {
 
 // Desafio 2
 function calcArea(base,altura) {
-  // seu código aqui
   return (base * altura) / 2;
 }
 
 // Desafio 3
 function splitSentence(palavra) {
-  // seu código aqui
   let novoArray = (palavra.split(' ',palavra.length));
   return novoArray;
 }
 
 // Desafio 4
 function concatName(novoArray) {
-  // seu código aqui
   let juntaString = novoArray[novoArray.length-1];
   juntaString += (', ' + novoArray[0]);
   return juntaString;
@@ -31,17 +27,16 @@ function concatName(novoArray) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  // seu código aqui
   let pontos = 3;
-  let calculo = (wins * pontos) + ties;
+  let calculo = (wins * pontos) + ties;  
   return calculo;
 }
 
 // Desafio 6
 function highestCount(novoArray) {
-  // seu código aqui
   let numMaior= Math.max.apply(null,novoArray);
   let contador = 0;
+  
   for (let index = 0; index < novoArray.length; index += 1){
     if (numMaior === novoArray[index]){
       contador += 1;
@@ -52,7 +47,6 @@ function highestCount(novoArray) {
 
 // Desafio 7
 function catAndMouse(mouse,cat1,cat2) {
-  // seu código aqui
   let calcCat1 = 0;
   let calcCat2 = 0;
 
@@ -60,14 +54,12 @@ function catAndMouse(mouse,cat1,cat2) {
     calcCat1 = mouse - cat1;
   } else{
     calcCat1 = cat1 - mouse;
-  }
-  
+  }  
   if (cat2 < mouse){
     calcCat2 = mouse - cat2;
   } else{
     calcCat2 = cat2 - mouse;
   }
-
   if (calcCat1 < calcCat2){
     return 'cat1';
   } else if (calcCat1 > calcCat2){
@@ -79,7 +71,6 @@ function catAndMouse(mouse,cat1,cat2) {
 
 // Desafio 8
 function fizzBuzz(antigoArray) {
-  // seu código aqui
   let novaArray = [];
 
   for (let index = 0; index < antigoArray.length; index += 1){
@@ -100,7 +91,6 @@ function fizzBuzz(antigoArray) {
 
 // Desafio 9
 function encode(palavra) {
-  // seu código aqui
   let tabelaNumeros = {
     a: 1,
     e: 2,
@@ -121,7 +111,6 @@ function encode(palavra) {
 }
 
 function decode(palavra) {
-  // seu código aqui
   let tabelaNumeros = {
     a: 1,
     e: 2,
