@@ -100,15 +100,11 @@ function fizzBuzz(arrayNumeros) {
     } else if (arrayNumeros[index] % 5 === 0) {
       arrayPalavras.push('buzz');
     } else {
-      arrayPalavras.push('bug!') ;
+      arrayPalavras.push('bug!');
     }
   }
   return arrayPalavras;
 }
-
-console.log(fizzBuzz([2, 15, 7, 9, 45])); //*['bug!', 'fizzBuzz', 'bug!', 'fizz', 'fizzBuzz'] 
-console.log(fizzBuzz([7, 9])); //*['bug!', 'fizz'] 
-console.log(fizzBuzz([2, 25])); //*['fizz', 'buzz'] 
 
 // Desafio 9
 function encode(arrayNormal) {
