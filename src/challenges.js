@@ -108,25 +108,25 @@ function fizzBuzz(arr) {
 
 // Desafio 9
 function encode(text) {
-  let str = text.split('')
+  let str = text.split('');
 
   for (const key in str) {
     switch (str[key]) {
-      case 'a':  
-          str[key] = '1';  
-        break;
-      case 'e':  
-          str[key] = '2';  
-        break;
-      case 'i':  
-          str[key] = '3';  
-        break;
-      case 'o':  
-          str[key] = '4';  
-        break;
-      case 'u':  
-          str[key] = '5';  
-        break;
+    case 'a':  
+      str[key] = '1';  
+      break;
+    case 'e':  
+      str[key] = '2';  
+      break;
+    case 'i':  
+      str[key] = '3';  
+      break;
+    case 'o':  
+      str[key] = '4';  
+      break;
+    case 'u':  
+      str[key] = '5';  
+      break;
     }
   }
   str = str.join('');
@@ -134,25 +134,25 @@ function encode(text) {
 }
 
 function decode(text) {
-  let str = text.split('')
+  let str = text.split('');
 
   for (const key in str) {
     switch (str[key]) {
-      case '1':  
-          str[key] = 'a';  
-        break;
-      case '2':  
-          str[key] = 'e';  
-        break;
-      case '3':  
-          str[key] = 'i';  
-        break;
-      case '4':  
-          str[key] = 'o';  
-        break;
-      case '5':  
-          str[key] = 'u';  
-        break;
+    case '1':  
+      str[key] = 'a';  
+      break;
+    case '2':  
+      str[key] = 'e';  
+      break;
+    case '3':  
+      str[key] = 'i';  
+      break;
+    case '4':  
+      str[key] = 'o';  
+      break;
+    case '5':  
+      str[key] = 'u';  
+      break;
     }
   }
   str = str.join('');
