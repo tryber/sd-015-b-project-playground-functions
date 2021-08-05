@@ -2,31 +2,37 @@
 function compareTrue(a, b) {
   if (a === true && b === true) {
     return true;
-  } return false;
-} console.log(compareTrue(true, true));
+  }
+  return false;
+}
+console.log(compareTrue(true, true));
 
 // Desafio 2
 function calcArea(base, height) {
   return (base * height) / 2;
-} calcArea(51, 1);
+}
+calcArea(51, 1);
 
 // Desafio 3
 function splitSentence(string) {
   return string.split(' ');
-} splitSentence('go Trybe');
+}
+splitSentence('go Trybe');
 
 // Desafio 4
 function concatName(array) {
-  let combo = array[array.length - 1] + ', ' + array[0]; 
+  let combo = array[array.length - 1] + ', ' + array[0];
   return combo;
-} console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
+}
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
   let newWins = 3 * wins;
   let totalPoints = newWins + ties;
   return totalPoints;
-} console.log(footballPoints(14, 8));
+}
+console.log(footballPoints(14, 8));
 
 // Desafio 6
 function highestCount(numbersArray) {
@@ -61,42 +67,29 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz(fizzBuzz) {  
-    for (let posicao = 0; posicao <= fizzBuzz.length; posicao+=1) {
-      if ((fizzBuzz[posicao] % 3) === 0 && (fizzBuzz[posicao] % 5) === 0) {
-        fizzBuzz.push('fizzBuzz');
-      } else if ((fizzBuzz[posicao] % 3) === 0) {
-        fizzBuzz.push('fizz');
-      } else if ((fizzBuzz[posicao] % 5) === 0) {
-        fizzBuzz.push('buzz');
-      } else {
-        fizzBuzz.push('bug!');
+function fizzBuzz(fizzBuzz) {
+  for (let posicao = 0; posicao <= fizzBuzz.length; posicao += 1) {
+    if (fizzBuzz[posicao] % 3 === 0 && fizzBuzz[posicao] % 5 === 0) {
+      fizzBuzz.push('fizzBuzz');
+    } else if (fizzBuzz[posicao] % 3 === 0) {
+      fizzBuzz.push('fizz');
+    } else if (fizzBuzz[posicao] % 5 === 0) {
+      fizzBuzz.push('buzz');
+    } else {
+      fizzBuzz.push('bug!');
+    }
   }
-  }
-  return fizzBuzz;  
-} fizzBuzz([2, 15, 7, 9, 45]);
+  return fizzBuzz;
+}
+fizzBuzz([2, 15, 7, 9, 45]);
 
 // Desafio 9
-function encode(str) {
- let objetos = {
-    a: 1, 
-    e: 2,
-    i: 3,
-    o: 4,
-    u: 5 
-    };
-  return str.replace(/[aeiou]/gi, (v) => objetos[v]);
+function encode(string) {
+  // seu código aqui
 }
 
 function decode(str) {
-  let objetos = { 
-    1: 'a',
-    2: 'e',
-    3: 'i',
-    4: 'o',
-    5: 'u'
-  };
-  return str.replace(/[1-5]/g, (v) => objetos[v]);
+  // seu código aqui
 }
 
 module.exports = {
@@ -110,4 +103,4 @@ module.exports = {
   footballPoints,
   highestCount,
   splitSentence,
-}; 
+};
