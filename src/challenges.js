@@ -1,11 +1,10 @@
 // Desafio 1
 function compareTrue(valor1, valor2) {
   // seu código aqui
-  if (valor1 === true && valor2 === true) {
+  if (valor1 && valor2) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
 
 // Desafio 2
@@ -18,7 +17,7 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(str) {
   // seu código aqui
-  strSplit = str.split(' ');
+  let strSplit = str.split(' ');
   return strSplit;
 }
 
@@ -26,7 +25,7 @@ function splitSentence(str) {
 function concatName(arr) {
   // seu código aqui
   let lastIndex = arr.length - 1;
-  let newOrder = arr[lastIndex] + ', ' + arr[0];
+  let newOrder = `${arr[lastIndex]}, ${arr[0]}`;
   return newOrder;
 }
 
@@ -70,11 +69,10 @@ function catAndMouse(mouse, cat1, cat2) {
 
   if (distanceMouseCat1 < distanceMouseCat2) {
     return 'cat1';
-  } else if (distanceMouseCat1 > distanceMouseCat2) {
+  } if (distanceMouseCat1 > distanceMouseCat2) {
     return 'cat2';
-  } else {
-    return sameDistance;
   }
+  return sameDistance;
 }
 
 // Desafio 8
@@ -87,7 +85,7 @@ function fizzBuzz(arr) {
       arrayFizzBuzz.push('fizz');
     } else if (num % 5 === 0 && num % 3 !== 0) {
       arrayFizzBuzz.push('buzz');
-    } else if (num % 3 == 0 && num % 5 == 0) {
+    } else if (num % 3 === 0 && num % 5 === 0) {
       arrayFizzBuzz.push('fizzBuzz');
     } else {
       arrayFizzBuzz.push('bug!');

@@ -1,7 +1,7 @@
 function itemCounter(arr) {
-  let items = {},
-    index,
-    value;
+  let items = {};
+  let index;
+  let value;
 
   for (index in arr) {
     value = arr[index];
