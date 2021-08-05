@@ -66,22 +66,29 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz(arrayOfNumbers8) {
-  let arrayfbb = [];
 
-  for (let index = 0; index < arrayOfNumbers8.length; index += 1) {
-    if (arrayOfNumbers8[index] % 3 === 0 && arrayOfNumbers8[index] % 5 === 0) {
-      arrayfbb.push ("fizzBuzz");
-    } else if (arrayOfNumbers8[index] % 3 === 0) {
-      arrayfbb.push ("fizz");
-    } else if (arrayOfNumbers8[index] % 5 === 0) {
-      arrayfbb.push ("buzz");
+function divisao(dividendo, divisor) {
+  return dividendo % divisor === 0;
+}
+
+function fizzBuzz(array) {
+  let source;
+  let arrayfb = [];
+
+  for (let index = 0; index < array.length; index += 1) {
+    source = array[index];
+    if (divisao(source, 15)) {
+      arrayfb.push ("fizzBuzz");
+    } else if (divisao(source, 3)) {
+      arrayfb.push ("fizz");
+    } else if (divisao(source, 5)) {
+      arrayfb.push ("buzz");
     } else {
-      arrayfbb.push ("bug!");
+      arrayfb.push ("bug!");
     }
   }
-  return arrayfbb;
-}
+  return arrayfb;
+}   
 
 // Desafio 9
 function encode() {
