@@ -34,16 +34,10 @@ function techList(techNames, names) {
       }
       if(countRepeatition >= 3){
         testValid = false;
-        break;
       }
       countRepeatition = 0;
     }
-    if(testValid === true){
-      return true;
-    }
-    else{
-      return false;
-    }
+    return testValid
   }
   function arrayLengthValid(numbers){
     valid = true;
