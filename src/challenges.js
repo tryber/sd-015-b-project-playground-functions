@@ -84,7 +84,7 @@ function encode() {
 }
 
 function decode() {
-// seu código aqui
+// seu códigoaqui
 }
 
 module.exports = {
