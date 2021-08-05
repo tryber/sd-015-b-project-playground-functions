@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(valor1, valor2) {
-  if (valor1 && valor2 === true){
+  if (valor1 && valor2 === true) {
     return true;
   }else{
     return false;
@@ -53,15 +53,15 @@ function highestCount(numeros) {
 function catAndMouse(mouse, cat1, cat2) {
   let distanciaGato1 = (cat1 - mouse);
   let distanciaGato2 = (cat2 - mouse);
-  if(distanciaGato1 < 0){
+  if (distanciaGato1 < 0) {
     distanciaGato1 *= -1;
   }
 
-  if(distanciaGato1 < distanciaGato2){
+  if (distanciaGato1 < distanciaGato2) {
     return 'cat1';
-  }else if (distanciaGato2 < distanciaGato1){
+  } else if (distanciaGato2 < distanciaGato1) {
     return 'cat2';
-  }else {
+  } else {
     return 'os gatos trombam e o rato foge';
   }
 }
@@ -69,7 +69,7 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(numeros) {
   array = [];
-  for(let count = 0; count < numeros.length; count++){
+  for(let count = 0; count < numeros.length; count++) {
     if ((numeros[count] % 3 === 0) && (numeros[count] % 5 === 0)){
       array.push('fizzBuzz');
     }else{
@@ -88,8 +88,8 @@ function fizzBuzz(numeros) {
 // Desafio 9
 function encode(string) {
   let frase = '';
-  for(count = 0; count < string.length; count++){
-    frase = string.replace(/["a"]/g, "1").replace(/["e"]/g, "2").replace(/["i"]/g, "3").replace(/["o"]/g, "4").replace(/["u"]/g, "5");
+  for(count = 0; count < string.length; count++) {
+       frase = string.replace(/["a"]/g, "1").replace(/["e"]/g, "2").replace(/["i"]/g, "3").replace(/["o"]/g, "4").replace(/["u"]/g, "5");
   }
   return frase;
 }
