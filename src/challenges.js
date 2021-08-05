@@ -64,31 +64,24 @@ function catAndMouse (mouse, cat1, cat2) {
 }
   // Desafio 8
   function fizzBuzz (numbers){
-  var answer = [];
-  for (let i = 0; i < numbers.length; i += 1){
-    
-      if(numbers[i] % 3 === 0 && numbers[i] % 5 === 0){
-        answer.push('fizzBuzz')
+    let answer = []
+
+  for (let index = 0; index < numbers.length; index += 1){
+    if (numbers[index] % 3 === 0 && numbers[index] % 5 === 0){
+      answer.push('fizzBuzz');
+    } else{
+      if (numbers[index] % 3 === 0){
+        answer.push('fizz');
+      } else if (numbers[index] % 5 === 0){
+        answer.push('buzz');
+      } else {
+        answer.push('bug!');
       }
-    
-    
-      else if(numbers[i] % 3 === 0 && numbers[i] % 5 !== 0){
-        answer.push('fizz')
-      }
-    
-    
-      else if(numbers[i] % 3 !== 0 && numbers[i] % 5 === 0){
-        answer.push('buzz')
-      }
-    
-    
-      else (numbers[i] % 3 !== 0 && numbers[i] % 5 !== 0)
-      { answer.push('bug!')}
-      }
-      return answer;
     }
-  
-  console.log(fizzBuzz([2, 15, 30, 3, 10]))
+  }
+  return answer;
+}
+
   // Desafio 9
 function encode (string) {
 
