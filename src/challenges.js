@@ -149,7 +149,7 @@ function decode(string) {
 
   return decodedString.join('');
 }
-console.log(decode('x1bl15'));
+
 module.exports = {
   calcArea,
   catAndMouse,
