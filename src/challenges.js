@@ -80,7 +80,7 @@ console.log(catAndMouse(3, 5, 4));
 // Desafio 8
 function fizzBuzz(array) {
   let resultado = [];
-  for (index = 0; index < array.length; index += 1) {
+  for (let index = 0; index < array.length; index += 1) {
     if (array[index] % 3 === 0 && array[index] % 5 === 0) {
       resultado.push('fizzBuzz');
     } else if (array[index] % 5 === 0) {
@@ -99,8 +99,8 @@ console.log(fizzBuzz([2, 15, 7, 9, 45]));
 function encode(string) {
   let frase = string;
   let resultado = [];
-  for (index = 0; index < frase.length; index += 1) {
-    switch (frase[index]){
+  for (let index = 0; index < frase.length; index += 1) {
+    switch (frase[index]) {
       case 'a':
         resultado.push(1);
         break;
@@ -118,17 +118,19 @@ function encode(string) {
         resultado.push(5);
         break;
 
-      default: resultado.push(frase[index]);
+      default:
+        resultado.push(frase[index]);
         break;
     }
-  }let resultadoFinal= resultado.join('') 
+  }
+  let resultadoFinal = resultado.join('');
   return resultadoFinal;
 }
 function decode(string) {
   let frase = string;
   let resultado = [];
-  for (index = 0; index < frase.length; index += 1) {
-    switch (frase[index]){
+  for (let index = 0; index < frase.length; index += 1) {
+    switch (frase[index]) {
       case '1':
         resultado.push('a');
         break;
@@ -146,10 +148,12 @@ function decode(string) {
         resultado.push('u');
         break;
 
-      default: resultado.push(frase[index]);
+      default:
+        resultado.push(frase[index]);
         break;
     }
-  }let resultadoFinal= resultado.join('') 
+  }
+  let resultadoFinal = resultado.join('');
   return resultadoFinal;
 }
 
