@@ -51,20 +51,7 @@ function concatPhoneNumber(arr) {
   for (number of arr) {
     numberPhone.push(number);
   }
-  let strNumberPhone = `(${
-    numberPhone[0]
-  }${numberPhone[1]
-  }) ${
-    numberPhone[2]
-  }${numberPhone[3]
-  }${numberPhone[4]
-  }${numberPhone[5]
-  }${numberPhone[6]
-  }-${
-    numberPhone[7]
-  }${numberPhone[8]
-  }${numberPhone[9]
-  }${numberPhone[10]}`;
+  let strNumberPhone = `(${numberPhone[0]}${numberPhone[1]}) ${numberPhone[2]}${numberPhone[3]}${numberPhone[4]}${numberPhone[5]}${numberPhone[6]}-${numberPhone[7]}${numberPhone[8]}${numberPhone[9]}${numberPhone[10]}`;
 
   return strNumberPhone;
 }
@@ -77,8 +64,8 @@ function generatePhoneNumber(arr) {
     return 'Array com tamanho incorreto.';
   }
   if (
-    isThreeOrNineOrZero(arr)
-      === 'não é possível gerar um número de telefone com esses valores'
+    isThreeOrNineOrZero(arr) ===
+    'não é possível gerar um número de telefone com esses valores'
   ) {
     numberPhone = isThreeOrNineOrZero(arr);
     return numberPhone;
@@ -98,12 +85,12 @@ function triangleCheck(lineA, lineB, lineC) {
   let subBC = Math.abs(lineB - lineC);
 
   if (
-    lineA > somaBC
-    || lineA < subBC
-    || lineB > somaAC
-    || lineB < subAC
-    || lineC > somaAB
-    || lineC < subAB
+    lineA > somaBC ||
+    lineA < subBC ||
+    lineB > somaAC ||
+    lineB < subAC ||
+    lineC > somaAB ||
+    lineC < subAB
   ) {
     return false;
   }
@@ -121,7 +108,7 @@ function hydrate(str) {
     numberInteger = parseInt(arrayNumbers[index]);
     sumWaterCups += numberInteger;
   }
-  if (sumWaterCups == 1) {
+  if (sumWaterCups === 1) {
     return `${sumWaterCups} copo de água`;
   }
   return `${sumWaterCups} copos de água`;
