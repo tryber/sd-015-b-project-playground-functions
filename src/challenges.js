@@ -35,34 +35,35 @@ function highestCount(arr) {
       save = num;
       count = 0;
     }
-    if (num === save) count++;
+    if (num === save) count += 1;
   }
   return count;
 }
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let xcat1 = 0;
-  let xcat2 = 0;
-  cat1 > mouse ? (xcat1 = cat1 - mouse) : (xcat1 = mouse - cat1);
-  cat2 > mouse ? (xcat2 = cat2 - mouse) : (xcat2 = mouse - cat2);
-  if (xcat1 === xcat2) return `os gatos trombam e o rato foge`;
-  return xcat1 > xcat2 ? `cat2` : `cat1`;
+  let xcat1 = Math.abs(mouse - cat1);
+  let xcat2 = Math.abs(mouse - cat2);
+  if (xcat1 === xcat2) return 'os gatos trombam e o rato foge';
+  return xcat1 > xcat2 ? 'cat2' : 'cat1';
 }
 
 // Desafio 8
+
+const restIsValid = (num, divisor) => num % divisor === 0;
+
+const fizzBuzzStr = () => 'fizzBuzz';
+const buzzStr = () => 'buzz';
+const fizzStr = () => 'fizz';
+const bugStr = () => 'bug!';
+
 function fizzBuzz(arr) {
   let fizzBuzzArray = [];
   for (let num of arr) {
-    if (num % 5 === 0 && num % 3 === 0) {
-      fizzBuzzArray.push(`fizzBuzz`);
-    } else if (num % 5 === 0) {
-      fizzBuzzArray.push(`buzz`);
-    } else if (num % 3 === 0) {
-      fizzBuzzArray.push(`fizz`);
-    } else {
-      fizzBuzzArray.push(`bug!`);
-    }
+    if (restIsValid(num, 15)) fizzBuzzArray.push(fizzBuzzStr());
+    else if (restIsValid(num, 5)) fizzBuzzArray.push(buzzStr());
+    else if (restIsValid(num, 3)) fizzBuzzArray.push(fizzStr());
+    else fizzBuzzArray.push(bugStr());
   }
   return fizzBuzzArray;
 }
