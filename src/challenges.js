@@ -75,21 +75,20 @@ function fizzBuzz(fizzBuzz) {
     }
   }
   return fizzBuzz;
-}console.log(fizzBuzz[2, 15, 7, 9, 45]);
+}
 
 // Desafio 9
 function encode(str) {
  let objetos = {
     a: 1, 
-    e: 2, 
-    i: 3, 
-    o: 4, 
+    e: 2,
+    i: 3,
+    o: 4,
     u: 5 
-  };
+    };
   return str.replace(/[aeiou]/gi, (v) => objetos[v]);
 }
-
-function decode() {
+function decode(str) {
   let objetos = { 
     1: 'a', 
     2: 'e', 
