@@ -1,13 +1,9 @@
 // Desafio 1
 function compareTrue(a, b) {
-  if (a === true && b === true) {
-    return true;
-  } else {
-    return false;
-  }
+  return a && b;
 }
 
-//console.log(compareTrue(true, false))
+console.log(compareTrue(true, true))
 
 // Desafio 2
 function calcArea(base, height) {
@@ -35,9 +31,8 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(array) {
-  //let array = [-2, -2, -1]
   let higherNumber = array[0];
-  let cont = 0
+  let cont = 0;
   for (let i = 0; i < array.length; i += 1) {
     if (array[i] > higherNumber) {
       higherNumber = array[i];
@@ -47,50 +42,48 @@ function highestCount(array) {
     if (array[j] === higherNumber) {
       cont += 1;
     }
-    //console.log(cont)
   }
   return cont;
 }
 
-console.log(highestCount([1, 9, 2, 3, 9, 5, 7]))
-
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let cat1win = 'cat1';
-  let cat2win = 'cat2';
-  let mousewin = 'os gatos trombam e o rato foge';
   if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
-    return cat1win;
+    return 'cat1';
   } else if (Math.abs(cat2 - mouse) < Math.abs(cat1 - mouse)) {
-    return cat2win;
+    return 'cat2';
   } else {
-    return mousewin;
+    return 'os gatos trombam e o rato foge';
   }
 }
 
 // Desafio 8
+function divisorTest(dividend, divider) {
+  return dividend % divider === 0;
+}
+
 function fizzBuzz(a) {
   let resultado = [];
   for (let i = 0; i < a.length; i += 1) {
-    if (a[i] % 3 === 0 && a[i] % 5 === 0) {
+    if (divisorTest(a[i], 15)) {
       resultado.push('fizzBuzz');
-    } 
-    else if (a[i] % 3 === 0) {
+    } else if (divisorTest(a[i], 3)) {
       resultado.push('fizz');
-    } 
-    else if (a[i] % 5 === 0) {
-      resultado.push('buzz')
-    } 
-    else {
-      resultado.push('bug!')
+    } else if (divisorTest(a[i], 5)) {
+      resultado.push('buzz');
+    } else {
+      resultado.push('bug!');
     }
   }
   return resultado;
 }
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  string = 'This is an encading test';
+  let resultado = string.replace(/a/g, '1');
+  console.log(resultado);
 }
 function decode() {
   // seu código aqui
