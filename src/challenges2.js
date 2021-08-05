@@ -69,9 +69,23 @@ function triangleCheck(lineA, lineB, lineC) {
 };
 
 // Desafio 13
-function hydrate() {
-  
-}
+
+function hydrate(string) {
+  let regex = /\d+/g;
+  let result = string.match(regex);
+  for (let index = 0; index < result.length; index += 1) {
+    result[index] = parseInt(result[index]);
+  };
+  let coposDeAgua = 0;
+  for (let index = 0; index < result.length; index += 1) {
+    coposDeAgua += result[index];
+  };
+  if (coposDeAgua === 1) {
+    return coposDeAgua + " copo de água"
+  } else {
+  return coposDeAgua + " copos de água"
+  }
+};
 
 module.exports = {
   generatePhoneNumber,
