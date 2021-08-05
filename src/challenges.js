@@ -1,49 +1,147 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(parametro1, parametro2) {
+  if(parametro1 && parametro2 === true){
+    return true;
+  } else if(parametro1 && parametro2 === false){
+    return false;
+  } else {
+    return false;
+  }
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+let resultado = 0
+resultado = (base * height) / 2
+return resultado;
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  resultado = []
+  resultado = string.split(" ")
+  return resultado;
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  let indexCont  = 0
+  let ultimaArray = []
+  let primeiraArray = array[0]
+  let resultado = ""
+  for(index = 0; index < array.length; index+=1) {
+    if (index > indexCont){
+      indexCont = index;
+      ultimaArray = array[indexCont];
+    }
+  }
+  resultado = ultimaArray + "," + " " + primeiraArray;
+  return resultado;
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+pontosVitoria = wins * 3;
+pontosEmpate = ties * 1;
+resultado = pontosVitoria + pontosEmpate;
+return resultado;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numeros) {
+  let contRepetido = 0;
+  let contNumero = 0;
+  let indexNumeroRepetido = 0;
+
+for(index = 0; index < numeros.length; index+=1) {
+  let verificaNumero = numeros[index];
+  for(index2 = 0; index2 < numeros.length; index2+=1) {
+    if(verificaNumero === numeros[index2]) {
+      contNumero = contNumero + 1;
+    }
+  }
+  if (contNumero > contRepetido){
+    contRepetido = contNumero;
+    indexNumeroRepetido = index;
+  }
+  contNumero = 0;
 }
+return numeros[indexNumeroRepetido]
+}
+
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
-}
+function catAndMouse(mouse, cat1, cat2) {
+let gato1 = "cat1"
+let gato2 = "cat2"
+let trombam = 'os gatos trombam e o rato foge'
+  if(mouse - cat1 === mouse - cat2 + 2){
+    return trombam;
+  } else if (mouse + cat1 <  mouse + cat2) {
+    return gato1
+  } else {
+    return gato2
+  }
+} 
+
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+resultado = []
+for (index = 0; index < array.length; index+=1){
+  if (array[index] % 3 === 0 && array[index] % 5 === 0){
+    resultado.push("fizzBuzz");
+} else if (array[index] % 5 === 0){
+  resultado.push("buzz");
+} else if(array[index] % 3 === 0) {
+  resultado.push("fizz");
+} else {
+  resultado.push("bug!");
+}
+}
+return resultado;
+}
+// Desafio 9
+function encode(array) {
+coletor = array.split("")
+resultado = []
+for(index = 0; index < array.length; index+=1){
+  if(coletor[index] === "a"){
+   resultado.push("1")
+  } else if (coletor[index] === "e"){
+    resultado.push("2")
+  } else if (coletor[index] === "i"){
+    resultado.push("3")
+  } else if (coletor[index] === "o"){
+    resultado.push("4")
+  } else if (coletor[index] === "u"){
+    resultado.push("5")
+  } else {
+    resultado.push(coletor[index])
+  }
+}
+return resultado.join('')
 }
 
-// Desafio 9
-function encode() {
-  // seu código aqui
+function decode(array) {
+coletor = array.split("")
+resultado = []
+for(index = 0; index < array.length; index+=1){
+  if(coletor[index] === "1"){
+   resultado.push("a")
+  } else if (coletor[index] === "2"){
+    resultado.push("e")
+  } else if (coletor[index] === "3"){
+    resultado.push("i")
+  } else if (coletor[index] === "4"){
+    resultado.push("o")
+  } else if (coletor[index] === "5"){
+    resultado.push("u")
+  } else {
+    resultado.push(coletor[index])
+  }
 }
-function decode() {
-  // seu código aqui
+return resultado.join('')
 }
 
 module.exports = {
