@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(boolean1, boolean2) { 
-  if(boolean1 === true && boolean2 === true){
+    if (boolean1 === true && boolean2 === true) {
     return true;
   } else {
     return false;
@@ -52,7 +52,6 @@ function catAndMouse(mouse, cat1, cat2){
     return 'cat1'
   } 
 }
-
 // Desafio 8
 function fizzBuzz(array) {
     let acumulador = [];
@@ -85,7 +84,6 @@ function decode(entrada) {
   let u = o.replace(/5/gm, 'u');
   return u
 }
-
 module.exports = {
   calcArea,
   catAndMouse,
