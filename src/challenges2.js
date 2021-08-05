@@ -13,7 +13,7 @@ function techList(array, name) {
      list.push(objects);
     }
     return list;
-  } console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'],
+} console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'],
   'Lucas'));
 
 // Desafio 11
@@ -30,7 +30,7 @@ function generatePhoneNumber(array) {
       break;
     }
     count = 0;
-    for(let numbers in array) {
+    for (let numbers in array) {
       if (array[numbers] === array[i]) {
         count += 1;
       }
@@ -40,7 +40,7 @@ function generatePhoneNumber(array) {
       break;
     }    
   }
-  if(error) {
+  if (error) {
     return 'não é possível gerar um número de telefone com esses valores'
   }
   return '('+ array[0] + array[1] +') ' + array[2] + array[3] + array[4] + array[5] + array[6] + '-' + array[7] + array[8] + array[9] + array[10];
