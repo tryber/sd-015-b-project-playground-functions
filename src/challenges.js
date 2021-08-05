@@ -21,11 +21,17 @@ function splitSentence(a) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  let ultimo = array[array.length - 1];
+  let primeiro = array[0]
+  let arr = []
+  let space = ' '
+  arr.unshift(ultimo)
+  arr.push(space.concat(primeiro))
+  return(arr + '')
 }
 
-// Desafio 5
+  // Desafio 5
 function footballPoints() {
   // seu código aqui
 }
