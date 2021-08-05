@@ -64,14 +64,17 @@ function catAndMouse(mouse, catOne, catTwo) {
 }
 
 // Desafio 8
+function fizzBuzzCheck(number){
+  if (number % 3 === 0 && number % 5 === 0) return 'fizzBuzz';
+  else if (number % 3 === 0) return 'fizz';
+  else if (number % 5 === 0) return 'buzz';
+  else return 'bug!';
+}
 function fizzBuzz(numbers) {
   // seu código aqui
   let fizzBuzzes = [];
   for (number of numbers) {
-    if (number % 3 === 0 && number % 5 === 0) fizzBuzzes.push('fizzBuzz');
-    else if (number % 3 === 0) fizzBuzzes.push('fizz');
-    else if (number % 5 === 0) fizzBuzzes.push('buzz');
-    else fizzBuzzes.push('bug!');
+    fizzBuzzes.push(fizzBuzzCheck(number))
   }
   return fizzBuzzes;
 }
