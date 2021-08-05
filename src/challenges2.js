@@ -18,7 +18,7 @@ function techList(arrayTech, name) {
 function generatePhoneNumber(arrayNumeros) {
   let contador = 0;
   let strigArray = '';
-  if (arrayNumeros.length < 11 || arrayNumeros.length > 11) {
+  if (arrayNumeros.length !== 11) {
     return 'Array com tamanho incorreto.';
   } for (let i in arrayNumeros) {
     if (arrayNumeros[i] < 0 || arrayNumeros[i] > 9) {
