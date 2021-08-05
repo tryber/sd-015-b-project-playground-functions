@@ -1,7 +1,7 @@
 // Desafio 10
 function techList(tech, name) {
   if(tech == 0){
-    return console.log('Vazio!')
+    return 'Vazio!'
   }else{
     tech.sort();
     let result = [];
@@ -11,7 +11,7 @@ function techList(tech, name) {
         name: name,
       });
     }
-    return console.log(result);
+    return result;
   }
 }
 
