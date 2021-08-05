@@ -116,6 +116,8 @@ function decode(a) {
 
 }
 
+
+
 module.exports = {
   calcArea,
   catAndMouse,
