@@ -25,10 +25,11 @@ function splitSentence(str, sep) {
 splitSentence("go Trybe")
 
 // Desafio 4
-function concatName(arr, sep) {
-  // seu código aqui
-  let arrToStr = arr.toString(arr)
-  return arrToStr
+function concatName(arr) {
+  let firtsArr = arr[0];
+  let lastArr = arr[arr.length -1]
+  let result = lastArr + ', ' + firtsArr
+  return result
 }
 concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'])
 
