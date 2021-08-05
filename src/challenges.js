@@ -1,13 +1,8 @@
 // Desafio 1
-function compareTrue(a, b) {
+function compareTrue(entrada1, entrada2) {
   // seu código aqui
-  let comparar = (a,b)
-  if ((a === true) && (b === true)) {
-    return true;
-  }
-  else {
-  return false;
-  }
+  let comparar = (entrada1, entrada2);
+  return ((entrada1 === true) && (entrada2 === true))
 }
 console.log(compareTrue(false, true));
 console.log(compareTrue(false, false));
