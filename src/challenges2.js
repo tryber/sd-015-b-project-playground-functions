@@ -103,9 +103,17 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
+
+function sumNumbers(array) {
+  let result = 0;
+  for (let index = 0; index < array.length; index += 1) {
+    result += Number.parseInt(array[index], 10);
+  }
+  return result;
+}
 function hydrate(drinks) {
   let regExp = /\d+/g;
-  let amounts = eval(drinks.match(regExp).join('+'));
+  let amounts = sumNumbers(drinks.match(regExp));
   if (amounts > 1) {
     return `${amounts} copos de água`;
   }
