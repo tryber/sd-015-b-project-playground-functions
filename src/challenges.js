@@ -69,18 +69,18 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-  function fizzBuzz(numbers) {
-  	for (let i in numbers) {
-	  	if (numbers[i] % 3 === 0 && numbers[i] % 5 === 0) {
-		  	numbers[i] = "fizzBuzz"
+function fizzBuzz(numbers) {
+  for (let i in numbers) {
+	  if (numbers[i] % 3 === 0 && numbers[i] % 5 === 0) {
+		  	numbers[i] = 'fizzBuzz';
 	  	} else if (numbers[i] % 3 === 0 && numbers[i] % 5 !== 0) {
-		  	numbers[i] = "fizz"
+		  	numbers[i] = 'fizz';
 	  	} else if (numbers[i] % 3 !== 0 && numbers[i] % 5 === 0) {
-			numbers[i] = "buzz"
+			numbers[i] = 'buzz';
 	  	} else {
-			numbers[i] = "bug!"
-		}
-  }return numbers;
+			numbers[i] = 'bug!';
+    }
+  } return numbers;
 } fizzBuzz([2, 15, 7, 9, 45]);
 
 // Desafio 9

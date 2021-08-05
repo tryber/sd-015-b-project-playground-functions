@@ -18,16 +18,15 @@ console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas'));
 
 // Desafio 11
 function generatePhoneNumber(numbers) {
-  for (let i in numbers){
+  for (let i in numbers) {
     let count = 0;
     for (let i2 in numbers) {
       if (numbers[i] === numbers[i2]) 
-      { 
+      {
         count += 1; 
-      } 
+      }
     }
-    if (numbers.length != 11) 
-    { 
+    if (numbers.length !== 11) { 
       return "Array com tamanho incorreto."; 
     }
     if (numbers[i] < 0 || numbers[i] > 9 || count >= 3) {
@@ -38,14 +37,14 @@ function generatePhoneNumber(numbers) {
   let part1 = formatNumbers.slice(0,2);
   let part2 = formatNumbers.slice(2,7);
   let part3 = formatNumbers.slice(7, 11);
-  return `(${part1}) ${part2} - ${part3}`; //literal
-}
+  return `(${part1}) ${part2} - ${part3}`; 
+} generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]);
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   if (lineA >= lineB + lineC 
-    ||lineB >= lineA + lineC 
-    ||lineC >= lineB + lineA) {
+    || lineB >= lineA + lineC 
+    || lineC >= lineB + lineA) {
     return false;
   }
   return true;
@@ -53,7 +52,7 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function hydrate(string) {
-  let str = string.match(/\d/g, " ");
+  let str = string.match(/\d/g, ' ');
   let result;
   let qtdWater = 0;
   for (let i of str) {
@@ -65,7 +64,7 @@ function hydrate(string) {
     result = (qtdWater + ' copos de água');
   }
   return result;
-} console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"));
+} console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
 
 module.exports = {
   generatePhoneNumber,
