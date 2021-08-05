@@ -94,8 +94,32 @@ function generatePhoneNumber(phoneNumber) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function isLineAValid(lineA, lineB, lineC) {
+  let isValid = true;
+  
+  if (lineA > lineB + lineC || lineA < Math.abs(lineB - lineC)) isValid = false;
+
+  return isValid;
+}
+
+function isLineBValid(lineA, lineB, lineC) {
+  let isValid = true;
+  
+  if (lineB > lineA + lineC || lineA < Math.abs(lineA - lineC)) isValid = false;
+
+  return isValid;
+}
+
+function isLineCValid(lineA, lineB, lineC) {
+  let isValid = true;
+  
+  if (lineC > lineA + lineB || lineA < Math.abs(lineA - lineB)) isValid = false;
+
+  return isValid;
+}
+
+function triangleCheck(lineA, lineB, lineC) {
+  return isLineAValid(lineA, lineB, lineC) && isLineBValid(lineA, lineB, lineC) && isLineCValid(lineA, lineB, lineC);
 }
 
 // Desafio 13
