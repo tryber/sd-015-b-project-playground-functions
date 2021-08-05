@@ -69,7 +69,7 @@ function formatPhoneNumber(numbersArray) {
   let ddd = array.slice(0, 2);
   let half1 = array.slice(2, 7);
   let half2 = array.slice(7, 11);
-  return `(${ddd}) ${half1}-${half2}`; 
+  return `(${ddd}) ${half1}-${half2}`;
 }
 
 function generatePhoneNumber(numbersArray) {
