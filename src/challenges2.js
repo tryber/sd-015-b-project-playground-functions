@@ -26,13 +26,6 @@ function triangleCheck(lineA, lineB, lineC) {
   }
   return resultado;
 }
-console.log(triangleCheck(16, 9, 2))
-console.log(triangleCheck(10, 3, 4))
-console.log(triangleCheck(6, 2, 2))
-console.log("\n"); 
-console.log(triangleCheck(10, 14, 8))
-console.log(triangleCheck(2, 3, 4))
-console.log(triangleCheck(16, 20, 30))
 
 // Desafio 13
 function hydrate() {
