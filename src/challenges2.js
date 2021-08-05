@@ -38,8 +38,20 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(comanda) {
+  let quantidade = comanda.match(/\d+/g);
+  let coposAgua = 0;
+  let output = '';
+
+  for (let key of quantidade) {
+    coposAgua += parseInt(key, 10);
+  }
+  if (coposAgua === 1) {
+    output = coposAgua + ' copo de água';
+  } else {
+    output = coposAgua + ' copos de água';
+  }
+  return output;
 }
 
 module.exports = {
