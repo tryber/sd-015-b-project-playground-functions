@@ -17,6 +17,8 @@ function splitSentence(string) {
 }
 
 // Desafio 4
+// Place holder sugerido pelo lint, assisti um video do canal 'curso em video'(JavaScript)
+// do Gustavo Guanabara junto a documentação para entender a sintaxe.
 function concatName(string) {
   return `${string[string.length - 1]}, ${string[0]}`;
 }
