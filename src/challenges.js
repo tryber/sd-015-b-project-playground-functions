@@ -74,57 +74,11 @@ function fizzBuzz() {
 
 // Desafio 9
 function encode() {
-  let vogal = '';
-for (let key in vogaisStrings) {
-  switch (vogaisStrings[key]) {
-    case 'a':
-      vogal += 1;
-      break;
-    case 'e':
-      vogal += 2;
-      break;
-    case 'i':
-      vogal += 3;
-      break;
-    case 'o':
-      vogal += 4;
-      break;
-    case 'u':
-      vogais += 5;
-      break;   
-    default:
-      vogal += vogaisStrings[key];
-      break;
-  }
-  }
-  return vogal;
+
 }
 
-function decode() {
-  let vogal = '';
-  for (let key in vogaisStrings) {
-    switch (vogaisStrings[key]) {
-      case '1':
-        vogal += 'a';
-        break;
-      case '2':
-        vogal += 'e';
-        break;
-      case '3':
-        vogal += 'i';
-        break;
-      case '4':
-        vogal += 'o';
-        break;
-      case '5':
-        vogal += 'u';
-        break;   
-      default:
-        vogal += vogaisStrings[key];
-        break;
-    }
-  }
-  return vogal; 
+function decode() {  
+
 }
 
 module.exports = {
