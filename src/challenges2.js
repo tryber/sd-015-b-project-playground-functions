@@ -45,7 +45,7 @@ function generatePhoneNumber(numbers) {
   // seu código aqui
   if (numbers.length !== 11) {
     return 'Array com tamanho incorreto.';
-  } else if (verificationOfPhoneNumber(numbers) === true && verificationOfNumberRepetition(numbers)) {
+  } else if (verificationOfPhoneNumber(numbers) && verificationOfNumberRepetition(numbers)) {
     let phoneNumber = [];
     for (let i = 0; i < numbers.length; i += 1) {
       if (i === 0) phoneNumber.push('(');
@@ -58,7 +58,6 @@ function generatePhoneNumber(numbers) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
 }
-
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
