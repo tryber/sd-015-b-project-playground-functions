@@ -92,12 +92,25 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(stringCod) {
+  stringCod = stringCod.replace(/a/g, '1');
+  stringCod = stringCod.replace(/e/g, '2');
+  stringCod = stringCod.replace(/i/g, '3');
+  stringCod = stringCod.replace(/o/g, '4');
+  stringCod = stringCod.replace(/u/g, '5');
+
+  return stringCod;
 }
-function decode() {
-  // seu código aqui
-}
+
+function decode(stringDec) {
+  stringDec = stringDec.replace(/1/g, 'a');
+  stringDec = stringDec.replace(/2/g, 'e');
+  stringDec = stringDec.replace(/3/g, 'i');
+  stringDec = stringDec.replace(/4/g, 'o');
+  stringDec = stringDec.replace(/5/g, 'u');
+
+  return stringDec;
+} console.log(decode('h3 th2r2!'));
 
 module.exports = {
   calcArea,
