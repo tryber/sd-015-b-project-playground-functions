@@ -1,24 +1,12 @@
 // Desafio 10
 function techList(array, name) {
-  let objeto = [];
-  if (array.length <= 0) {
-  return 'Vazio!';
-  }
-  for (let i = 0; i < array.length; i += 1) {
-     objeto.push({
-    tech: array[i],
-    name,
-  });
-}  
-   return objeto.sort(function (a, b) {
-   return a.tech > b.tech;
- });
+   // seu código aqui
 } 
 
 // Desafio 11
 function generatePhoneNumber(array) {
-
-  }
+  // seu código aqui
+}
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
