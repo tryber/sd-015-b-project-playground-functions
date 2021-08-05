@@ -5,7 +5,7 @@ function compareTrue(entrada1, entrada2) {
   let testeEntradas = '';
   if ((entrada1 === comparativo) && (entrada2 === comparativo)) {
     testeEntradas = 'true';
-  }
+    }
   else {
     testeEntradas = 'false';
   }
@@ -39,9 +39,7 @@ function concatName(arrayPalavras) {
   // seu código aqui
   let index = 0;
   let index2 = (arrayPalavras.length - 1);
-  
   return arrayPalavras[index2] + ', ' + arrayPalavras[index];
-  
 }
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 console.log(concatName(['foguete', 'não', 'tem', 'ré']));
@@ -110,23 +108,22 @@ function fizzBuzz(variavelNumeros) {
   for (let index = 0; index < variavelNumeros.length; index += 1) {
     if ((variavelNumeros[index] % 3) !== 0 && (variavelNumeros[index] % 5) !== 0) {
       variavelRetorno.push('bug!');
-    }
+      }
     else if ((variavelNumeros[index] % 3) === 0 && (variavelNumeros[index] % 5) === 0) {
-      variavelRetorno.push('fizzBuzz'); 
-    }
+      variavelRetorno.push('fizzBuzz');
+      }
     else if ((variavelNumeros[index] % 5) === 0) {
-      variavelRetorno.push('buzz');  
-    }
+      variavelRetorno.push('buzz');
+      }
     else {
-      variavelRetorno.push('fizz');  
-    }
+      variavelRetorno.push('fizz');
+      }
   }
   return variavelRetorno;
 }
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
 console.log(fizzBuzz([7, 9]));
 console.log(fizzBuzz([9, 25]));
-
 
 // Desafio 9
 function encode() {
