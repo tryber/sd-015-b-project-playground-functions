@@ -85,9 +85,11 @@ function fizzBuzz(numbers) {
 // Desafio 9
 function encodeAux(char) {
   let charReturn = 0;
-  let chars = ['a', 'e', 'i', 'o', 'u'], numbers = [1, 2, 3, 4, 5];
-  for(let i = 0; i < chars.length; i += 1){
-    if(char === chars[i]){
+  let chars = ['a', 'e', 'i', 'o', 'u'];
+  let numbers = [1, 2, 3, 4, 5]
+
+  for (let i = 0; i < chars.length; i += 1) {
+    if (char === chars[i]) {
       charReturn = numbers[i];
     }
   }
