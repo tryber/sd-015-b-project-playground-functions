@@ -19,17 +19,64 @@ function techList(arr, name) {
 }
 
 // Desafio 11
+function itemCounter(arr) {
+  let items = {},
+    index,
+    value;
+
+  for (index in arr) {
+    value = arr[index];
+    if (typeof items[value] === 'undefined') {
+      items[value] = 1;
+    } else {
+      items[value] += 1;
+    }
+  }
+  return items;
+}
+function isThreeOrNineOrZero(arr) {
+  for (key in itemCounter(arr)) {
+    let value = itemCounter(arr)[key];
+
+    if (value >= 3 || key > 9 || key < 0) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
+  }
+}
 function generatePhoneNumber(arr) {
   // seu código aqui
+  let numberPhone = [];
+
   if (arr.length !== 11) {
     return 'Array com tamanho incorreto.';
   } else {
-    for (let index in arr) {
-      if (arr[index] < 0) {
-        return 'não é possível gerar um número de telefone com esses valores';
-      } else if (arr[index] > 9) {
-        return 'não é possível gerar um número de telefone com esses valores';
+    if (
+      isThreeOrNineOrZero(arr) ===
+      'não é possível gerar um número de telefone com esses valores'
+    ) {
+      numberPhone = isThreeOrNineOrZero(arr);
+      return numberPhone;
+    } else {
+      for (number of arr) {
+        numberPhone.push(number);
       }
+      let strNumberPhone =
+        '(' +
+        numberPhone[0] +
+        numberPhone[1] +
+        ') ' +
+        numberPhone[2] +
+        numberPhone[3] +
+        numberPhone[4] +
+        numberPhone[5] +
+        numberPhone[6] +
+        '-' +
+        numberPhone[7] +
+        numberPhone[8] +
+        numberPhone[9] +
+        numberPhone[10];
+
+      return strNumberPhone;
     }
   }
 }
