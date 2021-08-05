@@ -10,7 +10,7 @@ function compareTrue(valor1, valor2) {
 
 // Desafio 2
 function calcArea(base, height) {
-  return ((base * height) / 2); 
+  return ((base * height) / 2);
 }
 
 // Desafio 3
@@ -20,14 +20,12 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(array) {
-  let concat = (array[array.length - 1]) +', ' + (array[0]);
-  return concat;
+  return (array[array.length - 1]) + ', ' + (array[0]);
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  footballPoints = ((wins * 3) + (ties * 1));
-  return footballPoints;
+  return ((wins * 3) + (ties * 1));
 }
 
 // Desafio 6
