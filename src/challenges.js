@@ -79,12 +79,26 @@ function fizzBuzz() {
 }
 
 // Desafio 9
-function encode() {
-// seu código aqui
+function encode(str) {
+ let objetos = {
+    a: 1, 
+    e: 2, 
+    i: 3, 
+    o: 4, 
+    u: 5 
+  };
+  return str.replace(/[aeiou]/gi, (v) => objetos[v]);
 }
 
 function decode() {
-// seu códigoaqui
+  let objetos = { 
+    1: 'a', 
+    2: 'e', 
+    3: 'i', 
+    4: 'o', 
+    5: 'u' 
+  };
+  return str.replace(/[1-5]/g, (v) => objetos[v]);
 }
 
 module.exports = {

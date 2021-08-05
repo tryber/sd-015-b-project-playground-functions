@@ -1,10 +1,10 @@
 // Desafio 10
-function techList(array, name) {
+function techList() {
    // seu código aqui
 } 
 
 // Desafio 11
-function generatePhoneNumber(array) {
+function generatePhoneNumber() {
   // seu código aqui
 }
 
@@ -18,7 +18,7 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function hydrate() {
-  // seu código aqui
+  
 }
 
 module.exports = {
