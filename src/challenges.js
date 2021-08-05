@@ -62,16 +62,15 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-// eslint-disable-next-line complexity
 function fizzBuzz(numeros) {
   let result = [];
   for (let index = 0; index < numeros.length; index += 1) {
-    if (numeros[index] % 3 === 0) {
-      result.push('fizz');
+    if (numeros[index] % 5 === 0 && numeros[index] % 3 === 0) {
+      result.push('fizzBuzz');
     } else if (numeros[index] % 5 === 0) {
       result.push('buzz');
-    } else if (numeros[index] % 3 === 0 && numeros[index] % 5 === 0) {
-      result.push('fizzBuzz');
+    } else if (numeros[index] % 3 === 0) {
+      result.push('fizz');
     } else {
       result.push('bug!');
     }
