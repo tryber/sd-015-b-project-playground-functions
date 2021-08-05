@@ -35,16 +35,19 @@ function concatName(palavras) {
     for (let contador = palavras.length - 1; contador >= 0; contador -= 1) {
       let firstStringLetter = palavras[index];
       let lastStringLetter = palavras[contador];
-      return lastStringLetter + ", " + firstStringLetter;
+      return lastStringLetter + ', ' + firstStringLetter;
     }
   }  
 }
 console.log(concatName(['Axe', 'is', 'more', 'rules']));
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let vitoria = wins * 3;
+  let empate = ties * 1;
+  return vitoria + empate;
 }
+console.log(footballPoints(14, 8))
 
 // Desafio 6
 function highestCount() {
