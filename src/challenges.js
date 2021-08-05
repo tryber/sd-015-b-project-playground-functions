@@ -17,8 +17,8 @@ function splitSentence(string) {
 } splitSentence('go Trybe');
 
 // Desafio 4
-function concatName(array) {
-  let combo = array[array.length - 1] + ', ' + array[0];
+function concatName(array) {  
+  let combo = array[array.length - 1].concat(' ', array[0]);
   return combo;
 } console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
