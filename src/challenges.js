@@ -138,23 +138,18 @@ function decode(string) {
     switch (arrayString[key]) {
       case '1':
         resultado.push(arrayString[key].replace('1', 'a'));
-        // console.log(resultado);
         break;
       case '2':
         resultado.push(arrayString[key].replace('2', 'e'));
-        // console.log(resultado);
         break;
       case '3':
         resultado.push(arrayString[key].replace('3', 'i'));
-        // console.log(resultado);
         break;
       case '4':
         resultado.push(arrayString[key].replace('4', 'o'));
-        // console.log(resultado);
         break;
       case '5':
         resultado.push(arrayString[key].replace('5', 'u'));
-        // console.log(resultado);
         break;
       default:
         resultado.push(arrayString[key]);

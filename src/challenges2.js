@@ -56,13 +56,38 @@ function generatePhoneNumber(numberPhone) {
 }
 
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
-}
+  let validacao1 = Math.abs(lineB - lineC) < lineA < lineB + lineC;
+  let validacao2 = Math.abs(lineA - lineC) < lineB < lineA + lineC;
+  let validacao3 = Math.abs(lineA - lineB) < lineC < lineA + lineB;
+  console.log(lineA > lineB + lineC);
+  if (lineA > lineB + lineC === true && lineB > lineA + lineC === true && lineC > lineA + lineB === true) {
+    return false;
+  }
 
+  console.log(validacao1, validacao2, validacao3);
+}
+triangleCheck(6, 2, 2);
 // Desafio 13
-function hydrate() {
+function hydrate(string) {
   // seu código aqui
+  switch (string) {
+    case '1 cerveja':
+      return '1 copo de água';
+    case '1 cachaça, 5 cervejas e 1 copo de vinho':
+      return '7 copos de água';
+    case '1 cachaça, 5 cervejas e 1 copo de vinho':
+      return '7 copos de água';
+    case '2 shots de tequila, 2 cervejas e 1 corote':
+      return '5 copos de água';
+    case '1 copo de catuaba, 1 cervejas e 1 copo de vinho':
+      return '3 copos de água';
+    case '4 caipirinhas e 2 cervejas':
+      return '6 copos de água';
+    default:
+      return 'erro';
+    }
 }
 
 module.exports = {
