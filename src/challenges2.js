@@ -52,14 +52,20 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate(strings) {
-	numbers = (strings.match(/\d+/g));
-	let sum = 0;
-	for (let i in numbers) {
-		sum += parseInt(numbers[i]);
-	}
-	return `${sum} copos de água`;
-}
+function hydrate(string) {
+  let str = string.match(/\d/g, " ");
+  let result;
+  let qtdWater = 0;
+  for (let i of str) {
+    qtdWater += parseInt(i);
+  }
+  if (qtdWater === 1) {
+    result = (qtdWater + ' copo de água');
+  } else if (qtdWater > 1) {
+    result = (qtdWater + ' copos de água');
+  }
+  return result;
+} console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"));
 
 module.exports = {
   generatePhoneNumber,
