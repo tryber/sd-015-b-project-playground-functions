@@ -45,12 +45,6 @@ let arrayPhone = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
 console.log(generatePhoneNumber(arrayPhone));
 
 // Desafio 12
-function triangleCheck(lineA, lineB, lineC) {
-  if (validaLado(lineA, lineB, lineC) === false || validaDif(lineA, lineB, lineC) === false) {
-    return false;
-  }
-  return true;
-}
 function validaLado(lineA, lineB, lineC) {
   if (lineA > lineB + lineC
     || lineB > lineA + lineC
@@ -65,6 +59,12 @@ function validaDif(lineA, lineB, lineC) {
     || lineC < Math.abs(lineA - lineB)) {
     return false;
   }
+}
+function triangleCheck(lineA, lineB, lineC) {
+  if (validaLado(lineA, lineB, lineC) === false || validaDif(lineA, lineB, lineC) === false) {
+    return false;
+  }
+  return true;
 }
 
 console.log(triangleCheck(10, 24, 8));
