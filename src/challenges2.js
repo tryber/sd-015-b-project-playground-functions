@@ -5,7 +5,7 @@ function techList(array, name) {
   if(array.length ===0){
     hm = 'Vazio!';
   }
-  for(let tech of sorted.array){
+  for(let tech of array.sort()){
     hm.push({tech, name})
   }
   return hm;
