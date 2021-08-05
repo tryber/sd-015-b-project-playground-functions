@@ -17,7 +17,7 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(array) {
-  let combo = array[array.length - 1] + ', ' + array[0]; //erro
+  let combo = array[array.length - 1] + ', ' + array[0]; 
   return combo;
 } console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
@@ -61,7 +61,7 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-  function fizzBuzz() { 
+function fizzBuzz() { 
   //   let fizzBuzz = [2, 15, 7, 9, 45];  
   //   for (let posicao = 0; posicao <= fizzBuzz.length; posicao+=1) {
   //     if ((fizzBuzz[posicao] % 3) === 0 && (fizzBuzz[posicao] % 5) === 0) {
@@ -75,8 +75,8 @@ function catAndMouse(mouse, cat1, cat2) {
   //     }
   //   }
   //   return fizzBuzz;
-  // }
-  }
+  // 
+}
 
 // Desafio 9
 function encode(str) {
@@ -94,11 +94,11 @@ function encode(str) {
 function decode(str) {
 // function decode(str) {
 //   let objetos = { 
-//     1: 'a', 
-//     2: 'e', 
-//     3: 'i', 
-//     4: 'o', 
-//     5: 'u',
+//     1: 'a',
+//     2: 'e',
+//     3: 'i',
+//     4: 'o',
+//     5: 'u'
 //   };
 //   return str.replace(/[1-5]/g, (v) => objetos[v]);
 }
