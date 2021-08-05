@@ -89,6 +89,7 @@ function encode(str) {
     };
   return str.replace(/[aeiou]/gi, (v) => objetos[v]);
 }
+
 function decode(str) {
   let objetos = { 
     1: 'a', 
