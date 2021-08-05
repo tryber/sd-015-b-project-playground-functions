@@ -86,7 +86,7 @@ function fizzBuzz(numbers) {
 function encodeAux(char) {
   let charReturn = 0;
   let chars = ['a', 'e', 'i', 'o', 'u'];
-  let numbers = [1, 2, 3, 4, 5]
+  let numbers = [1, 2, 3, 4, 5];
 
   for (let i = 0; i < chars.length; i += 1) {
     if (char === chars[i]) {
@@ -100,7 +100,7 @@ function encode(string) {
   // seu código aqui
   let vecString = string.split('');
   for (let i = 0; i < vecString.length; i += 1) {
-    if (encodeAux(vecString[i]) !== 0){
+    if (encodeAux(vecString[i]) !== 0) {
       vecString[i] = encodeAux(vecString[i]);
     }
   }
