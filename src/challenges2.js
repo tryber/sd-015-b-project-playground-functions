@@ -17,32 +17,28 @@ function techList(array, name) {
 console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas'));
 
 // Desafio 11
-function generatePhoneNumber(array) {
-  if (array.length !== 11) {
-    return 'Array com tamanho incorreto'; 
-  }
-  let count = 0;
-  let error = false;
-  for (let i = 0; i < array.length; i += 1) {
-    if (array[i] > 9 || array[i] < 0) {
-      error = true;
-      break;
-    } count = 0;
-    for (let numbers in array) {
-      if (array[numbers] === array[i]) {
+function generatePhoneNumber(numbers) {
+  for (let i in numbers){
+    let count = 0;
+    for (let i2 in numbers) {
+      if (numbers[i] === numbers[i2]) 
+      { 
         count += 1; 
       } 
     }
-    if (count >= 3) {
-      error = true;
-      break;
-     }
-     }
-  if (error) {
-    return 'não é possível gerar um número de telefone com esses valores';
-  } return ('(' + array[0] + array[1] + ') '
-  + array[2] + array[3] + array[4] + array[5] + array[6]
-  + '-' + array[7] + array[8] + array[9] + array[10]);
+    if (numbers.length != 11) 
+    { 
+      return "Array com tamanho incorreto."; 
+    }
+    if (numbers[i] < 0 || numbers[i] > 9 || count >= 3) {
+      return 'não é possível gerar um número de telefone com esses valores'; }
+  }
+  let convertArrayToString = numbers.toString();
+  let formatNumbers = convertArrayToString.replace(/,/g, '');
+  let part1 = formatNumbers.slice(0,2);
+  let part2 = formatNumbers.slice(2,7);
+  let part3 = formatNumbers.slice(7, 11);
+  return `(${part1}) ${part2} - ${part3}`; //literal
 }
 
 // Desafio 12
@@ -57,16 +53,13 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function hydrate(strings) {
-	numbers = (strings.match(/\d+/g))
-	sum = 0
+	numbers = (strings.match(/\d+/g));
+	let sum = 0;
 	for (let i in numbers) {
-		sum += parseInt(numbers[i])
+		sum += parseInt(numbers[i]);
 	}
-	return `${sum} copos de água`
+	return `${sum} copos de água`;
 }
-// console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"));
-// console.log(hydrate("1 cerveja"));
-
 
 module.exports = {
   generatePhoneNumber,
