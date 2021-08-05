@@ -99,7 +99,7 @@ function encode(str) {
   return resultado;
 }
 
-function decode(str) { 
+function decode(str) {
   // seu código aqui
   let resultado = str.replace(/1/gi, 'a').replace(/2/gi, 'e').replace(/3/gi, 'i').replace(/4/gi, 'o').replace(/5/gi, 'u');
   return resultado;

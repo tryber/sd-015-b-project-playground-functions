@@ -9,8 +9,22 @@ function generatePhoneNumber() {
 }
 
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
+  let somaLineALineB = (lineA + lineB);
+  let subtracaoLineALineB = Math.abs(lineA - lineB);
+  let somaLineALineC = (lineA + lineC);
+  let subtracaoLineALineC = Math.abs(lineA - lineC);
+  let somalineBLineC = (lineB + lineC);
+  let subtracaoLineBLineC = Math.abs(lineB-lineC);
+  let resultado = 0;
+  if (somalineBLineC > lineA  < subtracaoLineBLineC && somaLineALineC > lineB < subtracaoLineALineC && somaLineALineB > lineC < subtracaoLineALineB) {
+    resultado = true;
+  }
+  else {
+    resultado = false;
+  }
+  return resultado;
 }
 
 // Desafio 13
