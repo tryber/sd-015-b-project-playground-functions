@@ -95,14 +95,62 @@ function fizzBuzz(array) {
 }
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
-
-
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let frase = string;
+  let resultado = [];
+  for (index = 0; index < frase.length; index += 1) {
+    switch (frase[index]){
+      case 'a':
+        resultado.push(1);
+        break;
+
+      case 'e':
+        resultado.push(2);
+        break;
+      case 'i':
+        resultado.push(3);
+        break;
+      case 'o':
+        resultado.push(4);
+        break;
+      case 'u':
+        resultado.push(5);
+        break;
+
+      default: resultado.push(frase[index]);
+        break;
+    }
+  }let resultadoFinal= resultado.join('') 
+  return resultadoFinal;
 }
-function decode() {
-  // seu código aqui
+function decode(string) {
+  let frase = string;
+  let resultado = [];
+  for (index = 0; index < frase.length; index += 1) {
+    switch (frase[index]){
+      case '1':
+        resultado.push('a');
+        break;
+
+      case '2':
+        resultado.push('e');
+        break;
+      case '3':
+        resultado.push('i');
+        break;
+      case '4':
+        resultado.push('o');
+        break;
+      case '5':
+        resultado.push('u');
+        break;
+
+      default: resultado.push(frase[index]);
+        break;
+    }
+  }let resultadoFinal= resultado.join('') 
+  return resultadoFinal;
 }
 
 module.exports = {
