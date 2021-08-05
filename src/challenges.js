@@ -3,20 +3,16 @@
 // retorna true se ambos forem verdadeiros
 // retorna false se um dos 2 forem falsos
 // // retorna false se os 2 forem falsos
-function compareTrue(cor1,cor2) {
-  if (cor1 === true && cor2 === true) {
-  return true;
-} else {
-  return false;
-}
+function compareTrue(cor1, cor2) {
+  let compare = cor1 && cor2;
+  return compare;
 }
 
 // Desafio 2
 function calcArea(base, height) {
   let result = (base * height) / 2;
-  
-  return result
-  }
+  return result;
+}
 
 // Desafio 3
 // cria a função q deve receber uma string
@@ -28,19 +24,17 @@ function splitSentence(frase) {
 
 // Desafio 4
 function concatName(array) {
-  let arrayReverse = array.reverse();
-  
-  return array[0] + ', ' + array[array.length - 1];
-  
+  array.reverse();
+  return (array[0] + ', ' + array[array.length - 1]);
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
   let pointsWins = wins * 3;
   let pointsTies = ties;
-  let totalPoints = pointsWins + pointsTies;                                                                                                
+  let totalPoints = pointsWins + pointsTies;
 
-  return totalPoints
+  return totalPoints;
 }
 
 // Desafio 6
@@ -49,29 +43,27 @@ function highestCount(arrayNumeros) {
   let contNum = arrayNumeros[0];
   for (let num of arrayNumeros) {
     if (num > saveNum) {
-    saveNum = num;
-    contNum = 0;
+      saveNum = num;
+      contNum = 0;
     }
     if (num === saveNum) {
-    contNum++
-   }
-   }
-    return contNum;
+      contNum += 1;
+    }
+  }
+  return contNum;
 }
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  
+  let resultado;
   if ((Math.abs(cat1 - mouse)) > (Math.abs(cat2 - mouse))) {
-    resultado = 'cat2'
+    resultado = 'cat2';
+  } else if ((Math.abs(cat2 - mouse)) > (Math.abs(cat1 - mouse))) {
+    resultado = 'cat1';
+  } else {
+    resultado = 'os gatos trombam e o rato foge';
   }
-  else if ((Math.abs(cat2 - mouse)) > (Math.abs(cat1 - mouse))) {
-    resultado = 'cat1'
-  }
-  else {
-    resultado = 'os gatos trombam e o rato foge'
-  }
-  return resultado
+  return resultado;
 }
 
 // Desafio 8
@@ -80,17 +72,14 @@ function fizzBuzz(arrayNumeros) {
   for (let index = 0; index < arrayNumeros.length; index += 1) {
     if (arrayNumeros[index] % 15 === 0) {
       arrayString.push('fizzBuzz');
-    }  
-    else if (arrayNumeros[index] % 5 === 0) {
-      arrayString.push('buzz');  
-    }
-    else if (arrayNumeros[index] % 3 === 0) {
+    } else if (arrayNumeros[index] % 5 === 0) {
+      arrayString.push('buzz');
+    } else if (arrayNumeros[index] % 3 === 0) {
       arrayString.push('fizz');
-    }
-    else {
+    } else {
       arrayString.push('bug!');
-    }    
-}
+    }
+  }
   return arrayString;
 }
 
