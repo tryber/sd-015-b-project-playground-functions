@@ -10,8 +10,8 @@ function techList(string, name) {
   }; 
   if (string.length > 0) {
     return list
-  }; else {
-    return "Vazio!";
+  } else {
+    return "Vazio!"
   };
 };
  
