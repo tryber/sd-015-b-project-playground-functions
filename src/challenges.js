@@ -53,7 +53,7 @@ function catAndMouse(mouse, cat1, cat2) {
   let resposta = '';
   if (distCat1 > distCat2) {
     resposta = 'cat2';
-  } else if (distCat2 > distCat1) {
+  } else if (distCat2 > distCat1) {s
     resposta = 'cat1';
   } else if (distCat1 === distCat2) {
     resposta = 'os gatos trombam e o rato foge';
@@ -95,7 +95,7 @@ function decode(str) {
     2: 'e', 
     3: 'i', 
     4: 'o', 
-    5: 'u' 
+    5: 'u',
   };
   return str.replace(/[1-5]/g, (v) => objetos[v]);
 }

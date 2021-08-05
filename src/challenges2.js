@@ -4,13 +4,13 @@ function techList(array, name) {
   if (array.length === 0) {
     return 'Vazio!';
     } 
-    let sortArray = array.sort();
-    for (const keys in sortArray) {
-      let objects ={
-        'tech':sortArray[keys],
-        'name':name,
+  let sortArray = array.sort();
+  for (const keys in sortArray) {
+      let objects = {
+      ' tech ':sortArray[keys],
+      ' name ':name,
       }
-      list.push(objects);
+     list.push(objects);
     }
     return list;
   } console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'],
@@ -19,7 +19,7 @@ function techList(array, name) {
 
 // Desafio 11
 function generatePhoneNumber(array) {
-  if(array.length != 11){
+  if (array.length !== 11){
     return 'Array com tamanho incorreto.';
   }
   let count = 0;
@@ -31,12 +31,12 @@ function generatePhoneNumber(array) {
       break;
     }
     count = 0;
-    for(let numbers in array){
+    for(let numbers in array) {
       if (array[numbers] === array[i]) {
         count += 1;
       }
     }
-    if (count >= 3){
+    if (count >= 3) {
       error = true;
       break;
     }    
