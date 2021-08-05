@@ -19,19 +19,21 @@ calcArea();
 
 // Desafio 3
 function splitSentence(palavra) {
-  // seu código aqui
-  palavra = ' ';
+  // seu código aquiclear
+  palavra = '';
   let divide = palavra.split(' ');
   return divide;
 }
-console.log(splitSentence());
+splitSentence();
 
 // Desafio 4
 function concatName(array) {
   // seu código aqui+
-array = [];
-let result = array[0] + ', ' + array[array.length-1];
-return result;
+  array = [];
+  let primeiro = array[0];
+  let ultimo = array.pop();
+  let result = ultimo + primeiro;
+  return result;
 }
 concatName();
 
@@ -60,10 +62,28 @@ function highestCount() {
   // seu código aqui
 }
 
+
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
+  mouse;
+  cat1;
+  cat2;
+
+  let distancia1 = cat1 - mouse;
+  let distancia2 = cat2 - mouse;
+
+  if (distancia1 > distancia2){
+    return 'cat2';
+  } 
+  else if (distancia2 > distancia1) {
+    return 'cat1';
+  }
+  else {
+    return 'os gatos trombam e o rato foge';
+  }
 }
+catAndMouse();
 
 // Desafio 8
 function fizzBuzz() {
