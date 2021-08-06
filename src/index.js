@@ -1,40 +1,27 @@
-// Desafio 8
-function divisorTest(dividend, divider) {
-  return dividend % divider === 0;
+// Desafio 10
+
+function createObjects(ordem, names) {
+  let array = [];
+  for (let index = 0; index < ordem.length; index += 1) {
+    let objects = {
+      tech: ordem[index],
+      name: names,
+    };
+    array.push(objects);
+  }
+  return verifVazio(array)
 }
 
-function ifFizzBuzz(dividend, string) {
-  if (divisorTest(dividend, 15)) {
-    return string.push('fizzBuzz');
+function verifVazio(array) {
+  if (array.length > 0) {
+    return array;
   }
+  return 'Vazio!';
 }
 
-function ifFizz(dividend, string) {
-  if (divisorTest(dividend, 3) && !divisorTest(dividend, 5)) {
-    return string.push('fizz');
-  }
+function techList(tech, names) {
+  let ordem = tech.sort();
+  return createObjects(ordem, names);
 }
 
-function ifBuzz(dividend, string) {
-  if (divisorTest(dividend, 5) && !divisorTest(dividend, 3)) {
-    return string.push('buzz');
-  }
-}
-
-function ifBug(dividend, string) {
-  if (!divisorTest(dividend, 15)) {
-    return string.push('bug!');
-  }
-}
-
-function fizzBuzz(a) {
-  let string = [];
-  for (let i = 0; i < a.length; i += 1) {
-    (ifFizzBuzz(a[i], string));
-    (ifFizz(a[i], string));
-    (ifBuzz(a[i], string));
-    (ifBug(a[i], string));
-  }
-  return string;
-}
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'lucas'));

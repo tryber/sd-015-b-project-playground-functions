@@ -42,13 +42,16 @@ function highestCount(array) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
+  let distance1 = Math.abs(cat1 - mouse);
+  let distance2 = Math.abs(cat2 - mouse);
+
+  if (distance1 < distance2) {
     return 'cat1';
-  } else if (Math.abs(cat2 - mouse) < Math.abs(cat1 - mouse)) {
-    return 'cat2';
-  } else {
-    return 'os gatos trombam e o rato foge';
   }
+  if (distance2 < distance1) {
+    return 'cat2';
+  }
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
@@ -56,20 +59,39 @@ function divisorTest(dividend, divider) {
   return dividend % divider === 0;
 }
 
-function fizzBuzz(a) {
-  let resultado = [];
-  for (let i = 0; i < a.length; i += 1) {
-    if (divisorTest(a[i], 15)) {
-      resultado.push('fizzBuzz');
-    } else if (divisorTest(a[i], 3)) {
-      resultado.push('fizz');
-    } else if (divisorTest(a[i], 5)) {
-      resultado.push('buzz');
-    } else {
-      resultado.push('bug!');
-    }
+function ifFizzBuzz(dividend, string) {
+  if (divisorTest(dividend, 15)) {
+    return string.push('fizzBuzz');
   }
-  return resultado;
+}
+
+function ifFizz(dividend, string) {
+  if (divisorTest(dividend, 3) && !divisorTest(dividend, 5)) {
+    return string.push('fizz');
+  }
+}
+
+function ifBuzz(dividend, string) {
+  if (divisorTest(dividend, 5) && !divisorTest(dividend, 3)) {
+    return string.push('buzz');
+  }
+}
+
+function ifBug(dividend, string) {
+  if (!divisorTest(dividend, 3) && !divisorTest(dividend, 5)) {
+    return string.push('bug!');
+  }
+}
+
+function fizzBuzz(numbers) {
+  let string = [];
+  for (let i = 0; i < numbers.length; i += 1) {
+    (ifFizzBuzz(numbers[i], string));
+    (ifFizz(numbers[i], string));
+    (ifBuzz(numbers[i], string));
+    (ifBug(numbers[i], string));
+  }
+  return string;
 }
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
