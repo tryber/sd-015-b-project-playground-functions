@@ -14,9 +14,6 @@ function techList(listaTecnologia, name) {
 function generatePhoneNumber(numbers) {
   // seu código aqui
   let contador = 0;
-  let mensagemAlerta = 0;
-  let mensagemAlertaegunda = 0;
-  let tamanhoIncorreto = 0;
   let transformarArrayEmString = numbers.join('');
   let ddd = transformarArrayEmString.substr(0, 2);
   let primeiraParteNumero = transformarArrayEmString.substr(2, 5);
