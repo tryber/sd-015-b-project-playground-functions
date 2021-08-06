@@ -14,12 +14,12 @@ function calcArea(base, altura) {
 // Desafio 3
 /** Sourse: https://stackoverflow.com/questions/18473326/javascript-break-sentence-by-words */
 function splitSentence(sentense) {
-  return sentense.split(" ");
+  return sentense.split(' ');
 }
 
 // Desafio 4
 function concatName(fullName) {
-  return fullName[fullName.length - 1] + ", " + fullName[0];
+  return `${fullName[fullName.length - 1]}, ${fullName[0]}`;
 }
 
 // Desafio 5
@@ -31,47 +31,75 @@ function footballPoints(wins, ties) {
 /** Source: https://stackoverflow.com/questions/46640420/how-to-find-number-of-occurrence-of-highest-element-in-an-javascript-array/46640571 */
 function highestCount(arr) {
   let max = Math.max(...arr);
-  let count = arr.filter(x => x === max).length;
+  let count = arr.filter((x) => x === max).length;
   return count;
 }
-
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   if ((Math.abs(cat1 - mouse)) === (Math.abs(cat2 - mouse))) {
-    return "os gatos trombam e o rato foge";
-  } else if ((Math.abs(cat1 - mouse)) < (Math.abs(cat2 - mouse))) {
-    return "cat1";
-  } else {
-    return "cat2";
+    return 'os gatos trombam e o rato foge';
+  } if ((Math.abs(cat1 - mouse)) < (Math.abs(cat2 - mouse))) {
+    return 'cat1';
   }
+  return 'cat2';
 }
 
 // Desafio 8
 function fizzBuzz(arr) {
-  let fizzBuzz = [];
-  for (let i = 0; i < arr.length; i += 1) {
-    if (arr[i] % 15 === 0) {
-      fizzBuzz.push("fizzBuzz");
-    } else if (arr[i] % 5 === 0) {
-      fizzBuzz.push("buzz");
-    } else if (arr[i] % 3 === 0) {
-      fizzBuzz.push("fizz");
+  let arrayFizzBuzz = [];
+  for (let index = 0; index < arr.length; index += 1) {
+    if (arr[index] % 15 === 0) {
+      arrayFizzBuzz.push('fizzBuzz');
+    } else if (arr[index] % 5 === 0) {
+      arrayFizzBuzz.push('buzz');
+    } else if (arr[index] % 3 === 0) {
+      arrayFizzBuzz.push('fizz');
     } else {
-      fizzBuzz.push("bug!");
+      arrayFizzBuzz.push('bug!');
     }
   }
-  return fizzBuzz;
+  return arrayFizzBuzz;
 }
-
-
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(sentense) {
+  let encodeSentence = '';
+  for (let index = 0; index < sentense.length; index += 1) {
+    if (sentense[index] === 'a') {
+      encodeSentence += '1';
+    } else if (sentense[index] === 'e') {
+      encodeSentence += '2';
+    } else if (sentense[index] === 'i') {
+      encodeSentence += '3';
+    } else if (sentense[index] === 'o') {
+      encodeSentence += '4';
+    } else if (sentense[index] === 'u') {
+      encodeSentence += '5';
+    } else {
+      encodeSentence += sentense[index];
+    }
+  }
+  return encodeSentence;
 }
-function decode() {
-  // seu código aqui
+function decode(sentense) {
+  let decodeSentence = '';
+  for (let index = 0; index < sentense.length; index += 1) {
+    if (sentense[index] === '1') {
+      decodeSentence += 'a';
+    } else if (sentense[index] === '2') {
+      decodeSentence += 'e';
+    } else if (sentense[index] === '3') {
+      decodeSentence += 'i';
+    } else if (sentense[index] === '4') {
+      decodeSentence += 'o';
+    } else if (sentense[index] === '5') {
+      decodeSentence += 'u';
+    } else {
+      decodeSentence += sentense[index];
+    }
+  }
+  return decodeSentence;
 }
 
 module.exports = {
