@@ -71,7 +71,7 @@ function catAndMouse(mouse, cat1, cat2) {
   if (Math.abs(mouse - cat1) === Math.abs(mouse - cat2)) {
     return "os gatos trombam e o rato foge"
   }
-  return "cat2"
+  return "cat2";
 }
 
 // Desafio 8
@@ -88,15 +88,47 @@ function fizzBuzz(numeros) {
       ar.push("bug!");
     }
   }
-  return ar
+  return ar;
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encodeMudaBusca(indice) {
+  let ar = "aeiou";
+  return ar[indice];
 }
-function decode() {
-  // seu código aqui
+
+function encode(s) {
+  let cont = 1;
+  let str = s;
+  for(let i=0; i < 6; i++ ) {
+    let letra = encodeMudaBusca(i);
+    for (let k = 0; k < s.length; k++) {
+      if(letra === s[k]) {
+        str = str.replace(letra, cont);
+      }
+    }
+    cont  ++;
+  }
+  return str;
+}
+
+function decodeMudaBusca(index) {
+  let ar = "12345";
+  return ar[index];
+}
+
+function decode(s) {
+  let str = s;
+  teste = s;
+  for (let i = 0; i < 6; i++) {
+    let numero = decodeMudaBusca(i);
+    for (let k=0; k < s.length; k++) {
+      if(numero === s[k]) {
+        str = str.replace(numero, encodeMudaBusca(i));
+      }
+    }
+  }
+  return str;
 }
 
 module.exports = {
