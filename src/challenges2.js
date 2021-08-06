@@ -20,6 +20,18 @@ function repeatThree(value) {
     if (count >= 3) return false;
   }
 }
+
+function verificationStatus(value) {
+  let status = true;
+  let statusOptions = [lessThanZero(value), greaterThanNine(value), repeatThree(value)];
+  let stopMsg = 'não é possível gerar um número de telefone com esses valores';
+  
+  for (let index = 0; index < statusOptions.length; index += 1) {
+    if (statusOptions[index] == false) status = stopMsg;
+  }
+
+  return status;
+}
 // Fim das funções auxiliares para o desafio 11
 
 // Desafio 10
