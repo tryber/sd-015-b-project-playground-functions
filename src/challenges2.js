@@ -16,16 +16,16 @@ function techList(arrayTech, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber(arrayNumbers) {
-  if (arrayNumbers.length !== 11) {
+function generatePhoneNumber(a) {
+  if (a.length !== 11) {
     return ('Array com tamanho incorreto.');
   }
-  for (let index = 0; index <= arrayNumbers.length; index += 1) {
+  for (let index = 0; index <= a.length; index += 1) {
     let vezesQueRepete = 0;
-    for (let i = 0; i <= arrayNumbers.length; i += 1) {
-      if (arrayNumbers[index] === arrayNumbers[i]) {
+    for (let i = 0; i <= a.length; i += 1) {
+      if (a[index] === a[i]) {
         vezesQueRepete += 1;
-      } else if (arrayNumbers[i] < 0 || arrayNumbers[i] > 9) {
+      } else if (a[i] < 0 || a[i] > 9) {
         return ('não é possível gerar um número de telefone com esses valores');
       }
     }
@@ -33,22 +33,18 @@ function generatePhoneNumber(arrayNumbers) {
       return ('não é possível gerar um número de telefone com esses valores');
     }
   }
-  arrayNumbers = `(${arrayNumbers[0]}${arrayNumbers[1]}) ${arrayNumbers[2]}${arrayNumbers[3]}${arrayNumbers[4]}${arrayNumbers[5]}${arrayNumbers[6]}-${arrayNumbers[7]}${arrayNumbers[8]}${arrayNumbers[9]}${arrayNumbers[10]}`;
-  return arrayNumbers;
+  a = `(${a[0]}${a[1]}) ${a[2]}${a[3]}${a[4]}${a[5]}${a[6]}-${a[7]}${a[8]}${a[9]}${a[10]}`;
+  return (a);
 }
 (generatePhoneNumber([9, 2, 3, 0, 5, -6, 7, 8, -7, 0, 1]));
 
 // Desafio 12
+
 function triangleCheck(lineA, lineB, lineC) {
-  if (
-     (lineB + lineC > lineA) && lineA > Math.abs(lineB - lineC) ||
-     (lineA + lineC > lineB) && lineB > Math.abs(lineA - lineC) ||
-     (lineA + lineB > lineC) && lineC > Math.abs(lineA - lineB)
-     ) {
-   return (true);
- } else {
-   return (false);
+  if ((lineB + lineC > lineA) && lineA > Math.abs(lineB - lineC)) {
+    return (true);
   }
+  return (false);
 }
 
 // Desafio 13
