@@ -74,35 +74,35 @@ catAndMouse(5, 7, 7);
 
 // Desafio 8
 
-function div3(dividend) {
-  return dividend % 3 === 0;
+function div3(divisivel) {
+  return divisivel % 3 === 0;
 }
-function div5(dividend) {
-  return dividend % 5 === 0;
+function div5(divisivel) {
+  return divisivel % 5 === 0;
 }
-function isFizz(num, arrayFizzBuzz) {
-  if (div3(num) && !div5(num)) {
-    arrayFizzBuzz.push(‘fizz’);
+function isFizz(number, arrayBuzz) {
+  if (div3(number) && !div5(number)) {
+    arrayBuzz.push('fizz');
   }
 }
-function isBuzz(num, arrayFizzBuzz) {
-  if (div5(num) && !div3(num)) {
-    arrayFizzBuzz.push(‘buzz’);
+function isBuzz(number, arrayBuzz) {
+  if (div5(number) && !div3(number)) {
+    arrayBuzz.push('buzz');
   }
 }
-function isFizzBuzz(num, arrayFizzBuzz) {
-  if (div3(num) && div5(num)) {
-    arrayFizzBuzz.push(‘fizzBuzz’);
+function isFizzBuzz(number, arrayBuzz) {
+  if (div3(number) && div5(number)) {
+    arrayBuzz.push('fizzBuzz');
   }
 }
-function isBug(num, arrayFizzBuzz) {
-  if (!div3(num) && !div5(num)) {
-    arrayFizzBuzz.push(‘bug!’);
+function isBug(number, arrayBuzz) {
+  if (!div3(number) && !div5(number)) {
+    arrayBuzz.push('bug!');
   }
 }
-function fizzBuzz(arrayFizzBuzz) {
+function fizzBuzz(arrayBuzz) {
   let result = [];
-  for (let position of arrayFizzBuzz) {
+  for (let position of arrayBuzz) {
     isFizz(position, result);
     isBuzz(position, result);
     isFizzBuzz(position, result);
@@ -124,7 +124,7 @@ function encode(mensagem) {
 
 console.log(encode('hi there!'));
 
-function decode(stringContraria) {
+function decode(mensagem) {
   let replaceMsg = stringContraria.replace(/1/g, 'a').replace(/2/g, 'e')
     .replace(/3/g, 'i').replace(/4/g, 'o').replace(/5/g, 'u');
   return replaceMsg;
