@@ -11,9 +11,16 @@
     function calcArea(base, height){
         return (base*height)/2;
     }
-
     calcArea(10, 50);
+
+    function calcArea(base, height){
+        return (base*height)/2;
+    }
     calcArea(5, 2);
+
+    function calcArea(base, height){
+        return (base*height)/2;
+    }
     calcArea(51, 1);
 
     //3
@@ -31,3 +38,6 @@
     concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolilo']);
     concatName(['foguete', 'não', 'tem', 'ré']);
     concatName(['captain', 'my', 'captain']);
+
+    //5
+
