@@ -88,13 +88,13 @@ function fizzBuzz(arr) {
   let res = [];
   for (let num of arr) {
     if (num % 5 === 0 && num % 3 === 0) {
-      res.push('fizzBuzz');
+      res.push("fizzBuzz");
     } else if (num % 5 === 0) {
-      res.push('buzz');
+      res.push("buzz");
     } else if (num % 3 === 0) {
-      res.push('fizz');
+      res.push("fizz");
     } else {
-      res.push('bug');
+      res.push("bug!");
     }
   }
   return res;
@@ -103,7 +103,7 @@ fizzBuzz([2, 15, 7, 9, 45]);
 // Desafio 9
 function encode(string) {
   // seu código aqui
-  let codeString = ' ';
+  let codeString = "";
   for (let i in string){
     switch(string[i]){
       case "a":
@@ -128,7 +128,7 @@ function encode(string) {
   }
   return codeString;
 }
-console.log(encode("hi there"));
+encode("hi there");
 
 function decode(num) {
   // seu código aqui
@@ -156,7 +156,7 @@ function decode(num) {
   }
   return codeNumber;
 }
-  decode('h3 th2r2');
+  decode("h3 th2r2");
 
 module.exports = {
   calcArea,
