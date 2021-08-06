@@ -18,18 +18,30 @@ return string.split(" ");
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  let first = [array[0]];
+  let last = array[array.length - 1];
+  let separator = ", ";
+  let name = last + separator + first;
+return name;
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  if (wins > 0) {
+    wins = wins*3;
+  }
+return ties + wins
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  let height = 0;
+for (index = 1; index > array.length; index++) {
+  if (array[index] > height) {
+    return height++
+  }
+}
 }
 
 // Desafio 7
