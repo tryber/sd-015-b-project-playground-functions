@@ -57,18 +57,38 @@ const buzzStr = () => 'buzz';
 const fizzStr = () => 'fizz';
 const bugStr = () => 'bug!';
 
+let fizzBuzzArray = [];
+
+const ifIsFizzBuzz = (num) => {
+  if (restIsValid(num, 15)) return fizzBuzzArray.push(fizzBuzzStr());
+};
+
+const ifIsBuzz = (num) => {
+  if (restIsValid(num, 5) && !restIsValid(num, 3)) return fizzBuzzArray.push(buzzStr());
+};
+
+const ifIsFizz = (num) => {
+  if (restIsValid(num, 3) && !restIsValid(num, 5)) return fizzBuzzArray.push(fizzStr());
+};
+
+const ifIsBug = (num) => {
+  if (!restIsValid(num, 5) && !restIsValid(num, 3)) return fizzBuzzArray.push(bugStr());
+};
+
+const checkFizzBuzz = (num) => {
+  ifIsFizzBuzz(num);
+  ifIsFizz(num);
+  ifIsBuzz(num);
+  ifIsBug(num);
+};
 function fizzBuzz(arr) {
-  let fizzBuzzArray = [];
+  fizzBuzzArray = []
   for (let num of arr) {
-    if (restIsValid(num, 15)) fizzBuzzArray.push(fizzBuzzStr());
-    else if (restIsValid(num, 5)) fizzBuzzArray.push(buzzStr());
-    else if (restIsValid(num, 3)) fizzBuzzArray.push(fizzStr());
-    else fizzBuzzArray.push(bugStr());
+    checkFizzBuzz(num);
   }
   return fizzBuzzArray;
 }
 
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode(str) {
