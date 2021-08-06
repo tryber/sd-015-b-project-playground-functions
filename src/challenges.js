@@ -36,12 +36,14 @@ return ties + wins
 
 // Desafio 6
 function highestCount(array) {
-  let height = 0;
-for (index = 1; index > array.length; index++) {
-  if (array[index] > height) {
-    return height++
+let highestNumber = Math.max.apply(Math, array);
+let counter = 0;
+for (let index = 0; index < array.length; index += 1) {
+  if(highestNumber === array[index]) {
+    counter += 1;
   }
 }
+return counter;
 }
 
 // Desafio 7
