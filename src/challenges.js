@@ -26,7 +26,7 @@ function concatName(palavras) {
   let ultimaPalavra = '';
   let fraseJunta = '';
   primeiraPalavra = palavras[0];
-  for (let index = 0; index < palavras.length; index+=1) {
+  for (let index = 0; index < palavras.length; index += 1) {
     if (index === (palavras.length - 1)) {
       ultimaPalavra = palavras[index];
     }
@@ -132,7 +132,7 @@ function encode(arrayNormal) {
 function decode(arrayCodificado) {
   let arrayNormal = [];
   let mensagem = '';
-  for (index = 0; index < arrayCodificado.length; index+=1) {
+  for (let index = 0; index < arrayCodificado.length; index += 1) {
     if (arrayCodificado[index] === '1') {
       arrayNormal[index] = 'a';
     } else if (arrayCodificado[index] === '2') {
