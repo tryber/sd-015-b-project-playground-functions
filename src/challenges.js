@@ -152,7 +152,6 @@ function decode(number){
   }
   return store
 }
-  console.log(decode("h3 th2r2!"))
 
 module.exports = {
   calcArea,
