@@ -69,11 +69,6 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-// % 3 = 'fizz'
-// % 5 = 'buzz'
-// % 3 && 5 = 'fizzBuzz'
-// % 3 && 5 != 0 'bug'
-
 function fizzBuzz(arrayNum) {
   let valores = [];
   for (let i = 0; i < arrayNum.length; i += 1) {
@@ -91,12 +86,57 @@ function fizzBuzz(arrayNum) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let finalCode = string;
+  for (let key in string){
+    switch(string[key]){
+      case 'a':
+        finalCode = finalCode.replace('a','1');
+        break;
+      case 'e':
+        finalCode = finalCode.replace('e','2');
+        break;
+      case 'i':
+        finalCode = finalCode.replace('i','3');
+        break;
+      case 'o':
+        finalCode = finalCode.replace('o','4');
+        break;
+      case 'u':
+        finalCode = finalCode.replace('u','5');
+        break;
+    }
+  }
+  return finalCode; 
+  }
+  console.log(encode('alexandre ottoni, jovem nerd'));
+
+function decode(string){
+  let finalCode = string;
+  for (let key in string){
+    switch(string[key]){
+      case '1':
+        finalCode = finalCode.replace('1','a');
+        break;
+      case '2':
+        finalCode = finalCode.replace('2','e');
+        break;
+      case '3':
+        finalCode = finalCode.replace('3','i');
+        break;
+      case '4':
+        finalCode = finalCode.replace('4','o');
+        break;
+      case '5':
+        finalCode = finalCode.replace('5','u');
+        break;
+    }
+  }
+  return finalCode;
 }
-function decode() {
-  // seu código aqui
-}
+
+// seu código aqui
+
 
 module.exports = {
   calcArea,
@@ -109,4 +149,4 @@ module.exports = {
   footballPoints,
   highestCount,
   splitSentence,
-};
+}
