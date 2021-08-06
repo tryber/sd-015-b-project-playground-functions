@@ -1,13 +1,7 @@
 // Início das funções auxiliares para o desafio 11
-function lessThanZero(value) {
+function lessZeroOrGreaterNine(value) {
   for (let item of value) {
-    if (item < 0) return false;
-  }
-}
-
-function greaterThanNine(value) {
-  for (let item of value) {
-    if (item > 9) return false;
+    if (item < 0 || item > 9) return false;
   }
 }
 
@@ -23,7 +17,7 @@ function repeatThree(value) {
 
 function verificationStatus(value) {
   let status = true;
-  let statusOptions = [lessThanZero(value), greaterThanNine(value), repeatThree(value)];
+  let statusOptions = [lessZeroOrGreaterNine(value), repeatThree(value)];
   let stopMsg = 'não é possível gerar um número de telefone com esses valores';
 
   for (let index = 0; index < statusOptions.length; index += 1) {
