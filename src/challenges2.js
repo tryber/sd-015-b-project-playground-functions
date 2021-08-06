@@ -42,8 +42,6 @@ function generatePhoneNumber(phone) {
   return result;
 }
 
-
-
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   if (lineA >= lineB + lineC 
