@@ -62,9 +62,9 @@ function catAndMouse(mouse, cat1, cat2) {
   let distanciaCat1 = Math.abs(cat1 - mouse);
   let distanciaCat2 = Math.abs(cat2 - mouse);
   if (distanciaCat2 < distanciaCat1) {
-    return 'cat 2';
+    return 'cat2';
   } if (distanciaCat1 < distanciaCat2) {
-    return 'cat 1';
+    return 'cat1';
   } return 'os gatos trombam e o rato foge';
 }
 
