@@ -39,8 +39,16 @@ function generatePhoneNumber(arrayNumbers) {
 (generatePhoneNumber([9, 2, 3, 0, 5, -6, 7, 8, -7, 0, 1]));
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  if (
+     (lineB + lineC > lineA) && lineA > Math.abs(lineB - lineC) ||
+     (lineA + lineC > lineB) && lineB > Math.abs(lineA - lineC) ||
+     (lineA + lineB > lineC) && lineC > Math.abs(lineA - lineB)
+     ) {
+   return (true);
+ } else {
+   return (false);
+  }
 }
 
 // Desafio 13
