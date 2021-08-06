@@ -18,7 +18,7 @@ function techList(tech, name) {
 // Desafio 11
 function generatePhoneNumber(numbers) {
   if (numbers.length != 11) {
-    return 'Array com tamanho incorreto';
+    return 'Array com tamanho incorreto.';
   }
 
   for (let index = 0; index < numbers.length; index += 1) {
