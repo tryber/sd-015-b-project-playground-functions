@@ -22,7 +22,7 @@ splitSentence('go Trybe');
 // Desafio 4
 function concatName(array) {
   let firstArray = array[0];
-  let lastArray = array[array.length - 1];
+  let lastArray = array[array.length - 1] + ', ';
   let combo = lastArray.concat(firstArray);
   return combo;
 }
@@ -72,7 +72,7 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(numbers) {
   for (let i in numbers) {
 	  if (numbers[i] % 3 === 0 && numbers[i] % 5 === 0) {
-		  	numbers[i] = 'fizzBuzz';
+      numbers[i] = 'fizzBuzz';
 	  	} else if (numbers[i] % 3 === 0 && numbers[i] % 5 !== 0) {
 		  	numbers[i] = 'fizz';
 	  	} else if (numbers[i] % 3 !== 0 && numbers[i] % 5 === 0) {
