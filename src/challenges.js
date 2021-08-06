@@ -78,15 +78,15 @@ function encode(letras) {
   let letrasDivididas = letras.split('');
 
   for (index in letrasDivididas) {
-    if (letrasDivididas[index] === 'a') {
+    if (letrasDivididas[index] == 'a') {
       letrasDivididas[index] = 1;
-    } else if (letrasDivididas[index] === 'e') {
+    } else if (letrasDivididas[index] == 'e') {
       letrasDivididas[index] = 2;
-    } else if (letrasDivididas[index] === 'i') {
+    } else if (letrasDivididas[index] == 'i') {
       letrasDivididas[index] = 3;
-    } else if (letrasDivididas[index] === 'o') {
+    } else if (letrasDivididas[index] == 'o') {
       letrasDivididas[index] = 4;
-    } else if (letrasDivididas[index] === 'u') {
+    } else if (letrasDivididas[index] == 'u') {
       letrasDivididas[index] = 5;
     }
   }
