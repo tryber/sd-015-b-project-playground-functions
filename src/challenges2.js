@@ -5,12 +5,19 @@ function lessZeroOrGreaterNine(value) {
   }
 }
 
+function increaseCount(value, index) {
+  let count = 0;
+
+  for (let item of value) {
+    if (item === value[index]) count += 1;
+  }
+
+  return count;
+}
+
 function repeatThree(value) {
   for (let index = 0; index < value.length; index += 1) {
-    let count = 0;
-    for (let item of value) {
-      if (item === value[index]) count += 1;
-    }
+    let count = increaseCount(value, index);
     if (count >= 3) return false;
   }
 }
