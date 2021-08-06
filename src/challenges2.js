@@ -1,6 +1,4 @@
 // Desafio 10
-/* resposta */
-
 function imprimi(arrayNomes, nome) {
   let array = [];
   for (let index = 0; index < arrayNomes.length; index += 1) {
