@@ -38,19 +38,18 @@ function checkHighLowNumber(numbers) {
 }
 
 function checkRepet(numbers) {
-  let count = 0;
+  let count = {};
   for (let n of numbers) {
-    count = 0;
-    for (let n2 of numbers) {
-      if (n2 === n) {
-        count += 1;
-      }
-    }
-    if (count >= 3) {
-      return count;
+    if (count[n]) {
+      count[n] += 1;
+    } else {
+      count[n] = 1;
     }
   }
+  let repeats = (Object.values(count).sort());
+  return repeats[repeats.length - 1];
 }
+
 function compareNumberValidate(numbers) {
   return checkHighLowNumber(numbers) || checkRepet(numbers) >= 3;
 }
