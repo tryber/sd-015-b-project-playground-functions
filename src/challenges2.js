@@ -5,13 +5,11 @@ if (techList.length === 0) {
   return 'Vazio!'
 } else {
 for(let i = 0; i < techList.length; i += 1){
-  technologies.push(
-    {
-      tech: techList[i],
-      name: name
-    }
-    
-)
+   let objctTech = {
+     tech: techList[i],
+     name: name
+   };
+   technologies.push(objctTech);
 }
 }
   return technologies;
