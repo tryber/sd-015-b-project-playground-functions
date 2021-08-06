@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(par1, par2) {
-  return par1 === true && par2 === true;
+  return par1 && par2;
 }
 
 // Desafio 2
@@ -62,17 +62,19 @@ console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 function catAndMouse(mouse, cat1, cat2) {
   let distCat1 = Math.abs(cat1 - mouse);
   let distCat2 = Math.abs(cat2 - mouse);
+  let retorno = '';
   if (distCat1 > distCat2) {
-    return 'cat2';
+    retorno = 'cat2';
   } else if (distCat1 < distCat2) {
-    return 'cat1';
-  } else if (distCat1 === distCat2) {
-    return 'os gatos trombam e o rato foge';
+    retorno = 'cat1';
+  } else {
+    retorno = 'os gatos trombam e o rato foge';
   }
+  return retorno;
 }
 
 // Desafio 8
-function definea(vetor) {
+function fizzBuzz(vetor) {
   let vec = [];
   for (let number of vetor) {
     if (number % 3 === 0 && number % 5 === 0) {
@@ -84,15 +86,11 @@ function definea(vetor) {
     } else {
       vec.push('bug!');
     }
-}
-return vec
-}
-function fizzBuzz(vetor) {
-  let vec = definea(vetor)
+  }
   return vec;
 }
 
-// Desafio 9
+// Desafio 9-
 function encode(str) {
   let string = str.split('');
   let strings = [];
