@@ -86,12 +86,63 @@ function fizzBuzz(arr) {
 }
 fizzBuzz([2,15,7,9,45]);
 // Desafio 9
-function encode() {
+function encode(string) {
   // seu código aqui
+  let codeString = "";
+  for (let i in string){
+    switch(string[i]){
+      case "a":
+        codeString = codeString.concat("1");
+        break;
+      case "e":
+        codeString = codeString.concat("2");
+        break;
+      case "i":
+          codeString = codeString.concat("3");
+          break;
+      case "o":
+          codeString = codeString.concat("4");
+          break;
+      case "u":
+          codeString = codeString.concat("5");
+          break;
+      default:
+        codeString = codeString.concat(string[i]);
+          
+    }
+  }
+  return codeString;
 }
-function decode() {
+console.log(encode("hi there"));
+
+function decode(num) {
   // seu código aqui
+  let codeNumber = "";
+  for (let i in num){
+    switch(num[i]){
+      case "1":
+        codeNumber = codeNumber.concat("a");
+        break;
+      case "2":
+        codeNumber = codeNumber.concat("e");
+        break;
+      case "3":
+          codeNumber = codeNumber.concat("i");
+          break;
+      case "4":
+          codeNumber = codeNumber.concat("o");
+          break;
+      case "5":
+          codeNumber = codeNumber.concat("u");
+          break;
+      default:
+        codeNumber = codeNumber.concat(num[i]);
+          
+    }
+  }
+  return codeNumber;
 }
+console.log(decode("h3 th2r2"));
 
 module.exports = {
   calcArea,
