@@ -28,7 +28,6 @@ function footballPoints(wins, ties) {
 }
 console.log(footballPoints(10, 3))
 
-
 // Desafio 6
 function highestCount(array_numbers) {
   let order_array = array_numbers.sort()
@@ -42,11 +41,19 @@ function highestCount(array_numbers) {
 }
 console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
 
-
 // Desafio 7
 function catAndMouse() {
-  // seu código aqui
-}
+  let cat1
+  if ((cat1 - mouse) == (cat2 - mouse)){
+    return 'os gatos trombam e o rato foge';
+  }
+  else if ((cat1 - mouse) < (cat2 - mouse)){
+      return 'cat1'
+  } 
+  else{
+      return 'cat2'
+  }       
+console.log(catAndMouse(3,6,4))
 
 // Desafio 8
 function fizzBuzz() {
@@ -54,12 +61,27 @@ function fizzBuzz() {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(texto) {
+  var novoTexto = texto.replace("a", "1"); 
+  var novoTexto1 = texto.replace("e", "2"); 
+  var novoTexto2 = texto.replace("i", "3"); 
+  var novoTexto3 = texto.replace("o", "4"); 
+  var novoTexto4 = texto.replace("u", "5");
+  return novoTexto4
 }
+console.log(encode('string teste'))
+
+
 function decode() {
-  // seu código aqui
+  var novoTexto = texto.replace("1", "a"); 
+  var novoTexto = texto.replace("2", "e"); 
+  var novoTexto = texto.replace("3", "i"); 
+  var novoTexto = texto.replace("4", "o"); 
+  var novoTexto = texto.replace("5", "u");
+  return novoTexto
 }
+
+
 
 module.exports = {
   calcArea,
@@ -72,4 +94,5 @@ module.exports = {
   footballPoints,
   highestCount,
   splitSentence,
-};
+}
+}
