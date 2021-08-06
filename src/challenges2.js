@@ -4,6 +4,12 @@ function lessThanZero(value) {
     if (item < 0) return false;
   }
 }
+
+function greaterThanNine(value) {
+  for (let item of value) {
+    if (item > 9) return false;
+  }
+}
 // Fim das funções auxiliares para o desafio 11
 
 // Desafio 10
