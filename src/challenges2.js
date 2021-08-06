@@ -4,12 +4,16 @@
 function techList(array, name) {
   array.sort();
   let tecnologias = [];
-
+  if (array == false){
+    tecnologias = 'Vazio!';
+  }
   for(let valores of array){
     tecnologias.push({tech: valores, name: name})
   }
 return tecnologias;
 }
+
+
 
 // Desafio 11
 function generatePhoneNumber() {
