@@ -20,11 +20,11 @@ function generatePhoneNumber(phoneNumber) {
   for (let count = 0; count < phoneNumber.length; count += 1) {
     let numberTimes = 0;
     for (let count2 = 0; count2 < phoneNumber.length; count2 += 1) {
-      if (phoneNumber[count] === phoneNumber[count2]){
+      if (phoneNumber[count] === phoneNumber[count2]) {
         numberTimes += 1;
       }
     }
-    if (phoneNumber[count] < 0 || phoneNumber[count] > 9 || numberTimes >= 3){
+    if (phoneNumber[count] < 0 || phoneNumber[count] > 9 || numberTimes >= 3) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
   }
@@ -33,20 +33,13 @@ function generatePhoneNumber(phoneNumber) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  let check = false;
-  if (lineA > lineB + lineC
-|| lineB > lineA + lineC
-|| lineC > lineA + lineB) {
-    check = false;
-  } else if (
-    lineA < Math.abs(lineB - lineC)
-|| lineB < Math.abs(lineA - lineC)
-|| lineC < Math.abs(lineA - lineB)) {
-    check = false;
+  if (lineA < Math.abs(lineB - lineC)
+  || lineB < Math.abs(lineA - lineC)
+  || lineC < Math.abs(lineA - lineB)) {
+    return false;
   } else {
-    check = true;
+    return true;
   }
-  return check;
 }
 
 // Desafio 13
