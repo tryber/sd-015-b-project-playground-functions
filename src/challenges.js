@@ -100,13 +100,13 @@ function decode(num) {
   for (index in numSplit) {
     if (numSplit[index] === 1) {
       numSplit[index] = 'a';
-    } else if (numSplit[index] === 2) {
+    } else if (numSplit[index] == 2) {
       numSplit[index] = 'e';
-    } else if (numSplit[index] === 3) {
+    } else if (numSplit[index] == 3) {
       numSplit[index] = 'i';
-    } else if (numSplit[index] === 4) {
+    } else if (numSplit[index] == 4) {
       numSplit[index] = 'o';
-    } else if (numSplit[index] === 5) {
+    } else if (numSplit[index] == 5) {
       numSplit[index] = 'u';
     }
   }
