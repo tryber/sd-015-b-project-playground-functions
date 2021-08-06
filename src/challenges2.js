@@ -13,17 +13,20 @@ function techList(array, name) {
 // Desafio 11
 function repete3(numbers) {
   let count = {};
+  let answer = false;
+  for (let n of numbers) {
+    count[n] = (count[n] || 0) + 1;
+  }
 
-  numbers.forEach(function (x) { count[x] = (count[x] || 0) + 1; });
-
-  for (let y = 1; y <= 11; y += 1) {
-    if (count[y] > 2) {
-      return true;
+  for (let i = 0; i <= 9; i += 1) {
+    if (count[i] > 2) {
+      answer = true;
     }
   }
+  return answer;
 }
 function possivelGerar(numbers) {
-  let possible;
+  let possible = true;
   for (let n of numbers) {
     if (n < 0 || n > 9) {
       possible = false;
@@ -34,6 +37,14 @@ function possivelGerar(numbers) {
   }
   return possible;
 }
+function qualDDD(numbers) {
+  let ddd = numbers.slice(0, 2).join('');
+  return ddd;
+}
+function telNumber(numbers) {
+  let tel = `${numbers.slice(2, 7).join('')}-${numbers.slice(7).join('')}`;
+  return tel;
+}
 function generatePhoneNumber(array) {
   let d11;
   if (array.length !== 11) {
@@ -41,9 +52,8 @@ function generatePhoneNumber(array) {
   } else if (possivelGerar(array) === false) {
     d11 = 'não é possível gerar um número de telefone com esses valores';
   } else {
-    d11 = `(${array[0]}${array[1]}) ${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}-${array[7]}${array[8]}${array[9]}${array[10]}`;
+    d11 = `(${qualDDD(array)}) ${telNumber(array)}`;
   }
-
   return d11;
 }
 
