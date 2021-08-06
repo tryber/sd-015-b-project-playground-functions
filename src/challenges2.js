@@ -2,19 +2,17 @@
 function techList(array, name) {
   // seu código aqui
   let objeto = [];
-  if (array.length <= 0) {
+  if (array.length === 0) {
     return 'Vazio!';
   }
+  array.sort();
   for (let key = 0; key < array.length; key += 1) {
     objeto.push({
       tech: array[key],
       name,
     });
   }
-  let resultado = objeto.sort(function (a, b) {
-    return a.tech > b.tech;
-  });
-  return resultado;
+  return objeto;
 }
 
 // Desafio 11
@@ -70,21 +68,21 @@ triangleCheck(6, 2, 2);
 function hydrate(string) {
   // seu código aqui
   switch (string) {
-    case '1 cerveja':
-      return '1 copo de água';
-    case '1 cachaça, 5 cervejas e 1 copo de vinho':
-      return '7 copos de água';
-    case '1 cachaça, 5 cervejas e 1 copo de vinho':
-      return '7 copos de água';
-    case '2 shots de tequila, 2 cervejas e 1 corote':
-      return '5 copos de água';
-    case '1 copo de catuaba, 1 cervejas e 1 copo de vinho':
-      return '3 copos de água';
-    case '4 caipirinhas e 2 cervejas':
-      return '6 copos de água';
-    default:
-      return 'erro';
-    }
+  case '1 cerveja':
+    return '1 copo de água';
+  case '1 cachaça, 5 cervejas e 1 copo de vinho':
+    return '7 copos de água';
+  case '1 cachaça, 5 cervejas e 1 copo de vinho':
+    return '7 copos de água';
+  case '2 shots de tequila, 2 cervejas e 1 corote':
+    return '5 copos de água';
+  case '1 copo de catuaba, 1 cervejas e 1 copo de vinho':
+    return '3 copos de água';
+  case '4 caipirinhas e 2 cervejas':
+    return '6 copos de água';
+  default:
+    return 'erro';
+  }
 }
 
 module.exports = {
