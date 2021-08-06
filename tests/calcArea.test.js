@@ -13,3 +13,5 @@ describe('2 - Crie uma função que calcule a área do triângulo', () => {
     expect(calcArea(51, 1)).toBe(25.5);
   });
 });
+
+
