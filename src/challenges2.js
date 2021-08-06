@@ -1,4 +1,17 @@
 // Desafio 10
+function compare(obj1, obj2) {
+  let techA = obj1.tech;
+  let techB = obj2.tech;
+
+  let compara = 0;
+  if (techA > techB) {
+    compara = 1;
+  } else if (techA < techB) {
+    compara = -1;
+  }
+  return compara;
+}
+
 function techList(array, nome) {
   let arrayObj = [];
   if (array.length === 0) {
@@ -7,7 +20,7 @@ function techList(array, nome) {
   for (let key in array) {
     arrayObj[key] = { tech: array[key], name: nome };
   }
-  return arrayObj;
+  return arrayObj.sort(compare);
 }
 
 // Desafio 11

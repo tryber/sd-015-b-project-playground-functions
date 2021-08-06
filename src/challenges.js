@@ -28,7 +28,7 @@ function footballPoints(wins, ties) {
 function highestCount(array) {
   let max = 0;
   let cont = 0;
-  max = Math.max.apply(null, array);
+  max = Math.max.apply(null,array);
  
   for (let index in array) {
     if (array[index] === max) {
@@ -74,7 +74,6 @@ function fizzBuzz(array) {
 // Desafio 9
 function encode(string) {
   let array = string.split('');
-  let element = '';
 
   for (let index = 0; index < array.length; index += 1) {
     switch (array[index]) {
@@ -97,16 +96,11 @@ function encode(string) {
       break;
     }
   }
-
-  for (let index = 0; index < array.length; index += 1) {
-    element += array[index];
-  }
-  return element;
+  return array.join('');
 }
 
 function decode(string) {
   let array = string.split('');
-  let element = '';
 
   for (let index = 0; index < array.length; index += 1) {
     switch (array[index]) {
@@ -129,11 +123,7 @@ function decode(string) {
       break;
     }
   }
-
-  for (let index = 0; index < array.length; index += 1) {
-    element += array[index];
-  }
-  return element;
+  return array.join('');
 }
 
 module.exports = {
