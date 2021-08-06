@@ -12,10 +12,10 @@ function greaterThanNine(value) {
 }
 
 function repeatThree(value) {
-  for (let index = 0; index < value.length; index++) {
+  for (let index = 0; index < value.length; index += 1) {
     let count = 0;
     for (let item of value) {
-      if (item === value[index]) count++;
+      if (item === value[index]) count += 1;
     }
     if (count >= 3) return false;
   }
@@ -25,17 +25,17 @@ function verificationStatus(value) {
   let status = true;
   let statusOptions = [lessThanZero(value), greaterThanNine(value), repeatThree(value)];
   let stopMsg = 'não é possível gerar um número de telefone com esses valores';
-  
+
   for (let index = 0; index < statusOptions.length; index += 1) {
-    if (statusOptions[index] == false) status = stopMsg;
+    if (statusOptions[index] === false) status = stopMsg;
   }
 
   return status;
 }
 
 function phoneNumber(value) {
-  let phoneNumber = value.join('').replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3');
-  return phoneNumber;
+  let strPhoneNumber = value.join('').replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3');
+  return strPhoneNumber;
 }
 // Fim das funções auxiliares para o desafio 11
 
@@ -62,9 +62,9 @@ function techList(arr, name) {
 
 // Desafio 11
 function generatePhoneNumber(arr) {
-  if (arr.length !== 11) return 'Array com tamanho incorreto.'
+  if (arr.length !== 11) return 'Array com tamanho incorreto.';
 
-  return (verificationStatus(arr) !== true) ? verificationStatus(arr) : phoneNumber(arr)
+  return (verificationStatus(arr) !== true) ? verificationStatus(arr) : phoneNumber(arr);
 }
 
 // Desafio 12
