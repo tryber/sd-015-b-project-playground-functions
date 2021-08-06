@@ -2,9 +2,8 @@
 function compareTrue(a, b) {
   if (a && b === true) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
 // Desafio 2
 function calcArea(base, height) {
@@ -27,13 +26,12 @@ function concatName(array) {
 function footballPoints(wins, ties) {
   let pontos = (wins * 3) + ties;
   return pontos;
-  
 }
 
 // Desafio 6
 function highestCount(a) {
   let count = 0;
-  function bigger (b, c) {
+  function bigger(b, c) {
     return b - c;
   }
   let sortedArray = a.sort(bigger);
@@ -50,9 +48,11 @@ function highestCount(a) {
 function catAndMouse(mouse, cat1, cat2) {
   if (cat1 + cat2 / 2 === mouse) {
     return 'os gatos trombam e o rato foge';
-  } else if (cat2 < cat1) {
+  }
+  if (cat2 < cat1) {
     return 'cat2';
-  } else if (cat1 < cat2) {
+  }
+  if (cat1 < cat2) {
     return 'cat1';
   }
 }
@@ -76,7 +76,7 @@ function fizzBuzz(array) {
 
 // Desafio 9
 function encode(a) {
-  let result = ''
+  let result = '';
   for (let i = 0; i < a.length; i += 1) {
     if (a[i] === 'a') {
       result += '1';
@@ -89,14 +89,14 @@ function encode(a) {
     } else if (a[i] === 'u') {
       result += '5';
     } else {
-      result += a[i]
+      result += a[i];
     }
   }
-  return result
+  return result;
 }
 
 function decode(a) {
-  let result = ''
+  let result = '';
   for (let i = 0; i < a.length; i += 1) {
     if (a[i] === '1') {
       result += 'a';
@@ -109,14 +109,11 @@ function decode(a) {
     } else if (a[i] === '5') {
       result += 'u';
     } else {
-      result += a[i]
+      result += a[i];
     }
   }
-  return result
-
+  return result;
 }
-
-
 
 module.exports = {
   calcArea,
