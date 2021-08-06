@@ -28,7 +28,9 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {}
+function highestCount() {
+
+}
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -58,10 +60,37 @@ function fizzBuzz(arr) {
 }
 
 // Desafio 9
-function encode() {
+function encode(sentence) {
+  sentence = sentence.split('');
+  const dict = {
+    a: '1',
+    e: '2',
+    i: '3',
+    o: '4',
+    u: '5',
+  };
+  let translation = [];
+  for (let item of sentence) {
+    if (dict[item]) {
+      item = dict[item];
+    } translation.push(item);
+  } return translation.join('');
 }
-function decode() {
-  // seu código aqui
+function decode(sentence) {
+  sentence = sentence.split('');
+  const dict = {
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u',
+  };
+  let translation = [];
+  for (let item of sentence) {
+    if (dict[item]) {
+      item = dict[item];
+    } translation.push(item);
+  } return translation.join('');
 }
 
 module.exports = {
