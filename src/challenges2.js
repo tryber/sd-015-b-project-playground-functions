@@ -1,3 +1,11 @@
+// Início das funções auxiliares para o desafio 11
+function lessThanZero(value) {
+  for (let item of value) {
+    if (item < 0) return false;
+  }
+}
+// Fim das funções auxiliares para o desafio 11
+
 // Desafio 10
 function techList(arr, name) {
   if (arr.length < 1) {
