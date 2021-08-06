@@ -46,26 +46,39 @@ function catAndMouse(mouse, cat1, cat2) {
   if (Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)) {
     return 'cat2';
   }
-
   return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
-function fizzBuzz(arrayNumeros) {
-  let string = [];
-  for (let index = 0; index < arrayNumeros.length; index += 1) {
-    if (arrayNumeros[index] % 5 === 0 && arrayNumeros[index] % 3 === 0) {
-      string.push('fizzBuzz');
-    } else if (arrayNumeros[index] % 5 === 0) {
-      string.push('buzz');
-    } else if (arrayNumeros[index] % 3 === 0) {
-      string.push('fizz');
-    } else {
-      string.push('bug!');
-    }
+function fizzBuzz(numbers) {
+  let phrase = [];
+  for (let index = 0; index < numbers.length; index += 1) {
+    if (numbers[index] % 15 === 0) {
+      phrase.push('fizzBuzz');
+    }else {
+      ifIsBuzz(numbers[index], phrase);
+      ifIsFizz(numbers[index], phrase);
+      ifIsBug(numbers[index], phrase); }
   }
-  return string;
+  return phrase;
 }
+
+function ifIsBuzz(dividendo, phrase) {
+  if (dividendo % 5 === 0) {
+    phrase.push('buzz');
+  }
+}
+function ifIsFizz(dividendo, phrase) {
+  if (dividendo % 3 === 0) {
+    phrase.push('fizz');
+  }
+}
+function ifIsBug(dividendo, phrase) {
+  if (!(dividendo % 3 === 0) && !(dividendo % 5 === 0)) {
+    phrase.push('bug!');
+  }
+}
+
 
 // Desafio 9
 
