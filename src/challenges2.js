@@ -1,12 +1,11 @@
 // Desafio 10
 function techList(listaTecnologia, name) {
   // seu código aqui
-  if (listaTecnologia.length === 0) 
-    return "Vazio!";
+  if (listaTecnologia.length === 0) { return 'Vazio!'; }
   listaTecnologia.sort();
   let lista = [];
   for (let tech of listaTecnologia) {
-    lista.push({tech, name});
+    lista.push({ tech, name });
   }
   return lista;
 }
@@ -26,22 +25,22 @@ function generatePhoneNumber(numbers) {
     return tamanhoIncorreto = 'Array com tamanho incorreto.';
   }
   for (let index = 0; index < numbers.length; index += 1) {
-    if (contador >= 3){
+    if (contador >= 3) {
       break;
     }
     contador = 0;
-    for (let item of numbers){
-      if (item === numbers[index]){
-        contador += 1;      
+    for (let item of numbers) {
+      if (item === numbers[index]) {
+        contador += 1;
       }
     }
   }
-  for (let index = 0; index < numbers.length; index += 1){
+  for (let index = 0; index < numbers.length; index += 1) {
     if (numbers[index] < 0 || numbers[index] > 9 || contador >= 3) {
       return mensagemAlerta = 'não é possível gerar um número de telefone com esses valores';
-      }
+    }
   }
-  return `(${ddd}) ${primeiraParteNumero}-${segundaParteNumero}`
+  return `(${ddd}) ${primeiraParteNumero}-${segundaParteNumero}`;
 }
 
 // Desafio 12
@@ -54,10 +53,9 @@ function triangleCheck(lineA, lineB, lineC) {
   let somalineBLineC = (lineB + lineC);
   let subtracaoLineBLineC = Math.abs(lineB - lineC);
   let resultado = 0;
-  if ((lineA < somalineBLineC && lineA > subtracaoLineBLineC) && (lineB < somaLineALineC && lineB > subtracaoLineALineC) && (lineC < somaLineALineB && lineC > subtracaoLineALineB)){
+  if ((lineA < somalineBLineC && lineA > subtracaoLineBLineC) && (lineB < somaLineALineC && lineB > subtracaoLineALineC) && (lineC < somaLineALineB && lineC > subtracaoLineALineB)) {
     resultado = true;
-  }
-  else {
+  } else {
     resultado = false;
   }
   return resultado;
