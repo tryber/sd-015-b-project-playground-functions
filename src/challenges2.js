@@ -1,6 +1,14 @@
 // Desafio 10
-function techList() {
+function techList(listaTecnologia, name) {
   // seu código aqui
+  if (listaTecnologia.length === 0) 
+    return "Vazio!";
+  listaTecnologia.sort();
+  let lista = [];
+  for (let tech of listaTecnologia) {
+    lista.push({tech, name});
+  }
+  return lista;
 }
 
 // Desafio 11
@@ -8,23 +16,30 @@ function generatePhoneNumber(numbers) {
   // seu código aqui
   let contador = 0;
   let mensagemAlerta = 0;
+  let mensagemAlertaegunda = 0;
   let tamanhoIncorreto = 0;
   let transformarArrayEmString = numbers.join('');
-  let ddd = transformarArrayEmString.substr(0,2);
-  let primeiraParteNumero = transformarArrayEmString.substr(2,5);
-  let segundaParteNumero = transformarArrayEmString.substr(7,4);
+  let ddd = transformarArrayEmString.substr(0, 2);
+  let primeiraParteNumero = transformarArrayEmString.substr(2, 5);
+  let segundaParteNumero = transformarArrayEmString.substr(7, 4);
   if (numbers.length !== 11) {
-    return tamanhoIncorreto = 'array com tamanho incorreto.';
+    return tamanhoIncorreto = 'Array com tamanho incorreto.';
   }
   for (let index = 0; index < numbers.length; index += 1) {
-    for(let i = index + 1; i <= numbers.length; i += 1) {
-      if (numbers[index] === numbers[i]) {
-        contador += 1;
-      }
-      if (numbers[index] < 0 || numbers[index] > 9 || contador >= 3) {
-      return mensagemAlerta = 'não é possível gerar um número de telefone com esses valores';
+    if (contador >= 3){
+      break;
+    }
+    contador = 0;
+    for (let item of numbers){
+      if (item === numbers[index]){
+        contador += 1;      
       }
     }
+  }
+  for (let index = 0; index < numbers.length; index += 1){
+    if (numbers[index] < 0 || numbers[index] > 9 || contador >= 3) {
+      return mensagemAlerta = 'não é possível gerar um número de telefone com esses valores';
+      }
   }
   return `(${ddd}) ${primeiraParteNumero}-${segundaParteNumero}`
 }
