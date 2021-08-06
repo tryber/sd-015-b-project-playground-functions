@@ -78,7 +78,7 @@ function fizzBuzz(numbers) {
 	  	} else if (numbers[i] % 3 !== 0 && numbers[i] % 5 === 0) {
 			numbers[i] = 'buzz';
 	  	} else {
-			numbers[i] = 'bug!';
+        numbers[i] = 'bug!';
     }
   } return numbers;
 } fizzBuzz([2, 15, 7, 9, 45]);
@@ -121,7 +121,7 @@ function decode(string) {
   }
   return decodedString;
 }
- 
+
 module.exports = {
   calcArea,
   catAndMouse,
