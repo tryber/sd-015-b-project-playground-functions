@@ -60,12 +60,21 @@ function highestCount(arrayVa) {
   }
   return counter;
 }
-console.log(highestCount([-1, -2, -2]));
+console.log('6° O maior número do array se repete =', highestCount(
+  [9, 1, 2, 3, 9, 5, 7, -1, -2, -2],
+), 'vezes');
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  if (Math.abs(mouse - cat1) === Math.abs(mouse - cat2)) {
+    return 'os gatos trombam e o rato foge';
+  }
+  if (cat1 < cat2) {
+    return 'cat1';
+  } return 'cat2';
 }
+
+console.log('7° Resultado:', catAndMouse());
 
 // Desafio 8
 function fizzBuzz() {
