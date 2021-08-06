@@ -2,19 +2,20 @@
 function techList(valor1, valor2) {
   valor1 = valor1.sort();
   let techInfo;
-  if (valor1.length > 0) {
-    let saida = [];
-    for (let key in valor1) {
+  let saida = [];
+  for (let key in valor1) {
+    if (valor1.length > 0) {
       techInfo = {
         tech: valor1[key],
         name: valor2,
       };
       saida.push(techInfo);
     }
-    return saida;
-  } if (valor1.length === 0) {
+  }
+  if (valor1.length === 0) {
     return 'Vazio!';
   }
+  return saida;
 }
 
 // Desafio 11
@@ -31,12 +32,12 @@ function checkHighLowNumber(numbers) {
   for (let n of numbers) {
     if (n > 10 || n < 0) {
       output = true;
-    } 
-  } 
+    }
+  }
   return output;
 }
 
-function checkRepetNumber(numbers) {
+function checkRepet(numbers) {
   let count = 0;
   for (let n of numbers) {
     count = 0;
@@ -51,13 +52,13 @@ function checkRepetNumber(numbers) {
   }
 }
 function compareNumberValidate(numbers) {
-  return checkHighLowNumber(numbers) || checkRepetNumber(numbers) >= 3;
+  return checkHighLowNumber(numbers) || checkRepet(numbers) >= 3;
 }
-function transformNumber (numbers) {
-  let dd = '('+numbers.slice(0, 2).join('')+') ';
+function transformNumber(numbers) {
+  let dd = `(${numbers.slice(0, 2).join('')}) `;
   let firstFivePrefix = numbers.slice(2, 7).join('');
   let secondFourPrefix = numbers.slice(7, 11).join('');
-  return dd + firstFivePrefix + '-' + secondFourPrefix;
+  return `${dd + firstFivePrefix}-${secondFourPrefix}`;
 }
 function generatePhoneNumber(numbers) {
   if (checkNumbers(numbers)) {
@@ -70,13 +71,25 @@ function generatePhoneNumber(numbers) {
 }
 
 // Desafio 12
+function checkTriangleLine(lineA, lineB, lineC) {
+  let compare1 = Math.abs(lineB - lineA) < lineA < lineB + lineC;
+  let compare2 = Math.abs(lineA - lineC) < lineB < lineA + lineC;
+  let compare3 = Math.abs(lineA - lineB) < lineC < lineA + lineB;
+  if (compare1 && compare2 && compare3) {
+    return true;
+  }
+}
+
+function checkLineSize(lineA, lineB, lineC) {
+  if (lineA > lineB + lineC || lineB > lineA + lineC || lineC > lineA + lineB) {
+    return true;
+  }
+}
 function triangleCheck(lineA, lineB, lineC) {
-  let output;
-  if (Math.abs(lineB - lineA) < lineA < lineB + lineC && Math.abs(lineA - lineC) < lineB < lineA + lineC && Math.abs(lineA - lineB) < lineC < lineA + lineB) {
-    if (lineA > lineB + lineC || lineB > lineA + lineC || lineC > lineA + lineB) {
+  let output = true;
+  if (checkTriangleLine(lineA, lineB, lineC)) {
+    if (checkLineSize(lineA, lineB, lineC)) {
       output = false;
-    } else {
-      output = true;
     }
   } else {
     output = false;
