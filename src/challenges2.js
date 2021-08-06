@@ -1,6 +1,8 @@
 // Desafio 10
 function techList (techList, name) {
-let technologies = []
+techList.sort()
+  let technologies = []
+var technologiesAndName = technologies.sort()
 if (techList.length === 0) {
   return 'Vazio!'
 } else {
@@ -12,7 +14,7 @@ for(let i = 0; i < techList.length; i += 1){
    technologies.push(objctTech);
 }
 }
-  return technologies;
+  return technologiesAndName;
 }
 console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"));
 // Desafio 11
