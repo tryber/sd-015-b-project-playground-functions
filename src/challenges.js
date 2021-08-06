@@ -71,15 +71,28 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   if (cat1 < cat2) {
     return 'cat1';
-  } return 'cat2';
+  }
+  return 'cat2';
 }
 
 console.log('7° Resultado:', catAndMouse());
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arrayNum) {
+  let result = [];
+  for (let index = 0; index < arrayNum.length; index += 1) {
+    if (arrayNum[index] % 3 === 0 && arrayNum[index] % 5 === 0) {
+      result.push('fizzBuzz');
+    } else if (arrayNum[index] % 3 === 0) {
+      result.push('fizz');
+    } else if (arrayNum[index] % 5 === 0) {
+      result.push('buzz');
+    } else result.push('bug!');
+  }
+  return result;
 }
+
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode() {
