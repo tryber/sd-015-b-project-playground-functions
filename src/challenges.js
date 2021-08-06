@@ -84,15 +84,9 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode(vogais) {
+function encode(string) {
   // seu código aqui
-  let vogaisa = vogais.replace(/a/g, "1");
-  let vogaise = vogaisa.replace(/e/g, "2");
-  let vogaisi = vogaise.replace(/i/g, "3");
-  let vogaiso = vogaisi.replace(/o/g, "4");
-  let vogaisu = vogaiso.replace(/u/g, "5");
-
-  return vogaisu;
+  
 }
 
 function decode() {

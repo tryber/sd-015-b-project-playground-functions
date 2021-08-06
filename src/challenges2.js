@@ -54,11 +54,20 @@ function generatePhoneNumber(numberPhone) {
 }
 
 // Desafio 12
+function trianguloA(lineA, lineB, lineC) {
+  return lineA < (lineB + lineC) && lineA > Math.abs(lineB - lineC);
+}
+function trianguloB(lineA, lineB, lineC) {
+  return lineB < (lineA + lineC) && lineB > Math.abs(lineA - lineC);
+}
+function trianguloC(lineA, lineB, lineC) {
+  return lineC < (lineA + lineB) && lineC > Math.abs(lineA - lineB);
+}
 function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
-  if(lineA < (lineB + lineC) && lineA > Math.abs(lineB - lineC)) {
-    if(lineB < (lineA + lineC) && lineB > Math.abs(lineA - lineC)) {
-      if(lineC < (lineA + lineB) && lineC > Math.abs(lineA - lineB)) {
+  if (trianguloA(lineA, lineB, lineC)) {
+    if (trianguloB(lineA, lineB, lineC)) {
+      if (trianguloC(lineA, lineB, lineC)) {
         return true;
       }
     }
