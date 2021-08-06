@@ -1,6 +1,12 @@
 // Desafio 10
-function techList() {
-  // seu código aqui
+let array = ["React", "Jest", "HTML", "CSS", "JavaScript"];
+function sortArray (array) {
+  let sortedArray = array.sort();
+  return sortedArray;
+}
+
+function techList(array, name) {
+
 }
 
 // Desafio 11
