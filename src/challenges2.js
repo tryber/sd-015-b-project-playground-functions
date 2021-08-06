@@ -1,12 +1,10 @@
 // Desafio 10
-function techList() {
-  // seu código aqui
-}
+function techList(techArray, name) {}
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
-}
+
+function generatePhoneNumber() {}
+
 
 // Desafio 12
 function triangleCheck() {
@@ -14,8 +12,17 @@ function triangleCheck() {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(sentence) {
+  const regex = /[1-9]/g;
+  let counter = 0;
+  const arr = sentence.match(regex);
+
+  for (let index in arr) {
+    arr[index] = parseFloat(arr[index]);
+    counter += arr[index];
+  } if (counter === 1) {
+    return '1 copo de água';
+  } return `${counter} copos de água`
 }
 
 module.exports = {
