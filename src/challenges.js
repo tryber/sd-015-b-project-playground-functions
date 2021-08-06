@@ -41,7 +41,7 @@ function highestCount(number) {
   return contador;
 }
 
-//Desafio 7
+// Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let posicaoCat1 = Math.abs(cat1 - mouse);
   let posicaoCat2 = Math.abs(cat2 - mouse);
@@ -78,15 +78,15 @@ function encode(letras) {
   let letrasDivididas = letras.split('');
 
   for (index in letrasDivididas) {
-    if (letrasDivididas[index] == 'a') {
+    if (letrasDivididas[index] === 'a') {
       letrasDivididas[index] = 1;
-    } else if (letrasDivididas[index] == 'e') {
+    } else if (letrasDivididas[index] === 'e') {
       letrasDivididas[index] = 2;
-    } else if (letrasDivididas[index] == 'i') {
+    } else if (letrasDivididas[index] === 'i') {
       letrasDivididas[index] = 3;
-    } else if (letrasDivididas[index] == 'o') {
+    } else if (letrasDivididas[index] === 'o') {
       letrasDivididas[index] = 4;
-    } else if (letrasDivididas[index] == 'u') {
+    } else if (letrasDivididas[index] === 'u') {
       letrasDivididas[index] = 5;
     }
   }
@@ -98,15 +98,15 @@ function decode(num) {
   let numSplit = num.split('');
 
   for (index in numSplit) {
-    if (numSplit[index] == 1) {
+    if (numSplit[index] === 1) {
       numSplit[index] = 'a';
-    } else if (numSplit[index] == 2) {
+    } else if (numSplit[index] === 2) {
       numSplit[index] = 'e';
-    } else if (numSplit[index] == 3) {
+    } else if (numSplit[index] === 3) {
       numSplit[index] = 'i';
-    } else if (numSplit[index] == 4) {
+    } else if (numSplit[index] === 4) {
       numSplit[index] = 'o';
-    } else if (numSplit[index] == 5) {
+    } else if (numSplit[index] === 5) {
       numSplit[index] = 'u';
     }
   }
