@@ -1,10 +1,6 @@
 // Desafio 1
 function compareTrue(valor1, valor2) {
-  if (valor1 === true && valor2 === true) {
-    return true;
-  } else {
-    return false;
-  }
+  return valor1 && valor2 === true;
 }
 
 // Desafio 2
@@ -14,30 +10,27 @@ function calcArea(base, altura) {
 
 // Desafio 3
 function splitSentence(palavra) {
-  let novoArray = (palavra.split(' ',palavra.length));
+  let novoArray = (palavra.split(' ', palavra.length));
   return novoArray;
 }
 
 // Desafio 4
 function concatName(novoArray) {
-  let juntaString = novoArray[novoArray.length-1];
-  juntaString += (', ' + novoArray[0]);
-  return juntaString;
+  return `${novoArray[novoArray.length - 1]}, ${novoArray[0]}`;
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
   let pontos = 3;
-  let calculo = (wins * pontos) + ties;  
+  let calculo = (wins * pontos) + ties;
   return calculo;
 }
 
 // Desafio 6
 function highestCount(novoArray) {
-  let numMaior= Math.max.apply(null,novoArray);
+  let numMaior = Math.max.apply(null, novoArray);
   let contador = 0;
-  
-  for (let index = 0; index < novoArray.length; index += 1){
+  for (let index = 0; index < novoArray.length; index += 1) {
     if (numMaior === novoArray[index]) {
       contador += 1;
     }
@@ -47,43 +40,31 @@ function highestCount(novoArray) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let calcCat1 = 0;
-  let calcCat2 = 0;
-
-  if (cat1 < mouse) {
-    calcCat1 = mouse - cat1;
+  let texto = '';
+  let calcCat1 = Math.abs(cat1 - mouse);
+  let calcCat2 = Math.abs(cat2 - mouse);
+  if (calcCat1 < calcCat2) {
+    texto = 'cat1';
+  } else if (calcCat1 > calcCat2) {
+    texto = 'cat2';
   } else {
-    calcCat1 = cat1 - mouse;
-  }  
-  if (cat2 < mouse) {
-    calcCat2 = mouse - cat2;
-  } else{
-    calcCat2 = cat2 - mouse;
+    texto = 'os gatos trombam e o rato foge';
   }
-  if (calcCat1 < calcCat2){
-    return 'cat1';
-  } else if (calcCat1 > calcCat2){
-    return 'cat2';
-  } else {
-    return 'os gatos trombam e o rato foge';
-  }
+  return texto;
 }
 
 // Desafio 8
 function fizzBuzz(antigoArray) {
   let novaArray = [];
-
-  for (let index = 0; index < antigoArray.length; index += 1){
-    if (antigoArray[index] % 3 === 0 && antigoArray[index] % 5 === 0){
+  for (let index = 0; index < antigoArray.length; index += 1) {
+    if (antigoArray[index] % 3 === 0 && antigoArray[index] % 5 === 0) {
       novaArray.push('fizzBuzz');
+    } else if (antigoArray[index] % 3 === 0) {
+      novaArray.push('fizz');
+    } else if (antigoArray[index] % 5 === 0) {
+      novaArray.push('buzz');
     } else {
-      if (antigoArray[index] % 3 === 0){
-        novaArray.push('fizz');
-      } else if (antigoArray[index] % 5 === 0){
-        novaArray.push('buzz');
-      } else {
-        novaArray.push('bug!');
-      }
+      novaArray.push('bug!');
     }
   }
   return novaArray;
@@ -96,10 +77,9 @@ function encode(palavra) {
     e: 2,
     i: 3,
     o: 4,
-    u: 5
+    u: 5,
   };
   let letras = palavra.split('');
-
   for (let index = 0; index < letras.length; index += 1) {
     for (let index2 in tabelaNumeros) {
       if (letras[index] === index2) {
@@ -116,10 +96,9 @@ function decode(palavra) {
     e: 2,
     i: 3,
     o: 4,
-    u: 5
-  };  
-  let letras = palavra.split('');  
-
+    u: 5,
+  };
+  let letras = palavra.split('');
   for (let index = 0; index < letras.length; index += 1) {
     for (let index2 in tabelaNumeros) {
       if (letras[index] === tabelaNumeros[index2].toString()) {
