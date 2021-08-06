@@ -15,8 +15,8 @@ function isNotPhoneNumber(num) {
   if (num > 9 || num < 0) return true;
 }
 
+let obj = {};
 function threeEqualNumbers(num) {
-  let obj = {};
   if (!obj[num]) {
     obj[num] = 1;
   } else {
@@ -42,6 +42,7 @@ function phoneNumber(arr) {
 }
 
 function generatePhoneNumber(arr) {
+  obj = {};
   if (arr.length !== 11) return 'Array com tamanho incorreto.';
 
   if (numberIsNotValid(arr)) return 'não é possível gerar um número de telefone com esses valores';
@@ -49,7 +50,7 @@ function generatePhoneNumber(arr) {
   return phoneNumber(arr);
 }
 
-console.log(generatePhoneNumber([1, 3, 2, 3, 5, 2, 7, 8, 9, 0, 1]));
+console.log(generatePhoneNumber([0, 2, 3, 3, 3, 2, 7, 8, 9, 9, 4]));
 
 // Desafio 10
 
