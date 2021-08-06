@@ -1,12 +1,17 @@
 // Desafio 10
-let array = ["React", "Jest", "HTML", "CSS", "JavaScript"];
-function sortArray (array) {
-  let sortedArray = array.sort();
-  return sortedArray;
-}
-
 function techList(array, name) {
-
+  if (array.length === 0) {
+    return 'Vazio!';
+  }
+  array = array.sort();
+  let resultado = [];
+  for (let key of array) {
+    let newObject = {};
+    newObject['tech'] = key;
+    newObject['name'] = name;
+    resultado.push(newObject);
+  }
+  return resultado;
 }
 
 // Desafio 11
