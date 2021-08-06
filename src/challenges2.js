@@ -4,12 +4,11 @@
 function imprimi(arrayNomes, nome) {
   let array = [];
   for (let index = 0; index < arrayNomes.length; index += 1) {
-    array.push(
-      (objeto = {
-        tech: arrayNomes[index],
-        name: nome,
-      }),
-    );
+    let objeto = {
+      tech: arrayNomes[index],
+      name: nome,
+    };
+    array.push(objeto);
   }
   return array;
 }
