@@ -18,12 +18,13 @@ function techList(arr, name) {
   }
   return arrayDeObj;
 }
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "israel"));
+//console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'israel'));
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(arr) {
+  arr.split('-', 3)//.join('');
+  return arr
 }
-
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
 // Desafio 12
 function triangleCheck(la, lb, lc) {
   let result = false;
