@@ -6,8 +6,6 @@ function compareTrue(a, b) {
   return false;
 }
 
-console.log(compateTrue(3,4))
-
 // Desafio 2
 function calcArea(base, height) {
   let AreaTri;
@@ -54,12 +52,22 @@ function highestCount(array) {
   return contRept;
 }
 
-  let array = [0, 4, 4, 4, 9, 2, 1]
-  console.log(highestCount(array))
-
 // Desafio 7
-function catAndMouse() {
-  
+function catAndMouse(mouse, cat1, cat2) {
+  let result; 
+  let posiRato = mouse;
+  let posiGato1 = cat1 - posiRato;
+  let posiGato2 = cat2 - posiRato;
+  resuAbs1 = Math.abs(posiGato1)
+  resuAbs2 = Math.abs(posiGato2)
+  if(resuAbs1 === resuAbs2) {
+    result = "os gatos trombam e o rato foge";
+  } else if (resuAbs1 > resuAbs2) {
+    result = "cat2";
+  } else {
+    result = "cat1";
+  }
+  return result; 
 }
 
 // Desafio 8
