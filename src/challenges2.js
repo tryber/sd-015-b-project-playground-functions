@@ -49,9 +49,17 @@ function triangleCheck(lineA, lineB, lineC) {
   } return false;
 }
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(stringBebida) {
+  let numeroBebidas = stringBebida.match(/[1-9]/g);
+  let somaBebidas = 0;
+  for (let i in numeroBebidas) {
+    somaBebidas += parseInt(numeroBebidas[i]);
+  }
+  if (somaBebidas <= 1) {
+    return somaBebidas + ' copo de água';
+  } return somaBebidas + ' copos de água';
 }
+
 module.exports = {
   generatePhoneNumber,
   techList,
