@@ -1,3 +1,18 @@
+// Início das funções auxiliares para o desafio 6
+function higherNumber(value) {
+  let higher = value[0];
+
+  for (let index = 0; index < value.length; index += 1) {
+    if (value[index] > higher) {
+      higher = value[index];
+    }
+  }
+
+  return higher;
+}
+
+// Fim das funções auxiliares para o desafio 6
+
 // Desafio 1
 function compareTrue(param1, param2) {
   return param1 && param2;
