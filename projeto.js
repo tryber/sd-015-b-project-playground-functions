@@ -12,21 +12,11 @@
         return (base*height)/2;
     }
     calcArea(10, 50);
-
-    function calcArea(base, height){
-        return (base*height)/2;
-    }
     calcArea(5, 2);
-
-    function calcArea(base, height){
-        return (base*height)/2;
-    }
     calcArea(51, 1);
 
     //3
-    function splitSentence(str){
-
-    }
+    //function splitSentence(str){}
 
     //4
     function concatName(array){
@@ -40,4 +30,11 @@
     concatName(['captain', 'my', 'captain']);
 
     //5
-
+    function footballPoints(wins, ties) {
+        let winPoints = wins*3;
+        let tiePoints = ties*1;
+        return winPoints + tiePoints + ' pontos';
+    }
+    footballPoints(14, 8);
+    footballPoints(1, 2);
+    footballPoints(0, 0);
