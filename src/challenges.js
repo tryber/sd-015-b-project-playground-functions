@@ -11,6 +11,19 @@ function higherNumber(value) {
   return higher;
 }
 
+function higherRepeats(value) {
+  let count = 0;
+  let higher = higherNumber(value);
+
+  for (let index = 0; index < value.length; index += 1) {
+    if (higher === value[index]) {
+      count += 1;
+    }
+  }
+
+  return count;
+}
+
 // Fim das funções auxiliares para o desafio 6
 
 // Desafio 1
