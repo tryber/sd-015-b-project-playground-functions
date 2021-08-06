@@ -18,7 +18,6 @@ function techList(arrayTech, name) {
   return objectArray;
 
 }
-console.log(techList(["eu","ga"]));
 
 // Desafio 11
 function generatePhoneNumber() {
