@@ -59,8 +59,8 @@ console.log(highestCount(array));
 // Desafio 7
 
 function catAndMouse(mouse, cat1, cat2) {
-  let distanciaCat1 = cat1 - mouse;
-  let distanciaCat2 = cat2 - mouse;
+  let distanciaCat1 = Math.abs(cat1 - mouse);
+  let distanciaCat2 = Math.abs(cat2 - mouse);
   if (distanciaCat2 < distanciaCat1) {
     console.log('cat 2');
   } else if (distanciaCat1 < distanciaCat2) {
@@ -73,28 +73,38 @@ function catAndMouse(mouse, cat1, cat2) {
 catAndMouse(5, 7, 7);
 
 // Desafio 8
+
 function fizzBuzz(numbers) {
-  for (let index = 0; index < numbers.length; index += 1) {
-    if (numbers[index] % 3 === 0 && numbers[index] % 5 === 0) {
-      console.log('fizzBuzz');
-    } else if(numbers[index] % 3 === 0) {
-      console.log('fizz');
-    } else if (numbers[index] % 5 === 0) {
-      console.log('buzz');
+  let result = [];
+  for (let num of numbers) {
+    if (num % 3 === 0 && num % 5 === 0) {
+      result.push('fizzBuzz');
+    } else if (num % 5 === 0) {
+      result.push('buzz');
+    } else if (num % 3 === 0) {
+      result.push('fizz');
     } else {
-      console.log('bug');
+      result.push('bug!');
     }
   }
+  return result;
 }
 
-let array2 = [2, 15, 7, 9, 45];
-fizzBuzz(array2);
+let arrayFizz = [2, 15, 7, 9, 45];
+console.log(fizzBuzz(arrayFizz));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+let vogais = [a, e, i, o, u];
+
+function encode(mensagem) {
+  let replaceMsg = mensagem.replace(/a/g, '1').replace(/e/g, '2')
+    .replace(/i/g, '3').replace(/o/g, '4').replace(/u/g, '5');
+  return replaceMsg;
 }
-function decode() {
+
+console.log(encode('hi there!'));
+
+function decode(stringContraria) {
   // seu código aqui
 }
 
