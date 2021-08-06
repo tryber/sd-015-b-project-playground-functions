@@ -70,9 +70,9 @@ function fizzBuzz(number) {
   // seu código aqui
   let valor = [];
   for (let index = 0; index < number.length; index++){
-    if (number[index] % 3 === 0){
+    if (number[index] % 3 === 0 && number[index] % 5 !== 0){
       valor.push("fizz");
-    } else if (number[index] % 5 === 0){
+    } else if (number[index] % 5 === 0 && number[index] % 3 !== 0){
       valor.push("buzz");
     } else if (number[index] % 3 === 0 && number[index] % 5 === 0){
       valor.push("fizzBuzz");
