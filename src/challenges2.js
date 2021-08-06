@@ -53,16 +53,15 @@ console.log(generatePhoneNumber([1, 3, 2, 3, 5, 2, 7, 8, 9, 0, 1]));
 
 // Desafio 10
 
-function triangleC (a, b, c) {
+function triangleC(a, b, c) {
   return a + b > c && c > Math.abs(a - b);
-
 }
 
-function triangleB (a, b, c) {
+function triangleB(a, b, c) {
   return a + c > b && b > Math.abs(a - c);
 }
 
-function triangleA (a, b, c) {
+function triangleA(a, b, c) {
   return c + b > a && a > Math.abs(c - b);
 }
 

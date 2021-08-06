@@ -82,14 +82,12 @@ const checkFizzBuzz = (num) => {
   ifIsBug(num);
 };
 function fizzBuzz(arr) {
-  fizzBuzzArray = []
+  fizzBuzzArray = [];
   for (let num of arr) {
     checkFizzBuzz(num);
   }
   return fizzBuzzArray;
 }
-
-
 // Desafio 9
 function encode(str) {
   let vogais = {
