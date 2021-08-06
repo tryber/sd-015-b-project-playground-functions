@@ -1,3 +1,5 @@
+const { compareTrue } = require('./challenges');
+
 // Desafio 10
 function techList(par1, name) {
   let array = [];
@@ -11,18 +13,25 @@ function techList(par1, name) {
   return array;
 }
 
-// Desafio 11 Crie uma função chamada `generatePhoneNumber` que receba uma array com 11 números e retorne um número de telefone, respeitando parênteses, traços e espaços.
+// Desafio 11
+/*  Retorne false quando a medida de qualquer um dos lados seja maior que a soma das medidas dos outros dois.
 
-/* Exemplo: caso o parâmetro da função seja [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1], `generatePhoneNumber` deverá retornar `(12) 34567-8901`.
+- Retorne false quando a medida de qualquer um dos lados seja menor que o valor absoluto da diferença entre essas medidas.
 
-- Se a função receber um array com tamanho diferente de 11, a mesma deve retornar `"Array com tamanho incorreto."`.
-
-- Caso algum dos números da array seja menor que 0, maior que 9 ou se repita 3 vezes ou mais, `generatePhoneNumber` deverá retornar a string `"não é possível gerar um número de telefone com esses valores"`. */
+- Retorne true quando a medida de qualquer um dos lados seja menor que a soma das medidas dos outros dois e maior que o valor absoluto da diferença entre essas medidas.*/
 function generatePhoneNumber() {}
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  if (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC)) {
+    return true;
+  } else if (lineB < lineA + lineC && lineB > Math.abs(lineA - lineC)) {
+    return true;
+  } else if (lineC < lineA + lineB && lineC > Math.abs(lineA - lineB)) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 // Desafio 13
