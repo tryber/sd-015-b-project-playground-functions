@@ -18,7 +18,7 @@ function splitSentence(string) {
   return string.split(' ');
 }
 
-console.log(splitSentence('go Trybe'));
+splitSentence('go Trybe');
 
 // Desafio 4
 function concatName(array) {
@@ -28,7 +28,7 @@ function concatName(array) {
 }
 
 let array = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
-console.log(concatName(array));
+concatName(array);
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -36,7 +36,7 @@ function footballPoints(wins, ties) {
   return points;
 }
 
-console.log(footballPoints(14, 8));
+footballPoints(14, 8);
 
 // Desafio 6
 function highestCount(arrayNumber) {
@@ -55,7 +55,7 @@ function highestCount(arrayNumber) {
 }
 
 let numberList = [0, 4, 4, 4, 9, 2, 1];
-console.log(highestCount(numberList));
+highestCount(numberList);
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -68,58 +68,54 @@ function catAndMouse(mouse, cat1, cat2) {
   } return 'os gatos trombam e o rato foge';
 }
 
-console.log(catAndMouse(10, 5, 15));
+catAndMouse(10, 5, 15);
 
 // Desafio 8
 // eslint-disable-next-line complexity
-function isDivisible(dividend, divisor) {
-  return dividend % divisor === 0;
+// O código do João Nascimento - Turma 10-A me ajudou a refatorar esse desafio.
+function div3(dividend) {
+  return dividend % 3 === 0;
+}
+
+function div5(dividend) {
+  return dividend % 5 === 0;
 }
 
 function isFizz(num, arrayFizzBuzz) {
-  let divisibleThree = isDivisible(num, 3);
-  let divisibleFive = isDivisible(num, 5);
-  if (divisibleThree && !divisibleFive) {
+  if (div3(num) && !div5(num)) {
     arrayFizzBuzz.push('fizz');
   }
 }
 
 function isBuzz(num, arrayFizzBuzz) {
-  let divisibleThree = isDivisible(num, 3);
-  let divisibleFive = isDivisible(num, 5);
-  if (divisibleFive && !divisibleThree) {
+  if (div5(num) && !div3(num)) {
     arrayFizzBuzz.push('buzz');
   }
 }
 
 function isFizzBuzz(num, arrayFizzBuzz) {
-  let divisibleThree = isDivisible(num, 3);
-  let divisibleFive = isDivisible(num, 5);
-  if (divisibleThree && divisibleFive) {
+  if (div3(num) && div5(num)) {
     arrayFizzBuzz.push('fizzBuzz');
   }
 }
 function isBug(num, arrayFizzBuzz) {
-  let divisibleThree = isDivisible(num, 3);
-  let divisibleFive = isDivisible(num, 5);
-  if (!divisibleThree && !divisibleFive) {
+  if (!div3(num) && !div5(num)) {
     arrayFizzBuzz.push('bug!');
   }
 }
 function fizzBuzz(arrayFizzBuzz) {
   let result = [];
   for (let pos of arrayFizzBuzz) {
-    let num = pos;
-    isFizz(num, result);
-    isBuzz(num, result);
-    isFizzBuzz(num, result);
-    isBug(num, result);
+    isFizz(pos, result);
+    isBuzz(pos, result);
+    isFizzBuzz(pos, result);
+    isBug(pos, result);
   }
   return result;
 }
 
 let fizzBuzzArray = [2, 15, 7, 9, 45];
-console.log(fizzBuzz(fizzBuzzArray));
+fizzBuzz(fizzBuzzArray);
 
 // Desafio 9
 function encode(msg) {
@@ -139,8 +135,8 @@ function decode(msg) {
   return replaceMsg;
 }
 
-console.log(encode('hi there!'));
-console.log(decode('h3 th2r2!'));
+encode('hi there!');
+decode('h3 th2r2!');
 
 module.exports = {
   calcArea,

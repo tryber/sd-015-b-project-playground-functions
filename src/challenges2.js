@@ -21,28 +21,45 @@ console.log(techList(arrayTech, name));
 
 // Desafio 11
 // eslint-disable-next-line complexity
-function generatePhoneNumber(arrayPhone) {
-  if (arrayPhone.length !== 11) {
-    return 'Array com tamanho incorreto.';
+// Esse link me ajudou na formatação do telefone (https://www.devmedia.com.br/javascript-replace-substituindo-valores-em-uma-string/39176)
+function checkLength(arrayPhone) {
+  if (arrayPhone.length === 11) {
+    return false;
   }
-  for (let index = 0; index < arrayPhone.length; index += 1) {
-    let count = 0;
-    for (let segIndex = 0; segIndex < arrayPhone.length; segIndex += 1) {
-      if (arrayPhone[index] === arrayPhone[segIndex]) {
-        count += 1;
-      }
-    }
-    if (arrayPhone[index] < 0 || arrayPhone[index] > 9 || count >= 3) {
-      return 'não é possível gerar um número de telefone com esses valores';
-    }
-  }
-  let stringPhone = arrayPhone.join('');
-  let resultado = stringPhone.replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3');
-  return resultado;
+  return true;
 }
 
-let arrayPhone = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
-console.log(generatePhoneNumber(arrayPhone));
+function returnCheckLength(arrayPhone) {
+  if (checkLength(arrayPhone)) {
+    return 'Array com tamanho incorreto.';
+  }
+}
+
+let arrayP = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 4];
+console.log(returnCheckLength(arrayP));
+
+// function generatePhoneNumber(arrayPhone) {
+//   if (arrayPhone.length !== 11) {
+//     return 'Array com tamanho incorreto.';
+//   }
+//   for (let index = 0; index < arrayPhone.length; index += 1) {
+//     let count = 0;
+//     for (let segIndex = 0; segIndex < arrayPhone.length; segIndex += 1) {
+//       if (arrayPhone[index] === arrayPhone[segIndex]) {
+//         count += 1;
+//       }
+//     }
+//     if (arrayPhone[index] < 0 || arrayPhone[index] > 9 || count >= 3) {
+//       return 'não é possível gerar um número de telefone com esses valores';
+//     }
+//   }
+//   let stringPhone = arrayPhone.join('');
+//   let resultado = stringPhone.replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3');
+//   return resultado;
+// }
+
+// let arrayPhone = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
+// console.log(generatePhoneNumber(arrayPhone));
 
 // Desafio 12
 function validaLado(lineA, lineB, lineC) {
