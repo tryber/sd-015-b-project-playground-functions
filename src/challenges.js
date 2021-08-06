@@ -98,7 +98,7 @@ function decode(num) {
   let numSplit = num.split('');
 
   for (index in numSplit) {
-    if (numSplit[index] === 1) {
+    if (numSplit[index] == 1) {
       numSplit[index] = 'a';
     } else if (numSplit[index] == 2) {
       numSplit[index] = 'e';
