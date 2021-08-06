@@ -109,29 +109,18 @@ function fizzBuzz(arr) {
 function encode(str) {
   let strEncoded = '';
   let vowels = {
-    a: 1,
-    e: 2,
-    i: 3,
-    o: 4,
-    u: 5,
-  };
-
-  for (let index = 0; index < str.length; index += 1) {
-    let verification = false;
-
-    for (let letter in vowels) {
-      if (str[index] === letter) {
-        strEncoded += vowels[letter];
-        verification = true;
-      }
-    }
-
-    if (verification === false) {
-      strEncoded += str[index];
-    }
+    'a': 1,
+    'e': 2,
+    'i': 3,
+    'o': 4,
+    'u': 5
   }
 
-  return strEncoded;
+  for (let letter of str) {
+    strEncoded += vowels[letter] || letter
+  }
+
+  return strEncoded
 }
 
 function decode(str) {
@@ -141,24 +130,14 @@ function decode(str) {
     2: 'e',
     3: 'i',
     4: 'o',
-    5: 'u',
-  };
-
-  for (let index = 0; index < str.length; index += 1) {
-    let verification = false;
-    for (let letter in vowels) {
-      if (str[index] === letter) {
-        strDecoded += vowels[letter];
-        verification = true;
-      }
-    }
-
-    if (verification === false) {
-      strDecoded += str[index];
-    }
+    5: 'u'
   }
 
-  return strDecoded;
+  for (let letter of str) {
+    strDecoded += vowels[letter] || letter
+  }
+
+  return strDecoded
 }
 
 module.exports = {
