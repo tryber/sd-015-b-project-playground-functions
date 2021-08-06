@@ -92,8 +92,18 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let d13;
+  let copos = 0;
+  let aNumber = /\d+/g;
+  let numbers = string.match(aNumber);
+  for (let index = 0; index < numbers.length; index += 1) {
+    copos += parseInt(numbers[index], 10);
+  }
+  if (copos === 1) {
+    d13 = '1 copo de água';
+  } else { d13 = `${copos} copos de água`; }
+  return d13;
 }
 
 module.exports = {
