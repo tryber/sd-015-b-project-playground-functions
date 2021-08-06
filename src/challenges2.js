@@ -11,10 +11,10 @@ function techList(array, name) {
       name,
     });
   }
-
-  return objeto.sort(function (a, b) {
+  let resultado = objeto.sort(function (a, b) {
     return a.tech > b.tech;
   });
+  return resultado;
 }
 
 // Desafio 11
@@ -61,12 +61,9 @@ function triangleCheck(lineA, lineB, lineC) {
   let validacao1 = Math.abs(lineB - lineC) < lineA < lineB + lineC;
   let validacao2 = Math.abs(lineA - lineC) < lineB < lineA + lineC;
   let validacao3 = Math.abs(lineA - lineB) < lineC < lineA + lineB;
-  console.log(lineA > lineB + lineC);
   if (lineA > lineB + lineC === true && lineB > lineA + lineC === true && lineC > lineA + lineB === true) {
     return false;
   }
-
-  console.log(validacao1, validacao2, validacao3);
 }
 triangleCheck(6, 2, 2);
 // Desafio 13
