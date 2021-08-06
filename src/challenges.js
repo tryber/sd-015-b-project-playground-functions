@@ -105,58 +105,7 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 let numeros = [2, 15, 7, 9, 45]
 function fizzBuzz(numeros) {
-  // seu código aqui
-
- 
-
-console.log(fizzBuzz(numeros));
-
-
-
-
-  
-
-
-    if (numeros[n] % 5 === 0) {
-      console.log('buzz')
-    }
-    if (numeros[n] % 3 === 0 && numeros[n] % 5 === 0) {
-      console.log('fizzbuzz')
-    }
-  }
-    
-    
-    
-    else if (numeros[n] % 5 === 0) {
-      console.log('buzz');
-    }
-    }
-
-  }
-    
-    
-    
-    else if {
-      (numeros[n] % 5 === 0) {
-      console.log('buzz')
-    }
-  }
-}
-   
-  
-  
-
-   else if (numeros % 5 === 0) {
-      console.log('buzz');
-    } else if (numeros % 3 === 0 && numeros % 3 === 5) {
-      console.log('fizzbuzz');
-    } else {
-      console.log('bug!');
-    }
-  }
-  return fizzBuzz;
-}
-console.log(fizzBuzz)
+  // seu código aqui 
 
 // Desafio 9
 function encode() {
