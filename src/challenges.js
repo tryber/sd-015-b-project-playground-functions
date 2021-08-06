@@ -16,10 +16,7 @@ function splitSentence(fraseJunta) {
 
 // Desafio 4
 function concatName(recebeNomes) {
-  // seu código aqui
-  let primeiro = recebeNomes[0]
-  let ultimo = recebeNomes[recebeNomes.length -1]
-  return final = ultimo + ", " + primeiro
+  return `${recebeNomes[recebeNomes.length - 1]}, ${recebeNomes[0]}`
 }
 
 // Desafio 5
