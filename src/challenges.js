@@ -57,9 +57,18 @@ return rep;
 highestCount([0, 4, 4, 4, 9, 2, 1])
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
-}
+function catAndMouse(mouse, cat1, cat2) {
+  let distanceCat1 = Math.abs(cat1 - mouse);
+  let distanceCat2 = Math.abs(cat2 - mouse);
+     if ( distanceCat1 < distanceCat2 ) {
+      return "cat1"
+    } else if(distanceCat2 < distanceCat1) {
+      return "cat2"
+    } else {
+      return "os gatos trombam e o rato foge"
+    }
+  } 
+  catAndMouse(4, 3, 2)
 
 // Desafio 8
 function fizzBuzz() {
