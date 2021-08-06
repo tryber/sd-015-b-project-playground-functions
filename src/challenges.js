@@ -1,48 +1,143 @@
 // Desafio 1
-function compareTrue() {
+function compareTrue(valor1, valor2) {
+  if (valor1 && valor2 === true) {
+    return true;
+  } return false;
   // seu código aqui
 }
 
 // Desafio 2
-function calcArea() {
+function calcArea(base, height) {
+  let resultado = (base * height) / 2;
+  return resultado;
   // seu código aqui
 }
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(string) {
+  let arrayDeStrings = string.split(' ');
+  return arrayDeStrings;
   // seu código aqui
 }
 
 // Desafio 4
-function concatName() {
+function concatName(array) {
+  let resultado = '';
+  let primeiroNome = array[0];
+  let ultimoNome = array[array.length - 1];
+  resultado = `${ultimoNome}, ${primeiroNome}`;
+  return resultado;
   // seu código aqui
 }
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
+  let resultadoDePontos = (wins * 3) + (ties * 1);
+  return resultadoDePontos;
   // seu código aqui
 }
 
 // Desafio 6
-function highestCount() {
+function repete(numerorepetido, numeros) {
+  let resultado = 0;
+  for (let index = 0; index < numeros.length; index += 1) {
+    if (numerorepetido === numeros[index]) {
+      resultado += 1;
+    }
+  }
+  return resultado;
+}
+function highestCount(array) {
+  let numeros = array;
+  let numeroRepetido = array[0];
+  for (let index = 0; index < numeros.length; index += 1) {
+    if (numeros[index] > numeroRepetido) {
+      numeroRepetido = numeros[index];
+    }
+  }
+  return repete(numeroRepetido, numeros);
   // seu código aqui
 }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
+  let valor1 = Math.abs(cat1 - mouse);
+  let valor2 = Math.abs(cat2 - mouse);
+
+  if (valor1 === valor2) {
+    return 'os gatos trombam e o rato foge';
+  }
+  if (valor1 - mouse < valor2 - mouse) {
+    return 'cat1';
+  }
+  return 'cat2';
   // seu código aqui
 }
 
 // Desafio 8
-function fizzBuzz() {
+function dividirPor(numero, divisor) {
+  return numero % divisor === 0;
+}
+function fizzBuzz(array) {
+  let resultado = [];
+  for (let index = 0; index < array.length; index += 1) {
+    if (dividirPor(array[index], 15)) {
+      resultado.push('fizzBuzz');
+    } else if (dividirPor(array[index], 3)) {
+      resultado.push('fizz');
+    } else if (dividirPor(array[index], 5)) {
+      resultado.push('buzz');
+    } else {
+      resultado.push('bug!');
+    }
+  }
+  return resultado;
   // seu código aqui
 }
 
 // Desafio 9
-function encode() {
+function encode(string) {
+  let palavraMinuscula = string;
+  let arrayCode = [];
+  for (let index = 0; index < palavraMinuscula.length; index += 1) {
+    if (palavraMinuscula[index] === 'a') {
+      arrayCode.push(1);
+    } else if (palavraMinuscula[index] === 'e') {
+      arrayCode.push(2);
+    } else if (palavraMinuscula[index] === 'i') {
+      arrayCode.push(3);
+    } else if (palavraMinuscula[index] === 'o') {
+      arrayCode.push(4);
+    } else if (palavraMinuscula[index] === 'u') {
+      arrayCode.push(5);
+    } else {
+      arrayCode.push(palavraMinuscula[index]);
+    }
+  }
+  let frase = arrayCode.join('');
+  return frase;
   // seu código aqui
 }
-function decode() {
+function decode(string) {
+  let palavraMinuscula = string;
+  let arrayCode = [];
+  for (let index = 0; index < palavraMinuscula.length; index += 1) {
+    if (palavraMinuscula[index] === '1') {
+      arrayCode.push('a');
+    } else if (palavraMinuscula[index] === '2') {
+      arrayCode.push('e');
+    } else if (palavraMinuscula[index] === '3') {
+      arrayCode.push('i');
+    } else if (palavraMinuscula[index] === '4') {
+      arrayCode.push('o');
+    } else if (palavraMinuscula[index] === '5') {
+      arrayCode.push('u');
+    } else {
+      arrayCode.push(palavraMinuscula[index]);
+    }
+  }
+  let frase = arrayCode.join('');
+  return frase;
   // seu código aqui
 }
 
