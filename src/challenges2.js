@@ -22,15 +22,24 @@ console.log(techList(arrayTech, name));
 // Desafio 11
 // eslint-disable-next-line complexity
 // Esse link me ajudou na formatação do telefone (https://www.devmedia.com.br/javascript-replace-substituindo-valores-em-uma-string/39176)
-function checkRepeat(arrayPhone) {
+function checkCount(arrayPhone) {
+  let count;
   for (let index = 0; index < arrayPhone.length; index += 1) {
-    let count = 0;
+    count = 0;
     for (let segIndex = 0; segIndex < arrayPhone.length; segIndex += 1) {
       if (arrayPhone[index] === arrayPhone[segIndex]) {
         count += 1;
       }
     }
-    if (arrayPhone[index] < 0 || arrayPhone[index] > 9 || count >= 3) {
+    if (count >= 3) {
+      return true;
+    }
+  }
+}
+
+function checkRepeat(arrayPhone) {
+  for (let index = 0; index < arrayPhone.length; index += 1) {
+    if (arrayPhone[index] < 0 || arrayPhone[index] > 9 || checkCount(arrayPhone)) {
       return true;
     }
   }
@@ -52,8 +61,8 @@ function generatePhoneNumber(arrayPhone) {
   return formatPhone(arrayPhone);
 }
 
-let arrayNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
-generatePhoneNumber(arrayNumbers);
+let arrayNumbers = [1, 2, 3, 4, 1, 6, 7, 8, 9, 0, 1];
+console.log(generatePhoneNumber(arrayNumbers));
 
 // Desafio 12
 function validaLado(lineA, lineB, lineC) {
