@@ -39,7 +39,7 @@ function generatePhoneNumber(numbers) {
   let prefix = format.slice(0, 2);
   let firstPart = format.slice(2, 7);
   let secondPart = format.slice(7, 12);
-  let phoneNumber = '(' + prefix + ')' + firstPart + '-' + secondPart;
+  let phoneNumber = '(' + prefix + ')' + ' ' + firstPart + '-' + secondPart;
   return phoneNumber;
 }
 
