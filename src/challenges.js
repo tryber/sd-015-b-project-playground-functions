@@ -40,13 +40,7 @@ function highestCount(number) {
   }
   return contador;
 }
-/*Imagine que existem dois gatos, os quais chamaremos de `cat1` e `cat2`, e que ambos estão caçando um mesmo rato chamado `mouse`. Imagine que os animais estão em uma reta, cada um em uma posição representada por um número.
 
-Sabendo disso, crie uma função chamada `catAndMouse` que, ao receber a posição de `mouse`, `cat1` e `cat2`, **nessa ordem**, calcule as distâncias entre o rato e cada um dos gatos, em seguida, retorne qual dos felinos irá alcançar o rato primeiro (aquele que estiver mais perto do rato).
-
-Exemplo: caso o gato `cat2` esteja a 2 unidades de distância do rato, e `cat1` esteja a 3 unidades, sua função deverá retornar `"cat2"`.
-
-Caso os gatos estejam na mesma distância do rato, a função deverá retornar a string `"os gatos trombam e o rato foge"`.*/
 //Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let posicaoCat1 = Math.abs(cat1 - mouse);
@@ -80,11 +74,44 @@ function fizzBuzz(arrayNumeros) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(letras) {
+  let letrasDivididas = letras.split('');
+
+  for (index in letrasDivididas) {
+    if (letrasDivididas[index] === 'a') {
+      letrasDivididas[index] = 1;
+    } else if (letrasDivididas[index] === 'e') {
+      letrasDivididas[index] = 2;
+    } else if (letrasDivididas[index] === 'i') {
+      letrasDivididas[index] = 3;
+    } else if (letrasDivididas[index] === 'o') {
+      letrasDivididas[index] = 4;
+    } else if (letrasDivididas[index] === 'u') {
+      letrasDivididas[index] = 5;
+    }
+  }
+  let novaString = letrasDivididas.join('');
+  return novaString;
 }
-function decode() {
-  // seu código aqui
+
+function decode(num) {
+  let numSplit = num.split('');
+
+  for (index in numSplit) {
+    if (numSplit[index] == 1) {
+      numSplit[index] = 'a';
+    } else if (numSplit[index] == 2) {
+      numSplit[index] = 'e';
+    } else if (numSplit[index] == 3) {
+      numSplit[index] = 'i';
+    } else if (numSplit[index] == 4) {
+      numSplit[index] = 'o';
+    } else if (numSplit[index] == 5) {
+      numSplit[index] = 'u';
+    }
+  }
+  let novaStringnum = numSplit.join('');
+  return novaStringnum;
 }
 
 module.exports = {
