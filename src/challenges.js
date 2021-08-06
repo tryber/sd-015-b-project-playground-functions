@@ -18,6 +18,7 @@ function calcArea(base, height) {
   calculo = (base * height) / 2;
   return calculo;
 }
+console.log(calcArea(3, 4));
 
 // Desafio 3
 frase = 'go trybe'
@@ -26,6 +27,7 @@ function splitSentence(frase) {
   sentenca = frase.split(" ");
   return sentenca;
 }
+console.log(splitSentence(frase));
 
 // Desafio 4
 let names = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
@@ -48,6 +50,7 @@ function concatName(names) {
  //console.log(ultimoItem);
  return together;
 }
+console.log(concatName(names));
 
 
 // Desafio 5
@@ -76,14 +79,9 @@ function highestCount(numeros) {
   }
   return cont;     
 }
-//console.log (highestCount(numeros)) 
-
-
-
-    
- 
+console.log (highestCount(numeros)) 
   
-//}
+
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -106,7 +104,7 @@ function catAndMouse(mouse, cat1, cat2) {
 numeros = [2, 15, 7, 9, 45];
 function fizzBuzz(numeros) {
   // seu código aqui 
-
+}
 // Desafio 9
 function encode() {
   // seu código aqui
@@ -126,4 +124,4 @@ module.exports = {
   footballPoints,
   highestCount,
   splitSentence,
-};
+}
