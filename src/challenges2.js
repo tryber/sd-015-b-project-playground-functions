@@ -10,6 +10,16 @@ function greaterThanNine(value) {
     if (item > 9) return false;
   }
 }
+
+function repeatThree(value) {
+  for (let index = 0; index < value.length; index++) {
+    let count = 0;
+    for (let item of value) {
+      if (item === value[index]) count++;
+    }
+    if (count >= 3) return false;
+  }
+}
 // Fim das funções auxiliares para o desafio 11
 
 // Desafio 10
