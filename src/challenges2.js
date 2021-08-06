@@ -20,24 +20,21 @@ let name = 'Amanda';
 console.log(techList(arrayTech, name));
 
 // Desafio 11
-// eslint-disable-next-line complexity
 // Esse link me ajudou na formatação do telefone (https://www.devmedia.com.br/javascript-replace-substituindo-valores-em-uma-string/39176)
 function checkCount(arrayPhone) {
-  let count;
   for (let index = 0; index < arrayPhone.length; index += 1) {
-    count = 0;
-    for (let segIndex = 0; segIndex < arrayPhone.length; segIndex += 1) {
-      if (arrayPhone[index] === arrayPhone[segIndex]) {
+    let count = 0;
+    for (let secondIndex = 0; secondIndex < arrayPhone.length; secondIndex += 1) {
+      if (arrayPhone[index] === arrayPhone[secondIndex]) {
         count += 1;
+      } if (count >= 3) {
+        return true;
       }
-    }
-    if (count >= 3) {
-      return true;
     }
   }
 }
 
-function checkRepeat(arrayPhone) {
+function checkRangeAndRepeat(arrayPhone) {
   for (let index = 0; index < arrayPhone.length; index += 1) {
     if (arrayPhone[index] < 0 || arrayPhone[index] > 9 || checkCount(arrayPhone)) {
       return true;
@@ -55,7 +52,7 @@ function generatePhoneNumber(arrayPhone) {
   if (arrayPhone.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
-  if (checkRepeat(arrayPhone)) {
+  if (checkRangeAndRepeat(arrayPhone)) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
   return formatPhone(arrayPhone);
