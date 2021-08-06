@@ -84,72 +84,20 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode(string) {
+function encode(vogais) {
   // seu código aqui
-  let arrayString = string.split('');
-  let resultado = [];
-  for (let key = 0; key < arrayString.length; key += 1) {
+  let vogaisa = vogais.replace(/a/g, "1");
+  let vogaise = vogaisa.replace(/e/g, "2");
+  let vogaisi = vogaise.replace(/i/g, "3");
+  let vogaiso = vogaisi.replace(/o/g, "4");
+  let vogaisu = vogaiso.replace(/u/g, "5");
 
-    switch (arrayString[key]) {
-      case 'a':
-        resultado.push(arrayString[key].replace('a', '1'));
-        // console.log(resultado);
-        break;
-      case 'e':
-        resultado.push(arrayString[key].replace('e', '2'));
-        // console.log(resultado);
-        break;
-      case 'i':
-        resultado.push(arrayString[key].replace('i', '3'));
-        // console.log(resultado);
-        break;
-      case 'o':
-        resultado.push(arrayString[key].replace('o', '4'));
-        // console.log(resultado);
-        break;
-      case 'u':
-        resultado.push(arrayString[key].replace('u', '5'));
-        // console.log(resultado);
-        break;
-      default:
-        resultado.push(arrayString[key]);
-    }
-    ;
-    // return console.log(resultado);
-  }
-  return resultado.join('');
+  return vogaisu;
 }
-let string = 'hello';
-encode(string);
-function decode(string) {
-  // seu código aqui
-  let arrayString = string.split('');
-  let resultado = [];
-  for (let key = 0; key < arrayString.length; key += 1) {
 
-    switch (arrayString[key]) {
-      case '1':
-        resultado.push(arrayString[key].replace('1', 'a'));
-        break;
-      case '2':
-        resultado.push(arrayString[key].replace('2', 'e'));
-        break;
-      case '3':
-        resultado.push(arrayString[key].replace('3', 'i'));
-        break;
-      case '4':
-        resultado.push(arrayString[key].replace('4', 'o'));
-        break;
-      case '5':
-        resultado.push(arrayString[key].replace('5', 'u'));
-        break;
-      default:
-        resultado.push(arrayString[key]);
-    }
-    ;
-    // return console.log(resultado);
-  }
-  return resultado.join('');
+function decode() {
+  // seu código aqui
+
 }
 
 module.exports = {
