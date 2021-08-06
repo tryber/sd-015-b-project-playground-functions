@@ -17,4 +17,17 @@
     calcArea(51, 1);
 
     //3
-    
+    function splitSentence(str){
+
+    }
+
+    //4
+    function concatName(array){
+        let arr = array.reverse();
+        let primeiro = arr[0];
+        let ultimo = arr[arr.length-1];
+        return primeiro + ', ' + ultimo;
+    }
+    concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolilo']);
+    concatName(['foguete', 'não', 'tem', 'ré']);
+    concatName(['captain', 'my', 'captain']);
