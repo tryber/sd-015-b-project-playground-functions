@@ -1,54 +1,23 @@
 // Desafio 10
-function techList() {
-
-}
-
-// Sub-fuções do desafio 11
-function verificaRepeticao (numeros) {
-  let repeticao;
-  let contaRepeticao = 0;
-
-  for (let i = 0; i < numeros.length; i += 1) {
-    repeticao = numeros[i];
-    for (let j = 0; j < numeros.length; j += 1) {
-      if ((j !== i) && (repeticao === numeros[j])) {
-        contaRepeticao += 1;
-      }
-    }
+// De acordo com resposta do usuário bfavaretto em
+// https://stackoverflow.com/questions/15907052/trying-to-add-multiple-properties-to-javascript-object-using-a-loop
+function techList(tech, name) {
+  let tecnologiaNome = [];
+  tech.sort();
+  for (let i = 0; i < tech.length; i += 1) {
+    tecnologiaNome.push({
+      tech: tech[i],
+      name: name,
+    });
   }
-  return contaRepeticao;
+  return tecnologiaNome;
 }
+
 // Desafio 11
-function generatePhoneNumber(numeros) {
-  let resultado;
-  let DDD = ''; 
-  let numb1 = '';
-  let numb2 = '';
-  let repeticao;
-  let contador;
-  if (numeros.length !== 11) {
-    resultado = 'Array com tamanho incorreto';
-  } else {
-    for (let i = 0; i < numeros.length; i += 1) {
-      if ((numeros[i] < 0) || (numeros[i] > 9)) {
-        resultado = 'não é possível gerar um número de telefone com esses valores';
-        break;
-      } else {
-        if (i <= 1){
-          DDD += numeros[i]; 
-        } else if ((i > 1) && (i < 7)) {
-          numb1 += numeros[i];
-        } else {
-          numb2 += numeros[i];
-        }
-        resultado = '(' + DDD + ') ' + numb1 + '-' + numb2;
-      }
-      
-    }
-  }
-  return resultado;
+function generatePhoneNumber() {
+
 }
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
+// console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 // Desafio 12
 // Sub-função do desafio 12
 function checaCondicao(a, b, c) {
@@ -111,8 +80,6 @@ function hydrate(drinks) {
   }
   return mensagem(coposDeAgua);
 }
-
-console.log(hydrate('100 cerveja, porfavor'));
 
 module.exports = {
   generatePhoneNumber,
