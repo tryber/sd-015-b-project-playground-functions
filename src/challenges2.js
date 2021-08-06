@@ -1,19 +1,22 @@
 // Desafio 10
-function techList (techList, nome) {
+function techList (techList, name) {
 let technologies = []
-if (techList < 1 ){
+if (techList.length === 0) {
   return 'Vazio!'
 } else {
 for(let i = 0; i < techList.length; i += 1){
-  technologies.push({
-    tech: techList[i],
-    name: nome
-})
+  technologies.push(
+    {
+      tech: techList[i],
+      name: name
+    }
+    
+)
 }
 }
   return technologies;
 }
-
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"));
 // Desafio 11
 //arrayNumeros.length - 1 === 11
 function generatePhoneNumber(arrayNumeros){
