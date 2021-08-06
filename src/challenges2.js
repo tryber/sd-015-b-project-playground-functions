@@ -1,6 +1,14 @@
 // Desafio 10
-function techList() {
-  // seu código aqui
+// receber array tecnologias e nome da pessoa
+// criar um objeto para cada tecnologia com o nome da pessoa
+function techList(array, name) {
+  array.sort();
+  let tecnologias = [];
+
+  for(let valores of array){
+    tecnologias.push({tech: valores, name: name})
+  }
+return tecnologias;
 }
 
 // Desafio 11
