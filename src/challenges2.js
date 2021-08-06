@@ -1,15 +1,15 @@
 // Desafio 10
-function techList(nomeTecnologia, nomePessoa) {
+function techList(techs, name) {
   let techList = [];
-  nomeTecnologia.sort();
-  for (let index = 0; index < nomeTecnologia.length; index += 1){
+  techs.sort();
+  for (let index = 0; index < techs.length; index += 1){
     let objeto = {
-      nome: nomePessoa,
-      tecnologia: nomeTecnologia[index],
+      tech: techs[index],
+      name: name
     };
     techList.push(objeto);
   }
-  if (techList.length <= 1){
+  if (techs.length <= 1){
     return 'Vazio!';
   }
 return techList;
@@ -69,7 +69,7 @@ return numeroFinal;
 //Desafio 11
 function generatePhoneNumber(phoneNumber) {
   if (!tamanhoInvalido(phoneNumber)) {
-    return 'Array com tamanho incorreto';
+    return 'Array com tamanho incorreto.';
   }
   if (!validaNumeros(phoneNumber)) {
     return 'não é possível gerar um número de telefone com esses valores';
