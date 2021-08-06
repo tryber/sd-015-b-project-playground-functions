@@ -3,30 +3,24 @@ function compareTrue(a, b) {
   return a && b;
 }
 
-console.log(compareTrue(true, true))
-
 // Desafio 2
 function calcArea(base, height) {
-  let area = ((base * height) / 2);
-  return area;
+  return ((base * height) / 2);
 }
 
 // Desafio 3
 function splitSentence(frase) {
-  let resultado = frase.split(' ');
-  return resultado;
+  return frase.split(' ');
 }
 
 // Desafio 4
 function concatName(array) {
-  let concat = `${array[array.length - 1]}, ${array[0]}`;
-  return concat;
+  return `${array[array.length - 1]}, ${array[0]}`;
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let points = ((wins * 3) + ties);
-  return points;
+  return ((wins * 3) + ties);
 }
 
 // Desafio 6
@@ -81,12 +75,41 @@ console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode(string) {
-  string = 'This is an encading test';
-  let resultado = string.replace(/a/g, '1');
-  console.log(resultado);
+  let resultado = string;
+  let codigo = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5,
+  };
+  for (let i = 0; i < string.length; i += 1) {
+    for (let index in codigo) {
+      if (index === string[i]) {
+        resultado = resultado.replace(string[i], codigo[index]);
+      }
+    }
+  }
+  return resultado;
 }
-function decode() {
-  // seu código aqui
+
+function decode(string) {
+  let resultado = string;
+  let codigo = {
+    a: '1',
+    e: '2',
+    i: '3',
+    o: '4',
+    u: '5',
+  };
+  for (let i = 0; i < string.length; i += 1) {
+    for (let index in codigo) {
+      if (codigo[index] === string[i]) {
+        resultado = resultado.replace(string[i], index);
+      }
+    }
+  }
+  return resultado;
 }
 
 module.exports = {
