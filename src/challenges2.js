@@ -32,6 +32,11 @@ function verificationStatus(value) {
 
   return status;
 }
+
+function phoneNumber(value) {
+  let phoneNumber = value.join('').replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3');
+  return phoneNumber;
+}
 // Fim das funções auxiliares para o desafio 11
 
 // Desafio 10
