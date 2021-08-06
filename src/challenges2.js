@@ -49,6 +49,7 @@ function triangleCheck(lineA, lineB, lineC) {
   } return false;
 }
 // Desafio 13
+// Crie uma função de boas vindas ao Bar da Trybe!
 function hydrate(stringBebida) {
   let numeroBebidas = stringBebida.match(/[1-9]/g);
   let somaBebidas = 0;
