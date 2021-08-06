@@ -2,7 +2,7 @@
 function compareTrue(entrada1, entrada2) {
   // seu código aqui
   let comparar = (entrada1, entrada2);
-  return ((entrada1 === true) && (entrada2 === true))
+  return ((entrada1 === true) && (entrada2 === true));
 }
 console.log(compareTrue(false, true));
 console.log(compareTrue(false, false));
@@ -76,23 +76,26 @@ console.log(highestCount([0, 0, 0]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  // seu código aqui
-  let distanciaMouseCat1 = cat1 - mouse;
-  let distanciaMouseCat2 = cat2 - mouse;
-  let winCat1 = 'cat1';
-  let winCat2 = 'cat2';
-  let winMouse = 'os gatos trombam e o rato foge';
+  distanciaMouseCat1 = mouse - cat1;
+  distanciaMouseCat2 = mouse - cat2;
+  if (distanciaMouseCat1 < 0){
+    distanciaMouseCat1 = (distanciaMouseCat1 * (-1));
+  }
+  if (distanciaMouseCat2 < 0){
+    distanciaMouseCat2 = (distanciaMouseCat2 * (-1));
+  }
   if (distanciaMouseCat1 === distanciaMouseCat2) {
-    return winMouse;
+    return 'os gatos trombam e o rato foge'; 
   }
   else if (distanciaMouseCat1 > distanciaMouseCat2) {
-    return winCat2;
+    return 'cat2';
   }
-  return winCat1;
+  else {
+    return 'cat1';
+  }
 }
-console.log(catAndMouse(0, 3, 2));
-console.log(catAndMouse(0, 6, 12));
-console.log(catAndMouse(0, 4, 4));
+
+
 
 // Desafio 8
 function fizzBuzz(variavelNumeros) {
