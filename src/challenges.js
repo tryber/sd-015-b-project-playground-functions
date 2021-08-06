@@ -70,13 +70,10 @@ function catAndMouse(mouse, cat1, cat2) {
   cat1;
   cat2;
 
-  let distancia1 = cat1 - mouse;
-  let distancia2 = cat2 - mouse;
-
-  if (distancia1 > distancia2){
+  if (cat1 > cat2 && cat2 <= mouse){
     return 'cat2';
   } 
-  else if (distancia2 > distancia1) {
+  else if (cat2 > cat1 && cat1 <= mouse) {
     return 'cat1';
   }
   else {
