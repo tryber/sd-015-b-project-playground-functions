@@ -59,7 +59,7 @@ console.log(highestCount(array));
 // Desafio 7
 
 function catAndMouse(mouse, cat1, cat2) {
-  let distanciaCat1 = ath.abs(cat1 - mouse);
+  let distanciaCat1 = Math.abs(cat1 - mouse);
   let distanciaCat2 = Math.abs(cat2 - mouse);
   if (distanciaCat2 < distanciaCat1) {
     console.log('cat 2');
@@ -117,16 +117,22 @@ fizzBuzz(fizzBuzzArray);
 // Desafio 9
 
 function encode(mensagem) {
-  let replaceMsg = mensagem.replace(/a/g, '1').replace(/e/g, '2')
-    .replace(/i/g, '3').replace(/o/g, '4').replace(/u/g, '5');
+  let replaceMsg = mensagem.replace(/a/g, '1')
+    .replace(/e/g, '2')
+    .replace(/i/g, '3')
+    .replace(/o/g, '4')
+    .replace(/u/g, '5');
   return replaceMsg;
 }
 
 console.log(encode('hi there!'));
 
 function decode(mensagem) {
-  let replaceMsg = stringContraria.replace(/1/g, 'a').replace(/2/g, 'e')
-    .replace(/3/g, 'i').replace(/4/g, 'o').replace(/5/g, 'u');
+  let replaceMsg = mensagem.replace(/1/g, 'a')
+    .replace(/2/g, 'e')
+    .replace(/3/g, 'i')
+    .replace(/4/g, 'o')
+    .replace(/5/g, 'u');
   return replaceMsg;
 }
 
