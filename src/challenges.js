@@ -29,25 +29,31 @@ function footballPoints(wins, ties) {
   return getWins(wins) + getTies(ties)
 }
 
+
 // Desafio 6
-function highestCount(arrayDeNumeros) {
-  // seu código aqui
-  let maiorPosition = arrayDeNumeros[0]
-  let repeticoes = [] 
-  for (let index = 0; index < arrayDeNumeros.length; index += 1){
-    if ( arrayDeNumeros[index] > maiorPosition){
-      maiorPosition = arrayDeNumeros[index] 
+function getMoreValue(containerNumbers) {
+// vai receber o array de nomeros e verifica se é o maior numero
+  let highestPosition = containerNumbers[0];
+  for (let index = 0; index < containerNumbers.length; index += 1){
+    if ( containerNumbers[index] > highestPosition){
+      highestPosition = containerNumbers[index] 
     }
   }
-  for (let index = 0; index < arrayDeNumeros.length; index += 1){
-    if (maiorPosition == arrayDeNumeros[index]){
-      repeticoes.push(arrayDeNumeros[index])
-    }
-
-  }
-  return repeticoes.length
+  return highestPosition;
 }
-
+function getRepeat(getNumbers, getNumber) {
+  let numberRepeat = []
+  for (let index = 0; index < getNumbers.length; index += 1){
+    if (getNumber == getNumbers[index]){
+      numberRepeat.push(getNumbers[index])
+    }
+  }
+  return numberRepeat
+}
+function highestCount(arrayDeNumeros) {
+  let maxNumberArray = getRepeat(arrayDeNumeros, getMoreValue(arrayDeNumeros))
+  return maxNumberArray.length
+}
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
