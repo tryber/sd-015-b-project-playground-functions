@@ -22,10 +22,19 @@ function generatePhoneNumber() {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
-}
+function triangleCheck(LineaA, LineaB, LineaC) {
 
+  if ((LineaA < LineaB + LineaC && LineaA > Math.abs(LineaB -LineaC)) 
+  ||(LineaB < LineaA + LineaC && LineaB > Math.abs(LineaA -LineaC)) 
+  ||(LineaC < LineaA + LineaB && LineaC > Math.abs(LineaA -LineaB))){
+  
+  return true
+  }
+  else{ 
+  
+    return false
+  }
+}
 // Desafio 13
 function hydrate() {
   // seu código aqui
