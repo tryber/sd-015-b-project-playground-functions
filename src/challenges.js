@@ -80,9 +80,9 @@ function catAndMouse(mouse, cat1, cat2) {
   distanceCat2 = Math.abs(distanceCat2);
 
   if (distanceCat1 === distanceCat2) {
-    return 'os gatos trombam e o rato foge'
+    return 'os gatos trombam e o rato foge';
   }
-  
+
   return distanceCat1 < distanceCat2 ? 'cat1' : 'cat2';
 }
 
