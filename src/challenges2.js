@@ -37,6 +37,7 @@ function generatePhoneNumber(phone) {
     result = 'não é possível gerar um número de telefone com esses valores';
   } 
   return result;
+}
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
