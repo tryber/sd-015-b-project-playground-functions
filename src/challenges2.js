@@ -1,21 +1,89 @@
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(arr, name) {
+  if (arr.length === 0) return 'Vazio!';
+  arr.sort();
+  let list = [];
+  for (let tech of arr) {
+    list.push({ tech, name });
+  }
+  return list;
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+
+function isNotPhoneNumber(num) {
+  if (num > 9 || num < 0) return true;
 }
 
-// Desafio 12
-function triangleCheck() {
-  // seu código aqui
+let obj = {};
+function threeEqualNumbers(num) {
+  if (!obj[num]) {
+    obj[num] = 1;
+  } else {
+    obj[num] += 1;
+  }
+  if (obj[num] >= 3) return true;
+}
+
+function isNotAPhoneNumber(num) {
+  if (isNotPhoneNumber(num)) return true;
+  if (threeEqualNumbers(num)) return true;
+}
+function numberIsNotValid(arr) {
+  for (let num of arr) {
+    if (isNotAPhoneNumber(num)) return true;
+  }
+}
+
+function phoneNumber(arr) {
+  return `(${arr.slice(0, 2).join('')}) ${arr.slice(2, 7).join('')}-${arr
+    .slice(7)
+    .join('')}`;
+}
+
+function generatePhoneNumber(arr) {
+  obj = {};
+  if (arr.length !== 11) return 'Array com tamanho incorreto.';
+
+  if (numberIsNotValid(arr)) return 'não é possível gerar um número de telefone com esses valores';
+
+  return phoneNumber(arr);
+}
+
+console.log(generatePhoneNumber([0, 2, 3, 3, 3, 2, 7, 8, 9, 9, 4]));
+
+// Desafio 10
+
+function triangleC(a, b, c) {
+  return a + b > c && c > Math.abs(a - b);
+}
+
+function triangleB(a, b, c) {
+  return a + c > b && b > Math.abs(a - c);
+}
+
+function triangleA(a, b, c) {
+  return c + b > a && a > Math.abs(c - b);
+}
+
+function triangleIsValid(a, b, c) {
+  return triangleA(a, b, c) || triangleB(a, b, c) || triangleC(a, b, c);
+}
+
+function triangleCheck(a, b, c) {
+  return triangleIsValid(a, b, c);
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(str) {
+  let regex = /\d+/g;
+  const match = str.match(regex);
+  const copos = match
+    .join('')
+    .split('')
+    .reduce((acc, val) => Number(acc) + Number(val));
+
+  return copos > 1 ? `${copos} copos de água` : `${copos} copo de água`;
 }
 
 module.exports = {
