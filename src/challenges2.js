@@ -22,7 +22,7 @@ function hydrate(sentence) {
     counter += value;
   } if (counter === 1) {
     return '1 copo de água';
-  } return `${counter} copos de água`
+  } return `${counter} copos de água`;
 }
 
 module.exports = {
