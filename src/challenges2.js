@@ -23,17 +23,32 @@ function validateArraySize(phoneNumber) {
   return true;
 }
 
+// function isBiggerThanThree(number) {
+//   if (number >= 3) {
+//     return true;
+//   }
+
+//   return false;
+// }
+
+// function isEqualNumber(phoneNumber) {
+//   for (let i = 0; i < phoneNumber.length; i += 1) {
+//     let repeatedNumbersCount = 0;
+//     for (let j = 0; j < phoneNumber.length; j += 1) {
+//     }
+//   }
+// }
 function checkRepeatingNumbers(phoneNumber) {
-  for (let i in phoneNumber) {
+  for (let i = 0; i < phoneNumber.length; i += 1) {
     let repeatedNumbersCount = 0;
     for (let j = 0; j < phoneNumber.length; j += 1) {
       if (phoneNumber[i] === phoneNumber[j]) {
         repeatedNumbersCount += 1;
       }
     }
-    if (repeatedNumbersCount >= 3) { 
+    if (repeatedNumbersCount >= 3) {
       return false;
-    };
+    }
   }
 
   return true;
@@ -57,11 +72,12 @@ function getErrorMessage(phoneNumber) {
 }
 
 function isValidNumber(phoneNumber) {
-  return validateArraySize(phoneNumber) && validateArrayValue(phoneNumber) && checkRepeatingNumbers(phoneNumber);
+  let isValid = validateArraySize(phoneNumber) && validateArrayValue(phoneNumber);
+  return isValid && checkRepeatingNumbers(phoneNumber);
 }
 
 function getDDD(phoneNumber) {
-  let ddd = []
+  let ddd = [];
   for (let i = 0; i < 2; i += 1) {
     ddd.push(phoneNumber[i]);
   }
@@ -96,7 +112,7 @@ function generatePhoneNumber(phoneNumber) {
 // Desafio 12
 function isLineAValid(lineA, lineB, lineC) {
   let isValid = true;
-  
+
   if (lineA > lineB + lineC || lineA < Math.abs(lineB - lineC)) isValid = false;
 
   return isValid;
@@ -104,7 +120,7 @@ function isLineAValid(lineA, lineB, lineC) {
 
 function isLineBValid(lineA, lineB, lineC) {
   let isValid = true;
-  
+
   if (lineB > lineA + lineC || lineA < Math.abs(lineA - lineC)) isValid = false;
 
   return isValid;
@@ -112,14 +128,15 @@ function isLineBValid(lineA, lineB, lineC) {
 
 function isLineCValid(lineA, lineB, lineC) {
   let isValid = true;
-  
+
   if (lineC > lineA + lineB || lineA < Math.abs(lineA - lineB)) isValid = false;
 
   return isValid;
 }
 
 function triangleCheck(lineA, lineB, lineC) {
-  return isLineAValid(lineA, lineB, lineC) && isLineBValid(lineA, lineB, lineC) && isLineCValid(lineA, lineB, lineC);
+  let isTriangle = isLineAValid(lineA, lineB, lineC) && isLineBValid(lineA, lineB, lineC);
+  return isTriangle && isLineCValid(lineA, lineB, lineC);
 }
 
 // Desafio 13
@@ -128,8 +145,8 @@ function getIntegers(string) {
   let arrOfNumbers = string.match(regex);
   let arrOfIntegers = [];
 
-  for (let i in arrOfNumbers) {
-    arrOfIntegers[i] = parseInt(arrOfNumbers[i]);
+  for (let i = 0; i < arrOfNumbers.length; i += 1) {
+    arrOfIntegers[i] = parseInt(arrOfNumbers[i], 10);
   }
   return arrOfIntegers;
 }
@@ -138,12 +155,12 @@ function hydrate(string) {
   let sumOfDrinks = 0;
   let arrOfIntegers = getIntegers(string);
 
-  for (let i in arrOfIntegers) {
-    sumOfDrinks += arrOfIntegers[i];
+  for (let i of arrOfIntegers) {
+    sumOfDrinks += i;
   }
 
   if (sumOfDrinks === 1) return `${sumOfDrinks} copo de água`;
-  
+
   return `${sumOfDrinks} copos de água`;
 }
 
