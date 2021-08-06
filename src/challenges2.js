@@ -4,20 +4,80 @@
 function techList(tech, name) {
   let tecnologiaNome = [];
   tech.sort();
-  for (let i = 0; i < tech.length; i += 1) {
-    tecnologiaNome.push({
-      tech: tech[i],
-      name: name,
-    });
+  if (tech.length === 0) {
+    tecnologiaNome = 'Vazio!';
+  } else {
+    for (let i = 0; i < tech.length; i += 1) {
+      tecnologiaNome.push({
+        tech: tech[i],
+        name,
+      });
+    }
   }
   return tecnologiaNome;
 }
 
 // Desafio 11
-function generatePhoneNumber() {
+// Sub-funções do desafio 11
 
+function testa0e9(numeroTelefone) {
+  for (let i = 0; i < numeroTelefone.length; i += 1) {
+    if ((numeroTelefone[i] < 0) || (numeroTelefone[i]) > 9) {
+      return -1;
+    }
+  }
 }
-// console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+
+function contaRepetidos(numeroTelefone, repetido, i) {
+  let contador = 1;
+  for (let j = 0; j < numeroTelefone.length; j += 1) {
+    if ((i !== j) && (repetido === numeroTelefone[j])) {
+      contador += 1;
+    }
+  }
+  return contador;
+}
+function respostaContador(contador, n) {
+  // Testa
+  let numeroTelefoneFormatado;
+  if (Math.max.apply(Math, contador) > 2) {
+    numeroTelefoneFormatado = 'não é possível gerar um número de telefone com esses valores';
+  } else {
+    numeroTelefoneFormatado = `(${n[0]}${n[1]}) ${
+      n[2]}${n[3]}${n[4]}${n[5]}${n[6]}-${n[7]}${n[8]}${n[9]}${n[10]}`;
+  }
+
+  return numeroTelefoneFormatado;
+}
+function testaRepeticao(numeroTelefone) {
+  let repetido;
+  let contador = [];
+  let numeroTelefoneFormatado;
+  for (let i = 0; i < numeroTelefone.length; i += 1) {
+    repetido = numeroTelefone[i];
+    contador[i] = contaRepetidos(numeroTelefone, repetido, i);
+  }
+  numeroTelefoneFormatado = respostaContador(contador, numeroTelefone);
+  return numeroTelefoneFormatado;
+}
+function generatePhoneNumber(n) {
+  let numeroTelefoneFormatado;
+  let teste0e9;
+  if (n.length !== 11) {
+    numeroTelefoneFormatado = 'Array com tamanho incorreto.';
+  } else {
+    // Teste do 0 e 9
+    teste0e9 = testa0e9(n);
+    if (teste0e9 === -1) {
+      numeroTelefoneFormatado = 'não é possível gerar um número de telefone com esses valores';
+    } else {
+      numeroTelefoneFormatado = testaRepeticao(n);
+    }
+    // Teste da repetição
+  }
+  return numeroTelefoneFormatado;
+}
+
 // Desafio 12
 // Sub-função do desafio 12
 function checaCondicao(a, b, c) {
