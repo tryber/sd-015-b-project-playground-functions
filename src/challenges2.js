@@ -1,5 +1,5 @@
 // Desafio 10
-// 10 - Crie uma função de Lista de Tecnologias
+// Crie uma função de Lista de Tecnologias
 function techList(arrayTech, name) {
   let objTechs;
   let pushArray = [];
@@ -14,7 +14,7 @@ function techList(arrayTech, name) {
   return pushArray;
 }
 // Desafio 11
-// 11 - Crie uma função de Número de Telefone
+// Crie uma função de Número de Telefone
 function generatePhoneNumber(arrayNumeros) {
   let contador = 0;
   let strigArray = '';
@@ -39,8 +39,14 @@ function generatePhoneNumber(arrayNumeros) {
   return strigArray;
 }
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+// Crie uma função de Condição de existência de um triângulo
+function triangleCheck(lineA, lineB, lineC) {
+  let dif1 = Math.abs(lineB - lineC);
+  let dif2 = Math.abs(lineA - lineC);
+  let dif3 = Math.abs(lineA - lineB);
+  if (lineA > dif1 && lineB > dif2 && lineC > dif3) {
+    return true;
+  } return false;
 }
 // Desafio 13
 function hydrate() {
