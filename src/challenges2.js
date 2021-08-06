@@ -1,6 +1,6 @@
 // Desafio 10
 function techList(array, name) {
-  if (array > 0) {
+  if (array.length > 0) {
     let crescente = array.sort();
     let object = {};
     let obs = [];
