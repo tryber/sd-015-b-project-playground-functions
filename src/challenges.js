@@ -59,7 +59,7 @@ console.log(highestCount(array));
 // Desafio 7
 
 function catAndMouse(mouse, cat1, cat2) {
-  let distanciaCat1 = Math.abs(cat1 - mouse);
+  let distanciaCat1 = ath.abs(cat1 - mouse);
   let distanciaCat2 = Math.abs(cat2 - mouse);
   if (distanciaCat2 < distanciaCat1) {
     console.log('cat 2');
@@ -74,27 +74,47 @@ catAndMouse(5, 7, 7);
 
 // Desafio 8
 
-function fizzBuzz(numbers) {
+function div3(dividend) {
+  return dividend % 3 === 0;
+}
+function div5(dividend) {
+  return dividend % 5 === 0;
+}
+function isFizz(num, arrayFizzBuzz) {
+  if (div3(num) && !div5(num)) {
+    arrayFizzBuzz.push(‘fizz’);
+  }
+}
+function isBuzz(num, arrayFizzBuzz) {
+  if (div5(num) && !div3(num)) {
+    arrayFizzBuzz.push(‘buzz’);
+  }
+}
+function isFizzBuzz(num, arrayFizzBuzz) {
+  if (div3(num) && div5(num)) {
+    arrayFizzBuzz.push(‘fizzBuzz’);
+  }
+}
+function isBug(num, arrayFizzBuzz) {
+  if (!div3(num) && !div5(num)) {
+    arrayFizzBuzz.push(‘bug!’);
+  }
+}
+function fizzBuzz(arrayFizzBuzz) {
   let result = [];
-  for (let num of numbers) {
-    if (num % 3 === 0 && num % 5 === 0) {
-      result.push('fizzBuzz');
-    } else if (num % 5 === 0) {
-      result.push('buzz');
-    } else if (num % 3 === 0) {
-      result.push('fizz');
-    } else {
-      result.push('bug!');
-    }
+  for (let position of arrayFizzBuzz) {
+    isFizz(position, result);
+    isBuzz(position, result);
+    isFizzBuzz(position, result);
+    isBug(position, result);
   }
   return result;
 }
 
-let arrayFizz = [2, 15, 7, 9, 45];
-console.log(fizzBuzz(arrayFizz));
+let fizzBuzzArray = [2, 15, 7, 9, 45];
+fizzBuzz(fizzBuzzArray);
 
 // Desafio 9
-let vogais = [a, e, i, o, u];
 
 function encode(mensagem) {
   let replaceMsg = mensagem.replace(/a/g, '1').replace(/e/g, '2')
@@ -105,8 +125,12 @@ function encode(mensagem) {
 console.log(encode('hi there!'));
 
 function decode(stringContraria) {
-  // seu código aqui
+  let replaceMsg = stringContraria.replace(/1/g, 'a').replace(/2/g, 'e')
+    .replace(/3/g, 'i').replace(/4/g, 'o').replace(/5/g, 'u');
+  return replaceMsg;
 }
+
+console.log(decode('h3 th2r2!'));
 
 module.exports = {
   calcArea,
