@@ -1,20 +1,25 @@
 // Desafio 10
-function techList(arrayDeNomes, name) {
+/* resposta */
+
+function imprimi(arrayNomes, nome) {
   let array = [];
-  let arrayNomes = arrayDeNomes.sort();
-  if (arrayNomes.length === 0) {
-    return 'Vazio!';
-  } else {
-    for (let index = 0; index < arrayNomes.length; index += 1) {
-      array.push(
-        (objeto = {
-          tech: arrayNomes[index],
-          name: name,
-        })
-      );
-    }
+  for (let index = 0; index < arrayNomes.length; index += 1) {
+    array.push(
+      (objeto = {
+        tech: arrayNomes[index],
+        name: nome,
+      }),
+    );
   }
   return array;
+}
+function techList(arrayDeNomes, name) {
+  let arrayNomes = arrayDeNomes.sort();
+  let nome = name;
+  if (arrayNomes.length === 0) {
+    return 'Vazio!';
+  }
+  return imprimi(arrayNomes, nome);
   // seu código aqui
 }
 
