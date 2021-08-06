@@ -19,13 +19,15 @@ function concatName(recebeNomes) {
 }
 
 // Desafio 5
-function footballPoints(wins, ties) {
-  // seu código aqui
-  let pontosWin = wins * 3
-  let pontosTies = ties * 1
-  return final = pontosWin + pontosTies
+function getWins(calcWins) {
+  return calcWins * 3
 }
-
+function getTies(calcTies) {
+return calcTies * 1
+}
+function footballPoints(wins, ties) {
+  return getWins(wins) + getTies(ties)
+}
 
 // Desafio 6
 function highestCount(arrayDeNumeros) {
