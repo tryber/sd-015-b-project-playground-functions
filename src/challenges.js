@@ -1,14 +1,16 @@
 // Desafio 1
 let vida = true;
-let codar = false;
+let codar = true;
 function compareTrue(vida, codar) {
   // seu código aqui
   if (vida && codar) {
     return true;
   } else {
     return false;
-} 
 }
+}
+console.log(compareTrue(vida, codar));
+
 
 // Desafio 2
 function calcArea(base, height) {
