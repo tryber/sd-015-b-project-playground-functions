@@ -20,20 +20,19 @@ console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas'));
 function generatePhoneNumber(phone) {
   let result = '';
   if (phone.length > 11 || phone.length < 11) {
-      result = 'Array com tamanho incorreto.';
-  }
-  else {
+    result = 'Array com tamanho incorreto.';
+  }else {
     result = `(${phone[0]}${phone[1]}) ${phone[2]}${phone[3]}${phone[4]}${phone[5]}${phone[6]}-${phone[7]}${phone[8]}${phone[9]}${phone[10]}`;
     for (let index = 0; index < phone.length; index += 1) {
       let count = 0;
         if (phone[index] > 9 || phone[index] < 0) {
-        result = 'não é possível gerar um número de telefone com esses valores';
+      result = 'não é possível gerar um número de telefone com esses valores';
         }
-        for (let index2 = 0; index2 < phone.length; index2 += 1) {
-          if (phone[index] === phone[index2]) {
-          count += 1;
+      for (let index2 = 0; index2 < phone.length; index2 += 1) {
+      if (phone[index] === phone[index2]) {
+        count += 1;
         }
-        if (count > 2){
+        if (count > 2) {
           result = 'não é possível gerar um número de telefone com esses valores';
         }
       }
@@ -44,9 +43,9 @@ function generatePhoneNumber(phone) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  if (lineA >= lineB + lineC 
-    || lineB >= lineA + lineC 
-    || lineC >= lineB + lineA) {
+  if (lineA >= lineB + lineC
+    || lineB >= lineA + lineC
+    || lineC >= lineB + lineA){
     return false;
   }
   return true;
