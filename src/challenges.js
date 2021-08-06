@@ -38,31 +38,31 @@ function footballPoints(wins, ties) {
   return resultado;
 }
 
-// Desafio 6( consegui) 
+// Desafio 6( consegui)
 function highestCount(ArrayDeNumeros) {
-  let Maior = ArrayDeNumeros[0]
-  let Repitcao = 0
+  let Maior = ArrayDeNumeros[0];
+  let Repitcao = 0;
   for (let i = 0; i < ArrayDeNumeros.length; i++) {
     if (Maior == ArrayDeNumeros[i]) {
-      Repitcao +=1} 
-      else if (Maior < ArrayDeNumeros[i]) {
-          Maior = ArrayDeNumeros[i]
-          Repitcao = 1
-      }
+      Repitcao += 1;
+    } else if (Maior < ArrayDeNumeros[i]) {
+      Maior = ArrayDeNumeros[i];
+      Repitcao = 1;
+    }
   }
-   return Repitcao
-  }
-  
+  return Repitcao;
+}
 
 // Desafio 7(consegir)
 function catAndMouse(mouse, cat1, cat2) {
-  let gato2 = cat2-2;
+  let gato2 = cat2 - 2;
   if (cat1 < gato2) {
-    return 'cat1'}
+    return 'cat1';
+  }
   if (cat2 < cat1) {
-    return 'cat2'
-  } 
-  else {return 'os gatos trombam e o rato foge'}
+    return 'cat2';
+  }
+  return 'os gatos trombam e o rato foge';
 }
 // Desafio 8(conseguir)
 // peguei nesse site https://www.geeksforgeeks.org/check-large-number-divisible-3-not/ para saber como o número 3 se torna divisivel
@@ -71,14 +71,11 @@ function fizzBuzz(Array) {
   for (let i = 0; i < Array.length; i += 1) {
     if (Array[i] % 3 == 0 && Array[i] % 5 === 0) {
       fizzBuzz.push('fizzBuzz');
-    }
-     else if (Array[i] % 3 === 0) {
+    } else if (Array[i] % 3 === 0) {
       fizzBuzz.push('fizz');
-    } 
-    else if (Array[i] % 5 === 0) {
+    } else if (Array[i] % 5 === 0) {
       fizzBuzz.push('buzz');
-    } 
-    else {
+    } else {
       fizzBuzz.push('bug!');
     }
   }
@@ -89,44 +86,42 @@ function fizzBuzz(Array) {
 function encode(codigo) {
   let encode = [];
   for (let index = 0; index < codigo.length; index++) {
-    if (codigo[index] == a) {
-      encode.push('1')
-    }
-    else if (codigo[index] ==  e) {
-      encode.push('2')
-    }
-    else if (codigo[index] == i) {
-      encode.push('3')
-    }
-    else if (codigo[index] == o) {
-      encode.push('4')
-    }
-    else if (codigo[index] == u) {
-      encode.push('5')
+    if (codigo[index] == 'a') {
+      encode.push('1');
+    } else if (codigo[index] == 'e') {
+      encode.push('2');
+    } else if (codigo[index] == 'i') {
+      encode.push('3');
+    } else if (codigo[index] == 'o') {
+      encode.push('4');
+    } else if (codigo[index] == 'u') {
+      encode.push('5');
+    } else {
+      encode.push(codigo[index]);
     }
   }
-  return encode;
+
+  return (encode.join(''));
 }
+encode('hello');
 function decode(codigo) {
   let decode = [];
   for (let index = 0; index < codigo.length; index++) {
     if (codigo[index] == 1) {
-      decode.push('a')
-    }
-    else if (codigo[index] ==  2) {
-      decode.push('e')
-    }
-    else if (codigo[index] == 3) {
-      decode.push('i')
-    }
-    else if (codigo[index] == 4) {
-      decode.push('o')
-    }
-    else if (codigo[index] == 5) {
-      decode.push('u')
+      decode.push('a');
+    } else if (codigo[index] == 2) {
+      decode.push('e');
+    } else if (codigo[index] == 3) {
+      decode.push('i');
+    } else if (codigo[index] == 4) {
+      decode.push('o');
+    } else if (codigo[index] == 5) {
+      decode.push('u');
+    } else {
+      decode.push(codigo[index]);
     }
   }
-  return decode
+  return (decode.join(''));
 }
 
 module.exports = {
