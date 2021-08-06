@@ -39,7 +39,7 @@ function generatePhoneNumber(arrayNumeros) {
   return strigArray;
 }
 // Desafio 12
-// Crie uma função de Condição de existência de um triângulo
+// Crie uma função de Condição de existência de um triângulo.
 function triangleCheck(lineA, lineB, lineC) {
   let dif1 = Math.abs(lineB - lineC);
   let dif2 = Math.abs(lineA - lineC);
