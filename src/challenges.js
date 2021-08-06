@@ -24,13 +24,14 @@ function splitSentence(palavra) {
 // Desafio 4
 function concatName(arrayDeStrings) {
   // seu código aqui
- return arrayDeStrings[arrayDeStrings.length - 1] + ', ' + arrayDeStrings[0];
+  let virgula = ', ';
+  return arrayDeStrings[arrayDeStrings.length - 1] + virgula + arrayDeStrings[0];
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  // seu código aqui
-  let totalPoints = (wins * 3) + ties
+// seu código aqui
+  let totalPoints = (wins * 3) + ties;
   return totalPoints;
 }
 
@@ -64,9 +65,8 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'cat1';
   } else if (distancia2 < distancia1) {
     return 'cat2';
-  } else {
-    return 'os gatos trombam e o rato foge';
   }
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
@@ -75,16 +75,16 @@ function fizzBuzz(arrayNumbers) {
   let arrayString = [];
   for (let index = 0; index < arrayNumbers.length; index += 1) {
     if (arrayNumbers[index] % 3 === 0 && arrayNumbers[index] % 5 === 0) {
-      arrayString.push('fizzBuzz'); 
+      arrayString.push('fizzBuzz');
     } else if (arrayNumbers[index] % 3 === 0) {
-      arrayString.push('fizz')
+      arrayString.push('fizz');
     } else if (arrayNumbers[index] % 5 === 0) {
-      arrayString.push('buzz')
+      arrayString.push('buzz');
     } else {
-      arrayString.push('bug!')
+      arrayString.push('bug!');
     }
   }
-  return arrayString
+  return arrayString;
 }
 
 // Desafio 9
@@ -103,12 +103,12 @@ function encode(string) {
     } else if (string[palavra] === 'u') {
       code += '5';
     } else {
-      code += string[palavra]
+      code += string[palavra];
     }
-
   }
-  return code
+  return code;
 }
+
 function decode(string2) {
   // seu código aqui
   let theCode = '';
@@ -124,11 +124,10 @@ function decode(string2) {
     } else if (string2[palavra] === '5') {
       theCode += 'u';
     } else {
-      theCode += string2[palavra]
+      theCode += string2[palavra];
     }
-
   }
-  return theCode
+  return theCode;
 }
 
 module.exports = {
