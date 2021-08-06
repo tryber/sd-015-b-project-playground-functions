@@ -122,7 +122,6 @@ function decode(string) {
   return decodedString;
 }
  
-
 module.exports = {
   calcArea,
   catAndMouse,
