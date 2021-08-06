@@ -103,7 +103,7 @@ function catAndMouse(mouse, cat1, cat2) {
 
 
 // Desafio 8
-let numeros = [2, 15, 7, 9, 45];
+numeros = [2, 15, 7, 9, 45];
 function fizzBuzz(numeros) {
   // seu código aqui 
 
