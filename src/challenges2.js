@@ -14,11 +14,6 @@ function techList(par1, name) {
 }
 
 // Desafio 11
-/*  Retorne false quando a medida de qualquer um dos lados seja maior que a soma das medidas dos outros dois.
-
-- Retorne false quando a medida de qualquer um dos lados seja menor que o valor absoluto da diferença entre essas medidas.
-
-- Retorne true quando a medida de qualquer um dos lados seja menor que a soma das medidas dos outros dois e maior que o valor absoluto da diferença entre essas medidas.*/
 function generatePhoneNumber() {}
 
 // Desafio 12
@@ -35,8 +30,17 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(drink) {
+  let numeroDrink = drink.match(/\d+/g);
+  let numeroAgua = 0;
+  for (index = 0; index < numeroDrink.length; index += 1) {
+    numeroAgua += parseInt(numeroDrink[index]);
+  }
+  if (numeroAgua > 1) {
+    return numeroAgua + ' copos de água';
+  } else {
+    return numeroAgua + ' copo de água';
+  }
 }
 
 module.exports = {
