@@ -69,9 +69,6 @@ function highestCount(arr) {
 } 
  
 
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
-
-
 /* Desafio 7
 7 - Crie uma função de Caça ao Rato
 Imagine que existem dois gatos, os quais chamaremos de cat1 e cat2, e que ambos estão caçando um mesmo rato chamado mouse. Imagine que os animais estão em uma reta, cada um em uma posição representada por um número.
@@ -100,24 +97,7 @@ if(cat2 === cat1 ){
 }
 }
 
-/* Desafio 8
-8 - Crie uma função FizzBuzz
-Crie uma função chamada fizzBuzz que receba uma array de números e retorne uma array da seguinte forma:
 
-Para cada número do Array que seja divisível apenas por 3, apresente uma string "fizz";
-Para cada número do Array que seja divisível apenas por 5, apresente uma string "buzz";
-Caso o número seja divisível por 3 e 5, retorne a string "fizzBuzz";
-Caso o número não possa ser dividido por 3 nem por 5, retorne a string "bug!";
-Exemplo: caso o parâmetro seja [2, 15, 7, 9, 45], sua função deverá retornar ["bug!", "fizzBuzz", "bug!", "fizz", "fizzBuzz"].
-
-O que será verificado:
-
-Retorne as strings ['bug!', 'fizzBuzz', 'bug!', 'fizz', 'fizzBuzz'] quando é passado os parâmetros [2, 15, 7, 9, 45] para a função fizzBuzz
-
-Retorne as strings ['bug!', 'fizz'] quando é passado os parâmetros [7, 9] para a função fizzBuzz
-
-Retorne as strings ['fizz', 'buzz'] quando é passado os parâmetros [9, 25] para a função fizzBuzz
-*/
 function fizzBuzz(arr) {
  let emptyarr = []; 
  for (let i = 0; i < arr.length; i += 1) {     
@@ -134,16 +114,86 @@ function fizzBuzz(arr) {
 }
 return(emptyarr)
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 
-// Desafio 9
-function encode() {
-  // seu código aqui
+
+/*
+9 - Crie uma função que Codifique e Decodifique
+Crie duas funções: a primeira deverá se chamar encode e, ao receber uma string como parâmetro, deverá trocar todas as vogais minúsculas por números, de acordo com o formato a seguir:
+
+a -> 1
+e -> 2
+i -> 3
+o -> 4
+u -> 5
+
+Ou seja, caso o parâmetro de encode seja "hi there!", o retorno deverá ser "h3 th2r2!".
+
+A segunda função deverá se chamar decode e faz o contrário de encode - ou seja, recebe uma string contendo números no lugar de letras minúsculas e retornará uma string com vogais minúsculas no lugar dos números (então, caso o parâmetro de decode seja "h3 th2r2!", o retorno deverá ser "hi there!").
+
+O que será verificado:
+
+Retorne uma string codificada quando a função encode for utilizada
+
+Retorne uma string decodificada quando a função decode for utilizada
+*/
+function encode(strin) {
+  let emptyarr = []; 
+  for (let index = 0; index < strin.length; index += 1 ) {
+    switch(strin[index]){
+      case "a":
+        emptyarr.push("1");
+        break;
+      case "e":
+        emptyarr.push("2")
+        break;
+      case "i":
+        emptyarr.push("3")
+        break;
+      case "o":
+        emptyarr.push("4")
+        break;
+      case "u":
+        emptyarr.push("5")
+        break;     
+      default:
+        emptyarr.push(strin[index])
+        break;
+    } 
+     
+    }
+    return(emptyarr.join(""));      
+    
+  }
+  console.log(encode("hi there!"))
+function decode(strin) {
+  let emptyarr = []; 
+  for (let index = 0; index < strin.length; index += 1 ) {
+    switch(strin[index]){
+      case "1":
+        emptyarr.push("a");
+        break;
+      case "2":
+        emptyarr.push("e")
+        break;
+      case "3":
+        emptyarr.push("i")
+        break;
+      case "4":
+        emptyarr.push("o")
+        break;
+      case "5":
+        emptyarr.push("u")
+        break;     
+      default:
+        emptyarr.push(strin[index])
+        break;
+    } 
+     
+    }
+    return(emptyarr.join(""));      
 }
-function decode() {
-  // seu código aqui
-}
+console.lo
 
 module.exports = {
   calcArea,
