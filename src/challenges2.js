@@ -3,9 +3,9 @@ function techList(par1, name) {
   let array = [];
 
   if (par1.length === 0) {
-    array = 'Vazio!';
+    return 'Vazio!';
   }
-  for (let tech of part1.sort()) {
+  for (let tech of par1.sort()) {
     array.push({ tech, name });
   }
   return array;
