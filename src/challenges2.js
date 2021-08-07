@@ -8,7 +8,7 @@ function techList(lista, name) {
     }
     return novoObjeto;
   }
-  return "Vazio!";
+  return 'Vazio!';
 }
 
 // Desafio 11
@@ -27,7 +27,7 @@ function verTamanhos(n) {
   if (n.length === 11) {
     return 3;
   }
-  return 0; 
+  return 0;
 }
 
 function verMaiorMenor(n) {
@@ -46,14 +46,14 @@ function generatePhoneNumber(numeros) {
   resultado.push(verMaiorMenor(numeros));
   let listaArrumada = numeros.join('');
   resultado.push(verOcorrencias(listaArrumada));
-  let resultadosPossiveis = ['Array com tamanho incorreto.' , 'não é possível gerar um número de telefone com esses valores' , 'não é possível gerar um número de telefone com esses valores'];
-  resultadoFinal = `(${listaArrumada.slice(0,2)}) ${listaArrumada.slice(2,7)}-${listaArrumada.slice(7)}`;
+  let resultadosPossiveis = ['Array com tamanho incorreto.', 'não é possível gerar um número de telefone com esses valores', 'não é possível gerar um número de telefone com esses valores'];
+  resultadoFinal = `(${listaArrumada.slice(0, 2)}) ${listaArrumada.slice(2, 7)}-${listaArrumada.slice(7)}`;
   for (let i = 0; i < resultado.length; i += 1) {
     if (resultado[i] === i) {
       return resultadosPossiveis[i];
     }
   }
-  return resultadoFinal; 
+  return resultadoFinal;
 }
 
 // Desafio 12
@@ -69,16 +69,16 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function hydrate(s) {
-   let r = 0;
-   let resultado = '';
-   for (let i = 1; i <= 9; i += 1) {
-     r += (s.split(i).length-1)*i;
-   }
-   resultado = `${r} copos de água`;
-   if (r === 1) {
-     resultado = '1 copo de água';
-   }
-   return resultado;
+  let r = 0;
+  let resultado = '';
+  for (let i = 1; i <= 9; i += 1) {
+    r += (s.split(i).length - 1) * i;
+  }
+  resultado = `${r} copos de água`;
+  if (r === 1) {
+    resultado = '1 copo de água';
+  }
+  return resultado;
 }
 
 module.exports = {
