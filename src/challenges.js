@@ -87,15 +87,19 @@ Retorne a string 'cat1' caso a função catAndMouse receba os parâmetros onde g
 
 Retorne a string 'os gatos trombam e o rato foge' caso a função catAndMouse receba os parâmetros onde os gatos estejam na mesma distância do rato
 */
+//Math.abs()
 function catAndMouse(mouse,cat1,cat2) {
-if(cat2 === cat1 ){
-  return("os gatos trombam e o rato foge");
-}else if(cat2 > cat1){
-  return("cat1");
+let result;
+if(Math.abs((cat1 - mouse)) > Math.abs((cat2 - mouse))){
+  result = "cat2" 
+}else if(Math.abs((cat1 - mouse))  < Math.abs((cat2 - mouse))){
+  result = "cat1" 
 }else{
-  return("cat2");
+  result = ("os gatos trombam e o rato foge");
 }
+return(result); 
 }
+
 
 
 function fizzBuzz(arr) {
