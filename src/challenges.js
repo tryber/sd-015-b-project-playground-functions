@@ -64,33 +64,32 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function ifIsFizzBuzz(checkNumber, result) {
-  if (checkNumber % 5 === 0 && checkNumber % 3 === 0) {
+function ifIsFizzBuzz(numeros, result) {
+  if (numeros % 5 === 0 && numeros % 3 === 0) {
     result.push('fizzBuzz');
   }
 }
 
-function ifBuzz(checkNumber, result) {
-  if (checkNumber % 5 === 0 && checkNumber % 3 !== 0) {
+function ifBuzz(numeros, result) {
+  if (numeros % 5 === 0 && numeros % 3 !== 0) {
     result.push('buzz');
   }
 }
 
-function ifFizz(checkNumber, result) {
-  if (checkNumber % 3 === 0 && checkNumber % 5 !== 0) {
+function ifFizz(numeros, result) {
+  if (numeros % 3 === 0 && numeros % 5 !== 0) {
     result.push('fizz');
   }
 }
 
-function ifBug(checkNumber, result) {
-  if (checkNumber % 5 !== 0 && checkNumber % 3 !== 0) {
+function ifBug(numeros, result) {
+  if (numeros % 5 !== 0 && numeros % 3 !== 0) {
     result.push('bug!');
   }
 }
 function fizzBuzz(numeros) {
   let result = [];
   for (let index = 0; index < numeros.length; index += 1) {
-    checkNumber = numeros[index]
     ifIsFizzBuzz(numeros[index], result);
     ifBuzz(numeros[index], result);
     ifFizz(numeros[index], result);
