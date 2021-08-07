@@ -17,50 +17,49 @@ function verOcorrencias(n) {
   for (let i = 0; i < n.length; i++) {
       cont = n.split(n[i]).length - 1;
       if(cont >= 3) {
-        return "não é possível gerar um número de telefone com esses valores";
+        return 2;
       }
   }
-  return 2;
+  return 3;
 }
 
 function verTamanhos(n) {
   if(n.length === 11) {
-    return 2;
+    return 3;
   }
   return 0; 
 }
 
 function verMaiorMenor(n) {
   let resultado = 0;
-  console.log(n);
   if((Math.max(...n) > 9) || (Math.min(...n) < 0)) {
     resultado = 1;
   } else {
-    resultado = 2;
+    resultado = 3;
   }
   return resultado;
 }
 function generatePhoneNumber(numeros) {
-  let resultado = "";
-  resultado = verTamanhos(numeros);
-  if (resultado === 0) {
-    return "Array com tamanho incorreto.";
-  }
-  resultado = verMaiorMenor(numeros);
-  if (resultado === 1) {
-    return "não é possível gerar um número de telefone com esses valores"
-  }
+  let resultado = [];
+  let resultadoFinal = "";
+  resultado.push(verTamanhos(numeros));
+  resultado.push(verMaiorMenor(numeros));
   let listaArrumada = numeros.join("");
-  resultado = verOcorrencias(listaArrumada);
-  if(resultado === 2) {
-    resultado = `(${listaArrumada.slice(0,2)}) ${listaArrumada.slice(2,7)}-${listaArrumada.slice(7)}`; 
-  } 
-  return resultado; 
+  resultado.push(verOcorrencias(listaArrumada));
+  let resultadosPossiveis = ["Array com tamanho incorreto.", "não é possível gerar um número de telefone com esses valores", "não é possível gerar um número de telefone com esses valores"];
+  resultadoFinal = `(${listaArrumada.slice(0,2)}) ${listaArrumada.slice(2,7)}-${listaArrumada.slice(7)}`;
+  for (let i = 0; i < resultado.length; i += 1) {
+    if(resultado[i] === i) {
+      return resultadosPossiveis[i];
+    }
+  }
+  return resultadoFinal; 
 }
-  
+
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+// a < b+c && a> Math.abs(b-c)
+function triangleCheck(lineA, lineB, lineC) {
+  
 }
 
 // Desafio 13
