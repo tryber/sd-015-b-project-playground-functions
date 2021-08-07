@@ -69,25 +69,42 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-// Tentar passar as funções separadas para um array.
+function isFizzBuzz(arrOfNumbers, i) {
+  return arrOfNumbers[i] % 15 === 0;
+}
+
+function isFizz(arrOfNumbers, i) {
+  return arrOfNumbers[i] % 3 === 0 && arrOfNumbers[i] % 5 !== 0;
+}
+
+function isBuzz(arrOfNumbers, i) {
+  return arrOfNumbers[i] % 5 === 0 && arrOfNumbers[i] % 3 !== 0;
+}
+
+function checkFizzBuzz(arrOfNumbers, i) {
+  let message;
+
+  message = 'bug!';
+
+  if (isFizzBuzz(arrOfNumbers, i)) { message = 'fizzBuzz'; }
+
+  if (isFizz(arrOfNumbers, i)) { message = 'fizz'; }
+
+  if (isBuzz(arrOfNumbers, i)) { message = 'buzz'; }
+
+  return message;
+}
+
 function fizzBuzz(arrOfNumbers) {
   let arrOfFizzBuzz = [];
 
-  for (let i in arrOfNumbers) {
-    if (arrOfNumbers[i] % 15 === 0) {
-      arrOfFizzBuzz.push('fizzBuzz');
-    } else if (arrOfNumbers[i] % 3 === 0) {
-      arrOfFizzBuzz.push('fizz');
-    } else if (arrOfNumbers[i] % 5 === 0) {
-      arrOfFizzBuzz.push('buzz');
-    } else {
-      arrOfFizzBuzz.push('bug!');
-    }
+  for (let i = 0; i < arrOfNumbers.length; i += 1) {
+    arrOfFizzBuzz.push(checkFizzBuzz(arrOfNumbers, i));
   }
 
   return arrOfFizzBuzz;
 }
-
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 // Desafio 9
 function checkingTranslation(encodedString, i) {
   let arrOfVogals = ['a', '1', 'e', '2', 'i', '3', 'o', '4', 'u', '5'];
