@@ -5,12 +5,10 @@ function compareTrue(vida, codar) {
   // seu código aqui
   if (vida && codar) {
     return true;
-  } else {
-    return false;
-}
+  }
+  return false;
 }
 console.log(compareTrue(vida, codar));
-
 
 // Desafio 2
 function calcArea(base, height) {
@@ -21,37 +19,35 @@ function calcArea(base, height) {
 console.log(calcArea(3, 4));
 
 // Desafio 3
-frase = 'go trybe'
+let frase = 'go trybe';
 function splitSentence(frase) {
   // seu código aqui
-  sentenca = frase.split(" ");
+  sentenca = frase.split(' ');
   return sentenca;
 }
 console.log(splitSentence(frase));
 
 // Desafio 4
 let names = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
-primeiroItem = []
-ultimoItem = []
-together = []
+primeiroItem = [];
+ultimoItem = [];
+together = [];
 
 function concatName(names) {
   // seu código aqui
- for (let name in names) {
-   primeiroItem = names[0];
- }
- //console.log(primeiroItem);
- for (let name in names) {
-   ultimoItem = names[names.length - 1];
- }
- together = ultimoItem + ',' + ' ' + primeiroItem;
+  for (let name in names) {
+    primeiroItem = names[0];
+  }
+  // console.log(primeiroItem);
+  for (let name in names) {
+    ultimoItem = names[names.length - 1];
+  }
+  together = `${ultimoItem},` + ` ${primeiroItem}`;
 
- 
- //console.log(ultimoItem);
- return together;
+  // console.log(ultimoItem);
+  return together;
 }
 console.log(concatName(names));
-
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -59,51 +55,50 @@ function footballPoints(wins, ties) {
   let pontuacao = (wins * 3) + ties;
   return pontuacao;
 }
-//console.log(footballPoints(14, 8));
+// console.log(footballPoints(14, 8));
 
 // Desafio 6
-let numeros = [9, 1, 2, 3, 9, 5, 9];
-function highestCount(numeros) {
+let numbers = [9, 1, 2, 3, 9, 5, 7];
+// eslint-disable-next-line no-shadow
+function highestCount(numbers) {
   // seu código aqui
   let maiorNumero = 0;
   let cont = 0;
-  for (let n of numeros) {
-    if(n > maiorNumero) {
+  for (let n of numbers) {
+    if (n > maiorNumero) {
       maiorNumero = n;
-    }     
+    }
   }
-  for (let j of numeros) {
-    if (j === maiorNumero) {
+  for (let n of numbers) {
+    if (n === maiorNumero) {
       cont += 1;
     }
   }
-  return cont;     
+  return cont;
 }
-console.log (highestCount(numeros)) 
-  
-
+console.log(highestCount(numbers));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
   let distmc1 = mouse - cat1;
   let distmc2 = mouse - cat2;
-  
+
   if (distmc1 < distmc2) {
-    console.log("cat1");
+    console.log('cat1');
   } else if (distmc2 < distmc1) {
-    console.log("cat2");
+    console.log('cat2');
   } else {
-    console.log("os gatos trombam e o rato foge.");
+    console.log('os gatos trombam e o rato foge.');
   }
   return catAndMouse;
 }
-
+console.log(catAndMouse(5, 7, 8));
 
 // Desafio 8
 numeros = [2, 15, 7, 9, 45];
 function fizzBuzz(numeros) {
-  // seu código aqui 
+  // seu código aqui
 }
 // Desafio 9
 function encode() {
@@ -124,4 +119,4 @@ module.exports = {
   footballPoints,
   highestCount,
   splitSentence,
-}
+};
