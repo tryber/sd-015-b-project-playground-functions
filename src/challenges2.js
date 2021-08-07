@@ -36,13 +36,34 @@ function validaNumeros(phoneNumber){
 }
 
 // valida repeticao de 3 seguidos
+// function validaRepeticao(phoneNumber){
+//   let validacao = true;
+//   let guardaNumero = 0;
+//   for (let index = 0; index < phoneNumber.length; index++){
+//     guardaNumero = phoneNumber[index];
+//     if ((guardaNumero === phoneNumber[index+1]) && (guardaNumero === phoneNumber[index+2])){
+//       validacao = false;
+//     }
+//   }
+//   return validacao;
+// }
+
+
 function validaRepeticao(phoneNumber){
   let validacao = true;
   let guardaNumero = 0;
-  for (let index = 0; index < phoneNumber.length; index++){
-    guardaNumero = phoneNumber[index];
-    if ((guardaNumero === phoneNumber[index+1]) && (guardaNumero === phoneNumber[index+2])){
+  let contador = 0;
+
+  for (let indexUm = 0; indexUm < phoneNumber.length; indexUm += 1){
+    guardaNumero = phoneNumber[indexUm];
+    contador = 0;
+    for (let indexDois = 0; indexDois < phoneNumber.length; indexDois += 1){
+      if (guardaNumero === phoneNumber[indexDois]){
+      contador += 1;
+      }
+      if (contador > 2){
       validacao = false;
+      }
     }
   }
   return validacao;
