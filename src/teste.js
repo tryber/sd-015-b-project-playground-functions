@@ -1,21 +1,25 @@
-let a = [0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4];
-function repeatCount (a) {
-    for (let key of a) {
-      let counter = 0;
-      for (let ind of a) {
-        if (ind === key) {
-          counter += 1;
-          if (counter > 3) {
-            return true;
-          }
-        }
-      }
-    }
-    for (let key of a) {
-      if (key > 9 || key < 0) {
-        return true;
-      }
-    }
-  }
+let a = 10;
+let b = 14;
+let c = 8;
 
-console.log(repeatCount(a));
+function triangleCheckBigger (a, b, c) {
+  if (a < (b + c) && b < (a + c) && c < (a + b)) {
+    return true;
+  } return false;
+}
+
+function triangleCheckSmaller (a, b, c) {
+  if (a > Math.abs(b - c) && b > Math.abs(a - c) && c > Math.abs(a - b)) {
+    return true;
+  } return false;
+}
+
+function triangleCheck(lineA, lineB, lineC) {
+  let bigger = triangleCheckBigger(lineA, lineB, lineC);
+  let smaller = triangleCheckSmaller(lineA, lineB, lineC);
+  if (bigger === true && smaller === true) {
+    return true;
+  } return false;
+} 
+
+console.log(triangleCheck(a, b, c));

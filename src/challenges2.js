@@ -7,8 +7,8 @@ function techList(array, name) {
   let resultado = [];
   for (let key of array) {
     let newObject = {};
-    newObject['tech'] = key;
-    newObject['name'] = name;
+    newObject.tech = key;
+    newObject.name = name;
     resultado.push(newObject);
   }
   return resultado;
@@ -47,9 +47,25 @@ function generatePhoneNumber(a) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheckBigger (a, b, c) {
+  if (a < (b + c) && b < (a + c) && c < (a + b)) {
+    return true;
+  } return false;
 }
+
+function triangleCheckSmaller (a, b, c) {
+  if (a > Math.abs(b - c) && b > Math.abs(a - c) && c > Math.abs(a - b)) {
+    return true;
+  } return false;
+}
+
+function triangleCheck(lineA, lineB, lineC) {
+  let bigger = triangleCheckBigger(lineA, lineB, lineC);
+  let smaller = triangleCheckSmaller(lineA, lineB, lineC);
+  if (bigger === true && smaller === true) {
+    return true;
+  } return false;
+} 
 
 // Desafio 13
 function hydrate() {
