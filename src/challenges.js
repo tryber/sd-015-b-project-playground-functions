@@ -71,8 +71,25 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzzDivisible3or5(a) {
+  let result;
+  if (a % 3 === 0 && a % 5 === 0) {
+    result = 'fizzBuzz';
+  } else if (a % 3 === 0) {
+    result = 'fizz';
+  } else if (a % 5 === 0) {
+    result = 'buzz';
+  } else {
+    result = 'bug!';
+  }
+  return result;
+}
+
+function fizzBuzz(array) {
+  for (let i = 0; i < array.length; i += 1) {
+    array[i] = fizzBuzzDivisible3or5(array[i]);
+  }
+  return array;
 }
 
 // Desafio 9
