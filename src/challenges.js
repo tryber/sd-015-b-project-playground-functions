@@ -22,7 +22,7 @@ console.log(calcArea(3, 4));
 let frase = 'go trybe';
 function splitSentence(frase) {
   // seu código aqui
-  sentenca = frase.split(' ');
+  let sentenca = frase.split(' ');
   return sentenca;
 }
 console.log(splitSentence(frase));
@@ -31,7 +31,6 @@ console.log(splitSentence(frase));
 let names = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
 primeiroItem = [];
 ultimoItem = [];
-together = [];
 
 function concatName(names) {
   // seu código aqui
@@ -39,10 +38,11 @@ function concatName(names) {
     primeiroItem = names[0];
   }
   // console.log(primeiroItem);
-  for (let name in names) {
+  // eslint-disable-next-line guard-for-in
+  for (name in names) {
     ultimoItem = names[names.length - 1];
   }
-  together = `${ultimoItem},` + ` ${primeiroItem}`;
+  let together = `${ultimoItem},` + ` ${primeiroItem}`;
 
   // console.log(ultimoItem);
   return together;
@@ -55,7 +55,7 @@ function footballPoints(wins, ties) {
   let pontuacao = (wins * 3) + ties;
   return pontuacao;
 }
-// console.log(footballPoints(14, 8));
+console.log(footballPoints(14, 8));
 
 // Desafio 6
 let numbers = [9, 1, 2, 3, 9, 5, 7];
