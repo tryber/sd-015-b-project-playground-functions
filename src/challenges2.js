@@ -14,10 +14,27 @@ function techList(tech, name) {
   return 'Vazio!';
 }
 
-console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas'));
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(telephone) {
+  if (telephone.length !== 11) {
+    return 'Array com tamanho incorreto.';
+  }
+  for (let index = 0; index < telephone.length; index += 1) {
+    let repeatNumber = 0;
+    for (let index2 = 0; index2 < telephone.length; index2 += 1) {
+      if (telephone[index] === telephone[index2]) {
+        repeatNumber += 1;
+      }
+    }
+    if (telephone[index] < 0 || telephone[index] > 9 || repeatNumber >= 3) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
+  }
+  let number = '(xx) xxxxx-xxxx';
+  telephone.forEach(element => {
+    number = number.replace('x', element);
+  });
+  return number;
 }
 
 // Desafio 12
