@@ -1,3 +1,4 @@
+/* eslint-disable max-lines-per-function */
 // Desafio 1
 function compareTrue(x, y) {
   // seu código aqui
@@ -68,29 +69,79 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
+// eslint-disable-next-line complexity
 function fizzBuzz(receiveNumber) {
   // seu código aqui
   let wordArray = [];
-  for(let i = 0; i < receiveNumber.length; i += 1){
-    if(receiveNumber[i]%3===0 && receiveNumber[i]%5===0){
+  for (let i = 0; i < receiveNumber.length; i += 1) {
+    if (receiveNumber[i] % 3 === 0 && receiveNumber[i] % 5 === 0) {
       wordArray.push('fizzBuzz');
-    }else if((receiveNumber[i])%5===0){
+    } else if ((receiveNumber[i]) % 5 === 0) {
       wordArray.push('buzz');
-    }else if(receiveNumber[i]%3===0){
+    } else if (receiveNumber[i] % 3 === 0) {
       wordArray.push('fizz');
-    }else if(receiveNumber[i]%3!=0 || receiveNumber[i]%5!=0){
-      wordArray.push('bug!'); 
-    }   
+    } else if (receiveNumber[i] % 3 !== 0 || receiveNumber[i] % 5 !== 0) {
+      wordArray.push('bug!');
+    }
   }
   return wordArray;
 }
 
 // Desafio 9
-function encode() {
+// eslint-disable-next-line max-lines-per-function
+// eslint-disable-next-line complexity
+function encode(caracter) {
   // seu código aqui
+  let aux = '';
+  for (let i = 0; i < caracter.length; i += 1) {
+    switch (caracter[i]) {
+      case 'a':
+        aux += '1';
+        break;
+      case 'e':
+        aux += '2';
+        break;
+      case 'i':
+        aux += '3';
+        break;
+      case 'o':
+        aux += '4';
+        break;
+      case 'u':
+        aux += '5';
+        break;
+      default:
+        aux += caracter[i];
+    }
+
+  } return (aux);
+
 }
-function decode() {
+function decode(caracterDecode) {
   // seu código aqui
+  let aux = '';
+  for (let i = 0; i < caracterDecode.length; i += 1) {
+    switch (caracterDecode[i]) {
+      case '1':
+        aux += 'a';
+        break;
+      case '2':
+        aux += 'e';
+        break;
+      case '3':
+        aux += 'i';
+        break;
+      case '4':
+        aux += 'o';
+        break;
+      case '5':
+        aux += 'u';
+        break;
+      default:
+        aux += caracterDecode[i];
+    }
+
+  } return (aux);
 }
 
 module.exports = {
