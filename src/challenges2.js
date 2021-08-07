@@ -45,11 +45,24 @@ function generatePhoneNumber(arrayPhone) {
     phoneNumber = phoneNumber + arrayPhone[i];
     
   } return phoneNumber;
-} console.log(generatePhoneNumber([0, -2, 3, 8, 4, 2, 7, 8, 9, 9, 4]));
-
+} 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  if (lineA > lineB + lineC && lineA < Math.abs(lineB - lineC)){
+    return true;
+  } else if (lineB > lineC + lineA && lineB < Math.abs(lineC - lineA)){
+    return true;
+  } else if (lineC > lineA + lineB && lineC < Math.abs(lineA - lineB)){
+    return true;
+  } if (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC)){
+    return true;
+  } else if (lineB < lineC + lineA && lineB > Math.abs(lineC - lineA)){
+    return true;
+  } else if (lineC < lineA + lineB && lineC > Math.abs(lineA - lineB)){
+    return true;
+  }else {
+    return false;
+  }
 }
 
 // Desafio 13
