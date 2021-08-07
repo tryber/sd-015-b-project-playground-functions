@@ -1,24 +1,34 @@
 // Desafio 10
-function techList(arr, name) {
-  let obj = {};
+function arrayToObjectArray(arr, name) {
   let arrayDeObj = [];
 
-  if (arr.length > 0) {
-    for (const value of arr) {
-      obj['tech'] = value;
-      obj['name'] = name;  
-      //arrayDeObj = obj;
-      arrayDeObj.push(obj);
-      for (const key in obj) {
-        obj.tech = value;
-      }
-    }
-  } else {
-    return 'Vazio!';
+  for (const value of arr) {
+    let obj = {};
+    obj.tech = value;
+    obj.name = name;        
+    arrayDeObj.push(obj);
   }
   return arrayDeObj;
 }
-//console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'israel'));
+
+function techList(arr, name) { 
+  let arrayDeObj = arrayToObjectArray(arr, name);
+
+  if (arr.length > 0) {
+    arrayDeObj;
+  } else {
+    return 'Vazio!';
+  }
+  arrayDeObj.sort(function(a, b,) {
+    if(a.tech < b.tech) {
+      return -1;
+    } else {
+      return true;
+    }
+  });
+  return arrayDeObj;
+}
+// console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'israel'));
 // Desafio 11
 function generatePhoneNumber(arr) {
   arr.split('-', 3)//.join('');
