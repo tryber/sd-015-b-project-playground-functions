@@ -66,9 +66,21 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
-}
+function hydrate(stringHy) {
+  let splitHy = stringHy.split(" ");
+  let numberHy = 0;
+
+  for (let i = 0; i < splitHy.length; i++){
+    let convert = parseInt(splitHy[i]);
+    if (!Number.isNaN(convert)) {
+      numberHy = numberHy + convert;
+    }
+  } 
+  if (numberHy === 1) {
+    return "1 copo de água";
+  }
+  return numberHy + " copos de água";
+} 
 
 module.exports = {
   generatePhoneNumber,
