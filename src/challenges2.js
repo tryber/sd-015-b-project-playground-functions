@@ -47,13 +47,13 @@ function generatePhoneNumber(a) {
 }
 
 // Desafio 12
-function triangleCheckBigger (a, b, c) {
+function triangleCheckBigger(a, b, c) {
   if (a < (b + c) && b < (a + c) && c < (a + b)) {
     return true;
   } return false;
 }
 
-function triangleCheckSmaller (a, b, c) {
+function triangleCheckSmaller(a, b, c) {
   if (a > Math.abs(b - c) && b > Math.abs(a - c) && c > Math.abs(a - b)) {
     return true;
   } return false;
@@ -65,12 +65,30 @@ function triangleCheck(lineA, lineB, lineC) {
   if (bigger === true && smaller === true) {
     return true;
   } return false;
-} 
+}
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function getNumbers(a) {
+  let str = a.replace(/\D+/g, '');
+  let numbersArray = [];
+  for (let key of str) {
+    numbersArray.push([key]);
+  }
+  return numbersArray;
 }
+
+function hydrate(str) {
+  let numbers = getNumbers(str);
+  let soma = 0;
+  for (let key of numbers) {
+    soma += Number([key]);
+}
+  if (soma === 1) {
+    return `${soma} copo de água`;
+  } return `${soma} copos de água`;
+}
+let str = '1 cerveja';
+console.log(hydrate(str));
 
 module.exports = {
   generatePhoneNumber,

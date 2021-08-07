@@ -1,25 +1,22 @@
-let a = 10;
-let b = 14;
-let c = 8;
-
-function triangleCheckBigger (a, b, c) {
-  if (a < (b + c) && b < (a + c) && c < (a + b)) {
-    return true;
-  } return false;
+let str = '1 cachaça';
+str = str.replace(/\D+/g, '');
+console.log(str);
+function getNumbers (a) {
+  let numbersArray = [];
+  for (let key of a) {
+    numbersArray.push([key]);
+  }
+  return numbersArray;
 }
 
-function triangleCheckSmaller (a, b, c) {
-  if (a > Math.abs(b - c) && b > Math.abs(a - c) && c > Math.abs(a - b)) {
-    return true;
-  } return false;
+function hydrate(str) {
+  let numbers = getNumbers(str);
+  let soma = 0;
+  for (let key of numbers) {
+    soma += Number([key]);
 }
-
-function triangleCheck(lineA, lineB, lineC) {
-  let bigger = triangleCheckBigger(lineA, lineB, lineC);
-  let smaller = triangleCheckSmaller(lineA, lineB, lineC);
-  if (bigger === true && smaller === true) {
-    return true;
-  } return false;
-} 
-
-console.log(triangleCheck(a, b, c));
+  if (soma === 1) {
+    return `${soma} copo de água`;
+  } return `${soma} copos de água`;
+}
+console.log(hydrate(str));
