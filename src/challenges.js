@@ -30,6 +30,10 @@ function higherRepeats(value) {
 function addFizz(value, arr) {
   if (value % 3 === 0 && value % 5 !== 0) arr.push('fizz');
 }
+
+function addBuzz(value, arr) {
+  if (value % 5 === 0 && value % 3 !== 0) arr.push('buzz');
+}
 // Fim das funções auxiliares para o desafio 8
 
 // Desafio 1
