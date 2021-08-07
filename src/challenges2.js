@@ -6,7 +6,7 @@ function techList(arrayTech, name) {
 
   if (arrayTech.length < 1) {
     return 'Vazio!';
-  } for (let i in arrayTech) {
+  } for (let i = 0; i < arrayTech.length; i += 1) {
     arrayTech.sort();
     objTechs = { tech: arrayTech[i], name: name };
     pushArray.push(objTechs);
@@ -20,10 +20,10 @@ function generatePhoneNumber(arrayNumeros) {
   let strigArray = '';
   if (arrayNumeros.length !== 11) {
     return 'Array com tamanho incorreto.';
-  } for (let i in arrayNumeros) {
+  } for (let i = 0; i < arrayNumeros.length; i += 1) {
     if (arrayNumeros[i] < 0 || arrayNumeros[i] > 9) {
       return 'não é possível gerar um número de telefone com esses valores';
-    } for (let i2 in arrayNumeros) {
+    } for (let i2 = 0; i2 < arrayNumeros.length; i2 += 1) {
       if (arrayNumeros[i] === arrayNumeros[i2]) {
         contador += 1;
         if (contador > 2) {
