@@ -3,18 +3,18 @@ function techList(tech, name) {
   if (tech.length > 0) {
     let techAndName = [];
     tech.sort();
-    for (let index in tech) {
+    for (let index = 0; index < tech.length; index += 1) {
       let store = {};
       store.name = name;
       store.tech = tech[index];
       techAndName.push(store);
     }
     return techAndName;
-  } else {
-    return 'Vazio!';
   }
+  return 'Vazio!';
 }
 
+console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas'));
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
