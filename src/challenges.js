@@ -90,13 +90,22 @@ function fizzBuzz(numbers) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(text) {
+  let newTextA = text.replace(/a/gi, 1);
+  let newTextE = newTextA.replace(/e/gi, 2);
+  let newTextI = newTextE.replace(/i/gi, 3);
+  let newTextO = newTextI.replace(/o/gi, 4);
+  let newTextU = newTextO.replace(/u/gi, 5);
+  return newTextU;
 }
-function decode() {
-  // seu código aqui
+function decode(text2) {
+  let newText1 = text2.replace(/1/gi, 'a');
+  let newText2 = newText1.replace(/2/gi, 'e');
+  let newText3 = newText2.replace(/3/gi, 'i');
+  let newText4 = newText3.replace(/4/gi, 'o');
+  let newText5 = newText4.replace(/5/gi, 'u');
+  return newText5
 }
-
 module.exports = {
   calcArea,
   catAndMouse,
