@@ -72,6 +72,7 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(array) {
+  let fizzBuzz = [];
   for (let index = 0; index < array.length; index += 1) {
     if (array[index] % 15 === 0) {
       fizzBuzz.push('fizzBuzz');
@@ -84,7 +85,7 @@ function fizzBuzz(array) {
   }
   return fizzBuzz;
 } 
-//console.log(fizzBuzz([25, 9]))
+console.log(fizzBuzz([25, 9]))
 
 // Desafio 9
 function encode(str) {
