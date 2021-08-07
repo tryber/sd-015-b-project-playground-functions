@@ -28,12 +28,16 @@ function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
   let contador = 0;
   if (lineA < (lineB + lineC) && lineA > Math.abs(lineB - lineC)) {
-    return true;
+    contador += 1;
   } else if (lineB < (lineA + lineC) && lineB > Math.abs(lineA - lineC) ) {
-    return true;
+    contador += 1;
   } else if (lineC < (lineA + lineB) && lineC > Math.abs(lineA - lineB)) {
+    contador +=1;
+  } 
+
+  if (contador === 1) {
     return true;
-  } else {
+  } else{
     return false;
   }
 
