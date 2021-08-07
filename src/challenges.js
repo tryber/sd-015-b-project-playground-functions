@@ -68,16 +68,60 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arrFizzBuzz) {
+  let resp = []
+  for (let term of arrFizzBuzz) {
+    if (term % 3 == 0 && term % 5 == 0) {
+      resp.push("fizzBuzz")
+    } else if (term % 3 == 0) {
+      resp.push("fizz")
+    } else if (term % 5 == 0) {
+      resp.push("buzz")
+    } else {
+      resp.push("bug!")
+    }
+  }
+  return resp
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(strEncode) {
+  let resp = ""
+  for (let letras of strEncode) {
+    if (letras === "a") {
+      resp += "1"
+    } else if (letras === "e") {
+      resp += "2"
+    } else if (letras === "i") {
+      resp += "3"
+    } else if (letras === "o") {
+      resp += "4"
+    } else if (letras === "u") {
+      resp += "5"
+    } else {
+      resp += letras
+    }
+  }
+  return resp
 }
-function decode() {
-  // seu código aqui
+function decode(strDecode) {
+  let resp = ""
+  for (let letras of strDecode) {
+    if (letras === "1") {
+      resp += "a"
+    } else if (letras === "2") {
+      resp += "e"
+    } else if (letras === "3") {
+      resp += "i"
+    } else if (letras === "4") {
+      resp += "o"
+    } else if (letras === "5") {
+      resp += "u"
+    } else {
+      resp += letras
+    }
+  }
+  return resp
 }
 
 module.exports = {
