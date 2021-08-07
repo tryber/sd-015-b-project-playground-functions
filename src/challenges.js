@@ -2,27 +2,28 @@
 function compareTrue(v1, v2) {
   if (v1 && v2 === true) {
     return true;
-  } else {
-    return false;
   }
+
+  return false;
 }
 
 // Desafio 2
-function calcArea(base,height) {
+function calcArea(base, height) {
   return ((base * height) / 2);
 }
 
 // Desafio 3
 function splitSentence(string) {
-  return string.split(" ");
+  return string.split(' ');
   // Função .split foi encontrada buscando "how to split sentences in js?"
-// e dentro da função '.split()' se coloca a condição para a separação, no caso, o espaço.
-  }
+  // e dentro da função '.split()' se coloca a condição para a separação, no caso, o espaço.
+}
 
 // Desafio 4
 function concatName(arrayStr) {
-  lastItem = arrayStr[arrayStr.length - 1];
-  firstItem = arrayStr[0];
+  let lastItem = arrayStr[arrayStr.length - 1];
+  let firstItem = arrayStr[0];
+  
   return (lastItem + ", " + firstItem);
 }
 
