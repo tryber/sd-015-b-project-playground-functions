@@ -26,6 +26,12 @@ function higherRepeats(value) {
 
 // Fim das funções auxiliares para o desafio 6
 
+// Início das funções auxiliares para o desafio 8
+function addFizz(value, arr) {
+  if (value % 3 === 0 && value % 5 !== 0) arr.push('fizz');
+}
+// Fim das funções auxiliares para o desafio 8
+
 // Desafio 1
 function compareTrue(param1, param2) {
   return param1 && param2;
