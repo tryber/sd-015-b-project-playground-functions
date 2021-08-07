@@ -48,10 +48,11 @@ function isThreeOrNineOrZero(arr) {
 function concatPhoneNumber(arr) {
   let numberPhone = [];
 
-  for (number of arr) {
+  for (let number of arr) {
     numberPhone.push(number);
   }
-  let strNumberPhone = `(${numberPhone[0]}${numberPhone[1]}) ${numberPhone[2]}${numberPhone[3]}${numberPhone[4]}${numberPhone[5]}${numberPhone[6]}-${numberPhone[7]}${numberPhone[8]}${numberPhone[9]}${numberPhone[10]}`;
+  let strNumberPhone = `(${numberPhone[0]}${numberPhone[1]}) ${numberPhone[2]}${numberPhone[3]}${numberPhone[4]}
+                         ${numberPhone[5]}${numberPhone[6]}-${numberPhone[7]}${numberPhone[8]}${numberPhone[9]}${numberPhone[10]}`;
 
   return strNumberPhone;
 }
@@ -64,8 +65,8 @@ function generatePhoneNumber(arr) {
     return 'Array com tamanho incorreto.';
   }
   if (
-    isThreeOrNineOrZero(arr)
-    === 'não é possível gerar um número de telefone com esses valores'
+    isThreeOrNineOrZero(arr) ===
+    'não é possível gerar um número de telefone com esses valores'
   ) {
     numberPhone = isThreeOrNineOrZero(arr);
     return numberPhone;
@@ -79,18 +80,16 @@ function triangleCheck(lineA, lineB, lineC) {
   let somaAB = lineA + lineB;
   let somaAC = lineA + lineC;
   let somaBC = lineB + lineC;
-
   let subAB = Math.abs(lineA - lineB);
   let subAC = Math.abs(lineA - lineC);
   let subBC = Math.abs(lineB - lineC);
-
   if (
-    lineA > somaBC
-    || lineA < subBC
-    || lineB > somaAC
-    || lineB < subAC
-    || lineC > somaAB
-    || lineC < subAB
+    lineA > somaBC ||
+    lineA < subBC ||
+    lineB > somaAC ||
+    lineB < subAC ||
+    lineC > somaAB ||
+    lineC < subAB
   ) {
     return false;
   }
@@ -104,8 +103,8 @@ function hydrate(str) {
   let arrayNumbers = str.match(regularExpression);
   let sumWaterCups = 0;
 
-  for (index in arrayNumbers) {
-    numberInteger = parseInt(arrayNumbers[index]);
+  for (let index in arrayNumbers) {
+    let numberInteger = parseInt(arrayNumbers[index]);
     sumWaterCups += numberInteger;
   }
   if (sumWaterCups === 1) {

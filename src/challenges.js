@@ -107,7 +107,6 @@ function fizzBuzz(arr) {
 function encode(str) {
   // seu código aqui
   let strSplit = str.split('');
-
   for (let index in strSplit) {
     if (strSplit[index] === 'a') {
       strSplit[index] = 1;
@@ -122,14 +121,12 @@ function encode(str) {
     }
   }
   let encodedStr = strSplit.join('');
-
   return encodedStr;
 }
 
 function decode(str) {
   // seu código aqui
   let strSplit = str.split('');
-
   for (let index in strSplit) {
     if (strSplit[index] == 1) {
       strSplit[index] = 'a';
@@ -144,7 +141,6 @@ function decode(str) {
     }
   }
   let decodedStr = strSplit.join('');
-
   return decodedStr;
 }
 
