@@ -1,27 +1,29 @@
 // Desafio 1
+// check
 function compareTrue(a, b) {
   return a === true && b === true;
 }
 console.log(compareTrue(true, true));
-// Desafio 2
+// Desafio 2 
+// check
 function calcArea(base, height) {
   return (base * height) / 2;
 }
 console.log(calcArea(10, 50));
 
 // Desafio 3
+// check
 function splitSentence(string) {
   return string.split(' ');
 } console.log(splitSentence('turma trybecat!'));
 
 // Desafio 4
-function concatName(lista) {
-  return (lista - [lista.length - 1] + lista[0]);
-}
+function concatName(array) {
+  return array[0] + ', ' + array[array.length - 1];
+ }
 
 // Desafio 5
 function footballPoints() {
-  return (wins * 3) + ties;
 }
 // Desafio 6
 function highestCount(arrayNumeros) {
@@ -38,6 +40,7 @@ function highestCount(arrayNumeros) {
 }
 
 // Desafio 7
+// check
 function catAndMouse(mouse, cat1, cat2) {
   if (cat1 - mouse === cat2 - mouse || cat2 - mouse === (cat1 - mouse) * -1) {
     return 'os gatos trombam e o rato foge';
