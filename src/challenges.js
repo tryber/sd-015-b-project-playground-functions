@@ -47,8 +47,16 @@ return counter;
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+let diffCat1 = Math.abs(cat1 - mouse);
+let diffCat2 = Math.abs(cat2 - mouse);
+  if (diffCat1 === diffCat2) {
+  return "os gatos trombam e o rato foge";
+} else if (diffCat1 > diffCat2) {
+  return "cat2";
+} else {
+  return "cat1"
+}
 }
 
 // Desafio 8
@@ -75,4 +83,4 @@ module.exports = {
   footballPoints,
   highestCount,
   splitSentence,
-};
+}
