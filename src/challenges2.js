@@ -51,8 +51,9 @@ function concatPhoneNumber(arr) {
   for (let number of arr) {
     numberPhone.push(number);
   }
-  let strNumberPhone = `(${numberPhone[0]}${numberPhone[1]}) ${numberPhone[2]}${numberPhone[3]}${numberPhone[4]}
-                         ${numberPhone[5]}${numberPhone[6]}-${numberPhone[7]}${numberPhone[8]}${numberPhone[9]}${numberPhone[10]}`;
+  let strNumberPhone = `(${numberPhone[0]}${numberPhone[1]}) 
+                         ${numberPhone[2]}${numberPhone[3]}${numberPhone[4]}${numberPhone[5]}${numberPhone[6]}
+                         -${numberPhone[7]}${numberPhone[8]}${numberPhone[9]}${numberPhone[10]}`;
 
   return strNumberPhone;
 }
@@ -64,10 +65,7 @@ function generatePhoneNumber(arr) {
   if (arr.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
-  if (
-    isThreeOrNineOrZero(arr) ===
-    'não é possível gerar um número de telefone com esses valores'
-  ) {
+  if (isThreeOrNineOrZero(arr) === 'não é possível gerar um número de telefone com esses valores') {
     numberPhone = isThreeOrNineOrZero(arr);
     return numberPhone;
   }
@@ -84,12 +82,12 @@ function triangleCheck(lineA, lineB, lineC) {
   let subAC = Math.abs(lineA - lineC);
   let subBC = Math.abs(lineB - lineC);
   if (
-    lineA > somaBC ||
-    lineA < subBC ||
-    lineB > somaAC ||
-    lineB < subAC ||
-    lineC > somaAB ||
-    lineC < subAB
+    lineA > somaBC
+    || lineA < subBC
+    || lineB > somaAC
+    || lineB < subAC
+    || lineC > somaAB
+    || lineC < subAB
   ) {
     return false;
   }
