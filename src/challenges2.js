@@ -51,9 +51,7 @@ function concatPhoneNumber(arr) {
   for (let number of arr) {
     numberPhone.push(number);
   }
-  let strNumberPhone = `(${numberPhone[0]}${numberPhone[1]}) 
-                         ${numberPhone[2]}${numberPhone[3]}${numberPhone[4]}${numberPhone[5]}${numberPhone[6]}
-                         -${numberPhone[7]}${numberPhone[8]}${numberPhone[9]}${numberPhone[10]}`;
+  let strNumberPhone = `(${numberPhone[0]}${numberPhone[1]}) ${numberPhone[2]}${numberPhone[3]}${numberPhone[4]}${numberPhone[5]}${numberPhone[6]}-${numberPhone[7]}${numberPhone[8]}${numberPhone[9]}${numberPhone[10]}`;
 
   return strNumberPhone;
 }
