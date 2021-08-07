@@ -28,27 +28,25 @@ function techList(arr, name) {
   });
   return arrayDeObj;
 }
-// console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'israel'));
-// Desafio 11
-function generatePhoneNumber(arr) {
-  arr.split('-', 3)//.join('');
-  return arr
-}
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
-// Desafio 12
-function triangleCheck(la, lb, lc) {
-  let result = false;
 
-  if ((la < (lb + lc)) && (lb < (la + lc)) && (lc < (la + lb))){
-    if ((la > Math.abs(lb - lc)) && (lb > Math.abs(la - lc)) && (lc > Math.abs(la - lb))) {
-      result = true;
-    } else {
-      result;
-    }
-  } else {
-    result;
-  }
-  return result;
+// Desafio 11
+ function generatePhoneNumber() {
+//   arr.split('-', 3)//.join('');
+//   return arr;
+}
+//console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
+// Desafio 12
+function lado1MenorQSomaDOutros(a, b, c) {
+  let verificaSoma = (a < (b + c)) && (b < (a + c)) && (c < (a + b));
+  return verificaSoma;
+}
+
+function lado1MaiorQDiferencaDOutros(a, b, c) {
+  let verificaDiferenca = (a > Math.abs(b - c)) && (b > Math.abs(a - c)) && (c > Math.abs(a - b));
+  return verificaDiferenca;
+}
+function triangleCheck(a, b, c) {
+  return lado1MenorQSomaDOutros(a, b, c) && lado1MaiorQDiferencaDOutros(a, b, c)
 }
 
 // Desafio 13
