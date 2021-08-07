@@ -10,28 +10,33 @@ function compareTrue(valor1, valor2) {
 }
 
 // Desafio 2
-function calcArea() {
+function calcArea(base, height) {
   // seu código aqui
+    return (base * height) / 2;
 }
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(sentenca) {
   // seu código aqui
+  return sentenca.split(' ');
 }
 
 // Desafio 4
-function concatName() {
+function concatName(arrayStrings) {
   // seu código aqui
+  return arrayStrings[(arrayStrings.length) -1] + ", " + arrayStrings[0];
 }
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
+  return (wins * 3) + (ties * 1);
 }
 
 // Desafio 6
-function highestCount() {
+function highestCount(arrayNumeros) {
   // seu código aqui
+  
 }
 
 // Desafio 7
