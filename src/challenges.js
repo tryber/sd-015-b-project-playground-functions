@@ -1,49 +1,98 @@
+/* eslint-disable complexity */
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(a, b) {
+  if (a === true && b === true) {
+    return true;
+  } return false;
 }
 
-// Desafio 2
-function calcArea() {
-  // seu código aqui
+// Desafio 2;
+function calcArea(base, height) {
+  return (base * height) / 2;
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(str) {
+  return str.split(' ');
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  return `${array[array.length - 1]}, ${array[0]}`;
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(win, ties) {
+  return ((win * 3) + (ties * 1));
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numberArray) {
+  let counter = 0;
+  let higherNumber = numberArray[0];
+  for (let number of numberArray) {
+    if (number > higherNumber) {
+      higherNumber = number;
+      counter = 1;
+    } else if (number === higherNumber) {
+      counter += 1;
+    }
+  }
+  return counter;
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  if (cat1 - mouse === cat2 - mouse || cat2 - mouse === (cat1 - mouse) * -1) {
+    return 'os gatos trombam e o rato foge';
+  }
+  if (cat1 - mouse < cat2 - mouse) {
+    return 'cat1';
+  } return 'cat2';
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzzCheck(number) {
+  let output = [];
+  if (number % 3 === 0 && number % 5 === 0) {
+    output.push('fizzBuzz');
+  } else if (number % 3 === 0) {
+    output.push('fizz');
+  } else if (number % 5 === 0) {
+    output.push('buzz');
+  } else {
+    output.push('bug!');
+  } return output[0];
 }
 
-// Desafio 9
-function encode() {
-  // seu código aqui
+function fizzBuzz(fizzBuzzArray) {
+  let result = [];
+  for (let key of fizzBuzzArray) {
+    result.push(fizzBuzzCheck(key));
+    console.log(result);
+  }
+  return result;
 }
-function decode() {
-  // seu código aqui
+let a = [7, 9];
+console.log(fizzBuzz(a));
+
+// Desafio 9
+function encode(string) {
+  let encodedString = string.replace(/a/g, '1');
+  encodedString = encodedString.replace(/e/g, '2');
+  encodedString = encodedString.replace(/i/g, '3');
+  encodedString = encodedString.replace(/o/g, '4');
+  encodedString = encodedString.replace(/u/g, '5');
+  return encodedString;
+}
+
+function decode(string) {
+  let encodedString = string.replace(/1/g, 'a');
+  encodedString = encodedString.replace(/2/g, 'e');
+  encodedString = encodedString.replace(/3/g, 'i');
+  encodedString = encodedString.replace(/4/g, 'o');
+  encodedString = encodedString.replace(/5/g, 'u');
+  return encodedString;
 }
 
 module.exports = {
