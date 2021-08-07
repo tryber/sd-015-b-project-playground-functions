@@ -65,10 +65,11 @@ function hydrate(phrase) {
   for (let index = 0; index < result.length; index += 1) {
     numberGlass += parseInt(result[index]);
   }
-  let glassesWater = numberGlass + ' copos de água';
-  return (glassesWater);
+  if (numberGlass === 1) {
+    return numberGlass + ' copo de água';
+  }
+  return numberGlass + ' copos de água';
 }
-
 
 module.exports = {
   generatePhoneNumber,
