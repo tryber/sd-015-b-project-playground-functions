@@ -23,31 +23,30 @@ function splitSentence(string) {
 function concatName(arrayStr) {
   let lastItem = arrayStr[arrayStr.length - 1];
   let firstItem = arrayStr[0];
-  
+
   return (lastItem + ", " + firstItem);
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  return ((wins*3) + (ties*1));
+  return ((wins * 3) + (ties * 1));
 }
-
 
 // Desafio 6
 function highestCount(arrayNum) {
   let highestNumber = arrayNum[0];
   let counter = [];
-  //definindo maior numero
-  for (let i = 0; i < arrayNum.length; i++){
+  // definindo maior numero
+  for (let i = 0; i < arrayNum.length; i++) {
     let number = arrayNum[i];
-    
+
     if (number >= highestNumber) {
-      highestNumber = number; 
+      highestNumber = number;
     }
   }
-  //contando maior numero
-  for (let j = 0; j < arrayNum.length; j++){
-    if ( highestNumber === arrayNum[j]){
+  // contando maior numero
+  for (let j = 0; j < arrayNum.length; j++) {
+    if (highestNumber === arrayNum[j]) {
       counter.push(highestNumber);
     }
   }
@@ -55,28 +54,28 @@ function highestCount(arrayNum) {
 }
 
 // Desafio 7
-function catAndMouse(mouse,cat1,cat2) {
+function catAndMouse(mouse, cat1, cat2) {
   if (Math.abs(mouse - cat1) < Math.abs(mouse - cat2)) {
-    return("cat1");
-  } else if (Math.abs(mouse - cat2) < Math.abs(mouse - cat1)) {
-    return("cat2");
-  } else if (Math.abs(mouse - cat1) === Math.abs(mouse - cat2)){
-    return("os gatos trombam e o rato foge");
+    return ('cat1');
+  } if (Math.abs(mouse - cat2) < Math.abs(mouse - cat1)) {
+    return ('cat2');
+  } if (Math.abs(mouse - cat1) === Math.abs(mouse - cat2)) {
+    return ('os gatos trombam e o rato foge');
   }
-} 
+}
 
 // Desafio 8
 function fizzBuzz(arrayFizzBuzz) {
   let newArrayFizzBuzz = [];
-  for (i = 0; i < arrayFizzBuzz.length; i++){
+  for (i = 0; i < arrayFizzBuzz.length; i++) {
     if (arrayFizzBuzz[i] % 3 === 0 && arrayFizzBuzz[i] % 5 != 0) {
-      newArrayFizzBuzz.push("fizz");
+      newArrayFizzBuzz.push('fizz');
     } else if (arrayFizzBuzz[i] % 5 === 0 && arrayFizzBuzz[i] % 3 != 0) {
-      newArrayFizzBuzz.push("buzz");
+      newArrayFizzBuzz.push('buzz');
     } else if (arrayFizzBuzz[i] % 3 === 0 && arrayFizzBuzz[i] % 5 === 0) {
-      newArrayFizzBuzz.push("fizzBuzz");
+      newArrayFizzBuzz.push('fizzBuzz');
     } else {
-      newArrayFizzBuzz.push("bug!");
+      newArrayFizzBuzz.push('bug!');
     }
   } return newArrayFizzBuzz;
 }
@@ -86,35 +85,33 @@ function encode(string) {
   // converter a string em array
   let arrayString = string.split('');
   let enCode = [];
-  let enCoded = "";
-  for (i = 0; i < arrayString.length; i++){
-    
+  let enCoded = '';
+  for (i = 0; i < arrayString.length; i++) {
     if (arrayString[i] === 'a') {
-      enCode.push("1");
+      enCode.push('1');
     } else if (arrayString[i] === 'e') {
-      enCode.push("2");
+      enCode.push('2');
     } else if (arrayString[i] === 'i') {
-     enCode.push("3"); 
+      enCode.push('3');
     } else if (arrayString[i] === 'o') {
-      enCode.push("4");
+      enCode.push('4');
     } else if (arrayString[i] === 'u') {
-      enCode.push("5");
+      enCode.push('5');
     } else {
       enCode.push(arrayString[i]);
     }
   }
   // pegar a array e joga-la como string
-  for (j = 0; j < enCode.length; j ++) {
-    enCoded = enCoded + enCode[j];
+  for (j = 0; j < enCode.length; j++) {
+    enCoded += enCode[j];
   } return enCoded;
-
 }
 function decode(stringNum) {
   let arrayStrinNum = stringNum.split('');
   let enCodeN = [];
-  let enCodedN = "";
+  let enCodedN = '';
   // string -> array
-  for (i = 0; i < arrayStrinNum.length; i ++) {
+  for (i = 0; i < arrayStrinNum.length; i++) {
     if (arrayStrinNum[i] === '1') {
       enCodeN.push('a');
     } else if (arrayStrinNum[i] === '2') {
@@ -125,14 +122,14 @@ function decode(stringNum) {
       enCodeN.push('o');
     } else if (arrayStrinNum[i] === '5') {
       enCodeN.push('u');
-    } else { 
+    } else {
       enCodeN.push(arrayStrinNum[i]);
     }
   }
 
-  //mapear array => string
+  // mapear array => string
   for (j = 0; j < enCodeN.length; j++) {
-    enCodedN = enCodedN + enCodeN[j];
+    enCodedN += enCodeN[j];
   } return enCodedN;
 }
 
