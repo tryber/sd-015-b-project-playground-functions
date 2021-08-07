@@ -3,9 +3,8 @@ function compareTrue(bool1, bool2) {
   // seu código aqui
   if (bool1 === true && bool2 === true) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
 
 // Desafio 2
@@ -20,7 +19,7 @@ function splitSentence(frase) {
   let divisao = [];
   let palavra = '';
 
-  for (caractere of frase + ' ') {
+  for (caractere of `${frase} `) {
     if (caractere === ' ') {
       divisao.push(palavra);
       palavra = '';
@@ -34,7 +33,7 @@ function splitSentence(frase) {
 // Desafio 4
 function concatName(lista) {
   // seu código aqui
-  let resultado = lista[lista.length - 1] + ', ' + lista[0];
+  let resultado = `${lista[lista.length - 1]}, ${lista[0]}`;
   return resultado;
 }
 
@@ -71,34 +70,23 @@ function catAndMouse(mouse, cat1, cat2) {
 
   if (distanciaCat1 < distanciaCat2) {
     return 'cat1';
-  } else if (distanciaCat1 == distanciaCat2) {
+  } if (distanciaCat1 == distanciaCat2) {
     return 'os gatos trombam e o rato foge';
-  } else {
-    return 'cat2';
   }
+  return 'cat2';
 }
 
 // Desafio 8
 function fizzBuzz(numeros) {
   // seu código aqui
   let resultado = [];
-  for (numero of numeros) {
+  for (let numero of numeros) {
     let print = '';
-      
-    if (numero % 3 === 0) {
+    if (numero % 3) {
       print += 'fizz';
+    } else if (numero % 5) {
+      print += 'buzz';
     }
-    if (numero % 5 === 0) {
-      if (print === "fizz"){
-        print += 'Buzz';
-      } else {
-        print += 'buzz';
-       }
-    }
-    if (print === '') {
-      print += 'bug!';
-    }
-    resultado.push(print);
   }
   return resultado;
 }
@@ -106,14 +94,13 @@ function fizzBuzz(numeros) {
 // Desafio 9
 function encode(texto) {
   // seu código aqui
-  let tabelaCaracteres = {a: "1", e: "2", i: "3", o: "4", u: "5"}
+  let tabelaCaracteres = { a: '1', e: '2', i: '3', o: '4', u: '5' };
   let textoCodificado = '';
   for (let index = 0; index < texto.length; index++) {
     let caractereAtual = texto[index];
-    if(tabelaCaracteres[caractereAtual] !== undefined){
+    if (tabelaCaracteres[caractereAtual] !== undefined) {
       textoCodificado += tabelaCaracteres[caractereAtual];
-    }
-    else{
+    } else {
       textoCodificado += caractereAtual;
     }
   }
@@ -122,14 +109,13 @@ function encode(texto) {
 
 function decode(texto) {
   // seu código aqui
-  let tabelaCaracteres = {1: "a", 2: "e", 3: "i", 4: "o", 5: "u"}
+  let tabelaCaracteres = { 1: 'a', 2: 'e', 3: 'i', 4: 'o', 5: 'u' };
   let textoDecodificado = '';
   for (let index = 0; index < texto.length; index++) {
     let caractereAtual = texto[index];
-    if(tabelaCaracteres[caractereAtual] !== undefined){
+    if (tabelaCaracteres[caractereAtual] !== undefined) {
       textoDecodificado += tabelaCaracteres[caractereAtual];
-    }
-    else{
+    } else {
       textoDecodificado += caractereAtual;
     }
   }
