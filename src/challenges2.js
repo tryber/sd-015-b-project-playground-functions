@@ -52,8 +52,18 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let howManyGlasses = string.replace(/[^0-9]/g,''); //fonte https://pt.stackoverflow.com/questions/3719/como-obter-apenas-os-n%C3%BAmeros-de-uma-string-em-javascript
+  //A expressão [^ 0-9] é usada para encontrar qualquer caractere que NÃO seja um dígito. Os dígitos entre colchetes podem ser quaisquer números ou extensão de números de 0 a 9. Dica: Use a expressão [0-9] para encontrar qualquer caractere entre os colchetes que seja um dígito. E g é de global, ou seja está fazendo uma pesquisa global por números.
+  let sum = 0;
+  for (let i = 0; i < howManyGlasses.length; i += 1){
+    sum += parseInt(howManyGlasses[i]); //parseInt função que analisa uma string e retorna seu valor como um número inteiro.
+  }
+  if (sum === 1) {
+    return sum + ' copo de água';
+  } else {
+  return sum + ' copos de água';
+  }
 }
 
 module.exports = {
