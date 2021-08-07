@@ -40,9 +40,6 @@ function concatName(arrayString) {
   concatString += arrayString[0];
   return concatString;
 }
-console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
-console.log(concatName(['foguete', 'não', 'tem', 'ré']));
-console.log(concatName(['captain', 'my', 'captain']));
 
 // Desafio 5
 // 5 - Crie uma função que calcule a quantidade de pontos no futebol
@@ -52,9 +49,6 @@ function footballPoints(wins, ties) {
   let total = (vitoria * wins) + (empate * ties);
   return total;
 }
-console.log(footballPoints(14, 8));
-console.log(footballPoints(1, 2));
-console.log(footballPoints(0, 0));
 
 // Desafio 6
 // 6 - Crie uma função que calcule a repetição do maior número
@@ -73,10 +67,6 @@ function highestCount(arrayNumeros) {
   }
   return numeroDeRepeticoes;
 }
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
-console.log(highestCount([0, 4, 4, 4, 9, 2, 1]));
-console.log(highestCount([-2, -2, -1]));
-console.log(highestCount([0, 0, 0]));
 
 // Desafio 7
 // 7 - Crie uma função de Caça ao Rato
@@ -84,10 +74,10 @@ function catAndMouse(mouse, cat1, cat2) {
   let distCat1 = cat1 - mouse;
   let distCat2 = cat2 - mouse;
   if (distCat1 < 0) {
-    distCat1 = distCat1 * -1;
+    distCat1 *= -1;
   }
   if (distCat2 < 0) {
-    distCat2 = distCat2 * -1;
+    distCat2 *= -1;
   }
   if (distCat1 === distCat2) {
     return 'os gatos trombam e o rato foge';
