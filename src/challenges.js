@@ -34,6 +34,10 @@ function addFizz(value, arr) {
 function addBuzz(value, arr) {
   if (value % 5 === 0 && value % 3 !== 0) arr.push('buzz');
 }
+
+function addFizzBuzz(value, arr) {
+  if ((value % 3 === 0) && (value % 5 === 0)) arr.push('fizzBuzz');
+}
 // Fim das funções auxiliares para o desafio 8
 
 // Desafio 1
