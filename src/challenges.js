@@ -36,25 +36,106 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(arrayNumeros) {
   // seu código aqui
-  
+
 }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
+  let distanciaCat1 = cat1 - mouse;
+  let distanciaCat2 = cat2 - mouse;
+  if (distanciaCat1 < 0) {
+    distanciaCat1 *= (-1);
+  }
+  if (distanciaCat2 < 0) {
+    distanciaCat2 *= (-1);
+  }
+  if (distanciaCat1 > distanciaCat2) {
+    return "cat2";
+  }
+  else if (distanciaCat1 < distanciaCat2) {
+    return "cat1";
+  }
+  else {
+    return "os gatos trombam e o rato foge";
+  }
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(arrayNumeros) {
   // seu código aqui
+  let contador = [];
+  for (let posicao in arrayNumeros){
+    if (arrayNumeros[posicao] % 3 === 0 && arrayNumeros[posicao] % 5 === 0) {
+      contador.push("fizzBuzz");
+    }
+    else if (arrayNumeros[posicao] % 3 === 0) {
+      contador.push("fizz");
+    }
+    else if (arrayNumeros[posicao] % 5 === 0) {
+      contador.push("buzz");
+    }
+    else {
+      contador.push("bug!");
+    }
+  }
+  return contador;
 }
 
 // Desafio 9
-function encode() {
+function encode(stringParametro) {
   // seu código aqui
+let fraseSeparada = stringParametro.split('');
+let fraseComEncode = [];
+for(let contador = 0; contador < fraseSeparada.length; contador++) {
+  if (fraseSeparada[contador] === "a"){
+    fraseComEncode.push(1);
+  }
+  else if (fraseSeparada[contador] === "e"){
+    fraseComEncode.push(2);
+  }
+  else if (fraseSeparada[contador] === "i"){
+    fraseComEncode.push(3);
+  }
+  else if (fraseSeparada[contador] === "o"){
+    fraseComEncode.push(4);
+  }
+  else if (fraseSeparada[contador] === "u"){
+    fraseComEncode.push(5);
+  }
+  else {
+    fraseComEncode.push(fraseSeparada[contador]);
+  }
 }
-function decode() {
+let fraseComNumero = fraseComEncode.join('');
+return fraseComNumero;
+}
+function decode(stringParametro) {
   // seu código aqui
+  let fraseSeparada = stringParametro.split('');
+  let fraseComEncode = [];
+  for(let contador = 0; contador < fraseSeparada.length; contador++) {
+    if (fraseSeparada[contador] === "1"){
+      fraseComEncode.push("a");
+    }
+    else if (fraseSeparada[contador] === "2"){
+      fraseComEncode.push("e");
+    }
+    else if (fraseSeparada[contador] === "3"){
+      fraseComEncode.push("i");
+    }
+    else if (fraseSeparada[contador] === "4"){
+      fraseComEncode.push("o");
+    }
+    else if (fraseSeparada[contador] === "5"){
+      fraseComEncode.push("u");
+    }
+    else {
+      fraseComEncode.push(fraseSeparada[contador]);
+    }
+  }
+  let fraseSemNumero = fraseComEncode.join('');
+  return fraseSemNumero;
 }
 
 module.exports = {
