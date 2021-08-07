@@ -6,9 +6,8 @@ function techList(array, name) {
   array = array.sort();
   let resultado = [];
   for (let key of array) {
-    let newObject = {};
+    let newObject = { name };
     newObject.tech = key;
-    newObject.name = name;
     resultado.push(newObject);
   }
   return resultado;
@@ -35,7 +34,7 @@ function isValid(a) {
   }
 }
 
-function generatePhoneNumber(a) {  
+function generatePhoneNumber(a) {
   let test1 = isRepeating(a);
   let test2 = isValid(a);
   if (a.length !== 11) {
@@ -84,7 +83,7 @@ function hydrate(str) {
   let soma = 0;
   for (let key of numbers) {
     soma += Number([key]);
-}
+  }
   if (soma === 1) {
     return `${soma} copo de água`;
   } return `${soma} copos de água`;
