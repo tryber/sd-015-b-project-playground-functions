@@ -23,29 +23,21 @@ function validateArraySize(phoneNumber) {
   return true;
 }
 
-// function isBiggerThanThree(number) {
-//   if (number >= 3) {
-//     return true;
-//   }
+function checkRepeatingNumbers(phoneNumber, i) {
+  let repeatedNumbersCount = 0;
 
-//   return false;
-// }
-
-// function isEqualNumber(phoneNumber) {
-//   for (let i = 0; i < phoneNumber.length; i += 1) {
-//     let repeatedNumbersCount = 0;
-//     for (let j = 0; j < phoneNumber.length; j += 1) {
-//     }
-//   }
-// }
-function checkRepeatingNumbers(phoneNumber) {
-  for (let i = 0; i < phoneNumber.length; i += 1) {
-    let repeatedNumbersCount = 0;
-    for (let j = 0; j < phoneNumber.length; j += 1) {
-      if (phoneNumber[i] === phoneNumber[j]) {
-        repeatedNumbersCount += 1;
-      }
+  for (let j = 0; j < phoneNumber.length; j += 1) {
+    if (phoneNumber[i] === phoneNumber[j]) {
+      repeatedNumbersCount += 1;
     }
+  }
+
+  return repeatedNumbersCount;
+}
+function isRepeatedNumbers(phoneNumber) {
+  for (let i = 0; i < phoneNumber.length; i += 1) {
+    let repeatedNumbersCount = checkRepeatingNumbers(phoneNumber, i);
+
     if (repeatedNumbersCount >= 3) {
       return false;
     }
@@ -66,14 +58,14 @@ function validateArrayValue(phoneNumber) {
 
 function getErrorMessage(phoneNumber) {
   if (!validateArraySize(phoneNumber)) return 'Array com tamanho incorreto.';
-  if (!checkRepeatingNumbers(phoneNumber) || !validateArrayValue(phoneNumber)) {
+  if (!isRepeatedNumbers(phoneNumber) || !validateArrayValue(phoneNumber)) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
 }
 
 function isValidNumber(phoneNumber) {
   let isValid = validateArraySize(phoneNumber) && validateArrayValue(phoneNumber);
-  return isValid && checkRepeatingNumbers(phoneNumber);
+  return isValid && isRepeatedNumbers(phoneNumber);
 }
 
 function getDDD(phoneNumber) {
