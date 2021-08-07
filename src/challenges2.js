@@ -58,8 +58,14 @@ function generatePhoneNumber(numeros) {
 
 // Desafio 12
 // a < b+c && a> Math.abs(b-c)
+function medidas (x,y,z) {
+  let a = ((x < y+z) && (x > Math.abs(y-z)));
+  let b = ((y < x+z) && (y > Math.abs(x-z)));;
+  let c = ((z < y+x) && (z > Math.abs(y-x)));;
+  return (a===b===c);
+}
 function triangleCheck(lineA, lineB, lineC) {
-  
+  return medidas(lineA, lineB, lineC);
 }
 
 // Desafio 13
