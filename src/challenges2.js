@@ -57,9 +57,18 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(phrase) {
+  let numbers = /\d+/g;
+  let result = phrase.match(numbers);
+  let numberGlass = 0;
+
+  for (let index = 0; index < result.length; index += 1) {
+    numberGlass += parseInt(result[index]);
+  }
+  let glassesWater = numberGlass + ' copos de água';
+  return (glassesWater);
 }
+
 
 module.exports = {
   generatePhoneNumber,
