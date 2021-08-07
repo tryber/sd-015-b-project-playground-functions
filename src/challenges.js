@@ -34,7 +34,10 @@ console.log(splitSentence('foguete'));
 // Desafio 4
 // 4 - Crie uma função que use concatenação de strings
 function concatName(arrayString) {
-  let concatString = arrayString[arrayString.length - 1] + ', ' + arrayString[0];
+  let concatString = '';
+  concatString += arrayString[arrayString.length - 1];
+  concatString += ', ';
+  concatString += arrayString[0];
   return concatString;
 }
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
