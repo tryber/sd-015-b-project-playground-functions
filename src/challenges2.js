@@ -1,5 +1,6 @@
 // Desafio 10
-function techList()
+function techList(){ 
+}
 // Desafio 11
 function generatePhoneNumber(array) {
       let formato = "(xx) xxxxx-xxxx";
@@ -14,12 +15,22 @@ function generatePhoneNumber(array) {
   } 
    return formato;
 }
-console.log(generatePhoneNumber([1, 2, 2, 2, 5, 4, 7, 8, 9, 0, 5]))
 // Desafio 12
-function triangleCheck(lineA, lineB, lineC) {
-    if(lineA > (b)){}
-}
 
+function triangleCheck(lineA, lineB, lineC) {
+  let ab = Math.abs(lineA - lineB); 
+  let ac = Math.abs(lineA - lineC);
+  let bc = Math.abs(lineB - lineC);
+  if(lineA < (lineB + lineC) && lineA > bc){
+      return true
+    } else if(lineB < (lineA + lineC) && lineB > ac){
+      return true
+    } else if(lineC < (lineB + lineA) && lineC > ab){
+      return true
+    } else {
+      return false
+    }
+}
 // Desafio 13
 function hydrate(string) {
   let text = ( string.replace(/[^\d]+/g, ' ') );
