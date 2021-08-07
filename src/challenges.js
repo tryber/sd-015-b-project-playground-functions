@@ -69,11 +69,12 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
+// Tentar passar as funções separadas para um array.
 function fizzBuzz(arrOfNumbers) {
   let arrOfFizzBuzz = [];
 
   for (let i in arrOfNumbers) {
-    if (arrOfNumbers[i] % 3 === 0 && arrOfNumbers[i] % 5 === 0) {
+    if (arrOfNumbers[i] % 15 === 0) {
       arrOfFizzBuzz.push('fizzBuzz');
     } else if (arrOfNumbers[i] % 3 === 0) {
       arrOfFizzBuzz.push('fizz');
@@ -88,33 +89,45 @@ function fizzBuzz(arrOfNumbers) {
 }
 
 // Desafio 9
-function encode(string) {
-  let encodedString = string.split('');
+function checkingTranslation(encodedString, i) {
   let arrOfVogals = ['a', '1', 'e', '2', 'i', '3', 'o', '4', 'u', '5'];
 
-  for (let i = 0; i < encodedString.length; i += 1) {
-    for (let j = 0; j < arrOfVogals.length - 1; j += 2) {
-      if (encodedString[i] === arrOfVogals[j]) {
-        encodedString[i] = arrOfVogals[j + 1];
-      }
+  for (let j = 0; j < arrOfVogals.length - 1; j += 2) {
+    if (encodedString[i] === arrOfVogals[j]) {
+      return arrOfVogals[j + 1];
     }
   }
+  return encodedString[i];
+}
+function encode(string) {
+  let encodedString = string.split('');
+  let translatedString = [];
 
-  return encodedString.join('');
+  for (let i = 0; i < encodedString.length; i += 1) {
+    translatedString.push(checkingTranslation(encodedString, i));
+  }
+
+  return translatedString.join('');
 }
 
 function decode(string) {
   let decodedString = string.split('');
-  let arrOfVogals = ['1', 'a', '2', 'e', '3', 'i', '4', 'o', '5', 'u'];
+  let translatedString = [];
+  let vogalsObj = {
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u',
+  };
 
   for (let i = 0; i < decodedString.length; i += 1) {
-    for (let j = 0; j < arrOfVogals.length - 1; j += 2) {
-      if (decodedString[i] === arrOfVogals[j]) {
-        decodedString[i] = arrOfVogals[j + 1];
-      }
+    if (vogalsObj[decodedString[i]]) {
+      decodedString[i] = vogalsObj[decodedString[i]];
     }
+    translatedString.push(decodedString[i]);
   }
-  return decodedString.join('');
+  return translatedString.join('');
 }
 
 module.exports = {
