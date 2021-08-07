@@ -20,7 +20,7 @@ function splitSentence(string) {
 // Desafio 4
 function concatName(array) {
   return array[0] + ', ' + array[array.length - 1];
- }
+ } console.log('last and first: ', concatName(['Lucas', 'cassiano', 'ferraz', 'Paolillo']));
 
 // Desafio 5
 function footballPoints() {
