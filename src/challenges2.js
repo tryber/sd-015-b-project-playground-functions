@@ -36,19 +36,6 @@ function validaNumeros(phoneNumber){
 }
 
 // valida repeticao de 3 seguidos
-// function validaRepeticao(phoneNumber){
-//   let validacao = true;
-//   let guardaNumero = 0;
-//   for (let index = 0; index < phoneNumber.length; index++){
-//     guardaNumero = phoneNumber[index];
-//     if ((guardaNumero === phoneNumber[index+1]) && (guardaNumero === phoneNumber[index+2])){
-//       validacao = false;
-//     }
-//   }
-//   return validacao;
-// }
-
-
 function validaRepeticao(phoneNumber){
   let validacao = true;
   let guardaNumero = 0;
@@ -101,10 +88,93 @@ function generatePhoneNumber(phoneNumber) {
   return montaNumero(phoneNumber);
 }
 
-// Desafio 12
-function triangleCheck() {
-  // seu código aqui
+
+
+
+
+
+
+
+
+
+
+
+
+// valida lado A
+function validaLadoA(lineA, lineB, lineC){
+  let validacao = false;
+  if (lineA < (lineB + lineC)){
+    if (lineA > Math.abs(lineB - lineC)){
+      validacao = true;
+    }
+  }
+  return validacao;
 }
+//console.log(validaLadoA(10, 14, 8)) // retorno: true
+
+//valida lado B
+function validaLadoB(lineA, lineB, lineC){
+  let validacao = false;
+  if (lineB < (lineC + lineA)){
+    if (lineB > Math.abs(lineC - lineA)){
+      validacao = true;
+    }
+  }
+  return validacao;
+}
+//console.log(validaLadoA(10, 14, 8)) // retorno: true
+
+//valida lado C
+function validaLadoC(lineA, lineB, lineC){
+  let validacao = false;
+  if (lineC < (lineA + lineB)){
+    if (lineC > Math.abs(lineA - lineB)){
+      validacao = true;
+    }
+  }
+  return validacao;
+}
+//console.log(validaLadoA(10, 14, 8)) // retorno: true
+
+// Desafio 12
+function triangleCheck(lineA, lineB, lineC) {
+  if (!validaLadoA(lineA, lineB, lineC)){
+    return false;
+  }
+  if (!validaLadoB(lineA, lineB, lineC)){
+    return false;
+  }
+  if (!validaLadoC(lineA, lineB, lineC)){
+    return false;
+  }
+  return true;
+}
+
+console.log(triangleCheck(10, 14, 8)) // retorno: true
+
+
+
+// recebe: três linhas lineA, lineB, lineC
+// retorna: boleano; pode (ou nao) criar um triângulo.
+
+// regra: a medida de qualqer um dos lados seja MENOR que a soma dos outros dois 
+//        e maior que o valor absoluto da diferenca entre eles
+// regra: (lineA < lineB + lineC) && (lineA > (lineB - lineC)
+// funcao Maths.abs pra descobrir valor absoluto
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Desafio 13
 function hydrate() {
