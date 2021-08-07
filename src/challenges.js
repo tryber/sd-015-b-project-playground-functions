@@ -75,7 +75,7 @@ function catAndMouse(mouse, cat1, cat2) {
   }  
   
 }
-console.log(catAndMouse(1, 0, 2));
+//console.log(catAndMouse(1, 0, 2));
 
 
 // Desafio 8
@@ -98,11 +98,16 @@ function fizzBuzz(array) {
 
 
 // Desafio 9
-function encode(frase) {
-
+function encode(str) {
+  var todas = str.replace(/a/g, "1") .replace(/e/g, "2") .replace(/i/g, "3") .replace(/o/g, "4") .replace(/u/g, "5")
+  return todas
 }
-function decode() {
-  // seu código aqui
+
+//console.log(encode('hi there'))
+
+function decode(str) {
+  var todas = str.replace(/1/g, "a") .replace(/2/g, "e") .replace(/3/g, "i") .replace(/4/g, "o") .replace(/5/g, "u")
+  return todas
 }
 
 module.exports = {
