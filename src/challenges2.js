@@ -19,7 +19,7 @@ function techList(tech, name) {
 
 // Desafio 11
 function generatePhoneNumber() {
-  // seu código aqui
+
 }
 
 // Desafio 12
@@ -34,10 +34,19 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
-}
+function hydrate(string) {
+  let num = (/\d+/g);
+  let array = string.match(num);
+  let cupWater = 0;
 
+  for (let pos of array) {
+    cupWater += parseInt(pos, 10);
+  }
+
+  if (cupWater === 1) {
+    return `${cupWater} copo de água`;
+  } return `${cupWater} copos de água`;
+}
 module.exports = {
   generatePhoneNumber,
   techList,
