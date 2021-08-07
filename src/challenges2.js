@@ -53,8 +53,8 @@ function triangleCheck(lineA, lineB, lineC) {
 function hydrate(stringBebida) {
   let numeroBebidas = stringBebida.match(/[1-9]/g);
   let somaBebidas = 0;
-  for (let i in numeroBebidas) {
-    somaBebidas += parseInt(numeroBebidas[i]);
+  for (let i = 0; i < numeroBebidas.length; i += 1) {
+    somaBebidas += parseInt(numeroBebidas[i], 10);
   }
   if (somaBebidas <= 1) {
     return somaBebidas + ' copo de água';
