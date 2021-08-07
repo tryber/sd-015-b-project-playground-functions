@@ -32,8 +32,18 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 }
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(fitness) {
+  let numbers = fitness.match(/\d+/g);
+  let waterCups = 0;
+  
+  for (index = 0; index < numbers.length; index += 1) {
+    waterCups += parseInt(numbers[index]);
+  }
+  if (waterCups > 1) {
+    return waterCups + ' copos de água';
+  } else {
+    return waterCups + ' copo de água';
+  }
 }
 
 module.exports = {
