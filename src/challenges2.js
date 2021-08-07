@@ -6,11 +6,14 @@ function lessZeroOrGreaterNine(value) {
 }
 
 function repeatThree(value) {
-  let sorted = [...value];
-  sorted.sort();
+  let sorted = [...value].sort();
 
   for (let index = 0; index < value.length; index += 1) {
-    if (sorted[index] === (sorted[index - 1]) && sorted[index] === (sorted[index + 1])) {
+    let current = sorted[index];
+    let next = sorted[index + 1];
+    let previous = sorted[index - 1];
+
+    if (current === previous && current === next) {
       return false;
     }
   }
