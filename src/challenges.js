@@ -7,22 +7,23 @@ function compareTrue(boolean1, boolean2) {
 function calcArea(base, height) {
   let area = (base * height) / 2;
   return area;
-  // seu código aqui
+
 }
 
 // Desafio 3
 function splitSentence(string) {
   let splitString = string.split(' ');
   return splitString;
-  // seu código aqui
+
 }
 // Desafio 4
 function concatName(array) {
-  for (i=0 ; i<array.length ; i +=1) {
-    let name =array[array.length-1] + ", " + array[0];
-    return name;
+  let name = '';
+  let space = ', ';
+  for (let i = 0; i < array.length; i += 1) {
+    name = array[array.length - 1] + space + array[0];
   }
-  // seu código aqui
+  return name;
 }
 
 // Desafio 5
