@@ -5,10 +5,17 @@ function techList(techArray, name) {}
 
 function generatePhoneNumber() {}
 
-
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleLines(lineA, lineB, lineC) {
+  if (lineA + lineB > lineC && lineB + lineC > lineA && lineC + lineA > lineB) {
+    return check = true;
+  }
+}
+
+function triangleCheck(lineA, lineB, lineC) {
+  check = false;
+  triangleLines(lineA, lineB, lineC);
+  return check;
 }
 
 // Desafio 13
