@@ -5,7 +5,7 @@ function compareTrue(a, b) {
 
 // Desafio 2
 function calcArea(base, height) {
-  return (base * height) / 2; 
+  return(base * height) / 2; 
 }
 console.log(calcArea(50, 10));
 
@@ -17,29 +17,29 @@ console.log(splitSentence('Vamos que vamos!'));
 
 // Desafio 4
 function concatName(array) {
-  return array[array.length-1] + ', ' + array[0];
+  return array[array.length - 1] + ', ' + array[0];
 }
-array = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']
-console.log(concatName(array))
+let array = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
+console.log(concatName(array));
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  return (wins * 3 + ties)
+  return (wins * 3 + ties);
 }
-console.log(footballPoints(10, 3))
+console.log(footballPoints(10, 3));
 
 // Desafio 6
-function highestCount(array_numbers) {
-  let order_array = array_numbers.sort()
-  let highest_number = order_array[order_array.length - 1]
-  let contador = 0
-  for (index = 0; index < array_numbers.length; index +=1) {
-    if (array_numbers[index] === highest_number)
-      contador += 1
+function highestCount(arrayNumbers) {
+  let orderArray = arrayNumbers.sort();
+  let highestNumber = orderArray[orderArray.length - 1];
+  let contador = 0;
+  for (index = 0; index < arrayNumbers.length; index +=1) {
+    if (arrayNumbers[index] === highestNumber)
+      contador += 1;
   }
-  return contador
+  return contador;
 }
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
+console.log(highestCount([1, 9, 2, 3, 9, 5, 7]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2,) {
