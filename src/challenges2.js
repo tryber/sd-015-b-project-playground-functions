@@ -48,9 +48,22 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(str) {
+  let regex = /\d+/g;
+  let matches = str.match(regex);
+  let alcoholAmount = 0;
+  let waterSingular = 'copo de água';
+  let waterPlural = 'copos de água';
+
+  for (let index = 0; index < matches.length; index += 1) {
+    alcoholAmount += parseInt(matches[index], 10);
+  }
+  if (alcoholAmount > 1) {
+    return (`${alcoholAmount} ${waterPlural}`);
+  }
+  return (`${alcoholAmount} ${waterSingular}`);
 }
+hydrate('1 cerveja');
 
 module.exports = {
   generatePhoneNumber,

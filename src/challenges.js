@@ -27,14 +27,8 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount(arrayNumbers) {
-  let maiorNumero = arrayNumbers[0];
+function countMaxNumber(arrayNumbers, maiorNumero) {
   let vezesQueRepete = 0;
-  for (let index = 0; index < arrayNumbers.length; index += 1) {
-    if (arrayNumbers[index] >= maiorNumero) {
-      maiorNumero = arrayNumbers[index];
-    }
-  }
   for (let index = 0; index < arrayNumbers.length; index += 1) {
     if (maiorNumero === arrayNumbers[index]) {
       vezesQueRepete += 1;
@@ -42,6 +36,17 @@ function highestCount(arrayNumbers) {
   }
   return vezesQueRepete;
 }
+
+function highestCount(arrayNumbers) {
+  let maiorNumero = arrayNumbers[0];
+  for (let index = 0; index < arrayNumbers.length; index += 1) {
+    if (arrayNumbers[index] >= maiorNumero) {
+      maiorNumero = arrayNumbers[index];
+    }
+  }
+  return countMaxNumber(arrayNumbers, maiorNumero);
+}
+highestCount([1, 9, 2, 9, 9, 5, 7]);
 
 // Desafio 7
 
@@ -56,7 +61,6 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   return 'os gatos trombam e o rato foge';
 }
-catAndMouse(1, 0, 2);
 
 // Desafio 8
 
@@ -77,47 +81,47 @@ function fizzBuzz(arrayNumbers) {
 }
 
 // Desafio 9
-function encode(str) {
-  let codado = [];
-  for (let index = 0; index <= str.length; index += 1) {
-    if (str[index] === 'a') {
-      codado.push('1');
-    } else if (str[index] === 'e') {
-      codado.push('2');
-    } else if (str[index] === 'i') {
-      codado.push('3');
-    } else if (str[index] === 'o') {
-      codado.push('4');
-    } else if (str[index] === 'u') {
-      codado.push('5');
-    } else {
-      codado.push(str[index]);
-    }
-  }
-  return (codado.join(''));
-}
-encode('hll');
+function encode(palavra) {
+  const vogais = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5,
+  };
+  let stringConvertida = '';
 
-function decode(str) {
-  let codado = [];
-  for (let index = 0; index <= str.length; index += 1) {
-    if (str[index] === '1') {
-      codado.push('a');
-    } else if (str[index] === '2') {
-      codado.push('e');
-    } else if (str[index] === '3') {
-      codado.push('i');
-    } else if (str[index] === '4') {
-      codado.push('o');
-    } else if (str[index] === '5') {
-      codado.push('u');
+  for (let index = 0; index < palavra.length; index += 1) {
+    let letraAtual = palavra[index];
+    if (vogais[letraAtual]) {
+      stringConvertida += vogais[letraAtual];
     } else {
-      codado.push(str[index]);
+      stringConvertida += letraAtual;
     }
   }
-  return (codado.join(''));
+  return (stringConvertida);
 }
-decode('h2ll4');
+
+function decode(palavra) {
+  const vogais = {
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u',
+  };
+  let stringConvertida = '';
+
+  for (let index = 0; index < palavra.length; index += 1) {
+    let letraAtual = palavra[index];
+    if (vogais[letraAtual]) {
+      stringConvertida += vogais[letraAtual];
+    } else {
+      stringConvertida += letraAtual;
+    }
+  }
+  return (stringConvertida);
+}
 
 module.exports = {
   calcArea,
