@@ -81,7 +81,6 @@ function fizzBuzz(array) {
   }
   return num;
 }
-
 // Desafio 9
 // Funcao .replace utilizada baseando-se na documentacao :https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace
 function encode(string) {
