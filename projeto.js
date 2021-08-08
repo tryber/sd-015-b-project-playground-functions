@@ -73,4 +73,21 @@
     catAndMouse(0, 5, 5);
 
     //8
-    
+    function fizzBuzz(array) {
+        for (i = 0; i < array.length-1; i++);
+        if (array[i]%3 == 0 && array[i]%5 == 0) {
+            return 'fizzBuzz';
+        } else if (array[i]%5 == 0) {
+            return 'buzz';
+        } else if (array[i]%3 == 0) {
+            return 'fizz';
+        } else {
+            return 'bug!';
+        }
+    }
+
+    fizzBuzz([2, 15, 7, 9, 45]);
+    fizzBuzz([7, 9]);
+    fizzBuzz([9, 25]);
+
+    //9
