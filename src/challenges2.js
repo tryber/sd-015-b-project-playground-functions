@@ -52,28 +52,18 @@ function generatePhoneNumber(telefone) {
 
 // Desafio 12
 function triangleCheck(lineA,lineB,lineC) {
+ 
   if (lineA + lineB > lineC && lineB + lineC > lineA && lineC + lineA > lineB){
     return true;
   }else{
     return false;
-  }
-
+  }  
 }
 
 // Desafio 13
 function hydrate(frase) {
-  let vetorNumeros = frase.match(/\d+/g);
-  let soma = 0;
-  for (let index = 0; index < vetorNumeros.length; index++) {
-    soma += parseInt(vetorNumeros [index]);
-  }
-  if (soma <= 1) {
-    return `${soma} copo de água`
-  }else{
-    return `${soma} copos de água`
-  }
-}
 
+}
 
 module.exports = {
   generatePhoneNumber,
@@ -81,4 +71,3 @@ module.exports = {
   hydrate,
   triangleCheck,
 };
-
