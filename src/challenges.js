@@ -1,7 +1,7 @@
 // Desafio 1
 function compareTrue(boolean1, boolean2) {
   return boolean1 && boolean2;
-  }
+}
 
 // Desafio 2
 function calcArea(base, height) {
@@ -12,7 +12,7 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(string) {
-  let splitString = string.split(" ");
+  let splitString = string.split(' ');
   return splitString;
   // seu código aqui
 }
