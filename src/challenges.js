@@ -35,36 +35,33 @@ function footballPoints(wins, ties) {
 function highestCount(array) {
   let initialNumber = array[0];
   let countRepeats = 0;
-  for (i = 0 ; i < array.length ; i += 1) {
+  for (let i = 0; i < array.length; i += 1) {
     if (array[i] > initialNumber) {
       initialNumber = array[i];
     }
   }
-  for (k = 0 ; k <array.length ; k += 1 ) {
+  for (let k = 0; k < array.length; k += 1) {
     if (array[k] === initialNumber) {
-      countRepeats +=1;
+      countRepeats += 1;
     }
   }
-    return countRepeats;
+  return countRepeats;
   // seu código aqui}
 }
 
 // Desafio 7
 // Funcao Math.abs retirada da documentacao (Link:https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/abs)
 function catAndMouse(mouse, cat1, cat2) {
- let distanciaCat1 = Math.abs(cat1-mouse);
- let distanciaCat2 = Math.abs(cat2-mouse);
+  let distanciaCat1 = Math.abs(cat1 - mouse);
+  let distanciaCat2 = Math.abs(cat2 - mouse);
 
- if(distanciaCat1 < distanciaCat2) {
-   return "cat1";
- }
- else if(distanciaCat2 < distanciaCat1) {
-   return "cat2";
- }
- else {
-   return "os gatos trombam e o rato foge";
- }
-      // seu código aqui
+  if (distanciaCat1 < distanciaCat2) {
+    return 'cat1';
+  }
+  if (distanciaCat2 < distanciaCat1) {
+    return 'cat2';
+  }
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
