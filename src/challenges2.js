@@ -4,7 +4,7 @@ function techList(array, name) {
     let crescente = array.sort();
     let object = {};
     let obs = [];
-    for (let index = 0; index < array.length; index += 0) {
+    for (let index = 0; index < array.length; index += 1) {
       object.tech = crescente[index];
       object.name = name;
       obs.push(object);
