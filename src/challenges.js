@@ -1,10 +1,10 @@
 // Desafio 1
 function compareTrue(parmUm, parmDois) {
-  compara = false;
+  let compara = false;
   if (parmUm === true && parmDois === true) {
     compara = true;
   }
-  return compara
+  return compara;
 }
 
 // Desafio 2
@@ -31,7 +31,7 @@ function concatName(palavras) {
       ultimaPalavra = palavras[index];
     }
   }
-  fraseJunta = (ultimaPalavra + ', ' + primeiraPalavra);
+  fraseJunta = (`${ultimaPalavra}, ${primeiraPalavra}`);
   return fraseJunta;
 }
 
@@ -49,12 +49,8 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(arrayNumero) {
-  function numerosOrdenados(arrayNumero) {
-    return arrayNumero.sort(
-      function (a, b) { 
-        return a - b; 
-      }
-    );
+  function numerosOrdenados(numeros) {
+    return numeros.sort(function (a, b) { return a - b; });
   }
   let array = numerosOrdenados(arrayNumero);
   let contador = 0;
@@ -82,17 +78,16 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   if (distancia1 > distancia2) {
     return 'cat2';
-  } else if (distancia2 > distancia1) {
+  } if (distancia2 > distancia1) {
     return 'cat1';
-  } else {
-    return 'os gatos trombam e o rato foge';
   }
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
 function fizzBuzz(arrayNumeros) {
   let arrayPalavras = [];
-  for (let index = 0; index < arrayNumeros.length; index +=1 ) {
+  for (let index = 0; index < arrayNumeros.length; index += 1) {
     if ((arrayNumeros[index] % 3 === 0) && (arrayNumeros[index] % 5 === 0)) {
       arrayPalavras.push('fizzBuzz');
     } else if (arrayNumeros[index] % 3 === 0) {
@@ -110,7 +105,7 @@ function fizzBuzz(arrayNumeros) {
 function encode(arrayNormal) {
   let arrayCodificado = [];
   let mensagem = '';
-  for (let index = 0; index < arrayNormal.length; index+=1) {
+  for (let index = 0; index < arrayNormal.length; index += 1) {
     if (arrayNormal[index] === 'a') {
       arrayCodificado[index] = '1';
     } else if (arrayNormal[index] === 'e') {
@@ -125,8 +120,7 @@ function encode(arrayNormal) {
       arrayCodificado[index] = arrayNormal[index];
     }
     mensagem = arrayCodificado.join('');
-  }
-  return mensagem;
+  } return mensagem;
 }
 
 function decode(arrayCodificado) {
@@ -144,7 +138,7 @@ function decode(arrayCodificado) {
     } else if (arrayCodificado[index] === '5') {
       arrayNormal[index] = 'u';
     } else {
-      arrayNormal[index] = arrayCodificado[index]
+      arrayNormal[index] = arrayCodificado[index];
     }
     mensagem = arrayNormal.join('');
   }

@@ -1,18 +1,18 @@
 // Desafio 10
 function techList(techs, name) {
-  let techList = [];
+  let listaTechs = [];
   techs.sort();
   for (let index = 0; index < techs.length; index += 1) {
     let objeto = {
       tech: techs[index],
       name,
     };
-    techList.push(objeto);
+    listaTechs.push(objeto);
   }
   if (techs.length <= 1) {
     return 'Vazio!';
   }
-  return techList;
+  return listaTechs;
 }
 
 // valida tamanho
@@ -91,10 +91,8 @@ function generatePhoneNumber(phoneNumber) {
 // valida lado A
 function validaLadoA(lineA, lineB, lineC) {
   let validacao = false;
-  if (lineA < (lineB + lineC)) {
-    if (lineA > Math.abs(lineB - lineC)) {
-      validacao = true;
-    }
+  if ((lineA < (lineB + lineC)) && (lineA > Math.abs(lineB - lineC))) {
+    validacao = true;
   }
   return validacao;
 }
@@ -102,10 +100,8 @@ function validaLadoA(lineA, lineB, lineC) {
 // valida lado B
 function validaLadoB(lineA, lineB, lineC) {
   let validacao = false;
-  if (lineB < (lineC + lineA)) {
-    if (lineB > Math.abs(lineC - lineA)) {
-      validacao = true;
-    }
+  if ((lineB < (lineC + lineA)) && (lineB > Math.abs(lineC - lineA))) {
+    validacao = true;
   }
   return validacao;
 }
@@ -113,10 +109,8 @@ function validaLadoB(lineA, lineB, lineC) {
 // valida lado C
 function validaLadoC(lineA, lineB, lineC) {
   let validacao = false;
-  if (lineC < (lineA + lineB)) {
-    if (lineC > Math.abs(lineA - lineB)) {
-      validacao = true;
-    }
+  if ((lineC < (lineA + lineB)) && (lineC > Math.abs(lineA - lineB))) {
+    validacao = true;
   }
   return validacao;
 }
@@ -137,7 +131,7 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function hydrate(comanda) {
-  let comandaSaida ='';
+  let comandaSaida = '';
   for (let index = 0; index < comanda.length; index += 1) {
     comandaSaida = comanda.replace(/\D/g, '');
   }
@@ -145,15 +139,13 @@ function hydrate(comanda) {
   let totalAgua = 0;
 
   for (let index = 0; index < comandaSaida.length; index += 1) {
-    totalAgua += parseInt(comandaSaida[index])
-  }
-  
-  if (totalAgua === 1){
-    return '1 copo de água'
-  } else {
-    return totalAgua + ' copos de água'
+    totalAgua += parseInt(comandaSaida[index]);
   }
 
+  if (totalAgua === 1) {
+    return '1 copo de água';
+  }
+  return `${totalAgua} copos de água`;
 }
 
 module.exports = {
