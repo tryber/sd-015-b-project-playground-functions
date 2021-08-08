@@ -1,66 +1,63 @@
 // Desafio 10
 // funcao .sort retirada da documentacao: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
-function techList(array,name) {
+function techList(array, name) {
   let listaSaida = [];
-  if(array.length === 0){
-    return "Vazio!"
+  if (array.length === 0) {
+    return 'Vazio!';
   }
 
-  else {
-    for (let tech in array) {
+  for (let tech in array) {
     array.sort();
-    obj = {
-      tech: "NomeTech",
-      name: name
-      }
+    let obj = {
+      tech: 'NomeTech',
+      name,
+    };
     obj.tech = array[tech];
     listaSaida.push(obj);
-    }
   }
+
   return listaSaida;
   // return listaSaida;
   // seu código aqui
 }
 
 // Desafio 11
-function generatePhoneNumber(array) {
-
+function generatePhoneNumber(x) {
   // seu código aqui
   // verifica se o array tem tamanho diferente de 11;
-if(array.length !== 11){
-return  "Array com tamanho incorreto.";
+  if (x.length !== 11) {
+    return 'Array com tamanho incorreto.';
   }
   // verifica se algum numero e maior que 9, menor que 0 ou repete mais que 3 vezes;
-for(i = 0 ; i < array.length ; i += 1){
-  let countRepeat = 0;
-  for(r = 0 ; r <array.length ; r += 1){
-    if (array[i] === array[r]){
+  for (let i = 0; i < x.length; i += 1) {
+    let countRepeat = 0;
+    for (let r = 0; r < x.length; r += 1) {
+      if (x[i] === x[r]) {
       // let countRepeat = 0;
-      countRepeat += 1;
+        countRepeat += 1;
+      } else if (x[i] < 0 || x[i] > 9) {
+        return 'não é possível gerar um número de telefone com esses valores';
+      }
     }
-    else if (array[i] < 0 || array[i] > 9) {
-      return "não é possível gerar um número de telefone com esses valores";
-    }  
+    if (countRepeat >= 3) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
   }
-  if (countRepeat >= 3) {
-    return "não é possível gerar um número de telefone com esses valores";
-  }
-}
-let phoneNumber = "(" + array[0]+array[1]+") "+array[2]+array[3]+array[4]+array[5]+array[6]+"-"+array[7]+array[8]+array[9]+array[10];
-return phoneNumber;  
+  let number = `(${x[0]}${x[1]}) ${x[2]}${x[3]}${x[4]}${x[5]}${x[6]}-${x[7]}${x[8]}${x[9]}${x[10]}`;
+  return number;
 }
 
 // Desafio 12
-function triangleCheck(lineA,lineB,lineC) {
-  if (lineA < lineB+lineC && lineB< lineA+lineC && lineC< lineA+lineB) {
+function triangleCheck(lA, lB, lC) {
+  if (lA < lB + lC && lB < lA + lC && lC < lA + lB) {
     return true;
   }
-  else if(lineA > Math.abs(lineB - lineC) && lineB > Math.abs(lineA-lineC) && lineC > Math.abs(lineA-lineB)) {
+  if (lA > Math.abs(lB - lC) && lB > Math.abs(lA - lC) && lC > Math.abs(lA - lB)) {
     return true;
   }
-  else {
-    return false;
-  }
+
+  return false;
+
   // seu código aqui
 }
 
@@ -68,18 +65,17 @@ function triangleCheck(lineA,lineB,lineC) {
 // regularExpression e string.match retirada de explicacoes deste video: https://www.youtube.com/watch?v=pfkkdzeyx6U&ab_channel=AllThingsJavaScript%2CLLC
 function hydrate(string) {
   let regularExpression = /\d+/g;
-  let numbers = string.match(regularExpression)
-  let result = 0; 
-  for (i = 0 ; i < numbers.length ; i += 1) {
-    result += parseInt(numbers[i])
-    
+  let numbers = string.match(regularExpression);
+  let result = 0;
+  for (let i = 0; i < numbers.length; i += 1) {
+    result += parseInt(numbers[i], 10);
   }
-  if (result > 1){
-  return result +" copos de água"
+  if (result > 1) {
+    return `${result} copos de água`;
   }
-  else {
-  return result +" copo de água"
-  }
+
+  return `${result} copo de água`;
+
   // seu código aqui
 }
 
