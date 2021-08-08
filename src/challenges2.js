@@ -4,9 +4,7 @@ function techList(array, name) {
     let crescente = array.sort();
     let obs = [];
     for (let index = 0; index < array.length; index += 1) {
-      let object = {};
-      object.tech = crescente[index];
-      object.name = name;
+      let object = {tech: crescente[index], name};
       obs.push(object);
     } return obs;
   } return 'Vazio!';
@@ -15,7 +13,7 @@ function techList(array, name) {
 let techs = ['React', 'Jest', 'HTML', 'CSS', 'JavaScript'];
 let name = 'Rodolfo';
 
-techList(techs, name);
+console.log(techList(techs, name));
 
 // Desafio 11
 function generatePhoneNumber() {
