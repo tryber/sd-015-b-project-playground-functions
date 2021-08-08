@@ -17,26 +17,31 @@ function techList(arrayTech, name) {
 
 let arrayTech = ['React', 'Jest', 'HTML', 'CSS', 'JavaScript'];
 let name = 'Amanda';
-console.log(techList(arrayTech, name));
+techList(arrayTech, name);
 
 // Desafio 11
 // Esse link me ajudou na formatação do telefone (https://www.devmedia.com.br/javascript-replace-substituindo-valores-em-uma-string/39176)
-function checkCount(arrayPhone) {
-  for (let index = 0; index < arrayPhone.length; index += 1) {
-    let count = 0;
-    for (let secondIndex = 0; secondIndex < arrayPhone.length; secondIndex += 1) {
-      if (arrayPhone[index] === arrayPhone[secondIndex]) {
-        count += 1;
-      } if (count >= 3) {
-        return true;
-      }
+function countNumber(num, arrayPhone) {
+  let count = 0;
+  for (let pos of arrayPhone) {
+    if (pos === num) {
+      count += 1;
+    }
+  }
+  return count;
+}
+
+function checkRepeat(arrayPhone) {
+  for (let pos of arrayPhone) {
+    if (countNumber(pos, arrayPhone) >= 3) {
+      return true;
     }
   }
 }
 
-function checkRangeAndRepeat(arrayPhone) {
+function checkRange(arrayPhone) {
   for (let index = 0; index < arrayPhone.length; index += 1) {
-    if (arrayPhone[index] < 0 || arrayPhone[index] > 9 || checkCount(arrayPhone)) {
+    if (arrayPhone[index] < 0 || arrayPhone[index] > 9) {
       return true;
     }
   }
@@ -52,7 +57,7 @@ function generatePhoneNumber(arrayPhone) {
   if (arrayPhone.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
-  if (checkRangeAndRepeat(arrayPhone)) {
+  if (checkRange(arrayPhone) || checkRepeat(arrayPhone)) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
   return formatPhone(arrayPhone);
