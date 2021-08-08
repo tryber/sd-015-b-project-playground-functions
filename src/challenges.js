@@ -1,10 +1,9 @@
 // Desafio 1
 function compareTrue(valor1, valor2) {
-  if (valor1 === true && valor2 === true) {
+  if (valor1 && valor2) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
 
 // Desafio 2
@@ -20,7 +19,8 @@ function splitSentence(stringValor) {
 
 // Desafio 4
 function concatName(array) {
-  return array[array.length - 1] + ', ' + array[0];
+  let concat = `${array[array.length - 1]}, ${array[0]}`;
+  return concat;
 }
 
 // Desafio 5
@@ -29,11 +29,11 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount(highestCount) {
+function highestCount(highestCounts) {
   let count = 0;
-  let max = Math.max(...highestCount); //função max do objeto Math (... é spread syntax, chama a função)
-  for (let i = 0; i < highestCount.length; i += 1) {
-    if (highestCount[i] === max) {
+  let max = Math.max(...highestCounts); // função max do objeto Math (... é spread syntax, chama a função)
+  for (let i = 0; i < highestCounts.length; i += 1) {
+    if (highestCounts[i] === max) {
       count += 1;
     }
   }
@@ -45,25 +45,27 @@ function catAndMouse(mouse, cat1, cat2) {
   let diferencaCat1 = Math.abs(cat1 - mouse);
   let diferencaCat2 = Math.abs(cat2 - mouse);
   if (diferencaCat2 > diferencaCat1) {
-    return 'cat1'
-  } else if (diferencaCat1 > diferencaCat2){
-    return 'cat2'
-  } else if (diferencaCat1 === diferencaCat2) {
-    return 'os gatos trombam e o rato foge'
+    return 'cat1';
+  }
+  if (diferencaCat1 > diferencaCat2) {
+    return 'cat2';
+  }
+  if (diferencaCat1 === diferencaCat2) {
+    return 'os gatos trombam e o rato foge';
   }
 }
 
 // Desafio 8
 function fizzBuzz(array8) {
-  retorno = [];
-  for (let i in array8){
-    if (array8[i] % 3 === 0 && array8[i] % 5 !== 0){
+  let retorno = [];
+  for (let i in array8) {
+    if (array8[i] % 3 === 0 && array8[i] % 5 !== 0) {
       retorno.push('fizz');
-    } else if (array8[i] % 5 === 0 && array8[i] % 3 !== 0){
+    } else if (array8[i] % 5 === 0 && array8[i] % 3 !== 0) {
       retorno.push('buzz');
-    } else if (array8[i] % 3 === 0 && array8[i] % 5 === 0){
+    } else if (array8[i] % 3 === 0 && array8[i] % 5 === 0) {
       retorno.push('fizzBuzz');
-    } else if (array8[i] % 3 !== 0 && array8[i] % 5 !== 0) {
+    } else {
       retorno.push('bug!');
     }
   }
@@ -72,57 +74,44 @@ function fizzBuzz(array8) {
 
 // Desafio 9
 function encode(text) {
-  let resultado = '';
+  let resultado = [];
   for (let i = 0; i < text.length; i += 1) {
-    switch (text[i]) {
-      case 'a':
-        resultado += '1';
-        break;
-      case 'e':
-        resultado += '2';
-        break;
-      case 'i':
-        resultado += '3';
-        break;
-      case 'o':
-        resultado += '4';
-        break;
-      case 'u':
-        resultado += '5';
-        break;
-      default: //"regra padrão"
-        resultado += text[i];
+    if (text[i] === 'a') {
+      resultado.push('1');
+    } else if (text[i] === 'e') {
+      resultado.push('2');
+    } else if (text[i] === 'i') {
+      resultado.push('3');
+    } else if (text[i] === 'o') {
+      resultado.push('4');
+    } else if (text[i] === 'u') {
+      resultado.push('5');
+    } else {
+      resultado.push(text[i]);
     }
   }
-  return resultado;
+  return (resultado.join(''));
 }
 
 function decode(text) {
-  let resultado = '';
-  for (let i = 0; i < text.length; i += 1) {
-    switch (text[i]) {
-      case '1':
-        resultado += 'a';
-        break;
-      case '2':
-        resultado += 'e';
-        break;
-      case '3':
-        resultado += 'i';
-        break;
-      case '4':
-        resultado += 'o';
-        break;
-      case '5':
-        resultado += 'u';
-        break;
-      default: 
-        resultado += text[i]; 
+  let resultado = [];
+  for (let index = 0; index < text.length; index += 1) {
+    if (text[index] === '1') {
+      resultado.push('a');
+    } else if (text[index] === '2') {
+      resultado.push('e');
+    } else if (text[index] === '3') {
+      resultado.push('i');
+    } else if (text[index] === '4') {
+      resultado.push('o');
+    } else if (text[index] === '5') {
+      resultado.push('u');
+    } else {
+      resultado.push(text[index]);
     }
   }
-  return resultado;
+  return (resultado.join(''));
 }
-
 
 module.exports = {
   calcArea,
