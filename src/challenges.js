@@ -85,20 +85,49 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
+function isDivisibleByThree(num) {
+  if (num % 3 === 0 && num % 5 !== 0) {
+    return true;
+  }
+}
+function isDivisibleByFive(num) {
+  if (num % 5 === 0 && num % 3 !== 0) {
+    return true;
+  }
+}
+function isDivisibleByThreeAndFive(num) {
+  if (num % 3 === 0 && num % 5 === 0) {
+    return true;
+  }
+}
+function isNotDivisible(num) {
+  if (num % 3 !== 0 && num % 5 !== 0) {
+    return true;
+  }
+}
+
+function checkDivisibility(num) {
+  let wordToPush;
+  if (isDivisibleByThree(num) === true) {
+    wordToPush = 'fizz';
+  }
+  if (isDivisibleByFive(num) === true) {
+    wordToPush = 'buzz';
+  }
+  if (isDivisibleByThreeAndFive(num) === true) {
+    wordToPush = 'fizzBuzz';
+  }
+  if (isNotDivisible(num) === true) {
+    wordToPush = 'bug!';
+  }
+  return wordToPush;
+}
 function fizzBuzz(arr) {
   // seu código aqui
   let arrayFizzBuzz = [];
 
-  for (let num of arr) {
-    if (num % 3 === 0 && num % 5 !== 0) {
-      arrayFizzBuzz.push('fizz');
-    } else if (num % 5 === 0 && num % 3 !== 0) {
-      arrayFizzBuzz.push('buzz');
-    } else if (num % 3 === 0 && num % 5 === 0) {
-      arrayFizzBuzz.push('fizzBuzz');
-    } else {
-      arrayFizzBuzz.push('bug!');
-    }
+  for (let number of arr) {
+    arrayFizzBuzz.push(checkDivisibility(number));
   }
   return arrayFizzBuzz;
 }
