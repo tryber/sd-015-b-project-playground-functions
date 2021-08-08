@@ -11,7 +11,7 @@ function techList(techs, name) {
   for (let i in techs) {
     list[i] = {
       tech: techs[i],
-      name: name,
+      name,
     };
   }
 
