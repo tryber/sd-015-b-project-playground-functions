@@ -1,11 +1,11 @@
 // Desafio 10
-function makeObjectTechList (techList, name) {
+function makeObjectTechList(techList, name) {
   techList.sort();
   let createdObject = [];
 
   for (let index = 0; index < techList.length; index += 1) {
     console.log(techList[index]);
-    let createObject = {tech: techList[index], name: name};
+    let createObject = { tech: techList[index], name: name };
     createdObject.push(createObject);
   }
   return createdObject;
@@ -28,8 +28,21 @@ function generatePhoneNumber() {
 }
 
 // Desafio 12
-function triangleCheck() {
+function absoluteDiference (numberA, numberB) {
+  return Math.abs(numberA - numberB);
+}
+
+function testLineForTriangle (lineA, lineB, lineC) {
+  return lineA < (lineB + lineC) && lineA > absoluteDiference(lineB, lineC);
+}
+
+function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
+  let testA = testLineForTriangle(lineA, lineB, lineC);
+  let testB = testLineForTriangle(lineB, lineA, lineC);
+  let testC = testLineForTriangle(lineC, lineA, lineB);
+  return testA && testB && testC;
+
 }
 
 // Desafio 13
