@@ -37,17 +37,17 @@ function generatePhoneNumber(numbers) {
     if (numbers[key] < 0 || numbers[key] > 9) {// verificando se tem numbers menor que zero OU maior que 9
       return 'não é possível gerar um número de telefone com esses valores';
     }
-      aux = 0;
-     
-      for (let index in numbers) {// verificando se tem mais que 2 numbers repitidos
-        if (numbers[key] === numbers[index]) {
-          aux += 1;
-          if (aux > 2) {
-            return 'não é possível gerar um número de telefone com esses valores';
-          }
+    aux = 0;
+
+    for (let index in numbers) {// verificando se tem mais que 2 numbers repitidos
+      if (numbers[key] === numbers[index]) {
+        aux += 1;
+        if (aux > 2) {
+          return 'não é possível gerar um número de telefone com esses valores';
         }
       }
-    
+    }
+
     cont += 1; // condição para colocar () e - .
     if (cont === 2) {
       numeroTelefone += ') ';
@@ -61,8 +61,15 @@ function generatePhoneNumber(numbers) {
 }
 
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
+  if (lineA < lineB + lineC && lineB < lineA + lineC && lineC < lineA + lineB) {
+    if (lineA > Math.abs(lineB - lineC) && lineB > Math.abs(lineA - lineC) && lineC > Math.abs(lineA - lineB)) {
+      return true;
+    }
+  } else {
+    return false;
+  }
 }
 
 // Desafio 13
