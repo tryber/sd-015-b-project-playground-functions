@@ -45,10 +45,10 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function maiorNumero(array){
+function maiorNumero(array) {
   let maior = array[0];
-  for (numero of array){  
-    if (numero > maior){
+  for (numero of array) {
+    if (numero > maior) {
       maior = numero;
     }
   }
@@ -58,25 +58,37 @@ function maiorNumero(array){
 function highestCount(numeros) {
   // seu código aqui
   let maior = maiorNumero(numeros);
-  let quantidade = numeros.filter(x => x == maior).length;
+  let quantidade = numeros.filter((x) => x == maior).length;
   return quantidade;
 }
 
 // Desafio 7
+
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
   let distanciaCat1 = Math.abs(mouse - cat1);
   let distanciaCat2 = Math.abs(mouse - cat2);
 
-  if (distanciaCat1 < distanciaCat2) {
-    return 'cat1';
-  } if (distanciaCat1 == distanciaCat2) {
+  if (distanciaCat1 === distanciaCat2) {
     return 'os gatos trombam e o rato foge';
   }
-  return 'cat2';
+
+  let resultado = distanciaCat1 > distanciaCat2 ? 'cat2' : 'cat1';
+  return resultado;
 }
 
 // Desafio 8
+function createFizzBuzz(numero) {
+  let value;
+  let divisivelPor3 = numero % 3 === 0;
+  let divisivelPor5 = numero % 5 === 0;
+  let divisivelPorTodos = divisivelPor3 
+
+  if (divi)
+    
+  return value;
+}
+
 function fizzBuzz(numeros) {
   // seu código aqui
   let resultado = [];
