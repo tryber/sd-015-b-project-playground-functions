@@ -1,19 +1,18 @@
 // Desafio 10
 function techList(tech, name) {
-  let techList = [];
+  let ListTech = [];
   if (tech.length === 0) {
-    techList = 'Vazio!';
+    ListTech = 'Vazio!';
   } else {
     for (let indice in tech.sort()) {
       let skill ={
         tech: tech[indice],
         name: name,
       }
-      techList.push(skill);
+      ListTech.push(skill);
     }
   }
-  return techList;
-
+  return ListTech;
 }
 
 // Desafio 11
