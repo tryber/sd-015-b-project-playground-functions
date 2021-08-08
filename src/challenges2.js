@@ -46,12 +46,12 @@ function hydrate(bebida) {
   let quantity = bebida.match(/\d+/g);
   let water = 0;
   for (let number of quantity) {
-    water += parseInt(number);
+    water += parseInt(number, 10);
   }
   if (water === 1) {
-    return (water) + ' copo de água';
+    return `${water} copo de água`;
   }
-  return (water) + ' copos de água';
+  return `${water} copos de água`;
 }
 
 module.exports = {
