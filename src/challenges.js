@@ -7,39 +7,24 @@ function compareTrue(a, b) {
 function calcArea(base, height) {
   return (base * height) / 2;
 }
-console.log(calcArea(50, 10));
 
 // Desafio 3
 function splitSentence(string) {
   return string.split(' ');
 }
-console.log(splitSentence('Vamos que vamos!'));
 
 // Desafio 4
 function concatName(array) {
   return array[array.length - 1] + ', ' + array[0];
 }
-let array = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
-console.log(concatName(array));
 
 // Desafio 5
 function footballPoints(wins, ties) {
   return (wins * 3 + ties);
 }
-console.log(footballPoints(10, 3));
 
 // Desafio 6
 function highestCount(arrayNumbers) {
- /*  let orderArray = arrayNumbers.sort();
-  console.log(orderArray);
-  let highestNumber = orderArray[orderArray.length - 1];
-  let contador = 0;
-  for (let index = 0; index < arrayNumbers.length; index += 1) {
-    if (arrayNumbers[index] === highestNumber){
-      contador += 1;
-    } 
-  }
-  return contador; */
   let maiorNumero = Number.NEGATIVE_INFINITY;
   for(let i = 0; i < arrayNumbers.length; i += 1) {
     if(maiorNumero < arrayNumbers[i]){
@@ -54,7 +39,6 @@ function highestCount(arrayNumbers) {
   }
   return contador;
 }
-console.log(highestCount([-2, -1, -2]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2,) {
@@ -68,8 +52,8 @@ function catAndMouse(mouse, cat1, cat2,) {
   } 
   else{
     return 'os gatos trombam e o rato foge' ;
-  }}
-  console.log(catAndMouse(1, 0, 2));
+  }
+}
 
 // Desafio 8
 function fizzBuzz(numbersArray) {
@@ -88,17 +72,52 @@ function fizzBuzz(numbersArray) {
       resposta = resposta + '"bug!", ';
     }
   }
-  resposta = resposta + "]'"
-  resposta = resposta.replace(", ]'", "]'")
-  return resposta
+  resposta = resposta + "]'";
+  resposta = resposta.replace(", ]'", "]'");
+  return resposta;
 }
-console.log(fizzBuzz([45, 15, 5, 2]));
 
 // Desafio 9
-function encode(texto) {
+function encode(text) {
+  let encodedText = '';
+  for(let i = 0; i < text.length; i += 1){
+    switch(text[i]){
+      case 'a': encodedText += '1';
+      break;
+      case 'e': encodedText += '2';
+      break;
+      case 'i': encodedText += '3';
+      break;
+      case 'o': encodedText += '4';
+      break;
+      case 'u': encodedText += '5';
+      break;
+      default: encodedText += text[i];
+      break;
+    }
+  }
+  return encodedText;
 }
-
-
+function decode(text) {
+  let dencodedText = '';
+  for(let i = 0; i < text.length; i += 1){
+    switch(text[i]){
+      case '1': dencodedText += 'a';
+      break;
+      case '2': dencodedText += 'e';
+      break;
+      case '3': dencodedText += 'i';
+      break;
+      case '4': dencodedText += 'o';
+      break;
+      case '5': dencodedText += 'u';
+      break;
+      default: dencodedText += text[i];
+      break;
+    }
+  }
+  return dencodedText;
+}
 
 module.exports = {
   calcArea,
@@ -112,4 +131,3 @@ module.exports = {
   highestCount,
   splitSentence,
 }
-
