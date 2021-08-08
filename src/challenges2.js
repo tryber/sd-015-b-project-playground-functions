@@ -114,7 +114,7 @@ function hydrate(str) {
   let sumWaterCups = 0;
 
   for (let index in arrayNumbers) {
-    let numberInteger = parseInt(arrayNumbers[index]);
+    let numberInteger = parseInt(arrayNumbers[index], 10);
     sumWaterCups += numberInteger;
   }
   if (sumWaterCups === 1) {
