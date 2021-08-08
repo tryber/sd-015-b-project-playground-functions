@@ -65,6 +65,7 @@ function triangleCheck(lineA,lineB,lineC) {
 }
 
 // Desafio 13
+// regularExpression e string.match retirada de explicacoes deste video: https://www.youtube.com/watch?v=pfkkdzeyx6U&ab_channel=AllThingsJavaScript%2CLLC
 function hydrate(string) {
   let regularExpression = /\d+/g;
   let numbers = string.match(regularExpression)
