@@ -7,14 +7,12 @@ function compareTrue(boolean1, boolean2) {
 function calcArea(base, height) {
   let area = (base * height) / 2;
   return area;
-
 }
 
 // Desafio 3
 function splitSentence(string) {
   let splitString = string.split(' ');
   return splitString;
-
 }
 // Desafio 4
 function concatName(array) {
@@ -47,7 +45,7 @@ function highestCount(array) {
       countRepeats +=1;
     }
   }
-    return countRepeats; 
+    return countRepeats;
   // seu código aqui}
 }
 
@@ -99,7 +97,6 @@ function encode(string) {
   return string
   }
   // seu código aqui
-console.log(encode("hello"));
 function decode(string) {
   string = string.replace(/1/g,'a');
   string = string.replace(/2/g,'e');
