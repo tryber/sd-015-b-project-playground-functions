@@ -15,8 +15,13 @@
     calcArea(5, 2);
     calcArea(51, 1);
 
-    //3 INCOMPLETO
-    //function splitSentence(str){}
+    //3
+    function splitSentence(str){
+        return str.split(' ');
+    }
+    splitSentence('go Trybe');
+    splitSentence('vamo que vamo');
+    splitSentence('foguete');
 
     //4
     function concatName(array){
@@ -91,3 +96,4 @@
     fizzBuzz([9, 25]);
 
     //9
+    
