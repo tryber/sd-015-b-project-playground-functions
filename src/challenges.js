@@ -18,7 +18,7 @@ function splitSentence(phrase) {
 
 // Desafio 4
 function concatName(values) {
-  return (values[values.length - 1]) + ', ' + values[0];
+  return `${values[values.length - 1]}, ${values[0]}`;
 }
 
 // Desafio 5
@@ -39,14 +39,17 @@ function highestCount(numbers) {
 }
 
 // Desafio 7
+function distanceAbs (mouseAbs, catAbs) {
+  return Math.abs(mouseAbs - catAbs);
+}
 function catAndMouse(mouse, cat1, cat2) {
-  if (Math.abs(mouse - cat1) === Math.abs(mouse - cat2)) {
+  if (distanceAbs(mouse, cat1) === distanceAbs(mouse, cat2)) {
     return 'os gatos trombam e o rato foge';
-  } else if (cat1 > cat2) {
-    return 'cat2';
-  } else {
-    return 'cat1';
   }
+  if (cat1 > cat2) {
+    return 'cat2';
+  }
+  return 'cat1';
 }
 
 // Desafio 8
