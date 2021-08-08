@@ -33,24 +33,24 @@ function generatePhoneNumber(numbers) {
 
   for (let i in numbers) {
     switch (i) {
-      case '0':
-        phoneNumber += '(';
-        phoneNumber += numbers[i];
-        break;
+    case '0':
+      phoneNumber += '(';
+      phoneNumber += numbers[i];
+      break;
 
-      case '1':
-        phoneNumber += numbers[i];
-        phoneNumber += ') ';
-        break;
+    case '1':
+      phoneNumber += numbers[i];
+      phoneNumber += ') ';
+      break;
 
-      case '7':
-        phoneNumber += '-';
-        phoneNumber += numbers[i];
-        break;
+    case '7':
+      phoneNumber += '-';
+      phoneNumber += numbers[i];
+      break;
 
-      default:
-        phoneNumber += numbers[i];
-        break;
+    default:
+      phoneNumber += numbers[i];
+      break;
     }
   }
 
@@ -67,8 +67,18 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let qdteDrinks = 0;
+  let message = '';
+  let numbers = getNumbers(string);
+
+  for (let number of numbers) {
+    qdteDrinks += number;
+  }
+
+  message = getMessenge(qdteDrinks);
+
+  return message;
 }
 
 module.exports = {
@@ -83,7 +93,7 @@ module.exports = {
 //Verifica se o tamanho do array é válido
 //Retorna TRUE se o tamanho for igual a 11
 function isLengthValid(array) {
-  if (array.length != 11) {
+  if (array.length !== 11) {
     return false;
   } else {
     return true;
@@ -139,5 +149,31 @@ function lineCheck(hypotenuse, legA, legB) {
     return true;
   } else {
     return false;
+  }
+}
+
+//--------Funções usadas no desafio 13
+
+//Recebe uma string e retorna um array com todos numeros qeu tiverem na string
+function getNumbers(string) {
+  let numbers = [];
+  let stringNumbers = string.split(/\D+/g);
+
+  for (let num of stringNumbers) {
+    numbers.push(Number(num));
+  }
+
+  return numbers;
+}
+
+//Recebe a quantidade de drinks e retorna uma mensagem de acorda com essa quantidade
+function getMessenge(number) {
+  let msg1 = ' copo de água';
+  let msg2 = ' copos de água';
+
+  if (number === 1) {
+    return number + msg1;
+  } else {
+    return number + msg2;
   }
 }
