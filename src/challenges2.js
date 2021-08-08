@@ -20,10 +20,9 @@ function techList(arr, name) {
 // Desafio 11
 function itemCounter(arr) {
   let items = {};
-  let index;
   let value;
 
-  for (index in arr) {
+  for (let index = 0; index <= arr.length; index += 1) {
     value = arr[index];
     if (typeof items[value] === 'undefined') {
       items[value] = 1;
@@ -71,25 +70,31 @@ function generatePhoneNumber(arr) {
 }
 
 // Desafio 12
+function checkLineA(lineA, lineB, lineC) {
+  let sumA = lineA < lineB + lineC;
+  let subA = lineA > Math.abs(lineB - lineC);
+  return sumA && subA;
+}
+
+function checkLineB(lineA, lineB, lineC) {
+  let sumB = lineB < lineA + lineC;
+  let subB = lineB > Math.abs(lineA - lineC);
+  return sumB && subB;
+}
+
+function checkLineC(lineA, lineB, lineC) {
+  let sumC = lineC < lineA + lineB;
+  let subC = lineC > Math.abs(lineA - lineB);
+  return sumC && subC;
+}
+
 function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
-  let somaAB = lineA + lineB;
-  let somaAC = lineA + lineC;
-  let somaBC = lineB + lineC;
-  let subAB = Math.abs(lineA - lineB);
-  let subAC = Math.abs(lineA - lineC);
-  let subBC = Math.abs(lineB - lineC);
-  if (
-    lineA > somaBC
-    || lineA < subBC
-    || lineB > somaAC
-    || lineB < subAC
-    || lineC > somaAB
-    || lineC < subAB
-  ) {
-    return false;
-  }
-  return true;
+  return (
+    checkLineA(lineA, lineB, lineC)
+    && checkLineB(lineA, lineB, lineC)
+    && checkLineC(lineA, lineB, lineC)
+  );
 }
 
 // Desafio 13
