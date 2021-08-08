@@ -63,8 +63,8 @@ function generatePhoneNumber(arrayPhone) {
   return formatPhone(arrayPhone);
 }
 
-let arrayNumbers = [1, 2, 3, 4, 1, 6, 7, 8, 9, 0, 1];
-console.log(generatePhoneNumber(arrayNumbers));
+let arrayNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
+generatePhoneNumber(arrayNumbers);
 
 // Desafio 12
 function validaLado(lineA, lineB, lineC) {
