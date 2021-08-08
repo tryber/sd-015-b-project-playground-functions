@@ -27,7 +27,7 @@ function footballPoints(wins, ties) {
 function highestCount(arrayNumbers) {
   let maiorNumero = Number.NEGATIVE_INFINITY;
   for(let i = 0; i < arrayNumbers.length; i += 1) {
-    if(maiorNumero < arrayNumbers[i]){
+    if (maiorNumero < arrayNumbers[i]) {
       maiorNumero = arrayNumbers[i];
     }
   }
@@ -49,13 +49,13 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   else if (distancia1 < distancia2) {
     return 'cat1';
-  } 
+  }
   else {
     return 'os gatos trombam e o rato foge';
   }
 }
 
-/* // Desafio 8/* 
+/* // Desafio 8
 function fizzBuzz(numbersArray) {
   let resposta = "'[";
   for (let index = 0; index < numbersArray.length; index += 1) {
@@ -76,30 +76,30 @@ function fizzBuzz(numbersArray) {
   resposta = resposta.replace(", ]'", "]'");
   return resposta;
 } */
-function fizzBuzz(numbersArray){
+function fizzBuzz(numbersArray) {
   let resposta = [];
   for (let i = 0; i < numbersArray.length; i += 1) {
     if ((numbersArray[i] % 3) === 0 && (numbersArray[i] % 5) !== 0) {
-      resposta.push("fizz");
-    }  
-    else if ((numbersArray[i] % 5) === 0 && (numbersArray[i] % 3) != 0) {
-      resposta.push("buzz");
+      resposta.push('fizz');
+    }
+    else if ((numbersArray[i] % 5) === 0 && (numbersArray[i] % 3) !== 0) {
+      resposta.push('buzz');
     }
     else if ((numbersArray[i] % 5) === 0 && (numbersArray[i] % 3) === 0) {
-      resposta.push("fizzBuzz");
+      resposta.push('fizzBuzz');
     }
     else {
-      resposta.push("bug!");
+      resposta.push('bug!');
     }
   }
   return resposta;
-} 
+}
 
 // Desafio 9
 function encode(text) {
   let encodedText = '';
-  for(let i = 0; i < text.length; i += 1){
-    switch(text[i]){
+  for (let i = 0; i < text.length; i += 1) {
+    switch (text[i]) {
       case 'a': encodedText += '1';
       break;
       case 'e': encodedText += '2';
@@ -118,8 +118,8 @@ function encode(text) {
 }
 function decode(text) {
   let dencodedText = '';
-  for(let i = 0; i < text.length; i += 1){
-    switch(text[i]){
+  for (let i = 0; i < text.length; i += 1) {
+    switch(text[i]) {
       case '1': dencodedText += 'a';
       break;
       case '2': dencodedText += 'e';
@@ -148,4 +148,4 @@ module.exports = {
   footballPoints,
   highestCount,
   splitSentence,
-}
+};
