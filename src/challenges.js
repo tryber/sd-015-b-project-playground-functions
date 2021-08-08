@@ -58,7 +58,7 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   return 'os gatos trombam e o rato foge';
 }
-// Desafio 8
+// Desafio 8 - Refatoracao do codigo seguindo a mesma logica aplicado pelo colega Flavio Bianchetti: https://github.com/tryber/sd-015-b-project-playground-functions/blob/flavio-bianchetti-playground-functions/src/challenges.js
 function testes(number) {
   let numTested = '';
   if (number % 3 === 0 && number % 5 === 0) {
