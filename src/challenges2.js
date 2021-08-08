@@ -58,8 +58,12 @@ function generatePhoneNumber(numbers) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let checkA = lineCheck(lineA, lineB, lineC);
+  let checkB = lineCheck(lineB, lineA, lineC);
+  let checkC = lineCheck(lineC, lineA, lineB);
+
+  return checkA && checkB && checkC;
 }
 
 // Desafio 13
@@ -73,6 +77,8 @@ module.exports = {
   hydrate,
   triangleCheck,
 };
+
+//--------Funções usadas no desafio 11
 
 //Verifica se o tamanho do array é válido
 //Retorna TRUE se o tamanho for igual a 11
@@ -120,4 +126,18 @@ function isArrayValid(array) {
   let repetitions = isSequenceValid(array);
 
   return values && repetitions;
+}
+
+//--------Funções usadas no desafio 12
+
+//Verifica se a linha de um triângulo é válida
+function lineCheck(hypotenuse, legA, legB) {
+  let sum = legA + legB;
+  let dif = Math.abs(legA - legB);
+
+  if (hypotenuse < sum && hypotenuse > dif) {
+    return true;
+  } else {
+    return false;
+  }
 }
