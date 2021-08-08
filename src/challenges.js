@@ -1,10 +1,10 @@
 // Desafio 1
 function compareTrue(parmUm, parmDois) {
+  compara = false;
   if (parmUm === true && parmDois === true) {
-    return true;
-  } else {
-    return false;
+    compara = true;
   }
+  return compara
 }
 
 // Desafio 2

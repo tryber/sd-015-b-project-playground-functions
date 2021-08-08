@@ -156,8 +156,6 @@ function hydrate(comanda) {
 
 }
 
-console.log(hydrate('1 vinho'))
-
 module.exports = {
   generatePhoneNumber,
   techList,
