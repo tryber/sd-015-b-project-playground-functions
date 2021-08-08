@@ -55,7 +55,7 @@ function catAndMouse(mouse, cat1, cat2,) {
   }
 }
 
-// Desafio 8
+/* // Desafio 8/* 
 function fizzBuzz(numbersArray) {
   let resposta = "'[";
   for (let index = 0; index < numbersArray.length; index += 1) {
@@ -75,7 +75,27 @@ function fizzBuzz(numbersArray) {
   resposta = resposta + "]'";
   resposta = resposta.replace(", ]'", "]'");
   return resposta;
+} */ 
+
+function fizzBuzz(numbersArray){
+  let resposta = [];
+  for (let i = 0; i < numbersArray.length; i += 1) {
+    if ((numbersArray[i] % 3) === 0 && (numbersArray[i] % 5) !== 0) {
+      resposta.push("fizz");
+    }  
+    else if ((numbersArray[i] % 5) === 0 && (numbersArray[i] % 3) != 0) {
+      resposta.push("buzz");
+    }
+    else if ((numbersArray[i] % 5) === 0 && (numbersArray[i] % 3) === 0) {
+      resposta.push("fizzBuzz");
+    }
+    else {
+      resposta.push("bug!");
+    }
+  }
+  return resposta;
 }
+
 
 // Desafio 9
 function encode(text) {
