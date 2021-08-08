@@ -34,22 +34,22 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-let maior = 0;
-let contador = 0;
-    for (let index of arrayNumeros) {
-        if (index > maior){
-            maior = index;
-        }
-    }  
-     for (let index2 of arrayNumeros){
-        if (maior === index2) {
-            contador += 1;
-        }
+function highestCount(arrayNumeros) {
+  // seu código aqui
+  let maior = -1;
+  let contador = 0;
+      for (let index of arrayNumeros){
+          if (index > maior){
+              maior = index;
+          }
+      }  
+       for (let index2 of arrayNumeros){
+          if (maior === index2) {
+              contador += 1;
+          }
+      }
+       return contador
     }
-    console.log(maior)
-    console.log(contador)
-}
-
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
