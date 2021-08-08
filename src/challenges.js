@@ -44,11 +44,11 @@ function countHighestNumberArray(highestNumber, arr) {
 }
 function highestCount(arr) {
   let maior = arr[0];
-    for (let key in arr) {
-      if (arr[key] > maior) {
-        maior = arr[key];           
-      }
+  for (let key in arr) {
+    if (arr[key] > maior) {
+      maior = arr[key];           
     }
+  }
     return countHighestNumberArray(maior, arr);
 }
 
@@ -64,26 +64,26 @@ function catAndMouse(rato, cat1, cat2) {
 
   if (distanciaGato1 < distanciaGato2) {
     result = 'cat1';
-  } else if (distanciaGato1 > distanciaGato2){
+  } else if (distanciaGato1 > distanciaGato2) {
     result = 'cat2';
-  } else if (distanciaGato1 === distanciaGato2){
+  } else if (distanciaGato1 === distanciaGato2) {
     result = 'os gatos trombam e o rato foge';
-  } 
+  }
   return result;
 }
-console.log(catAndMouse(1, 0, 2))
+
 // Desafio 8
 function fizzBuzz(arr) {
   let novoArray = [];
   let divisivelPor3 = false;
   let divisivelPor5 = false;
 
-  for (const key in arr) { 
+  for (const key in arr) {
     divisivelPor3 = arr[key] % 3 === 0;
     divisivelPor5 = arr[key] % 5 === 0;
-  
+
     if (divisivelPor3 === true && divisivelPor5 === false) {
-      novoArray.push('fizz'); 
+      novoArray.push('fizz');
     } else if (divisivelPor5 === true && divisivelPor3 === false) {
       novoArray.push('buzz');
     } else if (divisivelPor5 === true && divisivelPor3 === true) {
@@ -101,20 +101,20 @@ function encode(text) {
 
   for (const key in str) {
     switch (str[key]) {
-    case 'a':  
-      str[key] = '1';  
+    case 'a':
+      str[key] = '1';
       break;
-    case 'e':  
-      str[key] = '2';  
+    case 'e':
+      str[key] = '2';
       break;
-    case 'i':  
-      str[key] = '3';  
+    case 'i':
+      str[key] = '3';
       break;
-    case 'o':  
-      str[key] = '4';  
+    case 'o':
+      str[key] = '4';
       break;
-    case 'u':  
-      str[key] = '5';  
+    case 'u':
+      str[key] = '5';
       break;
     }
   }
@@ -128,19 +128,19 @@ function decode(text) {
   for (const key in str) {
     switch (str[key]) {
     case '1':  
-      str[key] = 'a';  
+      str[key] = 'a';
       break;
-    case '2':  
-      str[key] = 'e';  
+    case '2':
+      str[key] = 'e';
       break;
-    case '3':  
-      str[key] = 'i';  
+    case '3':
+      str[key] = 'i';
       break;
-    case '4':  
-      str[key] = 'o';  
+    case '4':
+      str[key] = 'o';
       break;
-    case '5':  
-      str[key] = 'u';  
+    case '5':
+      str[key] = 'u';
       break;
     }
   }
