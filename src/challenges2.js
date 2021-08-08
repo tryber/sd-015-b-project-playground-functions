@@ -65,7 +65,20 @@ function triangleCheck(lineA,lineB,lineC) {
 }
 
 // Desafio 13
-function hydrate() {
+function hydrate(string) {
+  let regularExpression = /\d+/g;
+  let numbers = string.match(regularExpression)
+  let result = 0; 
+  for (i = 0 ; i < numbers.length ; i += 1) {
+    result += parseInt(numbers[i])
+    
+  }
+  if (result > 1){
+  return result +" copos de água"
+  }
+  else {
+  return result +" copo de água"
+  }
   // seu código aqui
 }
 
