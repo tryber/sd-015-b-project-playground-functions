@@ -53,12 +53,11 @@ function fizzBuzz() {
 
 // Desafio 9
 function encode(string) {
-  let = string
-  let novaString = string.replace(/'a'/g , 1 );
-  let novaString = string.replace(/'e'/g, 2);
-  let novaString = string.replace(/'i'/g, 3);
-  let novaString = string.replace(/'o'/g, 4);
-  let novaString = string.replace(/'u'/g, 5);
+  novaString = string.replace(/a/g, 1 );
+  novaString = string.replace(/e/g, 2);
+  novaString = string.replace(/i/g, 3);
+  novaString = string.replace(/o/g, 4);
+  novaString = string.replace(/u/g, 5);
   return novaString
 }
 function decode(string) {
