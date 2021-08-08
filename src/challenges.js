@@ -5,7 +5,7 @@ function compareTrue(a, b) {
 
 // Desafio 2
 function calcArea(base, height) {
-  return(base * height) / 2; 
+  return (base * height) / 2;
 }
 console.log(calcArea(50, 10));
 
@@ -33,9 +33,10 @@ function highestCount(arrayNumbers) {
   let orderArray = arrayNumbers.sort();
   let highestNumber = orderArray[orderArray.length - 1];
   let contador = 0;
-  for (index = 0; index < arrayNumbers.length; index +=1) {
-    if (arrayNumbers[index] === highestNumber)
+  for (let index = 0; index < arrayNumbers.length; index += 1) {
+    if (arrayNumbers[index] === highestNumber){
       contador += 1;
+    } 
   }
   return contador;
 }
