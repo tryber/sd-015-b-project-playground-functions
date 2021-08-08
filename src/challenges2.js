@@ -54,12 +54,12 @@ function hasInvalidRepetition(numbers) {
 }
 
 function generatePhoneNumber(numbers) {
-  if (hasInvalidValues(numbers) || hasInvalidRepetition(numbers)) {
-    return 'não é possível gerar um número de telefone com esses valores';
-  }
-
   if (isIncorrectSize(numbers)) {
     return 'Array com tamanho incorreto.';
+  }
+
+  if (hasInvalidValues(numbers) || hasInvalidRepetition(numbers)) {
+    return 'não é possível gerar um número de telefone com esses valores';
   }
 
   let phoneNumber = '(xx) xxxxx-xxxx';
