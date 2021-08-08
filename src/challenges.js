@@ -32,21 +32,16 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
+// Math.max e spread operator (...) retirado da documentacao: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/max
 function highestCount(array) {
-  let initialNumber = array[0];
   let countRepeats = 0;
+  let biggestNumber = Math.max(...array);
   for (let i = 0; i < array.length; i += 1) {
-    if (array[i] > initialNumber) {
-      initialNumber = array[i];
-    }
-  }
-  for (let k = 0; k < array.length; k += 1) {
-    if (array[k] === initialNumber) {
+    if (array[i] === biggestNumber) {
       countRepeats += 1;
     }
   }
   return countRepeats;
-  // seu código aqui}
 }
 
 // Desafio 7
