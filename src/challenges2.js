@@ -5,12 +5,11 @@ function techList(arrayTech, name) {
 
   if (arr.length === 0) {
     return 'Vazio!';
-  } { for (let index = 0; index < arr.length; index += 1) {
+  } for (let index = 0; index < arr.length; index += 1) {
     arrayTechList.push({
       tech: arr[index],
       name,
     });
-  }
   }
   return arrayTechList;
 }
@@ -49,6 +48,7 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function hydrate(str) {
+  /** Source: https://stackoverflow.com/questions/1623221/how-to-find-a-number-in-a-string-using-javascript/30160994 (Foi usada uma expressao regular para encontrar algo dentro do texto, que no caso foi caractere de dígito) */
   let regex = /\d+/g;
   let matches = str.match(regex);
   let alcoholAmount = 0;
