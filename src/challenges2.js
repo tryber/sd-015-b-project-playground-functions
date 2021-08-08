@@ -1,8 +1,25 @@
 // Desafio 10
 
-function techList(telefone) {
-  
+function techList(vetorTech,name) {
+  let objeto = [];
+if (vetorTech.length <= 0) {
+  return 'Vazio!';
 }
+for (let index = 0; index < vetorTech.length; index += 1) {
+  objeto.push({
+    tech: vetorTech[index],
+    name,
+  });
+}  
+return objeto.sort(function (a, b) {
+  if (a.tech < b.tech){
+    return -1
+  }else{
+    return true
+  }
+});
+}  console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"],
+"Lucas"));
 
 // Desafio 11
 
