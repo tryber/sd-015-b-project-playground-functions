@@ -20,11 +20,11 @@ calcArea();
 // Desafio 3
 function splitSentence(palavra) {
   // seu código aquiclear
-  palavra = '';
+  palavra = ' ';
   let divide = palavra.split(' ');
   return divide;
 }
-splitSentence();
+console.log(splitSentence());
 
 // Desafio 4
 function concatName(array) {
