@@ -20,11 +20,11 @@ function generatePhoneNumber(phoneNumber) {
   for (let count = 0; count < phoneNumber.length; count += 1) {
     let numberTimes = 0;
     for (let count2 = 0; count2 < phoneNumber.length; count2 += 1) {
-      if (phoneNumber[count] === phoneNumber[count2]) {
+      if (phoneNumber[count] === phoneNumber[count2]){
         numberTimes += 1;
       }
     }
-    if (phoneNumber[count] < 0 || phoneNumber[count] > 9 || numberTimes >= 3) {
+    if (phoneNumber[count] < 0 || phoneNumber[count] > 9 || numberTimes >= 3){
       return 'não é possível gerar um número de telefone com esses valores';
     }
   }
@@ -32,23 +32,26 @@ function generatePhoneNumber(phoneNumber) {
 }
 
 // Desafio 12
+function check(sideA, sideB, sideC) {
+  return (Math.abs(sideA - sideB) < sideC && sideC < (sideA + sideB));
+}
 function triangleCheck(lineA, lineB, lineC) {
-  if (lineA < Math.abs(lineB - lineC)
-  || lineB < Math.abs(lineA - lineC)
-  || lineC < Math.abs(lineA - lineB)) {
-    return false;
-  } else {
-    return true;
-  }
+  return check(lineA, lineB, lineC) && check(lineB, lineC, lineA) && check(lineC, lineA, lineB);
 }
 
 // Desafio 13
 // Fonte: https://stackoverflow.com/questions/1623221/how-to-find-a-number-in-a-string-using-javascript/30160994
+// Fonte: https://www.w3schools.com/jsref/jsref_parseint.asp
 function hydrate(bebida) {
-  let quantity = /\d+/g;
+  let quantity = bebida.match(/\d+/g);
+  let water = 0;
   for (let number of quantity) {
-    return number;
+    water += parseInt(number);
   }
+  if (water === 1) {
+    return (water) + ' copo de água';
+  }
+  return (water) + ' copos de água';
 }
 
 module.exports = {
