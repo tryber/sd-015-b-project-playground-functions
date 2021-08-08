@@ -70,12 +70,12 @@ function fizzBuzz(values) {
 function encode(encoding) {
   let encValue = encoding.split('');
   for (let index = 0; index < encValue.length; index += 1) {
-      if (encValue[index] === 'a') encValue[index] = 1;
-      else if (encValue[index] === 'e') encValue[index] = 2;
-      else if (encValue[index] === 'i') encValue[index] = 3;
-      else if (encValue[index] === 'o') encValue[index] = 4;
-      else if (encValue[index] === 'u') encValue[index] = 5;
-    }
+    if (encValue[index] === 'a') encValue[index] = 1;
+    else if (encValue[index] === 'e') encValue[index] = 2;
+    else if (encValue[index] === 'i') encValue[index] = 3;
+    else if (encValue[index] === 'o') encValue[index] = 4;
+    else if (encValue[index] === 'u') encValue[index] = 5;
+  }
   return encValue.join('');
 }
 function decode(decoding) {

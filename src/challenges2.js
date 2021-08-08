@@ -20,11 +20,11 @@ function generatePhoneNumber(phoneNumber) {
   for (let count = 0; count < phoneNumber.length; count += 1) {
     let numberTimes = 0;
     for (let count2 = 0; count2 < phoneNumber.length; count2 += 1) {
-      if (phoneNumber[count] === phoneNumber[count2]){
+      if (phoneNumber[count] === phoneNumber[count2]) {
         numberTimes += 1;
       }
     }
-    if (phoneNumber[count] < 0 || phoneNumber[count] > 9 || numberTimes >= 3){
+    if (phoneNumber[count] < 0 || phoneNumber[count] > 9 || numberTimes >= 3) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
   }
