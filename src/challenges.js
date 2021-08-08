@@ -18,7 +18,7 @@ function splitSentence(string) {
   return string.split(' ');
 }
 
-console.log(splitSentence('vamo que vamo'));
+splitSentence('vamo que vamo');
 
 // Desafio 4
 function concatName(lista) {
@@ -28,7 +28,7 @@ function concatName(lista) {
 }
 
 let nomes = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
-console.log(concatName(nomes));
+concatName(nomes);
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -36,7 +36,7 @@ function footballPoints(wins, ties) {
   return points;
 }
 
-console.log(footballPoints(14, 8));
+footballPoints(14, 8);
 
 // Desafio 6
 
@@ -54,7 +54,7 @@ function highestCount(numbers) {
 }
 
 let array = [0, 4, 4, 4, 9, 2, 1];
-console.log(highestCount(array));
+highestCount(array);
 
 // Desafio 7
 
@@ -134,7 +134,7 @@ function decode(mensagem) {
   return replaceMsg;
 }
 
-console.log(decode('h3 th2r2!'));
+decode('h3 th2r2!');
 
 module.exports = {
   calcArea,
