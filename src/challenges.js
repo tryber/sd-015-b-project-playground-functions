@@ -1,49 +1,156 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(valor1, valor2){
+  if (valor1 === false && valor2 === true){
+    return false;
+  }
+  else if (valor1 === true && valor2 === false){
+    return false;
+  }
+  else if (valor1 === false && valor2 === false){
+      return false;
+  }
+  else if (valor1 === true && valor2 === true){
+      return true
+  }
 }
 
 // Desafio 2
-function calcArea() {
+function calcArea(base, height) {
   // seu código aqui
+    return ((base * height)/2)
 }
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(frase) {
   // seu código aqui
+    let resultado = frase.split(' ');
+    return resultado
 }
 
 // Desafio 4
-function concatName() {
+function concatName(concatenation) {
   // seu código aqui
+    let primeiro = concatenation[concatenation.length - 1] ;
+    let segundo = concatenation[0] ;
+    return primeiro + ', ' + segundo  
 }
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
+  let resultadoVitoria = wins * 3
+  return resultadoVitoria + ties 
 }
 
 // Desafio 6
-function highestCount() {
+function highestCount(amount) {
   // seu código aqui
+  let highNumber = amount[0]
+  let contagem = 0
+  // 2- Qual o maior numero da array //for
+  for (let index = 0; index < amount.length; index+= 1){
+    if (amount[index] > highNumber){
+      highNumber = amount[index]
+    }
+  }
+  for (let index = 0; index < amount.length; index+= 1){
+    if (amount[index] === highNumber){
+    contagem += 1
+  }
+}
+  return contagem;
 }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-}
+  // 1- Calcular a distancia entre os gatos e rato
+  let distancia1 = Math.abs(cat1 - mouse)
+  let distancia2 = Math.abs(cat2 - mouse)
+  // 2- Encontrar e retornar qual o felino pega o rato mais rapido
+  if (distancia1 > distancia2){
+    return "cat2";
+  }
+  else if (distancia1 < distancia2){
+    return "cat1";
+  }
+  else{
+    return "os gatos trombam e o rato foge";
+  } 
+} 
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(number) {
   // seu código aqui
+  let valor = [];
+  for (let index = 0; index < number.length; index++){
+    if (number[index] % 3 === 0 && number[index] % 5 !== 0){
+      valor.push("fizz");
+    } else if (number[index] % 5 === 0 && number[index] % 3 !== 0){
+      valor.push("buzz");
+    } else if (number[index] % 3 === 0 && number[index] % 5 === 0){
+      valor.push("fizzBuzz");
+    } else{
+      valor.push("bug!");
+    }
+  } return valor;
+  
 }
 
 // Desafio 9
-function encode() {
+function encode(text) {
   // seu código aqui
+  let store = ""
+  for (let index = 0; index < text.length; index++){
+    let letraAtual = text[index] 
+    if (letraAtual == "a"){
+        store += 1 
+    }
+    else if (letraAtual == "e"){
+        store += 2
+    }
+    else if (letraAtual == "i"){
+        store += 3
+    }
+    else if (letraAtual == "o"){
+        store += 4
+    }
+    else if (letraAtual == "u"){
+        store += 5
+    }
+    else {
+      store += letraAtual
+    }
+    
+  } 
+  return store
 }
-function decode() {
+
+function decode(number){
   // seu código aqui
+  let store = ""
+  for (let index = 0; index < number.length; index++){
+      let numeroAtual = number[index]
+      if (numeroAtual == "1"){
+          store += "a"
+      }
+      else if (numeroAtual == "2"){
+          store += "e"
+      }
+      else if (numeroAtual == "3"){
+          store += "i"
+      }
+      else if (numeroAtual == "4"){
+          store += "o"
+      }
+      else if (numeroAtual == "5"){
+          store += "u"
+      }
+      else {
+        store += numeroAtual
+      }    
+  }
+  return store
 }
 
 module.exports = {
