@@ -1,3 +1,4 @@
+/* eslint-disable complexity */
 /* eslint-disable max-lines-per-function */
 // Desafio 10
 function techList(tech, name) {
@@ -20,8 +21,43 @@ function techList(tech, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
+function generatePhoneNumber(numbers) {
   // seu código aqui
+
+  let aux = 0;
+  let cont = -1;
+  let numeroTelefone = '(';
+
+  if (numbers.length !== 11) { // verificando se o array é maior que 11
+    return 'Array com tamanho incorreto.';
+  }
+
+  for (let key in numbers) {
+
+    if (numbers[key] < 0 || numbers[key] > 9) {// verificando se tem numbers menor que zero OU maior que 9
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
+      aux = 0;
+     
+      for (let index in numbers) {// verificando se tem mais que 2 numbers repitidos
+        if (numbers[key] === numbers[index]) {
+          aux += 1;
+          if (aux > 2) {
+            return 'não é possível gerar um número de telefone com esses valores';
+          }
+        }
+      }
+    
+    cont += 1; // condição para colocar () e - .
+    if (cont === 2) {
+      numeroTelefone += ') ';
+    }
+    if (cont === 7) {
+      numeroTelefone += '-';
+    }
+    numeroTelefone += numbers[key];
+  }
+  return numeroTelefone;
 }
 
 // Desafio 12
