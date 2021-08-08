@@ -45,14 +45,23 @@ function isThreeOrNineOrZero(arr) {
 }
 
 function concatPhoneNumber(arr) {
-  let numberPhone = [];
-
-  for (let number of arr) {
-    numberPhone.push(number);
+  let phoneNumber = '';
+  for (let index = 0; index < arr.length; index += 1) {
+    switch (index) {
+    case 0:
+      phoneNumber += `(${arr[index]}`;
+      break;
+    case 1:
+      phoneNumber += `${arr[index]}) `;
+      break;
+    case 6:
+      phoneNumber += `${arr[index]}-`;
+      break;
+    default:
+      phoneNumber += arr[index];
+    }
   }
-  let strNumberPhone = `(${numberPhone[0]}${numberPhone[1]}) ${numberPhone[2]}${numberPhone[3]}${numberPhone[4]}${numberPhone[5]}${numberPhone[6]}-${numberPhone[7]}${numberPhone[8]}${numberPhone[9]}${numberPhone[10]}`;
-
-  return strNumberPhone;
+  return phoneNumber;
 }
 
 function generatePhoneNumber(arr) {
