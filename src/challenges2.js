@@ -19,6 +19,7 @@ function techList(arr, name) {
   } else {
     return 'Vazio!';
   }
+   // https://www.horadecodar.com.br/2021/01/11/como-ordenar-um-array-de-objetos-em-javascript/
   arrayDeObj.sort(function(a, b,) {
     if(a.tech < b.tech) {
       return -1;
@@ -50,10 +51,41 @@ function triangleCheck(a, b, c) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function stingToInt(str) {
+  for (i=0; i<str.length; i++){ 
+    str[i] = parseInt(str[i]); 
+  }
 }
 
+function sumArray(str) {  
+  let soma = 0;
+
+  for (let valor of str) {
+    soma += valor;
+  }
+  return soma;
+}
+
+function intToStr(int) {
+  let quantidade = int.toString();
+  let copoAgua = '';
+  if (quantidade === '1') {
+    copoAgua = ' copo de água';
+  } else {
+    copoAgua = ' copos de água';
+  }
+  return quantidade + copoAgua;
+}
+
+function hydrate(str) {
+  let regex = /\d+/g;
+  let copos = str.match(regex);
+
+  stingToInt(copos);
+  
+  return intToStr(sumArray(copos));
+}
+console.log(hydrate("1 cerveja, 2 vinho"))
 module.exports = {
   generatePhoneNumber,
   techList,
