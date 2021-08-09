@@ -11,15 +11,32 @@ function techList(technologies, name) {
     object.tech = technologies[tech];
     object.name = name;
     newList.push(object);
-  };
+  }
   if (newList.length < 1) {
     return 'Vazio!';
   } return newList;
 }
 
 // Desafio 11
-function generatePhoneNumber() {
+function generatePhoneNumber(numbers) {
   // seu código aqui
+  let verifiedNumbers = [];
+  if (numbers.length !== 11) return 'Array com tamanho incorreto.';
+  for (let number in numbers) {
+    if (numbers[number] > 9 || numbers[number] < 0) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    } else {
+      verifiedNumbers.push(numbers[number]);
+    }
+  }
+  let phoneModel = ['(', '_', '_', ')', ' ', '_', '_', '_', '_', '_', '-', '_', '_', '_', '_'];
+  for (let character in phoneModel) {
+    if (phoneModel[character] === '_') {
+      let nextNumber = verifiedNumbers.shift();
+      phoneModel[character] = nextNumber;
+    }
+  }
+  return phoneModel.join('');
 }
 
 // Desafio 12
