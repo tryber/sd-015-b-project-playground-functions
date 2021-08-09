@@ -20,12 +20,12 @@ function splitSentence(initialString) {
 }
 
 // Desafio 4
-var initialArray = ["Rodrigo", "Matheus", "Alex"];
-
 function concatName(initialArray) {
-  let initialArrayLenght = initialArray.lenght;
-  let resultString = (initialArray[initialArrayLenght - 1], initialArray[0]);
-  console.log(resultString);
+  let arraySize = initialArray.length;
+  let textFirst = initialArray[0];
+  let textLast = initialArray[arraySize - 1];
+  let textResult = textLast.concat(", ", textFirst);
+  return "'" + textResult + "'";  
 }
 
 // Desafio 5
