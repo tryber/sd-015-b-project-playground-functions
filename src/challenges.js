@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(a, b) {
-  //meu codigo
+//  meu codigo
 //   if ( a > b && b < a){
 //     return true;
 //   }
@@ -16,7 +16,7 @@ function compareTrue(a, b) {
   else {
     return false;
   }
-  //codigo da Danielen Cestari
+//  codigo da Danielen Cestari
 }
 
 // Desafio 2
@@ -29,7 +29,7 @@ function calcArea(base, height) {
 function splitSentence(sentenca) {
   let arreio = sentenca.split(' ');
   return arreio;
- }
+}
 
 // Desafio 4
 function concatName(nomes) {
@@ -37,32 +37,22 @@ function concatName(nomes) {
   let valor2 = nomes[0];
   let valorFinal = [valor1, valor2];
   return valorFinal.join(', ');
-  //feito com o auxilio do codigo do Valdênio que esta no slack.
+//  feito com o auxilio do codigo do Valdênio que esta no slack.
 }
-
-
-
 
 // Desafio 5
 function footballPoints() {
   // let wins = 3;
   // let ties = 1;
-  // let soma;
-// 
+  // let soma; 
   // for (let i = 0; i )
-
-
-
-
-
-
 }
 
 // Desafio 6
 function highestCount(arreio) {
   let numeroMaior = Math.max.apply(null, arreio);
-  let cont = 0
-  for (i = 0; i < arreio.length; i ++){
+  let cont = 0;
+  for (let i = 0; i < arreio.length; i ++){
     variaveo = arreio[i];
     if (arreio[i] === numeroMaior ) {
       cont++;
@@ -70,6 +60,7 @@ function highestCount(arreio) {
   }
   return cont;
 }
+
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
