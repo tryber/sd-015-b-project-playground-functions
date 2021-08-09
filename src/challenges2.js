@@ -1,41 +1,42 @@
 // Desafio 10
 function techList(techs, name) {
   if (techs.length === 0) {
-    return 'Vazio!'
+    return 'Vazio!';
   } else {
-    techs.sort()
+    techs.sort();
   }
   let techObjects = [];
-  for (index = 0; index < techs.length; index += 1) {
+  for (let index = 0; index < techs.length; index += 1) {
     techObjects.push({
       tech: techs[index],
       name: name,
     });
-  }return techObjects;
+  } return techObjects;
 }
 
 // Desafio 11
-function generatePhoneNumber(phoneNumber) {
-  function countRepeat(phoneNumber){
-    for (index = 0; index < phoneNumber.length; index += 1) {
-      let count = 0;
-      for (i = index; i < phoneNumber.length; i += 1) {
-        if (phoneNumber[index] === phoneNumber[i]) {
-          count += 1;
-          if (count >= 3) {
-            return false;
-          }
+function countRepeat(phoneNumber){
+  for (let index = 0; index < phoneNumber.length; index += 1) {
+    let count = 0;
+    for (i = index; i < phoneNumber.length; i += 1) {
+      if (phoneNumber[index] === phoneNumber[i]) {
+        count += 1;
+        if (count >= 3) {
+          return false;
         }
       }
     }
   }
+}
+
+function generatePhoneNumber(phoneNumber) {
   let correctNumber = '(';
   if (phoneNumber.length !== 11) {
     return 'Array com tamanho incorreto.';
   } else if (countRepeat(phoneNumber) === false) {
       return 'não é possível gerar um número de telefone com esses valores';
   } else {
-    for (index = 0; index < phoneNumber.length; index += 1) {
+    for (let index = 0; index < phoneNumber.length; index += 1) {
       if (phoneNumber[index] > 9 || phoneNumber[index] < 0) {
         return 'não é possível gerar um número de telefone com esses valores';
       } else {
@@ -71,7 +72,7 @@ function hydrate(phrase) {
   let reg = /\d+/g;
   let numbers = phrase.match(reg);
   let waterCups = 0;
-  for (index = 0; index < numbers.length; index += 1) {
+  for (let index = 0; index < numbers.length; index += 1) {
     if (numbers[index] > 0 && numbers[index] < 9) {
       waterCups += parseInt(numbers[index]);
     }else {
