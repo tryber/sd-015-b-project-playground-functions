@@ -1,49 +1,108 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue (parameter1, parameter2){
+  if (parameter1 === true && parameter2 === true) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea (base, height){
+  const triangleArea = (base * height) / 2
+  return triangleArea;
 }
-
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence (phrase){
+  const myString = phrase;
+  const splitedSentence = myString.split(' ');
+  return splitedSentence;
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
-}
+function concatName (array){
+  const myArray = array;
+  const invertedArray = myArray.reverse();
+  const result1 = invertedArray[0];
+  const result2 = invertedArray[invertedArray.length - 1];
+  const result = result1 + ', ' + result2;
 
+  return result;
+}
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints (wins, ties){
+  const victories = 3 * wins;
+  const draws = 1 * ties;
+  const points = victories + draws;
+  return points;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
-}
+function highestCount (numbersArray){
+  const ordenedArray = numbersArray.sort(function (a, b) { return b - a });
+  const higherNumber = ordenedArray[0];
+  let quantasVezesSeRepete = 0;
 
+  for (let index = 0; index < ordenedArray.length; index += 1) {
+    if (ordenedArray[index] === higherNumber) {
+      quantasVezesSeRepete += 1;
+    }
+  }
+  return quantasVezesSeRepete;
+}
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse (mouse, cat1, cat2){
+  let resposta = 0;
+  if (cat1 - mouse === cat2 - mouse || cat1 - mouse === mouse - cat2 || mouse - cat1 === mouse - cat2 || mouse - cat1 === cat2 - mouse) {
+    resposta = 'os gatos trombam e o rato foge';
+  } else if (cat1 < cat2) {
+    resposta = 'cat1';
+  } else {
+    resposta = 'cat2';
+  }
+  return resposta
 }
-
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz (numbers){
+  const answer = [];
+
+  for (let index = 0; index < numbers.length; index += 1) {
+    if (numbers[index] % 3 === 0 && numbers[index] % 5 === 0) {
+      answer.push('fizzBuzz');
+    } else {
+      if (numbers[index] % 3 === 0) {
+        answer.push('fizz');
+      } else if (numbers[index] % 5 === 0) {
+        answer.push('buzz');
+      } else {
+        answer.push('bug!');
+    }
+  }
+  }
+  return answer
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode (string){
+  let phrase = string;
+  let encodedA = phrase.replace(/a/g, '1');
+  let encodedE = encodedA.replace(/e/g, '2');
+  let encodedI = encodedE.replace(/i/g, '3');
+  let encodedO = encodedI.replace(/o/g, '4');
+  let encoded = encodedO.replace(/u/g, '5');
+  
+  return encoded;
 }
-function decode() {
-  // seu código aqui
+console.log(encode('hi there'))
+
+function decode (codedString) {
+  let phrase = codedString;
+  let decodedA = phrase.replace(/1/g, 'a');
+  let decodedE = decodedA.replace(/2/g, 'e');
+  let decodedI = decodedE.replace(/3/g, 'i');
+  let decodedO = decodedI.replace(/4/g, 'o');
+  let decoded = decodedO.replace(/5/g, 'u');
+  return decoded;
 }
 
 module.exports = {
@@ -56,5 +115,5 @@ module.exports = {
   fizzBuzz,
   footballPoints,
   highestCount,
-  splitSentence,
-};
+  splitSentence
+}
