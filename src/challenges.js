@@ -4,7 +4,7 @@ function compareTrue(a, b) {
   return a === true && b === true;
 }
 console.log(compareTrue(true, true));
-// Desafio 2 
+// Desafio 2
 // check
 function calcArea(base, height) {
   return (base * height) / 2;
@@ -19,12 +19,15 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(array) {
-  return array[0] + ', ' + array[array.length - 1];
- } console.log('last and first: ', concatName(['Lucas', 'cassiano', 'ferraz', 'Paolillo']));
+  return `${array[array.length - 1]}, ${array[0]}`;
+}
+console.log('last and first: ', concatName(['Lucas', 'cassiano', 'ferraz', 'Paolillo']));
 
 // Desafio 5
 function footballPoints() {
-  return points = wins * 3 + ties * 1;
+  let wins = 3;
+  let ties = 1;
+  return wins * 3 + ties * 1;
 }
 // Desafio 6
 function highestCount(arrayNumeros) {
@@ -35,7 +38,7 @@ function highestCount(arrayNumeros) {
     if (numero > maiorNumero) {
       maiorNumero = numero;
       contador += 1;
-    } else if (numero === maiorNumero) { contador += 1; }
+    } if (numero === maiorNumero) { contador += 1; }
   }
   return contador;
 }
