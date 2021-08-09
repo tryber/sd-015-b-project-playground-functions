@@ -44,7 +44,7 @@
     footballPoints(1, 2);
     footballPoints(0, 0);
 
-    //6 //INCOMPLETO
+    //6 INCOMPLETO
     function highestCount(array) {
         let maior = 0;
         for (let i = 0; i < array.length; i++) {
@@ -95,5 +95,47 @@
     fizzBuzz([7, 9]);
     fizzBuzz([9, 25]);
 
-    //9
-    
+    //9 //INCOMPLETO
+    function encode(str) {
+        return str.replace('a', '1');
+    }
+    encode('hi there');
+
+    function decode(str) {
+        return str.replace('1', 'a');
+    }
+    decode('');
+
+    //10
+    function techName(tech, name) {
+
+    }
+    techName()
+
+    //11
+    function generatePhoneNumber(array) {
+        if (array.length == 11) {
+            return '('+array[0]+array[1]+')'+array[2]+array[3]+array[4]+array[5]+array[6]+'-'+array[7]+array[8]+array[9]+array[10];
+        } else if (array.length != 11){
+            return 'Array com tamanho incorreto.'
+        } else if (array < 0 && array > 9) {
+            return "não é possível gerar um número de telefone com esses valores"
+    }
+    generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]);
+
+    //12
+    function triangleCheck(lineA, lineB, lineC) {
+        if (lineA + lineB < lineC || lineB + lineC < lineA || lineA + lineC < lineB){
+            return false;
+        } else if (lineA - lineB > lineC || lineB - lineC > lineA || lineA - lineC > lineB) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+    triangleCheck(10, 14, 8);
+
+    //13
+    function hydrate() {
+        
+    }
