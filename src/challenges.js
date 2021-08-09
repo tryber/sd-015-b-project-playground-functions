@@ -1,37 +1,89 @@
 // Desafio 1
-function compareTrue() {
+function compareTrue(num1, num2) {
   // seu código aqui
+  if (num1 && num2) {
+    return true;     
+  }
+  else {
+    return false;
+  }
 }
+compareTrue();
 
 // Desafio 2
-function calcArea() {
+function calcArea(base, height) {
   // seu código aqui
+  return base * height / 2;
 }
+calcArea();
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(palavra) {
+  // seu código aquiclear
+  palavra = ' ';
+  let divide = palavra.split(' ');
+  return divide;
 }
+splitSentence();
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  // seu código aqui+
+  array = ['bala', 'bola', 'bota'];
+  let primeiro = array[0];
+  let ultimo = array.pop();
+  let result = ultimo + ', ' + primeiro;
+  return result;
 }
+console.log(concatName());
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
+wins;
+wins;
+let pointWins = 3;
+let pointTies = 1;
+
+if (pointWins > 0 || pointTies > 0) {
+  let result1 = wins * pointWins;
+  let result2 = ties * pointTies;
+  let result = result1 + result2;
+  return result;
 }
+else {
+
+}
+}
+footballPoints()
 
 // Desafio 6
 function highestCount() {
   // seu código aqui
 }
 
+
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
+  mouse = 1;
+  cat1 = 3;
+  cat2 = 4;
+
+  let distancia1 = cat1 - mouse;
+  let distancia2 = cat2 - mouse;
+
+  if (distancia1 > distancia2){
+    return 'cat2';
+  } 
+  else if (distancia2 > distancia1) {
+    return 'cat1';
+  }
+  else {
+    return 'os gatos trombam e o rato foge';
+  }
 }
+catAndMouse();
 
 // Desafio 8
 function fizzBuzz() {
