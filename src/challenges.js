@@ -99,7 +99,7 @@ function checkStatus(parameter) {
 
 function fizzBuzz(numberArray) {
   let newArray = [];
-  for (let index = 0; index < numberArray.length; index += 1) {
+  for (let index in numberArray) {
     newArray.push(checkStatus(numberArray[index]));
   }
   return newArray;
