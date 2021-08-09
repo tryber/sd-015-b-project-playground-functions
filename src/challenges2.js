@@ -21,22 +21,31 @@ function techList(technologies, name) {
 function generatePhoneNumber(numbers) {
   // seu código aqui
   let verifiedNumbers = [];
-  if (numbers.length !== 11) return 'Array com tamanho incorreto.';
-  for (let number in numbers) {
-    if (numbers[number] > 9 || numbers[number] < 0) {
-      return 'não é possível gerar um número de telefone com esses valores';
-    } else {
-      verifiedNumbers.push(numbers[number]);
+  let counter = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,];
+  if (numbers.length !== 11) {
+    return 'Array com tamanho incorreto.'
+  } else {
+    for (let number in numbers) {
+      if (numbers[number] > 9 || numbers[number] < 0) {
+        return 'não é possível gerar um número de telefone com esses valores';
+      } else {
+        counter[numbers[number]] += 1;
+        if (counter[numbers[number]] >= 3) {
+          return 'não é possível gerar um número de telefone com esses valores';
+        } else {
+        verifiedNumbers.push(numbers[number]);
+        }
+      }
     }
-  }
-  let phoneModel = ['(', '_', '_', ')', ' ', '_', '_', '_', '_', '_', '-', '_', '_', '_', '_'];
-  for (let character in phoneModel) {
-    if (phoneModel[character] === '_') {
-      let nextNumber = verifiedNumbers.shift();
-      phoneModel[character] = nextNumber;
+    let phoneModel = ['(', '_', '_', ')', ' ', '_', '_', '_', '_', '_', '-', '_', '_', '_', '_'];
+    for (let character in phoneModel) {
+      if (phoneModel[character] === '_') {
+        let nextNumber = verifiedNumbers.shift();
+        phoneModel[character] = nextNumber;
+      }
     }
+    return phoneModel.join('');
   }
-  return phoneModel.join('');
 }
 
 // Desafio 12
