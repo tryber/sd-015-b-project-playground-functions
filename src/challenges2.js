@@ -16,7 +16,7 @@ function techList(techs, name) {
 function timesItRepeats(phoneNumber) {
   let sortedNumber = [...phoneNumber].sort();
   for (let number = 0; number < sortedNumber.length; number += 1) {
-    if (sortedNumber[number] === sortedNumber[number - 1] 
+    if (sortedNumber[number] === sortedNumber[number - 1]
 && sortedNumber[number] === sortedNumber[number + 1]) {
       return false;
     }
