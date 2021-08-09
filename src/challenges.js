@@ -100,7 +100,9 @@ function checkStatus(parameter) {
 function fizzBuzz(numberArray) {
   let newArray = [];
   for (let index in numberArray) {
-    newArray.push(checkStatus(numberArray[index]));
+    if (Object.prototype.hasOwnProperty.call(numberArray, index)) {
+      newArray.push(checkStatus(numberArray[index]));
+    }
   }
   return newArray;
 }
