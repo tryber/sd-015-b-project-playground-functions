@@ -48,11 +48,21 @@ function triangleCheck(lineA, lineB, lineC) {
   }
   return false;
 }
-console.log(triangleCheck(28, 14, 8));
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+// Li os 2 métodos para converter em inteiro e fiquei na dúvida qual usar. Acabei optando pelo Number.parseInt.
+// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Number/parseInt
+// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/parseInt
+function hydrate(string) {
+  let numberOfString = string.match(/[1-9]/g);
+  let water = 0;
+  for (let quantity of numberOfString) {
+    water += Number.parseInt(quantity);
+  }
+  if (water === 1) {
+    return `${water} copo de água`;
+  }
+  return `${water} copos de água`;
 }
 
 module.exports = {
