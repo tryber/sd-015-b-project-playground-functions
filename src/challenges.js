@@ -109,7 +109,7 @@ function encode(string) {
   }
   return finalCode; 
   }
-  console.log(encode('alexandre ottoni, jovem nerd'));
+  
 
 function decode(string){
   let finalCode = string;

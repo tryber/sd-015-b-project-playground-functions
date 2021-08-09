@@ -15,45 +15,56 @@ return tecnologias;
 
 
 
-// Desafio 11
-// '(' + [0] + [1] + ')' + ' ' + [2] + [3] + [4] + [5] + [6] + '-' + [7] + [8] + [9] + [10] 
+//Desafio 11
+
 function generatePhoneNumber(array) {
   let output = '';
-  function quantidadeRepetida(input) {
-    let repetido = 0;
+  //let base = 3;
+  if (array.length != 11) {
+    output = 'Array com tamanho incorreto.';
+  }
+  function quantidadeRepetida(array) {
     let contador = 0;
-    for (let i in input){
-        for (let j in input){
-            if (input[i] === input[j]){
-                repetido = input[i]
+    let repetido = 0;
+    
+    let repetições = 1;
+    for (let i = 0; i < array.length; i += 1){
+        for (let j = 0; j < i; j += 1){
+            if (array[i] === array[j]){
+                contador += 1;
+            }
+            if (repetido  < contador){
+                repetido = contador;
+                repetições += 1;
             }
         }
+      contador = 0;
     }
-    for (let key in input){
-        if (input[key] === repetido)
-        contador += 1;
-    }
-    
-    return  contador
+    return  repetições 
+   
   }
+  
   for (let index = 0; index < array.length; index += 1) {
-    if (quantidadeRepetida(array) >= 3){
+    if (array.length != 11) {
+      output = 'Array com tamanho incorreto.';
+    } else if (quantidadeRepetida(array) >= 3){
       output = 'não é possível gerar um número de telefone com esses valores';
-      // output = 'não é possível gerar um número de telefone com esses valores'
-    } else if (array.length > 11 || array.length < 11) {
-      output = 'Array com tamanho incorreto';
       break
-    } else if (array[index] < 0 || array[index] > 9){
+    }  else if (array[index] < 0 || array[index] > 9){
       output = 'não é possível gerar um número de telefone com esses valores';
       break
     } else {
       output = '(' + array[0] + array[1] + ')' + ' ' + array[2] + array[3] + array[4] + array[5] + array[6] + '-' + array[7] + array[8] + array[9] + array[10] 
     }
+
   }
   return output
+  
 }
-let teste = [1, 2, 3, 4, 5, 6, 7, 18, 9, 0, 1]
+
+let teste = [1, 1, 1, 4, 14, 2, 7, 8, 19, 9, 4];
 console.log(generatePhoneNumber(teste));
+
 // Desafio 12
 // a + b > c &&
 function triangleCheck(lineA, lineB, lineC) {
