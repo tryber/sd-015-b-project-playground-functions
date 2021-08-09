@@ -49,7 +49,6 @@ function footballPoints(vezesWins, vezesTies) {
   let pontos = totalWins + totalTies; 
   return pontos;
 }
-console.log(footballPoints())
 // Desafio 6
 function highestCount(arreio) {
   let numeroMaior = Math.max.apply(null, arreio);
