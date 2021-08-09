@@ -21,11 +21,11 @@ function calcArea(base, height) {
   return valor;
 }
 console.log(calcArea(51, 1));
+
 // Desafio 3
 function splitSentence(frase) {
   frase = frase.split(' ');
   return frase;
-  // seu código aqui
 }
 console.log(splitSentence('sempre é assim'));
 
@@ -50,27 +50,53 @@ function footballPoints(wins, ties) {
 console.log(footballPoints(14, 8))
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numbers) { 
+  for (var index = 0; index < numbers.length; index += 1){ 
+    if (numbers[index] === Math.max.apply(null, numbers)){
+    let res = numbers[index] + 1;
+    return res;
+    }
 }
+}
+    console.log(highestCount([0, 0, 0]));
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arrayNumbers) {
+  let arrayString = [];
+  for (var index = 0; index < arrayNumbers.length; index += 1)
+   {
+     if (arrayNumbers[index] % 15 === 0){
+        arrayString.push('fizzBuzz');
+      }
+      if (arrayNumbers[index] / 3 === 1 || arrayNumbers[index] / 3 === 3 ){
+        arrayString.push('fizz');
+        }
+      if (arrayNumbers[index] / 5 === 1 || arrayNumbers[index] / 5 === 5 ){
+        arrayString.push('buzz');
+        }
+      if (arrayNumbers[index] % 3 !== 0 && arrayNumbers[index] % 5 !== 0){
+        arrayString.push('bug!');
+        }
+    }
+  return arrayString;
 }
-
+console.log(fizzBuzz([2, 15, 7, 9, 45]))
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(palavra) {
+    let resultado = palavra.replace(/e/g, "2");
+  return resultado;
 }
-function decode() {
-  // seu código aqui
+function decode(palavra) {
+    let resultado = palavra.replace(/2/g, "e");
+    return resultado;
 }
+console.log(encode("Hi there"));
+console.log(decode("h3 th2r2!"))
 
 module.exports = {
   calcArea,
