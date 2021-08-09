@@ -51,14 +51,28 @@ function generatePhoneNumber(numbers) {
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui6
-  if ((lineA < lineB + lineC && lineA > Math.abs(lineB - lineC)) && (lineB < lineA + lineC && lineB > Math.abs(lineA - lineC)) && (lineC < lineA + lineB && lineC > Math.abs(lineA - lineB))) {
+  if ((lineA < lineB + lineC && lineA > Math.abs(lineB - lineC)) && (lineB < lineA + lineC && lineB > Math.abs(lineA - lineC)) && 
+  (lineC < lineA + lineB && lineC > Math.abs(lineA - lineB))) {
     return true;
   } return false;
 }
 
 // Desafio 13
-function hydrate() {
+function hydrate(listaBebidas) {
   // seu código aqui
+  let numeros = [];
+  for (let characteres in listaBebidas) {
+    if (listaBebidas[characteres] > 0) {
+      numeros.push(parseInt(listaBebidas[characteres], 10));
+    }
+  }
+  let soma = 0;
+  for (let index = 0; index < numeros.length; index += 1) {
+    soma += numeros[index];
+  }
+  if (soma > 1) {
+    return `${soma} copos de água`;
+  } return `${soma} copo de água`;
 }
 
 module.exports = {
