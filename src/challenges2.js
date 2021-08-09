@@ -16,25 +16,26 @@ function techList(techs, name) {
 function timesItRepeats(phoneNumber) {
   let sortedNumber = [...phoneNumber].sort();
   for (let number = 0; number < sortedNumber.length; number += 1) {
-    if (sortedNumber[number] === sortedNumber[number - 1] && sortedNumber[number] === sortedNumber[number + 1]) {
+    if (sortedNumber[number] === sortedNumber[number - 1] 
+&& sortedNumber[number] === sortedNumber[number + 1]) {
       return false;
     }
   }
 }
 function checkSize(phoneNumber) {
-  for (let count = 0; count < phoneNumber.length; count += 1){
+  for (let count = 0; count < phoneNumber.length; count += 1) {
     if (phoneNumber[count] < 0 || phoneNumber[count] > 9) {
-    return false;
+      return false;
     }
   }
 }
 
 function checkTrue(value) {
   let isItTrue = true;
-  let trueFalse = [timesItRepeats(value),checkSize(value)];
+  let trueFalse = [timesItRepeats(value), checkSize(value)];
   let errorMsg = 'não é possível gerar um número de telefone com esses valores';
   for (let count = 0; count < trueFalse.length; count += 1) {
-    if(trueFalse[count] === false) {
+    if (trueFalse[count] === false) {
       isItTrue = errorMsg;
     }
   }
@@ -47,9 +48,8 @@ function generatePhoneNumber(phoneNumber) {
   }
   if (checkTrue(phoneNumber) !== true) {
     return checkTrue(phoneNumber);
-  } else {
-    return phoneNumber.join('').replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3');
   }
+  return phoneNumber.join('').replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3');
 }
 
 // Desafio 12
