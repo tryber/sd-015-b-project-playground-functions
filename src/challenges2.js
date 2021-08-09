@@ -24,18 +24,13 @@ function generatePhoneNumber(numbers) {
   let counter = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,];
   if (numbers.length !== 11) {
     return 'Array com tamanho incorreto.'
-  } else {
-    for (let number in numbers) {
+  } for (let number in numbers) {
       if (numbers[number] > 9 || numbers[number] < 0) {
         return 'não é possível gerar um número de telefone com esses valores';
-      } else {
-        counter[numbers[number]] += 1;
+      } counter[numbers[number]] += 1;
         if (counter[numbers[number]] >= 3) {
           return 'não é possível gerar um número de telefone com esses valores';
-        } else {
-        verifiedNumbers.push(numbers[number]);
-        }
-      }
+        } verifiedNumbers.push(numbers[number]);
     }
     let phoneModel = ['(', '_', '_', ')', ' ', '_', '_', '_', '_', '_', '-', '_', '_', '_', '_'];
     for (let character in phoneModel) {
@@ -45,7 +40,6 @@ function generatePhoneNumber(numbers) {
       }
     }
     return phoneModel.join('');
-  }
 }
 
 // Desafio 12
