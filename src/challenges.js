@@ -93,6 +93,8 @@ function fizzBuzz(sequencia) {
   }
   return resultado;
 }
+let sequencia = [5, 2, 3, 15];
+console.log(fizzBuzz(sequencia))
 
 // Desafio 9
 function encode(codifica) {
