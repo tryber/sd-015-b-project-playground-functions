@@ -5,9 +5,6 @@ function compareTrue(valor1, valor2) {
   } return false;
 }
 
-// seu código aqui
-
-
 // Desafio 2
 function calcArea(base, height) {
   return ((base * height) / 2);
@@ -20,7 +17,7 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(array) {
-  return (array[array.length - 1]) + ', ' + (array[0]);
+  return `${array[array.length - 1]}, ${array[0]}`;
 }
 
 // Desafio 5
@@ -53,7 +50,7 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz (arrayNumbers) {
+function fizzBuzz(arrayNumbers) {
   let phrase = [];
   for (let num of arrayNumbers) {
     if (num % 15 === 0) {
@@ -70,12 +67,14 @@ function fizzBuzz (arrayNumbers) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let finishString = string.replace(/a/g, '1').replace(/e/g, '2').replace(/i/g, '3').replace(/o/g, '4').replace(/u/g, '5');
+  return finishString;
 }
 
-function decode() {
-  // seu código aqui
+function decode(string1) {
+  let finishString1 = string1.replace(/1/g, 'a').replace(/2/g, 'e').replace(/3/g, 'i').replace(/4/g, 'o').replace(/5/g, 'u');
+  return finishString1;
 }
 
 module.exports = {
