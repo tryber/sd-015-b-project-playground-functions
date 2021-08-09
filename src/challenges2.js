@@ -42,8 +42,8 @@ function generatePhoneNumber(array) {
     }
   }
 
-  let phone = '('+ array.slice(0,2).join("") + ') '+array.slice(2,7).join("") + '-' +
-    array.slice(7,11).join("");
+  let phone = '(' + array.slice(0, 2).join('') + ') ' + array.slice(2, 7).join('') + '-' +
+    array.slice(7, 11).join('');
 
   return phone;
 }
@@ -53,19 +53,20 @@ function triangleCheck(lineA, lineB, lineC) {
   lineA = Math.abs(lineA);
   lineB = Math.abs(lineB);
   lineC = Math.abs(lineC);
-  
-  if ( lineA > (lineB + lineC) || lineB > (lineA + lineC) || lineC > (lineA + lineB)) {
+
+  if (lineA > (lineB + lineC) || lineB > (lineA + lineC) || lineC > (lineA + lineB)) {
     return false;
   } if (lineA < (lineB - lineC) || lineB < (lineA - lineC) || lineC < (lineA - lineB)) {
     return false;
-  }if ((lineB - lineC) < lineA < (lineB + lineC) || (lineA - lineC) < lineB < (lineA + lineC) || (lineA - lineB) < lineC < (lineA + lineB)) {
+  } if ((lineB - lineC) < lineA < (lineB + lineC) || (lineA - lineC) < lineB < (lineA + lineC) || 
+  (lineA - lineB) < lineC < (lineA + lineB)) {
     return true;
   }
 }
 
 // Desafio 13
 function hydrate(string) {
-  theNum = string.match( /\d+/g );
+  theNum = string.match(/\d+/g);
 
   let newArray = theNum.map((index) => Number(index));
   let total = newArray.reduce((total, currentElement) => total + currentElement);

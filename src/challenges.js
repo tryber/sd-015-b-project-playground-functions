@@ -75,22 +75,22 @@ function fizzBuzz(array) {
       fizzBuzz.push('buzz');
     } else if (array[index] % 3 === 0) {
       fizzBuzz.push('fizz');
-    } else 
-      fizzBuzz.push('bug!');
+    } else
+    fizzBuzz.push('bug!');
   }
-  return fizzBuzz;
+    return fizzBuzz;
 }
 
 // Desafio 9
 function encode(str) {
-  let todas = str.replace(/a/g, '1') .replace(/e/g, '2') .replace(/i/g, '3')
-    .replace(/o/g, '4') .replace(/u/g, '5');
+  let todas = str.replace(/a/g, '1').replace(/e/g, '2').replace(/i/g, '3')
+    .replace(/o/g, '4').replace(/u/g, '5');
   return todas;
 }
 
 function decode(str) {
-  let todas = str.replace(/1/g, 'a') .replace(/2/g, 'e') .replace(/3/g, 'i')
-    .replace(/4/g, 'o') .replace(/5/g, 'u');
+  let todas = str.replace(/1/g, 'a').replace(/2/g, 'e').replace(/3/g, 'i')
+    .replace(/4/g, 'o').replace(/5/g, 'u');
   return todas;
 }
 
