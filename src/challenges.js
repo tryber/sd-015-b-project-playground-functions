@@ -24,18 +24,18 @@ function splitSentence(palavra) {
   let divide = palavra.split(' ');
   return divide;
 }
-console.log(splitSentence());
+splitSentence();
 
 // Desafio 4
 function concatName(array) {
   // seu código aqui+
-  array = [];
+  array = ['bala', 'bola', 'bota'];
   let primeiro = array[0];
   let ultimo = array.pop();
-  let result = ultimo + primeiro;
+  let result = ultimo + ', ' + primeiro;
   return result;
 }
-concatName();
+console.log(concatName());
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -66,9 +66,9 @@ function highestCount() {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-  mouse;
-  cat1;
-  cat2;
+  mouse = 1;
+  cat1 = 3;
+  cat2 = 4;
 
   let distancia1 = cat1 - mouse;
   let distancia2 = cat2 - mouse;
