@@ -22,17 +22,21 @@ function incorrectFone(params) {
     if (params[index] < 0 || params[index] > 9) return msgErro;
   }
 }
-
-function countFone(params) {
+function getFor(numberFone2, count, index) {
+  let count2 = count;
+  for (let main = 0; main < numberFone2.length; main += 1) {
+    if (numberFone2[index] === numberFone2[main]) count2 += 1;
+  }
+  return count2;
+}
+function countFone(getFoneArray) {
   let msgErro = 'não é possível gerar um número de telefone com esses valores';
-  let numberFone2 = params;
+  let numberFone2 = getFoneArray;
   let count;
-  for (let index = 0; index < params.length; index += 1) {
+  for (let index = 0; index < getFoneArray.length; index += 1) {
     count = 0;
-    for (let main = 0; main < numberFone2.length; main += 1) {
-      if (params[index] === numberFone2[main]) count += 1;
-    }
-    if (count >= 3) return msgErro;
+    let main = getFor(numberFone2, count, index);
+    if (main >= 3) return msgErro;
   }
 }
 function verifica(params) {
@@ -50,7 +54,6 @@ function generatePhoneNumber(numberFone) {
   if (phoneDDD) return phoneDDD;
   return foneNumbers(numberFone);
 }
-console.log(generatePhoneNumber([1, 2, 2, 4, 5, 5, 2, 8, 9, 0, 1]));
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   return lineA < (lineC + lineB) && lineB < (lineA + lineC) && lineC < (lineA + lineB);
