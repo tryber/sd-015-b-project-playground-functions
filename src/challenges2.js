@@ -13,30 +13,44 @@ function techList(techName, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber(numberFone) {
-  // seu código aqui
-  let numberFone2 = numberFone;
-
-  if (numberFone.length !== 11) return 'Array com tamanho incorreto.';
-
-  for (let index = 0; index < numberFone.length; index += 1) {
-    if (numberFone[index] < 0 || numberFone[index] > 9) return 'não é possível gerar um número de telefone com esses valores';
+function rangeFone(getRange) {
+  if (getRange.length !== 11) return 'Array com tamanho incorreto.';
+}
+function incorrectFone(params) {
+  let msgErro = 'não é possível gerar um número de telefone com esses valores';
+  for (let index = 0; index < params.length; index += 1) {
+    if (params[index] < 0 || params[index] > 9) return msgErro;
   }
-
-  let count;
-  for (let index = 0; index < numberFone.length; index += 1) {
-    count = 0;
-    for (let chave = 0; chave < numberFone.length; chave += 1) {
-      if (numberFone[index] === numberFone2[chave]) {
-        count += 1;
-      }
-    }
-    if (count >= 3) return 'não é possível gerar um número de telefone com esses valores';
-  }
-
-  return phoneDDD = `(${numberFone[0]}${numberFone[1]})` + ` ${numberFone[2]}${numberFone[3]}${numberFone[4]}${numberFone[5]}${numberFone[6]}-${numberFone[7]}${numberFone[8]}${numberFone[9]}${numberFone[10]}`;
 }
 
+function countFone(params) {
+  let msgErro = 'não é possível gerar um número de telefone com esses valores';
+  let numberFone2 = params;
+  let count;
+  for (let index = 0; index < params.length; index += 1) {
+    count = 0;
+    for (let main = 0; main < numberFone2.length; main += 1) {
+      if (params[index] === numberFone2[main]) count += 1;
+    }
+    if (count >= 3) return msgErro;
+  }
+}
+function verifica(params) {
+  return rangeFone(params) || incorrectFone(params) || countFone(params);
+}
+function foneNumbers(numberFone) {
+  let ddd = `(${numberFone[0]}${numberFone[1]})`;
+  let fone01 = `${numberFone[2]}${numberFone[3]}${numberFone[4]}${numberFone[5]}${numberFone[6]}`;
+  let fone02 = `${numberFone[7]}${numberFone[8]}${numberFone[9]}${numberFone[10]}`;
+  let fone = `${ddd} ${fone01}-${fone02}`;
+  return fone;
+}
+function generatePhoneNumber(numberFone) {
+  let phoneDDD = verifica(numberFone);
+  if (phoneDDD) return phoneDDD;
+  return foneNumbers(numberFone);
+}
+console.log(generatePhoneNumber([1, 2, 2, 4, 5, 5, 2, 8, 9, 0, 1]));
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   return lineA < (lineC + lineB) && lineB < (lineA + lineC) && lineC < (lineA + lineB);
@@ -58,8 +72,6 @@ function hydrate(getDrinck) {
   if (arrayNumber === 1) return `${arrayNumber} copo de água`;
   return `${arrayNumber} copos de água`;
 }
-
-console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
 
 module.exports = {
   generatePhoneNumber,
