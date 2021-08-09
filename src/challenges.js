@@ -1,35 +1,31 @@
 // Desafio 1
 function compareTrue(a, b) {
-  if (a === true && b === true) {
-    return true;
-  } else {
-    return false;
-  }
+  return a && b;
 }
 
 // Desafio 2
 function calcArea(base, height) {
-  return (base * height)/2;
+  return (base * height) / 2;
 }
 
 // Desafio 3
 function splitSentence(value) {
-  let palavra = "";
+  let palavra = '';
   let retorno = [];
-  value = value + " ";
+  value = value + ' ';
   for (let caractere of value) {
-    if (caractere != " ") {
+    if (caractere != ' ') {
       palavra = palavra + String(caractere);
     } else {
       retorno.push(palavra);
-      palavra = "";
+      palavra = ' ';
     }
   } return retorno;
 }
 
 // Desafio 4
 function concatName(value) {
-  return value[(value.length -1)] + ", " + value[0];
+  return value[(value.length -1)] + ', ' + value[0];
 }
 
 // Desafio 5
@@ -57,11 +53,11 @@ function highestCount(array) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   if (Math.abs(mouse - cat1) < Math.abs(mouse-cat2)) {
-    return "cat1";
+    return 'cat1';
   } else if (Math.abs(mouse - cat1) > Math.abs(mouse-cat2)) {
-    return "cat2";
+    return 'cat2';
   } else {
-    return "os gatos trombam e o rato foge"
+    return 'os gatos trombam e o rato foge'
   }
 }
 
@@ -70,13 +66,13 @@ function fizzBuzz(array) {
   let answer = [];
   for (index = 0; index < array.length; index ++) {
     if (array[index] % 3 === 0 && array[index] % 5 === 0) {
-      answer.push("fizzBuzz");
+      answer.push('fizzBuzz');
     } else if (array[index] % 3 === 0) {
-      answer.push("fizz");
+      answer.push('fizz');
     } else if (array[index] % 5 === 0) {
-      answer.push("buzz");
+      answer.push('buzz');
     } else {
-      answer.push("bug!");
+      answer.push('bug!');
     }
   } return answer;
 }
