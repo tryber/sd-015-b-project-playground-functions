@@ -46,10 +46,6 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function divisible(dividend, divider) {
-  return dividend % divider === 0;
-}
-console.log(divisible());
 function fizzBuzz(arr) {
   let arrayFizzBuzz = [];
   for (let index = 0; index < arr.length; index += 1) {
