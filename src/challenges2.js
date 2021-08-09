@@ -48,13 +48,13 @@ function generatePhoneNumber(array) {
     //(12) 34567-8901
   
   }
-  
-let phone = `(${array[0]}${array[1]}) ${array[2]}${array[3]}${array[4]}${array[5]}
-  ${numberArray[6]}-${numberArray[7]}${array[8]}${array[9]}${array[10]}`
+  phone = "("+array.slice(0,2).join("")+") "+array.slice(2,7).join("")+"-"+array.slice(7,11).join("");
+  //let phone = `(${array[0]}${array[1]}) ${array[2]}${array[3]}${array[4]}${array[5]}
+  //${numberArray[6]}-${numberArray[7]}${array[8]}${array[9]}${array[10]}`
   return phone
   // seu código aqui
 }
-//console.log(generatePhoneNumber([1, 2, 3, 1, 5, 6, 7, 8, 9, 0, 9 ]))
+console.log(generatePhoneNumber([1, 2, 3, 1, 5, 6, 7, 8, 9, 0, 9 ]))
 
 // Desafio 12
 function triangleCheck() { 
