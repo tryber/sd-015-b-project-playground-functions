@@ -54,13 +54,35 @@ function generatePhoneNumber(phoneNumber) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  if ( Math.abs(lineB - lineC) < lineA && lineA < (lineB + lineC)) {
+    return true;
+  }else if ( Math.abs(lineA - lineB) < lineC && lineC < (lineA + lineB)) {
+    return true;
+  }else if ( Math.abs(lineA - lineC) < lineB && lineB < (lineA + lineC)) {
+    return true;
+  }else {
+    return false;
+  }
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(phrase) {
+  let reg = /\d+/g;
+  let numbers = phrase.match(reg);
+  let waterCups = 0;
+  for (index = 0; index < numbers.length; index += 1) {
+    if (numbers[index] > 0 && numbers[index] < 9) {
+      waterCups += parseInt(numbers[index]);
+    }else {
+      return "Insira números no intervalo de 1 à 9";
+    }
+  }
+  if (waterCups === 1) {
+    return waterCups + ' copo de água';
+  }else {
+    return waterCups + ' copos de água';
+  }
 }
 
 module.exports = {
