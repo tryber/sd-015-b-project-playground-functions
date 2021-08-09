@@ -49,58 +49,26 @@ if (cat1 - mouse === cat2 - mouse || cat2 - mouse === (cat1 - mouse)* -1) {
 catAndMouse(1,0,2)
 
 // Desafio 8
-function restDivisionFor15(dividendo, arrayString) {
-  if (dividendo % 15 === 0){
-    arrayString.push('fizzBuzz');
-  }
-  return arrayString;
-}
-function restDivisionFor3(dividendo, arrayString){
-  if (dividendo % 3 === 0) {
-    arrayString.push('buzz');
-  }
-  return arrayString;
-}
-function restDivisionFor5(dividendo, arrayString) {
-  if (dividendo % 5 === 0) {
-    arrayString.push('fizz');
-  }
-  return arrayString;
-}
-function bug(dividendo, arrayString) {
-  if (divendo % 3 !== 0 || dividendo % 5 !== 0) {
-    arrayString.push('bug!');
-  }
-  return arrayString
-}
-function fizzBuzz(arrayNumeros) {
-  let arrayString = [];
-  for (let index = 0; index < arrayNumeros.length; index += 1) {
-    restDivisionFor15(arrayNumeros[index], arrayString);
-    restDivisionFor3(arrayNumeros[index], arrayString);
-    restDivisionFor5(arrayNumeros[index], arrayString);
-    bug(arrayNumeros[index], arrayString);
-  }
-  return arrayString
+function fizzBuzz() {
+  
 }
 
 // Desafio 9
 function encode(string) {
-  let novaString = string.replace(/a/g, 1 );
-  let novaString = string.replace(/e/g, 2);
-  let novaString = string.replace(/i/g, 3);
-  let novaString = string.replace(/o/g, 4);
-  let novaString = string.replace(/u/g, 5);
-  return novaString;
+  let novaString = string.replace(/a/g, '1');
+  novaString = novaString.replace(/e/g, '2');
+  novaString = novaString.replace(/i/g, '3');
+  novaString = novaString.replace(/o/g, '4');
+  novaString = novaString.replace(/u/g, '5');
+return novaString;
 }
 function decode(string) {
-  let novaString = string.replace(1, /a/g);
-  let novaString = string.replace(2, /e/g);
-  let novaString = string.replace(3, /i/g);
-  let novaString = string.replace(4, /o/g);
-  let novaString = string.replace(5, /u/g);
-  return novaString;
-  
+  let novaString = string.replace(/1/g, 'a');
+  novaString = novaString.replace(/2/g, 'e');
+  novaString = novaString.replace(/3/g, 'i');
+  novaString = novaString.replace(/4/g, 'o');
+  novaString = novaString.replace(/5/g, 'u');
+return novaString;
 }
 
 module.exports = {
