@@ -73,22 +73,44 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   return result;
 }
+
 // Desafio 8
-function fizzBuzz(numEntrada) {
-  // seu código aqui
-  let numarray = [];
-  for (let index = 0; index < numEntrada.length; index += 1) {
-    if (numEntrada[index] % 3 === 0 && numEntrada[index] % 5 === 0) {
-      numarray.push('fizzBuzz');
-    } else if (numEntrada[index] % 3 === 0) {
-      numarray.push('fizz');
-    } else if (numEntrada[index] % 5 === 0) {
-      numarray.push('buzz');
-    } else if (numEntrada[index] % 3 !== 0 && numEntrada[index] % 5 != 0) {
-      numarray.push('bug!');
-    }
+function ifIsFizzBuzz(dividend) {
+  if (dividend % 15 === 0) return ('fizzBuzz');
+  return 0;
+}
+function ifIsFizz(dividend) {
+  if (dividend % 3 === 0 && dividend % 5 !== 0) return ('fizz');
+  return 0;
+}
+function ifIsBuzz(dividend) {
+  if (dividend % 5 === 0 && dividend % 3 !== 0) return ('buzz');
+  return 0;
+}
+function ifIsBug(dividend) {
+  if (dividend % 5 !== 0 && dividend % 3 !== 0) return ('bug!');
+  return 0;
+}
+function getArray(params) {
+  let numberName = [];
+  for (let index = 0; index < params.length; index += 1) {
+    numberName.push(ifIsFizzBuzz(params[index]));
+    numberName.push(ifIsFizz(params[index]));
+    numberName.push(ifIsBuzz(params[index]));
+    numberName.push(ifIsBug(params[index]));
   }
-  return numarray;
+  return numberName;
+}
+function cleanFunction(params) {
+  let cleanNumbers = [];
+  for (let index = 0; index < params.length; index += 1) {
+    if (params[index] !== 0) cleanNumbers.push(params[index]);
+  }
+  return cleanNumbers;
+}
+
+function fizzBuzz(numEntrada) {
+  return cleanFunction(getArray(numEntrada));
 }
 
 // Desafio 9
