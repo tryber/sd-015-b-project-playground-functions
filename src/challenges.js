@@ -25,7 +25,7 @@ function concatName(initialArray) {
   let textFirst = initialArray[0];
   let textLast = initialArray[arraySize - 1];
   let textResult = textLast.concat(", ", textFirst);
-  return "'" + textResult + "'";  
+  return textResult;  
 }
 
 // Desafio 5
