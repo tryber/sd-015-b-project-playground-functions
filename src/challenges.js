@@ -90,21 +90,35 @@ function fizzBuzz(arrayDeNumeros) {
 
 // Desafio 9
 function encode(string) {
-  let encoded = string.replace(/a/g, '1');
-  encoded = encoded.replace(/e/g, '2');
-  encoded = encoded.replace(/i/g, '3');
-  encoded = encoded.replace(/o/g, '4');
-  encoded = encoded.replace(/u/g, '5');
-  return encoded;
+  let array = string.split('');
+  let code = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5,
+  };
+  for (let i = 0; i < array.length; i += 1) {
+    if (code[array[i]]) {
+      array[i] = code[array[i]];
+    }
+  } return array.join('');
 }
 
 function decode(string) {
-  let decoded = string.replace(/1/g, 'a');
-  decoded = decoded.replace(/2/g, 'e');
-  decoded = decoded.replace(/3/g, 'i');
-  decoded = decoded.replace(/4/g, 'o');
-  decoded = decoded.replace(/5/g, 'u');
-  return decoded;
+  let array = string.split('');
+  let code = {
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u',
+  };
+  for (let i = 0; i < array.length; i += 1) {
+    if (code[array[i]]) {
+      array[i] = code[array[i]];
+    }
+  } return array.join('');
 }
 
 module.exports = {
