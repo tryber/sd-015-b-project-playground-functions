@@ -55,10 +55,10 @@ function highestCount(numbers) {
 function catAndMouse(mouse, cat1, cat2) {
   let positioncat1 = (cat1 - mouse) ** 2;
   let positioncat2 = (cat2 - mouse) ** 2;
-  
+
   if (positioncat1 < positioncat2) {
     return 'cat1';
-  } else if (positioncat1 > positioncat2) {
+  } if (positioncat1 > positioncat2) {
     return 'cat2';
   } else {
     return 'os gatos trombam e o rato foge';
@@ -83,14 +83,14 @@ function fizzBuzz(array) {
 
 // Desafio 9
 function encode(str) {
-  let todas = str.replace(/a/g, '1') .replace(/e/g, '2') .replace(/i/g, '3') 
-  .replace(/o/g, '4') .replace(/u/g, '5');
+  let todas = str.replace(/a/g, '1') .replace(/e/g, '2') .replace(/i/g, '3')
+    .replace(/o/g, '4') .replace(/u/g, '5');
   return todas;
 }
 
 function decode(str) {
-  let todas = str.replace(/1/g, 'a') .replace(/2/g, 'e') .replace(/3/g, 'i') 
-  .replace(/4/g, 'o') .replace(/5/g, 'u');
+  let todas = str.replace(/1/g, 'a') .replace(/2/g, 'e') .replace(/3/g, 'i')
+    .replace(/4/g, 'o') .replace(/5/g, 'u');
   return todas;
 }
 
