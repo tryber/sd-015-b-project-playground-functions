@@ -9,9 +9,8 @@ function compareTrue(valorA, valorB) {
 
 // Desafio 2
 function calcArea(base, height) {
-  
-  let area = ((base * height)/2);
-  return area; 
+  let area = ((base * height) / 2);
+  return area;
 }
 
 // Desafio 3
@@ -39,20 +38,20 @@ function highestCount(numbers) {
 
   for (let index = 0; index < numbers.length; index += 1) {
     if (numbers[index] > numMaior) {
-    numMaior = numbers[index];
+      numMaior = numbers[index];
     }
   }
 
   for (let index = 0; index < numbers.length; index += 1) {
     if (numbers[index] === numMaior) {
-    contador = contador + 1 ;
-    } 
+      contador = contador + 1;
+    }
   }
 
   return contador;
 }
 
-//Desafio 7
+// Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let positioncat1 = (cat1 - mouse) ** 2;
   let positioncat2 = (cat2 - mouse) ** 2;
@@ -63,7 +62,7 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'cat2';
   } else {
     return 'os gatos trombam e o rato foge';
-  }  
+  }
 }
 
 // Desafio 8
@@ -80,16 +79,18 @@ function fizzBuzz(array) {
       fizzBuzz.push('bug!');
   }
   return fizzBuzz;
-} 
+}
 
 // Desafio 9
 function encode(str) {
-let todas = str.replace(/a/g, "1") .replace(/e/g, "2") .replace(/i/g, "3") .replace(/o/g, "4") .replace(/u/g, "5");
+  let todas = str.replace(/a/g, '1') .replace(/e/g, '2') .replace(/i/g, '3') 
+  .replace(/o/g, '4') .replace(/u/g, '5');
   return todas;
 }
 
 function decode(str) {
-  let todas = str.replace(/1/g, "a") .replace(/2/g, "e") .replace(/3/g, "i") .replace(/4/g, "o") .replace(/5/g, "u");
+  let todas = str.replace(/1/g, 'a') .replace(/2/g, 'e') .replace(/3/g, 'i') 
+  .replace(/4/g, 'o') .replace(/5/g, 'u');
   return todas;
 }
 
