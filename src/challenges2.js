@@ -1,7 +1,7 @@
 // Desafio 10
 function techList(techs, name) {
   if (techs.length === 0) {
-    return "Vazio!"
+    return 'Vazio!'
   } else {
     techs.sort()
   }
@@ -29,15 +29,15 @@ function generatePhoneNumber(phoneNumber) {
       }
     }
   }
-  let correctNumber = "(";
+  let correctNumber = '(';
   if (phoneNumber.length !== 11) {
-    return "Array com tamanho incorreto.";
+    return 'Array com tamanho incorreto.';
   } else if (countRepeat(phoneNumber) === false) {
-      return "não é possível gerar um número de telefone com esses valores";
+      return 'não é possível gerar um número de telefone com esses valores';
   } else {
     for (index = 0; index < phoneNumber.length; index += 1) {
       if (phoneNumber[index] > 9 || phoneNumber[index] < 0) {
-        return "não é possível gerar um número de telefone com esses valores";
+        return 'não é possível gerar um número de telefone com esses valores';
       } else {
         if ([index] <= 1) {
           correctNumber += String(phoneNumber[index]);
@@ -75,7 +75,7 @@ function hydrate(phrase) {
     if (numbers[index] > 0 && numbers[index] < 9) {
       waterCups += parseInt(numbers[index]);
     }else {
-      return "Insira números no intervalo de 1 à 9";
+      return 'Insira números no intervalo de 1 à 9';
     }
   }
   if (waterCups === 1) {
