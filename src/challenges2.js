@@ -62,19 +62,19 @@ console.log(generatePhoneNumber(arrayNumbers));
 // Desafio 12
 
 function checkLineA(lineA, lineB, lineC) {
-  if (lineA < (lineB + lineC) && lineA < Math.abs(lineB - lineC)) {
+  if (lineA < (lineB + lineC) && lineA > Math.abs(lineB - lineC)) {
     return true;
   }
 }
 
 function checkLineB(lineA, lineB, lineC) {
-  if (lineB < (lineA + lineC) && lineB < Math.abs(lineA - lineC)) {
+  if (lineB < (lineA + lineC) && lineB > Math.abs(lineA - lineC)) {
     return true;
   }
 }
 
 function checkLineC(lineA, lineB, lineC) {
-  if (lineC < (lineA + lineB) && lineC < Math.abs(lineA - lineB)) {
+  if (lineC < (lineA + lineB) && lineC > Math.abs(lineA - lineB)) {
     return true;
   }
 }
