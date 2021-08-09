@@ -67,16 +67,13 @@ function catAndMouse(mouse, cat1, cat2) {
   let ratoGato2 = Math.abs(cat2 - mouse);
 
   if (ratoGato1 === ratoGato2) {
-    gatosJuntos = 'os gatos trombam e o rato foge';
-    return gatosJuntos;
+    return 'os gatos trombam e o rato foge';
   }
   else if (ratoGato1 < ratoGato2){
-    gato1 = 'cat1';
-    return gato1;
+    return 'cat1';
   }
   else if (ratoGato2 < ratoGato1) {
-    gato2 = 'cat2';
-    return gato2;
+    return 'cat2';
   }
 }
 
