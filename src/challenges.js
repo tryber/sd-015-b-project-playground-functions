@@ -23,9 +23,9 @@ splitSentence('foguete');
 // Desafio 4
 function concatName(name) {
   let first = [0];
-  let last = name.length -1;
+  let last = name.length - 1;
   return name [last] + ', ' + name[first];
-  }
+}
 concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']);
 concatName(['foguete', 'não', 'tem', 'ré']);
 concatName(['captain', 'my', 'captain']);
@@ -39,14 +39,38 @@ footballPoints(1, 2);
 footballPoints(0, 0);
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount (array) {
+  let maiorNum = 0;
+  let count = 0;
+for (i = 0; i < array.length; i += 1) {
+  if(array[i] > maiorNum){
+  maiorNum = array[i];
 }
+}
+for (let i = 0; i< array.length; i += 1){
+  if(array[i] === maiorNum){
+  count += 1;
+}
+}
+  return count;
+}
+highestCount([9, 1, 2, 3, 9, 5, 7]);
+highestCount([0, 4, 4, 4, 9, 2, 1]);
+highestCount([0, 0, 0]);
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse (mouse, cat1, cat2) {
+  if (cat1 < cat2) {
+  return 'cat1';
+} 
+  else if (cat1 > cat2) {
+  return 'cat2';
 }
+  else {
+  return ('os gatos trombam e o rato foge');
+}
+}
+(catAndMouse (6, 5, 4));
 
 // Desafio 8
 function fizzBuzz() {
