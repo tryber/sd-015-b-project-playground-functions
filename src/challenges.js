@@ -82,7 +82,7 @@ function fizzBuzz(arrayNumbers) {
 
 // Desafio 9
 function encode(palavra) {
-  const vogais = {
+  let vogais = {
     a: 1,
     e: 2,
     i: 3,
@@ -101,9 +101,10 @@ function encode(palavra) {
   }
   return (stringConvertida);
 }
+encode('teste');
 
 function decode(palavra) {
-  const vogais = {
+  let vogais = {
     1: 'a',
     2: 'e',
     3: 'i',
