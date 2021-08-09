@@ -103,7 +103,6 @@ function encode(codifica) {
   codifica = codifica.replace("o", "4");
   codifica= codifica.replace("u", "5")
  }
- 
   return codifica;
   }
 
@@ -115,12 +114,8 @@ function decode(decodifica) {
     decodifica = decodifica.replace("4", "o");
     decodifica = decodifica.replace("5", "u")
    }
-   
     return decodifica;
     }
-
-let texto = " a e i o u"
-console.log(codifica(texto));
 
 module.exports = {
   calcArea,
@@ -133,12 +128,4 @@ module.exports = {
   footballPoints,
   highestCount,
   splitSentence,
-};
-
-
- /*codifica.replace(/(a)/g, "1")
-   codifica.replace(/(e)/g, "2")
-   codifica.replace(/(i)/g, "3")
-   codifica.replace(/(o)/g, "4")
-   codifica.replace(/(u)/g, "5")
-return codifica;*/
+}
