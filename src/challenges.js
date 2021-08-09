@@ -77,10 +77,24 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 }
 
-
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(valor) {
+  let batata = [] // PERGUNTAR O PQ DISSO
+  for (let i of valor){
+    if (i % 3 === 0 && i % 5 === 0){
+      batata.push('fizzBuzz');
+    }
+    else if (i % 3 === 0){
+    batata.push('fizz');
+    }
+    else if (i % 5 === 0){
+      batata.push('buzz');
+    }
+    else {
+      batata.push('bug!');
+    }
+  }
+  return batata;
 }
 
 // Desafio 9
