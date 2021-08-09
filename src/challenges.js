@@ -49,8 +49,20 @@ if (cat1 - mouse === cat2 - mouse || cat2 - mouse === (cat1 - mouse)* -1) {
 catAndMouse(1,0,2)
 
 // Desafio 8
-function fizzBuzz() {
-  
+function fizzBuzz(arrayNumeros) {
+  if(arrayNumeros % 3 == 0){
+    return 'fizz'
+  }
+  if(arrayNumeros % 5 == 0){
+    return 'buzz'
+  }
+  if(arrayNumeros % 3 == 0 && arrayNumeros % 5 == 0){
+    return 'fizzBuzz'
+  }
+  if(arrayNumeros % 3 !== 0 && arrayNumeros % 5 !== 0){
+    return 'bug!'
+  }
+  return arrayNumeros
 }
 
 // Desafio 9
