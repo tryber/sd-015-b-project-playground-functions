@@ -18,7 +18,7 @@ function splitSentence(value) {
       palavra = palavra + String(caractere);
     } else {
       retorno.push(palavra);
-      palavra = ' ';
+      palavra = '';
     }
   } return retorno;
 }
