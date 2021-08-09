@@ -1,18 +1,17 @@
 // Desafio 1
 function compareTrue(x, y) {
-  return x && y
+  return x && y;
 }
 
 // Desafio 2
 function calcArea(base, height) {
   return (base * height) / 2;
 }
-  
-
 
 // Desafio 3
-function splitSentence(stringToSplit) {
-  var arrayOfStrings = stringToSplit.split(stringToSplit);
+function splitSentence(frase) {
+  wordArray = frase.split(' ');
+  return wordArray;
 }
 
 // Desafio 4
@@ -26,7 +25,7 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
+function highestCount(array) {
   // seu código aqui
 }
 
