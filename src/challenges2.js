@@ -68,6 +68,7 @@ function generatePhoneNumber(array) {
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   let lines = [lineA, lineB, lineC];
+
   if (lines[0] > lines[1] + lines[2]) {
     return false;
   }
@@ -76,19 +77,29 @@ function triangleCheck(lineA, lineB, lineC) {
   }
   else {
     return true;
-  }
-  // else if (lines[1] > lines[0] + lines[2]) {
-  //   return false;
-  // }
-  // else if (lines[2] > lines[1] + lines[0]) {
-  //   return false;
-  // }
-  
+  } 
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(cups) {
+  let numberOfDrinks = cups.match(/\d/g);
+  let numberConvert = [];
+  let totalOfCups = 0;
+
+  for (let num in numberOfDrinks) {
+    numberConvert.push(parseInt(numberOfDrinks[num]));
+  }
+
+  totalOfCups = numberConvert.reduce(function(total, number){
+    return total + number;
+  });
+
+  if (totalOfCups > 1) {
+    return `${totalOfCups} copos de água`;
+  } 
+  else {
+    return `${totalOfCups} copo de água`;
+  }
 }
 
 module.exports = {
