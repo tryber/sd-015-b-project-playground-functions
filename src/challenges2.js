@@ -1,6 +1,16 @@
 // Desafio 10
-function techList(techArray, name) {}
-
+function techList(techArray, _name) {
+  techArray = techArray.sort((a,b) => a.localeCompare(b));
+  let _techList = [];
+  if (techArray.length === 0) {
+    return _techList = 'Vazio!';
+  } for (let index = 0; index < techArray.length; index += 1) {
+    _techList.push({
+      tech: techArray[index],
+      name: _name,
+    });
+  } return _techList;
+}
 // Desafio 11
 
 function generatePhoneNumber() {}
