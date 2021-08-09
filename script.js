@@ -1,7 +1,7 @@
 /* para realizar alguns dos exercicios eu fiz varias pesquisas pois estava com muitas duvidas, consultei o mozila developer e alguns commits de estudantes, mas só utilizei os codigos apos entender como os memso funcionam" */
 
 function compareTrue (boolean1, boolean2){
-    if(boolean1 === boolean2 && boolean1 !== false){
+    if(boolean1 === boolean2 && boolean1 === true){
         return true
     }else{
         return false
