@@ -15,7 +15,7 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
   - [O que deverá ser desenvolvido](#o-que-deverá-ser-desenvolvido)
   - [Data de Entrega](#data-de-entrega)
 - [Instruções para entregar seu projeto](#instruções-para-entregar-seu-projeto)
-  - [Antes de começar a desenvolver](#antes-de-começar-a-desenvolver)
+  - [Antes de começar a desenvolver](#antes-x-começar-a-desenvolver)
   - [Durante o desenvolvimento](#durante-o-desenvolvimento)
 - [Como desenvolver](#como-desenvolver)
   - [Linter](#linter)
