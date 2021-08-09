@@ -76,9 +76,9 @@ console.log(highestCount([0, 0, 0]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  distanciaMouseCat1 = mouse - cat1;
-  distanciaMouseCat2 = mouse - cat2;
-  if (distanciaMouseCat1 < 0){
+  let distanciaMouseCat1 = mouse - cat1;
+  let distanciaMouseCat2 = mouse - cat2;
+  if (distanciaMouseCat1 < 0) {
     distanciaMouseCat1 = (distanciaMouseCat1 * (-1));
   }
   if (distanciaMouseCat2 < 0){
@@ -122,12 +122,59 @@ console.log(fizzBuzz([7, 9]));
 console.log(fizzBuzz([9, 25]));
 
 // Desafio 9
-function encode() {
+function encode(codifica) {
   // seu código aqui
+  let consolida = '';
+  for (let index = 0; index < codifica.length; index += 1) {
+    if (codifica[index] !== 'a' && codifica[index] !== 'e' && codifica[index] !== 'i' && codifica[index] !== 'o' && codifica[index] !== 'u') {
+      consolida = consolida + (codifica[index]);
+    }
+    else if (codifica[index] === 'a') {
+      consolida = consolida + '1';
+    }
+    else if (codifica[index] === 'e') {
+      consolida = consolida + '2';
+    }
+    else if (codifica[index] === 'i') {
+      consolida = consolida + '3';
+    }
+    else if (codifica[index] === 'o') {
+      consolida = consolida + '4';
+    }
+    else if (codifica[index] === 'u') {
+      consolida = consolida + '5';
+    }
+  }
+  return consolida;
 }
-function decode() {
+console.log(encode('hi there!'))
+
+function decode(decodifica) {
   // seu código aqui
+  let consolida = '';
+  for (let index = 0; index < decodifica.length; index += 1) {
+    if (decodifica[index] !== '1' && decodifica[index] !== '2' && decodifica[index] !== '3' && decodifica[index] !== '4' && decodifica[index] !== '5') {
+      consolida = consolida + (decodifica[index]);
+    }
+    else if (decodifica[index] === '1') {
+      consolida = consolida + 'a';
+    }
+    else if (decodifica[index] === '2') {
+      consolida = consolida + 'e';
+    }
+    else if (decodifica[index] === '3') {
+      consolida = consolida + 'i';
+    }
+    else if (decodifica[index] === '4') {
+      consolida = consolida + 'o';
+    }
+    else if (decodifica[index] === '5') {
+      consolida = consolida + 'u';
+    }
+  }
+  return consolida;
 }
+console.log(decode('h3 th2r2!'));
 
 module.exports = {
   calcArea,
