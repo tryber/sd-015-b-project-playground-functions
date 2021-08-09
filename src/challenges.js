@@ -20,7 +20,7 @@ function splitSentence (frase){
 // Desafio 4
 function concatName (arrayString){
   let ultimo = (arrayString.length -1);
-  return arrayString[0] + ", " + arrayString[ultimo];
+  return arrayString[ultimo] + ", " + arrayString[0];
 }
 
 // Desafio 5
@@ -78,8 +78,19 @@ function catAndMouse (mouse, cat1, cat2){
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(sequencia) {
+  for(let i = 0;i < sequencia.length; i += 1){
+    if(sequencia[i] % 3 === 0 && sequencia[i] % 5 === 0) {
+      return "fizzBuzz";
+    }else if(sequencia[i] % 3 === 0) {
+      return "fizz";
+    }else if(sequencia[i]% 5 === 0) {
+      return "buzz";
+    }else {
+      return "bug";
+
+    }
+  }
 }
 
 // Desafio 9
