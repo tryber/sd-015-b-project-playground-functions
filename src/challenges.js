@@ -39,7 +39,7 @@ function highestCount(numbers) {
 }
 
 // Desafio 7
-function distanceAbs (mouseAbs, catAbs) {
+function distanceAbs(mouseAbs, catAbs) {
   return Math.abs(mouseAbs - catAbs);
 }
 function catAndMouse(mouse, cat1, cat2) {

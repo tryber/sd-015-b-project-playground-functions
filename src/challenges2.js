@@ -13,22 +13,43 @@ function techList(techs, name) {
 
 // Desafio 11
 // Fonte sobre RegEx: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/RegExp
+function timesItRepeats(phoneNumber) {
+  let sortedNumber = [...phoneNumber].sort();
+  for (let number = 0; number < sortedNumber.length; number += 1) {
+    if (sortedNumber[number] === sortedNumber[number - 1] && sortedNumber[number] === sortedNumber[number + 1]) {
+      return false;
+    }
+  }
+}
+function checkSize(phoneNumber) {
+  for (let count = 0; count < phoneNumber.length; count += 1){
+    if (phoneNumber[count] < 0 || phoneNumber[count] > 9) {
+    return false;
+    }
+  }
+}
+
+function checkTrue(value) {
+  let isItTrue = true;
+  let trueFalse = [timesItRepeats(value),checkSize(value)];
+  let errorMsg = 'não é possível gerar um número de telefone com esses valores';
+  for (let count = 0; count < trueFalse.length; count += 1) {
+    if(trueFalse[count] === false) {
+      isItTrue = errorMsg;
+    }
+  }
+  return isItTrue;
+}
+
 function generatePhoneNumber(phoneNumber) {
   if (phoneNumber.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
-  for (let count = 0; count < phoneNumber.length; count += 1) {
-    let numberTimes = 0;
-    for (let count2 = 0; count2 < phoneNumber.length; count2 += 1) {
-      if (phoneNumber[count] === phoneNumber[count2]) {
-        numberTimes += 1;
-      }
-    }
-    if (phoneNumber[count] < 0 || phoneNumber[count] > 9 || numberTimes >= 3) {
-      return 'não é possível gerar um número de telefone com esses valores';
-    }
+  if (checkTrue(phoneNumber) !== true) {
+    return checkTrue(phoneNumber);
+  } else {
+    return phoneNumber.join('').replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3');
   }
-  return phoneNumber.join('').replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3');
 }
 
 // Desafio 12
