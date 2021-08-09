@@ -85,16 +85,14 @@ function fizzBuzz(sequencia) {
       resultado.push("fizzBuzz");
     }else if(sequencia[i] % 3 === 0) {
       resultado.push("fizz");
-    }else if(sequencia[i]% 5 === 0) {
+    }else if(sequencia[i] % 5 === 0) {
       resultado.push("buzz");
     }else {
-      resultado.push("bug");
+      resultado.push("bug!");
     }
   }
   return resultado;
 }
-let sequencia = [5, 2, 3, 15];
-console.log(fizzBuzz(sequencia))
 
 // Desafio 9
 function encode(codifica) {
