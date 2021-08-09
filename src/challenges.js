@@ -43,7 +43,7 @@ function getMoreValue(containerNumbers) {
 function getRepeat(getNumbers, getNumber) {
   let numberRepeat = [];
   for (let index = 0; index < getNumbers.length; index += 1) {
-    if (getNumber == getNumbers[index]) {
+    if (getNumber === getNumbers[index]) {
       numberRepeat.push(getNumbers[index]);
     }
   }
@@ -114,38 +114,44 @@ function fizzBuzz(numEntrada) {
 }
 
 // Desafio 9
+function getArrayEnc(key, getKey, fraseUni, number) {
+  if (key === getKey) fraseUni.push(number);
+}
 function encode(fraseParaCode) {
   // seu código aqui
   let fraseSplit = fraseParaCode.split('');
   let fraseUni = [];
 
   for (let key of fraseSplit) {
-    if (key === 'a') fraseUni.push(1);
-    else if (key === 'e') fraseUni.push(2);
-    else if (key === 'i') fraseUni.push(3);
-    else if (key === 'o') fraseUni.push(4);
-    else if (key === 'u') fraseUni.push(5);
-    else fraseUni.push(key);
+    if (['a', 'e', 'i', 'o', 'u'].includes(key)) {
+      getArrayEnc(key, 'a', fraseUni, 1);
+      getArrayEnc(key, 'e', fraseUni, 2);
+      getArrayEnc(key, 'i', fraseUni, 3);
+      getArrayEnc(key, 'o', fraseUni, 4);
+      getArrayEnc(key, 'u', fraseUni, 5);
+    } else {
+      fraseUni.push(key);
+    }
   }
   return fraseUni.join('');
 }
-
+console.log(encode('Helloa Word'));
 function decode(fraseParaDecode) {
   // seu código aqui
-  let fraseSplit = fraseParaDecode.split('');
-  let fraseOrigi = [];
-
-  for (let key of fraseSplit) {
-    if (key === '1') fraseOrigi.push('a');
-    else if (key === '2') fraseOrigi.push('e');
-    else if (key === '3') fraseOrigi.push('i');
-    else if (key === '4') fraseOrigi.push('o');
-    else if (key === '5') fraseOrigi.push('u');
-    else fraseOrigi.push(key);
+  let fraseSplit = '';
+  let fraseOrigi = {
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u',
+  };
+  for (let key of fraseParaDecode) {
+    if (fraseOrigi[key]) fraseSplit += fraseOrigi[key];
+    else fraseSplit += key;
   }
-  return fraseOrigi.join('');
+  return fraseSplit;
 }
-
 module.exports = {
   calcArea,
   catAndMouse,

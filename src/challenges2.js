@@ -46,7 +46,7 @@ function triangleCheck(lineA, lineB, lineC) {
 function sumnumber(numbersSum) {
   let sumArray = 0;
   for (let index = 0; index < numbersSum.length; index += 1) {
-    let num = parseInt(numbersSum[index]);
+    let num = parseInt(numbersSum[index], 10);
     sumArray += num;
   }
   return sumArray;
