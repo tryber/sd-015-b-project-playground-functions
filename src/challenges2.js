@@ -1,69 +1,85 @@
 // Desafio 10
-function techList (techList, name){
-techList.sort()
-  let technologies = []
-var technologiesAndName = technologies.sort()
-if (techList.length === 0){
-  return 'Vazio!'
-} else {
-for(let i = 0; i < techList.length; i += 1){
-   let objctTech = {
-     tech: techList[i],
-     name: name
-   };
-   technologies.push(objctTech);
-}
-}
-  return technologiesAndName;
-}
-// Desafio 11
-//arrayNumeros.length - 1 === 11
-
-function generatePhoneNumber(input){
-
-var repeated = 0;
-
-let repeated = counting;
-
-if(input.length !== 11){
-  return 'Array com tamanho incorreto.';
-} else {
-for(let i of input){
-  if(input[i] < 0 || input[i] > 9 || repeated > 2){
-   return 'não é possível gerar um número de telefone com esses valores'
-}
-}
-}
-}
-// console.log(generatePhoneNumber([1, 1, 3 ,3 ,3, 3 ,4 ,4 ,5,6,7]))
-  // Desafio 12
-function triangleCheck (lineA, lineB,lineC){
-  if(lineA + lineB > lineC && lineC > Math.abs(lineA - lineB) || lineC + lineB > lineA && lineA > Math.abs(lineC - lineB) || lineA + lineC > lineB && lineB > Math.abs(lineA - lineC)){
-    return true;
+function techList (techList, name) {
+  techList.sort()
+    let technologies = []
+  var technologiesAndName = technologies.sort()
+  if (techList.length === 0) {
+    return 'Vazio!'
   } else {
-    return false;
+  for(let i = 0; i < techList.length; i += 1){
+     let objctTech = {
+       tech: techList[i],
+       name: name
+     };
+     technologies.push(objctTech);
   }
-}
-console.log(triangleCheck(123, 12, 11))
+  }
+    return technologiesAndName;
+  }
+  console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"));
+  // Desafio 11
+  //arrayNumeros.length - 1 === 11
+  function generatePhoneNumber(arrayNumeros){
+    var estructure = '(ab) cdefg-hijk' 
+    if (arrayNumeros.length != 11){
+      return 'Array com tamanho incorreto.';
+    }
+    for (let index = 0; index < arrayNumeros.length; index += 1){
+      let repeats = 0;
+      for (let index2 = 0; index2 < arrayNumeros.length; index2 += 1){
+        if (arrayNumeros[index] === arrayNumeros[index2]){
+          repeats += 1;
+        }
+      }
+      if (arrayNumeros[index] < 0 || arrayNumeros[index] > 9 || repeats >= 3){
+        return 'não é possível gerar um número de telefone com esses valores'
+      }  else {
+        if (arrayNumeros.length === 11){
+        let first = estructure.replace(/a/, arrayNumeros[0]);
+        let second = first.replace(/b/, arrayNumeros[1]);
+        let third = second.replace(/c/, arrayNumeros[2]);
+        let fourth = third.replace(/d/, arrayNumeros[3]);
+        let fifth = fourth.replace(/e/, arrayNumeros[4]);
+        let sixth = fifth.replace(/f/, arrayNumeros[5]);
+        let seventh = sixth.replace(/g/, arrayNumeros[6]);
+        let eighth = seventh.replace(/h/, arrayNumeros[7]);
+        let ninth = eighth.replace(/i/, arrayNumeros[8]);
+        let tenth = ninth.replace(/j/, arrayNumeros[9]);
+        let phoneNumber = tenth.replace(/k/, arrayNumeros[10]);
+        return phoneNumber;
+      } else {
+        return 'Array com tamanho incorreto'
+      } 
+      }
+    }
+    
+  }
+  //console.log(generatePhoneNumber([1, 1, 3 ,3 ,3, 3 ,4 ,4 ,5,6,7]))
+    // Desafio 12
+  function triangleCheck (lineA, lineB,lineC) {
+    if(lineA + lineB > lineC && lineC > Math.abs(lineA - lineB) || lineC + lineB > lineA && lineA > Math.abs(lineC - lineB) || lineA + lineC > lineB && lineB > Math.abs(lineA - lineC)){
+      return true;
+    } else {
+      return false;
+    }
+  }
+  // Desafio 13
+  function hydrate (phrase){
+    const rawArray = phrase.match(/\d+/g);
+    var numArray = [];
+    var waterCup = 0;
+    for (let i = 0; i < rawArray.length; i += 1) {
+      numArray.push(parseInt(rawArray[i]));
+      waterCup = waterCup + numArray[i];
+    } 
+    if (waterCup === 1){
+      return waterCup + ' copo de água';
+    } else { return waterCup + ' copos de água' }
+    }
 
-// Desafio 13
-function hydrate (input){
-const rawArray = input.match(/\d+/g);
-var numArray = [];
-var waterCup = 0;
-for (let i = 0; i < rawArray.length; i += 1) {
-  numArray.push(parseInt(rawArray[i]));
-  waterCup = waterCup + numArray[i];
-} 
-if (waterCup === 1){
-  return waterCup + ' copo de água';
-} else { return waterCup + ' copos de água' }
-}
-
-
-module.exports = {
-  generatePhoneNumber,
-  techList,
-  hydrate,
-  triangleCheck
-}
+  module.exports = {
+    generatePhoneNumber,
+    techList,
+    hydrate,
+    triangleCheck
+  }
