@@ -43,15 +43,8 @@ function footballPoints(wins, ties) {
 console.log('5° Resultado: ', footballPoints(14, 8));
 
 // Desafio 6
-function highestCount(arrayVa) {
-  let highestNumber = arrayVa[0];
+function counterHigC(arrayVa, highestNumber) {
   let counter = 0;
-
-  for (let index = 0; index < arrayVa.length; index += 1) {
-    if (arrayVa[index] > highestNumber) {
-      highestNumber = arrayVa[index];
-    }
-  }
 
   for (let index = 0; index < arrayVa.length; index += 1) {
     if (highestNumber === arrayVa[index]) {
@@ -60,8 +53,19 @@ function highestCount(arrayVa) {
   }
   return counter;
 }
+
+function highestCount(arrayVa) {
+  let highestNumber = arrayVa[0];
+
+  for (let index = 0; index < arrayVa.length; index += 1) {
+    if (arrayVa[index] > highestNumber) {
+      highestNumber = arrayVa[index];
+    }
+  }
+  return counterHigC(arrayVa, highestNumber);
+}
 console.log('6° O maior número do array se repete =', highestCount(
-  [9, 1, 2, 3, 9, 5, 7, -1, -2, -2],
+  [9, 1, 9, 3, 9, 5, 7, -1, -2, -2],
 ), 'vezes');
 
 // Desafio 7
@@ -78,25 +82,29 @@ function catAndMouse(mouse, cat1, cat2) {
 console.log('7° Resultado:', catAndMouse());
 
 // Desafio 8
-function fizzBuzz(arrayNum) {
-  let result = [];
-  for (let index = 0; index < arrayNum.length; index += 1) {
-    if (arrayNum[index] % 3 === 0 && arrayNum[index] % 5 === 0) {
-      result.push('fizzBuzz');
-    } else if (arrayNum[index] % 3 === 0) {
-      result.push('fizz');
-    } else if (arrayNum[index] % 5 === 0) {
-      result.push('buzz');
-    } else result.push('bug!');
-  }
+function ifFizzOrBuzz(arrayNum, index, result) {
+  if (arrayNum[index] % 3 === 0) {
+    result.push('fizz');
+  } else if (arrayNum[index] % 5 === 0) {
+    result.push('buzz');
+  } else result.push('bug!');
   return result;
 }
 
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
+function fizzBuzz(arrayNum) {
+  let result = [];
+
+  for (let index = 0; index < arrayNum.length; index += 1) {
+    if (arrayNum[index] % 3 === 0 && arrayNum[index] % 5 === 0) {
+      result.push('fizzBuzz');
+    } else ifFizzOrBuzz(arrayNum, index, result);
+  } return result;
+}
+
+console.log('8° Resultado:', fizzBuzz([2, 15, 7, 9, 10, 45]));
 
 // Desafio 9
 function encode() {
-  // seu código aqui
 }
 
 function decode() {
