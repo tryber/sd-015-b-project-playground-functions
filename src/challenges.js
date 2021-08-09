@@ -31,8 +31,6 @@ function splitSentence(sentenca) {
   return arreio;
  }
 
-
-
 // Desafio 4
 function concatName(nomes) {
   let valor1 = nomes[nomes.length - 1];
@@ -45,20 +43,33 @@ function concatName(nomes) {
 
 
 
-
-
-
-
 // Desafio 5
 function footballPoints() {
-  // seu código aqui
+  // let wins = 3;
+  // let ties = 1;
+  // let soma;
+// 
+  // for (let i = 0; i )
+
+
+
+
+
+
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(arreio) {
+  let numeroMaior = Math.max.apply(null, arreio);
+  let cont = 0
+  for (i = 0; i < arreio.length; i ++){
+    variaveo = arreio[i];
+    if (arreio[i] === numeroMaior ) {
+      cont++;
+    }
+  }
+  return cont;
 }
-
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
