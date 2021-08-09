@@ -50,15 +50,17 @@ function footballPoints(wins, ties) {
 console.log(footballPoints(14, 8))
 
 // Desafio 6
-function highestCount(numbers) { 
-  for (var index = 0; index < numbers.length; index += 1){ 
-    if (numbers[index] === Math.max.apply(null, numbers)){
-    let res = numbers[index] + 1;
-    return res;
-    }
+
+function highestCount(arrayNumbers) {
+  let maior = arrayNumbers[0];
+  let res = 0;
+  for (let index = 0; index < arrayNumbers.length; index += 1) { 
+   if ( arrayNumbers[index] === maior)
+    res++ ;  
+  }
+  return res;
 }
-}
-    console.log(highestCount([0, 0, 0]));
+  console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -87,15 +89,27 @@ function fizzBuzz(arrayNumbers) {
 }
 console.log(fizzBuzz([2, 15, 7, 9, 45]))
 // Desafio 9
-function encode(palavra) {
-    let resultado = palavra.replace(/e/g, "2");
-  return resultado;
+function encode(string) {
+  let fraseFormatada = '';
+    for (let key in string) {
+      if (string[key] === 'a')
+        fraseFormatada = string.replace(/a/g, 1);
+       else if (string[key] === 'e') 
+        fraseFormatada = string.replace(/e/g, 2);
+       else if (string[key] === 'i') 
+        fraseFormatada = string.replace(/i/g, 3);
+       else if (string[key] === 'o') 
+        fraseFormatada = string.replace(/0/g, 4);
+      else if (string[key] === 'u') 
+        fraseFormatada = string.replace(/u/g, 5);
+    }
+  return fraseFormatada;
 }
 function decode(palavra) {
     let resultado = palavra.replace(/2/g, "e");
     return resultado;
 }
-console.log(encode("Hi there"));
+console.log(encode("Tudo bem ai"));
 console.log(decode("h3 th2r2!"))
 
 module.exports = {
