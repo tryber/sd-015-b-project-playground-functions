@@ -80,7 +80,7 @@ function checkLineC(lineA, lineB, lineC) {
 }
 
 function triangleCheck(lineA, lineB, lineC) {
-  if (checkLineA(lineA, lineB, lineC) || checkLineB(lineA, lineB, lineC) 
+  if (checkLineA(lineA, lineB, lineC) || checkLineB(lineA, lineB, lineC)
   || checkLineC(lineA, lineB, lineC)) {
     return true;
   } return false;
