@@ -36,14 +36,6 @@ function hydrate(string) {
   return (`${agua} copos de água`);
 }
 
-console.log(hydrate('1 cerveja, 2 pingas, 3 camparis'))
-
-  //let whater = [];
-  //for (let index = 0; index < array.length; index += 1) {
-  //whater.push(array[index), 'copos de água') ;
-  //return whater;
-
-
 module.exports = {
   generatePhoneNumber,
   techList,
