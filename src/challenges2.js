@@ -31,16 +31,24 @@ function generatePhoneNumber(telephone) {
     }
   }
   let number = '(xx) xxxxx-xxxx';
-  telephone.forEach(element => {
+  telephone.forEach((element) => {
     number = number.replace('x', element);
   });
   return number;
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let sideA = Math.abs(lineA < lineB + lineC);
+  let sideB = Math.abs(lineB < lineA + lineC);
+  let sideC = Math.abs(lineC < lineA + lineB);
+
+  if (sideA && sideB && sideC) {
+    return true;
+  }
+  return false;
 }
+console.log(triangleCheck(28, 14, 8));
 
 // Desafio 13
 function hydrate() {
