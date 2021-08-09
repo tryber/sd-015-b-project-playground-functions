@@ -12,10 +12,10 @@ function calcArea(base, height) {
 function splitSentence(value) {
   let palavra = '';
   let retorno = [];
-  value = value + ' ';
+  value += ' ';
   for (let caractere of value) {
-    if (caractere != ' ') {
-      palavra = palavra + String(caractere);
+    if (caractere !== ' ') {
+      palavra += String(caractere);
     } else {
       retorno.push(palavra);
       palavra = '';
