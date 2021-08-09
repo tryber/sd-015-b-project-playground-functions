@@ -79,27 +79,48 @@ function catAndMouse (mouse, cat1, cat2){
 
 // Desafio 8
 function fizzBuzz(sequencia) {
+  let resultado = [];
   for(let i = 0;i < sequencia.length; i += 1){
     if(sequencia[i] % 3 === 0 && sequencia[i] % 5 === 0) {
-      return "fizzBuzz";
+      resultado.push("fizzBuzz");
     }else if(sequencia[i] % 3 === 0) {
-      return "fizz";
+      resultado.push("fizz");
     }else if(sequencia[i]% 5 === 0) {
-      return "buzz";
+      resultado.push("buzz");
     }else {
-      return "bug";
-
+      resultado.push("bug");
     }
   }
+  return resultado;
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
-}
-function decode() {
-  // seu código aqui
-}
+function encode(codifica) {
+ for(let i in codifica){
+  codifica = codifica.replace("a", "1");
+  codifica = codifica.replace("e", "2");
+  codifica = codifica.replace("i", "3");
+  codifica = codifica.replace("o", "4");
+  codifica= codifica.replace("u", "5")
+ }
+ 
+  return codifica;
+  }
+
+function decode(decodifica) {
+  for(let i in decodifica){
+    decodifica = decodifica.replace("1", "a");
+    decodifica = decodifica.replace("2", "e");
+    decodifica = decodifica.replace("3", "i");
+    decodifica = decodifica.replace("4", "o");
+    decodifica = decodifica.replace("5", "u")
+   }
+   
+    return decodifica;
+    }
+
+let texto = " a e i o u"
+console.log(codifica(texto));
 
 module.exports = {
   calcArea,
@@ -113,3 +134,11 @@ module.exports = {
   highestCount,
   splitSentence,
 };
+
+
+ /*codifica.replace(/(a)/g, "1")
+   codifica.replace(/(e)/g, "2")
+   codifica.replace(/(i)/g, "3")
+   codifica.replace(/(o)/g, "4")
+   codifica.replace(/(u)/g, "5")
+return codifica;*/
