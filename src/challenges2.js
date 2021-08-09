@@ -16,14 +16,11 @@ function techList(tech, name) {
     
 }
   return newArray;
-  // seu código aqui
-}
-//console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas'));
 
-//let numeberArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
+}
+
 // Desafio 11
 function generatePhoneNumber(array) {
-  
   if (array.length !== 11 ){
     return "Array com tamanho incorreto."
   }
@@ -44,32 +41,32 @@ function generatePhoneNumber(array) {
     if (count === 3) {
       return 'não é possível gerar um número de telefone com esses valores'
     }
-  
-    //(12) 34567-8901
-  
+    
   }
   phone = "("+array.slice(0,2).join("")+") "+array.slice(2,7).join("")+"-"+array.slice(7,11).join("");
-  //let phone = `(${array[0]}${array[1]}) ${array[2]}${array[3]}${array[4]}${array[5]}
-  //${numberArray[6]}-${numberArray[7]}${array[8]}${array[9]}${array[10]}`
+  
   return phone
-  // seu código aqui
+  
 }
-console.log(generatePhoneNumber([1, 2, 3, 1, 5, 6, 7, 8, 9, 0, 9 ]))
 
 // Desafio 12
 function triangleCheck() { 
-  // seu código aqui
+    // seu código aqui
 }
 // Desafio 13
 function hydrate(string) {
-  // seu código aqui
+  theNum = string.match( /\d+/g );
   
-  //thenum = string.match( /\d+/g );
+  let newArray = theNum.map((index) => Number(index));
   
-  //valores = [int(val) for val in thenum]
+  const total = newArray.reduce((total, currentElement) => total + currentElement);
 
+  if (total < 2) {
+  return total + ' copo de água';
+} else {
+  return total + ' copos de água';
 }
-//console.log(hydrate(' 1cachaça, 5 cervejas e  1copo de vinho'));
+}
 
 module.exports = {
   generatePhoneNumber,
