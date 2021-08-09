@@ -41,19 +41,21 @@ function concatName(nomes) {
 }
 
 // Desafio 5
-function footballPoints() {
-  // let wins = 3;
-  // let ties = 1;
-  // let soma; 
-  // for (let i = 0; i )
+function footballPoints(vezesWins, vezesTies) {
+  let wins = 3;
+  let ties = 1;
+  let totalWins = wins * vezesWins;
+  let totalTies = ties * vezesTies;
+  let pontos = totalWins + totalTies; 
+  return pontos;
 }
-
+console.log(footballPoints())
 // Desafio 6
 function highestCount(arreio) {
   let numeroMaior = Math.max.apply(null, arreio);
   let cont = 0;
-  for (let i = 0; i < arreio.length; i ++){
-    if (arreio[i] === numeroMaior ) {
+  for (let i = 0; i < arreio.length; i ++) {
+    if (arreio[i] === numeroMaior) {
       cont++;
     }
   }
