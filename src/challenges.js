@@ -53,7 +53,6 @@ function highestCount(arreio) {
   let numeroMaior = Math.max.apply(null, arreio);
   let cont = 0;
   for (let i = 0; i < arreio.length; i ++){
-    variaveo = arreio[i];
     if (arreio[i] === numeroMaior ) {
       cont++;
     }
