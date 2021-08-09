@@ -65,18 +65,16 @@ function highestCount(arreio) {
 function catAndMouse(mouse, cat1, cat2) {
   let ratoGato1 = Math.abs(cat1 - mouse);
   let ratoGato2 = Math.abs(cat2 - mouse);
-  let absoluto1 = Math.abs(ratoGato1);
-  let absoluto2 = Math.abs(ratoGato2);
 
-  if (absoluto1 === absoluto2) {
-    gatosJuntos = 'os gatos trombam e o rato foge'
+  if (ratoGato1 === ratoGato2) {
+    gatosJuntos = 'os gatos trombam e o rato foge';
     return gatosJuntos;
   }
-  else if (absoluto1 < absoluto2){
+  else if (ratoGato1 < ratoGato2){
     gato1 = 'cat1';
     return gato1;
   }
-  else if (absoluto2 < absoluto1) {
+  else if (ratoGato2 < ratoGato1) {
     gato2 = 'cat2';
     return gato2;
   }
