@@ -59,7 +59,7 @@ function highestCount(array) {
   }
   return soma;
 }
-// console.log(highestCount([1, 9, 2, 3, 9, 5, 7]));
+// console.log(highestCount([1, 9, 2, 3, 9, 5, 7]));  
 // 
 // 
 // 
@@ -133,7 +133,7 @@ function encode(str) {
   }
       return acumulador.join('')
 }
-// console.log(encode('hello'));
+console.log(encode('hello'));
 // 
 // 
 function decode(str) {
