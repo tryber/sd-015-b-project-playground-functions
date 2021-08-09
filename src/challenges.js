@@ -32,27 +32,56 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  let maior = 0;
+  for (let i = 0; i < array.length; i++) {
+      if ( array[i] > maior ) {
+         maior = array[i];
+      }
+      for (let numero of array) {
+          if (numero === maior) {
+              return [array[i]]
+          }
+      }
+      
+  }
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
-}
+function catAndMouse (mouse, cat1, cat2) {
+  if (cat1 === cat2){
+      return 'os gatos trombam e o rato foge';
+  } else if (cat1 < cat2) {
+      return 'cat1';
+  } else if (cat2 < cat1) {
+      return 'cat2';
+  }
+}   
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  for (i = 0; i < array.length-1; i++);
+  if (array[i]%3 == 0 && array[i]%5 == 0) {
+      return 'fizzBuzz';
+  } else if (array[i]%5 == 0) {
+      return 'buzz';
+  } else if (array[i]%3 == 0) {
+      return 'fizz';
+  } else {
+      return 'bug!';
+  }
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(str) {
+  return str.replace('a', '1');
 }
-function decode() {
-  // seu código aqui
+encode('hi there');
+
+function decode(str) {
+  return str.replace('1', 'a');
 }
+decode('');
 
 module.exports = {
   calcArea,
