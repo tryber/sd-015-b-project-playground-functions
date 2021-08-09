@@ -79,15 +79,15 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(valor) {
-  let batata = [] // PERGUNTAR O PQ DISSO
-  for (let i of valor){
-    if (i % 3 === 0 && i % 5 === 0){
+  let batata = []; // PERGUNTAR O PQ DISSO
+  for (let i of valor) {
+    if (i % 3 === 0 && i % 5 === 0) {
       batata.push('fizzBuzz');
     }
-    else if (i % 3 === 0){
-    batata.push('fizz');
+    else if (i % 3 === 0) {
+      batata.push('fizz');
     }
-    else if (i % 5 === 0){
+    else if (i % 5 === 0) {
       batata.push('buzz');
     }
     else {
