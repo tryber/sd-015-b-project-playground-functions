@@ -81,6 +81,8 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
+// Aprendi a utilizar o reduce() por este link: https://www.devmedia.com.br/javascript-reduce-reduzindo-uma-colecao-em-um-unico-objeto/37981
+// Aprendi sobre regex por este link: https://pt.stackoverflow.com/questions/236721/regex-para-separar-uma-string
 function hydrate(cups) {
   let numberOfDrinks = cups.match(/\d/g);
   let numberConvert = [];
