@@ -38,6 +38,7 @@ function highestCount(array) {
   for (let i = 0; i < array.length; i+=1) {
       if ( array[i] > maior ) {
         maior = array[i];
+        console.log(maior)
       }
       for (let numero of array) {
           if (numero === maior) {
@@ -47,7 +48,6 @@ function highestCount(array) {
         return newArray.length;
       } 
     }
-
   
 
 // Desafio 7
@@ -64,7 +64,7 @@ function catAndMouse (mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(array) {
   let fizzArr= [];
-  for (i = 0; i < array.length-1; i++){
+  for (i = 0; i < array.length; i++){
   if (array[i]%3 === 0 && array[i]%5 === 0) {
       fizzArr.push('fizzBuzz');
   } else if (array[i]%5 === 0) {
