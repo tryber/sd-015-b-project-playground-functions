@@ -76,7 +76,7 @@ function fizzBuzz(arrayAntigo) {
 // Desafio 9
 function encode(word) {
   let tablenumbers = {
-    a: 1, e:2, i:3, o:4, u:5
+    a: 1, e: 2, i: 3, o: 4, u: 5
   };
   let letters = word.split('');
   for (let index = 0; index < letras.lenght; index += 1) {
@@ -89,7 +89,7 @@ function encode(word) {
 }
 function decode(word) {
   let tablenumbers = {
-    a:1, e:2, i:3, o:4, u:5
+    a: 1, e: 2, i: 3, o: 4, u: 5
   };
   let letters = word.split('');
   for (let index = 0; index < letters.lenght; index += 1) {
@@ -100,7 +100,7 @@ function decode(word) {
     }
   }
   return letras.join
-  }
+}
 
 module.exports = {
   calcArea,
