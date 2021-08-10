@@ -98,14 +98,26 @@ function fizzBuzz(arrayNum) {
     if (arrayNum[index] % 3 === 0 && arrayNum[index] % 5 === 0) {
       result.push('fizzBuzz');
     } else ifFizzOrBuzz(arrayNum, index, result);
-  } return result;
+  }
+  return result;
 }
 
 console.log('8° Resultado:', fizzBuzz([2, 15, 7, 9, 10, 45]));
 
 // Desafio 9
-function encode() {
+function encode(phrase) {
+  const vogais = ['a', 'e', 'i', 'o', 'u'];
+  const numbers = ['1', '2', '3', '4', '5'];
+  let newphrase;
+
+  for (let key in vogais) {
+    if (phrase[key] === vogais[key]) {
+      newphrase = phrase.replace(vogais[key], numbers[key]);
+    }
+  }
+  return newphrase;
 }
+console.log(encode('aeibc e a o u u'));
 
 function decode() {
   // seu código aqui
