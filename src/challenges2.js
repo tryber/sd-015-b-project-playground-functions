@@ -1,16 +1,36 @@
 // Desafio 10
-function techList() {
-  // seu código aqui
+function compare(obj1, obj2) {
+  let techA = obj1.tech;
+  let techB = obj2.tech;
+
+  let compara = 0;
+  if (techA > techB) {
+    compara = 1;
+  } else if (techA < techB) {
+    compara = -1;
+  }
+  return compara;
+}
+
+function techList(array, nome) {
+  let arrayObj = [];
+  if (array.length === 0) {
+    return 'Vazio!';
+  }
+  for (let key in array) {
+    arrayObj[key] = { tech: array[key], name: nome };
+  }
+  return arrayObj.sort(compare);
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(array) { 
+  
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck() { 
+
 }
 
 // Desafio 13
