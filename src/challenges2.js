@@ -1,4 +1,5 @@
 // Desafio 10
+//Tentar de novo
 function techList(tech, nameParam) {
 
   let techListing = {
@@ -40,8 +41,29 @@ function techList(tech, nameParam) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(numbers) {
+  for (let unityNumber of numbers) {
+
+      let min = 0
+
+      if (numbers.length !== 11) {
+          return "Array com tamanho incorreto."
+      }
+
+      if (unityNumber > 9 || unityNumber < 0) {
+          return "não é possível gerar um número de telefone com esses valores"
+      }
+
+      for (let compare of numbers) {
+          if (compare === unityNumber) {
+              min += 1
+          }
+      }
+      if (min >= 3) {
+          return "não é possível gerar um número de telefone com esses valores"
+      }
+  }
+      return "(" + numbers[0] + numbers[1] + ")" + numbers[2] + numbers[3] + numbers[4] + numbers[5] + "-" + numbers[6] + numbers[7] + numbers[8] + numbers[9]
 }
 
 // Desafio 12
