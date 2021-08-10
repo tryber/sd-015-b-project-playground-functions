@@ -39,7 +39,7 @@ function highestCount(initialArray) {
 let highest = 0;
 for (let i = 0; i < initialArray.length; i += 1) {
   if (initialArray[i] > highest) {
-    highest = initialArray[i]
+    highest = initialArray[i];
   }
 }
 let result = 0;
