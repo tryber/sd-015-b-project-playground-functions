@@ -87,8 +87,13 @@ function hydrate(alcoholic) {
   for (let counter = 0; counter < numbers.length; counter += 1) {
       sum = sum + parseInt(numbers[counter]);
   }
-
-  return sum + " copos de água";
+  
+  if (sum === 1) {
+    return sum + " copo de água";
+  }
+  else {
+    return sum + " copos de água";
+  }
 }
 
 module.exports = {
