@@ -12,9 +12,6 @@ function techList(array, name) {
   }
 return tecnologias;
 }
-
-
-
 //Desafio 11
 
 function generatePhoneNumber(array) {
@@ -26,7 +23,6 @@ function generatePhoneNumber(array) {
   function quantidadeRepetida(array) {
     let contador = 0;
     let repetido = 0;
-    
     let repetições = 1;
     for (let i = 0; i < array.length; i += 1){
         for (let j = 0; j < i; j += 1){
@@ -61,14 +57,16 @@ function generatePhoneNumber(array) {
   return output
   
 }
-
-let teste = [1, 1, 1, 4, 14, 2, 7, 8, 19, 9, 4];
-console.log(generatePhoneNumber(teste));
-
 // Desafio 12
-// a + b > c &&
+
 function triangleCheck(lineA, lineB, lineC) {
-  // seu código aqui
+  let output = '';
+  if (((lineA < lineB + lineC) && (lineA > Math.abs(lineB - lineC))) || ((lineB < lineC + lineA) && (lineB > Math.abs(lineC - lineA))) || ((lineC < lineA + lineB) && (lineC > Math.abs(lineA - lineB)))){
+    output = true;
+  } else {
+    output = false;
+  }
+ return output
 }
 
 // Desafio 13
