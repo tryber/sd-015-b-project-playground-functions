@@ -4,7 +4,7 @@ function techList(tech, name) {
   let objectTech;
   let arrayObjectTech = [];
   this.name = name;
-  for (let i = 0; index < tech.length; index += 1) {
+  for (let i = 0; i < tech.length; i += 1) {
     objectTech = { tech: tech[i], name: this.name };
     arrayObjectTech.push(objectTech);
   }
