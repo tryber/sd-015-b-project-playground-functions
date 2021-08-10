@@ -54,7 +54,7 @@ function generatePhoneNumber (receivedNumbers) {
   } else if (!isValidArrayOfNumbers(receivedNumbers) || apparitionsAreTooMuch(receivedNumbers)) {
       return 'não é possível gerar um número de telefone com esses valores';
   } else {
-      return receivedNumbers.join('').replace(/(\d{2})(\d{5})(\d{4})/, "($1) $2-$3");
+      return receivedNumbers.join('').replace(/(\d{2})(\d{5})(\d{4})/, "($1) $2-$3"); //Aqui, especialmente, tive grandíssima ajuda do colega Denis Jonathan, pode ser visto em: https://trybecourse.slack.com/archives/C027T2VU8U8/p1628547712440900"
   }
 }
 
