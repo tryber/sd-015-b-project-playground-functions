@@ -10,15 +10,13 @@ function techList(tech, name) {
     let objetoModelo = {
       tech: '',
       name: '',
-    }
+    };
     objetoModelo.name = name;
     objetoModelo.tech = tech[index];
     retornaObjetoModelo[index] = (objetoModelo);
   }
   return retornaObjetoModelo;
 }
-console.log(techList([], 'welckson'))
-
 
 // Desafio 11
 function generatePhoneNumber() {

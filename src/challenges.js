@@ -127,49 +127,49 @@ function encode(codifica) {
   let consolida = '';
   for (let index = 0; index < codifica.length; index += 1) {
     if (codifica[index] !== 'a' && codifica[index] !== 'e' && codifica[index] !== 'i' && codifica[index] !== 'o' && codifica[index] !== 'u') {
-      consolida = consolida + (codifica[index]);
+      consolida += (codifica[index]);
     }
     else if (codifica[index] === 'a') {
-      consolida = consolida + '1';
+      consolida += '1';
     }
     else if (codifica[index] === 'e') {
-      consolida = consolida + '2';
+      consolida += '2';
     }
     else if (codifica[index] === 'i') {
-      consolida = consolida + '3';
+      consolida += '3';
     }
     else if (codifica[index] === 'o') {
-      consolida = consolida + '4';
+      consolida += '4';
     }
     else if (codifica[index] === 'u') {
-      consolida = consolida + '5';
+      consolida += '5';
     }
   }
   return consolida;
 }
-console.log(encode('hi there!'))
+console.log(encode('hi there!'));
 
 function decode(decodifica) {
   // seu código aqui
   let consolida = '';
   for (let index = 0; index < decodifica.length; index += 1) {
     if (decodifica[index] !== '1' && decodifica[index] !== '2' && decodifica[index] !== '3' && decodifica[index] !== '4' && decodifica[index] !== '5') {
-      consolida = consolida + (decodifica[index]);
+      consolida += (decodifica[index]);
     }
     else if (decodifica[index] === '1') {
-      consolida = consolida + 'a';
+      consolida += 'a';
     }
     else if (decodifica[index] === '2') {
-      consolida = consolida + 'e';
+      consolida += 'e';
     }
     else if (decodifica[index] === '3') {
-      consolida = consolida + 'i';
+      consolida +='i';
     }
     else if (decodifica[index] === '4') {
-      consolida = consolida + 'o';
+      consolida += 'o';
     }
     else if (decodifica[index] === '5') {
-      consolida = consolida + 'u';
+      consolida += 'u';
     }
   }
   return consolida;
