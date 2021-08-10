@@ -2,7 +2,7 @@
 function compareTrue(a, b) {
   if (a && b === true) {
     return true;
-  } 
+  }
   return false;
 }
 
@@ -43,10 +43,12 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(array) {
   let contRept = 0;
-  array.sort(function (a, b) {return a - b;})
+  array.sort(function (a, b) {
+    return a - b;
+  });
   for (let index in array) {
     if (array[index] === array[array.length - 1]) {
-      contRept+=1;
+      contRept += 1;
     }
   }
   return contRept;
@@ -54,20 +56,20 @@ function highestCount(array) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let result; 
+  let result;
   let posiRato = mouse;
   let posiGato1 = cat1 - posiRato;
   let posiGato2 = cat2 - posiRato;
-  resuAbs1 = Math.abs(posiGato1)
-  resuAbs2 = Math.abs(posiGato2)
-  if(resuAbs1 === resuAbs2) {
-    result = "os gatos trombam e o rato foge";
+  resuAbs1 = Math.abs(posiGato1);
+  resuAbs2 = Math.abs(posiGato2);
+  if (resuAbs1 === resuAbs2) {
+    result = 'os gatos trombam e o rato foge';
   } else if (resuAbs1 > resuAbs2) {
-    result = "cat2";
+    result = 'cat2';
   } else {
-    result = "cat1";
+    result = 'cat1';
   }
-  return result; 
+  return result;
 }
 
 // Desafio 8
@@ -94,22 +96,22 @@ function fizzBuzz(array) {
 
 // Desafio 9
 function encode(str) {
-  let resultado = ""
-  resultado = str.replace(/a/g,"1")
-  resultado = resultado.replace(/e/g,"2") 
-  resultado = resultado.replace(/i/g,"3")
-  resultado = resultado.replace(/o/g,"4")
-  resultado = resultado.replace(/u/g,"5")
+  let resultado = '';
+  resultado = str.replace(/a/g, '1');
+  resultado = resultado.replace(/e/g, '2');
+  resultado = resultado.replace(/i/g, '3');
+  resultado = resultado.replace(/o/g, '4');
+  resultado = resultado.replace(/u/g, '5');
   return resultado;
 }
 
 function decode(str) {
-  let resultado = ""
-  resultado = str.replace(/1/g,"a")
-  resultado = resultado.replace(/2/g,"e")
-  resultado = resultado.replace(/3/g,"i")
-  resultado = resultado.replace(/4/g,"o")
-  resultado = resultado.replace(/5/g,"u")
+  let resultado = '';
+  resultado = str.replace(/1/g, 'a');
+  resultado = resultado.replace(/2/g, 'e');
+  resultado = resultado.replace(/3/g, 'i');
+  resultado = resultado.replace(/4/g, 'o');
+  resultado = resultado.replace(/5/g, 'u');
   return resultado;
 }
 
