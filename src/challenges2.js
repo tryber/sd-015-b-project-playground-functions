@@ -3,6 +3,9 @@ function techList(tech, name) {
   // seu código aqui
   let retornaObjetoModelo = [];
   tech.sort();
+  if (tech.length <= 0) {
+    return 'Vazio!';
+  }
   for (let index = 0; index < tech.length; index += 1) {
     let objetoModelo = {
       tech: '',
@@ -14,7 +17,7 @@ function techList(tech, name) {
   }
   return retornaObjetoModelo;
 }
-console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'welckson'))
+console.log(techList([], 'welckson'))
 
 
 // Desafio 11
