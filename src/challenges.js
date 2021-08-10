@@ -45,8 +45,19 @@ function highestCount(lista_de_numeros) {
   return contador
 }
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse,cat1,cat2) {
+  let distance_1 = Math.abs(mouse - cat1)
+  let distance_2 = Math.abs(mouse - cat2)
 
+  if (distance_1 === distance_2) {
+    return 'os gatos trombam e o rato foge'
+  }
+  if (distance_1 < distance_2) {
+    return 'cat1'
+  }
+  if (distance_1 > distance_2) {
+    return 'cat2'
+  }
 }
 
 // Desafio 8
