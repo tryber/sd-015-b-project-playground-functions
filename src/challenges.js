@@ -53,10 +53,16 @@ return result;
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let cat1Mouse = cat1 + mouse;
-  let cat2Mouse = cat2 + mouse;
+  let cat1Mouse = cat1 - mouse;
+  let cat2Mouse = cat2 - mouse;
   let result = 0;
 
+  if (cat1Mouse < 0) {
+    cat1Mouse = cat1Mouse * -1;
+  }
+  if (cat2Mouse < 0) {
+    cat2Mouse = cat2Mouse * -1;
+  }
   if (cat1Mouse < cat2Mouse) {
     result = 'cat1';
   } 
