@@ -56,9 +56,9 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
+// eslint-disable-next-line complexity
 function fizzBuzz(arrayAntigo) {
   let novaArray = [];
-
   for (let index = 0; index < arrayAntigo.length; index += 1) {
     if (arrayAntigo[index] % 3 === 0 && arrayAntigo[index] % 5 === 0) {
       novaArray.push('fizzBuzz');
@@ -74,12 +74,33 @@ function fizzBuzz(arrayAntigo) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
-}
-function decode() {
-  // seu código aqui
-}
+function encode(word) {
+  let tablenumbers = {
+    a: 1, e:2, i:3, o:4, u:5
+  }:
+  let letters = word.split('');
+  for (let index = 0; index < letras.lenght; index += 1) {
+    for (index2 in tablenumbers) {
+      if (letras[index] === index2) {
+        letras[index = tablenumbers];
+      }
+    }
+  } return letras.join
+} 
+function decode(word) {
+  let tablenumbers = {
+    a:1, e:2, i:3, o:4, u:5
+  };
+  let letters = word.split('');
+  for (let index = 0; index < letters.lenght; index += 1) {
+    for (index2 in tablenumbers) {
+      if (letras[index] === tablenumbers[index2].toString()) {
+        letras[index = index2;]
+      }
+    }
+  }
+  return letras.join
+  }
 
 module.exports = {
   calcArea,
