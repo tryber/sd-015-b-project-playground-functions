@@ -14,7 +14,7 @@ function techList(tech, name) {
   return 'Vazio!';
 }
 
-// Desafio 11 - consultei o repositório de
+// Desafio 11 - consultei o repositório de Gabrielle
 // https://github.com/tryber/sd-015-b-project-playground-functions/blob/gabrielle-murat-playground-functions/src/challenges2.js
 function verifyLength(array) {
   return array.length !== 11;
