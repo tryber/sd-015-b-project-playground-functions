@@ -59,7 +59,7 @@ function isRepetitive(arr) {
   for(let i = 0; i<arr.length; i++) {
     repeticao = 0;
     for(let j = 0; j<arr.length; j++) {
-		  if (arr[i] == arr[j]) {
+		  if (arr[i] === arr[j]) {
         repeticao++;
       }
 		}
