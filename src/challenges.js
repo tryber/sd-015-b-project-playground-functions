@@ -61,6 +61,7 @@ function catAndMouse(mouse, cat1 , cat2) {
   } else {
     return "cat2";
   }
+}
 
   
 
@@ -99,4 +100,4 @@ module.exports = {
   footballPoints,
   highestCount,
   splitSentence,
-};
+}
