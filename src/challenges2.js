@@ -3,7 +3,8 @@ function tecnologias (tech, name) {
     let saida = [];
   
     if (tech && tech.length > 0) {
-      for(let i = 0; i < tech.length; i++) {
+        tech.sort ();
+        for(let i = 0; i < tech.length; i++) {
         saida.push({
           tech: tech[i],
           name
