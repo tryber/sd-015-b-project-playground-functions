@@ -1,39 +1,17 @@
 // Desafio 10
-//Tentar de novo
 function techList(tech, nameParam) {
+  let techListing = []
 
-  if (tech.length > 0) {
+  for (let index = 0; index < tech.length; index += 1) {
 
-    let techListing = [
-      {
-      tech: tech[0],
-      name: nameParam
-     },
-     {
-      tech: tech[1],
-      name: nameParam
-     },
-     {
-      tech: tech[2],
-      name: nameParam
-     },
-     {
-      tech: tech[3],
-      name: nameParam
-     },
-    {
-      tech: tech[4],
-      name: nameParam
-    } ]
-
-    return techListing;
-
+      let addList = tech[index]
+      techListing.push({
+          tech: addList,
+          name: nameParam
+      })
   }
 
-  else {
-    return "Vazio!"
-  }
-
+  return techListing;
 }
 
 // Desafio 11
