@@ -18,16 +18,18 @@ function splitSentence(string) {
 } console.log(splitSentence('turma trybecat!'));
 
 // Desafio 4
+// check
 function concatName(array) {
   return `${array[array.length - 1]}, ${array[0]}`;
 }
 console.log('last and first: ', concatName(['Lucas', 'cassiano', 'ferraz', 'Paolillo']));
 
 // Desafio 5
-function footballPoints() {
-  let wins = 3;
-  let ties = 1;
-  return wins * 3 + ties * 1;
+// check
+function footballPoints(wins, ties) {
+  let ganha = 3;
+  let resultado = (wins * ganha) + ties;
+  return resultado;
 }
 // Desafio 6
 function highestCount(arrayNumeros) {
