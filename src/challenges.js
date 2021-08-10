@@ -1,18 +1,16 @@
 // Desafio 1
 function compareTrue(a, b) {
- 
   return a && b;
 }
 
 // Desafio 2
 function calcArea(base, height) {
- 
   return (base * height) / 2;
 }
 
 // Desafio 3
 function splitSentence(phrase) {
-  return phrase.split(" ");
+  return phrase.split(' ');
 }
 
 // Desafio 4
