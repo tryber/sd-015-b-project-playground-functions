@@ -70,7 +70,7 @@ function fizzBuzz(arr1) {
   // seu código aqui
   let newArray = []
   for (let i = 0; i < arr1.length; i += 1) {
-    if (arr1[i] % 5 === 0 && arr1[i] % 3 === 0){
+    if (arr1[i] % 5 === 0 && arr1[i] % 3 === 0) {
       newArray.push('fizzBuzz')
     } else if (arr1[i] % 5 === 0) {
       newArray.push('buzz')
@@ -84,12 +84,62 @@ function fizzBuzz(arr1) {
 }
 
 // Desafio 9
-function encode() {
+function encode(str) {
   // seu código aqui
+  let noVowels = str.split('')
+  let res = []
+  for (let index = 0; index < noVowels.length; index += 1) {
+    switch (noVowels[index]) {
+      case ('a'):
+        res.push(noVowels[index].replace('a', '1'))
+        break
+      case ('e'):
+        res.push(noVowels[index].replace('e', '2'))
+        break
+      case ('i'):
+        res.push(noVowels[index].replace('i', '3'))
+        break
+      case ('o'):
+        res.push(noVowels[index].replace('o', '4'))
+        break
+      case ('u'):
+        res.push(noVowels[index].replace('u', '5'))
+        break
+      default:
+        res.push(noVowels[index])
+    }
+  }
+  return res.join('')
 }
-function decode() {
+console.log(encode('hi there!'))
+function decode(str) {
   // seu código aqui
+  let noNumbers = str.split('')
+  let res = []
+  for (let index = 0; index < noNumbers.length; index += 1) {
+    switch (noNumbers[index]) {
+      case ('1'):
+        res.push(noNumbers[index].replace('1', 'a'))
+        break
+      case ('2'):
+        res.push(noNumbers[index].replace('2', 'e'))
+        break
+      case ('3'):
+        res.push(noNumbers[index].replace('3', 'i'))
+        break
+      case ('4'):
+        res.push(noNumbers[index].replace('4', '0'))
+        break
+      case ('5'):
+        res.push(noNumbers[index].replace('5', 'u'))
+        break
+      default:
+        res.push(noNumbers[index])
+    }
+  }
+  return res.join('')
 }
+console.log(decode("h3 th2r2!"))
 
 module.exports = {
   calcArea,
