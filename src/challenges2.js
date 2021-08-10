@@ -27,7 +27,8 @@ let listaObjetos =[]
 function generatePhoneNumber(array) {
   let listaDeNumeros = []
   let ver = false
-  let erro = "não é possível gerar um número de telefone com esses valores"
+  let erroCount = "não é possível gerar um número de telefone com esses valores"
+  let erroLen = "Array com tamanho incorreto."
   let number = 0
   for(let i = 0; i < array.length; i++){
     let count = 0
@@ -35,15 +36,18 @@ function generatePhoneNumber(array) {
       if ( array[i] == array[o]){
         count += 1
       }
-      if (count >= 3 || array[i] < 0 || array[i] > 9 || array.length > 11){
+      if (count >= 3 || array[i] < 0 || array[i] > 9){
       ver = true 
       }
     }
-  }
+} if (array.length != 11) {
+    return erroLen
+
+}
   if (ver == true){
-      return erro
+      return erroCount
   } else {
-    number = "(" + array[0] + array[1]+ ")" + " " + array[2] + array[3]+ array[4] + array[5] + "-" + array[6] + array[7] + array[8] + array[9] 
+    number = "(" + array[0] + array[1]+ ")" + " " + array[2] + array[3]+ array[4] + array[5] + array[6] + "-" + array[7] + array[8] + array[9] + array[10] 
     return number 
   }
   
@@ -70,8 +74,8 @@ function triangleCheck(line1, line2, line3) {
   return ver
   }
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string){
+
 }
 
 module.exports = {
