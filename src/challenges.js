@@ -15,12 +15,13 @@ function splitSentence(frase) {
 }
 
 // Desafio 4
-function concatName(nomes) {
-  if (nomes.length > 2){ 
-  return nomes[3] + ',' + ' ' + nomes[0];
-} else {
-  return nomes[2] + ',' + ' ' + nomes[0];
-}
+function concatName(array) {
+  let nomes = '';
+  nomes += array.pop();
+  nomes += ', ';
+  nomes += array.shift();
+
+  return nomes;
 }
 
 // Desafio 5
@@ -76,11 +77,63 @@ function fizzBuzz(array) {
 
 // Desafio 9
 function encode() {
-  // seu código aqui
+  let result = '';
+
+  for (let letter of string) {
+    switch (letter) {
+    case 'a':
+      result += 1;
+      break;
+    case 'e':
+      result += 2;
+      break;
+    case 'i':
+      result += 3;
+      break;
+    case 'o':
+      result += 4;
+      break;
+    case 'u':
+      result += 5;
+      break;
+    default:
+      result += letter;
+      break;
+    }
+  }
+
+  return result;
 }
 function decode() {
-  // seu código aqui
-}
+  function decode(string) {
+    let result = '';
+  
+    for (let letter of string) {
+      switch (letter) {
+      case '1':
+        result += 'a';
+        break;
+      case '2':
+        result += 'e';
+        break;
+      case '3':
+        result += 'i';
+        break;
+      case '4':
+        result += 'o';
+        break;
+      case '5':
+        result += 'u';
+        break;
+      default:
+        result += letter;
+        break;
+      }
+    }
+  }
+  
+    return result;
+  }
 
 module.exports = {
   calcArea,
