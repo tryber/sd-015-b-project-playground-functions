@@ -24,13 +24,13 @@ function techList(array, nome) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(array) { 
+  
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck() { 
+
 }
 
 // Desafio 13
