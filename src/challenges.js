@@ -40,14 +40,14 @@ let maior;
     if (arr[index] > maior) {
       maior = arr[index];
     }
-  }(
-for (let index2 = 0; index2 < arr.length; index2++) {
-  var soma = 0;
-  if (maior === arr[index2]) {
-    soma++;
+  }
+let soma = 0;
+for (let index2 = 0; index2 < arr.length; index2 += 1) {
+  if( maior === arr[index2]) {
+    soma += 1;
   }
 }
-return soma;
+return soma
 }
 
 // Desafio 7
