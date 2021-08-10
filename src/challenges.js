@@ -45,6 +45,7 @@ function highestCount(lista_de_numeros) {
   return contador
 }
 // Desafio 7
+// Créiditos a Gabrielle Murat (Descobri a função Math.abs graças ao commit do projeto desta pessoa.)
 function catAndMouse(mouse,cat1,cat2) {
   let distance_1 = Math.abs(mouse - cat1)
   let distance_2 = Math.abs(mouse - cat2)
