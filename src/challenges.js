@@ -1,14 +1,15 @@
 // Desafio 1
 function compareTrue(valor1,valor2) {
-    if ((valor1 == true) && (valor2 == true)){
-      return true;
-    }else if ( (valor1 == true) && (valor2 == false)){
-      return false;
-    }
-    else if ((valor1 == false) && (valor2 == false)){
-      return false;
-    }
 
+    if ((valor1 == valor2) && (valor1 == true) && (valor2 == true)){
+      return true;
+    }
+    else if ( valor1 != valor2){
+      return false;
+    }
+    else if ((valor1 == valor2) && (valor1 == false) && (valor2 == false)){
+      return false;
+    }
 }
 
 // Desafio 2
@@ -17,8 +18,11 @@ function calcArea(base,height) {
 }
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(stringToSplit) {
   // seu código aqui
+    let sentence = stringToSplit[];
+
+
 }
 
 // Desafio 4
