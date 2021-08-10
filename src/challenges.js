@@ -1,11 +1,11 @@
 // Desafio 1
 function compareTrue(valor1,valor2) {
-    if (valor1 === true && valor2 === true){
+    if ((valor1 == true) && (valor2 == true)){
       return true;
-    }else if ( valor1 === true && valor2 === false){
+    }else if ( (valor1 == true) && (valor2 == false)){
       return false;
     }
-    else if (valor1=== false && valor2 === false){
+    else if ((valor1 == false) && (valor2 == false)){
       return false;
     }
 
