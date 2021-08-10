@@ -76,7 +76,7 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
+function encode(string) {
   let result = '';
 
   for (let letter of string) {
@@ -104,8 +104,8 @@ function encode() {
 
   return result;
 }
-function decode() {
-  function decode(string) {
+
+function decode(string) {
     let result = '';
   
     for (let letter of string) {
@@ -130,7 +130,7 @@ function decode() {
         break;
       }
     }
-  }
+  
   
     return result;
   }
