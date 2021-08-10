@@ -126,10 +126,10 @@ function encode (string) {
             default: 
                 saida += string[i];
                 break;
-        } 
-    }
+  } 
+ }
 
-    return saida;
+ return saida;
 }
 
 function decode (string) {
