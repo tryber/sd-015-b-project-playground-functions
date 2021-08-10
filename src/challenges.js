@@ -61,12 +61,17 @@ function highestCount(arrayNumbers) {
   }
   return res;
 }
-  console.log(highestCount([-2, -2, -1]));
+  console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  // seu código aqui
+  if (cat1 - mouse === cat2 - mouse || cat2 - mouse === (cat1 - mouse) * -1){
+    return 'os gatos trombam e o rato foge';
+  } if (cat1 - mouse < cat2 - mouse){
+    return 'cat1';
+  } return 'cat2';
 }
+console.log(catAndMouse(2, 1, 3))
 
 // Desafio 8
 function fizzBuzz(arrayNumbers) {
@@ -89,28 +94,36 @@ function fizzBuzz(arrayNumbers) {
   return arrayString;
 }
 console.log(fizzBuzz([2, 15, 7, 9, 45]))
+
 // Desafio 9
 function encode(string) {
-  let fraseFormatada = '';
-    for (let key in string) {
-      if (string[key] === 'a')
-        fraseFormatada = string.replace(/a/g, 1);
-       else if (string[key] === 'e') 
-        fraseFormatada = string.replace(/e/g, 2);
-       else if (string[key] === 'i') 
-        fraseFormatada = string.replace(/i/g, 3);
-       else if (string[key] === 'o') 
-        fraseFormatada = string.replace(/0/g, 4);
-      else if (string[key] === 'u') 
-        fraseFormatada = string.replace(/u/g, 5);
+  let res = 0;
+  lyricsArray = ["a","e","i","o","u"]
+  numberArray = [1,2,3,4,5]
+  for (let index = 0; index < string.length; index += 1){
+  if ( string[index] = lyricsArray[0]){
+    res = string.replace(/a/g, numberArray[0]);
     }
-  return fraseFormatada;
-}
+  else if (string[index] = lyricsArray[1]){
+    res = string.replace(/e/g, numberArray[1]);
+    }
+  else if ( string[index] === lyricsArray[2]){
+    res = string.replace(/i/g, numberArray[2]);
+    }
+  else if ( string[index] === lyricsArray[3]){
+    res = string.replace(/o/g, numberArray[3]);
+    }
+  else if ( string[index] === lyricsArray[4]){
+      res = string.replace(/u/g, numberArray[4]);
+      }
+  }
+  return res;
+  }
 function decode(palavra) {
-    let resultado = palavra.replace(/2/g, "e");
-    return resultado;
+  let res = palavra.replace(/2/g, "e");
+  return res;
 }
-console.log(encode("Tudo bem ai"));
+console.log(encode("abacate mexirica urubu ovo"));
 console.log(decode("h3 th2r2!"))
 
 module.exports = {
