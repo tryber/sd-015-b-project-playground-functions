@@ -1,49 +1,85 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+// check
+function compareTrue(a, b) {
+  return a === true && b === true;
 }
-
+console.log(compareTrue(true, true));
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+// check
+function calcArea(base, height) {
+  return (base * height) / 2;
 }
+console.log(calcArea(10, 50));
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
-}
+// check
+function splitSentence(string) {
+  return string.split(' ');
+} console.log(splitSentence('turma trybecat!'));
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+// check
+function concatName(array) {
+  return `${array[array.length - 1]}, ${array[0]}`;
 }
+console.log('last and first: ', concatName(['Lucas', 'cassiano', 'ferraz', 'Paolillo']));
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+// check
+function footballPoints(wins, ties) {
+  let ganha = 3;
+  let resultado = (wins * ganha) + ties;
+  return resultado;
 }
-
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(arrayNumeros) {
+  let qtdMaior = 0;
+  let higher = arrayNumeros[0];
+  for (let count = 0; count < arrayNumeros.length; count += 1) {
+    if (arrayNumeros[count] > higher) {
+      higher = arrayNumeros[count];
+    }
+  }
+  for (let count = 0; count < arrayNumeros.length; count += 1) {
+    if (higher === arrayNumeros[count]) {
+      qtdMaior += 1;
+    }
+  } return qtdMaior;
 }
-
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+// check
+function catAndMouse(mouse, cat1, cat2) {
+  if (cat1 - mouse === cat2 - mouse || cat2 - mouse === (cat1 - mouse) * -1) {
+    return 'os gatos trombam e o rato foge';
+  } if (cat1 - mouse < cat2 - mouse) {
+    return 'cat1';
+  } return 'cat2';
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+// eslint-disable-next-line complexity
+function fizzBuzz(arrayAntigo) {
+  let novaArray = [];
+  for (let index = 0; index < arrayAntigo.length; index += 1) {
+    if (arrayAntigo[index] % 3 === 0 && arrayAntigo[index] % 5 === 0) {
+      novaArray.push('fizzBuzz');
+    } else if (arrayAntigo[index] % 3 === 0) {
+      novaArray.push('fizz');
+    } else if (arrayAntigo[index] % 5 === 0) {
+      novaArray.push('buzz');
+    } else {
+      novaArray.push('bug!');
+    }
+  }
+  return novaArray;
 }
 
 // Desafio 9
 function encode() {
-  // seu código aqui
+
 }
+
 function decode() {
-  // seu código aqui
 }
 
 module.exports = {
