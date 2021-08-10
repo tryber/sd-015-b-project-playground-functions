@@ -68,78 +68,76 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(arr1) {
   // seu código aqui
-  let newArray = []
+  let newArray = [];
   for (let i = 0; i < arr1.length; i += 1) {
     if (arr1[i] % 5 === 0 && arr1[i] % 3 === 0) {
-      newArray.push('fizzBuzz')
+      newArray.push('fizzBuzz');
     } else if (arr1[i] % 5 === 0) {
-      newArray.push('buzz')
+      newArray.push('buzz');
     } else if (arr1[i] % 3 === 0) {
-      newArray.push('fizz')
+      newArray.push('fizz');
     } else {
-      newArray.push('bug!')
+      newArray.push('bug!');
     }
   }
-  return newArray
+  return newArray;
 }
 
 // Desafio 9
 function encode(str) {
   // seu código aqui
-  let noVowels = str.split('')
-  let res = []
+  let noVowels = str.split('');
+  let res = [];
   for (let index = 0; index < noVowels.length; index += 1) {
     switch (noVowels[index]) {
       case ('a'):
-        res.push(noVowels[index].replace('a', '1'))
-        break
+        res.push(noVowels[index].replace('a', '1'));
+        break;
       case ('e'):
-        res.push(noVowels[index].replace('e', '2'))
-        break
+        res.push(noVowels[index].replace('e', '2'));
+        break;
       case ('i'):
-        res.push(noVowels[index].replace('i', '3'))
-        break
+        res.push(noVowels[index].replace('i', '3'));
+        break;
       case ('o'):
-        res.push(noVowels[index].replace('o', '4'))
-        break
+        res.push(noVowels[index].replace('o', '4'));
+        break;
       case ('u'):
-        res.push(noVowels[index].replace('u', '5'))
-        break
+        res.push(noVowels[index].replace('u', '5'));
+        break;
       default:
-        res.push(noVowels[index])
+        res.push(noVowels[index]);
     }
   }
-  return res.join('')
+  return res.join('');
 }
-console.log(encode('hi there!'))
 function decode(str) {
   // seu código aqui
-  let noNumbers = str.split('')
-  let res = []
+  let noNumbers = str.split('');
+  let res = [];
   for (let index = 0; index < noNumbers.length; index += 1) {
     switch (noNumbers[index]) {
       case ('1'):
-        res.push(noNumbers[index].replace('1', 'a'))
-        break
+        res.push(noNumbers[index].replace('1', 'a'));
+        break;
       case ('2'):
-        res.push(noNumbers[index].replace('2', 'e'))
-        break
+        res.push(noNumbers[index].replace('2', 'e'));
+        break;
       case ('3'):
-        res.push(noNumbers[index].replace('3', 'i'))
-        break
+        res.push(noNumbers[index].replace('3', 'i'));
+        break;
       case ('4'):
-        res.push(noNumbers[index].replace('4', '0'))
-        break
+        res.push(noNumbers[index].replace('4', '0'));
+        break;
       case ('5'):
-        res.push(noNumbers[index].replace('5', 'u'))
-        break
+        res.push(noNumbers[index].replace('5', 'u'));
+        break;
       default:
-        res.push(noNumbers[index])
+        res.push(noNumbers[index]);
     }
   }
-  return res.join('')
+  return res.join('');
 }
-console.log(decode("h3 th2r2!"))
 
 module.exports = {
   calcArea,
