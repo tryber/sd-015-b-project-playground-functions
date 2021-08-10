@@ -21,16 +21,37 @@ let listaObjetos =[]
     let vazio = "Vazio!"
     return vazio
   }
-  }
-console.log(techList([],"Caique"))
-// Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
 }
 
+  // Desafio 11
+function generatePhoneNumber(array) {
+  let listaDeNumeros = []
+  let ver = false
+  let erro = "não é possível gerar um número de telefone com esses valores"
+  let number = 0
+  for(let i = 0; i < array.length; i++){
+    let count = 0
+    for(let o = 0; o < array.length; o++){
+      if ( array[i] == array[o]){
+        count += 1
+      }
+      if (count >= 3 || array[i] < 0 || array[i] > 9 || array.length > 11){
+      ver = true 
+      }
+    }
+  }
+  if (ver == true){
+      return erro
+  } else {
+    number = "(" + array[0] + array[1]+ ")" + " " + array[2] + array[3]+ array[4] + array[5] + "-" + array[6] + array[7] + array[8] + array[9] 
+    return number 
+  }
+  
+}
+console.log(generatePhoneNumber([1,2,3,4,5,9,7,8,9,9]))
 // Desafio 12
 function triangleCheck() {
-  // seu código aqui
+  // seu código aquis
 }
 
 // Desafio 13
