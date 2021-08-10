@@ -97,41 +97,21 @@ console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode(string) {
-  let resultado = string;
-  let codigo = {
-    a: 1,
-    e: 2,
-    i: 3,
-    o: 4,
-    u: 5,
-  };
-  for (let i = 0; i < string.length; i += 1) {
-    for (let index in codigo) {
-      if (index === string[i]) {
-        resultado = resultado.replace(string[i], codigo[index]);
-      }
-    }
-  }
-  return resultado;
+  string = string.replace(/a/g, '1');
+  string = string.replace(/e/g, '2');
+  string = string.replace(/i/g, '3');
+  string = string.replace(/o/g, '4');
+  string = string.replace(/u/g, '5');
+  return string;
 }
 
 function decode(string) {
-  let resultado = string;
-  let codigo = {
-    a: '1',
-    e: '2',
-    i: '3',
-    o: '4',
-    u: '5',
-  };
-  for (let i = 0; i < string.length; i += 1) {
-    for (let index in codigo) {
-      if (codigo[index] === string[i]) {
-        resultado = resultado.replace(string[i], index);
-      }
-    }
-  }
-  return resultado;
+  string = string.replace(/1/g, 'a');
+  string = string.replace(/2/g, 'e');
+  string = string.replace(/3/g, 'i');
+  string = string.replace(/4/g, 'o');
+  string = string.replace(/5/g, 'u');
+  return string;
 }
 
 module.exports = {
