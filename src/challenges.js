@@ -8,22 +8,22 @@ function compareTrue(valor1, valor2) {
 
 // Desafio 2
 function calcArea(base, height) {
-  return ((base * height) / 2);
+  return (base * height) / 2;
 }
 
 // Desafio 3
 function splitSentence(stringSplit) {
-  return (stringSplit.split(' '));
+  return stringSplit.split(' ');
 }
 
 // Desafio 4
 function concatName(array) {
-  return (`${array[array.length - 1]}, ${array[0]}`);
+  return `${array[array.length - 1]}, ${array[0]}`;
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  return ((wins * 3) + ties);
+  return (wins * 3) + ties;
 }
 
 // Desafio 6
@@ -69,7 +69,7 @@ for (let index = 0; index < number.length; index += 1) {
 function fizzBuzz(numbers) {
   let results = [];
   for (let index = 0; index < numbers.length; index += 1) {
-    fizzBuzCheck(numbers[index], results);
+    fizzBuzzCheck(numbers[index], results);
   }
   return results;
 }
