@@ -2,13 +2,9 @@
 //Tentar de novo
 function techList(tech, nameParam) {
 
-  let techListing = {
-
-  };
-
   if (tech.length > 0) {
 
-    techListing = [
+    let techListing = [
       {
       tech: tech[0],
       name: nameParam
