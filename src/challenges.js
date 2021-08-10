@@ -32,7 +32,7 @@ tiePoints = 1
 // Desafio 6
 function highestCount(array) {
   let counter = 0
-  let maior = 0
+  let maior = array[0]
     for( let i = 0; i < array.length; i++){
       if(array[i] > maior){
         maior = array[i];
@@ -149,9 +149,6 @@ function decode(string) {
       }
   return newString2
   }
-console.log(decode("3333333"))
-
-
 module.exports = {
   calcArea,
   catAndMouse,
