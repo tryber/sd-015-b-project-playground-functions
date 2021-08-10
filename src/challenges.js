@@ -52,15 +52,16 @@ console.log(footballPoints(14, 8))
 // Desafio 6
 
 function highestCount(arrayNumbers) {
-  let maior = arrayNumbers[0];
+
   let res = 0;
-  for (let index = 0; index < arrayNumbers.length; index += 1) { 
-   if ( arrayNumbers[index] === maior)
-    res++ ;  
+  for (let index = 0; index < arrayNumbers.length; index += 1) {
+   let maior = Math.max.apply(null, arrayNumbers ); 
+   if (arrayNumbers[index] === maior )
+   res++ ;  
   }
   return res;
 }
-  console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
+  console.log(highestCount([-2, -2, -1]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
