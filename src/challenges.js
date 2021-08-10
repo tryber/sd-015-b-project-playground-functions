@@ -3,28 +3,18 @@ function compareTrue(entrada1, entrada2) {
   // seu código aqui
   return ((entrada1 === true) && (entrada2 === true));
 }
-console.log(compareTrue(false, true));
-console.log(compareTrue(false, false));
-console.log(compareTrue(false, false));
-console.log(compareTrue(true, true));
 
 // Desafio 2
 function calcArea(base, height) {
   // seu código aqui
   return (base * height) / 2;
 }
-console.log(calcArea(10, 50));
-console.log(calcArea(5, 2));
-console.log(calcArea(51, 1));
 
 // Desafio 3
 function splitSentence(frase) {
   // seu código aqui
   return frase.split(' ');
 }
-console.log(splitSentence('go Trybe'));
-console.log(splitSentence('vamo que vamo'));
-console.log(splitSentence('foguete'));
 
 // Desafio 4
 function concatName(arrayPalavras) {
@@ -33,9 +23,6 @@ function concatName(arrayPalavras) {
   let index2 = (arrayPalavras.length - 1);
   return arrayPalavras[index2] + ', ' + arrayPalavras[index];
 }
-console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
-console.log(concatName(['foguete', 'não', 'tem', 'ré']));
-console.log(concatName(['captain', 'my', 'captain']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -45,9 +32,6 @@ function footballPoints(wins, ties) {
   let soma = (wins * vitoria) + (ties * empate);
   return soma;
 }
-console.log(footballPoints(14, 8));
-console.log(footballPoints(1, 2));
-console.log(footballPoints(0, 0));
 
 // Desafio 6
 function highestCount(numeros) {
@@ -69,9 +53,6 @@ function highestCount(numeros) {
   }
   return contNumeroMaior;
 }
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
-console.log(highestCount([0, 4, 4, 4, 9, 2, 1]));
-console.log(highestCount([0, 0, 0]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -94,8 +75,6 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 }
 
-
-
 // Desafio 8
 function fizzBuzz(variavelNumeros) {
   // seu código aqui
@@ -116,9 +95,6 @@ function fizzBuzz(variavelNumeros) {
   }
   return variavelRetorno;
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
-console.log(fizzBuzz([7, 9]));
-console.log(fizzBuzz([9, 25]));
 
 // Desafio 9
 function encode(codifica) {
@@ -146,7 +122,6 @@ function encode(codifica) {
   }
   return consolida;
 }
-console.log(encode('hi there!'));
 
 function decode(decodifica) {
   // seu código aqui
@@ -162,18 +137,17 @@ function decode(decodifica) {
       consolida += 'e';
     }
     else if (decodifica[index] === '3') {
-      consolida +='i';
-      }
+      consolida += 'i';
+    }
     else if (decodifica[index] === '4') {
       consolida += 'o';
-      }
+    }
     else if (decodifica[index] === '5') {
       consolida += 'u';
     }
   }
   return consolida;
 }
-console.log(decode('h3 th2r2!'));
 
 module.exports = {
   calcArea,
