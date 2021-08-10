@@ -28,7 +28,7 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(array) {
-  let arrayMax = Math.max.apply(null, array); // ref.: https://pt.stackoverflow.com/questions/35202/como-saber-o-maior-valor-de-um-array
+  let arrayMax = Math.max.apply(null, array);
   let arrayMaxCount = 0;
   for (let index = 0; index < array.length; index += 1) {
     if (array[index] === arrayMax) {
@@ -41,7 +41,7 @@ function highestCount(array) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let result = '';
-  if ((Math.abs(cat1 - mouse)) === (Math.abs(cat2 - mouse))) { // ref.: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
+  if ((Math.abs(cat1 - mouse)) === (Math.abs(cat2 - mouse))) {
     result = 'os gatos trombam e o rato foge';
   } else if ((Math.abs(cat1 - mouse)) < (Math.abs(cat2 - mouse))) {
     result = 'cat1';
@@ -52,26 +52,27 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-
-function fizzBuzCheck(number) {
-for (let index = 0; index < number.length; index += 1) {
-  if (number[index] % 15 === 0) {
-    number[index] = 'fizzBuzz';
-  } else if (number[index] % 3 === 0) {
-    number[index] = 'fizz';
-  } else if (number[index] % 5 === 0) {
-    number[index] = 'buzz';
-  } else {
-    number[index] = 'bug!';
+function testFizzbuzz(number) {
+  let result = '';
+  if (number % 15 === 0) {
+    result = 'fizzBuzz';
+  } else if (number % 3 === 0) {
+    result = 'fizz';
+  } else if (number % 5 === 0) {
+    result = 'buzz';
   }
+  return result;
 }
-function fizzBuzz(numbers) {
-  let results = [];
-  for (let index = 0; index < numbers.length; index += 1) {
-    fizzBuzzCheck(numbers[index], results);
+function fizzBuzz(numbersss) {
+  let result = [];
+  for (let i of numbersss) {
+    if (testFizzbuzz(i).length > 0) {
+      result.push(testFizzbuzz(i));
+    } else {
+      result.push('bug!');
+    }
   }
-  return results;
+  return result;
 }
 
 // Desafio 9
