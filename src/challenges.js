@@ -1,19 +1,16 @@
 // Desafio 1
 function compareTrue(valor1, valor2) {
-  console.log(valor1 && valor2);
   return valor1 && valor2;
 }
 
 // Desafio 2
 function calcArea(base, height) {
-  console.log((base * height) / 2)
     return ((base * height) / 2);
 }
 
 // Desafio 3
 function splitSentence(text) {
   let separa = text.split(' ');
-    console.log(separa);
     return separa;
 }
 
@@ -23,7 +20,6 @@ function concatName(txt){
   for(let index = 0; index < txt.length; index += 1){
      if ((index + 1) >= txt.length){
          let last = txt[index];
-         console.log(last + ', ' + first);
          return last + ', ' + first; 
      }else {
      }
@@ -41,7 +37,6 @@ function footballPoints(wins, ties) {
 function highestCount(numbers) {
   highestNumber = 0;
   cont = 0;
-  let finalCont = 0
  for (let index = 0; index < numbers.length; index++){
      if (numbers[index] > highestNumber){
          highestNumber = numbers[index];

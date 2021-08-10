@@ -10,7 +10,6 @@ function techList(tech, name) {
           } 
           result.push(list); 
       } else if (tech) {
-          console.log('Vazio!')
           return 'Vazio!'        
       }
   }
