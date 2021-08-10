@@ -45,11 +45,7 @@ function noRepetitionsValidation(number, array) {
 
 function secondValidation(array) {
   for (const number of array) {
-    if (!lessThan3MoreThan9Validation(number)) {
-      return false;
-    }
-
-    if (!noRepetitionsValidation(number, array)) {
+    if (!lessThan3MoreThan9Validation(number) || !noRepetitionsValidation(number, array)) {
       return false;
     }
   }
@@ -69,11 +65,11 @@ function generatePhoneNumber(phoneArray) {
   if (!secondValidation(phoneArray)) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
+
   const ddd = generatePhonePart(phoneArray, 0, 2);
   const part1 = generatePhonePart(phoneArray, 2, 7);
   const part2 = generatePhonePart(phoneArray, 7, 11);
-  const phoneNumber = `(${ddd}) ${part1}-${part2}`;
-  return phoneNumber;
+  return `(${ddd}) ${part1}-${part2}`;
 }
 
 // Desafio 12
