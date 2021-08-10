@@ -33,13 +33,19 @@ function footballPoints(wins, ties) {
 }
 // Desafio 6
 function highestCount(arrayNumeros) {
-  let higher = -999999;
-  let times2 = 0;
-  
-  for (let count = 0; count <= times.length; count += 1) {
-    if(times[count] > higher) higher = times[count];
+  let qtdMaior = 0;
+  let higher = arrayNumeros[0];
+  for (let count = 0; count < arrayNumeros.length; count += 1) {
+    if (arrayNumeros[count] > higher) {
+      higher = arrayNumeros[count];
+    }
+  }
+  for (let count = 0; count < arrayNumeros.length; count += 1) {
+    if (higher === arrayNumeros[count]) {
+      qtdMaior += 1;
+    }
+  } return qtdMaior;
 }
-
 // Desafio 7
 // check
 function catAndMouse(mouse, cat1, cat2) {
@@ -69,41 +75,11 @@ function fizzBuzz(arrayAntigo) {
 }
 
 // Desafio 9
-function encode(str) {
-  str = str.split("");
-  for(let count = 0; count <= str.length; count += 1){
-    if(str[count] === 'a'){
-      str[count] = '1';
-    } else if(str[count] === 'e'){
-      str[count] = '2';
-    } else if(str[count] === 'i'){
-      str[count] = '3';
-    } else if(str[count] === 'o'){
-      str[count] = '4';
-    } else if(str[count] === 'u'){
-      str[count] = '5';
-    }
-  }
-  str = str.join('');
-  return str;
+function encode() {
+
 }
-function decode(str) {
-  str = str.split("");
-  for(let count = 0; count <= str.length; count += 1){
-    if(str[count] === '1'){
-      str[count] = 'a';
-    } else if(str[count] === '2'){
-      str[count] = 'e';
-    } else if(str[count] === '3'){
-      str[count] = 'i';
-    } else if(str[count] === '4'){
-      str[count] = 'o';
-    } else if(str[count] === '5'){
-      str[count] = 'u';
-    }
-  }
-  str = str.join('');
-  return str;
+
+function decode() {
 }
 
 module.exports = {
