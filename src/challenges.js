@@ -21,9 +21,8 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(array) {
-let virgula = ',';
-let stringconcat = array[array.length - 1].concat(virgula).concat(array[0]);
-return stringconcat;
+  let stringconcat = array[array.length - 1].concat(array[0]);
+  return stringconcat;
 }
 
 // Desafio 5
