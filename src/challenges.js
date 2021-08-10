@@ -77,7 +77,7 @@ function fizzBuzz(arrayAntigo) {
 function encode(word) {
   let tablenumbers = {
     a: 1, e:2, i:3, o:4, u:5
-  }:
+  };
   let letters = word.split('');
   for (let index = 0; index < letras.lenght; index += 1) {
     for (index2 in tablenumbers) {
@@ -86,7 +86,7 @@ function encode(word) {
       }
     }
   } return letras.join
-} 
+}
 function decode(word) {
   let tablenumbers = {
     a:1, e:2, i:3, o:4, u:5
