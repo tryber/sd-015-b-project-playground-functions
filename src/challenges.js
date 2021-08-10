@@ -163,10 +163,10 @@ function decode(decodifica) {
     }
     else if (decodifica[index] === '3') {
       consolida +='i';
-    }
+      }
     else if (decodifica[index] === '4') {
       consolida += 'o';
-    }
+      }
     else if (decodifica[index] === '5') {
       consolida += 'u';
     }
