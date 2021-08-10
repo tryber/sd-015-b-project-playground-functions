@@ -1,7 +1,6 @@
 // Desafio 1
 function compareTrue(entrada1, entrada2) {
   // seu código aqui
-  let comparar = (entrada1, entrada2);
   return ((entrada1 === true) && (entrada2 === true));
 }
 console.log(compareTrue(false, true));
@@ -59,13 +58,13 @@ function highestCount(numeros) {
   let contNumeroMaior = 0;
   for (let index = 0; index < numeros.length; index += 1) {
     if (numeros[numeroMaior] < numeros[index]) {
-      numeroMaior = index;
+    numeroMaior = index;
     }
     verificaMaiorNumero = numeros[numeroMaior];
   }
     for (contador = 0; contador < numeros.length; contador += 1) {
     if (verificaMaiorNumero === numeros[contador]) {
-      contNumeroMaior += 1;
+    contNumeroMaior += 1;
     }
   }
   return contNumeroMaior;
@@ -79,19 +78,19 @@ function catAndMouse(mouse, cat1, cat2) {
   let distanciaMouseCat1 = mouse - cat1;
   let distanciaMouseCat2 = mouse - cat2;
   if (distanciaMouseCat1 < 0) {
-    distanciaMouseCat1 = (distanciaMouseCat1 * (-1));
+  distanciaMouseCat1 = (distanciaMouseCat1 * (-1));
   }
   if (distanciaMouseCat2 < 0){
-    distanciaMouseCat2 = (distanciaMouseCat2 * (-1));
+  distanciaMouseCat2 = (distanciaMouseCat2 * (-1));
   }
   if (distanciaMouseCat1 === distanciaMouseCat2) {
-    return 'os gatos trombam e o rato foge'; 
+  return 'os gatos trombam e o rato foge'; 
   }
   else if (distanciaMouseCat1 > distanciaMouseCat2) {
-    return 'cat2';
+  return 'cat2';
   }
   else {
-    return 'cat1';
+  return 'cat1';
   }
 }
 
@@ -103,16 +102,16 @@ function fizzBuzz(variavelNumeros) {
   let variavelRetorno = [];
   for (let index = 0; index < variavelNumeros.length; index += 1) {
     if ((variavelNumeros[index] % 3) !== 0 && (variavelNumeros[index] % 5) !== 0) {
-      variavelRetorno.push('bug!');
+    variavelRetorno.push('bug!');
     }
     else if ((variavelNumeros[index] % 3) === 0 && (variavelNumeros[index] % 5) === 0) {
-      variavelRetorno.push('fizzBuzz');
+    variavelRetorno.push('fizzBuzz');
     }
     else if ((variavelNumeros[index] % 5) === 0) {
-      variavelRetorno.push('buzz');
+    variavelRetorno.push('buzz');
     }
     else {
-      variavelRetorno.push('fizz');
+    variavelRetorno.push('fizz');
     }
   }
   return variavelRetorno;
@@ -127,22 +126,22 @@ function encode(codifica) {
   let consolida = '';
   for (let index = 0; index < codifica.length; index += 1) {
     if (codifica[index] !== 'a' && codifica[index] !== 'e' && codifica[index] !== 'i' && codifica[index] !== 'o' && codifica[index] !== 'u') {
-      consolida += (codifica[index]);
+    consolida += (codifica[index]);
     }
     else if (codifica[index] === 'a') {
-      consolida += '1';
+    consolida += '1';
     }
     else if (codifica[index] === 'e') {
-      consolida += '2';
+    consolida += '2';
     }
     else if (codifica[index] === 'i') {
-      consolida += '3';
+    consolida += '3';
     }
     else if (codifica[index] === 'o') {
-      consolida += '4';
+    consolida += '4';
     }
     else if (codifica[index] === 'u') {
-      consolida += '5';
+    consolida += '5';
     }
   }
   return consolida;
@@ -154,22 +153,22 @@ function decode(decodifica) {
   let consolida = '';
   for (let index = 0; index < decodifica.length; index += 1) {
     if (decodifica[index] !== '1' && decodifica[index] !== '2' && decodifica[index] !== '3' && decodifica[index] !== '4' && decodifica[index] !== '5') {
-      consolida += (decodifica[index]);
+    consolida += (decodifica[index]);
     }
     else if (decodifica[index] === '1') {
-      consolida += 'a';
+    consolida += 'a';
     }
     else if (decodifica[index] === '2') {
-      consolida += 'e';
+    consolida += 'e';
     }
     else if (decodifica[index] === '3') {
-      consolida +='i';
+    consolida +='i';
     }
     else if (decodifica[index] === '4') {
-      consolida += 'o';
+    consolida += 'o';
     }
     else if (decodifica[index] === '5') {
-      consolida += 'u';
+    consolida += 'u';
     }
   }
   return consolida;
