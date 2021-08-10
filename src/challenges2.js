@@ -69,8 +69,13 @@ return "(" + numbers[0] + numbers[1] + ")" + " " + numbers[2] + numbers[3] + num
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  if (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC) && lineB < lineA + lineC && lineB > Math.abs(lineA - lineC) && lineC < lineB + lineA && lineC > Math.abs(lineB - lineA)) {
+      return true;
+  }
+  else {
+      return false;
+  }
 }
 
 // Desafio 13
