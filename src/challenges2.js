@@ -1,5 +1,5 @@
 // Desafio 10
-function tecnologias (tech, name) {
+function techList (tech, name) {
     let saida = [];
   
     if (tech && tech.length > 0) {
@@ -17,7 +17,7 @@ function tecnologias (tech, name) {
     return 'Vazio!';
   }
 
-tecnologias(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas");
+techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas");
 
 // Desafio 11
 function generatePhoneNumber() {
