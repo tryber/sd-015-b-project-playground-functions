@@ -21,8 +21,8 @@ function verifyLength(array) {
 
 function verifyNumbersValues(array) {
   let valueError = false;
-  for (let index = 0; index < array.length; index += 1) {
-    if (array[index] < 0 || array[index] > 9) {
+  for (let i = 0; i < array.length; i += 1) {
+    if (array[i] < 0 || array[i] > 9) {
       valueError = true;
     }
   }
