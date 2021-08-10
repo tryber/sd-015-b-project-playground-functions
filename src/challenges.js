@@ -104,6 +104,7 @@ function encode(str) {
   let vogalParaNumero = vogalCodificada.join('');
   return vogalParaNumero;
 }
+
 function decode(str) {
   let separaLetras = str.split('');
   let vogalCodificada = [];
