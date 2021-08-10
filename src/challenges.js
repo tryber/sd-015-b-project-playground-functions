@@ -126,7 +126,7 @@ function encode (string) {
             default: 
                 saida += string[i];
                 break;
-  } 
+ } 
  }
 
  return saida;
