@@ -2,20 +2,20 @@
 function techList (tech, name) {
     let saida = [];
   
-    if (tech && tech.length > 0) {
-        tech.sort ();
-        for(let i = 0; i < tech.length; i++) {
-        saida.push({
-          tech: tech[i],
-          name
-        })
-      }
-  
-      return saida;
-    }
-  
-    return 'Vazio!';
+  if (tech && tech.length > 0) {
+    tech.sort ();
+    for(let i = 0; i < tech.length; i++) {
+    saida.push({
+    tech: tech[i],
+    name
+   })
   }
+  
+  return saida;
+}
+  
+  return 'Vazio!';
+}
 
 techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas");
 
