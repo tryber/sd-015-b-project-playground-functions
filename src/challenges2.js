@@ -16,8 +16,8 @@ function techList(array, name) {
 }
 
 // Desafio 11
-function firstValidation(array) {
-  if (array.length !== 11) {
+function firstValidation(phoneArray) {
+  if (phoneArray.length !== 11) {
     return false;
   }
   return true;
@@ -44,14 +44,12 @@ function noRepetitionsValidation(number, array) {
 }
 
 function secondValidation(array) {
-  let validity = true;
   for (const number of array) {
-    validity = lessThan3MoreThan9Validation(number);
-    if (validity === false) {
+    if (!lessThan3MoreThan9Validation(number)) {
       return false;
     }
-    validity = noRepetitionsValidation(number, array);
-    if (validity === false) {
+
+    if (!noRepetitionsValidation(number, array)) {
       return false;
     }
   }
@@ -64,16 +62,16 @@ function generatePhonePart(array, sliceStart, sliceEnd) {
   return phonePart;
 }
 
-function generatePhoneNumber(array) {
-  if (!firstValidation(array)) {
+function generatePhoneNumber(phoneArray) {
+  if (!firstValidation(phoneArray)) {
     return 'Array com tamanho incorreto.';
   }
-  if (!secondValidation(array)) {
+  if (!secondValidation(phoneArray)) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
-  const ddd = generatePhonePart(array, 0, 2);
-  const part1 = generatePhonePart(array, 2, 7);
-  const part2 = generatePhonePart(array, 7, 11);
+  const ddd = generatePhonePart(phoneArray, 0, 2);
+  const part1 = generatePhonePart(phoneArray, 2, 7);
+  const part2 = generatePhonePart(phoneArray, 7, 11);
   const phoneNumber = `(${ddd}) ${part1}-${part2}`;
   return phoneNumber;
 }

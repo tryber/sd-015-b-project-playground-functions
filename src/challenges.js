@@ -123,8 +123,8 @@ function placeCodesInPlaces(originalArray, indexesToChange, newCode) {
 
 function arrayToString(array) {
   let string = '';
-  for (const iterator of array) {
-    string += `${iterator}`;
+  for (const element of array) {
+    string += `${element}`;
   }
   return string;
 }
