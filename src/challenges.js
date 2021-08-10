@@ -33,16 +33,10 @@ function footballPoints(wins, ties) {
 }
 // Desafio 6
 function highestCount(arrayNumeros) {
-  let contador = 0;
-  let maiorNumero = 0;
-
-  for (let numero of arrayNumeros) {
-    if (numero > maiorNumero) {
-      maiorNumero = numero;
-      contador += 1;
-    } if (numero === maiorNumero[numero]) { contador += 1; }
-  }
-  return contador;
+  let higher = -999999;
+  let times2 = 0;
+  for (let count = 0; count <= times.length; count += 1) {
+    if(times[count] > higher) higher = times[count];
 }
 
 // Desafio 7
@@ -74,32 +68,41 @@ function fizzBuzz(arrayAntigo) {
 }
 
 // Desafio 9
-function encode(word) {
-  let tablenumbers = {
-    a: 1, e: 2, i: 3, o: 4, u: 5
-  };
-  let letters = word.split('');
-  for (let index = 0; index < letras.lenght; index += 1) {
-    for (index2 in tablenumbers) {
-      if (letras[index] === index2) {
-        letras[index = tablenumbers];
-      }
-    }
-  } return letras.join
-}
-function decode(word) {
-  let tablenumbers = {
-    a: 1, e: 2, i: 3, o: 4, u: 5
-  };
-  let letters = word.split('');
-  for (let index = 0; index < letters.lenght; index += 1) {
-    for (index2 in tablenumbers) {
-      if (letras[index] === tablenumbers[index2].toString()) {
-        letras[index = index2;]
-      }
+function encode(str) {
+  str = str.split("");
+  for(let count = 0; count <= str.length; count += 1){
+    if(str[count] === 'a'){
+      str[count] = '1';
+    } else if(str[count] === 'e'){
+      str[count] = '2';
+    } else if(str[count] === 'i'){
+      str[count] = '3';
+    } else if(str[count] === 'o'){
+      str[count] = '4';
+    } else if(str[count] === 'u'){
+      str[count] = '5';
     }
   }
-  return letras.join
+  str = str.join('');
+  return str;
+}
+function decode(str) {
+  str = str.split("");
+  for(let count = 0; count <= str.length; count += 1){
+    if(str[count] === '1'){
+      str[count] = 'a';
+    } else if(str[count] === '2'){
+      str[count] = 'e';
+    } else if(str[count] === '3'){
+      str[count] = 'i';
+    } else if(str[count] === '4'){
+      str[count] = 'o';
+    } else if(str[count] === '5'){
+      str[count] = 'u';
+    }
+  }
+  str = str.join('');
+  return str;
 }
 
 module.exports = {
