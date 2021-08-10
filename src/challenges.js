@@ -32,21 +32,20 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount(array) {
-  let maior = 0;
-  let newArray = [];
-  for (let i = 0; i < array.length; i+=1) {
-      if ( array[i] > maior ) {
-        maior = array[i];
-        console.log(maior)
+  function highestCount(array) {
+      let maior = -999;
+      let newA = [];
+
+      for(let i = 0; i < array.length; i++) {
+        if(array[i] > maior) {
+          maior = array[i];
+        }
       }
       for (let numero of array) {
-          if (numero === maior) {
-              newArray.push(numero);
-          }
-        } 
-        return newArray.length;
-      } 
+        if (numero === maior) {
+          newA.push(numero);
+        }
+      } return newA.length;
     }
   
 
