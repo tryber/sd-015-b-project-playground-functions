@@ -15,18 +15,16 @@ function splitSentence(phrase) {
 
 // Desafio 4
 function concatName(arrayDeString) {
-  console.log(arrayDeString.length);
-  return arrayDeString[arrayDeString.length - 1] + ", " + arrayDeString[0];
+  return arrayDeString[arrayDeString.length - 1] + ', ' + arrayDeString[0];
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return (wins * 3) + (ties * 1);
 }
 
 // Desafio 6
 function highestCount() {
-  // seu código aqui
 }
 
 // Desafio 7
