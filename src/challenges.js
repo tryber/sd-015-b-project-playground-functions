@@ -41,8 +41,8 @@ let maior;
       maior = arr[index];
     }
   }(
-let soma = 0;
 for (let index2 = 0; index2 < arr.length; index2++) {
+  var soma = 0;
   if (maior === arr[index2]) {
     soma++;
   }
