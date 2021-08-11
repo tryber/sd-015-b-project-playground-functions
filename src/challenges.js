@@ -67,22 +67,41 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
+
+function restDivisionFor15(dividendo, arrayString) {
+  if (dividendo % 15 === 0) {
+    arrayString.push('fizzBuzz');
+  }
+}
+function restDivisionFor3(dividendo, arrayString) {
+  if (dividendo % 3 === 0 && dividendo % 5 !== 0) {
+    arrayString.push('fizz');
+  }
+}
+function restDivisionFor5(dividendo, arrayString) {
+  if (dividendo % 5 === 0 && dividendo % 3 !== 0) {
+    arrayString.push('buzz');
+  }
+}
+function bugMessage(dividendo, arrayString) {
+  if (dividendo % 3 !== 0 && dividendo % 5 !== 0) {
+    arrayString.push('bug!');
+  }
+}
+
 function fizzBuzz(arrayNumeros) {
   let arrayString = [];
   for (let index = 0; index < arrayNumeros.length; index += 1) {
-    if (arrayNumeros[index] % 15 === 0) {
-      arrayString.push('fizzBuzz');
-    } else if (arrayNumeros[index] % 5 === 0) {
-      arrayString.push('buzz');
-    } else if (arrayNumeros[index] % 3 === 0) {
-      arrayString.push('fizz');
-    } else {
-      arrayString.push('bug!');
-    }
+    bugMessage(arrayNumeros[index], arrayString);
+    restDivisionFor15(arrayNumeros[index], arrayString);
+    restDivisionFor3(arrayNumeros[index], arrayString);
+    restDivisionFor5(arrayNumeros[index], arrayString);
   }
+  // bug(arrayNumeros[index], arrayString);
+
   return arrayString;
 }
-
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 // Desafio 9
 function encode(string) {
   let newString = string.replace(/a/g, '1')
