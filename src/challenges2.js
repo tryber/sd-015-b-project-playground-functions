@@ -20,13 +20,26 @@ function techList(tech, name) {
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
-  
+
 }
 
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
-}
+  let valoresDoTriangulo = [lineA, lineB, lineC];
+  valoresDoTriangulo.sort((a, b) => a - b)
+
+  if (lineB + lineC > lineA && lineA > Math.abs(lineB - lineC)) {
+     if (lineC > lineA + lineB) {
+       return false;
+     } else {
+       return true;
+     }
+  } else {
+    return false;
+  }
+
+  }
 
 // Desafio 13
 function hydrate() {
