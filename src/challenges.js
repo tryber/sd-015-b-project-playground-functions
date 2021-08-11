@@ -47,8 +47,9 @@ function highestCount(arr) {
       soma += 1;
     }
   }
-  return soma;
 }
+return soma;
+
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
