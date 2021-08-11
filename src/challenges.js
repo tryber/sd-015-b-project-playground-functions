@@ -1,25 +1,24 @@
 // Desafio 1
 function compareTrue(a, b) {
-  if (a == true && b == true) {
-    return(true)
+  if (a === true && b === true) {
+    return(true);
   } else {
-    return(false)
+    return(false);
   }
 }
 
 // Desafio 2
 function calcArea(altura, base) {
-  return (altura * base) / 2
+  return (altura * base) / 2;
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(frase) {
+  return frase.split(" ");
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(lista) {
 }
 
 // Desafio 5
