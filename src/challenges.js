@@ -21,15 +21,22 @@ function calcArea(base,height) {
 
 // Desafio 3
 function splitSentence(sentence) {
-  // seu código aqui
+  // fonte de estudo https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split
   let arraySeparado = sentence.split(" ");
   
   return arraySeparado;
 }
 
 // Desafio 4
-function concatName() {
+function concatName(nomes) {
   // seu código aqui
+    //pegar o úlitmo e o primeiro item do array
+    // let tamanhoArray = array.length
+    // ultimo item = array[tamanhoArray - 1] , primeiro item : array[0]
+    
+    let tamanhoArray = nomes.length;
+
+    return nomes[tamanhoArray - 1] + ", " + nomes[0];
 }
 
 // Desafio 5
