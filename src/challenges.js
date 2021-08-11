@@ -50,9 +50,13 @@ function highestCount(numeros) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
 
-  if (Math.abs(mouse) - Math.abs(cat1) === Math.abs(mouse) - Math.abs(cat2)) {
+  mouse = Math.abs(mouse);
+  cat1 = Math.abs(cat1);
+  cat2 = Math.abs(cat2);
+
+  if (Math.abs(mouse - cat1) === Math.abs(mouse - cat2)) {
     return "os gatos trombam e o rato foge"
-  } else if (Math.abs(mouse) - Math.abs(cat1) < Math.abs(mouse) - Math.abs(cat2)){
+  } else if (Math.abs(mouse - cat1) < Math.abs(mouse - cat2)){
     return "cat1"
   } else {
     return "cat2"
@@ -62,21 +66,22 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(numbers) {
   let array = [];
-  let classificando = "";
+  let classificacao = "";
 
   for (index = 0; index < numbers.length; index ++) {
-    classificando = "";
+    classificacao = "";
     if (numbers[index] % 3 === 0 && numbers[index] % 5 === 0) {
-      classificando += "fizzBuzz";
+      classificacao += "fizzBuzz";
     } else if (numbers[index] % 3 === 0) {
-      classificando += "fizz";
+      classificacao += "fizz";
     } else if (numbers[index] % 5 === 0) {
-      classificando += "buzz";
+      classificacao += "buzz";
     } else {
-      classificando += "bug!";
+      classificacao += "bug!";
     }
-    array.push(classificando);
+    array.push(classificacao);
   }
+  return array;
 }
 
 // Desafio 9
