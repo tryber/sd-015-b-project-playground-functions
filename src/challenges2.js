@@ -35,37 +35,37 @@ function phoneNumberZero(array) {
 }
 
 function phoneNumberNine(array) {
-    for (let key in array) {
-      if (array[key] > 9) {
-        return false;
-      }
+  for (let key in array) {
+    if (array[key] > 9) {
+      return false;
     }
+  }
   return true;
 }
 
 function phoneNumberVerifyZero(array) {
-	if (phoneNumberZero(array) === false) {
-		return false;
-	}
-	return true;
+  if (phoneNumberZero(array) === false) {
+    return false;
+  }
+  return true;
 }
 
 function phoneNumberVerifyNine(array) {
-	if (phoneNumberNine(array) === false) {
-		return false;
-	}
-	return true;
+  if (phoneNumberNine(array) === false) {
+    return false;
+  }
+  return true;
 }
 
 function phoneNumberVerifyZeroNine(array) {
-	if (phoneNumberVerifyZero(array) === true && phoneNumberVerifyNine(array) === true) {
-		return true;
-	}
-	return false;
+  if (phoneNumberVerifyZero(array) === true && phoneNumberVerifyNine(array) === true) {
+    return true;
+  }
+  return false;
 }
 
 function phoneNumberRepeat(array) {
-	let vezesRepetido = 0;
+  let vezesRepetido = 0;
   let contador = 0;
   for (let key in array) {
     let verificaNumero = array[key];
@@ -79,32 +79,32 @@ function phoneNumberRepeat(array) {
     }
     contador = 0;
   }
-	return vezesRepetido;
+  return vezesRepetido;
 }
 
 function phoneNumberVerifyRepeat(array) {
-	if ( phoneNumberRepeat(array) >= 3) {
-		return true;
-	}
-	return false;
+  if ( phoneNumberRepeat(array) >= 3) {
+    return true;
+  }
+  return false;
 }
 
 function phoneNumberVerifyZeroNineRepeat(array) {
-	if (phoneNumberVerifyZeroNine(array) === false || phoneNumberVerifyRepeat(array) === true) {
-		return false;
-	}
-	return true;
+  if (phoneNumberVerifyZeroNine(array) === false || phoneNumberVerifyRepeat(array) === true) {
+    return false;
+  }
+  return true;
 }
 
 function phoneNumberVerifyValid(array) {
-	if (phoneNumberSize(array) === true) {
-		if (phoneNumberVerifyZeroNineRepeat(array) === false) {
-			return 'não é possível gerar um número de telefone com esses valores';
-		}
-	} else if (phoneNumberSize(array) === false) {
-		return 'Array com tamanho incorreto.';
-	}
-	return true;
+  if (phoneNumberSize(array) === true) {
+    if (phoneNumberVerifyZeroNineRepeat(array) === false) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
+  } else if (phoneNumberSize(array) === false) {
+    return 'Array com tamanho incorreto.';
+  }
+  return true;
 }
 
 function phoneNumberParenteses(array) {
@@ -134,11 +134,11 @@ function phoneNumberPhone(array) {
 }
 
 function generatePhoneNumber(array) {
-  // seu código aqui
-	if (phoneNumberVerifyValid(array) === true) {
-		return phoneNumberPhone(array);
-	}
-	return phoneNumberVerifyValid(array);
+// seu código aqui
+  if (phoneNumberVerifyValid(array) === true) {
+    return phoneNumberPhone(array);
+  }
+  return phoneNumberVerifyValid(array);
 }
 
 // Desafio 12
