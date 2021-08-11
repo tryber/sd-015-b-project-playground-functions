@@ -10,7 +10,7 @@ function techList(tech, nameParam) {
       techListing.push({
         tech: addList,
         name: nameParam,
-      })
+      });
     }
     return techListing;
   }
