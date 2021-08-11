@@ -97,11 +97,9 @@ function fizzBuzz(arrayNumeros) {
     restDivisionFor3(arrayNumeros[index], arrayString);
     restDivisionFor5(arrayNumeros[index], arrayString);
   }
-  // bug(arrayNumeros[index], arrayString);
-
   return arrayString;
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
+
 // Desafio 9
 function encode(string) {
   let newString = string.replace(/a/g, '1')

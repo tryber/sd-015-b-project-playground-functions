@@ -29,9 +29,20 @@ function generatePhoneNumber(numRandom) {
     return 'Array com tamanho incorreto.';
   }
   for (let correntNumber of numRandom) {
-  if (correntNumber < 0 || correntNumber > 9) {
-    return 'não é possível gerar um número de telefone com esses valores';
+    if (correntNumber < 0 || correntNumber > 9) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
   }
+  for(index = 0; index < numRandom.length; index += 1) {
+    let count = 0;
+    for (let num of numRandom) {
+      if (num === numRandom[index]) {
+        count += 1;
+      }
+      if (count >= 3) {
+        return "não é possível gerar um número de telefone com esses valores";
+      }
+    }
   }
   for (let index = 0; index < numRandom.length; index += 1) {
   // eslint-disable-next-line max-len
@@ -39,7 +50,7 @@ function generatePhoneNumber(numRandom) {
   }
   return phoneNumber;
 }
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 2, 8, 8, 9, 3, 2]));
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 2, 8, 8, 8, 3, 2]));
 
 // Desafio 12
 function triangleCheck() {
