@@ -86,16 +86,94 @@ function catAndMouse(mouse,cat1,cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arrayNumeros) {
+  // First divisivel por 3
+
 }
 
 // Desafio 9
-function encode() {
+function encode(arrayString) {
   // seu código aqui
+  let arrayCortado = [] ;
+  let stringEncode = '';
+// First cortar a string
+
+   for (let index = 0; index < arrayString.length; index++){
+         
+         let fechando = index + 1;
+         arrayCortado[index] = arrayString.slice(index,fechando);
+         
+   }
+ //Second substituir os caracteres 
+
+ for (let index = 0; index < arrayCortado.length; index++) {
+    
+     if ( arrayCortado[index] === 'a'){
+        arrayCortado[index] = 1;
+     }
+     if ( arrayCortado[index] === 'e'){
+         arrayCortado[index] = 2;
+     }
+     if ( arrayCortado[index] === 'i'){
+         arrayCortado[index] = 3;
+      }
+     if ( arrayCortado[index] === 'o'){
+         arrayCortado[index] = 4;
+     }
+     if ( arrayCortado[index] === 'u'){
+         arrayCortado[index] = 5;
+     }
+ }
+ //Trith Juntar os caracteres em uma string
+
+ for (let index = 0; index < arrayCortado.length; index++) {
+     
+     stringEncode = stringEncode + arrayCortado[index];
+ }
+
+  return stringEncode ;   
 }
-function decode() {
+
+function decode(arrayString) {
   // seu código aqui
+  let arrayCortado = [] ;
+  let stringEncode = '';
+// First cortar a string
+
+   for (let index = 0; index < arrayString.length; index++){
+         
+         let fechando = index + 1;
+         arrayCortado[index] = arrayString.slice(index,fechando);
+         
+   }
+ //Second substituir os caracteres 
+
+ for (let index = 0; index < arrayCortado.length; index++) {
+    
+     if ( arrayCortado[index] === '1'){
+        arrayCortado[index] = 'a';
+     }
+     if ( arrayCortado[index] === '2'){
+         arrayCortado[index] = 'e';
+     }
+     if ( arrayCortado[index] === '3'){
+         arrayCortado[index] = 'i';
+      }
+     if ( arrayCortado[index] === '4'){
+         arrayCortado[index] = 'o';
+     }
+     if ( arrayCortado[index] === '5'){
+         arrayCortado[index] = 'u';
+     }
+ }
+ //Trith Juntar os caracteres em uma string
+
+ for (let index = 0; index < arrayCortado.length; index++) {
+     
+     stringEncode = stringEncode + arrayCortado[index];
+ }
+
+return stringEncode ;   
 }
 
 module.exports = {
