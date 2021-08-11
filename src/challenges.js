@@ -79,7 +79,7 @@ function fizzBuzz(numbers) {
   let array = [];
 
   for (index = 0; index < numbers.length; index ++) {
-    let = classificando = "";
+    let classificando = "";
     if (numbers[index] % 3 === 0 && numbers[index] % 5 === 0) {
       classificando += "fizzBuzz";
     } else if (numbers[index] % 3 === 0) {
