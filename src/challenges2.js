@@ -21,9 +21,8 @@ function techList(array, name) {
 function phoneNumberSize(array) {
   if (array.length === 11) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
 
 function phoneNumberZero(array) {
@@ -100,16 +99,16 @@ function phoneNumberVerifyZeroNineRepeat(array) {
 function phoneNumberVerifyValid(array) {
 	if (phoneNumberSize(array) === true) {
 		if (phoneNumberVerifyZeroNineRepeat(array) === false) {
-			return 'não é possivel gerar um número de telefone com esses valores';
+			return 'não é possível gerar um número de telefone com esses valores';
 		}
 	} else if (phoneNumberSize(array) === false) {
-		return 'Array com tamanho incorreto';
+		return 'Array com tamanho incorreto.';
 	}
 	return true;
 }
 
 function phoneNumberParenteses(array) {
-  let parenteses = "(" + array[0] + array[1] + ")";
+  let parenteses = "(" + array[0] + array[1] + ") ";
   return parenteses;
 }
 
