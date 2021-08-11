@@ -46,9 +46,8 @@ function highestCount(arr) {
     if(maior === arr[index2]) {
       soma += 1;
     }
-  }
+  } return soma;
 }
-return soma;
 
 
 // Desafio 7
