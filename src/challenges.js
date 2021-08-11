@@ -147,7 +147,7 @@ function encode(string) {
   return encode5;
 }
 
-  // encode
+// encode
 function decode1(string) {
   let array = string.split('');
   for (let key in array) {
