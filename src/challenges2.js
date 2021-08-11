@@ -1,60 +1,55 @@
 // Desafio 10
 function techList(tech, nameParam) {
-  let techListing = []
-  let techSort = tech.sort()
+  let techListing = [];
+  let techSort = tech.sort();
 
   if (tech.length > 1) {
     for (let index = 0; index < tech.length; index += 1) {
-      let addList = techSort[index]
+      let addList = techSort[index];
 
       techListing.push({
         tech: addList,
-        name: nameParam
+        name: nameParam,
       })
     }
     return techListing;
   }
-  
-  else {
-    return "Vazio!"
-  }
+  return 'Vazio!';
 }
 
 // Desafio 11
 function generatePhoneNumber(numbers) {
   if (numbers.length !== 11 || numbers === []) {
-      return "Array com tamanho incorreto.";
+    return 'Array com tamanho incorreto.';
   }
 
   else {
-      for (let unityNumber of numbers) {
-
-      let min = 0;
+    for (let unityNumber of numbers) {
+     let min = 0;
 
       if (unityNumber > 9 || unityNumber < 0) {
-          return "não é possível gerar um número de telefone com esses valores";
+        return 'não é possível gerar um número de telefone com esses valores';
       }
-
       for (let compare of numbers) {
-          if (compare === unityNumber) {
-              min += 1;
-          }
+        if (compare === unityNumber) {
+          min += 1;
+        }
       }
       if (min >= 3) {
-          return "não é possível gerar um número de telefone com esses valores";
+       return 'não é possível gerar um número de telefone com esses valores';
       }
+    }
   }
-}
-return "(" + numbers[0] + numbers[1] + ")" + " " + numbers[2] + numbers[3] + numbers[4] + numbers[5] + numbers[6] + "-" + numbers[7] + numbers[8] + numbers[9] + numbers[10];
+ return '(' + numbers[0] + numbers[1] + ')' + ' ' + numbers[2] + numbers[3] + numbers[4] + numbers[5] + numbers[6] + '-' + numbers[7] + numbers[8] + numbers[9] + numbers[10];
 }
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   if (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC) && lineB < lineA + lineC && lineB > Math.abs(lineA - lineC) && lineC < lineB + lineA && lineC > Math.abs(lineB - lineA)) {
-      return true;
+    return true;
   }
   else {
-      return false;
+    return false;
   }
 }
 
@@ -65,15 +60,15 @@ function hydrate(alcoholic) {
   let sum = 0;
 
   for (let counter = 0; counter < numbers.length; counter += 1) {
-      sum = sum + parseInt(numbers[counter]);
+    sum = sum + parseInt(numbers[counter]);
   }
+  let singular = sum + ' copo de água';
+  let plural = sum + ' copos de água';
   
   if (sum === 1) {
-    return sum + " copo de água";
+    return singular;
   }
-  else {
-    return sum + " copos de água";
-  }
+  return plural;
 }
 
 module.exports = {
