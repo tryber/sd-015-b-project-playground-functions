@@ -1,9 +1,9 @@
 // Desafio 1
 function compareTrue(a, b) {
   if (a === true && b === true) {
-    return(true);
+    return true;
   } else {
-    return(false);
+    return false;
   }
 }
 
@@ -19,21 +19,21 @@ function splitSentence(frase) {
 
 // Desafio 4
 function concatName(lista) {
-  nomeConcatenado = lista[0] + ", " + lista[lista.length - 1];
+  let nomeConcatenado = lista[0] + ", " + lista[lista.length - 1];
   return nomeConcatenado;
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  pontos = wins * 3;
+  let pontos = wins * 3;
   pontos = pontos + ties;
   return pontos;
 }
 
 // Desafio 6
 function highestCount(numeros) {
-  numeroMaisAlto = 0
-  quantasVezesRepetiu = 0
+  let numeroMaisAlto = 0
+  let quantasVezesRepetiu = 0
   
   for (index1 = 1; index1 < numeros.length; index1 ++) {
     if (numeros[index1] > numeros[index1 - 1]) {
@@ -46,6 +46,7 @@ function highestCount(numeros) {
       quantasVezesRepetiu = quantasVezesRepetiu + 1;
     }
   }
+  return quantasVezesRepetiu
 }
 
 // Desafio 7
