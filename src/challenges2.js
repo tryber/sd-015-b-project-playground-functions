@@ -55,7 +55,7 @@ function generatePhoneNumber(arrayOfNumber) {
 
 
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(lineA, lineB, lineC) {
   if (lineA < (lineB + lineC) && lineB < (lineA + lineC) && lineC < (lineA + lineB)) {
     return true;
   } else {
@@ -64,8 +64,29 @@ function triangleCheck() {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(drinks) {
+  let agua = ' de água';
+  let copo = ' copo';
+  let plural = 's';
+  let aux = [];
+  /** Source:https://www.youtube.com/watch?v=pfkkdzeyx6U*/
+  let reg = /\d+/g;
+
+  let result = drinks.match(reg);
+  /** https://stackoverflow.com/questions/15677869/how-to-convert-a-string-of-numbers-to-an-array-of-numbers*/
+  aux = result.map(i => Number(i));
+
+  let qtd = 0;
+
+  for (let index = 0; index < aux.length; index += 1) {
+    qtd += aux[index];
+  }
+
+  if (qtd > 1) {
+    return qtd + copo + plural + agua;
+  } else {
+    return qtd + copo + agua;
+  }
 }
 
 module.exports = {
