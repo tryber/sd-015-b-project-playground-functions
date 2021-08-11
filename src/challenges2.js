@@ -33,14 +33,14 @@ function generatePhoneNumber(numRandom) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
   }
-  for(index = 0; index < numRandom.length; index += 1) {
+  for(let index = 0; index < numRandom.length; index += 1) {
     let count = 0;
     for (let num of numRandom) {
       if (num === numRandom[index]) {
         count += 1;
       }
       if (count >= 3) {
-        return "não é possível gerar um número de telefone com esses valores";
+        return 'não é possível gerar um número de telefone com esses valores';
       }
     }
   }
@@ -50,11 +50,15 @@ function generatePhoneNumber(numRandom) {
   }
   return phoneNumber;
 }
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 2, 8, 8, 8, 3, 2]));
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  if (lineA < lineB + lineC && lineA > (Math.abs(lineB - lineC))) {
+    return true;
+  }
+  if (lineA > lineB + lineC || lineA < (Math.abs(lineB - lineC))) {
+    return false
+  }
 }
 
 // Desafio 13
