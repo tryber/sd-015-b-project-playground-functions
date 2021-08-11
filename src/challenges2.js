@@ -1,16 +1,64 @@
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(namesTech, name) {
+  if (namesTech.length === 0) {
+    return 'Vazio!';
+  }
+  let namesTechArray = [];
+  let listOrden = namesTech.sort();
+  for (let index = 0; index < namesTech.length; index += 1) {
+    namesTechArray.push({ tech: listOrden[index], name });
+  }
+  return namesTechArray;
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+
+// function arrayMaiorQ11(numRandom) {
+//   if (numRandom.length !== 11) {
+//     return 'Array com tamanho incorreto.';
+//   }
+// }
+// function numInvalid(numRandom) {
+//   if (numRandom < 0 || numRandom > 9) {
+//     return 'não é possível gerar um número de telefone com esses valores';
+//   }
+// }
+function generatePhoneNumber(numRandom) {
+  let phoneNumber = [];
+  if (numRandom.length !== 11) {
+    return 'Array com tamanho incorreto.';
+  }
+  for (let correntNumber of numRandom) {
+    if (correntNumber < 0 || correntNumber > 9) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
+  }
+  for(let index = 0; index < numRandom.length; index += 1) {
+    let count = 0;
+    for (let num of numRandom) {
+      if (num === numRandom[index]) {
+        count += 1;
+      }
+      if (count >= 3) {
+        return 'não é possível gerar um número de telefone com esses valores';
+      }
+    }
+  }
+  for (let index = 0; index < numRandom.length; index += 1) {
+  // eslint-disable-next-line max-len
+    phoneNumber = `(${numRandom[0]}${numRandom[1]}) ${numRandom[2]}${numRandom[3]}${numRandom[4]}${numRandom[5]}${numRandom[6]}-${numRandom[7]}${numRandom[8]}${numRandom[9]}${numRandom[10]}`;
+  }
+  return phoneNumber;
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  if (lineA < lineB + lineC && lineA > (Math.abs(lineB - lineC))) {
+    return true;
+  }
+  if (lineA > lineB + lineC || lineA < (Math.abs(lineB - lineC))) {
+    return false
+  }
 }
 
 // Desafio 13
