@@ -22,9 +22,9 @@ function hydrate(str) {
       soma += parseInt(glassOfWater[index]);        
   }
   if (soma === 1) {
-      console.log(soma + ' copo de água');
+        return (soma + ' copo de água');
   }   else {
-          console.log(soma + ' copos de água');
+          return(soma + ' copos de água');
       }    
 } 
 
