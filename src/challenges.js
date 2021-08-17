@@ -134,6 +134,9 @@ function decode(string) {
     return result;
   }
 
+  // Constultei o repostiório do Cláudio Cassimiro para resolver essa parte.
+  // *Link: https://github.com/tryber/sd-015-b-project-playground-functions/pull/92/commits
+
 module.exports = {
   calcArea,
   catAndMouse,
