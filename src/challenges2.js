@@ -10,9 +10,9 @@ function techList(a,name) {
   }
 
   if (a.length > 0){
-console.log( arrayOfObjetcs.sort())
+return  arrayOfObjetcs.sort()
   } else {
- console.log("Vazio!")
+ return "Vazio!"
   }
   
 }
@@ -21,7 +21,7 @@ techList(["React", "Jest", "HTML", "CSS", "JavaScript"]
 
 // Desafio 11
 function generatePhoneNumber() {
-  // seu código aqui
+  
 }
 
 // Desafio 12
