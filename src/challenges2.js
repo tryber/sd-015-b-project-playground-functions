@@ -1,5 +1,10 @@
 // Desafio 10
 function techList(a,name) {
+  function OrdenaArray (a, b) {
+    if (a.tech > b.tech) {
+      return 1;
+    }
+  }
  let arrayOfObjetcs = []
 
   for (let i = 0; i < a.length; i++){
@@ -10,9 +15,9 @@ function techList(a,name) {
   }
 
   if (a.length > 0){
-return  arrayOfObjetcs.sort()
+console.log(  arrayOfObjetcs.sort(OrdenaArray))
   } else {
- return "Vazio!"
+ console.log( "Vazio!")
   }
   
 }
@@ -20,10 +25,10 @@ techList(["React", "Jest", "HTML", "CSS", "JavaScript"]
 ,"Lucas")
 
 // Desafio 11
-function generatePhoneNumber() {
-  
-}
+function generatePhoneNumber(a) {
 
+
+}
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
