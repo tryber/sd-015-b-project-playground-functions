@@ -1,21 +1,23 @@
 // Desafio 10
 function techList(a,name) {
- let arrayOfObjetcs = [ ]
+ let arrayOfObjetcs = []
 
   for (let i = 0; i < a.length; i++){
    arrayOfObjetcs.push( { 
       tech: a[i],
-      name: name, 
-    })
+      name: name
+    },)
+  }
+
+  if (a.length > 0){
+console.log( arrayOfObjetcs.sort())
+  } else {
+ console.log("Vazio!")
   }
   
-  if (a.length > 0){
-console.log( arrayOfObjetcs)
-  } else {
-   console.log( "Vazio!")
-  }
 }
-techList([],"Pedro")
+techList(["React", "Jest", "HTML", "CSS", "JavaScript"]
+,"Lucas")
 
 // Desafio 11
 function generatePhoneNumber() {
