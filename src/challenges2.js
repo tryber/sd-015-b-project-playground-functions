@@ -15,9 +15,9 @@ function techList(a,name) {
   }
 
   if (a.length > 0){
-console.log(  arrayOfObjetcs.sort(OrdenaArray))
+return  arrayOfObjetcs.sort(OrdenaArray)
   } else {
- console.log( "Vazio!")
+ return "Vazio!"
   }
   
 }
