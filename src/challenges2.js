@@ -1,26 +1,30 @@
 // Desafio 10
 function techList(a,name) {
-  function OrdenaArray (a, b) {
-    if (a.tech > b.tech) {
-      return 1;
-    }
-  }
- let arrayOfObjetcs = []
+ 
+
+ let arrayLenguages = []
 
   for (let i = 0; i < a.length; i++){
-   arrayOfObjetcs.push( { 
-      tech: a[i],
-      name: name
-    },)
+   arrayLenguages.push( a[i]);
+  arrayLenguages.sort()
   }
 
-  if (a.length > 0){
-return  arrayOfObjetcs.sort(OrdenaArray)
-  } else {
- return "Vazio!"
-  }
+  let arrayOfObjetcs = []
+
+  for (let index = 0; index < arrayLenguages.length; index+=1){
+    arrayOfObjetcs[index] = {
+      tech: arrayLenguages[index],
+      name: name
+    }
+    }
+    
+    if (arrayOfObjetcs.length === 0){
+      return "Vazio!"
+    } else {
+     return arrayOfObjetcs
+    }
   
-}
+  }
 techList(["React", "Jest", "HTML", "CSS", "JavaScript"]
 ,"Lucas")
 
