@@ -26,19 +26,20 @@ function splitSentence(togetherSetence) {
   let result = [];
   let splitedWords = "";
   for(letters = 0; letters < togetherSetence.length; letters += 1){
-    if(togetherSetence[letters] === ""){
+    if(togetherSetence[letters] === " "){
       result.push(splitedWords);
       splitedWords = "";
     }
     splitedWords += togetherSetence[letters];
     if(togetherSetence[letters] === " "){
-      splitedWords = ""
+      splitedWords = "";
     }
   }
   result.push(splitedWords);
   return result;
 }
-
+console.log(splitSentence("go Trybe"));
+console.log(splitSentence("vamo que vamo"));
 console.log(splitSentence("foguete"));
 
 
