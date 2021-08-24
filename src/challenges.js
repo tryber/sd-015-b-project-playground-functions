@@ -44,10 +44,13 @@ console.log(splitSentence("foguete"));
 
 
 // Desafio 4
-function concatName() {
+function concatName(strings) {
   // seu código aqui
+  let concat = strings[strings.length -1]+", " + strings[0];
+  return concat;
 }
 
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 // Desafio 5
 function footballPoints() {
   // seu código aqui
