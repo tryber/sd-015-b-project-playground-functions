@@ -48,17 +48,17 @@ function concatPhoneNumber(arr) {
   let phoneNumber = '';
   for (let index = 0; index < arr.length; index += 1) {
     switch (index) {
-    case 0:
-      phoneNumber += `(${arr[index]}`;
-      break;
-    case 1:
-      phoneNumber += `${arr[index]}) `;
-      break;
-    case 6:
-      phoneNumber += `${arr[index]}-`;
-      break;
-    default:
-      phoneNumber += arr[index];
+      case 0:
+        phoneNumber += `(${arr[index]}`;
+        break;
+      case 1:
+        phoneNumber += `${arr[index]}) `;
+        break;
+      case 6:
+        phoneNumber += `${arr[index]}-`;
+        break;
+      default:
+        phoneNumber += arr[index];
     }
   }
   return phoneNumber;
@@ -71,7 +71,10 @@ function generatePhoneNumber(arr) {
   if (arr.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
-  if (isThreeOrNineOrZero(arr) === 'não é possível gerar um número de telefone com esses valores') {
+  if (
+    isThreeOrNineOrZero(arr) ===
+    'não é possível gerar um número de telefone com esses valores'
+  ) {
     numberPhone = isThreeOrNineOrZero(arr);
     return numberPhone;
   }
@@ -100,9 +103,9 @@ function checkLineC(lineA, lineB, lineC) {
 function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
   return (
-    checkLineA(lineA, lineB, lineC)
-    && checkLineB(lineA, lineB, lineC)
-    && checkLineC(lineA, lineB, lineC)
+    checkLineA(lineA, lineB, lineC) &&
+    checkLineB(lineA, lineB, lineC) &&
+    checkLineC(lineA, lineB, lineC)
   );
 }
 
@@ -122,6 +125,7 @@ function hydrate(str) {
   }
   return `${sumWaterCups} copos de água`;
 }
+// ! Solução inspirada pelo site: https://www.encodedna.com/javascript/how-to-get-numbers-from-a-string-in-javascript.htm
 
 module.exports = {
   generatePhoneNumber,
