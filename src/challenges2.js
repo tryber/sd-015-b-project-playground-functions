@@ -1,64 +1,32 @@
 // Desafio 10
-function verifVazio(array) {
-  if (array.length > 0) {
-    return array;
+function techList(techs, name) {
+  if (techs.length === 0) {
+    return 'Vazio!';
   }
-  return 'Vazio!';
-}
-
-function createObjects(ordem, names) {
-  let array = [];
-  for (let index = 0; index < ordem.length; index += 1) {
-    let objects = {
-      tech: ordem[index],
-      name: names,
-    };
-    array.push(objects);
-  }
-  return verifVazio(array);
-}
-
-function techList(tech, names) {
-  let ordem = tech.sort();
-  return createObjects(ordem, names);
+  return techs.map((tech) => ({ tech, name })).sort((a, b) => a.tech > b.tech);
 }
 
 // Desafio 11
 function numberRepet(array) {
-  let cont2 = 0;
-  for (let i = 0; i < array.length; i += 1) {
-    let cont = 0;
-    for (let j = 0; j < array.length; j += 1) {
-      if (array[i] === array[j]) {
-        cont += 1;
-      }
-    }
-    if (cont > cont2) {
-      cont2 = cont;
-    }
-  }
-  return cont2;
+  return array.map((num) => array.filter((num2) => num2 === num))
+    .some((arr) => arr.length >= 3);
 }
 
 function verificaNumeros(numbers) {
-  for (let index = 0; index < numbers.length; index += 1) {
-    if (numbers[index] < 0 || numbers[index] > 9 || numberRepet(numbers) > 2) {
+  for (let i of numbers) {
+    if (i < 0 || i > 9 || numberRepet(numbers)) {
       return true;
     }
   }
 }
 
 function organization(numbers) {
-  let primeiros = [];
-  primeiros.push(`(${numbers[0]}${numbers[1]})`);
-  primeiros.push(' ');
-  primeiros.push(`${numbers[2]}${numbers[3]}${numbers[4]}${numbers[5]}${numbers[6]}`);
-  primeiros.push(`-${numbers[7]}${numbers[8]}${numbers[9]}${numbers[10]}`);
-  return primeiros;
-}
-
-function joinNumbers(numbers) {
-  return organization(numbers).join('');
+  const numString = [];
+  numString.push(`(${numbers[0]}${numbers[1]})`);
+  numString.push(' ');
+  numString.push(`${numbers[2]}${numbers[3]}${numbers[4]}${numbers[5]}${numbers[6]}`);
+  numString.push(`-${numbers[7]}${numbers[8]}${numbers[9]}${numbers[10]}`);
+  return numString.join('');
 }
 
 function generatePhoneNumber(numbers) {
@@ -68,7 +36,7 @@ function generatePhoneNumber(numbers) {
   if (verificaNumeros(numbers)) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
-  return joinNumbers(numbers);
+  return organization(numbers);
 }
 
 // Desafio 12
@@ -92,29 +60,14 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function stringParaInt(bebidas) {
-  let string = bebidas.match(/\d+/g);
-  let numeroBebidas = [];
-  for (let index = 0; index < string.length; index += 1) {
-    numeroBebidas.push(Number(string[index]));
-  }
-  return numeroBebidas;
-}
-function numerosDeBebidas(bebidas) {
-  let numeroBebidas = stringParaInt(bebidas);
-  let soma = 0;
-  for (let index = 0; index < numeroBebidas.length; index += 1) {
-    soma += numeroBebidas[index];
-  }
-  return soma;
+function extractNumbers(str) {
+  return str.replace(/[^0-9]/g, '').split('')
+    .reduce((acc, num) => acc + Math.round(num), 0);
 }
 
 function hydrate(bebidas) {
-  let numero = numerosDeBebidas(bebidas);
-  if (numero === 1) {
-    return `${numero} copo de água`;
-  }
-  return `${numero} copos de água`;
+  const glassWater = extractNumbers(bebidas);
+  return glassWater > 1 ? `${glassWater} copos de água` : `${glassWater} copo de água`;
 }
 
 module.exports = {
