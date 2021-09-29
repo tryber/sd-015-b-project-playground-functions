@@ -1,17 +1,11 @@
 // Desafio 1
-function compareTrue(a, b) {
-  return a && b;
-}
+const compareTrue = (a, b) => a && b;
 
 // Desafio 2
-function calcArea(base, height) {
-  return ((base * height) / 2);
-}
+const calcArea = (base, height) => ((base * height) / 2);
 
 // Desafio 3
-function splitSentence(frase) {
-  return frase.split(' ');
-}
+const splitSentence = (frase) => frase.split(' ');
 
 // Desafio 4
 function concatName(array) {
@@ -93,7 +87,6 @@ function fizzBuzz(numbers) {
   }
   return string;
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode(string) {
