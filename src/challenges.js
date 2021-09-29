@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(a, b) {
-  if (a && b === true) {
+  if (a && b) {
     return true;
   }
   return false;
@@ -30,73 +30,66 @@ function footballPoints(wins, ties) {
 // Desafio 6
 /** Source: https://stackoverflow.com/questions/46640420/how-to-find-number-of-occurrence-of-highest-element-in-an-javascript-array/46640571 */
 function highestCount(arr) {
-  let max = Math.max(...arr);
-  let count = arr.filter((x) => x === max).length;
+  let maxNumber = Math.max(...arr);
+  let count = arr.filter((number) => number === maxNumber).length;
   return count;
 }
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  if ((Math.abs(cat1 - mouse)) === (Math.abs(cat2 - mouse))) {
-    return 'os gatos trombam e o rato foge';
-  } if ((Math.abs(cat1 - mouse)) < (Math.abs(cat2 - mouse))) {
-    return 'cat1';
-  }
+  const distanceCat1ToMouse = Math.abs(cat1 - mouse);
+  const distanceCat2ToMouse = Math.abs(cat2 - mouse);
+  if (distanceCat1ToMouse === distanceCat2ToMouse) return 'os gatos trombam e o rato foge';
+  if (distanceCat1ToMouse < distanceCat2ToMouse) return 'cat1';
   return 'cat2';
 }
 
 // Desafio 8
 function fizzBuzz(arr) {
-  let arrayFizzBuzz = [];
-  for (let index = 0; index < arr.length; index += 1) {
-    if (arr[index] % 15 === 0) {
-      arrayFizzBuzz.push('fizzBuzz');
-    } else if (arr[index] % 5 === 0) {
-      arrayFizzBuzz.push('buzz');
-    } else if (arr[index] % 3 === 0) {
-      arrayFizzBuzz.push('fizz');
-    } else {
-      arrayFizzBuzz.push('bug!');
-    }
-  }
-  return arrayFizzBuzz;
+  const result = arr.map((number) => {
+    if (number % 15 === 0) return 'fizzBuzz';
+    if (number % 5 === 0) return 'buzz';
+    if (number % 3 === 0) return 'fizz';
+    return 'bug!';
+  });
+  return result;
 }
 
 // Desafio 9
 function encode(sentense) {
   let encodeSentence = '';
-  for (let index = 0; index < sentense.length; index += 1) {
-    if (sentense[index] === 'a') {
-      encodeSentence += '1';
-    } else if (sentense[index] === 'e') {
-      encodeSentence += '2';
-    } else if (sentense[index] === 'i') {
-      encodeSentence += '3';
-    } else if (sentense[index] === 'o') {
-      encodeSentence += '4';
-    } else if (sentense[index] === 'u') {
-      encodeSentence += '5';
+  const keyToDecode = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5,
+  };
+
+  for (let letter of sentense) {
+    if (!keyToDecode[letter]) {
+      encodeSentence += letter;
     } else {
-      encodeSentence += sentense[index];
+      encodeSentence += keyToDecode[letter];
     }
   }
   return encodeSentence;
 }
 function decode(sentense) {
   let decodeSentence = '';
-  for (let index = 0; index < sentense.length; index += 1) {
-    if (sentense[index] === '1') {
-      decodeSentence += 'a';
-    } else if (sentense[index] === '2') {
-      decodeSentence += 'e';
-    } else if (sentense[index] === '3') {
-      decodeSentence += 'i';
-    } else if (sentense[index] === '4') {
-      decodeSentence += 'o';
-    } else if (sentense[index] === '5') {
-      decodeSentence += 'u';
+  const keyToDecode = {
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u',
+  };
+
+  for (let letter of sentense) {
+    if (!keyToDecode[letter]) {
+      decodeSentence += letter;
     } else {
-      decodeSentence += sentense[index];
+      decodeSentence += keyToDecode[letter];
     }
   }
   return decodeSentence;
