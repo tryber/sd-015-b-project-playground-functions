@@ -59,6 +59,7 @@ function triangleCheck(lineA, lineB, lineC) {
 function hydrate(string) {
   // seu código aqui
   let water = string.match(/\d+/g).map(Number);
+  // créditos pela variável water: https://stackoverflow.com/questions/1623221/how-to-find-a-number-in-a-string-using-javascript
   let result = 0;
 
   for (let i = 0; i < water.length; i += 1) {
