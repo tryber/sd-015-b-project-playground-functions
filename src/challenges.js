@@ -77,26 +77,26 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function checkFizzBuzz(number, destinationArray) {
-  if (number % 15 === 0) {
-    destinationArray.push('fizzBuzz');
-  } else if (number % 3 === 0) {
-    destinationArray.push('fizz');
-  } else if (number % 5 === 0) {
-    destinationArray.push('buzz');
-  } else {
-    destinationArray.push('bug!');
+function isDivisibleBy5(number, ifTrue, ifFalse) {
+  if (number % 5 === 0) {
+    return ifTrue;
   }
+
+  return ifFalse;
 }
 
 function fizzBuzz(numbers) {
-  let results = [];
+  const fizzBuzzArray = [];
 
   for (let index = 0; index < numbers.length; index += 1) {
-    checkFizzBuzz(numbers[index], results);
+    if (numbers[index] % 3 === 0) {
+      fizzBuzzArray.push(isDivisibleBy5(numbers[index], 'fizzBuzz', 'fizz'));
+    } else {
+      fizzBuzzArray.push(isDivisibleBy5(numbers[index], 'buzz', 'bug!'));
+    }
   }
 
-  return results;
+  return fizzBuzzArray;
 }
 
 // Desafio 9
